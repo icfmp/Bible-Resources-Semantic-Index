@@ -29,9 +29,12 @@ validated, but the **868 Key Terms** were excluded from this public dataset
 pending their separate third-party rights review. These excluded records are
 **not** claimed to be present here. They are not to be published for now.
 
-The migrated 5,776 entity source records preserve inherited fields, original
-source IDs and fingerprints, original-word groups, editorial decisions and
-evidence. Their corrected index output was compared **byte-for-byte** with the
+The migrated 5,776 entity source records retain original source IDs and
+fingerprints, original-word groups, structural relations, editorial decisions
+and evidence. Inherited encyclopedia descriptions have since been pruned
+from the editable 5,773 active records: BRSI is an identity/link index,
+not a multi-language biography store. The source text remains recoverable
+from the pinned ACAI edition and Git history. Their corrected index output was compared **byte-for-byte** with the
 previous, keyterm-free BSI index before the migration was merged. The historical
 ACAI checkout is not used for normal BSI builds. See [editing current entities](docs/EDITING_ENTITIES.md)
 and [source provenance](sources/README.md).
