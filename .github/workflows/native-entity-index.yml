@@ -2,7 +2,7 @@ name: BSI native entity build (no ACAI checkout)
 
 on:
   push:
-    branches: [main, migration/materialize-entities]
+    branches: [main]
     paths:
       - "data/entities/**"
       - "data/quarantined/**"
