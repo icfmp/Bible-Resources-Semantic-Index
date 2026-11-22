@@ -66,6 +66,9 @@ def audit(data: Path) -> dict:
     problems = []
     relationships = 0
     for path, state, doc in records:
+        # Quarantined originals are evidence, not active cross-reference owners.
+        if state != "entities":
+            continue
         for link in walk_links(doc):
             target = link["target"]
             info = {
