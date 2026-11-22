@@ -25,6 +25,11 @@ BRSI source commit. `license` identifies the upstream license and does **not**
 alone establish permission to redistribute copyrighted articles, definitions
 or annotations. Any publication requires separate approval.
 
+An entity/entry pair has exactly one reviewed relation type within an edition:
+`same_subject` and `related_subject`, for example, cannot both be asserted for
+the same pair. Distinct entry IDs and independently reviewed identities remain
+separate; this rule does not infer which identity is correct.
+
 Approved rows contain a **current exact BRSI entity ID**, exact external
 entry ID, the narrowest accurate link type, `review_status: "reviewed"`, and
 explicit source evidence checked by a human. Matching names, Strong numbers,
