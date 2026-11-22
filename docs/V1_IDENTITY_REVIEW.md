@@ -57,6 +57,34 @@ candidate. Being present in a source index does not establish historical
 identity or license the display of a biographical relationship. Each other
 unanchored candidate still requires its own evidence-based review.
 
+## Reviewed ten-candidate source outcomes
+
+The original homonym triage identified **ten unanchored or non-distinctive
+source records**, not ten proved identity errors. Their source-based
+dispositions following PRs #99–#101 are:
+
+| Source records | Result and source evidence |
+| --- | --- |
+| `HusbandOfMary`, `HusbandOfMary.2` | **Corrected:** invented, unnamed husband identities quarantined. Acts 12:12, Matthew 27:56 and Mark 15:40 provide no independent husband/father identity. The other five inherited paternal references and the false Mary–Salome mother/daughter assertion were corrected, with receipts. |
+| `Judah`, `Judah.2` | **Corrected:** Ezra 3:9's Judah/Hodaviah family token belongs in the Ezra 2:40 / Nehemiah 7:43 family context, not the distinct Nehemiah 8:7 Hodiah record. PR #99 removed the duplicate wrong original-word assignment and wrong verse claim from Hodiah.2/Judah.2; see NET Ezra 3:9 textual note. All other independently referenced words remain. |
+| `SecondProstitute` | **Verified narrative identity without name invention:** 1 Kings 3:16 presents two distinct women; 3:22 identifies the other speaker. A concise reviewed *role qualifier* now anchors to the existing source verse without claiming an explicit name token or approving the complete source record. |
+| `Caesarea.2` | **Legitimate distinct contextual place:** Caesarea (formerly Mazaca), Cappadocia/Kayseri, is not Caesarea Maritima. It is marked `non_biblical=true` and has no fabricated biblical word anchor. Oxford Classical Dictionary, “Caesarea (1) of Cappadocia” (https://doi.org/10.1093/acrefore/9780199381135.013.1244). |
+| `Gadara.2` | **Legitimate distinct historical place:** Perean Gadara/Gadora near Tell Jadur (es-Salt), versus the Decapolis Gadara at Umm Qais. Their coordinates and source labels differ; the Perean site remains nonbiblical, not a false alternative to the SBLGNT Matthew word. https://www.biblicaltraining.org/library/gadara; https://whc.unesco.org/en/tentativelists/1558/. |
+| `Neapolis.2` | **Legitimate distinct post-New-Testament locality:** Roman Neapolis/Nablus near Shechem, established in the Roman period; Acts 16:11 instead names the Macedonian seaport serving Philippi. Historical descriptions support preserving both source place IDs without a false word claim. https://www.jewishencyclopedia.com/articles/11260-nablus; https://classic.net.bible.org/passage.php?passage=act+16%3A11%2C12. |
+| `Heres.2` | **Corrected:** Judges 1:35 explicitly names Mount Heres. Its missing verse/reference was added without inventing a MACULA token (PR #99). |
+| `ValleyOfMizpeh` | **Corrected:** Joshua 11:8 explicitly mentions the valley of Mizpeh; an existing source key verse lacked the corresponding direct-place reference. The specific verified omission was corrected (PR #99), not an automatic subset conversion. |
+
+The two historical textual uncertainties have a **definite editorial
+disposition**, not an invented solution: 1 Chronicles 2:18 permits different
+Azubah/Jerioth readings, so no single mother or merged identity is asserted;
+the family lists at 1 Chronicles 6:20 and 6:42 differ and have no secure
+one-to-one generation mapping, so Zimmah's two original-language occurrences
+are retained without a forced shared paternal identity or an invented second
+person. Both choices cite the verses and preserve the prior claims as
+reversible field receipts. This is a resolved **identity data decision**
+(unknown where Scripture does not decide), not a statement that scholarship
+can identify the unknown relatives.
+
 ## Scope and release gate
 
 The reopened issue #6 remains under substantive review. PR #99 performs
