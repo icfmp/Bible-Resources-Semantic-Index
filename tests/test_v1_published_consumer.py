@@ -188,6 +188,20 @@ class ExistingV1ArchiveTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "Malformed published entity reverse lookup"):
             inspect.inspect("entities", raw, match_lock("entities", raw))
 
+    def test_reverse_candidates_must_resolve_to_included_public_entities(self):
+        entity = public_index("entities")
+        entity["by_word"]["sblgnt:n41015040001"] = [{
+            "entity_id": "person:Absent", "link_type": "explicit_instances"}]
+        raw = archive("entities", entity)
+        with self.assertRaisesRegex(ValueError, "Restricted or malformed entity reverse candidate"):
+            inspect.inspect("entities", raw, match_lock("entities", raw))
+        entity = public_index("entities")
+        entity["entities"].append({
+            "id": "person:Mary.2", "kind": "person"})
+        raw = archive("entities", entity)
+        with self.assertRaisesRegex(ValueError, "identities are absent or duplicated"):
+            inspect.inspect("entities", raw, match_lock("entities", raw))
+
     def test_hebrew_published_type_confusions_fail_closed(self):
         for key, replacement in (
             ("schema_version", True),
