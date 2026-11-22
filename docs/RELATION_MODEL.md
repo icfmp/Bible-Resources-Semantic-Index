@@ -33,7 +33,10 @@ source-record SHA-256. The [v1 schema](../relations/schema.v1.json) models
 | `possibly_same_as`, `referred_to_as` | `null`, `withheld_identity_or_alias` | **Do not equate** similarly named persons, places, manuscripts or labels |
 | Any other typed field | `null`, `withheld_unclassified` | Exact source claim retained for review; no fabricated meaning |
 
-All recognized claims have `review_status=source_unreviewed`. A source
+Recognized claims ordinarily have `review_status=source_unreviewed`.
+When independently inherited parent/offspring fields **disagree**, both
+recorded sides are marked `withheld_inverse_disagreement`. This classification
+identifies a *review candidate*, not which parent is true. A source
 record being `editorially_reviewed` does **not** automatically approve
 every relationship within it. Identity- or label-ambiguous source fields are explicitly withheld as
 `withheld_identity_or_alias`. Unknown typed fields are retained as
@@ -53,9 +56,12 @@ shared canonical display identity authorize merging target IDs.
 - `group:Ludim.group_origin = person:Lud` is preserved *as reported*.
   The existing [identity review](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/6)
   specifically questions this claim; its presence in an index does not settle it.
-- Disputed mother/father and collective-descendant associations likewise
-  remain distinct raw source claims. The inverse-family audit reports
-  disagreements for editorial review, never silently reconciles them.
+- Disputed mother/father associations remain distinct raw source claims.
+  The existing inverse-family audit is reused to hold both exact field
+  witnesses in each current mismatch (five candidate disagreements at the
+  audited 2026-11-22 baseline); no one is automatically declared wrong.
+  A person pointing to a collective group via `offspring` is a different
+  valid source-field shape, **not** automatically an inverse contradiction.
 
 Neither `references` nor `key_references` identifies a particular
 relationship witness: their inherited ACAI ORG BCV8 roles are separate.
