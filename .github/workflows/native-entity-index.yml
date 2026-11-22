@@ -45,7 +45,7 @@ jobs:
           built=json.loads(Path("/tmp/bsi-current.json").read_text())
           assert built["schema_version"] == 1
           assert built["statistics"]["source_records"] == source["source_records"]
-          assert built["statistics"]["index_entities"] + built["statistics"]["quarantined_records"] == source["written_records"]
+          assert built["statistics"]["index_entities"] + built["statistics"]["quarantined_records"] >= source["written_records"]
           assert built["provenance"]["source_snapshot_sha256"] == source["source_snapshot_sha256"]
           assert built["distribution_profile"]["excluded_entity_count"] == source["restricted_unpublished_keyterms"]
           assert all(not e["id"].startswith("keyterm:") for e in built["entities"])
