@@ -1,0 +1,354 @@
+{
+  "alternate_sources": {
+    "ubsdgnt": [
+      "7.49"
+    ],
+    "ubsrealia": [
+      "realia:3.1.2"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "realia:Door",
+    "review_status": "source_unreviewed",
+    "source_id": "realia:Door",
+    "source_primary_id": "realia:Door",
+    "source_sha256": "c400a4f77681c29f344ec77933107e54bf7356d1f7743d0948ab1ae42be96b10"
+  },
+  "explicit_instances": {
+    "SBLGNT": [
+      [
+        "n40006006013"
+      ],
+      [
+        "n40024033013"
+      ],
+      [
+        "n40025010020"
+      ],
+      [
+        "n41013029013"
+      ],
+      [
+        "n42011007011"
+      ],
+      [
+        "n42013024006"
+      ],
+      [
+        "n42013025010"
+      ],
+      [
+        "n42013025018"
+      ],
+      [
+        "n43018016007"
+      ],
+      [
+        "n43020019012"
+      ],
+      [
+        "n43020026019"
+      ],
+      [
+        "n44003002017"
+      ],
+      [
+        "n44005009024"
+      ],
+      [
+        "n44005019008"
+      ],
+      [
+        "n44005023016"
+      ],
+      [
+        "n44012006025"
+      ],
+      [
+        "n44012013005"
+      ],
+      [
+        "n44014027019"
+      ],
+      [
+        "n44016026016"
+      ],
+      [
+        "n44016027010"
+      ],
+      [
+        "n44021030024"
+      ],
+      [
+        "n46016009001"
+      ],
+      [
+        "n47002012012"
+      ],
+      [
+        "n51004003011"
+      ],
+      [
+        "n59005009014"
+      ],
+      [
+        "n66003008009"
+      ],
+      [
+        "n66003020005"
+      ],
+      [
+        "n66003020017"
+      ],
+      [
+        "n66004001006"
+      ]
+    ]
+  },
+  "id": "realia:Door",
+  "key_references": [
+    "01006016",
+    "43010009",
+    "66003020"
+  ],
+  "lemmas": {
+    "el": [
+      "θύρα"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "مدخل خشب في الجزء الخارجي من بيت أو مبنى، وغالباً بيتقال عليه بوابة.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "باب"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "مدخل خشبي خارج منزل أو مبنى، وغالبًا ما يُشار إليه بالبوابة.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "باب"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan eni samting we oli wokem long wud long aotsaed blong haos o bilding blong gotru long hem, we plante taem oli kolem get tu.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "doa"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Gate"
+      ],
+      "descriptions": [
+        {
+          "article": "realia:Door",
+          "description": "A wooden entry on the outside of a house or building, often referred to as a gate.",
+          "gloss": "Door",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Door"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "ورودی چوبی در قسمت بیرونی خانه یا ساختمان، که اغلب به عنوان دروازه نیز به آن اشاره می‌شود.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "در"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Entrée en bois à l'extérieur d'une maison ou d'un bâtiment, souvent désignée comme une porte.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "porte"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Mashigar katako a wajen gida ko gini, wadda sau da yawa ake kira kofa.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ƙofa"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "किसी घर या भवन के बाहर लकड़ी का एक प्रवेश-मार्ग, जिसे प्रायः फाटक भी कहा जाता है।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "द्वार"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Ụzọ e ji osisi mee nʼèzí ụlọ ma ọ bụ ihe owuwu, nke a na-akpọkarị ọnụ ụzọ ama.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "ọnụ ụzọ"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Jalan masuk berbahan kayu di bagian luar rumah atau bangunan, sering kali disebut sebagai gerbang atau pintu.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "pintu"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "घर वा भवनको बाहिरी भागमा हुने काठको प्रवेशद्वार, जसलाई प्रायः फाटक पनि भनिन्छ।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "ढोका"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Uma entrada de madeira na parte externa de uma casa ou edifício, frequentemente chamada de portão.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "porta"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Деревянный проем или створка для входа снаружи дома или здания, часто называемая также воротами.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Дверь"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Entrada de madera en el exterior de una casa o edificio, a menudo llamada portón o puerta.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "puerta"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Kifaa cha kuingilia kilichotengenezwa kwa mbao kwenye sehemu ya nje ya nyumba au jengo, mara nyingi kikijulikana pia kama lango.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Mlango"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Wanpela dua ol i wokim long diwai bilong kam insait o go ausait long haus o bikpela haus, planti taim ol i kolim tu olsem get.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "dua"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Lối vào bằng gỗ ở bên ngoài một ngôi nhà hoặc công trình kiến trúc, thường được gọi là cổng hoặc cửa.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "cửa"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "房屋或建筑物外侧的木制入口，通常也被称为门。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "门"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "房屋或建築物外側的木製入口，通常也稱為門或閘門。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "門"
+    }
+  },
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "primary_id": "realia:Door",
+  "pronominal_referents": {
+    "SBLGNT": [
+      [
+        "n66003008011"
+      ],
+      [
+        "n66003008015"
+      ]
+    ]
+  },
+  "realia_type": "other",
+  "references": [
+    "40006006",
+    "40024033",
+    "40025010",
+    "41013029",
+    "42011007",
+    "42013024",
+    "42013025",
+    "43018016",
+    "43020019",
+    "43020026",
+    "44003002",
+    "44005009",
+    "44005019",
+    "44005023",
+    "44012006",
+    "44012013",
+    "44014027",
+    "44016026",
+    "44016027",
+    "44021030",
+    "46016009",
+    "47002012",
+    "51004003",
+    "59005009",
+    "66003008",
+    "66003020",
+    "66004001"
+  ],
+  "subject_referents": {
+    "SBLGNT": [
+      [
+        "n44003002021"
+      ],
+      [
+        "n66003008010"
+      ]
+    ]
+  },
+  "type": "realia",
+  "ubsdgnt": [
+    "7.49"
+  ]
+}

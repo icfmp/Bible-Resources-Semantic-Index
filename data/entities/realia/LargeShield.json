@@ -1,0 +1,333 @@
+{
+  "alternate_sources": {
+    "ubsdbh": [
+      "006248002001000"
+    ],
+    "ubsdgnt": [
+      "6.40"
+    ],
+    "ubsrealia": [
+      "realia:2.10.1"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "realia:LargeShield",
+    "review_status": "source_unreviewed",
+    "source_id": "realia:LargeShield",
+    "source_primary_id": "realia:LargeShield",
+    "source_sha256": "5c1dc63c242998a85e1b8023a1d5863bb15358a895e4b1768915c013cdbfbc29"
+  },
+  "explicit_instances": {
+    "SBLGNT": [
+      [
+        "n49006016005"
+      ]
+    ],
+    "wlc": [
+      [
+        "o090170070132"
+      ],
+      [
+        "o090170410092"
+      ],
+      [
+        "o110100160051"
+      ],
+      [
+        "o110100160132"
+      ],
+      [
+        "o130120090141"
+      ],
+      [
+        "o130120250041"
+      ],
+      [
+        "o130120350052"
+      ],
+      [
+        "o140090150051"
+      ],
+      [
+        "o140090150142"
+      ],
+      [
+        "o140110120041"
+      ],
+      [
+        "o140140070051"
+      ],
+      [
+        "o140250050292"
+      ],
+      [
+        "o190050130062"
+      ],
+      [
+        "o190350020032"
+      ],
+      [
+        "o190910040071"
+      ],
+      [
+        "o240460030032"
+      ],
+      [
+        "o260230240081"
+      ],
+      [
+        "o260260080131"
+      ],
+      [
+        "o260380040171"
+      ],
+      [
+        "o260390090092"
+      ]
+    ]
+  },
+  "id": "realia:LargeShield",
+  "key_references": [
+    "11010016",
+    "14009015",
+    "49006016"
+  ],
+  "lemmas": {
+    "el": [
+      "θυρεός"
+    ],
+    "he": [
+      "צִנָּה"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "ترس طويل ومستطيل بيستعمل لحماية الجسم كلو في الحرب، مصنوع من خشب أو معدن أو جلد أو قصب.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "ترس كبير"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "تُرس طويل مستطيل الشكل يُستخدم لحماية الجسم بأكمله في المعركة، ويُصنع من الخشب أو المعدن أو الجلد أو القصب.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "تُرْس كَبِير"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan longfala sil we oli wokem long wud, aean, leta, no nalenal blong kavremap ful bodi long taem blong faet.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "bigfala sil"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Shield",
+        "Shield Large"
+      ],
+      "descriptions": [
+        {
+          "article": "realia:LargeShield",
+          "description": "A tall, oblong shield used to protect the entire body in battle; made from wood, metal, leather, or reeds.",
+          "gloss": "Large Shield",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Large Shield"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "سپری بلند و مستطیلی‌شکل که برای محافظت از تمام بدن در نبرد به کار می‌رفت؛ ساخته‌شده از چوب، فلز، چرم، یا نی.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "سپر بزرگ"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Un grand bouclier oblong utilisé pour protéger tout le corps au combat ; fait de bois, de métal, de cuir ou de roseaux.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "grand bouclier"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Doguwar garkuwa mai siffar kwana huɗu wadda ake amfani da ita don kāre dukan jiki a wurin yaƙi; an yi ta da itace, ƙarfe, fata, ko ciyawa.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Babban garkuwa"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "युद्ध में पूरे शरीर की रक्षा के लिए उपयोग की जाने वाली एक लंबी, आयताकार ढाल; जो लकड़ी, धातु, चमड़े या नरकट से बनाई जाती थी।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "बड़ी ढाल"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Ọta toro ogologo ma dịkwa gburugburu e ji echebe ahụ dum nʼagha; nke e ji osisi, ọla, akpụkpọ anụ, ma ọ bụ amị mee.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ọta ukwu"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Perisai tinggi berbentuk lonjong yang digunakan untuk melindungi seluruh tubuh dalam pertempuran; terbuat dari kayu, logam, kulit, atau alang-alang.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "perisai besar"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "लडाइँमा पूरै शरीरलाई जोगाउन प्रयोग गरिने काठ, धातु, छाला वा निगालोबाट बनाइएको लाम्चो ठुलो ढाल।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "ठुलो ढाल"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Um escudo alto e oblongo usado para proteger o corpo inteiro em batalha; feito de madeira, metal, couro ou juncos.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "escudo grande"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Большой продолговатый щит, используемый в бою для защиты всего тела; изготавливался из дерева, металла, кожи или тростника.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Большой щит"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Escudo alto y alargado utilizado para proteger todo el cuerpo en la batalla; hecho de madera, metal, cuero o juncos.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "escudo grande"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Ngao ndefu ya umbo la duaradufu au mstatili iliyotumiwa kulinda mwili mzima vitani; iliyotengenezwa kwa mbao, chuma, ngozi, au matete.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ngao kubwa"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Wanpela longpela hap plang bilong pait ol i yusim bilong karamapim olgeta bodi long pait; ol i wokim long diwai, ain o bras, skin bilong animal, o pitpit.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "bikpela hap plang bilong pait"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Một tấm khiên cao, hình chữ nhật dùng để bảo vệ toàn bộ cơ thể trong trận chiến; làm bằng gỗ, kim loại, da, hoặc sậy.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "khiên lớn"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "一种在战斗中用来保护全身的长方形高盾牌；由木头、金属、皮革或芦苇制成。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "大盾牌"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "一種高且呈長方形的盾牌，用於作戰時保護全身；由木頭、金屬、皮革或蘆葦製成。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "擋牌"
+    }
+  },
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "primary_id": "realia:LargeShield",
+  "pronominal_referents": {
+    "SBLGNT": [
+      [
+        "n49006016009"
+      ]
+    ],
+    "wlc": [
+      [
+        "o110100170133"
+      ],
+      [
+        "o140090160133"
+      ],
+      [
+        "o260390090162"
+      ]
+    ]
+  },
+  "realia_type": "other",
+  "references": [
+    "09017007",
+    "09017041",
+    "11010016",
+    "13012009",
+    "13012025",
+    "13012035",
+    "14009015",
+    "14011012",
+    "14014007",
+    "14025005",
+    "19005013",
+    "19035002",
+    "19091004",
+    "24046003",
+    "26023024",
+    "26026008",
+    "26038004",
+    "26039009",
+    "49006016"
+  ],
+  "subject_referents": {},
+  "type": "realia",
+  "ubsdbh": [
+    "006248002001000"
+  ],
+  "ubsdgnt": [
+    "6.40"
+  ]
+}

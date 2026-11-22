@@ -1,0 +1,245 @@
+{
+  "alternate_sources": {
+    "ubsdgnt": [
+      "4.51"
+    ],
+    "ubsfauna": [
+      "fauna:4.2"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "fauna:CreepingAnimal",
+    "review_status": "source_unreviewed",
+    "source_id": "fauna:CreepingAnimal",
+    "source_primary_id": "fauna:CreepingAnimal",
+    "source_sha256": "f1894b2e6d8de0d17fc748bbdab919f67a37733fd9ef6384750c59e86beb905d"
+  },
+  "explicit_instances": {
+    "SBLGNT": [
+      [
+        "n44010012008"
+      ],
+      [
+        "n44011006016"
+      ],
+      [
+        "n45001023018"
+      ],
+      [
+        "n59003007008"
+      ]
+    ]
+  },
+  "fauna_type": "Snakes and Lizards",
+  "id": "fauna:CreepingAnimal",
+  "key_references": [
+    "03005002",
+    "05032024",
+    "45001023"
+  ],
+  "lemmas": {
+    "el": [
+      "ἑρπετόν"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "تعبير عام بيشمل الزواحف، بما فيها الديبان والسحالي.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "دبيبة"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "مصطلح عام للزواحف، بما في ذلك الثعابين والسحالي.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "زَوَاحِف"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan jenerik nem blong ol anamol we oli krol olsem snek mo lised.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "anamol we i krol"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Reptile",
+        "Snake"
+      ],
+      "descriptions": [
+        {
+          "article": "fauna:CreepingAnimal",
+          "description": "A general term for reptiles, including snakes and lizards.",
+          "gloss": "Creeping Animal",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Creeping Animal"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "اصطلاحی عمومی برای خزندگان، از جمله مارها و مارمولک‌ها.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "خزنده"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Terme général désignant les reptiles, y compris les serpents et les lézards.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "reptile"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Cikakkiyar kalma don dabbobi masu rarrafe, ciki har da macizai da ƙadangaru.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Halitta mai rarrafe"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "साँप और छिपकली सहित रेंगने वाले जीवों (सरीसृपों) के लिए एक सामान्य शब्द।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "रेंगनेवाला जन्तु"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Aha zuru ezu maka ụmụ anụmanụ na-akpụ akpụ, gụnyere agwọ na ngwere.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "anụ na-akpụ akpụ"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Istilah umum untuk reptil, termasuk ular dan kadal.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "binatang melata"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "सर्प र छेपारो लगायत घस्रने जन्तुहरू (सरीसृप) का लागि प्रयोग गरिने एक सामान्य शब्द।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "घस्रने जन्तु"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Um termo geral para répteis, incluindo cobras e lagartos.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "réptil"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Общее обозначение пресмыкающихся, включая змей и ящериц.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Пресмыкающееся"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Término general para los reptiles, incluidas serpientes y lagartos.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "reptil"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Neno la jumla la wanyama watambaao, wakiwemo nyoka na mijusi.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Kiumbe kitambaacho"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Wanpela bikpela nem bilong ol reptail, olsem ol snek na ol palai.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "abus i save krol"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Một thuật ngữ chung để chỉ loài bò sát, bao gồm rắn và thằn lằn.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Loài bò sát"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "爬行动物的统称，包括蛇和蜥蜴等。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "爬虫"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "爬行動物的統稱，包括蛇和蜥蜴。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "爬行動物"
+    }
+  },
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "primary_id": "fauna:CreepingAnimal",
+  "pronominal_referents": {
+    "SBLGNT": [
+      [
+        "n44011010009"
+      ]
+    ]
+  },
+  "references": [
+    "44010012",
+    "44011006",
+    "45001023",
+    "59003007"
+  ],
+  "subject_referents": {},
+  "type": "fauna",
+  "ubsdgnt": [
+    "4.51"
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "added_entry": false,
+  "alternate_sources": {
+    "tipnr": [
+      "Paran_Mount@Deu.33.2-Hab"
+    ],
+    "ubsdbh": [
+      "005771001001000"
+    ],
+    "vizbible": [
+      "rectcV1i4v4cA0JNn"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "place:ParanMount",
+    "review_status": "source_unreviewed",
+    "source_id": "place:ParanMount",
+    "source_primary_id": "place:ParanMount",
+    "source_sha256": "d1c11734c60cb1f66f6888650f2e2b4bd2c39bb58568821ef6a6c418fbd68006"
+  },
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o050330020101"
+      ],
+      [
+        "o350030030061"
+      ]
+    ]
+  },
+  "geocoordinates": {
+    "obi": {
+      "lat": "29.151667",
+      "lon": "33.541944"
+    },
+    "vizbible": {
+      "lat": "29.151667",
+      "lon": "33.541944"
+    }
+  },
+  "id": "place:ParanMount",
+  "is_artifact": false,
+  "is_person": false,
+  "key_references": [
+    "05033002",
+    "35003003"
+  ],
+  "localizations": {
+    "apd": {
+      "preferred_label": "جبل فاران"
+    },
+    "arb": {
+      "preferred_label": "جَبَل فَارَانَ"
+    },
+    "bis": {
+      "preferred_label": "Hil Paran"
+    },
+    "eng": {
+      "alternate_labels": [
+        "mount Paran",
+        "Paran"
+      ],
+      "preferred_label": "Mount Paran"
+    },
+    "fas": {
+      "preferred_label": "کوه فاران"
+    },
+    "fra": {
+      "preferred_label": "montagne de Paran"
+    },
+    "hau": {
+      "preferred_label": "Dutsen Faran"
+    },
+    "hin": {
+      "preferred_label": "पारान पर्वत"
+    },
+    "ibo": {
+      "preferred_label": "Ugwu Paran"
+    },
+    "ind": {
+      "preferred_label": "Pegunungan Paran"
+    },
+    "nep": {
+      "preferred_label": "पारान पर्वत"
+    },
+    "por": {
+      "preferred_label": "Monte Parã"
+    },
+    "rus": {
+      "preferred_label": "гора Фаран"
+    },
+    "spa": {
+      "preferred_label": "monte Parán"
+    },
+    "swh": {
+      "preferred_label": "Mlima Parani"
+    },
+    "tpi": {
+      "preferred_label": "Maunten Paran"
+    },
+    "vie": {
+      "preferred_label": "Núi Pha-ran"
+    },
+    "zhs": {
+      "preferred_label": "巴兰山"
+    },
+    "zht": {
+      "preferred_label": "巴蘭山"
+    }
+  },
+  "mentioned_in_bible": true,
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "place_types": {
+    "obi": [
+      "mountain",
+      "special"
+    ],
+    "vizbible": [
+      "Mountain"
+    ]
+  },
+  "primary_id": "place:ParanMount",
+  "pronominal_referents": {},
+  "references": [
+    "05033002",
+    "35003003"
+  ],
+  "subject_referents": {},
+  "type": "place",
+  "ubsdbh": [
+    "005771001001000"
+  ]
+}

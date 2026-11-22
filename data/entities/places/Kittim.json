@@ -1,0 +1,288 @@
+{
+  "added_entry": false,
+  "alternate_sources": {
+    "aquifer": [
+      "6632|Kittim|TyndaleBibleDictionary"
+    ],
+    "geonames": [
+      "http://sws.geonames.org/146400"
+    ],
+    "tipnr": [
+      "Kittim|Cyprus@Num.24.24-Act"
+    ],
+    "ubsdbh": [
+      "003469001001000"
+    ],
+    "vizbible": [
+      "recxONSPR7PbGyrLR"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "place:Cyprus",
+    "review_status": "source_unreviewed",
+    "source_id": "place:Kittim",
+    "source_primary_id": "place:Cyprus",
+    "source_sha256": "0766fd3a86e3f8b6a6f61d01a4b124a2057ea3d90d3894b30bf8d4c0fb68e5f4"
+  },
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o040240240031"
+      ],
+      [
+        "o270110300041"
+      ]
+    ]
+  },
+  "geocoordinates": {
+    "obi": {
+      "lat": "35.018306",
+      "lon": "33.207693"
+    },
+    "recogito": {
+      "lat": "34.92291",
+      "lon": "33.6233"
+    },
+    "vizbible": {
+      "lat": "35.018306",
+      "lon": "33.207693"
+    }
+  },
+  "id": "place:Kittim",
+  "is_artifact": false,
+  "is_person": false,
+  "key_references": [
+    "04024024",
+    "27011030"
+  ],
+  "lemmas": {
+    "he": [
+      "כִּתִּיִּים",
+      "כִּתִּי"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "جزيرة في البحر الأبيض المتوسط، من المحتمل إنها تكون قبرص.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "كتيم"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "جزيرة في البحر الأبيض المتوسط، ربما تُطابق قبرص.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "كِتِّيم"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan aelan long Mediterenian Si; maet hem i aelan ya Saepras.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Kitim"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Chittim",
+        "Cyprus",
+        "western coastlands"
+      ],
+      "descriptions": [
+        {
+          "article": "place:Kittim",
+          "description": "An island in the Mediterranean Sea; possibly to be identified with Cyprus.",
+          "gloss": "Kittim",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Kittim"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "جزیره‌ای در دریای مدیترانه؛ احتمالاً همان قبرس.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "کتیم"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Une île de la mer Méditerranée ; peut-être à identifier avec Chypre.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Kittim"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Wani tsibiri a Tekun Bahar Rum; mai yiwuwa a iya danganta shi da Saifurus.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Kittim"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "भूमध्य सागर का एक द्वीप; संभवतः साइप्रस के रूप में पहचाना जाता है।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "कित्तीम"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Otu agwaetiti dị nʼOsimiri Mediterenia; ma eleghị anya a na-akpọ ya Saiprọs.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Kitim"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Sebuah pulau di Laut Tengah; kemungkinan diidentifikasi dengan Siprus.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Kitim"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "भूमध्यसागरको एक टापु; सम्भवतः साइप्रस भनी पहिचान गरिएको।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "कित्तीम"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Uma ilha no mar Mediterrâneo; possivelmente identificada com Chipre.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Quitim"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Остров в Средиземном море; возможно, отождествляется с Кипром.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Киттим"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Una isla en el mar Mediterráneo; posiblemente identificada con Chipre.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Quitim"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Kisiwa katika Bahari ya Mediterania; yawezekana kuwa ni Kipro.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Kitimu"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Wanpela ailan long Solwara Mediterenian; ating em i wankain olsem Saiprus.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Kitim"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Một hòn đảo ở Địa Trung Hải; có thể được xác định với Síp.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Kít-tim"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "地中海的一个岛屿；可能即塞浦路斯。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "基提"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "地中海中的一座島嶼；可能即是塞浦路斯。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "基提"
+    }
+  },
+  "mentioned_in_bible": true,
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "place_types": {
+    "acai": [
+      "island"
+    ],
+    "obi": [
+      "island"
+    ]
+  },
+  "possibly_same_as": [
+    "place:Cyprus"
+  ],
+  "primary_id": "place:Cyprus",
+  "pronominal_referents": {
+    "wlc": [
+      [
+        "o040240240091"
+      ]
+    ]
+  },
+  "references": [
+    "04024024",
+    "27011030"
+  ],
+  "referred_to_as": [
+    "place:Cyprus"
+  ],
+  "subject_referents": {
+    "wlc": [
+      [
+        "o040240240042"
+      ],
+      [
+        "o040240240062"
+      ]
+    ]
+  },
+  "tribal_area": "group:Cyprus",
+  "type": "place",
+  "ubsdbh": [
+    "003469001001000"
+  ]
+}

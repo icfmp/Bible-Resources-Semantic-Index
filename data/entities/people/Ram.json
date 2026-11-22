@@ -1,0 +1,273 @@
+{
+  "alternate_sources": {
+    "aquifer": [
+      "7940|Ram|TyndaleBibleDictionary",
+      "7936|Ram (Person)|TyndaleBibleDictionary"
+    ],
+    "tipnr": [
+      "Arni|Ram@Rut.4.19-Luk",
+      "Admin|Ram@Rut.4.19-Luk",
+      "Ram@Rut.4.19-Luk"
+    ],
+    "vizbible": [
+      "recH7JpZUIqyGxHkt"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "person:Ram",
+    "review_status": "source_unreviewed",
+    "source_id": "person:Ram",
+    "source_primary_id": "person:Ram",
+    "source_sha256": "c24f839e754bbef50f00daf593cb50a04d4f6c717c87f781706749a200f14a48"
+  },
+  "explicit_instances": {
+    "SBLGNT": [
+      [
+        "n40001003021"
+      ],
+      [
+        "n40001004001"
+      ],
+      [
+        "n42003033004"
+      ],
+      [
+        "n42003033006"
+      ]
+    ],
+    "wlc": [
+      [
+        "o080040190041"
+      ],
+      [
+        "o080040190052"
+      ],
+      [
+        "o130020090091"
+      ],
+      [
+        "o130020100012"
+      ]
+    ]
+  },
+  "father": "person:Hezron.2",
+  "gender": "male",
+  "id": "person:Ram",
+  "key_references": [
+    "08004019",
+    "13002009",
+    "40001004"
+  ],
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "راجل من سبط يهوذا. مذكور في سلسلة نسب يسوع.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "رام"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "رجل من سبط يهوذا، ورد اسمه في نسب يسوع.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "رَام"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan man we i kamaot long laen blong Juta. Nem blong hem i stap long laen blong Jisas.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ram"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Aram",
+        "Admin"
+      ],
+      "descriptions": [
+        {
+          "article": "person:Ram",
+          "description": "A man from the tribe of Judah. He is listed in the famiy line of Jesus.",
+          "gloss": "Ram",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ram"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "مردی از قبیلهٔ یهودا. نام او در نسب‌نامهٔ عیسی آمده است.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "رام"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Homme de la tribu de Juda. Il figure dans la généalogie de Jésus.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ram"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Wani mutum daga kabilar Yahuda. An lissafa shi a cikin layin zuriyar Yesu.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ram"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "यहूदा के गोत्र का एक पुरुष। उसे यीशु की वंशावली में गिना गया है।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "राम"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Nwoke sitere nʼebo Juda. E depụtara ya nʼagbụrụ Jisọs.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ram"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Seorang laki-laki dari suku Yehuda. Ia tercatat dalam silsilah Yesus.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ram"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "यहूदा कुलका एक पुरुष। उनको नाम येशूको वंशावलीमा सूचीकृत छ।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "राम"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Um homem da tribo de Judá. Ele é mencionado na genealogia de Jesus.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Rão"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Человек из колена Иуды. Он включен в родословие Иисуса.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Арам"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Hombre de la tribu de Judá. Está incluido en la genealogía de Jesús.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ram"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Mtu kutoka kabila la Yuda. Ametajwa katika ukoo wa Yesu.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ramu"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Wanpela man bilong lain bilong Juda. Nem bilong em i stap long lain tumbuna bilong Jisas.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ram"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Một người thuộc bộ tộc Giu-đa. Ông được ghi trong gia phả của Chúa Cứu Thế Giê-xu.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ram"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "出自犹大支派的男子，名列耶稣的家谱中。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "兰"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "出自猶大支派的男子，被列在耶穌的家譜中。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "蘭"
+    }
+  },
+  "mother": "person:AWifeOfHezron",
+  "non_biblical": false,
+  "offspring": [
+    "person:Amminadab"
+  ],
+  "only_mentioned_in_apocrypha": false,
+  "primary_id": "person:Ram",
+  "pronominal_referents": {},
+  "references": [
+    "08004019",
+    "13002009",
+    "13002010",
+    "40001003",
+    "40001004",
+    "42003033"
+  ],
+  "referred_to_as": [
+    "person:Admin",
+    "person:Arni"
+  ],
+  "roles": [
+    "Relative of Jesus",
+    "Patriarch"
+  ],
+  "siblings": [
+    "person:Jerahmeel",
+    "person:Caleb.2",
+    "person:Segub.2",
+    "person:Ashhur"
+  ],
+  "subject_referents": {},
+  "tribe": "group:Judah",
+  "type": "person"
+}

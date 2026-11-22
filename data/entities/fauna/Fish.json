@@ -1,0 +1,527 @@
+{
+  "alternate_sources": {
+    "aquifer": [
+      "5271|Fish|TyndaleBibleDictionary"
+    ],
+    "ubsdgnt": [
+      "4.58",
+      "4.60",
+      "4.59",
+      "4.61",
+      "5.16",
+      "5.17"
+    ],
+    "ubsfauna": [
+      "fauna:5.1"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "fauna:Fish",
+    "review_status": "source_unreviewed",
+    "source_id": "fauna:Fish",
+    "source_primary_id": "fauna:Fish",
+    "source_sha256": "eddf832cac28b51115da73bc1992ce8f709df3fd5cfdb94d37af8c53368ad18c"
+  },
+  "explicit_instances": {
+    "SBLGNT": [
+      [
+        "n59003007011"
+      ],
+      [
+        "n40015034015"
+      ],
+      [
+        "n41008007003"
+      ],
+      [
+        "n40007010003"
+      ],
+      [
+        "n40014017014"
+      ],
+      [
+        "n40014019016"
+      ],
+      [
+        "n40015036007"
+      ],
+      [
+        "n40017027015"
+      ],
+      [
+        "n41006038016"
+      ],
+      [
+        "n41006041009"
+      ],
+      [
+        "n41006041030"
+      ],
+      [
+        "n41006043010"
+      ],
+      [
+        "n42005006006"
+      ],
+      [
+        "n42005009014"
+      ],
+      [
+        "n42009013020"
+      ],
+      [
+        "n42009016009"
+      ],
+      [
+        "n42011011010"
+      ],
+      [
+        "n42011011013"
+      ],
+      [
+        "n42024042005"
+      ],
+      [
+        "n43021006027"
+      ],
+      [
+        "n43021008024"
+      ],
+      [
+        "n43021011013"
+      ],
+      [
+        "n46015039021"
+      ],
+      [
+        "n40012040009"
+      ],
+      [
+        "n43006009011"
+      ],
+      [
+        "n43006011016"
+      ],
+      [
+        "n43021009011"
+      ],
+      [
+        "n43021010008"
+      ],
+      [
+        "n43021013013"
+      ],
+      [
+        "n43021005009"
+      ]
+    ],
+    "wlc": [
+      [
+        "o010010260082"
+      ],
+      [
+        "o010010280142"
+      ],
+      [
+        "o010090020171"
+      ],
+      [
+        "o020070180013"
+      ],
+      [
+        "o020070210013"
+      ],
+      [
+        "o040110050032"
+      ],
+      [
+        "o040110220101"
+      ],
+      [
+        "o050040180071"
+      ],
+      [
+        "o110050130212"
+      ],
+      [
+        "o160130160051"
+      ],
+      [
+        "o180120080071"
+      ],
+      [
+        "o190080090032"
+      ],
+      [
+        "o191050290071",
+        "o191050290072"
+      ],
+      [
+        "o210090120082"
+      ],
+      [
+        "o230500020251",
+        "o230500020252"
+      ],
+      [
+        "o260290040061"
+      ],
+      [
+        "o260290040141"
+      ],
+      [
+        "o260290050061"
+      ],
+      [
+        "o260380200031"
+      ],
+      [
+        "o260470090152"
+      ],
+      [
+        "o260470100161",
+        "o260470100162"
+      ],
+      [
+        "o260470100172"
+      ],
+      [
+        "o280040030141"
+      ],
+      [
+        "o320020010031"
+      ],
+      [
+        "o320020010112"
+      ],
+      [
+        "o320020020072"
+      ],
+      [
+        "o320020110032"
+      ],
+      [
+        "o350010140032"
+      ],
+      [
+        "o360010030072"
+      ]
+    ]
+  },
+  "fauna_type": "Fish, Frogs and Mollusks",
+  "id": "fauna:Fish",
+  "key_references": [
+    "01001026",
+    "43021006",
+    "40014017"
+  ],
+  "lemmas": {
+    "el": [
+      "ἐνάλιος",
+      "ἰχθύδιον",
+      "ἰχθύς",
+      "κῆτος",
+      "ὀψάριον",
+      "προσφάγιον"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "حيوان بيعيش في الموية، ممكن يكون صغير أو كبير، وغالباً بيتاكل كطعام.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "سمك"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "حيوان يعيش في الماء، قد يكون صغيرًا أو كبيرًا، وغالبًا ما يُتخذ طعامًا.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "سمك"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan anamol we i laef long wota, we i save smol no bigwan, mo we plante taem ol man oli kakae.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "fis"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Sea Creature"
+      ],
+      "descriptions": [
+        {
+          "article": "fauna:Fish",
+          "description": "An animal that lives in water, which can be small or large, and is often used as food.",
+          "gloss": "Fish",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Fish"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "جانوری که در آب زندگی می‌کند، می‌تواند کوچک یا بزرگ باشد و اغلب به‌عنوان خوراک استفاده می‌شود.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "ماهی"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Animal vivant dans l’eau, qui peut être de petite ou de grande taille, et qui sert souvent de nourriture.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "poisson"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Wata dabba ce da take rayuwa a ruwa, wadda za ta iya zama ƙarama ko babba, kuma ana yawan amfani da ita a matsayin abinci.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Kifi"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "पानी में रहने वाला एक प्राणी, जो छोटा या बड़ा हो सकता है, और अक्सर भोजन के रूप में उपयोग किया जाता है।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "मछली"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Anụmanụ na-ebi na mmiri, nke nwere ike ịdị obere ma ọ bụ buru ibu, nke a na-ejikarị eme nri.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Azụ"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Hewan yang hidup di air, yang dapat berukuran kecil atau besar, dan sering digunakan sebagai makanan.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "ikan"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "पानीमा बस्ने एउटा जीव, जुन सानो वा ठूलो हुन सक्छ, र प्रायः खानाको रूपमा प्रयोग गरिन्छ।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "माछा"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Um animal que vive na água, que pode ser pequeno ou grande, e é frequentemente usado como alimento.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "peixe"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Живущее в воде животное, которое может быть маленьким или большим и часто употребляется в пищу.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Рыба"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Animal que vive en el agua, que puede ser pequeño o grande, y a menudo se utiliza como alimento.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "pez"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Mnyama anayeishi majini, ambaye anaweza kuwa mdogo au mkubwa, na mara nyingi hutumiwa kama chakula.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Samaki"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Wanpela animal i save stap long wara, em inap stap liklik o bikpela, na planti taim ol man i save kaikai olsem abus.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "pis"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Một loài động vật sống dưới nước, có thể nhỏ hoặc lớn, và thường được dùng làm thức ăn.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Cá"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "生活在水中的动物，体型可大可小，常被用作食物。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "鱼"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "一種生活在水中的動物，體型可大可小，常作為食物。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "魚"
+    }
+  },
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "primary_id": "fauna:Fish",
+  "pronominal_referents": {
+    "SBLGNT": [
+      [
+        "n41008007007"
+      ],
+      [
+        "n41008007010"
+      ],
+      [
+        "n40014018007"
+      ],
+      [
+        "n40017027021"
+      ],
+      [
+        "n42005009015"
+      ],
+      [
+        "n42009016015"
+      ],
+      [
+        "n43006009013"
+      ],
+      [
+        "n43021010009"
+      ]
+    ]
+  },
+  "references": [
+    "01001026",
+    "01001028",
+    "01009002",
+    "02007018",
+    "02007021",
+    "04011005",
+    "04011022",
+    "05004018",
+    "11005013",
+    "16013016",
+    "18012008",
+    "19008009",
+    "19105029",
+    "21009012",
+    "23050002",
+    "26029004",
+    "26029005",
+    "26038020",
+    "26047009",
+    "26047010",
+    "28004003",
+    "32002001",
+    "32002002",
+    "32002011",
+    "35001014",
+    "36001003",
+    "40007010",
+    "40012040",
+    "40014017",
+    "40014019",
+    "40015034",
+    "40015036",
+    "40017027",
+    "41006038",
+    "41006041",
+    "41006043",
+    "41008007",
+    "41016018",
+    "42005006",
+    "42005009",
+    "42009013",
+    "42009016",
+    "42011011",
+    "42024042",
+    "43006009",
+    "43006011",
+    "43021005",
+    "43021006",
+    "43021008",
+    "43021009",
+    "43021010",
+    "43021011",
+    "43021013",
+    "46015039",
+    "59003007"
+  ],
+  "subject_referents": {
+    "SBLGNT": [
+      [
+        "n40017027013"
+      ],
+      [
+        "n43021011020"
+      ]
+    ],
+    "wlc": [
+      [
+        "o010090020201"
+      ],
+      [
+        "o040110220142"
+      ],
+      [
+        "o230500020282"
+      ],
+      [
+        "o320020010052"
+      ]
+    ]
+  },
+  "type": "fauna",
+  "ubsdgnt": [
+    "4.58",
+    "4.60",
+    "4.59",
+    "4.61",
+    "5.16",
+    "5.17"
+  ]
+}

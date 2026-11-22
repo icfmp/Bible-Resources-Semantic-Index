@@ -1,0 +1,303 @@
+{
+  "bsi": {
+    "canonical_id": "person:MotherOfRebekah",
+    "editorial_evidence": [
+      "Pinned WLC Gen 24:58 o010240580022, explicit record person:Rebekah vs frozen MotherOfRebekah subject pointer",
+      "https://www.biblegateway.com/passage/?search=Genesis+24%3A55-58&version=NIV",
+      "Pinned Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c WLC/lowfat/01-Gen-024-lowfat.xml, Genesis 24:58, word o010240580092; inherited ACAI source tags both person:MotherOfRebekah and person:Rebekah"
+    ],
+    "editorial_reason": "Genesis 24:58 directly names Rebekah as the woman being called to answer; the Hebrew Rebekah token is not an anonymous indirect word for her mother, who is a separate person in 24:55. Genesis 24:58: exact original word o010240580092 is the speaking subject of person:Rebekah (Rebekah replies 'I will go'; the mother does not speak), not person:MotherOfRebekah. Preserve the actual named speaker and the unaltered original source record.",
+    "review_status": "editorially_reviewed",
+    "source_id": "person:MotherOfRebekah",
+    "source_primary_id": "person:MotherOfRebekah",
+    "source_sha256": "70929ab5550bf5248be9a8719112ee5f3b662e8aad20ff4672a19563775ba43d"
+  },
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o010240550021"
+      ]
+    ]
+  },
+  "id": "person:MotherOfRebekah",
+  "key_references": [
+    "01024055"
+  ],
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "أم رفقة.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "أم رفقة"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "أم رفقة.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "أُمُّ رِفْقَةَ"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Mama blong Rebeka.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Mama blong Rebeka"
+    },
+    "eng": {
+      "descriptions": [
+        {
+          "description": "The mother of Rebekah.",
+          "gloss": "Mother of Rebekah",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Mother of Rebekah"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "مادر رِفقا.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "مادر رِفقا"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "La mère de Rebecca.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Mère de Rebecca"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Mahaifiyar Rifkatu.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Mahaifiyar Rifkatu"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "रिबका की माता।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "रिबका की माता"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Nne Ribeka.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Nne Ribeka"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Ibu dari Ribka.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ibu Ribka"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "रिबेकाकी आमा।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "रिबेकाकी आमा"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "A mãe de Rebeca.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Mãe de Rebeca"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Мать Ревекки.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Мать Ревекки"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "La madre de Rebeca.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Madre de Rebeca"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Mama yake Rebeka.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Mama yake Rebeka"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Mama bilong Rebeka.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Mama bilong Rebeka"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Mẹ của Rê-bê-ca.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Mẹ của Rê-bê-ca"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "利百加的母亲。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "利百加的母亲"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "利百加的母親。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "利百加的母親"
+    }
+  },
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "primary_id": "person:MotherOfRebekah",
+  "pronominal_referents": {},
+  "references": [
+    "01024055"
+  ],
+  "speeches": {
+    "wlc": [
+      {
+        "quote_type": "Normal",
+        "words": [
+          "o010240550041",
+          "o010240550051",
+          "o010240550052",
+          "o010240550061",
+          "o010240550062",
+          "o010240550071",
+          "o010240550081",
+          "o010240550091",
+          "o010240550101",
+          "o010240550111"
+        ]
+      },
+      {
+        "quote_type": "Normal",
+        "words": [
+          "o010240570021",
+          "o010240570031",
+          "o010240570031ה",
+          "o010240570032",
+          "o010240570041",
+          "o010240570042",
+          "o010240570051",
+          "o010240570061",
+          "o010240570062"
+        ]
+      },
+      {
+        "quote_type": "Normal",
+        "words": [
+          "o010240580052",
+          "o010240580061",
+          "o010240580071",
+          "o010240580072",
+          "o010240580081",
+          "o010240580082"
+        ]
+      },
+      {
+        "quote_type": "Normal",
+        "words": [
+          "o010240580101"
+        ]
+      },
+      {
+        "quote_type": "Normal",
+        "words": [
+          "o010240600061",
+          "o010240600062",
+          "o010240600071",
+          "o010240600081",
+          "o010240600091",
+          "o010240600092",
+          "o010240600101",
+          "o010240600111",
+          "o010240600112",
+          "o010240600121",
+          "o010240600122",
+          "o010240600131",
+          "o010240600141",
+          "o010240600151",
+          "o010240600152"
+        ]
+      }
+    ]
+  },
+  "subject_referents": {
+    "wlc": [
+      [
+        "o010240550021",
+        "o010240550032"
+      ],
+      [
+        "o010240570012"
+      ],
+      [
+        "o010240550021",
+        "o010240550032"
+      ],
+      [
+        "o010240580032"
+      ],
+      [
+        "o010240550021",
+        "o010240280042"
+      ],
+      [
+        "o010240600042"
+      ]
+    ]
+  },
+  "type": "person"
+}

@@ -1,0 +1,399 @@
+{
+  "alternate_sources": {
+    "tipnr": [
+      "Rechab@2Ki.10.15-Jer"
+    ],
+    "ubsdbh": [
+      "006800001001000"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "group:Rechab",
+    "review_status": "source_unreviewed",
+    "source_id": "group:Rechab",
+    "source_primary_id": "group:Rechab",
+    "source_sha256": "c44e0e9d1b276933fa6e3b5a4143fc0bb1628f2134458378c8d7714789db91b8"
+  },
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o240350020042"
+      ],
+      [
+        "o240350030162"
+      ],
+      [
+        "o240350050052"
+      ],
+      [
+        "o240350180022"
+      ]
+    ]
+  },
+  "group_origin": "person:Rechab.2",
+  "group_type": "relation",
+  "id": "group:Rechab",
+  "key_references": [
+    "24035002"
+  ],
+  "lemmas": {
+    "he": [
+      "רֵכָבִי"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "ناس من نسل ركاب، أبو يوناداب.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "الركابيين"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "شعب ينحدر من ركاب، أبي يوناداب.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "الركابيون"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Ol man we oli kamaot long Rekab, papa blong Jonadab.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "ol laen blong Rekab"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Rechab",
+        "Rekabite"
+      ],
+      "descriptions": [
+        {
+          "article": "group:Rechab",
+          "description": "People descended from Rechab, the father of Jonadab.",
+          "gloss": "Rechabites",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Rechabites"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "مردمی از نسل رکاب، پدر یوناداب.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "رکابی‌ها"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Personnes descendant de Récab, le père de Jonadab.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Récabites"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Mutanen da suka fito daga zuriyar Rekab, mahaifin Yonadab.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Rekabawa"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "योनादाब के पिता रेकाब के वंशज।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "रेकाबी"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Ndị si nʼagbụrụ Rekab, nna Jonadab pụta.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ndị Rekab"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Keturunan Rekhab, ayah Yonadab.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "orang Rekhab"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "योनादाबका पिता रेकाबका सन्तानहरू।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "रेकाबीहरू"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Pessoas descendentes de Recabe, pai de Jonadabe.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "recabitas"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Потомки Рихава, отца Ионадава.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Рехавиты"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Personas que descendieron de Recab, el padre de Jonadab.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "recabitas"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Watu waliotokana na uzao wa Rekabu, baba yake Yonadabu.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Warekabi"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Ol manmeri i bilong lain bilong Rekap, papa bilong Jonadab.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Lain Rekap"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Hậu tự của Rê-cáp, cha của Giô-na-đáp.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Người Rê-cáp"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "约拿达的父亲利甲的后裔。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "利甲人"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "約拿達的父親利甲的後裔。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "利甲族"
+    }
+  },
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "primary_id": "group:Rechab",
+  "pronominal_referents": {},
+  "references": [
+    "24035002",
+    "24035003",
+    "24035005",
+    "24035018"
+  ],
+  "speeches": {
+    "wlc": [
+      {
+        "quote_type": "Normal",
+        "words": [
+          "o240350060021",
+          "o240350060031",
+          "o240350060041",
+          "o240350060051",
+          "o240350060061",
+          "o240350060071",
+          "o240350060081",
+          "o240350060091",
+          "o240350060092",
+          "o240350060101",
+          "o240350060111",
+          "o240350060112",
+          "o240350060121",
+          "o240350060122",
+          "o240350060131",
+          "o240350060141",
+          "o240350060151",
+          "o240350060161",
+          "o240350060171",
+          "o240350060172",
+          "o240350060173",
+          "o240350060181",
+          "o240350060191",
+          "o240350070011",
+          "o240350070012",
+          "o240350070021",
+          "o240350070031",
+          "o240350070041",
+          "o240350070042",
+          "o240350070051",
+          "o240350070061",
+          "o240350070071",
+          "o240350070072",
+          "o240350070081",
+          "o240350070091",
+          "o240350070101",
+          "o240350070102",
+          "o240350070111",
+          "o240350070121",
+          "o240350070122",
+          "o240350070131",
+          "o240350070141",
+          "o240350070142",
+          "o240350070151",
+          "o240350070161",
+          "o240350070171",
+          "o240350070172",
+          "o240350070181",
+          "o240350070191",
+          "o240350070201",
+          "o240350070211",
+          "o240350070221",
+          "o240350070231",
+          "o240350070241",
+          "o240350070242",
+          "o240350070251",
+          "o240350070261",
+          "o240350070271",
+          "o240350070281",
+          "o240350080011",
+          "o240350080012",
+          "o240350080021",
+          "o240350080022",
+          "o240350080031",
+          "o240350080041",
+          "o240350080051",
+          "o240350080061",
+          "o240350080062",
+          "o240350080071",
+          "o240350080072",
+          "o240350080081",
+          "o240350080091",
+          "o240350080092",
+          "o240350080101",
+          "o240350080102",
+          "o240350080111",
+          "o240350080121",
+          "o240350080131",
+          "o240350080141",
+          "o240350080142",
+          "o240350080151",
+          "o240350080161",
+          "o240350080162",
+          "o240350080171",
+          "o240350080172",
+          "o240350080181",
+          "o240350080182",
+          "o240350080183",
+          "o240350090011",
+          "o240350090012",
+          "o240350090013",
+          "o240350090021",
+          "o240350090031",
+          "o240350090041",
+          "o240350090042",
+          "o240350090043",
+          "o240350090051",
+          "o240350090052",
+          "o240350090061",
+          "o240350090062",
+          "o240350090071",
+          "o240350090072",
+          "o240350090081",
+          "o240350090091",
+          "o240350090101",
+          "o240350090102",
+          "o240350100011",
+          "o240350100012",
+          "o240350100021",
+          "o240350100022",
+          "o240350100031",
+          "o240350100032",
+          "o240350100041",
+          "o240350100042",
+          "o240350100051",
+          "o240350100052",
+          "o240350100061",
+          "o240350100071",
+          "o240350100072",
+          "o240350100081",
+          "o240350100091",
+          "o240350100092",
+          "o240350110011",
+          "o240350110012",
+          "o240350110021",
+          "o240350110022",
+          "o240350110031",
+          "o240350110041",
+          "o240350110051",
+          "o240350110061",
+          "o240350110071",
+          "o240350110072",
+          "o240350110081",
+          "o240350110082",
+          "o240350110091",
+          "o240350110101",
+          "o240350110102",
+          "o240350110111",
+          "o240350110121",
+          "o240350110122",
+          "o240350110131",
+          "o240350110141",
+          "o240350110142",
+          "o240350110151",
+          "o240350110152",
+          "o240350110153",
+          "o240350110161",
+          "o240350110171",
+          "o240350110181",
+          "o240350110182",
+          "o240350110191",
+          "o240350110192"
+        ]
+      }
+    ]
+  },
+  "subject_referents": {},
+  "type": "group",
+  "ubsdbh": [
+    "006800001001000"
+  ]
+}

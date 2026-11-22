@@ -1,0 +1,501 @@
+{
+  "alternate_sources": {
+    "ubsdbh": [
+      "000525001001000",
+      "002535001001000",
+      "003296001001000",
+      "006313001001000",
+      "006324001001000",
+      "007082001001000"
+    ],
+    "ubsdgnt": [
+      "6.144",
+      "6.178",
+      "6.145"
+    ],
+    "ubsrealia": [
+      "realia:10.1"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "realia:Bag",
+    "review_status": "source_unreviewed",
+    "source_id": "realia:Bag",
+    "source_primary_id": "realia:Bag",
+    "source_sha256": "3d48e1ee929fc11c76e853df7d22e07da87910c69b228d71575b7e3fe5f07568"
+  },
+  "explicit_instances": {
+    "SBLGNT": [
+      [
+        "n42010004003"
+      ],
+      [
+        "n42012033010"
+      ],
+      [
+        "n42022035008"
+      ],
+      [
+        "n42022036008"
+      ],
+      [
+        "n40003004013"
+      ],
+      [
+        "n40010009010"
+      ],
+      [
+        "n41001006009"
+      ],
+      [
+        "n41006008020"
+      ],
+      [
+        "n44021011008"
+      ],
+      [
+        "n44021011030"
+      ],
+      [
+        "n66001013016"
+      ],
+      [
+        "n66015006023"
+      ],
+      [
+        "n40010010002"
+      ],
+      [
+        "n41006008016"
+      ],
+      [
+        "n42009003013"
+      ],
+      [
+        "n42010004005"
+      ],
+      [
+        "n42022035010"
+      ],
+      [
+        "n42022036012"
+      ]
+    ],
+    "wlc": [
+      [
+        "o010420270151",
+        "o010420270152"
+      ],
+      [
+        "o010420280082",
+        "o010420280083"
+      ],
+      [
+        "o010430120091",
+        "o010430120092"
+      ],
+      [
+        "o010430180122",
+        "o010430180123"
+      ],
+      [
+        "o010430210081",
+        "o010430210082"
+      ],
+      [
+        "o010430210131",
+        "o010430210132"
+      ],
+      [
+        "o010430220122",
+        "o010430220123"
+      ],
+      [
+        "o010430230122",
+        "o010430230123"
+      ],
+      [
+        "o010440010091"
+      ],
+      [
+        "o010440010191",
+        "o010440010192"
+      ],
+      [
+        "o010440020071"
+      ],
+      [
+        "o010440080061",
+        "o010440080062"
+      ],
+      [
+        "o010440110051",
+        "o010440110052"
+      ],
+      [
+        "o010440110091",
+        "o010440110092"
+      ],
+      [
+        "o010440120082"
+      ],
+      [
+        "o120050230121"
+      ],
+      [
+        "o230030220043"
+      ],
+      [
+        "o050250130042",
+        "o050250130043"
+      ],
+      [
+        "o200010140041"
+      ],
+      [
+        "o200160110081"
+      ],
+      [
+        "o230460060032"
+      ],
+      [
+        "o330060110043"
+      ],
+      [
+        "o120040420142",
+        "o120040420143"
+      ],
+      [
+        "o220010130011"
+      ],
+      [
+        "o010420350071"
+      ],
+      [
+        "o010420350121"
+      ],
+      [
+        "o200070200011"
+      ],
+      [
+        "o370010060181"
+      ],
+      [
+        "o180140170022"
+      ],
+      [
+        "o090250290112"
+      ],
+      [
+        "o010420250111",
+        "o010420250112"
+      ],
+      [
+        "o010420270041",
+        "o010420270042"
+      ],
+      [
+        "o010420350041",
+        "o010420350042"
+      ],
+      [
+        "o010420350092",
+        "o010420350093"
+      ],
+      [
+        "o030110320161"
+      ],
+      [
+        "o060090040081"
+      ]
+    ]
+  },
+  "id": "realia:Bag",
+  "key_references": [
+    "01042027",
+    "40010010",
+    "42012033",
+    "42022036"
+  ],
+  "lemmas": {
+    "el": [
+      "βαλλάντιον",
+      "ζώνη",
+      "πήρα"
+    ],
+    "he": [
+      "אַמְתַּחַת",
+      "חָרִיט",
+      "כִּיס",
+      "צִקְלֹון",
+      "צְרֹור",
+      "שַׂק"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "وعاء مصنوع من الجلد أو القماش، بيستعملوه لحمل القروش أو الأكل أو الحاجات التانية.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "كيس"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "وِعَاءٌ مَصْنُوعٌ مِنَ ٱلْجِلْدِ أَوِ ٱلْقُمَاشِ يُسْتَخْدَمُ لِحَمْلِ ٱلْمَالِ أَوِ ٱلطَّعَامِ أَوْ غَيْرِهَا مِنَ ٱلْمُقْتَنَيَاتِ.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "كِيس"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan samting we oli wokem long leta no kaliko blong karem mane, kakae, no ol narafala samting.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Bag"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Purse",
+        "Sack",
+        "Bundle",
+        "Sachet",
+        "Money Bag",
+        "Belt",
+        "Girdle",
+        "Traveller’s Bag"
+      ],
+      "descriptions": [
+        {
+          "article": "realia:Bag",
+          "description": "A container made of leather or cloth used to carry money, food, or other possessions.",
+          "gloss": "Bag",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Bag"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "ظرفی ساخته‌شده از چرم یا پارچه که برای حمل پول، خوراک یا وسایل دیگر استفاده می‌شود.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "کیسه"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Récipient en cuir ou en tissu utilisé pour transporter de l'argent, de la nourriture ou d'autres biens.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "sac"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Wani akwatin kaya da aka yi da fata ko tsumma, wanda ake amfani da shi don ɗaukar kuɗi, abinci, ko wasu kayayyaki.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Jaka"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "चमड़े या कपड़े से बना एक पात्र जिसका उपयोग धन, भोजन या अन्य सामान ले जाने के लिए किया जाता था।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "थैली"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Ihe e ji akpụkpọ anụ maọbụ ákwà mee nke a na-eji ebu ego, nri, maọbụ ihe onwunwe ndị ọzọ.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Akpa"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Wadah yang terbuat dari kulit atau kain yang digunakan untuk membawa uang, makanan, atau barang bawaan lainnya.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "kantong"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "रुपियाँ-पैसा, खानेकुरा वा अन्य सरसामानहरू बोक्न प्रयोग गरिने छाला वा कपडाको थैलो वा झोला।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "थैली"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Um recipiente feito de couro ou tecido usado para carregar dinheiro, comida ou outros pertences.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "bolsa"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Вместилище из кожи или ткани, используемое для ношения денег, пищи или других вещей.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "сумка"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Recipiente de cuero o tela que se usa para llevar dinero, comida u otras pertenencias.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "bolsa"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Chombo kilichotengenezwa kwa ngozi au kitambaa kinachotumiwa kubeba fedha, chakula, au vitu vingine.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Mfuko"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Wanpela samting ol i wokim long let o laplap bilong karim mani, kaikai, o ol arapela samting.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "bek"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Đồ đựng bằng da hoặc vải dùng để mang theo tiền bạc, thức ăn, hoặc đồ dùng cá nhân.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Túi"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "由皮革或布制成、用于盛装金钱、食物或其他财物的容器。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "袋子"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "用皮革或布製成的容器，用來裝錢、食物或其他財物。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "袋子"
+    }
+  },
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "primary_id": "realia:Bag",
+  "pronominal_referents": {
+    "SBLGNT": [
+      [
+        "n44021011031"
+      ]
+    ]
+  },
+  "realia_type": "other",
+  "references": [
+    "01042025",
+    "01042027",
+    "01042028",
+    "01042035",
+    "01043012",
+    "01043018",
+    "01043021",
+    "01043022",
+    "01043023",
+    "01044001",
+    "01044002",
+    "01044008",
+    "01044011",
+    "01044012",
+    "03011032",
+    "05025013",
+    "06009004",
+    "09025029",
+    "12004042",
+    "12005023",
+    "18014017",
+    "20001014",
+    "20007020",
+    "20016011",
+    "22001013",
+    "23003022",
+    "23046006",
+    "33006011",
+    "37001006",
+    "40003004",
+    "40010009",
+    "40010010",
+    "41001006",
+    "41006008",
+    "42009003",
+    "42010004",
+    "42012033",
+    "42022035",
+    "42022036",
+    "44021011",
+    "66001013",
+    "66015006"
+  ],
+  "subject_referents": {
+    "SBLGNT": [
+      [
+        "n42012033012"
+      ]
+    ],
+    "wlc": [
+      [
+        "o370010060191"
+      ]
+    ]
+  },
+  "type": "realia",
+  "ubsdbh": [
+    "000525001001000",
+    "002535001001000",
+    "003296001001000",
+    "006313001001000",
+    "006324001001000",
+    "007082001001000"
+  ],
+  "ubsdgnt": [
+    "6.144",
+    "6.178",
+    "6.145"
+  ]
+}

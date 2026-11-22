@@ -1,0 +1,268 @@
+{
+  "alternate_sources": {
+    "ubsdbh": [
+      "000072001001000"
+    ],
+    "ubsrealia": [
+      "realia:4.5.6"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "realia:Sash",
+    "review_status": "source_unreviewed",
+    "source_id": "realia:Sash",
+    "source_primary_id": "realia:Sash",
+    "source_sha256": "7e86ac373bd150878ebbbff0a6b6d15fd591ff117316ebb187c6b8c51025c5dd"
+  },
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o020280040112"
+      ],
+      [
+        "o020280390072"
+      ],
+      [
+        "o020280400071"
+      ],
+      [
+        "o020290090031"
+      ],
+      [
+        "o020390290022"
+      ],
+      [
+        "o030080070072"
+      ],
+      [
+        "o030080130101"
+      ],
+      [
+        "o030160040103"
+      ],
+      [
+        "o230220210032",
+        "o230220210033"
+      ]
+    ]
+  },
+  "id": "realia:Sash",
+  "key_references": [
+    "02028004",
+    "02029009",
+    "23022021"
+  ],
+  "lemmas": {
+    "he": [
+      "אַבְנֵט"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "شريط قماش بيتلبس حولين الوسط عشان يثبت اللبس.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "حزام"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "شَرِيطٌ مِنَ ٱلْقُمَاشِ يُلَفُّ حَوْلَ ٱلْخَصْرِ لِشَدِّ ٱلثَّوْبِ.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "مِنْطَقَة"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan pis kaliko we oli fasem long wes blong holem klos i stap gud.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "strap blong wes"
+    },
+    "eng": {
+      "descriptions": [
+        {
+          "article": "realia:Sash",
+          "description": "A strip of cloth worn around the waist to secure a garment.",
+          "gloss": "Sash",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Sash"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "نواری پارچه‌ای که دور کمر بسته می‌شود تا لباس را محکم نگه دارد.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "شال کمر"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Bande d'étoffe portée autour de la taille pour maintenir un vêtement.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "ceinture"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Wani ƙyalle mai kunkuntar faɗi da ake ɗaurawa a kugu don ƙarfafa tufafi.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Abin ɗamara"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "कपड़े की एक पट्टी जिसे वस्त्र को बाँधकर रखने के लिए कमर के चारों ओर पहना जाता है।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "कमरबन्द"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Mpempe akwa a na-eke nʼúkwù iji kwado uwe.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "ihe ike nʼukwu"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Sehelai kain panjang yang dikenakan di sekeliling pinggang untuk mengencangkan pakaian.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "ikat pinggang"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "कपडालाई अड्याउन कम्मर वरिपरि बाँधिने कपडाको फित्ता वा पट्टी।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "पटुका"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Uma faixa de pano usada ao redor da cintura para prender uma veste.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "cinto"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Полоса ткани, надеваемая вокруг талии для подпоясывания одежды.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Пояс"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Tira de tela que se lleva alrededor de la cintura para sujetar una prenda de vestir.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "cinturón"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Utepe wa kitambaa unaovaliwa kiunoni ili kukaza au kushikilia vazi.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Mshipi"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Hap laplap o let ol i save pasim raun long bel bilong taitim klos.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "let"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Dải vải đeo quanh thắt lưng để giữ chặt y phục.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Dây thắt lưng"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "系在腰间用来固定衣物的布带。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "腰带"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "繫在腰間用以固定衣物的一條布帶。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "腰帶"
+    }
+  },
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "primary_id": "realia:Sash",
+  "pronominal_referents": {
+    "wlc": [
+      [
+        "o020280410022"
+      ],
+      [
+        "o030160040181"
+      ],
+      [
+        "o030160040233"
+      ]
+    ]
+  },
+  "realia_type": "other",
+  "references": [
+    "02028004",
+    "02028039",
+    "02028040",
+    "02029009",
+    "02039029",
+    "03008007",
+    "03008013",
+    "03016004",
+    "23022021"
+  ],
+  "subject_referents": {},
+  "type": "realia",
+  "ubsdbh": [
+    "000072001001000"
+  ]
+}

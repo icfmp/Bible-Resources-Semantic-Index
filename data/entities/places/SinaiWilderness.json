@@ -1,0 +1,335 @@
+{
+  "added_entry": false,
+  "alternate_sources": {
+    "pleiades": [
+      "http://pleiades.stoa.org/places/746813"
+    ],
+    "tipnr": [
+      "Sinai_Wilderness@Exo.19.1-Num"
+    ],
+    "ubsdbh": [
+      "005052001001000",
+      "003713001001000"
+    ],
+    "vizbible": [
+      "rec6V51IWkgvAcnOU"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "place:SinaiWilderness",
+    "review_status": "source_unreviewed",
+    "source_id": "place:SinaiWilderness",
+    "source_primary_id": "place:SinaiWilderness",
+    "source_sha256": "fa554abc52a9c90bac65f80da47f0f60049851cb63b0d40fb62568e80a1d5aec"
+  },
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o020190010111",
+        "o020190010121"
+      ],
+      [
+        "o020190020041",
+        "o020190020051"
+      ],
+      [
+        "o020190020072"
+      ],
+      [
+        "o030070380172",
+        "o030070380181"
+      ],
+      [
+        "o040010010052",
+        "o040010010061"
+      ],
+      [
+        "o040010190072",
+        "o040010190081"
+      ],
+      [
+        "o040030040112",
+        "o040030040121"
+      ],
+      [
+        "o040030140052",
+        "o040030140061"
+      ],
+      [
+        "o040090010052",
+        "o040090010061"
+      ],
+      [
+        "o040090050112",
+        "o040090050121"
+      ],
+      [
+        "o040100120052",
+        "o040100120061"
+      ],
+      [
+        "o040100120092"
+      ],
+      [
+        "o040260640142",
+        "o040260640151"
+      ],
+      [
+        "o040330150042",
+        "o040330150051"
+      ],
+      [
+        "o040330160022",
+        "o040330160031"
+      ]
+    ]
+  },
+  "geocoordinates": {
+    "obi": {
+      "lat": "28.539722",
+      "lon": "33.973333"
+    },
+    "recogito": {
+      "lat": "29.5",
+      "lon": "34"
+    },
+    "vizbible": {
+      "lat": "29.5",
+      "lon": "34"
+    }
+  },
+  "id": "place:SinaiWilderness",
+  "is_artifact": false,
+  "is_person": false,
+  "key_references": [
+    "44007030",
+    "04001001",
+    "02019002"
+  ],
+  "lemmas": {
+    "he": [
+      "מִדְבָּר סִינַי"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "منطقة صحراوية في شبه جزيرة سيناء، قريبة من جبل سيناء، مروا بيها بنو إسرائيل في وقت الخروج.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "برية سيناء"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "منطقة صحراوية في شبه جزيرة سيناء، بالقرب من جبل سيناء، ارتحل عبرها بنو إسرائيل أثناء الخروج.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "برِّيّةُ سيناءَ"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan eria blong draeples long Penensula blong Sinae, klosap long hil ya Sinae, we ol man Isrel oli bin pas tru long hem long taem we oli aot long Ijip.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Draeples ya Sinae"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Desert of Sinai",
+        "Sinai",
+        "Sinai desert",
+        "Sinai Wilderness"
+      ],
+      "descriptions": [
+        {
+          "article": "place:WildernessOfSinai",
+          "description": "A desert region in the Sinai Peninsula, near Mount Sinai, through which the Israelites traveled during the exodus.",
+          "gloss": "Wilderness of Sinai",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Wilderness of Sinai"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "منطقه‌ای بیابانی در شبه‌جزیره سینا، در نزدیکی کوه سینا، که بنی‌اسرائیل در زمان خروج از میان آن گذر کردند.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "بیابان سینا"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Région désertique de la péninsule du Sinaï, près du mont Sinaï, à travers laquelle les Israélites ont voyagé pendant l’Exode.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "désert de Sinaï"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Wani yankin hamada a Tsibirin Sinai, kusa da Dutsen Sinai, inda Isra’ilawa suka bi a lokacin fitowarsu daga Masar.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Hamadar Sinai"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "सीनै प्रायद्वीप में सीनै पर्वत के निकट का एक मरुस्थलीय क्षेत्र, जिससे होकर इस्राएलियों ने मिस्र से प्रस्थान के दौरान यात्रा की थी।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "सीनै का जंगल"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Mpaghara ọzara dị na Mmụwanye Ala Saịnaị, nso Ugwu Saịnaị, nke ụmụ Izrel gafere nʼoge ọpụpụ ha.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ọzara Saịnaị"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Sebuah wilayah padang gurun di Semenanjung Sinai, dekat Gunung Sinai, yang dilalui orang Israel selama masa keluaran.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Padang Gurun Sinai"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "सीनै प्रायद्वीपमा, सीनै पर्वत नजिकैको एउटा मरुभूमि क्षेत्र, जहाँबाट इस्राएलीहरूले प्रस्थानको समयमा यात्रा गरेका थिए।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "सीनैको उजाड-स्थान"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Uma região desértica na península do Sinai, perto do monte Sinai, pela qual os israelitas viajaram durante o êxodo.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Deserto do Sinai"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Пустынная область на Синайском полуострове около горы Синай, по которой израильтяне странствовали во время исхода.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Синайская пустыня"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Región desértica en la península del Sinaí, cerca del monte Sinaí, por la que viajaron los israelitas durante el éxodo.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "desierto de Sinaí"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Eneo la jangwa katika Rasi ya Sinai, karibu na Mlima Sinai, ambapo Waisraeli walipita wakati wa kutoka Misri.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Jangwa la Sinai"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Wanpela hap graun i no gat man (ples drai) long haptok Sainai, klostu long Maunten Sainai, we ol Israel i bin wokabaut long taim bilong eksodas.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ples drai bilong Sainai"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Một vùng hoang mạc trên Bán đảo Si-nai, gần Núi Si-nai, nơi người Y-sơ-ra-ên đi qua trong cuộc xuất hành.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Hoang mạc Si-nai"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "西奈半岛上靠近西奈山的一片旷野地区，以色列人在出埃及时曾穿行于此。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "西奈的旷野"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "西奈半島上西奈山附近的一處沙漠地區，以色列人在出埃及期間曾途經此地。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "西奈的曠野"
+    }
+  },
+  "mentioned_in_bible": true,
+  "nearby_places": [
+    "place:SinaiMount"
+  ],
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "place_types": {
+    "acai": [
+      "wilderness"
+    ],
+    "obi": [
+      "region"
+    ],
+    "vizbible": [
+      "Region"
+    ]
+  },
+  "primary_id": "place:SinaiWilderness",
+  "pronominal_referents": {},
+  "references": [
+    "02019001",
+    "02019002",
+    "03007038",
+    "04001001",
+    "04001019",
+    "04003004",
+    "04003014",
+    "04009001",
+    "04009005",
+    "04010012",
+    "04026064",
+    "04033015",
+    "04033016"
+  ],
+  "subject_referents": {},
+  "type": "place",
+  "ubsdbh": [
+    "005052001001000",
+    "003713001001000"
+  ]
+}

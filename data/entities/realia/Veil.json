@@ -1,0 +1,325 @@
+{
+  "alternate_sources": {
+    "aquifer": [
+      "27192|Veil|UWTranslationWords"
+    ],
+    "ubsdbh": [
+      "004149001001000",
+      "006233001001000",
+      "006703001001000",
+      "006869001001000"
+    ],
+    "ubsdgnt": [
+      "6.177"
+    ],
+    "ubsrealia": [
+      "realia:6.12"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "realia:Veil",
+    "review_status": "source_unreviewed",
+    "source_id": "realia:Veil",
+    "source_primary_id": "realia:Veil",
+    "source_sha256": "5efb24ccccd6194bf6e05bdb7f245adf566165494f24c3d13228fdb129d6ffdd"
+  },
+  "explicit_instances": {
+    "SBLGNT": [
+      [
+        "n47003013006"
+      ],
+      [
+        "n47003014013"
+      ],
+      [
+        "n47003015008"
+      ],
+      [
+        "n47003016009"
+      ]
+    ],
+    "wlc": [
+      [
+        "o020340330081"
+      ],
+      [
+        "o020340340092"
+      ],
+      [
+        "o020340350152"
+      ],
+      [
+        "o220040010092",
+        "o220040010093"
+      ],
+      [
+        "o220040030102",
+        "o220040030103"
+      ],
+      [
+        "o220060070052",
+        "o220060070053"
+      ],
+      [
+        "o230470020061",
+        "o230470020062"
+      ],
+      [
+        "o220050070091",
+        "o220050070092"
+      ],
+      [
+        "o230030230043"
+      ],
+      [
+        "o230030190033"
+      ]
+    ]
+  },
+  "id": "realia:Veil",
+  "key_references": [
+    "01024065",
+    "02034033",
+    "23047002",
+    "47003014"
+  ],
+  "lemmas": {
+    "el": [
+      "κάλυμμα"
+    ],
+    "he": [
+      "מַסְוֶה",
+      "צַמָּה",
+      "רְדִיד",
+      "רְעָלָה"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "قطعة قماش خفيفة بتتعمل فوق الوش أو الرأس للحشمة أو الحماية.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "برقع"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "قِطْعَةٌ رَقِيقَةٌ مِنْ قُمَاشٍ تُوضَعُ عَلَى الوَجْهِ أَوِ الرَّأْسِ لِلْحِشْمَةِ أَوِ الحِمَايَةِ.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "بُرْقُع"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan tin kaliko we woman no man i karem blong kavremap fes no hed blong hem blong blokem fes no blong mekem i klin mo stret.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "kaliko blong blokem fes"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Mask",
+        "Cape",
+        "Shawl",
+        "Scarf"
+      ],
+      "descriptions": [
+        {
+          "article": "realia:Veil",
+          "description": "A thin piece of cloth worn over the face or head for modesty or protection.",
+          "gloss": "Veil",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Veil"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "تکه پارچه‌ای نازک که برای حیا یا محافظت بر روی صورت یا سر انداخته می‌شد.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "روبند"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Une fine pièce de tissu portée sur le visage ou la tête par modestie ou pour se protéger.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "voile"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Siririn ƙyalle da ake sawa a fuska ko a kai don ladabi ko kariya.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "lulluɓi"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "शालीनता या सुरक्षा के लिए चेहरे या सिर पर डाला जाने वाला एक पतला कपड़ा।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "घूँघट"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Akwa dị gịrịgịrị a na-ekpuchi nʼihu ma ọ bụ nʼisi maka ịdị umeala nʼobi ma ọ bụ nchebe.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Akwa mkpudo ihu"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Sehelai kain tipis yang dikenakan menutupi wajah atau kepala demi kesopanan atau perlindungan.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "kerudung"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "विनम्रता वा सुरक्षाका निम्ति अनुहार वा टाउकोमा ओढिने पातलो कपडा।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "घुम्टो"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Um pedaço fino de tecido usado sobre o rosto ou a cabeça para recato ou proteção.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "véu"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Тонкое полотно ткани, надеваемое на лицо или голову из скромности или для защиты.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Покрывало"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Pieza delgada de tela que se usa sobre el rostro o la cabeza por modestia o protección.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "velo"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Kitambaa chembamba kinachovaliwa juu ya uso au kichwa kwa ajili ya heshima au ulinzi.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Utaji"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Wanpela liklik hap laplap ol i putim antap long pes o het bilong pasim tok o lukautim pes.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "laplap bilong karamapim pes"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Một mảnh vải mỏng che trên mặt hoặc đầu để thể hiện sự khiêm nhường hoặc để che chở, bảo vệ.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Khăn che mặt"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "戴在脸上或头上以示端庄或用于遮护的薄布。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "面纱"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "為了端莊或防護而蒙在臉上或頭上的薄布。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "帕子"
+    }
+  },
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "primary_id": "realia:Veil",
+  "pronominal_referents": {
+    "SBLGNT": [
+      [
+        "n47003014012"
+      ]
+    ]
+  },
+  "realia_type": "other",
+  "references": [
+    "02034033",
+    "02034034",
+    "02034035",
+    "22004001",
+    "22004003",
+    "22005007",
+    "22006007",
+    "23003019",
+    "23003023",
+    "23047002",
+    "47003013",
+    "47003014",
+    "47003015",
+    "47003016"
+  ],
+  "subject_referents": {
+    "SBLGNT": [
+      [
+        "n47003014022"
+      ],
+      [
+        "n47003014026"
+      ]
+    ]
+  },
+  "type": "realia",
+  "ubsdbh": [
+    "004149001001000",
+    "006233001001000",
+    "006703001001000",
+    "006869001001000"
+  ],
+  "ubsdgnt": [
+    "6.177"
+  ]
+}

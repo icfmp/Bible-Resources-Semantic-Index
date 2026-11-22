@@ -1,0 +1,615 @@
+{
+  "alternate_sources": {
+    "tipnr": [
+      "Canaan@Gen.10.18-Act"
+    ],
+    "ubsdbh": [
+      "003357001001000"
+    ],
+    "ubsdgnt": [
+      "93.612"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "group:Canaan",
+    "review_status": "source_unreviewed",
+    "source_id": "group:Canaan",
+    "source_primary_id": "group:Canaan",
+    "source_sha256": "320ac7656afbd57bc4d4596083a721859601ba3baea007c7a5fe3412005d6ce5"
+  },
+  "explicit_instances": {
+    "SBLGNT": [
+      [
+        "n40015022004"
+      ]
+    ],
+    "wlc": [
+      [
+        "o010100180102"
+      ],
+      [
+        "o010100190032"
+      ],
+      [
+        "o010120060103"
+      ],
+      [
+        "o010130070113"
+      ],
+      [
+        "o010150210042"
+      ],
+      [
+        "o010240030132"
+      ],
+      [
+        "o010240370092"
+      ],
+      [
+        "o010340300122"
+      ],
+      [
+        "o010380020061"
+      ],
+      [
+        "o010460100102"
+      ],
+      [
+        "o010500110042"
+      ],
+      [
+        "o020030080202"
+      ],
+      [
+        "o020030170082"
+      ],
+      [
+        "o020060150102"
+      ],
+      [
+        "o020130050072"
+      ],
+      [
+        "o020130110072"
+      ],
+      [
+        "o020230230103"
+      ],
+      [
+        "o020230280092"
+      ],
+      [
+        "o020330020062"
+      ],
+      [
+        "o020340110133"
+      ],
+      [
+        "o040130290103"
+      ],
+      [
+        "o040140250023"
+      ],
+      [
+        "o040140430033"
+      ],
+      [
+        "o040140450033"
+      ],
+      [
+        "o040210010022"
+      ],
+      [
+        "o040210030072"
+      ],
+      [
+        "o040330400022"
+      ],
+      [
+        "o050010070172"
+      ],
+      [
+        "o050070010193"
+      ],
+      [
+        "o050110300102"
+      ],
+      [
+        "o050200170062"
+      ],
+      [
+        "o060030100132"
+      ],
+      [
+        "o060050010122"
+      ],
+      [
+        "o060070090022"
+      ],
+      [
+        "o060090010192"
+      ],
+      [
+        "o060110030012"
+      ],
+      [
+        "o060120080093"
+      ],
+      [
+        "o060130030112"
+      ],
+      [
+        "o060130040042"
+      ],
+      [
+        "o060160100042"
+      ],
+      [
+        "o060160100082"
+      ],
+      [
+        "o060170120102"
+      ],
+      [
+        "o060170130082"
+      ],
+      [
+        "o060170160112"
+      ],
+      [
+        "o060170180152"
+      ],
+      [
+        "o060240110133"
+      ],
+      [
+        "o070010010142"
+      ],
+      [
+        "o070010030092"
+      ],
+      [
+        "o070010040062"
+      ],
+      [
+        "o070010050102"
+      ],
+      [
+        "o070010090062"
+      ],
+      [
+        "o070010100042"
+      ],
+      [
+        "o070010170082"
+      ],
+      [
+        "o070010270302"
+      ],
+      [
+        "o070010280072"
+      ],
+      [
+        "o070010290052"
+      ],
+      [
+        "o070010290092"
+      ],
+      [
+        "o070010300112"
+      ],
+      [
+        "o070010320042"
+      ],
+      [
+        "o070010330142"
+      ],
+      [
+        "o070030030052"
+      ],
+      [
+        "o070030050052"
+      ],
+      [
+        "o100240070073"
+      ],
+      [
+        "o110090160112"
+      ],
+      [
+        "o130020030112"
+      ],
+      [
+        "o150090010162"
+      ],
+      [
+        "o160090080122"
+      ],
+      [
+        "o160090240112"
+      ],
+      [
+        "o260160030102"
+      ],
+      [
+        "o310010200071"
+      ]
+    ]
+  },
+  "group_origin": "place:Canaan",
+  "group_type": "residence",
+  "id": "group:Canaan",
+  "key_references": [
+    "01010015",
+    "06005001",
+    "01012006"
+  ],
+  "lemmas": {
+    "el": [
+      "Χαναναῖος"
+    ],
+    "he": [
+      "כְּנַעֲנִי"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "الشعوب المجتمعة في أرض كنعان قبل وأثناء فتح بني إسرائيل ليها.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "الكنعانيين"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "الشعوب المجتمعة لأرض كنعان قبل الغزو الإسرائيلي وأثناءه.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "الكنعانيون"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Evri neson we oli joen wanples long graon blong Kenan bifo mo long taem we ol man Isrel oli tekem graon ya.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "ol laen blong Kenan"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Canaan",
+        "Canaanites"
+      ],
+      "descriptions": [
+        {
+          "article": "group:Canaan",
+          "description": "The combined nations of the land of Canaan before and during the Israelite conquest.",
+          "gloss": "Canaanites",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Canaanites"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "مجموعهٔ اقوام سرزمین کنعان قبل از تسخیر بنی‌اسرائیل و در جریان آن.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "کنعانی‌ها"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "L’ensemble des nations du pays de Canaan avant et pendant la conquête israélite.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Cananéens"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Haɗaɗɗun al’umman ƙasar Kan’ana kafin lokacin cin nasarar Isra’ilawa da kuma a lokacinta.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Kan’aniyawa"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "इस्राएलियों की विजय से पहले और उस दौरान कनान देश की संयुक्त जातियाँ।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "कनानी"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Mba niile gbakọtara ọnụ nke ala Kenan tupu ụmụ Izrel emerie ha na nʼoge ha na-emeri ha.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "ndị Kenan"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Gabungan bangsa-bangsa di tanah Kanaan sebelum dan selama penaklukan oleh bangsa Israel.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "orang Kanaan"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "इस्राएली विजयभन्दा पहिले र विजयको समयमा कनान देशका संयुक्त जातिहरू।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "कनानीहरू"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "O conjunto de nações da terra de Canaã antes e durante a conquista israelita.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "cananeus"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Народы земли Ханаанской до и во время завоевания ее израильтянами.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Хананеи"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "El conjunto de naciones de la tierra de Canaán antes y durante la conquista israelita.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "cananeo"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Mataifa yaliyoungana ya nchi ya Kanaani kabla na wakati wa kutekwa na Waisraeli.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Wakanaani"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Ol lain manmeri bilong graun Kenan paslain na long taim ol Israel i bin pait na kisim graun.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "ol Kenan"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Các dân tộc hợp lại tại xứ Ca-na-an trước và trong cuộc chinh phục của dân Y-sơ-ra-ên.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "người Ca-na-an"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "以色列人征服迦南地之前及期间迦南地的各族联合体。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "迦南人"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "在以色列人征服之前及期間，迦南地的諸民族統稱。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "迦南人"
+    }
+  },
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "primary_id": "group:Canaan",
+  "pronominal_referents": {
+    "wlc": [
+      [
+        "o040210020112"
+      ],
+      [
+        "o040330400052"
+      ],
+      [
+        "o060170180221"
+      ]
+    ]
+  },
+  "references": [
+    "01010018",
+    "01010019",
+    "01012006",
+    "01013007",
+    "01015021",
+    "01024003",
+    "01024037",
+    "01034030",
+    "01038002",
+    "01046010",
+    "01050011",
+    "02003008",
+    "02003017",
+    "02006015",
+    "02013005",
+    "02013011",
+    "02023023",
+    "02023028",
+    "02033002",
+    "02034011",
+    "04013029",
+    "04014025",
+    "04014043",
+    "04014045",
+    "04021001",
+    "04021003",
+    "04033040",
+    "05001007",
+    "05007001",
+    "05011030",
+    "05020017",
+    "06003010",
+    "06005001",
+    "06007009",
+    "06009001",
+    "06011003",
+    "06012008",
+    "06013003",
+    "06013004",
+    "06016010",
+    "06017012",
+    "06017013",
+    "06017016",
+    "06017018",
+    "06024011",
+    "07001001",
+    "07001003",
+    "07001004",
+    "07001005",
+    "07001009",
+    "07001010",
+    "07001017",
+    "07001027",
+    "07001028",
+    "07001029",
+    "07001030",
+    "07001032",
+    "07001033",
+    "07003003",
+    "07003005",
+    "10024007",
+    "11009016",
+    "13002003",
+    "15009001",
+    "16009008",
+    "16009024",
+    "26016003",
+    "31001020",
+    "40015022"
+  ],
+  "speeches": {
+    "wlc": [
+      {
+        "quote_type": "Normal",
+        "words": [
+          "o010500110091",
+          "o010500110092",
+          "o010500110101",
+          "o010500110111",
+          "o010500110121"
+        ]
+      }
+    ]
+  },
+  "subject_referents": {
+    "wlc": [
+      [
+        "o010500110021"
+      ],
+      [
+        "o040140450042"
+      ],
+      [
+        "o040140450072"
+      ],
+      [
+        "o040140450082"
+      ],
+      [
+        "o040210010051"
+      ],
+      [
+        "o040210010122"
+      ],
+      [
+        "o040210010142"
+      ],
+      [
+        "o050110300112"
+      ],
+      [
+        "o050200180041"
+      ],
+      [
+        "o050200180101"
+      ],
+      [
+        "o060070090062"
+      ],
+      [
+        "o060070090082"
+      ],
+      [
+        "o060160100052"
+      ],
+      [
+        "o060160100142"
+      ],
+      [
+        "o060170120112"
+      ],
+      [
+        "o060170160122"
+      ],
+      [
+        "o070010100052"
+      ],
+      [
+        "o070010170091"
+      ],
+      [
+        "o070010290062"
+      ],
+      [
+        "o070010300132"
+      ],
+      [
+        "o070010320051"
+      ],
+      [
+        "o070030040012"
+      ],
+      [
+        "o110090160122"
+      ]
+    ]
+  },
+  "type": "group",
+  "ubsdbh": [
+    "003357001001000"
+  ],
+  "ubsdgnt": [
+    "93.612"
+  ]
+}

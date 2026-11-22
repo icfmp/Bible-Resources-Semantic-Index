@@ -1,0 +1,298 @@
+{
+  "alternate_sources": {
+    "aquifer": [
+      "8788|Terah (Person)|TyndaleBibleDictionary",
+      "27148|Terah|UWTranslationWords"
+    ],
+    "tipnr": [
+      "Terah@Gen.11.24-Luk"
+    ],
+    "vizbible": [
+      "recXBYSWubfkpqNQm"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "person:Terah",
+    "review_status": "source_unreviewed",
+    "source_id": "person:Terah",
+    "source_primary_id": "person:Terah",
+    "source_sha256": "b02977473255851fa984ca26efa7b21f5c5660285d79ea96d0ea5beccc258f52"
+  },
+  "explicit_instances": {
+    "SBLGNT": [
+      [
+        "n42003034008"
+      ]
+    ],
+    "wlc": [
+      [
+        "o010110240081"
+      ],
+      [
+        "o010110250061"
+      ],
+      [
+        "o010110260021"
+      ],
+      [
+        "o010110270031",
+        "o010110270041"
+      ],
+      [
+        "o010110280051"
+      ],
+      [
+        "o010110310021"
+      ],
+      [
+        "o010110320031"
+      ],
+      [
+        "o010110320091"
+      ],
+      [
+        "o060240020161"
+      ],
+      [
+        "o130010260031"
+      ]
+    ]
+  },
+  "father": "person:Nahor",
+  "gender": "male",
+  "id": "person:Terah",
+  "key_references": [
+    "01011026",
+    "06024002",
+    "42003034"
+  ],
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "أبو البطريرك إبراهيم.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "تارح"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "والد أب الآباء إبراهيم.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "تارَح"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Papa blong Ebraham.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Tera"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Thara"
+      ],
+      "descriptions": [
+        {
+          "article": "person:Terah",
+          "description": "Father of the patriarch Abraham.",
+          "gloss": "Terah",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Terah"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "پدر ابراهیم پدرسالار.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "تارح"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Père du patriarche Abraham.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Térach"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Mahaifin uban iyali Ibrahim.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Tera"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "पूर्वपिता अब्राहम का पिता।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "तेरह"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Nna nke nna ochie bụ Ebraham.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Tera"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Ayah dari bapa leluhur Abraham.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Terah"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "कुलपिता अब्राहामका पिता।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "तेरह"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Pai do patriarca Abraão.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Terá"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Отец патриарха Авраама.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Фарра"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Padre del patriarca Abraham.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Taré"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Baba wa patriarki Abrahamu.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Tera"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Papa bilong hetman Abraham.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Tera"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Cha của tổ phụ Áp-ra-ham.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Tha-rê"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "先祖亚伯拉罕的父亲。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "他拉"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "族長亞伯拉罕的父親。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "他拉"
+    }
+  },
+  "non_biblical": false,
+  "offspring": [
+    "person:Abraham",
+    "person:Nahor.2",
+    "person:Haran",
+    "person:Sarah"
+  ],
+  "only_mentioned_in_apocrypha": false,
+  "primary_id": "person:Terah",
+  "pronominal_referents": {},
+  "references": [
+    "01011024",
+    "01011025",
+    "01011026",
+    "01011027",
+    "01011028",
+    "01011031",
+    "01011032",
+    "06024002",
+    "13001026",
+    "42003034"
+  ],
+  "related_places": {
+    "death_place": [
+      "place:Haran"
+    ]
+  },
+  "roles": [
+    "Patriarch"
+  ],
+  "subject_referents": {
+    "wlc": [
+      [
+        "o010110260052"
+      ],
+      [
+        "o010110310182"
+      ],
+      [
+        "o010110310222"
+      ],
+      [
+        "o010110310252"
+      ],
+      [
+        "o010110310282"
+      ]
+    ]
+  },
+  "tribe": "group:Earlypatriarchs",
+  "type": "person"
+}

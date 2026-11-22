@@ -1,0 +1,384 @@
+{
+  "alternate_sources": {
+    "ubsdbh": [
+      "002283001001000",
+      "003258001001000"
+    ],
+    "ubsdgnt": [
+      "7.47"
+    ],
+    "ubsrealia": [
+      "realia:3.1.4"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "realia:Window",
+    "review_status": "source_unreviewed",
+    "source_id": "realia:Window",
+    "source_primary_id": "realia:Window",
+    "source_sha256": "4c6fe5369db9c0f3aa734dd2883f3d1fcd73d6e840b444e02dc1168e2277a6c6"
+  },
+  "explicit_instances": {
+    "SBLGNT": [
+      [
+        "n44020009009"
+      ],
+      [
+        "n47011033003"
+      ]
+    ],
+    "wlc": [
+      [
+        "o010080060081"
+      ],
+      [
+        "o010260080122"
+      ],
+      [
+        "o060020150042"
+      ],
+      [
+        "o060020180112"
+      ],
+      [
+        "o060020210112"
+      ],
+      [
+        "o070050280022"
+      ],
+      [
+        "o090190120062"
+      ],
+      [
+        "o100060160122"
+      ],
+      [
+        "o110060040031"
+      ],
+      [
+        "o120090300142"
+      ],
+      [
+        "o120090320042"
+      ],
+      [
+        "o120130170032"
+      ],
+      [
+        "o130150290142"
+      ],
+      [
+        "o200070060022"
+      ],
+      [
+        "o220020090142"
+      ],
+      [
+        "o240090200042",
+        "o240090200043"
+      ],
+      [
+        "o240220140101",
+        "o240220140102"
+      ],
+      [
+        "o260400160012"
+      ],
+      [
+        "o260400160132"
+      ],
+      [
+        "o260400220022",
+        "o260400220023"
+      ],
+      [
+        "o260400250012"
+      ],
+      [
+        "o260400250073"
+      ],
+      [
+        "o260400290092"
+      ],
+      [
+        "o260400330092"
+      ],
+      [
+        "o260400360072"
+      ],
+      [
+        "o260410160023"
+      ],
+      [
+        "o260410160152"
+      ],
+      [
+        "o260410160163"
+      ],
+      [
+        "o260410260012"
+      ],
+      [
+        "o290020090082"
+      ],
+      [
+        "o360020140152"
+      ],
+      [
+        "o270060110092"
+      ]
+    ]
+  },
+  "id": "realia:Window",
+  "key_references": [
+    "01008006",
+    "06002015",
+    "10006016",
+    "44020009"
+  ],
+  "lemmas": {
+    "el": [
+      "θυρίς"
+    ],
+    "he": [
+      "חַלֹּון",
+      "כַּוָּה"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "فتحة في الحيطة بتدخل النور والهوا للأوضة وبتخلي الناس يشوفوا لبرة أو لجوة.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "شباك"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "فَتْحَةٌ فِي ٱلْجِدَارِ تَسْمَحُ بِدُخُولِ ٱلنُّورِ وَٱلْهَوَاءِ إِلَى ٱلْغُرْفَةِ، وَتُمَكِّنُ ٱلنَّاسَ مِنَ ٱلنَّظَرِ إِلَى ٱلدَّاخِلِ أَوِ ٱلْخَارِجِ.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "نَافِذَة"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan open ples long wol we i letem laet mo win i kam insaed long wan rum, mo i mekem we man i save lukluk i go insaed o aotsaed.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "windo"
+    },
+    "eng": {
+      "descriptions": [
+        {
+          "article": "realia:Window",
+          "description": "An opening in a wall that lets light and air into a room and allows people to see in or out.",
+          "gloss": "Window",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Window"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "دریچه‌ای در دیوار که نور و هوا را به داخل اتاق راه می‌دهد و امکان دیدن داخل یا بیرون را فراهم می‌سازد.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "پنجره"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Ouverture dans un mur laissant entrer la lumière et l'air dans une pièce et permettant de voir à l'intérieur ou vers l'extérieur.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "fenêtre"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Wata ƙafa ko kafa a jikin bango da ke barin haske da iska su shiga ɗaki, tana kuma ba mutane damar leƙawa ko gani.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Taga"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "दीवार में एक झरोखा जिससे कमरे में प्रकाश और हवा आती है तथा लोग भीतर या बाहर देख सकते हैं।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "खिड़की"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Oghere dị na mgbidi nke na-ekwe ka ìhè na ikuku banye nʼọnụ ụlọ ma na-enye ohere ka ndị mmadụ hụ ihe dị nʼime ma ọ bụ nʼèzí.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Windo"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Bukaan pada dinding yang memungkinkan cahaya dan udara masuk ke dalam ruangan serta memungkinkan orang melihat ke dalam atau ke luar.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "jendela"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "कोठाभित्र उज्यालो र हावा छिर्न दिने तथा मानिसहरूलाई भित्र वा बाहिर हेर्न दिने भित्ताको खुला भाग।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "झ्याल"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Uma abertura em uma parede que permite a entrada de luz e ar em um cômodo e permite que as pessoas vejam para dentro ou para fora.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "janela"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Проем в стене, пропускающий свет и воздух в помещение и позволяющий смотреть внутрь или наружу.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Окно"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Abertura en una pared que permite la entrada de luz y aire a una habitación y permite a las personas mirar hacia adentro o hacia afuera.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "ventana"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Tundu ukutani linaloingiza mwanga na hewa ndani ya chumba na kuwawezesha watu kutazama ndani au nje.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Dirisha"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Wanpela op long banis em i larim lait na win i kam insait long rum na i larim ol manmeri i ken lukluk i go ausait o i kam insait.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "windo"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Một khoảng trống trên tường cho phép ánh sáng và không khí lọt vào phòng, đồng thời giúp người ta có thể nhìn vào trong hoặc nhìn ra ngoài.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Cửa sổ"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "墙上的开孔，用于让光线和空气进入房间，并方便人向内或向外看。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "窗户"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "牆壁上的開口，使光線和空氣進入室內，並讓人可以看進去或向外看。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "窗戶"
+    }
+  },
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "primary_id": "realia:Window",
+  "pronominal_referents": {},
+  "realia_type": "other",
+  "references": [
+    "01008006",
+    "01026008",
+    "06002015",
+    "06002018",
+    "06002021",
+    "07005028",
+    "09019012",
+    "10006016",
+    "11006004",
+    "12009030",
+    "12009032",
+    "12013017",
+    "13015029",
+    "20007006",
+    "22002009",
+    "24009020",
+    "24022014",
+    "26040016",
+    "26040022",
+    "26040025",
+    "26040029",
+    "26040033",
+    "26040036",
+    "26041016",
+    "26041026",
+    "27006011",
+    "29002009",
+    "36002014",
+    "44020009",
+    "47011033"
+  ],
+  "subject_referents": {
+    "wlc": [
+      [
+        "o240220140112"
+      ],
+      [
+        "o260400160021"
+      ],
+      [
+        "o260410160032"
+      ],
+      [
+        "o260410260021"
+      ]
+    ]
+  },
+  "type": "realia",
+  "ubsdbh": [
+    "002283001001000",
+    "003258001001000"
+  ],
+  "ubsdgnt": [
+    "7.47"
+  ]
+}

@@ -1,0 +1,649 @@
+{
+  "alternate_sources": {
+    "aquifer": [
+      "4891|Dove|TyndaleBibleDictionary",
+      "26539|Dove|UWTranslationWords",
+      "280084|dove|FIAKeyTerms"
+    ],
+    "ubsdbh": [
+      "002858001001000",
+      "007754001001000"
+    ],
+    "ubsdgnt": [
+      "4.44"
+    ],
+    "ubsfauna": [
+      "fauna:3.7"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "fauna:Dove",
+    "review_status": "source_unreviewed",
+    "source_id": "fauna:Dove",
+    "source_primary_id": "fauna:Dove",
+    "source_sha256": "a4b51f7d143d2c7dbda4ff4dfaf1b4031c8a62df6962205b663bc2e96bf8d494"
+  },
+  "explicit_instances": {
+    "SBLGNT": [
+      [
+        "n40003016021"
+      ],
+      [
+        "n40010016020"
+      ],
+      [
+        "n40021012029"
+      ],
+      [
+        "n41001010015"
+      ],
+      [
+        "n41011015031"
+      ],
+      [
+        "n42002024017"
+      ],
+      [
+        "n42003022010"
+      ],
+      [
+        "n43001032011"
+      ],
+      [
+        "n43002014012"
+      ],
+      [
+        "n43002016004"
+      ],
+      [
+        "n42002024013"
+      ]
+    ],
+    "wlc": [
+      [
+        "o010080080032"
+      ],
+      [
+        "o010080090032"
+      ],
+      [
+        "o010080100092"
+      ],
+      [
+        "o010080110032"
+      ],
+      [
+        "o010080120082"
+      ],
+      [
+        "o030010140132"
+      ],
+      [
+        "o030050070171"
+      ],
+      [
+        "o030050110101"
+      ],
+      [
+        "o030120060131"
+      ],
+      [
+        "o030120080131"
+      ],
+      [
+        "o030140220061"
+      ],
+      [
+        "o030140300092"
+      ],
+      [
+        "o030150140101"
+      ],
+      [
+        "o030150290101"
+      ],
+      [
+        "o040060100091"
+      ],
+      [
+        "o190550070062"
+      ],
+      [
+        "o190560010031"
+      ],
+      [
+        "o190680140061"
+      ],
+      [
+        "o220010150071"
+      ],
+      [
+        "o220020140011",
+        "o220020140012"
+      ],
+      [
+        "o220040010071"
+      ],
+      [
+        "o220050020121",
+        "o220050020122"
+      ],
+      [
+        "o220050120022"
+      ],
+      [
+        "o220060090031",
+        "o220060090032"
+      ],
+      [
+        "o230380140062"
+      ],
+      [
+        "o230590110043"
+      ],
+      [
+        "o230600080053"
+      ],
+      [
+        "o240480280082"
+      ],
+      [
+        "o260070160062"
+      ],
+      [
+        "o280070110032"
+      ],
+      [
+        "o280110110043"
+      ],
+      [
+        "o340020080071"
+      ],
+      [
+        "o010150090112"
+      ],
+      [
+        "o030010140092"
+      ],
+      [
+        "o030050070131"
+      ],
+      [
+        "o030050110061"
+      ],
+      [
+        "o030120060151"
+      ],
+      [
+        "o030120080091"
+      ],
+      [
+        "o030140220021"
+      ],
+      [
+        "o030140300052"
+      ],
+      [
+        "o030150140061"
+      ],
+      [
+        "o030150290061"
+      ],
+      [
+        "o040060100051"
+      ],
+      [
+        "o190740190051",
+        "o190740190052"
+      ],
+      [
+        "o220020120082"
+      ],
+      [
+        "o240080070062"
+      ]
+    ]
+  },
+  "fauna_type": "Birds",
+  "id": "fauna:Dove",
+  "key_references": [
+    "03005011",
+    "01008008",
+    "40003016"
+  ],
+  "lemmas": {
+    "el": [
+      "περιστερά",
+      "τρυγών"
+    ],
+    "he": [
+      "יֹונָה",
+      "תֹּור"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "طير لونه رمادي مزرق ورقبته مائلة للوردي، بعيش في أسراب، وكان كتير بيستخدم في الدبايح والقرابين في الكتاب المقدس.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "حمامة"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "طائر أزرق رمادي ذو عنق ضارب إلى الوردي، يعيش في مستعمرات، وغالبًا ما كان يُستخدم للذبائح في الكتاب المقدس.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "حمامة"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan blu-gre pijin we nek blong hem i pinki smol, i stap laef long bigfala grup, mo plante taem oli stap yusum blong mekem sakrefaes long Baebol.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "sotleg"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Pigeon"
+      ],
+      "descriptions": [
+        {
+          "article": "fauna:Dove",
+          "description": "A blue-gray bird with a pinkish neck, living in colonies, and often used for sacrifices in the Bible.",
+          "gloss": "Dove",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Dove"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "پرنده‌ای به رنگ خاکستری مایل به آبی با گردنی مایل به صورتی که به صورت گروهی زندگی می‌کند و در کتاب مقدس اغلب برای قربانی‌ها استفاده می‌شد.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "کبوتر"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Oiseau bleu-gris au cou rosâtre, vivant en colonies et souvent utilisé pour les sacrifices dans la Bible.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "colombe"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Tsuntsu mai ruwan toka-toka da wuyan da ke da ɗan jan launi, mai zama a garke, kuma da aka saba amfani da shi don hadayu a cikin Littafi Mai Tsarki.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Kurciya"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "गुलाबी गर्दन वाला नीला-धूसर पक्षी, जो झुंडों में रहता है, और बाइबल में अक्सर बलियों के लिए उपयोग किया जाता था।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "कबूतर"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Nnụnụ na-acha ntụ ntụ na anụnụ anụnụ nwere olu na-acha ọbara ọbara nwayọọ, na-ebi n'ìgwè, ma na-abụkarị nke e ji achụ àjà na Baịbụl.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "nduru"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Burung berwarna abu-abu kebiruan dengan leher agak merah muda, hidup berkoloni, dan sering digunakan untuk korban persembahan di dalam Alkitab.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "merpati"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "हल्का नीलो-खैरो रङको र घाँटीतिर गुलाबी हुने चरा, जो बगालमा बस्छ, र बाइबलमा प्रायः बलिको निम्ति प्रयोग गरिन्थ्यो।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "ढुकुर"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Uma ave cinza-azulada com pescoço rosado, que vive em colônias e era frequentemente usada em sacrifícios na Bíblia.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "pomba"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Сизовато-серая птица с розоватой шеей, живущая колониями; в Библии часто использовалась для жертвоприношений.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Голубь"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Ave de color gris azulado con cuello rosáceo, que vive en colonias y se utilizaba a menudo para sacrificios en la Biblia.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "paloma"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Ndege wa kijivu-samawati mwenye shingo yenye rangi ya waridi kiasi, anayeishi katika makundi, na mara nyingi alitumiwa kwa dhabihu katika Biblia.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Hua"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Wanpela blupela-greipela pisin i gat kain retpela nek, ol i save bung wantaim long stap, na planti taim ol i save yusim bilong mekim ol ofa long Baibel.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "balus"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Một loài chim màu xám xanh với cổ hơi hồng, sống theo bầy và thường được dùng làm sinh tế trong Kinh Thánh.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Bồ câu"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "一种羽毛呈蓝灰色、颈部带粉红色、群居的鸟类，在圣经中常被用作祭物。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "鸽子"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "一種藍灰色的鳥，頸部帶粉紅色，群居，在聖經中常用於獻祭。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "鴿子"
+    }
+  },
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "primary_id": "fauna:Dove",
+  "pronominal_referents": {
+    "wlc": [
+      [
+        "o010080090062"
+      ],
+      [
+        "o010080090193"
+      ],
+      [
+        "o010080090212"
+      ],
+      [
+        "o010080110103"
+      ],
+      [
+        "o190680140093"
+      ],
+      [
+        "o220020140082"
+      ],
+      [
+        "o220020140112"
+      ],
+      [
+        "o220020140132"
+      ],
+      [
+        "o220020140153"
+      ],
+      [
+        "o220020150022"
+      ],
+      [
+        "o220020150083"
+      ],
+      [
+        "o220020160012"
+      ],
+      [
+        "o220020160022"
+      ],
+      [
+        "o220020160032"
+      ],
+      [
+        "o220020170092"
+      ],
+      [
+        "o220030010022"
+      ],
+      [
+        "o220030010072"
+      ],
+      [
+        "o220030020102"
+      ],
+      [
+        "o220030030012"
+      ],
+      [
+        "o220030030072"
+      ],
+      [
+        "o220030040082"
+      ],
+      [
+        "o220030040162"
+      ],
+      [
+        "o220030040192"
+      ],
+      [
+        "o220060090061"
+      ],
+      [
+        "o220060090073"
+      ],
+      [
+        "o220060090091"
+      ],
+      [
+        "o220060090103"
+      ],
+      [
+        "o220060090112"
+      ],
+      [
+        "o220060090133"
+      ],
+      [
+        "o220060090163"
+      ],
+      [
+        "o010150100051"
+      ],
+      [
+        "o010150100072"
+      ],
+      [
+        "o030050080022"
+      ],
+      [
+        "o030120070013"
+      ],
+      [
+        "o030140230022"
+      ],
+      [
+        "o030150140183"
+      ],
+      [
+        "o030150150022"
+      ],
+      [
+        "o030150290122"
+      ],
+      [
+        "o240080070132"
+      ]
+    ]
+  },
+  "references": [
+    "01008008",
+    "01008009",
+    "01008010",
+    "01008011",
+    "01008012",
+    "01015009",
+    "03001014",
+    "03005007",
+    "03005011",
+    "03012006",
+    "03012008",
+    "03014022",
+    "03014030",
+    "03015014",
+    "03015029",
+    "04006010",
+    "19055007",
+    "19056001",
+    "19068014",
+    "19074019",
+    "22001015",
+    "22002012",
+    "22002014",
+    "22004001",
+    "22005002",
+    "22005012",
+    "22006009",
+    "23038014",
+    "23059011",
+    "23060008",
+    "24008007",
+    "24048028",
+    "26007016",
+    "28007011",
+    "28011011",
+    "34002008",
+    "40003016",
+    "40010016",
+    "40021012",
+    "41001010",
+    "41011015",
+    "42002024",
+    "42003022",
+    "43001032",
+    "43002014",
+    "43002016"
+  ],
+  "subject_referents": {
+    "wlc": [
+      [
+        "o010080090072"
+      ],
+      [
+        "o010080120101"
+      ],
+      [
+        "o010080120111"
+      ],
+      [
+        "o220020140061"
+      ],
+      [
+        "o220020140091"
+      ],
+      [
+        "o220030010041"
+      ],
+      [
+        "o220030010081"
+      ],
+      [
+        "o220030010101"
+      ],
+      [
+        "o220030020011"
+      ],
+      [
+        "o220030020032"
+      ],
+      [
+        "o220030020071"
+      ],
+      [
+        "o220030020111"
+      ],
+      [
+        "o220030020131"
+      ],
+      [
+        "o220030040022"
+      ],
+      [
+        "o220030040052"
+      ],
+      [
+        "o220030040091"
+      ],
+      [
+        "o220030040111"
+      ],
+      [
+        "o220030040132"
+      ],
+      [
+        "o220030050011"
+      ],
+      [
+        "o240480280091"
+      ],
+      [
+        "o280070110041"
+      ]
+    ]
+  },
+  "type": "fauna",
+  "ubsdbh": [
+    "002858001001000",
+    "007754001001000"
+  ],
+  "ubsdgnt": [
+    "4.44"
+  ]
+}

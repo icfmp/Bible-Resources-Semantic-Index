@@ -1,0 +1,290 @@
+{
+  "alternate_sources": {
+    "ubsdbh": [
+      "000449001001000",
+      "005500001001000",
+      "005520001001000"
+    ],
+    "ubsrealia": [
+      "realia:1.1.7"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "realia:Sheaf",
+    "review_status": "source_unreviewed",
+    "source_id": "realia:Sheaf",
+    "source_primary_id": "realia:Sheaf",
+    "source_sha256": "0e42fcf413753f790637a1a5dc9da3b44c0ddc42ab5464dc557ae7fb031ab60f"
+  },
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o010370070041"
+      ],
+      [
+        "o010370070091",
+        "o010370070092"
+      ],
+      [
+        "o010370070141",
+        "o010370070142"
+      ],
+      [
+        "o010370070162",
+        "o010370070163"
+      ],
+      [
+        "o191260060111",
+        "o191260060112"
+      ],
+      [
+        "o240090210123"
+      ],
+      [
+        "o300020130101"
+      ],
+      [
+        "o330040120112"
+      ],
+      [
+        "o380120060122"
+      ],
+      [
+        "o191290070061"
+      ]
+    ]
+  },
+  "id": "realia:Sheaf",
+  "key_references": [
+    "01037007",
+    "33004012"
+  ],
+  "lemmas": {
+    "he": [
+      "אֲלֻמָּה",
+      "עָמִיר",
+      "עמר"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "حزمة من قصب الحبوب بعد الحصاد.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "حزمة حنطة"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "حزمة من سيقان الحبوب المحصودة.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "حُزْمَة"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan bando blong ol wit no grein we oli karem long garen.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "bando blong wit"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Cut Grain",
+        "Sheaves"
+      ],
+      "descriptions": [
+        {
+          "article": "realia:Sheaf",
+          "description": "A bundle of harvested grain stalks.",
+          "gloss": "Sheaf",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Sheaf"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "دسته‌ای از ساقه‌های دروشدهٔ غلات.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "بافه"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Une botte de tiges de céréales récoltées.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "gerbe"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Damar hatsin da aka girbe aka ɗaure.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "dami"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "कटे हुए अनाज के डंठलों का गट्ठा या पूला।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "पूला"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Ukwu ọka ma ọ bụ ahịhịa ọka a chịkọtara mgbe a ghọchara ya.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ukwu ọka"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Seikat batang gandum yang telah dituai.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "berkas gandum"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "काटिएका अन्नका बोटहरूको मुठा वा बिटा।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "अन्नको बिटा"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Um feixe de caules de cereais colhidos.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "feixe"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Сноп сжатых стеблей зерновых культур.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "сноп"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Manojo de tallos de cereal segados y atados.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "gavilla"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Robo au tita la mashina ya nafaka yaliyovunwa.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Mganda"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Wanpela mekpas wit o gras bilong kaikai ol i bin katim long gaden.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "mekpas wit"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Một bó thân cây ngũ cốc đã thu hoạch.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "bó lúa"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "一捆收获的谷物秸秆。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "禾捆"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "收割後捆成一束的穀物秸稈。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "禾捆"
+    }
+  },
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "primary_id": "realia:Sheaf",
+  "pronominal_referents": {
+    "wlc": [
+      [
+        "o191290070053"
+      ],
+      [
+        "o191290080062"
+      ],
+      [
+        "o191290080082"
+      ]
+    ]
+  },
+  "realia_type": "other",
+  "references": [
+    "01037007",
+    "19126006",
+    "19129007",
+    "24009021",
+    "30002013",
+    "33004012",
+    "38012006"
+  ],
+  "subject_referents": {
+    "wlc": [
+      [
+        "o010370070111"
+      ],
+      [
+        "o010370070152"
+      ]
+    ]
+  },
+  "type": "realia",
+  "ubsdbh": [
+    "000449001001000",
+    "005500001001000",
+    "005520001001000"
+  ]
+}

@@ -1,0 +1,274 @@
+{
+  "alternate_sources": {
+    "aquifer": [
+      "9092|Wormwood|TyndaleBibleDictionary"
+    ],
+    "ubsdbh": [
+      "003607001001000",
+      "003607001002000"
+    ],
+    "ubsdgnt": [
+      "3.21"
+    ],
+    "ubsflora": [
+      "flora:5.2.7"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "flora:Wormwood",
+    "review_status": "source_unreviewed",
+    "source_id": "flora:Wormwood",
+    "source_primary_id": "flora:Wormwood",
+    "source_sha256": "f67e7f02d354660fcf239faac45dda344ee3be873bcd07879ed9f7f031a62e97"
+  },
+  "explicit_instances": {
+    "SBLGNT": [
+      [
+        "n66008011008"
+      ],
+      [
+        "n66008011016"
+      ]
+    ],
+    "wlc": [
+      [
+        "o050290170302"
+      ],
+      [
+        "o200050040032"
+      ],
+      [
+        "o240090140131"
+      ],
+      [
+        "o240230150111"
+      ],
+      [
+        "o250030150041"
+      ],
+      [
+        "o250030190041"
+      ],
+      [
+        "o300050070022"
+      ],
+      [
+        "o300060120132"
+      ]
+    ]
+  },
+  "flora_type": "Plants for Everyday Use",
+  "id": "flora:Wormwood",
+  "key_references": [
+    "05029017",
+    "20005004",
+    "66008011"
+  ],
+  "lemmas": {
+    "el": [
+      "ἄψινθος"
+    ],
+    "he": [
+      "לַעֲנָה"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "نبتة كثيفة وشجيرية عندها عصارة مرة وممكن تكون سامة، وبتستعمل كدواء.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "أفسنتين"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "نبات شجيري ذو عصارة مرة قد تكون سامة، ويُستخدم في الطب.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "أَفْسَنْتِين"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan smol tri we jus blong hem i konkon we i save posen mo oli stap yusum olsem meresin.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "womwud"
+    },
+    "eng": {
+      "descriptions": [
+        {
+          "article": "flora:Wormwood",
+          "description": "A bushy plant with bitter juice that can be poisonous and is used as medicine.",
+          "gloss": "Wormwood",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Wormwood"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "گیاهی بوته‌ای با عصاره‌ای تلخ که می‌تواند سمّی باشد و به عنوان دارو استفاده می‌شود.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "افسنتین"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Plante buissonnante au suc amer qui peut être toxique et qui est employée comme remède.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "absinthe"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Tsiro mai rassa da ruwan ’ya’ya mai ɗaci wanda zai iya zama dafi kuma ana amfani da shi azaman magani.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Tafashiya"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "कड़वे रस वाला एक झाड़ीदार पौधा जो विषैला हो सकता है और औषधि के रूप में उपयोग किया जाता है।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "नागदौना"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Osisi dị ka obere ohịa nke mmiri ya na-elu ilu nke nwere ike ịbụ nsi ma na-ejikwa ya eme ọgwụ.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Osisi na-elu ilu"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Tumbuhan rimbun dengan getah pahit yang dapat beracun dan digunakan sebagai obat.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "apsintus"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "तितो रस भएको पोथ्रा वर्गको वनस्पति, जुन विषाक्त हुन सक्छ र औषधीको रूपमा प्रयोग गरिन्छ।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "ऐरेलु"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Planta arbustiva de seiva amarga que pode ser venenosa e é usada como remédio.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "absinto"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Кустистое растение с горьким соком, который может быть ядовитым; используется в медицине.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Полынь"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Planta arbustiva con jugo amargo que puede ser venenosa y se usa como medicina.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "ajenjo"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Mmea wenye umbo la kichaka na wenye maji machungu yanayoweza kuwa na sumu, unaotumiwa pia kama dawa.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Pakanga"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Wanpela sotpela diwai i gat planti han na i gat wara bilong en i pait nogut tru na inap mekim man i sik o dai, na ol i save yusim olsem marasin.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "marasin i pait"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Cây dạng bụi có chất dịch đắng có thể gây độc và được dùng làm thuốc.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Cây ngải đắng"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "一种灌木状植物，汁液发苦，可能具毒性，可用作药物。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "苦艾"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "一種灌木狀植物，帶有苦澀且可能具毒性的汁液，可用作藥物。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "茵蔯"
+    }
+  },
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "primary_id": "flora:Wormwood",
+  "pronominal_referents": {},
+  "references": [
+    "05029017",
+    "20005004",
+    "24009014",
+    "24023015",
+    "25003015",
+    "25003019",
+    "30005007",
+    "30006012",
+    "66008011"
+  ],
+  "subject_referents": {},
+  "type": "flora",
+  "ubsdbh": [
+    "003607001001000",
+    "003607001002000"
+  ],
+  "ubsdgnt": [
+    "3.21"
+  ]
+}

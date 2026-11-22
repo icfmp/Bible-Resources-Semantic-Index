@@ -1,0 +1,494 @@
+{
+  "alternate_sources": {
+    "aquifer": [
+      "7824|Prison|TyndaleBibleDictionary",
+      "7821|Prison, Court of the|TyndaleBibleDictionary",
+      "7823|Prison, Spirits in|TyndaleBibleDictionary"
+    ],
+    "ubsdbh": [
+      "000883001002000",
+      "003305001001000",
+      "003323001001000"
+    ],
+    "ubsdgnt": [
+      "7.24"
+    ],
+    "ubsrealia": [
+      "realia:3.21.1"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "realia:Prison",
+    "review_status": "source_unreviewed",
+    "source_id": "realia:Prison",
+    "source_primary_id": "realia:Prison",
+    "source_sha256": "218c7d9b29b13aeaed6bdf35793805edf200094baaaea30c795f7d5dfe9f4121"
+  },
+  "explicit_instances": {
+    "SBLGNT": [
+      [
+        "n40011002007"
+      ],
+      [
+        "n44005021034"
+      ],
+      [
+        "n44005023004"
+      ],
+      [
+        "n44016026011"
+      ],
+      [
+        "n44005018012"
+      ],
+      [
+        "n40005025029"
+      ],
+      [
+        "n40014003011"
+      ],
+      [
+        "n40014010008"
+      ],
+      [
+        "n40018030010"
+      ],
+      [
+        "n40025036010"
+      ],
+      [
+        "n40025039008"
+      ],
+      [
+        "n40025043015"
+      ],
+      [
+        "n40025044021"
+      ],
+      [
+        "n41006017013"
+      ],
+      [
+        "n41006027018"
+      ],
+      [
+        "n42003020011"
+      ],
+      [
+        "n42012058037"
+      ],
+      [
+        "n42021012018"
+      ],
+      [
+        "n42022033012"
+      ],
+      [
+        "n42023019015"
+      ],
+      [
+        "n42023025010"
+      ],
+      [
+        "n43003024007"
+      ],
+      [
+        "n44005019010"
+      ],
+      [
+        "n44005022010"
+      ],
+      [
+        "n44005025014"
+      ],
+      [
+        "n44008003017"
+      ],
+      [
+        "n44012004006"
+      ],
+      [
+        "n44012005008"
+      ],
+      [
+        "n44012006028"
+      ],
+      [
+        "n44012017016"
+      ],
+      [
+        "n44016023008"
+      ],
+      [
+        "n44016024010"
+      ],
+      [
+        "n44016027012"
+      ],
+      [
+        "n44016037016"
+      ],
+      [
+        "n44016040005"
+      ],
+      [
+        "n44022004012"
+      ],
+      [
+        "n44026010013"
+      ],
+      [
+        "n47006005004"
+      ],
+      [
+        "n47011023012"
+      ],
+      [
+        "n58011036012"
+      ],
+      [
+        "n60003019006"
+      ],
+      [
+        "n66002010014"
+      ],
+      [
+        "n66020007012"
+      ]
+    ],
+    "wlc": [
+      [
+        "o010400150142"
+      ],
+      [
+        "o010410140082"
+      ],
+      [
+        "o020120290202"
+      ],
+      [
+        "o230240220051"
+      ],
+      [
+        "o240370160062"
+      ],
+      [
+        "o110220270092"
+      ],
+      [
+        "o120170040251"
+      ],
+      [
+        "o120250270281"
+      ],
+      [
+        "o120250290041",
+        "o120250290042"
+      ],
+      [
+        "o140180260082"
+      ],
+      [
+        "o230420070081"
+      ],
+      [
+        "o230420220091"
+      ],
+      [
+        "o240370150182"
+      ],
+      [
+        "o240370180172"
+      ],
+      [
+        "o240520330041",
+        "o240520330042"
+      ]
+    ]
+  },
+  "id": "realia:Prison",
+  "key_references": [
+    "01040015",
+    "24037015",
+    "40014003",
+    "44005018"
+  ],
+  "lemmas": {
+    "el": [
+      "δεσμωτήριον",
+      "τήρησις",
+      "φυλακή"
+    ],
+    "he": [
+      "בֹּור",
+      "כֶּלֶא",
+      "כְּלִיא"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "مكان، غالباً بكون تحت الأرض، بحبسوا فيه الناس عقاب ليهم على جريمة.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "سجن"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "مكان، غالبًا ما يكون تحت الأرض، يُحبس فيه الناس عقابًا على جريمة.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "سِجْن"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan ples, we plante taem i stap ananit long graon, we oli stap lokemap ol man long hem olsem panis from wan krangke fasin we oli mekem.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "kalabus"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Jail",
+        "Dungeon"
+      ],
+      "descriptions": [
+        {
+          "article": "realia:Prison",
+          "description": "A place, often underground, where people are kept as punishment for a crime.",
+          "gloss": "Prison",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Prison"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "مکانی، معمولاً زیرزمینی، که افراد به عنوان مجازات جرم در آن نگهداری می‌شوند.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "زندان"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Lieu, souvent souterrain, où des personnes sont enfermées pour punir un crime.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "prison"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Wuri, sau da yawa a ƙarƙashin ƙasa, inda ake ajiye mutane a matsayin horo domin laifi.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Kurkuku"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "एक स्थान, जो अक्सर भूमिगत होता है, जहाँ लोगों को अपराध के दण्ड के रूप में रखा जाता है।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "बन्दीगृह"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Ebe, nke na-adịkarị nʼokpuru ala, a na-edebe ndị mmadụ dị ka ahụhụ maka mpụ ha mere.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ụlọ mkpọrọ"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Tempat, sering kali di bawah tanah, tempat orang dikurung sebagai hukuman atas suatu kejahatan.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "penjara"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "अपराधको सजाय स्वरूप मानिसहरूलाई थुनेर राखिने प्रायः भूमिगत ठाउँ।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "झ्यालखाना"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Um lugar, muitas vezes subterrâneo, onde as pessoas são mantidas como punição por um crime.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "prisão"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Место, часто подземное, где людей содержат в качестве наказания за преступление или под стражей.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Темница"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Lugar, a menudo subterráneo, donde se mantiene a las personas como castigo por un delito.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "prisión"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Mahali, mara nyingi chini ya ardhi, ambapo watu huwekwa kama adhabu kwa ajili ya kosa la jinai.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Gereza"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Wanpela ples, planti taim i stap aninit long graun, we ol i save putim ol manmeri olsem panismen bilong rong ol i bin mekim.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "haus kalabus"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Một nơi, thường ở dưới lòng đất, nơi người ta bị giam giữ như một hình phạt vì phạm tội.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Nhà tù"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "关押被惩罚罪犯的场所，通常在地下。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "监牢"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "關押犯罪者以示懲罰的場所，通常設在地下。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "監牢"
+    }
+  },
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "primary_id": "realia:Prison",
+  "pronominal_referents": {
+    "SBLGNT": [
+      [
+        "n40005026007"
+      ],
+      [
+        "n42012059006"
+      ],
+      [
+        "n44016028015"
+      ]
+    ]
+  },
+  "realia_type": "other",
+  "references": [
+    "01040015",
+    "01041014",
+    "02012029",
+    "11022027",
+    "12017004",
+    "12025027",
+    "12025029",
+    "14018026",
+    "23024022",
+    "23042007",
+    "23042022",
+    "24037015",
+    "24037016",
+    "24037018",
+    "24052033",
+    "40005025",
+    "40011002",
+    "40014003",
+    "40014010",
+    "40018030",
+    "40025036",
+    "40025039",
+    "40025043",
+    "40025044",
+    "41006017",
+    "41006027",
+    "42003020",
+    "42012058",
+    "42021012",
+    "42022033",
+    "42023019",
+    "42023025",
+    "43003024",
+    "44005018",
+    "44005019",
+    "44005021",
+    "44005022",
+    "44005023",
+    "44005025",
+    "44008003",
+    "44012004",
+    "44012005",
+    "44012006",
+    "44012017",
+    "44016023",
+    "44016024",
+    "44016026",
+    "44016027",
+    "44016037",
+    "44016040",
+    "44022004",
+    "44026010",
+    "47006005",
+    "47011023",
+    "58011036",
+    "60003019",
+    "66002010",
+    "66020007"
+  ],
+  "subject_referents": {},
+  "type": "realia",
+  "ubsdbh": [
+    "000883001002000",
+    "003305001001000",
+    "003323001001000"
+  ],
+  "ubsdgnt": [
+    "7.24"
+  ]
+}

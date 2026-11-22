@@ -1,0 +1,285 @@
+{
+  "alternate_sources": {
+    "ubsdbh": [
+      "006216001003000"
+    ],
+    "ubsrealia": [
+      "realia:3.1.6"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "realia:Room",
+    "review_status": "source_unreviewed",
+    "source_id": "realia:Room",
+    "source_primary_id": "realia:Room",
+    "source_sha256": "c5bb2c92a38217f4b19821d411793916c140410b52a58b6e10b205f76299d51f"
+  },
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o110060050151"
+      ],
+      [
+        "o110060080022"
+      ],
+      [
+        "o260410050072"
+      ],
+      [
+        "o260410060013"
+      ],
+      [
+        "o260410060021"
+      ],
+      [
+        "o260410060041"
+      ],
+      [
+        "o260410060122"
+      ],
+      [
+        "o260410070052"
+      ],
+      [
+        "o260410080082"
+      ],
+      [
+        "o260410090042"
+      ],
+      [
+        "o260410090121"
+      ],
+      [
+        "o260410110022"
+      ],
+      [
+        "o260410260092"
+      ]
+    ]
+  },
+  "id": "realia:Room",
+  "key_references": [
+    "11006005",
+    "26041006",
+    "26041011"
+  ],
+  "lemmas": {
+    "he": [
+      "צֵלָע"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "جزء جوة المبنى، في العادة بكون عنده حيطان، ومستعمل لحاجات معينة زي النوم أو الأكل أو الشغل.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "أوضة"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "جزء داخل مبنى، يكون محاطًا بجدران عادةً، ويُستخدم لأنشطة معينة مثل النوم أو تناول الطعام أو العمل.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "غُرْفَة"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan haf insaed long wan haos no bilding, we i gat ol wol blong hem, we oli yusum blong sam stret samting olsem blong slip, kakae, no wok.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "rum"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Storey"
+      ],
+      "descriptions": [
+        {
+          "article": "realia:Room",
+          "description": "A section inside a building, usually with walls, used for specific activities like sleeping, eating, or working.",
+          "gloss": "Room",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Room"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "بخشی در درون یک ساختمان، معمولاً دارای دیوار، که برای فعالیت‌های خاصی مانند خوابیدن، غذا خوردن یا کار کردن استفاده می‌شود.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "اتاق"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Division à l'intérieur d'un bâtiment, généralement entourée de murs, servant à des activités spécifiques comme dormir, manger ou travailler.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "chambre"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Wani ɓangare a cikin gini, wanda yawanci yake da bangaye, da ake amfani da shi domin takamaiman ayyuka kamar barci, cin abinci, ko aiki.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ɗaki"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "किसी भवन के भीतर का एक भाग, जिसमें प्रायः दीवारें होती हैं, और जिसका उपयोग सोने, खाने या काम करने जैसी विशेष गतिविधियों के लिए किया जाता है।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "कमरा"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Akụkụ dị nʼime ụlọ, nke nwere mgbidi na-ekewapụ ya, nke a na-eji eme ihe ụfọdụ dịka ịrahụ ụra, iri nri, maọbụ ịrụ ọrụ.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "ọnụụlọ"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Bagian di dalam bangunan, biasanya berdinding, yang digunakan untuk kegiatan tertentu seperti tidur, makan, atau bekerja.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "kamar"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "भवनभित्रको एउटा भाग, जसमा सामान्यतया भित्ताहरू हुन्छन्, र सुत्न, खान वा काम गर्नजस्ता विशेष गतिविधिहरूका लागि प्रयोग गरिन्छ।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "कोठा"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Uma divisão interna de um edifício, geralmente com paredes, usada para atividades específicas como dormir, comer ou trabalhar.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "câmara"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Часть внутреннего пространства здания, обычно огороженная стенами, используемая для определенных занятий, таких как сон, прием пищи или работа.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Комната"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Sección dentro de un edificio, generalmente con paredes, utilizada para actividades específicas como dormir, comer o trabajar.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "habitación"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Sehemu iliyo ndani ya jengo, kwa kawaida yenye kuta, inayotumiwa kwa shughuli maalum kama vile kulala, kula, au kufanyia kazi.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Chumba"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Wanpela hap insait long wanpela haus, planti taim em i gat ol banis, ol i save yusim bilong sampela wok olsem slip, kaikai, o wok.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "rum"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Một gian bên trong tòa nhà, thường có tường bao quanh, dùng cho các sinh hoạt cụ thể như ngủ, ăn hoặc làm việc.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Phòng"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "建筑物内的一个区域，通常有墙壁隔开，用于睡眠、进食或工作等特定活动。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "房间"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "建築物內通常有牆壁隔開的區域，用於睡覺、進食或工作等特定活動。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "房間"
+    }
+  },
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "primary_id": "realia:Room",
+  "pronominal_referents": {},
+  "realia_type": "other",
+  "references": [
+    "11006005",
+    "11006008",
+    "26041005",
+    "26041006",
+    "26041007",
+    "26041008",
+    "26041009",
+    "26041011",
+    "26041026"
+  ],
+  "subject_referents": {
+    "wlc": [
+      [
+        "o260410060082"
+      ],
+      [
+        "o260410060152"
+      ],
+      [
+        "o260410070012"
+      ],
+      [
+        "o260410070022"
+      ]
+    ]
+  },
+  "type": "realia",
+  "ubsdbh": [
+    "006216001003000"
+  ]
+}

@@ -1,0 +1,220 @@
+{
+  "bsi": {
+    "canonical_id": "person:GenericEnemy",
+    "review_status": "source_unreviewed",
+    "source_id": "person:GenericEnemy",
+    "source_primary_id": "person:GenericEnemy",
+    "source_sha256": "978f4f0ff48a01ffccf358d1e105a8847db2f6c9df9ea497e9ccfd8602c012a9"
+  },
+  "explicit_instances": {},
+  "id": "person:GenericEnemy",
+  "key_references": [
+    "33007010"
+  ],
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "عدو مشارك في نص كتابي.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "عدو"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "عدو يشارك في نص كتابي.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "عدو"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan enemi we i tekpat long wan stori.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Wan Enemi"
+    },
+    "eng": {
+      "descriptions": [
+        {
+          "description": "An enemy participating in a passage.",
+          "gloss": "An Enemy",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "An Enemy"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "دشمنی که در یک گذرگاه کتاب‌مقدس حضور دارد.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "دشمن"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Un ennemi intervenant dans un passage.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "un ennemi"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Wani maƙiyi da ke da hannu a wani nassi.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Maƙiyi"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "किसी संदर्भ या घटना में भाग लेने वाला एक शत्रु/शत्रुता रखने वाला।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "एक शत्रु"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Onye iro na-ekere òkè nʼotu akụkụ Akwụkwọ Nsọ.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Onye iro"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Seorang musuh yang mengambil bagian dalam suatu nas.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Seorang Musuh"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "कुनै खण्डमा सहभागी एक शत्रु।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "एक शत्रु"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Um inimigo que participa de uma passagem.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Um inimigo"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Враг, участвующий в отрывке.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Враг"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Un enemigo que participa en un pasaje.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "un enemigo"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Adui anayeshiriki katika kifungu.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Adui"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Wanpela birua i mekim samting long wanpela stori o hap bilong Baibel.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Wanpela Birua"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Một kẻ thù xuất hiện trong một phân đoạn Kinh Thánh.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Một kẻ thù"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "经文中出现的一位仇敌。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "一个仇敌"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "參與經文事件的一位仇敵。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "一位仇敵"
+    }
+  },
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "primary_id": "person:GenericEnemy",
+  "pronominal_referents": {},
+  "references": [
+    "33007010"
+  ],
+  "speeches": {
+    "wlc": [
+      {
+        "quote_type": "Hypothetical",
+        "words": [
+          "o330070100071",
+          "o330070100072",
+          "o330070100081",
+          "o330070100091",
+          "o330070100092"
+        ]
+      }
+    ]
+  },
+  "subject_referents": {
+    "wlc": [
+      [
+        "o330070100021"
+      ],
+      [
+        "o330070100052"
+      ]
+    ]
+  },
+  "type": "person"
+}

@@ -1,0 +1,432 @@
+{
+  "alternate_sources": {
+    "aquifer": [
+      "4649|Coriander|TyndaleBibleDictionary"
+    ],
+    "ubsdbh": [
+      "001291001001000"
+    ],
+    "ubsflora": [
+      "flora:3.5.2"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "flora:Coriander",
+    "review_status": "source_unreviewed",
+    "source_id": "flora:Coriander",
+    "source_primary_id": "flora:Coriander",
+    "source_sha256": "fb7a1ef06425c3ff51c040a22f779d15fc8d37f5f4a2550e326d5f4c83bae85a"
+  },
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o020160310091"
+      ],
+      [
+        "o040110070031"
+      ],
+      [
+        "o010010110081"
+      ],
+      [
+        "o010010110151",
+        "o010010110152"
+      ],
+      [
+        "o010010120061"
+      ],
+      [
+        "o010010120121",
+        "o010010120122"
+      ],
+      [
+        "o010010290101"
+      ],
+      [
+        "o010010290241"
+      ],
+      [
+        "o010470190191"
+      ],
+      [
+        "o010470230141"
+      ],
+      [
+        "o010470240102"
+      ],
+      [
+        "o020160310082"
+      ],
+      [
+        "o030110370061"
+      ],
+      [
+        "o030110380051"
+      ],
+      [
+        "o030260160191",
+        "o030260160192"
+      ],
+      [
+        "o030270160101",
+        "o030270160102"
+      ],
+      [
+        "o030270160111"
+      ],
+      [
+        "o030270300042"
+      ],
+      [
+        "o040110070022"
+      ],
+      [
+        "o040200050121"
+      ],
+      [
+        "o040240070042",
+        "o040240070043"
+      ],
+      [
+        "o050110100181",
+        "o050110100182"
+      ],
+      [
+        "o050140220061",
+        "o050140220062"
+      ],
+      [
+        "o050220090082"
+      ],
+      [
+        "o050280380011"
+      ],
+      [
+        "o090080150012",
+        "o090080150013"
+      ],
+      [
+        "o110180320111"
+      ],
+      [
+        "o180390120061",
+        "o180390120062"
+      ],
+      [
+        "o191260060062"
+      ],
+      [
+        "o210110060041",
+        "o210110060042"
+      ],
+      [
+        "o230050100082"
+      ],
+      [
+        "o230230030031"
+      ],
+      [
+        "o230300230031",
+        "o230300230032"
+      ],
+      [
+        "o230550100191"
+      ],
+      [
+        "o240020210051"
+      ],
+      [
+        "o240310270131"
+      ],
+      [
+        "o240310270152"
+      ],
+      [
+        "o240350070042"
+      ],
+      [
+        "o240350090072"
+      ],
+      [
+        "o260170050022"
+      ],
+      [
+        "o260170050061"
+      ],
+      [
+        "o300090130122"
+      ],
+      [
+        "o370020190022"
+      ]
+    ]
+  },
+  "flora_type": "Food Plants, Grown and Gathered",
+  "id": "flora:Coriander",
+  "key_references": [
+    "02016031",
+    "04011007"
+  ],
+  "lemmas": {
+    "he": [
+      "גַּד"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "عشبة ورقها الفوقاني مقسم ناعم، وورقها التحتاني عريض، وزهورها صغار لونها أبيض أو محمر، وبذورها بتستعمل في الطبيخ والعطور، وبذورها بتشبه البازِلا الصغيرة.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "كزبرة"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "عُشْبٌ ذو أوراقٍ عُليا مُفَصَّصَةٍ بدِقَّةٍ وأوراقٍ سُفلى عريضةٍ، وزُهورٍ بيضاءَ أو ضاربةٍ إلى الحُمرةِ صغيرةٍ جدًّا، وتُستخدَم بذورُه في الطَّهي والعُطورِ؛ وتُشبِه بذورُه حَبَّاتِ البازِلَّاءِ الصَّغيرةِ.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "كُزْبَرَة"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan gras we ol lif antap oli hafhaf finis, ol lif daon oli broad, ol smosmol فلاoa we oli waet no red lelebet, mo ol sid we oli yusum long kuk mo mekem senta; ol sid blong hem oli luk olsem smol pi.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "korianda"
+    },
+    "eng": {
+      "descriptions": [
+        {
+          "article": "flora:Coriander",
+          "description": "A herb with finely divided upper leaves, broad lower leaves, tiny white or reddish flowers, and seeds used in cooking and perfumes; its seeds look like small peas.",
+          "gloss": "Coriander",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Coriander"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "گیاهی دارویی و خوراکی با برگ‌های بالایی باریک و بخش‌بخش، برگ‌های پایینی پهن، گل‌های ریز سفید یا مایل به سرخ، و دانه‌هایی شبیه به نخودهای کوچک که در آشپزی و عطرها به کار می‌روند.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "گشنیز"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Herbe aux feuilles supérieures finement divisées, aux feuilles inférieures larges, aux minuscules fleurs blanches ou rougeâtres, et aux graines semblables à de petits pois utilisées en cuisine et en parfumerie.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "coriandre"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Wata tsiro mai ganyaye na sama da suka rabu sosai, ganyaye na ƙasa masu faɗi, ƙanana fararen ko jajayen furanni, da ’ya’ya da ake amfani da su wajen dafa abinci da turare; ’ya’yanta suna kama da ƙananan wake.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Koriander"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "एक जड़ी-बूटी जिसके ऊपरी पत्ते बारीक कटे हुए और निचले पत्ते चौड़े होते हैं, इसमें छोटे सफेद या लाल रंग के फूल आते हैं, और इसके बीजों का उपयोग खाना पकाने और इत्र में किया जाता है; इसके बीज छोटे मटर जैसे दिखते हैं।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "धनिया"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Ahịhịa nwere akwụkwọ ndị dị nro nʼelu, na akwụkwọ sara mbara nʼokpuru, na obere okooko osisi na-acha ọcha ma ọ bụ na-acha ọbara ọbara, na mkpụrụ e ji esi nri ma na-emekwa mmanụ na-esi ísì ụtọ; mkpụrụ ya yiri obere piisi.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "kọrianda"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Tumbuhan terna dengan daun bagian atas terbagi halus, daun bagian bawah lebar, bunga kecil berwarna putih atau kemerahan, dan biji yang digunakan dalam masakan serta wewangian; bijinya tampak seperti kacang polong kecil.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "ketumbar"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "एउटा जडीबुटी जसका माथिल्ला पातहरू मसिनो गरी विभाजित हुन्छन्, तल्लो भागका पातहरू चौडा हुन्छन्, साना सेता वा हल्का रातो रङ्गका फूलहरू हुन्छन्, र बिउहरू खाना पकाउन र अत्तर बनाउन प्रयोग गरिन्छ; यसका बिउहरू साना केराउका दाना जस्ता देखिन्छन्।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "धनियाँ"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Uma erva com folhas superiores finamente divididas, folhas inferiores largas, flores minúsculas brancas ou avermelhadas e sementes usadas na culinária e em perfumes; suas sementes se parecem com pequenas ervilhas.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "coentro"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Травянистое растение с тонко рассеченными верхними листьями, широкими нижними листьями, мелкими белыми или красноватыми цветками и семенами, используемыми в кулинарии и парфюмерии; его семена похожи на мелкие горошины.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Кориандр"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Hierba de hojas superiores finamente divididas, hojas inferiores anchas, flores pequeñas blancas o rojizas y semillas utilizadas en la cocina y la perfumería; sus semillas se parecen a guisantes pequeños.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "cilantro"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Mmea wa viungo wenye majani ya juu yaliyogawanyika sana, majani ya chini mapana, maua madogo meupe au ya rangi ya waridi, na mbegu zinazotumika katika upishi na manukato; mbegu zake hufanana na njegere ndogo.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Giligilani"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Wanpela kain liklik sayor i gat ol liklik lip antap, bikpela lip daunbilo, liklik waitpela o retpela plaua, na ol pikinini bilong en ol i save yusim long kuk na marasin i gat gutpela smel; ol pikinini bilong en i luk olsem ol liklik bin.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "koriander"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Một loại rau thơm với lá phía trên xẻ nhỏ, lá phía dưới rộng, hoa nhỏ màu trắng hoặc hơi đỏ, hạt dùng trong nấu ăn và làm nước hoa; hạt của nó trông giống như hạt đậu nhỏ.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Rau ngò"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "一种草本植物，上部叶片裂成细丝状，下部叶片较宽，开细小的白花或淡红花；其种子像小豌豆，用于烹饪和香料。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "芫荽"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "一種草本植物，上部葉片細裂，下部葉片較寬，開微小的白色或淡紅色花朵；其種子形似小豌豆，用於烹飪和香水製造。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "芫荽"
+    }
+  },
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "primary_id": "flora:Coriander",
+  "pronominal_referents": {
+    "wlc": [
+      [
+        "o030110370111"
+      ],
+      [
+        "o030110380082"
+      ],
+      [
+        "o030110380101"
+      ],
+      [
+        "o030260160203"
+      ],
+      [
+        "o050280380082"
+      ],
+      [
+        "o260170050043"
+      ],
+      [
+        "o260170050122"
+      ]
+    ]
+  },
+  "references": [
+    "01001011",
+    "01001012",
+    "01001029",
+    "01047019",
+    "01047023",
+    "01047024",
+    "02016031",
+    "03011037",
+    "03011038",
+    "03026016",
+    "03027016",
+    "03027030",
+    "04011007",
+    "04020005",
+    "04024007",
+    "05011010",
+    "05014022",
+    "05022009",
+    "05028038",
+    "09008015",
+    "11018032",
+    "18039012",
+    "19126006",
+    "21011006",
+    "23005010",
+    "23023003",
+    "23030023",
+    "23055010",
+    "24002021",
+    "24031027",
+    "24035007",
+    "24035009",
+    "26017005",
+    "30009013",
+    "37002019"
+  ],
+  "subject_referents": {
+    "wlc": [
+      [
+        "o260170060012"
+      ],
+      [
+        "o260170060022"
+      ],
+      [
+        "o260170060132"
+      ]
+    ]
+  },
+  "type": "flora",
+  "ubsdbh": [
+    "001291001001000"
+  ]
+}

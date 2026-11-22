@@ -1,0 +1,231 @@
+{
+  "alternate_sources": {
+    "ubsdgnt": [
+      "6.220"
+    ],
+    "ubsrealia": [
+      "realia:3.1.2.2"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "realia:Key",
+    "review_status": "source_unreviewed",
+    "source_id": "realia:Key",
+    "source_primary_id": "realia:Key",
+    "source_sha256": "44847ea0df32c1e2bdb59948dd7138b23614e9f570dc34344633f46e6c4ff58d"
+  },
+  "explicit_instances": {
+    "SBLGNT": [
+      [
+        "n40016019004"
+      ],
+      [
+        "n66009001020"
+      ],
+      [
+        "n66020001010"
+      ]
+    ]
+  },
+  "id": "realia:Key",
+  "key_references": [
+    "40016019",
+    "66001018",
+    "66020001"
+  ],
+  "lemmas": {
+    "el": [
+      "κλείς"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "حاجة بستعملوها عشان يقفلوا أو يفتحوا بيها الأبواب والبوابات.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "مفتاح"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "أَدَاةٌ تُسْتَخْدَمُ لِقَفْلِ ٱلْأَبْوَابِ وَٱلْبَوَّابَاتِ أَوْ فَتْحِهَا.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "مِفْتَاح"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan samting we oli yusum blong lokem no anlokem ol doa mo get.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "ki"
+    },
+    "eng": {
+      "descriptions": [
+        {
+          "article": "realia:Key",
+          "description": "An object used to lock or unlock doors and gates.",
+          "gloss": "Key",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Key"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "وسیله‌ای که برای قفل کردن یا باز کردن درها و دروازه‌ها به کار می‌رود.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "کلید"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Objet utilisé pour fermer ou ouvrir des portes et des portails.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "clé"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Abin da ake amfani da shi don kulle ko buɗe kofofi da ƙofofin gari.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "mabuɗi"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "दरवाज़ों और फाटकों को बंद करने या खोलने के लिए काम में लाई जाने वाली वस्तु।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "कुँजी"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Ihe e ji akpọchi ma ọ bụ atụghe ụzọ na ọnụ ụzọ ámá.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Mkpịsị igodo"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Benda yang digunakan untuk mengunci atau membuka kunci pintu dan gerbang.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "kunci"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "ढोका र मूलढोकाहरू लगाउन वा खोल्न प्रयोग गरिने वस्तु।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "साँचो"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Um objeto usado para trancar ou destrancar portas e portões.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "chave"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Предмет, используемый для запирания и отпирания дверей и ворот.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "ключ"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Objeto utilizado para cerrar o abrir puertas y portones.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "llave"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Kitu kinachotumiwa kufunga au kufungua milango na malango.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ufunguo"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Wanpela samting ol i save yusim bilong lokim o opim dua na get.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "ki"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Một vật dùng để khóa hoặc mở các cửa và cổng.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "chìa khóa"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "一种用来锁门或开门的器具。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "钥匙"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "用於鎖上或開啟門與城門的物件。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "鑰匙"
+    }
+  },
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "primary_id": "realia:Key",
+  "pronominal_referents": {},
+  "realia_type": "other",
+  "references": [
+    "40016019",
+    "66009001",
+    "66020001"
+  ],
+  "subject_referents": {},
+  "type": "realia",
+  "ubsdgnt": [
+    "6.220"
+  ]
+}

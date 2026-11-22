@@ -1,0 +1,183 @@
+{
+  "alternate_sources": {
+    "ubsdbh": [
+      "000669001001000",
+      "003922001002000"
+    ],
+    "ubsdgnt": [
+      "6.109"
+    ],
+    "ubsrealia": [
+      "realia:4.8.4"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "realia:Bier",
+    "review_status": "source_unreviewed",
+    "source_id": "realia:Bier",
+    "source_primary_id": "realia:Bier",
+    "source_sha256": "d2d6c2c51ac20cadc5330626b2b364246f60519c635258aaed555bace33fd454"
+  },
+  "explicit_instances": {
+    "SBLGNT": [
+      [
+        "n42007014005"
+      ]
+    ],
+    "wlc": [
+      [
+        "o010500260102"
+      ],
+      [
+        "o120120100041"
+      ],
+      [
+        "o120120110062"
+      ],
+      [
+        "o140240080041"
+      ],
+      [
+        "o140240100082"
+      ],
+      [
+        "o140240110052"
+      ],
+      [
+        "o140240110232"
+      ],
+      [
+        "o100030310212"
+      ],
+      [
+        "o220030070021",
+        "o220030070022"
+      ]
+    ]
+  },
+  "id": "realia:Bier",
+  "key_references": [],
+  "lemmas": {
+    "el": [
+      "σορός"
+    ],
+    "he": [
+      "אֲרֹון",
+      "מִטָּה"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "preferred_label": "جنازة"
+    },
+    "arb": {
+      "preferred_label": "نَعْش"
+    },
+    "bis": {
+      "preferred_label": "bed blong karem dedman"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Box",
+        "Chest",
+        "Coffin",
+        "Litter"
+      ],
+      "preferred_label": "Bier"
+    },
+    "fas": {
+      "preferred_label": "تابوت روان"
+    },
+    "fra": {
+      "preferred_label": "brancard funéraire"
+    },
+    "hau": {
+      "preferred_label": "Makara"
+    },
+    "hin": {
+      "preferred_label": "अर्थी"
+    },
+    "ibo": {
+      "preferred_label": "Ihe ndina ozu"
+    },
+    "ind": {
+      "preferred_label": "usungan jenazah"
+    },
+    "nep": {
+      "preferred_label": "खोली"
+    },
+    "por": {
+      "preferred_label": "esquife"
+    },
+    "rus": {
+      "preferred_label": "одр"
+    },
+    "spa": {
+      "preferred_label": "féretro"
+    },
+    "swh": {
+      "preferred_label": "Jeneza"
+    },
+    "tpi": {
+      "preferred_label": "bet bilong karim bodi"
+    },
+    "vie": {
+      "preferred_label": "quan tài"
+    },
+    "zhs": {
+      "preferred_label": "灵柩架"
+    },
+    "zht": {
+      "preferred_label": "棺柩架"
+    }
+  },
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "primary_id": "realia:Bier",
+  "pronominal_referents": {
+    "wlc": [
+      [
+        "o120120100083"
+      ],
+      [
+        "o120120100102"
+      ],
+      [
+        "o140240080063"
+      ],
+      [
+        "o140240110243"
+      ],
+      [
+        "o140240110253"
+      ],
+      [
+        "o140240110272"
+      ],
+      [
+        "o220030070072"
+      ]
+    ]
+  },
+  "realia_type": "other",
+  "references": [
+    "01050026",
+    "10003031",
+    "12012010",
+    "12012011",
+    "14024008",
+    "14024010",
+    "14024011",
+    "22003007",
+    "42007014"
+  ],
+  "subject_referents": {},
+  "type": "realia",
+  "ubsdbh": [
+    "000669001001000",
+    "003922001002000"
+  ],
+  "ubsdgnt": [
+    "6.109"
+  ]
+}

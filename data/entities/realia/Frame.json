@@ -1,0 +1,474 @@
+{
+  "alternate_sources": {
+    "ubsdbh": [
+      "006606001001000"
+    ],
+    "ubsrealia": [
+      "realia:3.15.2.3.1"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "realia:Frame",
+    "review_status": "source_unreviewed",
+    "source_id": "realia:Frame",
+    "source_primary_id": "realia:Frame",
+    "source_sha256": "891a09fa9e7a4568a8d4a2cd5662dceccce1b371decf042b123f1a8397e90ef4"
+  },
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o020260150032"
+      ],
+      [
+        "o020260160042"
+      ],
+      [
+        "o020260160092"
+      ],
+      [
+        "o020260170032"
+      ],
+      [
+        "o020260170121"
+      ],
+      [
+        "o020260180032"
+      ],
+      [
+        "o020260180061"
+      ],
+      [
+        "o020260190072"
+      ],
+      [
+        "o020260190112"
+      ],
+      [
+        "o020260190182"
+      ],
+      [
+        "o020260200071"
+      ],
+      [
+        "o020260210072"
+      ],
+      [
+        "o020260210122"
+      ],
+      [
+        "o020260220061"
+      ],
+      [
+        "o020260230021"
+      ],
+      [
+        "o020260250031"
+      ],
+      [
+        "o020260250122"
+      ],
+      [
+        "o020260250172"
+      ],
+      [
+        "o020260260062"
+      ],
+      [
+        "o020260270032"
+      ],
+      [
+        "o020260270092"
+      ],
+      [
+        "o020260280042"
+      ],
+      [
+        "o020260290022"
+      ],
+      [
+        "o020350110101",
+        "o020350110102"
+      ],
+      [
+        "o020360200032"
+      ],
+      [
+        "o020360210042"
+      ],
+      [
+        "o020360210092"
+      ],
+      [
+        "o020360220032"
+      ],
+      [
+        "o020360220121"
+      ],
+      [
+        "o020360230032"
+      ],
+      [
+        "o020360230061"
+      ],
+      [
+        "o020360240072"
+      ],
+      [
+        "o020360240112"
+      ],
+      [
+        "o020360240182"
+      ],
+      [
+        "o020360250081"
+      ],
+      [
+        "o020360260072"
+      ],
+      [
+        "o020360260122"
+      ],
+      [
+        "o020360270061"
+      ],
+      [
+        "o020360280021"
+      ],
+      [
+        "o020360300031"
+      ],
+      [
+        "o020360300142"
+      ],
+      [
+        "o020360310062"
+      ],
+      [
+        "o020360320032"
+      ],
+      [
+        "o020360320092"
+      ],
+      [
+        "o020360330072"
+      ],
+      [
+        "o020360340022"
+      ],
+      [
+        "o020390330121",
+        "o020390330122"
+      ],
+      [
+        "o020400180101",
+        "o020400180102"
+      ],
+      [
+        "o040030360051"
+      ],
+      [
+        "o040040310081"
+      ]
+    ]
+  },
+  "id": "realia:Frame",
+  "key_references": [
+    "02026015",
+    "02026029",
+    "02036020",
+    "02040018"
+  ],
+  "lemmas": {
+    "he": [
+      "קֶרֶשׁ"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "هيكل خشب معمول من قوائم وعوارض أفقية عشان يرفع الخيمة.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "هيكل خشب"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "هيكل خشبي مصنوع من قوائم رأسية وعوارض يُستخدَم لدعم خيمة.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "لَوْح"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan frem we oli wokem long wud wetem ol pos we oli stanap mo ol krosba blong holem wan tenet.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "frem"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Support",
+        "Tabernacle Frame and Base",
+        "Tabernacle Frame"
+      ],
+      "descriptions": [
+        {
+          "article": "realia:Frame",
+          "description": "A wooden structure made of vertical poles and crossbars used to support a tent.",
+          "gloss": "Frame",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Frame"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "سازه‌ای چوبی متشکل از دیرک‌های عمودی و تیرهای افقی که برای برپا نگه داشتن خیمه به کار می‌رفت.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "تخته چوب‌بست"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Structure en bois composée de montants verticaux et de barres transversales, utilisée pour soutenir une tente.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "cadre"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Tsarin katako da aka yi da tsaye-tsayen sanduna da madogara don ɗaukar alfarwa.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "katako"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "तंबू को सहारा देने के लिए खड़े खंभों और आड़ी छड़ों से बना लकड़ी का ढाँचा।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "तख्ता"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Ihe a rụrụ nʼosisi nke nwere ogidi ndị kwụ ọtọ na osisi ntụbichi e ji akwado ụlọikwuu.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "mbudo ibo"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Struktur kayu yang terbuat dari tiang-tiang tegak dan kayu-kayu lintang yang digunakan untuk menopang kemah.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "papan penyangga"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "पाललाई थाम्ने काममा प्रयोग गरिने ठाडा खम्बा र तेर्सा बारहरूले बनेको काठको संरचना वा ढाँचा।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "फल्याक"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Uma estrutura de madeira feita de postes verticais e travessões usada para sustentar uma tenda.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "armação"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Деревянная конструкция из вертикальных шестов и перекладин, служившая опорой для шатра.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "брус"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Estructura de madera compuesta por postes verticales y travesaños, utilizada para sostener una tienda o tabernáculo.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "armazón"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Muundo wa mbao uliotengenezwa kwa nguzo za wima na pau za mlalo uliotumiwa kutegemeza hema.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Mhimili"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Bikpela bun diwai i gat ol pos i sanap na ol plang i slip bilong holim haus sel.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "bun bilong haus sel"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Cấu trúc bằng gỗ gồm các cọc dựng đứng và các thanh ngang dùng để nâng đỡ đền tạm (lều).",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "khung vách"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "一种由立柱和横木制成的木质构架，用于支撑帐幕。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "木架"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "由立柱和橫閂製成、用來支撐帳幕的木製結構。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "豎板"
+    }
+  },
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "primary_id": "realia:Frame",
+  "pronominal_referents": {
+    "wlc": [
+      [
+        "o020260190142"
+      ],
+      [
+        "o020260190212"
+      ],
+      [
+        "o020260210022"
+      ],
+      [
+        "o020260240082"
+      ],
+      [
+        "o020260240143"
+      ],
+      [
+        "o020260250043"
+      ],
+      [
+        "o020260290062"
+      ],
+      [
+        "o020360240142"
+      ],
+      [
+        "o020360240212"
+      ],
+      [
+        "o020360260022"
+      ],
+      [
+        "o020360290082"
+      ],
+      [
+        "o020360290143"
+      ],
+      [
+        "o020360300043"
+      ],
+      [
+        "o020360340062"
+      ]
+    ]
+  },
+  "realia_type": "other",
+  "references": [
+    "02026015",
+    "02026016",
+    "02026017",
+    "02026018",
+    "02026019",
+    "02026020",
+    "02026021",
+    "02026022",
+    "02026023",
+    "02026025",
+    "02026026",
+    "02026027",
+    "02026028",
+    "02026029",
+    "02035011",
+    "02036020",
+    "02036021",
+    "02036022",
+    "02036023",
+    "02036024",
+    "02036025",
+    "02036026",
+    "02036027",
+    "02036028",
+    "02036030",
+    "02036031",
+    "02036032",
+    "02036033",
+    "02036034",
+    "02039033",
+    "02040018",
+    "04003036",
+    "04004031"
+  ],
+  "subject_referents": {
+    "wlc": [
+      [
+        "o020260240012"
+      ],
+      [
+        "o020260240051"
+      ],
+      [
+        "o020260240171"
+      ],
+      [
+        "o020360290012"
+      ],
+      [
+        "o020360290051"
+      ]
+    ]
+  },
+  "type": "realia",
+  "ubsdbh": [
+    "006606001001000"
+  ]
+}

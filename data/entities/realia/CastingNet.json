@@ -1,0 +1,417 @@
+{
+  "alternate_sources": {
+    "ubsdbh": [
+      "003987001001000",
+      "003988001001000",
+      "006951001001000"
+    ],
+    "ubsdgnt": [
+      "6.12",
+      "6.11"
+    ],
+    "ubsrealia": [
+      "realia:1.3.1.1"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "realia:CastingNet",
+    "review_status": "source_unreviewed",
+    "source_id": "realia:CastingNet",
+    "source_primary_id": "realia:CastingNet",
+    "source_sha256": "b4b927eb92d3f3b19f5656d3fe08387fab67789d3871f44ff3de052f61e486dd"
+  },
+  "explicit_instances": {
+    "SBLGNT": [
+      [
+        "n40004018021"
+      ],
+      [
+        "n40004020006"
+      ],
+      [
+        "n40004021027"
+      ],
+      [
+        "n41001018005"
+      ],
+      [
+        "n41001019021"
+      ],
+      [
+        "n42005002017"
+      ],
+      [
+        "n42005004016"
+      ],
+      [
+        "n42005005019"
+      ],
+      [
+        "n42005006011"
+      ],
+      [
+        "n43021006013"
+      ],
+      [
+        "n43021008022"
+      ],
+      [
+        "n43021011008"
+      ],
+      [
+        "n43021011024"
+      ]
+    ],
+    "wlc": [
+      [
+        "o191410100022",
+        "o191410100023"
+      ],
+      [
+        "o230510200081"
+      ],
+      [
+        "o230190080091"
+      ],
+      [
+        "o350010150072",
+        "o350010150073"
+      ],
+      [
+        "o350010160062",
+        "o350010160063"
+      ],
+      [
+        "o180180080032"
+      ],
+      [
+        "o190090160052"
+      ],
+      [
+        "o190100090112",
+        "o190100090113"
+      ],
+      [
+        "o190250150082"
+      ],
+      [
+        "o190310050022"
+      ],
+      [
+        "o190350070061",
+        "o190350070062"
+      ],
+      [
+        "o190350080052",
+        "o190350080053"
+      ],
+      [
+        "o190570070011"
+      ],
+      [
+        "o191400060071"
+      ],
+      [
+        "o200010170042"
+      ],
+      [
+        "o200290050051"
+      ],
+      [
+        "o250010130071"
+      ],
+      [
+        "o260120130031",
+        "o260120130032"
+      ],
+      [
+        "o260170200031",
+        "o260170200032"
+      ],
+      [
+        "o260190080081",
+        "o260190080082"
+      ],
+      [
+        "o260320030081",
+        "o260320030082"
+      ],
+      [
+        "o280050010172"
+      ],
+      [
+        "o280070120051",
+        "o280070120052"
+      ]
+    ]
+  },
+  "id": "realia:CastingNet",
+  "key_references": [
+    "43021006",
+    "35001015"
+  ],
+  "lemmas": {
+    "el": [
+      "ἀμφίβληστρον",
+      "δίκτυον"
+    ],
+    "he": [
+      "מִכְמָר",
+      "מִכְמֶרֶת",
+      "רֶשֶׁת"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "شبكة دائرية فيها أثقال وحبل جر تُستعمل لصيد السمك برميها من المركب أو من الشاطئ.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "شبكة طرح"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "شَبَكَةٌ دَائِرِيَّةٌ ذَاتُ أَثْقَالٍ وَحَبْلِ سَحْبٍ تُسْتَخْدَمُ لِصَيْدِ السَّمَكِ بِإِلْقَائِهَا مِنْ قَارِبٍ أَوْ مِنَ الشَّاطِئِ.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "شَبَكَةُ طَرْحٍ"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan raon net we i gat ol heve wetem wan rop blong pulum, we oli stap yusum blong kasem fis taem oli sakem aot long wan bot no long so.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "net blong sakem"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Net",
+        "Fishnet"
+      ],
+      "descriptions": [
+        {
+          "article": "realia:CastingNet",
+          "description": "A circular net with weights and a draw rope used for catching fish by throwing it from a boat or shore.",
+          "gloss": "Casting Net",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Casting Net"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "توری دایره‌ای با وزنه‌ها و طناب جمع‌کننده که با پرتاب کردن آن از قایق یا ساحل برای صید ماهی استفاده می‌شد.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "تور ماهیگیری پرتابی"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Filet circulaire muni de plombs et d'un cordon de tirage, utilisé pour capturer du poisson en le lançant depuis un bateau ou la rive.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "épervier"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Raga mai kewayen dauri da ke ɗauke da ƙarafunan nauyi da igiyar janyewa da ake amfani da ita wajen kama kifi ta wurin jefawa daga jirgin ruwa ko bakin ruwa.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ragar kamun kifi"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "नाव या किनारे से फेंककर मछलियाँ पकड़ने के लिए काम में लाया जाने वाला भारयुक्त और खींचने वाली डोरी वाला एक गोलाकार जाल।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "फेंकने का जाल"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Ụgbụ dị okirikiri nwere ihe dị arọ na eriri a na-adọkpụ, nke a na-eji amata azụ site nʼịtụba ya site nʼụgbọ ma ọ bụ nʼikpere mmiri.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "ụgbụ a na-atụba atụba"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Jaring bundar dengan pemberat dan tali penarik yang digunakan untuk menangkap ikan dengan cara melemparkannya dari perahu atau tepi pantai.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "jala"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "डुङ्गा वा किनारबाट फ्याँकेर माछा समात्‍न प्रयोग गरिने, गह्रुङ्गो तौल र तान्‍ने डोरी भएको गोलो आकारको जाल।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "माछी-जाल"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Uma rede circular com pesos e uma corda de puxar usada para pescar lançando-a de um barco ou da margem.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "rede de arremesso"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Круглая сеть с грузилами и вытяжным шнуром, используемая для ловли рыбы путем забрасывания с лодки или берега.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "закидная сеть"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Red circular con plomos y una cuerda corrediza que se usa para pescar arrojándola desde una barca o desde la orilla.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "red de arrojar"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Wavu wa duara wenye vyuma vya uzito na kamba ya kuvutia unaotumiwa kuvulia samaki kwa kurushwa kutoka kwenye mashua au ukingoni mwa maji.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Wavu wa Kurusha"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Wanpela raunpela umben i gat ol hevi ain na rop bilong pulim, ol i save tromoi long bot o long nambis bilong kisim pis.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "umben bilong tromoi"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Một loại lưới hình tròn có gắn chì và dây rút dùng để bắt cá bằng cách quăng từ thuyền hoặc bờ.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "chài"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "一种带铅坠和拉绳的圆形网，从船上或岸边抛撒出去捕鱼。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "抛网"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "一種邊緣帶有重物及拉繩的圓形漁網，藉由從船上或岸邊拋擲來捕魚。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "撒網"
+    }
+  },
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "possibly_same_as": [
+    "realia:Dragnet",
+    "realia:Fishnet"
+  ],
+  "primary_id": "realia:CastingNet",
+  "pronominal_referents": {
+    "SBLGNT": [
+      [
+        "n43021006020"
+      ]
+    ],
+    "wlc": [
+      [
+        "o350010160082"
+      ]
+    ]
+  },
+  "realia_type": "other",
+  "references": [
+    "18018008",
+    "19009016",
+    "19010009",
+    "19025015",
+    "19031005",
+    "19035007",
+    "19035008",
+    "19057007",
+    "19140006",
+    "19141010",
+    "20001017",
+    "20029005",
+    "23019008",
+    "23051020",
+    "25001013",
+    "26012013",
+    "26017020",
+    "26019008",
+    "26032003",
+    "28005001",
+    "28007012",
+    "35001015",
+    "35001016",
+    "40004018",
+    "40004020",
+    "40004021",
+    "41001018",
+    "41001019",
+    "42005002",
+    "42005004",
+    "42005005",
+    "42005006",
+    "43021006",
+    "43021008",
+    "43021011"
+  ],
+  "subject_referents": {
+    "wlc": [
+      [
+        "o280050010181"
+      ]
+    ]
+  },
+  "type": "realia",
+  "ubsdbh": [
+    "003987001001000",
+    "003988001001000",
+    "006951001001000"
+  ],
+  "ubsdgnt": [
+    "6.12",
+    "6.11"
+  ]
+}

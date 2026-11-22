@@ -1,0 +1,369 @@
+{
+  "added_entry": false,
+  "alternate_sources": {
+    "aquifer": [
+      "7223|Mount Hermon|TyndaleBibleDictionary",
+      "26891|Mount Hermon|UWTranslationWords"
+    ],
+    "digital_atlas_roman_empire": [
+      "https://imperium.ahlfeldt.se/places/41235"
+    ],
+    "obi": [
+      "a341fe8"
+    ],
+    "tipnr": [
+      "Senir|Hermon_Mount@Deu.3.8-Ezk",
+      "Hermon_Mount@Deu.3.8-Ezk",
+      "Baal-hermon|Hermon_Mount@Deu.3.8-Ezk",
+      "Baal-gad|Hermon_Mount@Deu.3.8-Ezk",
+      "Baal-hamon|Hermon_Mount@Deu.3.8-Ezk"
+    ],
+    "vizbible": [
+      "rec1ET3TBR0oBaWJu"
+    ],
+    "wikidata": [
+      "http://www.wikidata.org/entity/Q215471"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "place:HermonMount",
+    "review_status": "source_unreviewed",
+    "source_id": "place:HermonMount",
+    "source_primary_id": "place:HermonMount",
+    "source_sha256": "79632bf2018b26072ec484abcc058ba05052815800afeef38d0cbddcceb8f15a"
+  },
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o050030080171"
+      ],
+      [
+        "o050030090032",
+        "o050030090041"
+      ],
+      [
+        "o050030090081"
+      ],
+      [
+        "o050040480091"
+      ],
+      [
+        "o050040480111"
+      ],
+      [
+        "o060110030111"
+      ],
+      [
+        "o060110170131"
+      ],
+      [
+        "o060120010191"
+      ],
+      [
+        "o060120050031"
+      ],
+      [
+        "o060130050111"
+      ],
+      [
+        "o060130110071"
+      ],
+      [
+        "o070030030121",
+        "o070030030131"
+      ],
+      [
+        "o130050230091",
+        "o130050230101"
+      ],
+      [
+        "o130050230112"
+      ],
+      [
+        "o130050230131"
+      ],
+      [
+        "o190290060052"
+      ],
+      [
+        "o190420070102"
+      ],
+      [
+        "o190890130062"
+      ],
+      [
+        "o191330030021"
+      ],
+      [
+        "o220040080111"
+      ],
+      [
+        "o220040080122"
+      ],
+      [
+        "o240180140031"
+      ],
+      [
+        "o260270050022"
+      ]
+    ]
+  },
+  "geocoordinates": {
+    "obi": {
+      "lat": "33.41615982",
+      "lon": "35.85725618"
+    },
+    "recogito": {
+      "lat": "33.416111",
+      "lon": "35.8575"
+    },
+    "vizbible": {
+      "lat": "33.416111",
+      "lon": "35.8575"
+    }
+  },
+  "id": "place:HermonMount",
+  "is_artifact": false,
+  "is_person": false,
+  "key_references": [
+    "05003008",
+    "22004008",
+    "13005023",
+    "05003009"
+  ],
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "جبل في سلسلة جبال لبنان الشرقية، شمال شرق إسرائيل؛ ومعروف كمان باسم سنير، وسيون، وسريون.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "جبل حرمون"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "جبل في سلسلة جبال لبنان الشرقية، شمال شرق إسرائيل؛ يُعرف أيضاً باسم سنير وسيون وسيريُون.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "جَبَلُ حَرْمُونَ"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan hil long Anti-Lebanon we i stap long not-is long Isrel; oli singaotem tu se Senir, Sion, mo Sirion.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Hil Hemon"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Baal-Hamon",
+        "Baal-Hermon",
+        "Hermonites",
+        "field",
+        "slope",
+        "Hermon",
+        "Mount Siyon",
+        "Lebanon",
+        "Sirion",
+        "Mount Baal-hermon",
+        "Baal-Gad",
+        "Mount Sion",
+        "Sion",
+        "Mount Sirion",
+        "Senir"
+      ],
+      "descriptions": [
+        {
+          "article": "place:MountHermon",
+          "description": "A mountain in the Anti-Lebanon range, northeast of Israel; also known as Senir, Sion, and Sirion.",
+          "gloss": "Mount Hermon",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Mount Hermon"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "کوهی در رشته‌کوه لبنان شرقی، در شمال شرقی اسرائیل؛ همچنین با نام‌های سَنیر، سیون و سیریون شناخته می‌شود.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "کوه حرمون"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Une montagne de la chaîne de l'Anti-Liban, au nord-est d'Israël ; également connue sous les noms de Senir, Sion et Sirion.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "mont Hermon"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Dutse a jerin duwatsun Anti-Lebanon, a arewa maso gabashin Isra’ila; wanda kuma aka sani da Senir, Siyon, da Siriyon.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Dutsen Hermon"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "इस्राएल के उत्तर-पूर्व में अ Build-लबानोन (एंटी-लेबनान) पर्वतमाला में एक पर्वत; जिसे सनीर, सियोन और शिर्योन के नाम से भी जाना जाता है।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "हेर्मोन पर्वत"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Ugwu dị na mkpọda Anti-Lebanọn, nʼebe ugwu ọwụwa anyanwụ Izrel; nke a makwaara dị ka Senia, Saịọn, na Sirion.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ugwu Hemon"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Sebuah gunung di pegunungan Anti-Lebanon, di sebelah timur laut Israel; juga dikenal sebagai Senir, Sion, dan Sirion.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Gunung Hermon"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "एन्टि-लेबनान हिमशृङ्खलामा रहेको, इस्राएलको उत्तर-पूर्वमा अवस्थित एउटा पर्वत; सेनीर, सियोन र सिर्योनको नामले पनि चिनिन्छ।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "हेर्मोन पर्वत"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Uma montanha na cordilheira do Antilíbano, a nordeste de Israel; também conhecida como Senir, Siom e Sirion.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Monte Hermom"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Гора в хребте Антиливан к северо-востоку от Израиля; также известна как Сенир, Сион и Сирион.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "гора Ермон"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Una montaña en la cordillera del Antilíbano, al noreste de Israel; también conocida como Senir, Sion y Sirión.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "monte Hermón"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Mlima katika safu ya milima ya Lebanoni-kinyume (Anti-Lebanoni), kaskazini-mashariki mwa Israeli; pia unajulikana kama Seniri, Sioni, na Sirioni.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Mlima Hermoni"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Wanpela maunten long Anti-Lebanon maunten lain, long hap not-is bilong Israel; ol i kolim tu olsem Senir, Sion, na Sirion.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Maunten Hermon"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Một ngọn núi thuộc dãy Chống Li-ban, ở phía đông bắc Y-sơ-ra-ên; còn được gọi là Sê-nia, Si-ôn và Si-ri-ôn.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Núi Hẹt-môn"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "黑门山是前黎巴嫩山脉的一座山峰，位于以色列东北部；亦称示尼珥、西云和西连。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "黑门山"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "位於黎巴嫩前山山脈的一座山，在以色列的東北方；又稱示尼珥、西雲和示連。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "黑門山"
+    }
+  },
+  "mentioned_in_bible": true,
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "place_types": {
+    "acai": [
+      "mountain"
+    ],
+    "obi": [
+      "mountain"
+    ],
+    "vizbible": [
+      "Mountain"
+    ]
+  },
+  "primary_id": "place:HermonMount",
+  "pronominal_referents": {},
+  "references": [
+    "05003008",
+    "05003009",
+    "05004048",
+    "06011003",
+    "06011017",
+    "06012001",
+    "06012005",
+    "06012007",
+    "06013005",
+    "06013011",
+    "07003003",
+    "13005023",
+    "19029006",
+    "19042007",
+    "19089013",
+    "19133003",
+    "22004008",
+    "24018014",
+    "26027005"
+  ],
+  "referred_to_as": [
+    "place:Baal-hermon",
+    "place:Senir"
+  ],
+  "subject_referents": {},
+  "type": "place"
+}

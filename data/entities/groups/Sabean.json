@@ -1,0 +1,273 @@
+{
+  "alternate_sources": {
+    "aquifer": [
+      "8083|Sabeans|TyndaleBibleDictionary"
+    ],
+    "tipnr": [
+      "Sabean|Sheba@Gen.10.7-Jol"
+    ],
+    "ubsdbh": [
+      "007147001005000"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "group:Sabean",
+    "review_status": "source_unreviewed",
+    "source_id": "group:Sabean",
+    "source_primary_id": "group:Sabean",
+    "source_sha256": "d9b0414d562b0c11bab8065bfe816efd2c6ca8afd9419647bd34d58efbc18438"
+  },
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o180010150021"
+      ],
+      [
+        "o230450140082"
+      ],
+      [
+        "o260230420111"
+      ],
+      [
+        "o290040080102"
+      ]
+    ]
+  },
+  "group_origin": "person:Sheba; place:Sheba.2",
+  "group_type": "residence",
+  "id": "group:Sabean",
+  "key_references": [
+    "23045014",
+    "26023042",
+    "29004008"
+  ],
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "الناس الكانوا ساكنين في شبا (في الجزيرة العربية).",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "سبئيين"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "شعب سكن في سبأ (في بلاد العرب).",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "السبئيون"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Ol man we oli stap laef long Seba (blong Arebia).",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ol man Seba"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Sheba"
+      ],
+      "descriptions": [
+        {
+          "article": "group:Sabean",
+          "description": "People who lived in Sheba (of Arabia).",
+          "gloss": "Sabeans",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Sabeans"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "مردمی که در سبا (در عربستان) زندگی می‌کردند.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "سبائیان"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Personnes qui vivaient à Séba (d'Arabie).",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Sabéens"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Mutanen da suka zauna a Sheba (na Arabiya).",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Sabenawa"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "वे लोग जो शेबा (अरब) में रहते थे।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "सबाई"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Ndị bi na Sheba (nke dị n'Arebia).",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "ndị Saba"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Orang-orang yang tinggal di Syeba (di jazirah Arab).",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "orang Syeba"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "शेबा (अरबको) का बासिन्दाहरू।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "शबाहरू"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Pessoas que viviam em Sabá (da Arábia).",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "sabeus"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Народ, живший в Саве (в Аравии).",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Савеи"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Pueblo que vivía en Sabá (de Arabia).",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "sabeos"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Watu walioishi Sheba (ya Arabia).",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Waseba"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Ol manmeri i bin stap long kantri Seba (bilong Arebia).",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ol Sabea"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Những người sống ở Sa-ba (thuộc xứ Ả-rập).",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "người Sa-bê"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "住在（阿拉伯的）示巴的人。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "示巴人"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "住在示巴（位於阿拉伯）的人。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "示巴人"
+    }
+  },
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "primary_id": "group:Sabean",
+  "pronominal_referents": {},
+  "references": [
+    "18001015",
+    "23045014",
+    "26023042",
+    "29004008"
+  ],
+  "subject_referents": {
+    "wlc": [
+      [
+        "o180010150032"
+      ],
+      [
+        "o180010150061"
+      ],
+      [
+        "o230450140141"
+      ],
+      [
+        "o230450140161"
+      ],
+      [
+        "o230450140181"
+      ],
+      [
+        "o230450140201"
+      ],
+      [
+        "o230450140221"
+      ],
+      [
+        "o260230420132"
+      ],
+      [
+        "o260230430071"
+      ],
+      [
+        "o260230440012"
+      ],
+      [
+        "o260230440081"
+      ]
+    ]
+  },
+  "type": "group",
+  "ubsdbh": [
+    "007147001005000"
+  ]
+}

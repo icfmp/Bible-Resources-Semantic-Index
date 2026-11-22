@@ -1,0 +1,269 @@
+{
+  "added_entry": false,
+  "alternate_sources": {
+    "aquifer": [
+      "8999|Valley of Jehoshaphat|TyndaleBibleDictionary"
+    ],
+    "tipnr": [
+      "Valley_of_Jehoshaphat|Kidron@2Sa.15.23-Jhn"
+    ],
+    "ubsdbh": [
+      "002840001007000"
+    ],
+    "vizbible": [
+      "rec5a5MQ9kYYHfV1e"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "place:Kidron",
+    "review_status": "source_unreviewed",
+    "source_id": "place:ValleyOfJehoshaphat",
+    "source_primary_id": "place:Kidron",
+    "source_sha256": "0d71486bab3a053d08548224cef85ec6435a16336871e301dbb556c4f5c10d83"
+  },
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o290040020071",
+        "o290040020081"
+      ],
+      [
+        "o290040120051",
+        "o290040120061"
+      ]
+    ]
+  },
+  "geocoordinates": {
+    "obi": {
+      "lat": "31.772134",
+      "lon": "35.236596"
+    },
+    "vizbible": {
+      "lat": "31.772134",
+      "lon": "35.236596"
+    }
+  },
+  "id": "place:ValleyOfJehoshaphat",
+  "is_artifact": false,
+  "is_person": false,
+  "key_references": [
+    "29004002",
+    "29004012"
+  ],
+  "lemmas": {
+    "he": [
+      "יְהֹושָׁפָט",
+      "יְהוֹשָׁפָט"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "وادي شرق أورشليم، ومعروف كمان بوادي القضاء.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "وادي يهوشافاط"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "وادٍ يقع شرق أورشليم؛ يُعرف أيضاً بوادي القضاء.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "وَادِي يَهُوشَافَاطَ"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan levelples long is blong Jerusalem; we oli save long hem tu olsem Levelples blong Desisen.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Bigfala Levelples blong Jehosafat"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Kidron"
+      ],
+      "descriptions": [
+        {
+          "article": "place:ValleyOfJehoshaphat",
+          "description": "A valley east of Jerusalem; also as the Valley of Decision.",
+          "gloss": "Valley of Jehoshaphat",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Valley of Jehoshaphat"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "دره‌ای در شرق اورشلیم؛ همچنین معروف به درهٔ تصمیم.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "درهٔ یهوشافاط"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Une vallée à l'est de Jérusalem ; également connue sous le nom de vallée du Jugement.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "vallée de Josaphat"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Wani kwari ne a gabashin Urushalima; ana kuma kiran sa Kwarin Yanke Shawara.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Kwarin Yehoshafat"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "यरूशलेम के पूर्व में स्थित एक तराई; इसे निबटारे की तराई के नाम से भी जाना जाता है।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "यहोशापात की तराई"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Ndagwurugwu dị nʼakụkụ ọwụwa anyanwụ nke Jerusalem; nke a makwaara dị ka Ndagwurugwu Mkpebi Ikpe.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ndagwurugwu Jehoshafat"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Sebuah lembah di sebelah timur Yerusalem; juga dikenal sebagai Lembah Penentuan.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Lembah Yosafat"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "यरूशलेमको पूर्वमा रहेको एउटा बेँसी; जसलाई इन्साफको बेँसी पनि भनिन्छ।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "यहोशापातको बेँसी"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Um vale a leste de Jerusalém; também conhecido como Vale da Decisão.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Vale de Josafá"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Долина к востоку от Иерусалима; также известная как долина суда.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "долина Иосафата"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Valle al este de Jerusalén; conocido también como el valle de la Decisión.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "valle de Josafat"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Bonde lililoko mashariki mwa Yerusalemu; pia linajulikana kama Bonde la Uamuzi.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Bonde la Yehoshafati"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Wanpela ples daun long hap sankamap bilong Jerusalem; ol i save kolim tu olsem Ples daun bilong mekim kot.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ples daun bilong Jehosafat"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Một thung lũng ở phía đông Giê-ru-sa-lem; cũng được gọi là Trũng Đoán Định.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Trũng Giô-sa-phát"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "耶路撒冷以东的一座山谷；也称作审判谷。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "约沙法谷"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "耶路撒冷以東的一處山谷；亦稱為斷定谷。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "約沙法谷"
+    }
+  },
+  "mentioned_in_bible": true,
+  "nearby_places": [
+    "place:Jerusalem"
+  ],
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "place_types": {
+    "acai": [
+      "valley"
+    ],
+    "obi": [
+      "valley"
+    ],
+    "vizbible": [
+      "Valley"
+    ]
+  },
+  "primary_id": "place:Kidron",
+  "pronominal_referents": {},
+  "references": [
+    "29004002",
+    "29004012"
+  ],
+  "referred_to_as": [
+    "place:Kidron",
+    "place:ValleyOfDecision"
+  ],
+  "subject_referents": {},
+  "type": "place",
+  "ubsdbh": [
+    "002840001007000"
+  ]
+}

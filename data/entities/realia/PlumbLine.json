@@ -1,0 +1,257 @@
+{
+  "alternate_sources": {
+    "aquifer": [
+      "7765|Plumb Line, Plummet|TyndaleBibleDictionary"
+    ],
+    "ubsdbh": [
+      "000544001001000",
+      "000847001002000",
+      "004537001001000"
+    ],
+    "ubsrealia": [
+      "realia:1.8.5"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "realia:PlumbLine",
+    "review_status": "source_unreviewed",
+    "source_id": "realia:PlumbLine",
+    "source_primary_id": "realia:PlumbLine",
+    "source_sha256": "53c4fd8165fe4f09e527b2c478ee3a667c47318b31e5fd3d97d996664fcec343"
+  },
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o300070070081"
+      ],
+      [
+        "o300070070101"
+      ],
+      [
+        "o300070080091"
+      ],
+      [
+        "o300070080141"
+      ],
+      [
+        "o380040100102"
+      ],
+      [
+        "o120210130081"
+      ],
+      [
+        "o230280170052"
+      ]
+    ]
+  },
+  "id": "realia:PlumbLine",
+  "key_references": [
+    "12021013",
+    "30007007",
+    "30007008"
+  ],
+  "lemmas": {
+    "he": [
+      "אֲנָךְ",
+      "בְּדִיל",
+      "מִשְׁקֶלֶת"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "ثقالة مربوطة في خيط بيستعملوها البنّائين عشان يتأكدوا من استقامة الحيطان.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "ميزان خيط"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "ثِقَل مُعلَّق بخيط يستخدمه البناؤون للتأكد من استقامة الجدران.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "مِطْمَار"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan samting we i hevi we i hang long wan rop, we ol kapenta mo man blong bildim haos oli yusum blong jekem se stonwol o wol i stanap stret.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "ledlaen"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Tin Weight > Plumb Line"
+      ],
+      "descriptions": [
+        {
+          "article": "realia:PlumbLine",
+          "description": "A weight on a string used by builders to check if walls are straight.",
+          "gloss": "Plumb Line",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Plumb Line"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "وزنه‌ای متصل به یک ریسمان که بنایان برای اطمینان از عمود و تراز بودن دیوارها از آن استفاده می‌کردند.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "شاقول"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Poids suspendu à une corde utilisé par les bâtisseurs pour vérifier la verticalité des murs.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "fil à plomb"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Wani nauyi da aka maƙala a jikin igiya wanda magina suke amfani da shi domin gwada daidaiton bango.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Magwaji"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "डोरी से बँधा एक वज़न (लंगर), जिसका उपयोग राजगीर दीवारें सीधी हैं या नहीं यह जाँचने के लिए करते हैं।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "साहुल"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Ihe dị arọ e kegidere nʼeriri nke ndị na-arụ ụlọ na-eji ele ma mgbidi hà kwụ ọtọ.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ihe ịtụ mgbidi"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Pemberat pada seutas tali yang digunakan oleh tukang bangunan untuk memeriksa ketegaklurusan dinding.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "tali sipat"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "पर्खालहरू सीधा छन् कि छैनन् भनी जाँच गर्न निर्माणकर्ताहरूले प्रयोग गर्ने डोरीमा बाँधिएको तौल (सिसा वा धातुको डल्लो)।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "साहुल"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Um peso preso a um cordão usado por construtores para verificar se os muros estão aprumados.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "fio de prumo"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Груз на нити, используемый строителями для проверки вертикальности стен.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Отвес"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Pesa atada a una cuerda que utilizan los constructores para comprobar si las paredes están rectas y verticales.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "plomada"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Uzito uliowekwa kwenye kamba unaotumiwa na wajenzi ili kupima kama kuta zimenyooka.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Timazi"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Wanpela hevi samting i hangamap long string em ol kamda o wokman bilong wokim haus i save yusim bilong skelim sapos banis i sanap stret.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "string i gat ain"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Một vật nặng treo ở đầu sợi dây được thợ xây dùng để kiểm tra xem các bức tường có thẳng đứng hay không.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "dây dọi"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "建筑工人在绳子端部系上重物用来检验墙壁是否垂直的工具。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "准绳"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "建築工人用來檢驗牆壁是否垂直的繫繩重物。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "準繩"
+    }
+  },
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "primary_id": "realia:PlumbLine",
+  "pronominal_referents": {},
+  "realia_type": "other",
+  "references": [
+    "12021013",
+    "23028017",
+    "30007007",
+    "30007008",
+    "38004010"
+  ],
+  "subject_referents": {},
+  "type": "realia",
+  "ubsdbh": [
+    "000544001001000",
+    "000847001002000",
+    "004537001001000"
+  ]
+}

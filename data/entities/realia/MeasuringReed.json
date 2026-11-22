@@ -1,0 +1,465 @@
+{
+  "alternate_sources": {
+    "ubsdbh": [
+      "003715001006000",
+      "006080001001000",
+      "006405001001000",
+      "006507001003000"
+    ],
+    "ubsdgnt": [
+      "6.213"
+    ],
+    "ubsrealia": [
+      "realia:1.8.6"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "realia:MeasuringReed",
+    "review_status": "source_unreviewed",
+    "source_id": "realia:MeasuringReed",
+    "source_primary_id": "realia:MeasuringReed",
+    "source_sha256": "39463856c84895a04b1a785e2b3c691a0fee237271681de21e74d6e3e8b06c09"
+  },
+  "explicit_instances": {
+    "SBLGNT": [
+      [
+        "n66011001004"
+      ],
+      [
+        "n66021015008"
+      ],
+      [
+        "n66021016018"
+      ]
+    ],
+    "wlc": [
+      [
+        "o260400030132"
+      ],
+      [
+        "o260400050102"
+      ],
+      [
+        "o260420160052"
+      ],
+      [
+        "o260420160112"
+      ],
+      [
+        "o260420170082"
+      ],
+      [
+        "o260420180092"
+      ],
+      [
+        "o260420190102"
+      ],
+      [
+        "o010380180092",
+        "o010380180093"
+      ],
+      [
+        "o010380250193"
+      ],
+      [
+        "o020280280092"
+      ],
+      [
+        "o020280370041"
+      ],
+      [
+        "o020390030061"
+      ],
+      [
+        "o020390210082"
+      ],
+      [
+        "o020390310031"
+      ],
+      [
+        "o040150380181"
+      ],
+      [
+        "o040190150071"
+      ],
+      [
+        "o070160090151"
+      ],
+      [
+        "o260400030092"
+      ],
+      [
+        "o110070230162"
+      ],
+      [
+        "o120210130051"
+      ],
+      [
+        "o140040020152"
+      ],
+      [
+        "o180380050101"
+      ],
+      [
+        "o230280170032"
+      ],
+      [
+        "o230340110101"
+      ],
+      [
+        "o230340170082"
+      ],
+      [
+        "o230440130041"
+      ],
+      [
+        "o240310390041"
+      ],
+      [
+        "o250020080081"
+      ],
+      [
+        "o260470030042"
+      ],
+      [
+        "o380010160152"
+      ],
+      [
+        "o260400030122"
+      ],
+      [
+        "o260400050091"
+      ],
+      [
+        "o260400050191"
+      ],
+      [
+        "o260400050221"
+      ],
+      [
+        "o260400060151"
+      ],
+      [
+        "o260400060211"
+      ],
+      [
+        "o260400070021"
+      ],
+      [
+        "o260400070052"
+      ],
+      [
+        "o260400070181"
+      ],
+      [
+        "o260400080061"
+      ],
+      [
+        "o260410080102"
+      ],
+      [
+        "o260420160042"
+      ],
+      [
+        "o260420160091"
+      ],
+      [
+        "o260420160102"
+      ],
+      [
+        "o260420170061"
+      ],
+      [
+        "o260420170072"
+      ],
+      [
+        "o260420180071"
+      ],
+      [
+        "o260420180082"
+      ],
+      [
+        "o260420190081"
+      ],
+      [
+        "o260420190092"
+      ]
+    ]
+  },
+  "id": "realia:MeasuringReed",
+  "key_references": [
+    "26040003",
+    "66011001",
+    "66021015"
+  ],
+  "lemmas": {
+    "el": [
+      "κάλαμος"
+    ],
+    "he": [
+      "מִדָּה",
+      "פָּתִיל",
+      "קַו",
+      "קָנֶה"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "بوصة أو قصبة طويلة بتستخدم لقياس الأطوال، في الغالب طولها حوالي ٣.١ متر.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "قصبة قياس"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "عصا طويلة أو قصبة تُستخدم لقياس الأطوال، يبلغ طولها عادة نحو 3.1 أمتار.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "قصبة القياس"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan longfala stik no rid we oli stap yusum blong makem longfala blong ol samting, we plante taem i samting olsem 3.1 mita.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "longfala rula blong makem graon"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Measuring Stick",
+        "Measuring Line",
+        "Cord",
+        "Thread",
+        "Measuring Rod"
+      ],
+      "descriptions": [
+        {
+          "article": "realia:MeasuringReed",
+          "description": "A long stick or reed used for measuring lengths, usually around 3.1 meters.",
+          "gloss": "Measuring Reed",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Measuring Reed"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "چوب یا نی بلندی برای اندازه‌گیری طول که معمولاً در حدود ۳٫۱ متر بود.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "نی اندازه‌گیری"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Long bâton ou roseau utilisé pour mesurer des longueurs, généralement d'environ 3,1 mètres.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "roseau à mesurer"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Wani dogon sanda ko ƙara da ake amfani da shi wajen auna tsawo, yawanci kusan mita 3.1.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Karan awo"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "लंबाई मापने के लिए उपयोग की जाने वाली एक लंबी छड़ी या सरकंडा, जो प्रायः लगभग 3.1 मीटर की होती है।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "नापने का सरकंडा"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Ogologo osisi ma ọ bụ achara e ji atụ ogologo ihe, nke na-adịkarị ihe dị ka mita 3.1.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Achara e ji atụ ihe"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Tongkat atau buluh panjang yang digunakan untuk mengukur panjang, biasanya sekitar 3,1 meter.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "buluh pengukur"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "लम्बाइ नाप्न प्रयोग गरिने लामो लट्ठी वा निगालो, जुन प्रायः ३.१ मिटर जति लामो हुन्छ।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "नाप्ने निगालो"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Uma vara longa ou cana usada para medir comprimentos, geralmente com cerca de 3,1 metros.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "caniço de medir"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Длинная палка или тростник, использовавшиеся для измерения длины, обычно около 3,1 метра.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Трость измерения"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Vara larga o caña utilizada para medir longitudes, generalmente de unos 3,1 metros.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "caña de medir"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Kijiti kirefu au mwanzi unaotumiwa kupimia urefu, kwa kawaida wenye takriban mita 3.1.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Mwanzi wa kupimia"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Wanpela longpela stik o mambu bilong metaim longpela bilong ol samting, longpela bilong en samting olsem 3.1 mita.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "stik mambu bilong metaim"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Một cây gậy dài hoặc cây sậy dùng để đo chiều dài, thường dài khoảng 3,1 mét.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Cây sậy đo"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "一根用于测量长度的长棍或芦苇，通常长约3.1米。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "量苇"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "一種用來測量長度的長棍或蘆葦，通常約長3.1公尺。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "量度的葦子"
+    }
+  },
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "primary_id": "realia:MeasuringReed",
+  "pronominal_referents": {
+    "wlc": [
+      [
+        "o010380250101"
+      ],
+      [
+        "o010380250212"
+      ],
+      [
+        "o070160090173"
+      ],
+      [
+        "o240310390062"
+      ]
+    ]
+  },
+  "realia_type": "other",
+  "references": [
+    "01038018",
+    "01038025",
+    "02028028",
+    "02028037",
+    "02039003",
+    "02039021",
+    "02039031",
+    "04015038",
+    "04019015",
+    "07016009",
+    "11007023",
+    "12021013",
+    "14004002",
+    "18038005",
+    "23028017",
+    "23034011",
+    "23034017",
+    "23044013",
+    "24031039",
+    "25002008",
+    "26040003",
+    "26040005",
+    "26040006",
+    "26040007",
+    "26040008",
+    "26041008",
+    "26042016",
+    "26042017",
+    "26042018",
+    "26042019",
+    "26047003",
+    "38001016",
+    "66011001",
+    "66021015",
+    "66021016"
+  ],
+  "subject_referents": {
+    "wlc": [
+      [
+        "o040150390012"
+      ],
+      [
+        "o240310390102"
+      ]
+    ]
+  },
+  "type": "realia",
+  "ubsdbh": [
+    "003715001006000",
+    "006080001001000",
+    "006405001001000",
+    "006507001003000"
+  ],
+  "ubsdgnt": [
+    "6.213"
+  ]
+}

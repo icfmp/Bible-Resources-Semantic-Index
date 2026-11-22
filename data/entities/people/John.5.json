@@ -1,0 +1,293 @@
+{
+  "alternate_sources": {
+    "aquifer": [
+      "6413|John (Person)|TyndaleBibleDictionary",
+      "6408|John, Gospel of|TyndaleBibleDictionary",
+      "6410|John, Letters of|TyndaleBibleDictionary",
+      "6414|John, the Apostle|TyndaleBibleDictionary",
+      "6416|John, the Revelation of|TyndaleBibleDictionary",
+      "6951|Mark, John|TyndaleBibleDictionary",
+      "132488|John|BiblicaStudyNotesKeyTerms",
+      "280163|john|FIAKeyTerms"
+    ],
+    "tipnr": [
+      "John|Mark@Act.12.12-1Pe"
+    ],
+    "ubsdgnt": [
+      "93.190d"
+    ],
+    "vizbible": [
+      "rec3LAlubKgbPw9H9"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "person:Mark",
+    "review_status": "source_unreviewed",
+    "source_id": "person:John.5",
+    "source_primary_id": "person:Mark",
+    "source_sha256": "a90ea844fcfea2edcd22ba92976d486947bc3e908133a036873391c7ff50558d"
+  },
+  "explicit_instances": {
+    "SBLGNT": [
+      [
+        "n44012012011"
+      ],
+      [
+        "n44012025012"
+      ],
+      [
+        "n44013005018"
+      ],
+      [
+        "n44013013014"
+      ],
+      [
+        "n44015037007"
+      ]
+    ]
+  },
+  "father": "person:HusbandOfMary",
+  "gender": "male",
+  "id": "person:John.5",
+  "key_references": [
+    "44012012",
+    "44012025",
+    "44013005"
+  ],
+  "lemmas": {
+    "el": [
+      "Ἰωάννης"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "رفيق الرسول بولس، المسمى كمان مرقس. بحسب التقليد بيعتبر كاتب إنجيل مرقس.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "يوحنا (مرقس)"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "رَفِيقٌ لِلرَّسُولِ بُولُسَ، يُدْعَى أَيْضًا مَرْقُسَ. يُعْتَبَرُ تَقْلِيدِيًّا كَاتِبَ إِنْجِيلِ مَرْقُسَ.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "يُوحَنَّا (مَرْقُسُ)"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan man we i stap wokbaot wetem aposol Pol, we oli kolem tu se Mak. Folem kastom oli tingbaot hem se i man we i raetem Gospel blong Mak.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Jon (Mak)"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Mark",
+        "John Mark"
+      ],
+      "descriptions": [
+        {
+          "article": "person:John.5",
+          "description": "A companion of the apostle Paul, also called Mark. Traditionally considered to be the author of the Gospel of Mark.",
+          "gloss": "Mark",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "John (Mark)"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "همسفر پولس رسول، که مَرقُس نیز نامیده می‌شد. طبق سنت نگارنده انجیل مرقس دانسته می‌شود.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "یوحنا (مرقس)"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Compagnon de l'apôtre Paul, également appelé Marc. Traditionnellement considéré comme l'auteur de l'Évangile selon Marc.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Jean (Marc)"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Abokin tafiyar manzo Bulus, wanda ake kuma kira Markus. Bisa ga al’ada ana ɗaukarsa shi ne marubucin Linjilar Markus.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Yohanna (Markus)"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "प्रेरित पौलुस का एक साथी, जिसे मरकुस भी कहा जाता है। परंपरा के अनुसार उसे मरकुस के सुसमाचार का लेखक माना जाता है।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "यूहन्ना (मरकुस)"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Onye ya na onye ozi Pọl sojegharị, nke a na-akpọkwa Mak. Omenala weere ya dị ka onye dere Oziọma Mak.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Jọn (Mak)"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Teman seperjalanan rasul Paulus, yang juga disebut Markus. Secara tradisional dianggap sebagai penulis Injil Markus.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Yohanes (Markus)"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "प्रेरित पावलका एक सहकर्मी, जसलाई मर्कूस पनि भनिन्छ। परम्परागत रूपमा मर्कूसको सुसमाचारका लेखक मानिन्छ।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "यूहन्‍ना (मर्कूस)"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Um companheiro do apóstolo Paulo, também chamado Marcos. Tradicionalmente considerado o autor do Evangelho de Marcos.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "João (Marcos)"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Спутник апостола Павла, также называемый Марком. Традиционно считается автором Евангелия от Марка.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Иоанн (Марк)"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Compañero del apóstol Pablo, también llamado Marcos. Considerado tradicionalmente como el autor del Evangelio de Marcos.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Juan (Marcos)"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Mwandamani wa mtume Paulo, aitwaye pia Marko. Kijadi anachukuliwa kuwa mwandishi wa Injili ya Marko.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Yohana (Marko)"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Wanpela poroman bilong aposel Pol, narapela nem bilong en em Mak. Pasin bilong bipo i tok em i man i bin raitim Gutnius bilong Mak.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Jon (Mak)"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Bạn đồng hành của sứ đồ Phao-lô, cũng được gọi là Mác. Theo truyền thống được coi là tác giả của Phúc Âm Mác.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Giăng (Mác)"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "使徒保罗的同工，又名马可。传统上被认为是马可福音的作者。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "约翰 (马可)"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "使徒保羅的同工，又稱馬可。傳統上認為他是馬可福音的作者。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "約翰（馬可）"
+    }
+  },
+  "mother": "person:Mary.5",
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "primary_id": "person:Mark",
+  "pronominal_referents": {},
+  "references": [
+    "44012012",
+    "44012025",
+    "44013005",
+    "44013013",
+    "44015037"
+  ],
+  "referred_to_as": [
+    "person:Mark"
+  ],
+  "roles": [
+    "Evangelist",
+    "Church Leader",
+    "Disciple"
+  ],
+  "subject_referents": {
+    "SBLGNT": [
+      [
+        "n44012012013"
+      ],
+      [
+        "n44012025014"
+      ],
+      [
+        "n44013006001"
+      ],
+      [
+        "n44013006008"
+      ],
+      [
+        "n44013013016"
+      ],
+      [
+        "n44015037009"
+      ],
+      [
+        "n44015038005"
+      ],
+      [
+        "n44015038012"
+      ]
+    ]
+  },
+  "type": "person",
+  "ubsdgnt": [
+    "93.190d"
+  ]
+}

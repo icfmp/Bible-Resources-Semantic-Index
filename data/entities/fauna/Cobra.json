@@ -1,0 +1,314 @@
+{
+  "alternate_sources": {
+    "ubsdbh": [
+      "006084001001000"
+    ],
+    "ubsdgnt": [
+      "4.53"
+    ],
+    "ubsfauna": [
+      "fauna:4.4"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "fauna:Cobra",
+    "review_status": "source_unreviewed",
+    "source_id": "fauna:Cobra",
+    "source_primary_id": "fauna:Cobra",
+    "source_sha256": "89308dde7714bcc566d2d8970dc096686d412ed5e8b081a0a8b51d880d46b10b"
+  },
+  "explicit_instances": {
+    "SBLGNT": [
+      [
+        "n45003013011"
+      ],
+      [
+        "n40012034002"
+      ],
+      [
+        "n44028003013"
+      ]
+    ],
+    "wlc": [
+      [
+        "o050320330051"
+      ],
+      [
+        "o180200140051"
+      ],
+      [
+        "o180200160021"
+      ],
+      [
+        "o190580050071"
+      ],
+      [
+        "o190910130032"
+      ],
+      [
+        "o230110080051"
+      ],
+      [
+        "o200230320043"
+      ],
+      [
+        "o230110080081"
+      ],
+      [
+        "o230140290131"
+      ],
+      [
+        "o230590050021"
+      ],
+      [
+        "o240080170061"
+      ]
+    ]
+  },
+  "fauna_type": "Snakes and Lizards",
+  "id": "fauna:Cobra",
+  "key_references": [
+    "23011008",
+    "24008017",
+    "45003013"
+  ],
+  "lemmas": {
+    "el": [
+      "ἀσπίς",
+      "ἔχιδνα"
+    ],
+    "he": [
+      "פֶּתֶן"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "داب سام شديد وعنده قلنسوة وراء راسه.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "كوبرا"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "ثعبان شديد السمية له قلنسوة في عنقه.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "صِلّ"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan posen snek we nek blong hem i stap solap i kam bigwan.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "kobra"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Asp",
+        "Viper"
+      ],
+      "descriptions": [
+        {
+          "article": "fauna:Cobra",
+          "description": "A very poisonous snake with a hooded neck.",
+          "gloss": "Cobra",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Cobra"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "ماری بسیار سمی با گردن پهن‌شده و کلاه‌مانند.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "مار کبرا"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Serpent très venimeux doté d'un capuchon au cou.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "cobra"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Wani maciji mai tsananin dafi wanda yake faɗaɗa wuyansa.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Gamsheƙa"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "फन वाला एक अत्यंत विषैला साँप।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "नाग"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Agwọ nwere elo dị ike nke na-afụli ọnụ na olu elu mgbe iwe na-ewe ya.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "ajụala"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Ular yang sangat berbisa dengan leher bertudung.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "ular tedung"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "फणा भएको घाँटी हुने अति विषालु सर्प (गोमन सर्प)।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "गोमन सर्प"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Uma serpente muito venenosa com um capelo no pescoço.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "naja"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Очень ядовитая змея с капюшоном на шее.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Кобра"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Serpiente muy venenosa con cuello extensible en forma de capucha.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "cobra"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Nyoka mwenye sumu kali sana aliye na shingo inayotanuka.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Fira"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Wanpela snek i gat bikpela пойsen tru na nek bilong en i save solap na kamap broad.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "kobra"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Một loài rắn rất độc có mang bạnh ra.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Rắn hổ mang"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "一种带有颈褶的剧毒蛇。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "眼镜蛇"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "一種頸部能膨脹成兜帽狀的劇毒蛇。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "虺蛇"
+    }
+  },
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "possibly_same_as": [
+    "fauna:Snake",
+    "fauna:Viper"
+  ],
+  "primary_id": "fauna:Cobra",
+  "pronominal_referents": {
+    "wlc": [
+      [
+        "o230140290143"
+      ],
+      [
+        "o240080170092"
+      ]
+    ]
+  },
+  "references": [
+    "05032033",
+    "18020014",
+    "18020016",
+    "19058005",
+    "19091013",
+    "20023032",
+    "23011008",
+    "23014029",
+    "23059005",
+    "24008017",
+    "40012034",
+    "44028003",
+    "45003013"
+  ],
+  "subject_referents": {
+    "SBLGNT": [
+      [
+        "n44028003017"
+      ]
+    ],
+    "wlc": [
+      [
+        "o190580060031"
+      ]
+    ]
+  },
+  "type": "fauna",
+  "ubsdbh": [
+    "006084001001000"
+  ],
+  "ubsdgnt": [
+    "4.53"
+  ]
+}

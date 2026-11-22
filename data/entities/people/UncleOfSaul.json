@@ -1,0 +1,248 @@
+{
+  "bsi": {
+    "canonical_id": "person:UncleOfSaul",
+    "editorial_evidence": [
+      "Pinned WLC 1 Sam 10:14 o090100140031, explicit person:Saul.2 and unrelated uncle's subject pointer",
+      "https://classic.net.bible.org/passage.php?passage=1Sa+10%3A14-16",
+      "Pinned Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c WLC/lowfat/09-1Sa-010-lowfat.xml, 1 Samuel 10:14, word o090100140092; inherited ACAI source tags both person:UncleOfSaul and person:Saul.2"
+    ],
+    "editorial_reason": "1 Samuel 10:14 explicitly distinguishes Saul, his uncle and his servant. The word naming Saul is not an indirect naming of the uncle who is the speaker. 1 Samuel 10:14: exact original word o090100140092 is the speaking subject of person:Saul.2 (Saul replies to his uncle's question about the missing donkeys), not person:UncleOfSaul. Preserve the actual named speaker and the unaltered original source record.",
+    "review_status": "editorially_reviewed",
+    "source_id": "person:UncleOfSaul",
+    "source_primary_id": "person:UncleOfSaul",
+    "source_sha256": "95434efa605a611f44bc54dd8e9347f738e23c56d8b4bddd2b4b31543a271db4"
+  },
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o090100150021"
+      ]
+    ]
+  },
+  "id": "person:UncleOfSaul",
+  "key_references": [
+    "09010015"
+  ],
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "عم شاول، ملك إسرائيل، الما مذكور اسمه.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "عم شاول"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "عمٌّ غير مسمّى لشاول، ملك إسرائيل.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "عَمُّ شاوُلَ"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan Smolpapa blong Sol, king blong Isrel, we Baebol i no talem nem blong hem.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Smolpapa blong Sol"
+    },
+    "eng": {
+      "descriptions": [
+        {
+          "description": "An unnamed uncle of Saul, the king of Israel.",
+          "gloss": "Saul's Uncle",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Saul's Uncle"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "عموی بی‌نام شائول، پادشاه اسرائیل.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "عموی شائول"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Un oncle anonyme de Saül, le roi d'Israël.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Oncle de Saül"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Wani kawun Shawulu wanda ba a ambaci sunansa ba, sarkin Isra’ila.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Kawun Shawulu"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "इस्राएल के राजा शाऊल का एक अनाम चाचा।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "शाऊल का चाचा"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Otu nwanne nna Sọl nke a na-akpọghị aha ya, bụ́ eze Izrel.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Nwanne nna Sọl"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Paman dari Saul, raja Israel, yang tidak disebutkan namanya.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Paman Saul"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "इस्राएलका राजा शऊलका एक अज्ञात काका।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "शऊलका काका"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Um tio não identificado de Saul, o rei de Israel.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Tio de Saul"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Безымянный дядя Саула, царя Израиля.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Дядя Саула"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Tío de Saúl, el rey de Israel, no mencionado por su nombre.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Tío de Saúl"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Mjomba wa Sauli asiyetajwa jina, mfalme wa Israeli.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Mjomba wa Sauli"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Wanpela smolpapa bilong Sol, king bilong Israel, em Baibel i no kolim nem bilong en.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Smolpapa bilong Sol"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Người chú không rõ tên của Sau-lơ, vua của Y-sơ-ra-ên.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Chú của Sau-lơ"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "以色列王扫罗一位未具名的叔叔。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "扫罗的叔叔"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "以色列王掃羅一位未具名的叔叔。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "掃羅的叔叔"
+    }
+  },
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "primary_id": "person:UncleOfSaul",
+  "pronominal_referents": {},
+  "references": [
+    "09010015"
+  ],
+  "speeches": {
+    "wlc": [
+      {
+        "quote_type": "Normal",
+        "words": [
+          "o090100140101",
+          "o090100140102",
+          "o090100140111",
+          "o090100140121",
+          "o090100140122",
+          "o090100140131",
+          "o090100140132",
+          "o090100140141",
+          "o090100140151",
+          "o090100140161",
+          "o090100140162",
+          "o090100140171",
+          "o090100140181"
+        ]
+      },
+      {
+        "quote_type": "Normal",
+        "words": [
+          "o090100150041",
+          "o090100150042",
+          "o090100150051",
+          "o090100150061",
+          "o090100150062",
+          "o090100150071",
+          "o090100150081",
+          "o090100150091",
+          "o090100150092",
+          "o090100150101"
+        ]
+      }
+    ]
+  },
+  "subject_referents": {
+    "wlc": []
+  },
+  "type": "person"
+}

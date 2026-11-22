@@ -1,0 +1,300 @@
+{
+  "added_entry": false,
+  "alternate_sources": {
+    "aquifer": [
+      "9001|Valley of Rephaim|TyndaleBibleDictionary"
+    ],
+    "obi": [
+      "a7559e6"
+    ],
+    "tipnr": [
+      "Rephaim_Valley@Jos.15.8-Isa"
+    ],
+    "ubsdbh": [
+      "006887002001000"
+    ],
+    "vizbible": [
+      "recTdeFWjvLAXs0t3"
+    ],
+    "wikidata": [
+      "http://www.wikidata.org/entity/Q446380"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "place:RephaimValley",
+    "review_status": "source_unreviewed",
+    "source_id": "place:RephaimValley",
+    "source_primary_id": "place:RephaimValley",
+    "source_sha256": "5f1a03869a3bcff919bb5e8d0ada3ef23c217b05047a1cefc9d795791436d67a"
+  },
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o060150080251",
+        "o060150080261"
+      ],
+      [
+        "o060180160132",
+        "o060180160141"
+      ],
+      [
+        "o100050180042",
+        "o100050180051"
+      ],
+      [
+        "o100050220062",
+        "o100050220071"
+      ],
+      [
+        "o100230130172",
+        "o100230130181"
+      ],
+      [
+        "o130110150162",
+        "o130110150171"
+      ],
+      [
+        "o130140090042",
+        "o130140090051"
+      ],
+      [
+        "o230170050112",
+        "o230170050121"
+      ]
+    ]
+  },
+  "geocoordinates": {
+    "obi": {
+      "lat": "31.756332",
+      "lon": "35.223059"
+    },
+    "vizbible": {
+      "lat": "31.756332",
+      "lon": "35.223059"
+    }
+  },
+  "id": "place:RephaimValley",
+  "is_artifact": false,
+  "is_person": false,
+  "key_references": [
+    "10015017",
+    "06018016",
+    "06015008"
+  ],
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "وادي على حدود أراضي يهوذا وأراضي بنيامين.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "وادي الرفائيين"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "وادٍ يقع على تخم أرض يهوذا وأرض بنيامين.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "وادي الرفائيين"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan vale long boda blong teritori blong Juta mo teritori blong Benjamin.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Vale blong Refaem"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Valley of the Rephaim",
+        "Rephaim Valley",
+        "valley of Hinnom",
+        "Valley of the Rephaites"
+      ],
+      "descriptions": [
+        {
+          "article": "place:ValleyOfRephaim",
+          "description": "A valley on the boundary of the territory of Judah and the territory of Benjamin.",
+          "gloss": "Valley of Rephaim",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Valley of Rephaim"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "دره‌ای در مرز قلمرو یهودا و قلمرو بنیامین.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "درهٔ رفائیم"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Une vallée située à la frontière du territoire de Juda et du territoire de Benjamin.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "vallée des Rephaïm"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Wani kwari a kan iyakar yankin Yahuda da yankin Benyamin.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Kwarin Refayim"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "यहूदा के क्षेत्र और बिन्यामीन के क्षेत्र की सीमा पर स्थित एक तराई।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "रपाईम की तराई"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Ndagwurugwu dị nʼókè dị nʼetiti ókèala Juda na ókèala Benjamin.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ndagwurugwu Refaim"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Sebuah lembah di perbatasan wilayah Yehuda dan wilayah Benyamin.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Lembah Refaim"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "यहूदाको इलाका र बेंयामीनको इलाकाको सिमानामा पर्ने एउटा बेँसी।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "रपाईंको बेँसी"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Um vale no limite entre o território de Judá e o território de Benjamim.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Vale de Refaim"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Долина на границе удела Иуды и удела Вениамина.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Долина Рефаимов"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Valle en el límite entre el territorio de Judá y el territorio de Benjamín.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Valle de Refaim"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Bonde lililoko kwenye mpaka wa eneo la Yuda na eneo la Benyamini.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Bonde la Refaimu"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Wanpela ples daun long mak bilong graun bilong Juda na graun bilong Benjamin.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ples Daun bilong ol Refaim"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Một thung lũng nằm trên ranh giới giữa lãnh thổ Giu-đa và lãnh thổ Bên-gia-min.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Thung lũng Rê-pha-im"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "位于犹大境内与便雅悯境内边界上的一座山谷。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "利乏音谷"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "位於猶大領地與便雅憫領地交界處的一座山谷。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "利乏音谷"
+    }
+  },
+  "mentioned_in_bible": true,
+  "nearby_places": [
+    "place:TerritoryOfJudah",
+    "place:TerritoryOfBenjamin"
+  ],
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "place_types": {
+    "acai": [
+      "valley"
+    ],
+    "obi": [
+      "valley"
+    ],
+    "vizbible": [
+      "Valley"
+    ]
+  },
+  "primary_id": "place:RephaimValley",
+  "pronominal_referents": {},
+  "references": [
+    "06015008",
+    "06018016",
+    "10005018",
+    "10005022",
+    "10023013",
+    "13011015",
+    "13014009",
+    "23017005"
+  ],
+  "subject_referents": {},
+  "type": "place",
+  "ubsdbh": [
+    "006887002001000"
+  ]
+}

@@ -1,0 +1,435 @@
+{
+  "alternate_sources": {
+    "aquifer": [
+      "4761|Date, Date Palm|TyndaleBibleDictionary"
+    ],
+    "ubsdbh": [
+      "000101001002000",
+      "003396001001000",
+      "003396001002000",
+      "007854001001000",
+      "007855001001000"
+    ],
+    "ubsdgnt": [
+      "3.53",
+      "3.8"
+    ],
+    "ubsflora": [
+      "flora:2.5"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "flora:DatePalm",
+    "review_status": "source_unreviewed",
+    "source_id": "flora:DatePalm",
+    "source_primary_id": "flora:DatePalm",
+    "source_sha256": "2700111cd3514fd3a1069bf8e14f68cb2631a49bc00ebfea2d67161da178e93d"
+  },
+  "explicit_instances": {
+    "SBLGNT": [
+      [
+        "n43012013003"
+      ],
+      [
+        "n43012013005"
+      ],
+      [
+        "n66007009034"
+      ]
+    ],
+    "wlc": [
+      [
+        "o230090130072"
+      ],
+      [
+        "o230190150102"
+      ],
+      [
+        "o030230400081"
+      ],
+      [
+        "o180150320042",
+        "o180150320043"
+      ],
+      [
+        "o230090130061"
+      ],
+      [
+        "o230190150091"
+      ],
+      [
+        "o020150270091"
+      ],
+      [
+        "o030230400091"
+      ],
+      [
+        "o040330090111"
+      ],
+      [
+        "o050340030082"
+      ],
+      [
+        "o070010160072"
+      ],
+      [
+        "o070030130142"
+      ],
+      [
+        "o140280150252"
+      ],
+      [
+        "o160080150201"
+      ],
+      [
+        "o190920130022"
+      ],
+      [
+        "o220070080042"
+      ],
+      [
+        "o220070090032"
+      ],
+      [
+        "o290010120071"
+      ],
+      [
+        "o070040050041"
+      ],
+      [
+        "o110060290102"
+      ],
+      [
+        "o110060320092"
+      ],
+      [
+        "o110060320182"
+      ],
+      [
+        "o110060350032"
+      ],
+      [
+        "o110070360102"
+      ],
+      [
+        "o140030050121"
+      ],
+      [
+        "o190010030061"
+      ],
+      [
+        "o260190100051"
+      ],
+      [
+        "o260400160191"
+      ],
+      [
+        "o260400220062",
+        "o260400220063"
+      ],
+      [
+        "o260400260082"
+      ],
+      [
+        "o260400310052"
+      ],
+      [
+        "o260400340052"
+      ],
+      [
+        "o260400370052"
+      ],
+      [
+        "o260410180032"
+      ],
+      [
+        "o260410180042"
+      ],
+      [
+        "o260410190042"
+      ],
+      [
+        "o260410190092"
+      ],
+      [
+        "o260410200063"
+      ],
+      [
+        "o260410250072"
+      ],
+      [
+        "o260410260032"
+      ]
+    ]
+  },
+  "flora_type": "Domestic Trees and Shrubs",
+  "id": "flora:DatePalm",
+  "key_references": [
+    "02015027",
+    "03023040",
+    "43012013"
+  ],
+  "lemmas": {
+    "el": [
+      "βάϊον",
+      "φοῖνιξ"
+    ],
+    "he": [
+      "אַגְמֹון",
+      "כִּפָּה",
+      "תָּמָר",
+      "תֹּמֶר"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "شجرة طويلة بطول من 10 لـ 20 متر، عندها ورق كبير فوق وثمار حلوة بتتاكل في حجم الإبهام معروفة بالتمر (البلح).",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "نخلة"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "شجرةٌ طويلةٌ يبلُغُ ارتفاعُها بينَ 10 إلى 20 مترًا، ذاتُ أوراقٍ كبيرةٍ في قمَّتِها وثِمارٍ حُلوةٍ صالحةٍ للأكلِ بِحجمِ الإبهامِ تقريبًا، تُعرَفُ بالتَّمرِ.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "نَخْلَة"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan hae tri we i gru kasem 10–20 meta hae, wetem ol bigfala lif long antap mo ol swit kakae we man i save kakae, we saes blong olgeta i olsem tom, we oli singaot se det.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "pamtri"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Palm Branch",
+        "Palm Tree",
+        "Dates"
+      ],
+      "descriptions": [
+        {
+          "article": "flora:DatePalm",
+          "description": "A tall tree that grows 10-20 meters high, with large leaves at the top and sweet, edible fruits about the size of a thumb, known as dates.",
+          "gloss": "Date Palm",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Date Palm"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "درختی بلند که ۱۰ تا ۲۰ متر رشد می‌کند، با برگ‌های بزرگ در بالا و میوه‌های شیرین و خوراکی تقریباً به اندازه یک شست، معروف به خرما.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "درخت خرما"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Un grand arbre qui atteint 10 à 20 mètres de hauteur, pourvu de grandes feuilles à son sommet et de fruits sucrés et comestibles d'environ la taille d'un pouce, appelés dattes.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "palmier dattier"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Dogon itace da yake yin tsawon mita 10-20, mai manyan ganyaye a samansa da kuma zaƙaƙan ’ya’yan marmari da ake ci masu girman babban ɗan yatsa, da aka sani da dabino.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Dabino"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "एक ऊँचा पेड़ जो 10-20 मीटर ऊँचा होता है, जिसके शीर्ष पर बड़े पत्ते और अँगूठे के आकार के मीठे, खाने योग्य फल होते हैं, जिन्हें खजूर कहा जाता है।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "खजूर का पेड़"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Ogologo osisi na-eto mita 10-20 nʼogologo, nke nwere nnukwu igu nʼelu ya na mkpụrụ na-atọ ụtọ, a na-eri eri nke ruru nha mkpisi aka ukwu, nke a maara dị ka deeti.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "nkwụ deeti"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Pohon tinggi yang tumbuh 10–20 meter, dengan daun besar di bagian atas dan buah manis yang dapat dimakan seukuran ibu jari, yang dikenal sebagai kurma.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "pohon kurma"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "१०-२० मिटर अग्लो हुने एउटा रूख, जसको टुप्पोमा ठूला पातहरू र बुढीऔंलाको आकारको खजुर भनिने मीठो, खान मिल्ने फल लाग्दछ।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "खजुर"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Uma árvore alta que cresce de 10 a 20 metros de altura, com folhas grandes no topo e frutos doces e comestíveis do tamanho aproximado de um polegar, conhecidos como tâmaras.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "tamareira"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Высокое дерево высотой 10–20 метров с крупными листьями на вершине и сладкими съедобными плодами размером примерно с большой палец, известными как финики.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Финиковая пальма"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Árbol alto que alcanza de 10 a 20 metros de altura, con grandes hojas en la copa y frutos dulces y comestibles del tamaño de un pulgar, conocidos como dátiles.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "palmera datilera"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Mti mrefu unaokua kwa urefu wa mita 10-20, wenye majani makubwa juu na matunda matamu yanayoliwa ya ukubwa wa kidole gumba, yanayojulikana kama tende.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Mtende"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Wanpela longpela diwai pam i save kamap longpela inap 10-20 mita, i gat bikpela lip long het bilong en na switpela pikinini olsem bikpela bilong nambis bilong han we ol i save kolim det.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "diwai det"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Cây thân gỗ cao từ 10–20 mét, ngọn có các tán lá lớn và cho quả ngọt ăn được cỡ ngón tay cái, gọi là quả chà là.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Cây chà là"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "一种高达10至20米的高大乔木，顶部有大叶，结拇指大小的香甜可食果实，称为海枣。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "棕树"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "一種高達10至20公尺的高大樹木，頂部有大型葉片，結拇指大小、香甜可食的果實，稱為椰棗。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "棗椰樹"
+    }
+  },
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "primary_id": "flora:DatePalm",
+  "pronominal_referents": {
+    "wlc": [
+      [
+        "o220070090053"
+      ]
+    ]
+  },
+  "references": [
+    "02015027",
+    "03023040",
+    "04033009",
+    "05034003",
+    "07001016",
+    "07003013",
+    "07004005",
+    "11006029",
+    "11006032",
+    "11006035",
+    "11007036",
+    "14003005",
+    "14028015",
+    "16008015",
+    "18015032",
+    "19001003",
+    "19092013",
+    "22007008",
+    "22007009",
+    "23009013",
+    "23019015",
+    "26019010",
+    "26040016",
+    "26040022",
+    "26040026",
+    "26040031",
+    "26040034",
+    "26040037",
+    "26041018",
+    "26041019",
+    "26041020",
+    "26041025",
+    "26041026",
+    "29001012",
+    "41016018",
+    "43012013",
+    "66007009"
+  ],
+  "subject_referents": {
+    "wlc": [
+      [
+        "o260410190111"
+      ],
+      [
+        "o260410250091"
+      ]
+    ]
+  },
+  "type": "flora",
+  "ubsdbh": [
+    "000101001002000",
+    "003396001001000",
+    "003396001002000",
+    "007854001001000",
+    "007855001001000"
+  ],
+  "ubsdgnt": [
+    "3.53",
+    "3.8"
+  ]
+}

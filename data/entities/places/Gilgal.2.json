@@ -1,0 +1,430 @@
+{
+  "added_entry": false,
+  "alternate_sources": {
+    "geonames": [
+      "http://sws.geonames.org/294634"
+    ],
+    "tipnr": [
+      "Gilgal@Deu.11.30-Mic",
+      "Gilgal@Deu.11.30-Mic",
+      "Geliloth|Gilgal@Deu.11.30-Mic",
+      "Beth-gilgal|Gilgal@Deu.11.30-Mic",
+      "Gibeath-haaraloth|Gilgal@Deu.11.30-Mic"
+    ],
+    "vizbible": [
+      "recdm9AlLF01lFAfP"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "place:Gilgal.2",
+    "review_status": "source_unreviewed",
+    "source_id": "place:Gilgal.2",
+    "source_primary_id": "place:Gilgal.2",
+    "source_sha256": "3055c0994ff7c54e8d7fa2699586b215acf3864b4667f0f0b31f8c0b6193cc63"
+  },
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o050110300142"
+      ],
+      [
+        "o060040190092"
+      ],
+      [
+        "o060040200122"
+      ],
+      [
+        "o060050030111"
+      ],
+      [
+        "o060050030122"
+      ],
+      [
+        "o060050090151"
+      ],
+      [
+        "o060050100042"
+      ],
+      [
+        "o060090060062"
+      ],
+      [
+        "o060100060082"
+      ],
+      [
+        "o060100070042"
+      ],
+      [
+        "o060100090092"
+      ],
+      [
+        "o060100150082"
+      ],
+      [
+        "o060100430082"
+      ],
+      [
+        "o060140060062"
+      ],
+      [
+        "o060150070092"
+      ],
+      [
+        "o060180170081"
+      ],
+      [
+        "o070020010052"
+      ],
+      [
+        "o070030190072"
+      ],
+      [
+        "o090070160083"
+      ],
+      [
+        "o090100080032"
+      ],
+      [
+        "o090110140072"
+      ],
+      [
+        "o090110150042"
+      ],
+      [
+        "o090110150112"
+      ],
+      [
+        "o090130040182"
+      ],
+      [
+        "o090130070102"
+      ],
+      [
+        "o090130080112"
+      ],
+      [
+        "o090130120062"
+      ],
+      [
+        "o090130150052"
+      ],
+      [
+        "o090150120192"
+      ],
+      [
+        "o090150210112"
+      ],
+      [
+        "o090150330172"
+      ],
+      [
+        "o100190160082"
+      ],
+      [
+        "o100190410032"
+      ],
+      [
+        "o160120290013",
+        "o160120290021"
+      ],
+      [
+        "o280040150102"
+      ],
+      [
+        "o280090150032"
+      ],
+      [
+        "o280120120072"
+      ],
+      [
+        "o300040040052"
+      ],
+      [
+        "o300050050053"
+      ],
+      [
+        "o300050050132"
+      ],
+      [
+        "o330060050182"
+      ]
+    ]
+  },
+  "geocoordinates": {
+    "obi": {
+      "lat": "31.86378328",
+      "lon": "35.51854651"
+    },
+    "recogito": {
+      "lat": "32.1547",
+      "lon": "34.95372"
+    },
+    "vizbible": {
+      "lat": "32.1547",
+      "lon": "34.95372"
+    }
+  },
+  "id": "place:Gilgal.2",
+  "is_artifact": false,
+  "is_person": false,
+  "key_references": [
+    "05011030"
+  ],
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "مكان قريب من شكيم وبلوطة مورة.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "الجلجال (قريب من شكيم)"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "موقع بالقرب من شكيم وبلوطات مورة.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "الجلجال (قرب شكيم)"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan ples we i stap klosap long Sekem mo Bigfala Tri blong More.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Gilgal (klosap long Sekem)"
+    },
+    "eng": {
+      "alternate_labels": [
+        "hill of the foreskins",
+        "Gibeath-Haaraloth",
+        "Beth-Gilgal",
+        "Geliloth",
+        "house of Gilgal",
+        "Gilgal"
+      ],
+      "descriptions": [
+        {
+          "article": "place:Gilgal.4",
+          "description": "A location close to Shechem and the Oak of Moreh.",
+          "gloss": "Gilgal (near Shechem)",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Gilgal (near Shechem)"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "مکانی نزدیک به شکیم و بلوط موره.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "جلجال (نزدیک شکیم)"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Lieu situé près de Sichem et des chênes de Moré.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Guilgal (près de Sichem)"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Wuri kusa da Shekem da kuma Itacen More.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Gilgal (kusa da Shekem)"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "शेकेम और मोरे के बांजवृक्षों के निकट स्थित एक स्थान।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "गिलगाल (शेकेम के निकट)"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Ebe dị nso na Shekem na Osisi Ukwu nke More.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Gilgal (nso Shekem)"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Sebuah lokasi yang dekat dengan Sekhem dan pohon tarbantin di More.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Gilgal (dekat Sekhem)"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "शकेम र मोरेको फलाँटका रुखहरूको नजिकै अवस्थित ठाउँ।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "गिलगाल (शकेम नजिक)"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Um local próximo a Siquém e ao carvalho de Moré.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Gilgal (perto de Siquém)"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Место близ Шехема и дубравы Море.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Галгал (близ Шехема)"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Un lugar cerca de Siquem y de la encina de Moré.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Guilgal (cerca de Siquem)"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Mahali karibu na Shekemu na Mwaloni wa More.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Gilgali (karibu na Shekemu)"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Wanpela ples klostu long Sekem na long ol diwai More.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Gilgal (klostu long Sekem)"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Một địa điểm gần Si-khem và Cây sồi Mô-rê.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ghinh-ganh (gần Si-khem)"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "靠近示剑和摩利橡树的一处地点。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "吉甲（靠近示剑）"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "靠近示劍和摩利橡樹的一個地點。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "吉甲（靠近示劍）"
+    }
+  },
+  "mentioned_in_bible": true,
+  "nearby_places": [
+    "place:Shechem",
+    "place:Moreh"
+  ],
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "place_types": {
+    "acai": [
+      "settlement"
+    ],
+    "obi": [
+      "settlement"
+    ],
+    "vizbible": [
+      "City"
+    ]
+  },
+  "primary_id": "place:Gilgal.2",
+  "pronominal_referents": {
+    "wlc": [
+      [
+        "o090070160162"
+      ]
+    ]
+  },
+  "references": [
+    "05011030",
+    "06004019",
+    "06004020",
+    "06005003",
+    "06005009",
+    "06005010",
+    "06009006",
+    "06010006",
+    "06010007",
+    "06010009",
+    "06010015",
+    "06010043",
+    "06014006",
+    "06015007",
+    "06018017",
+    "07002001",
+    "07003019",
+    "09007016",
+    "09010008",
+    "09011014",
+    "09011015",
+    "09013004",
+    "09013007",
+    "09013008",
+    "09013012",
+    "09013015",
+    "09015012",
+    "09015021",
+    "09015033",
+    "10019016",
+    "10019041",
+    "16012029",
+    "28004015",
+    "28009015",
+    "28012012",
+    "30004004",
+    "30005005",
+    "33006005"
+  ],
+  "referred_to_as": [
+    "place:Gilgal.2",
+    "place:Geliloth",
+    "place:Beth-gilgal",
+    "place:Gibeath-haaraloth"
+  ],
+  "subject_referents": {},
+  "type": "place"
+}

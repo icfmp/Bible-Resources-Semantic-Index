@@ -1,0 +1,324 @@
+{
+  "added_entry": false,
+  "alternate_sources": {
+    "aquifer": [
+      "3835|Asshur|TyndaleBibleDictionary",
+      "3834|Asshur (Place)|TyndaleBibleDictionary"
+    ],
+    "pleiades": [
+      "http://pleiades.stoa.org/places/727078"
+    ],
+    "tipnr": [
+      "Asshur|Assyria@Gen.2.14-Zec"
+    ],
+    "ubsdbh": [
+      "000740001002000"
+    ],
+    "vizbible": [
+      "recAiXXgqL914wNA9"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "place:Assyria",
+    "review_status": "source_unreviewed",
+    "source_id": "place:Asshur",
+    "source_primary_id": "place:Assyria",
+    "source_sha256": "c255796579d4336e7afabdb3808a6cc6bc57ece25c129e75f373ab68389040e7"
+  },
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o040240220081"
+      ],
+      [
+        "o040240240051"
+      ],
+      [
+        "o190830090021"
+      ],
+      [
+        "o260270230061"
+      ]
+    ]
+  },
+  "geocoordinates": {
+    "obi": {
+      "lat": "36.359410",
+      "lon": "43.152887"
+    },
+    "recogito": {
+      "lat": "30.47056",
+      "lon": "31.18806"
+    },
+    "vizbible": {
+      "lat": "36.359410",
+      "lon": "43.152887"
+    }
+  },
+  "id": "place:Asshur",
+  "is_artifact": false,
+  "is_person": false,
+  "key_references": [
+    "04024022"
+  ],
+  "lemmas": {
+    "he": [
+      "אַשּׁוּר",
+      "אַשּׁוּר",
+      "ה"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "مدينة على نهر دجلة وكانت أول عاصمة لأشور.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "أشور"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "مَدِينَةٌ عَلَى نَهْرِ دِجْلَةَ وَأَوَّلُ عَاصِمَةٍ لِأَشُّورَ.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "أَشُّور"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan taon long Taegris Reva mo fas kapitol blong Asiria.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Asur"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Assyria",
+        "Ashur",
+        "Assur"
+      ],
+      "descriptions": [
+        {
+          "article": "place:Asshur",
+          "description": "A city on the Tigris River and first capital of Assyria.",
+          "gloss": "Asshur",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Asshur"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "شهری بر کرانهٔ رود دجله و نخستین پایتخت آشور.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "آشور"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Ville située sur le Tigre et première capitale de l'Assyrie.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Assur"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Wani birni a bakin Kogin Tigris kuma babban birnin Assuriya na farko.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Asshur"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "टाइग्रिस (हिद्देकेल) नदी के तट पर स्थित एक नगर और अश्शूर की पहली राजधानी।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "अश्शूर"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Otu obodo dị nʼOsimiri Taịgris ma bụrụkwa isi obodo mbụ nke Asirịa.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ashọ"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Sebuah kota di tepi Sungai Tigris dan ibu kota pertama Asyur.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Asyur"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "टाइग्रिस नदीको किनारमा रहेको एउटा सहर र अश्शूरको पहिलो राजधानी।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "अश्शूर"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Uma cidade às margens do rio Tigre e primeira capital da Assíria.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Assur"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Город на реке Тигр и первая столица Ассирии.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ашшур"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Ciudad a orillas del río Tigris y primera capital de Asiria.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Asur"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Mji ulio kando ya Mto Tigri na uliokuwa mji mkuu wa kwanza wa Ashuru.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ashuru"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Wanpela taun i stap arere long Wara Taigris na namba wan biktaun bilong kantri Asiria.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Asur"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Một thành phố bên sông Tích-rơ và là kinh đô đầu tiên của A-si-ri.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Át-su-rơ"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "底格里斯河畔的一座城市，也是亚述最初的首都。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "亚述"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "底格里斯河畔的一座城市，也是亞述的第一個首都。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "亞述"
+    }
+  },
+  "mentioned_in_bible": true,
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "place_types": {
+    "acai": [
+      "city"
+    ],
+    "obi": [
+      "settlement"
+    ],
+    "vizbible": [
+      "City"
+    ]
+  },
+  "primary_id": "place:Assyria",
+  "pronominal_referents": {
+    "wlc": [
+      [
+        "o260270240011"
+      ]
+    ]
+  },
+  "references": [
+    "04024022",
+    "04024024",
+    "19083009",
+    "26027023"
+  ],
+  "referred_to_as": [
+    "place:Assyria"
+  ],
+  "subject_referents": {
+    "wlc": [
+      [
+        "o190830090051"
+      ],
+      [
+        "o190830130021",
+        "o190830130031"
+      ],
+      [
+        "o190830170042"
+      ],
+      [
+        "o190830180011"
+      ],
+      [
+        "o190830180022"
+      ],
+      [
+        "o190830180052"
+      ],
+      [
+        "o190830180062"
+      ],
+      [
+        "o190830190012"
+      ],
+      [
+        "o260270230081"
+      ],
+      [
+        "o260270240021"
+      ]
+    ]
+  },
+  "subregion_of": [
+    "place:Assyria"
+  ],
+  "type": "place",
+  "ubsdbh": [
+    "000740001002000"
+  ]
+}

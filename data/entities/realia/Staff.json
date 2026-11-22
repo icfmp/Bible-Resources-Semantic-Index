@@ -1,0 +1,516 @@
+{
+  "alternate_sources": {
+    "aquifer": [
+      "27117|Staff|UWTranslationWords"
+    ],
+    "ubsdbh": [
+      "004332001002000",
+      "004525001001000",
+      "007160001001000"
+    ],
+    "ubsdgnt": [
+      "6.218"
+    ],
+    "ubsrealia": [
+      "realia:1.2.4"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "realia:Staff",
+    "review_status": "source_unreviewed",
+    "source_id": "realia:Staff",
+    "source_primary_id": "realia:Staff",
+    "source_sha256": "d0abb9aecd7b47a60c50c572e190b10a947f267e849b5a6a66a3f4ad552c4804"
+  },
+  "explicit_instances": {
+    "SBLGNT": [
+      [
+        "n40010010011"
+      ],
+      [
+        "n41006008011"
+      ],
+      [
+        "n42009003011"
+      ],
+      [
+        "n46004021004"
+      ],
+      [
+        "n58001008017"
+      ],
+      [
+        "n58001008020"
+      ],
+      [
+        "n58009004021"
+      ],
+      [
+        "n58011021015"
+      ],
+      [
+        "n66011001006"
+      ]
+    ],
+    "wlc": [
+      [
+        "o010320110112",
+        "o010320110113"
+      ],
+      [
+        "o020120110082",
+        "o020120110083"
+      ],
+      [
+        "o040220270152"
+      ],
+      [
+        "o090170400021",
+        "o090170400022"
+      ],
+      [
+        "o090170430112"
+      ],
+      [
+        "o240480170131"
+      ],
+      [
+        "o280040120042",
+        "o280040120043"
+      ],
+      [
+        "o380110070111"
+      ],
+      [
+        "o380110100031",
+        "o380110100032"
+      ],
+      [
+        "o380110140031",
+        "o380110140032"
+      ],
+      [
+        "o020210190061",
+        "o020210190062"
+      ],
+      [
+        "o040210180082",
+        "o040210180083"
+      ],
+      [
+        "o070060210062"
+      ],
+      [
+        "o120040290061",
+        "o120040290062"
+      ],
+      [
+        "o120040290201",
+        "o120040290202"
+      ],
+      [
+        "o120040310062"
+      ],
+      [
+        "o120180210061"
+      ],
+      [
+        "o190230040132",
+        "o190230040133"
+      ],
+      [
+        "o230360060041"
+      ],
+      [
+        "o260290060101"
+      ],
+      [
+        "o380080040121",
+        "o380080040122"
+      ],
+      [
+        "o010490100031"
+      ],
+      [
+        "o020210200092"
+      ],
+      [
+        "o030270320092"
+      ],
+      [
+        "o070050140142"
+      ],
+      [
+        "o190230040121",
+        "o190230040122"
+      ],
+      [
+        "o200100130052"
+      ],
+      [
+        "o200130240021",
+        "o200130240022"
+      ],
+      [
+        "o200220150051"
+      ],
+      [
+        "o200230130072"
+      ],
+      [
+        "o200230140022"
+      ],
+      [
+        "o200260030052"
+      ],
+      [
+        "o200290150011"
+      ],
+      [
+        "o230100150121"
+      ],
+      [
+        "o230100240132"
+      ],
+      [
+        "o230280270162"
+      ],
+      [
+        "o260190110061"
+      ],
+      [
+        "o260190140121"
+      ],
+      [
+        "o260200370042"
+      ],
+      [
+        "o300010050091"
+      ],
+      [
+        "o300010080051"
+      ],
+      [
+        "o330040140082"
+      ],
+      [
+        "o330070140032",
+        "o330070140033"
+      ]
+    ]
+  },
+  "id": "realia:Staff",
+  "key_references": [
+    "02012011",
+    "19023004"
+  ],
+  "lemmas": {
+    "el": [
+      "ῥάβδος"
+    ],
+    "he": [
+      "מַקֵּל",
+      "מִשְׁעֶנֶת",
+      "שֵׁבֶט"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "عكاز من خشب بيستعملوهو للمشي، أو لرعي الغنم، أو كرمز للسلطة.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "عكاز"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "عصا خشبية تُستخدَم للمشي أو الرعي أو كرمز للسلطة.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "عَصَا"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan wud o stik we oli yusum blong wokbaot, blong lukaot long ol sipsip, no olsem wan saen blong hae nem mo paoa.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "stik blong wokbaot"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Stick",
+        "Rod",
+        "Scepter",
+        "Club"
+      ],
+      "descriptions": [
+        {
+          "article": "realia:Staff",
+          "description": "A wooden stick used for walking, herding, or as a symbol of authority.",
+          "gloss": "Staff",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Staff"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "چوبی که برای راه رفتن، چوپانی، یا به عنوان نماد اقتدار استفاده می‌شد.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "عصا"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Bâton de bois utilisé pour marcher, garder les troupeaux ou comme symbole d'autorité.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "bâton"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Sandar itace da ake amfani da ita wajen tafiya, ko kiwo, ko kuma a matsayin alamar iko.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Sanda"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "चलने, चरवाही करने या अधिकार के प्रतीक के रूप में उपयोग की जाने वाली एक लकड़ी की छड़ी।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "लाठी"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Mkpanaka osisi a na-ejide nʼaka mgbe a na-eje ije, mgbe a na-azụ anụ, maọbụ dịka ihe ịrịba ama nke ikike maọbụ ọchịchị.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Mkpanaka"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Batang kayu yang digunakan untuk berjalan, menggembala, atau sebagai lambang kekuasaan.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "tongkat"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "हिँड्न, भेडाबाख्रा चराउन वा अधिकारको प्रतीकको रूपमा प्रयोग गरिने काठको लट्ठी।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "लट्ठी"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Uma vara de madeira usada para caminhar, pastorear ou como símbolo de autoridade.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "cajado"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Деревянная палка, используемая для ходьбы, выпаса скота или как символ власти.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Посох"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Vara de madera utilizada para caminar, pastorear o como símbolo de autoridad.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "vara"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Fimbo ya mti inayotumiwa kwa ajili ya kutembea, kuchungia mifugo, au kama ishara ya mamlaka.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Fimbo"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Wanpela stik diwai bilong wokabaut, o bilong lukautim ol sipsip, o olsem mak bilong namba na biknem.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "stik"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Một cây gậy bằng gỗ dùng để đi đường, chăn bầy hoặc làm biểu tượng của thẩm quyền.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Gậy"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "用于行走、放牧或用作权柄象征的木杖。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "杖"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "一種木製長棒，用於行走、放牧或作為權柄的象徵。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "杖"
+    }
+  },
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "possibly_same_as": [
+    "realia:Rod"
+  ],
+  "primary_id": "realia:Staff",
+  "pronominal_referents": {
+    "SBLGNT": [
+      [
+        "n58009005010"
+      ],
+      [
+        "n58009006001"
+      ]
+    ],
+    "wlc": [
+      [
+        "o380110100072"
+      ],
+      [
+        "o120180210152"
+      ],
+      [
+        "o190230040141"
+      ],
+      [
+        "o230360060132"
+      ],
+      [
+        "o190230040141"
+      ],
+      [
+        "o230100150142"
+      ]
+    ]
+  },
+  "realia_type": "other",
+  "references": [
+    "01032011",
+    "01049010",
+    "02012011",
+    "02021019",
+    "02021020",
+    "03027032",
+    "04021018",
+    "04022027",
+    "07005014",
+    "07006021",
+    "09017040",
+    "09017043",
+    "12004029",
+    "12004031",
+    "12018021",
+    "19023004",
+    "20010013",
+    "20013024",
+    "20022015",
+    "20023013",
+    "20023014",
+    "20026003",
+    "20029015",
+    "23010015",
+    "23010024",
+    "23028027",
+    "23036006",
+    "24048017",
+    "26019011",
+    "26019014",
+    "26020037",
+    "26029006",
+    "28004012",
+    "30001005",
+    "30001008",
+    "33004014",
+    "33007014",
+    "38008004",
+    "38011007",
+    "38011010",
+    "38011014",
+    "40010010",
+    "41006008",
+    "42009003",
+    "46004021",
+    "58001008",
+    "58009004",
+    "58011021",
+    "66011001"
+  ],
+  "subject_referents": {
+    "SBLGNT": [
+      [
+        "n58009004024"
+      ]
+    ],
+    "wlc": [
+      [
+        "o120180210162"
+      ],
+      [
+        "o120180210182"
+      ],
+      [
+        "o230360060142"
+      ],
+      [
+        "o230360060162"
+      ]
+    ]
+  },
+  "type": "realia",
+  "ubsdbh": [
+    "004332001002000",
+    "004525001001000",
+    "007160001001000"
+  ],
+  "ubsdgnt": [
+    "6.218"
+  ]
+}

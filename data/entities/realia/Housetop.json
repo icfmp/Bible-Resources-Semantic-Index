@@ -1,0 +1,287 @@
+{
+  "alternate_sources": {
+    "ubsdbh": [
+      "006423001003000"
+    ],
+    "ubsdgnt": [
+      "7.51",
+      "7.50"
+    ],
+    "ubsrealia": [
+      "realia:3.1.5"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "realia:Housetop",
+    "review_status": "source_unreviewed",
+    "source_id": "realia:Housetop",
+    "source_primary_id": "realia:Housetop",
+    "source_sha256": "36d6829253d833a53ca61d24afb1dee1bc5824a823e3058fda13577f38b13fa0"
+  },
+  "explicit_instances": {
+    "SBLGNT": [
+      [
+        "n40010027020"
+      ],
+      [
+        "n40024017004"
+      ],
+      [
+        "n41013015004"
+      ],
+      [
+        "n42005019013"
+      ],
+      [
+        "n42012003024"
+      ],
+      [
+        "n42017031009"
+      ],
+      [
+        "n44010009014"
+      ],
+      [
+        "n40008008014"
+      ],
+      [
+        "n41002004011"
+      ],
+      [
+        "n42007006032"
+      ]
+    ],
+    "wlc": [
+      [
+        "o010190080291",
+        "o010190080292"
+      ]
+    ]
+  },
+  "id": "realia:Housetop",
+  "key_references": [
+    "40024017",
+    "41002004",
+    "44010009"
+  ],
+  "lemmas": {
+    "el": [
+      "δῶμα",
+      "στέγη"
+    ],
+    "he": [
+      "קֹורָה"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "المكان المسطح الفوق البيت.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "سطوح البيت"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "المِنْطَقَةُ الْمُسَطَّحَةُ أَعْلَى الْبَيْتِ.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "سَطْح"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan flat ples antap long ruf blong wan haos.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "ruf blong haos"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Roof"
+      ],
+      "descriptions": [
+        {
+          "article": "realia:Housetop",
+          "description": "The flat area over a house.",
+          "gloss": "Housetop",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Housetop"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "سطح صاف روی سقف یک خانه.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "پشت‌بام"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "La surface plane située au sommet d’une maison.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "toit"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Faffadan fili a saman gida.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Rufin gida"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "घर के ऊपर का समतल भाग या छत।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "छत"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Ebe dị larịị nʼelu ụlọ.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "elu ụlọ"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Bagian yang datar di atas rumah atau atap rumah.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "atap rumah"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "घरको माथिल्लो समतल भाग।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "छाना"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "A área plana sobre uma casa.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "terraço"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Плоская площадка на крыше дома.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Кровля"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Área plana sobre una casa.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "azotea"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Sehemu tambarare iliyo juu ya nyumba.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Dari ya nyumba"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Fletpela hap antap long rup bilong haus.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "antap long rup bilong haus"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Khu vực bằng phẳng ở trên nóc một ngôi nhà.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "mái nhà"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "房屋上方平坦的区域。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "屋顶"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "房屋上方平坦的區域。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "房頂"
+    }
+  },
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "primary_id": "realia:Housetop",
+  "pronominal_referents": {
+    "SBLGNT": [
+      [
+        "n41002004012"
+      ]
+    ]
+  },
+  "realia_type": "other",
+  "references": [
+    "01019008",
+    "40008008",
+    "40010027",
+    "40024017",
+    "41002004",
+    "41013015",
+    "42005019",
+    "42007006",
+    "42012003",
+    "42017031",
+    "44010009"
+  ],
+  "subject_referents": {},
+  "type": "realia",
+  "ubsdbh": [
+    "006423001003000"
+  ],
+  "ubsdgnt": [
+    "7.51",
+    "7.50"
+  ]
+}

@@ -1,0 +1,263 @@
+{
+  "added_entry": false,
+  "alternate_sources": {
+    "pleiades": [
+      "http://pleiades.stoa.org/places/433094"
+    ],
+    "tipnr": [
+      "Second_Quarter@2Ki.22.14-Zep"
+    ],
+    "ubsdbh": [
+      "004518001005000"
+    ],
+    "vizbible": [
+      "recFXcRQrRaeVt8Wq"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "place:SecondQuarter",
+    "review_status": "source_unreviewed",
+    "source_id": "place:SecondQuarter",
+    "source_primary_id": "place:SecondQuarter",
+    "source_sha256": "729e748a009298f220d80005f3d71a4209dfa400565ef01ff74a00d220eba8b4"
+  },
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o120220140222"
+      ],
+      [
+        "o140340220202"
+      ],
+      [
+        "o360010100122"
+      ]
+    ]
+  },
+  "geocoordinates": {
+    "obi": {
+      "lat": "31.777444",
+      "lon": "35.234935"
+    },
+    "recogito": {
+      "lat": "41.18401",
+      "lon": "14.048071"
+    },
+    "vizbible": {
+      "lat": "31.777444",
+      "lon": "35.234935"
+    }
+  },
+  "id": "place:SecondQuarter",
+  "is_artifact": false,
+  "is_person": false,
+  "key_references": [
+    "12022014",
+    "36001010"
+  ],
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "حي أو ضاحية في أورشليم.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "الحي الثاني"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "حي في أورشليم.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "الْقِسْم الثَّانِي"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan haf blong taon long Jerusalem.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Nambatu"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Mishneh district",
+        "New Quarter",
+        "second",
+        "Second Quarter"
+      ],
+      "descriptions": [
+        {
+          "article": "place:SecondQuarter",
+          "description": "A suburb in Jerusalem.",
+          "gloss": "Second District",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Second District"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "محله‌ای در اورشلیم.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "محله دوم"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Un faubourg ou quartier de Jérusalem.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "autre quartier de la ville"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Wani yanki na ƙauye ko unguwa a Urushalima.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Yanki na Biyu"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "यरूशलेम में एक उपनगर।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "नया मोहल्ला"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Mpaghara dị na Jeruselem.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Mpaghara Ọhụrụ"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Sebuah daerah pinggiran di Yerusalem.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Perkampungan Baru"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "यरूशलेमको एउटा उपनगर।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "दोस्रो टोल"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Um subúrbio em Jerusalém.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Segundo Distrito"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Пригород в Иерусалиме.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Вторая часть"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Barrio o suburbio de Jerusalén.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "barrio nuevo"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Kitongoji katika Yerusalemu.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Mtaa wa Pili"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Wanpela hap distrik long Jerusalem.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Niutaun"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Một khu phố ở Giê-ru-sa-lem.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Quận Nhì"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "耶路撒冷的一个郊区（第二区）。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "第二区"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "耶路撒冷內的一個城區。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "第二區"
+    }
+  },
+  "mentioned_in_bible": true,
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "place_types": {
+    "acai": [
+      "settlement"
+    ],
+    "obi": [
+      "district in settlement"
+    ]
+  },
+  "primary_id": "place:SecondQuarter",
+  "pronominal_referents": {},
+  "references": [
+    "12022014",
+    "14034022",
+    "16011009",
+    "36001010"
+  ],
+  "subject_referents": {},
+  "type": "place",
+  "ubsdbh": [
+    "004518001005000"
+  ]
+}

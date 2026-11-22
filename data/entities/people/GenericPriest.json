@@ -1,0 +1,396 @@
+{
+  "bsi": {
+    "canonical_id": "person:GenericPriest",
+    "editorial_evidence": [
+      "Pinned SBLGNT Luke 10:25 n42010025003 νομικός A-NSM substantive 'expert in the Law', and n42010025008 λέγων V-PAP-NSM 'saying'; the speaker is the lawyer and not the priest who is introduced much later at Luke 10:31.",
+      "Clear-Bible/macula-greek@8423afe47b9e8f24b7772e808af45c7159a6fe7e, SBLGNT/tsv/macula-greek-SBLGNT.tsv and original frozen ACAI person:GenericPriest / person:Scribe records"
+    ],
+    "editorial_reason": "Luke 10:25 introduces a singular 'law expert' (νομικός) who asks Jesus a question; the priest appears only in the later Good Samaritan parable (Luke 10:31), so the two source tokens naming the lawyer and his speaking role are not references to an anonymous priest. Keep the inherited person:Scribe source witness and any other claims untouched.",
+    "review_status": "editorially_reviewed",
+    "source_id": "person:GenericPriest",
+    "source_primary_id": "person:GenericPriest",
+    "source_sha256": "011b7466aa3b1680d8f1cc16627ff549cb97dbfc5b78e2d30b10c63799c9bc0b"
+  },
+  "explicit_instances": {
+    "SBLGNT": [
+      [
+        "n40002005001"
+      ],
+      [
+        "n42020039005"
+      ]
+    ]
+  },
+  "id": "person:GenericPriest",
+  "key_references": [],
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "كاهن بدون اسم مشارك في مقطع كتابي.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "كاهن"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "كاهن لم يُذكر اسمه مشارك في نص كتابي.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "كاهن"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan pris we Baebol i no talem nem blong hem we i tekpat long wan stori.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Wan Pris"
+    },
+    "eng": {
+      "descriptions": [
+        {
+          "description": "An unnamed priest participating in a passage.",
+          "gloss": "A Priest",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "A Priest"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "کاهنی بی‌نام که در یک متن حضور دارد.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "یک کاهن"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Un prêtre anonyme intervenant dans un passage.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Un prêtre"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Wani firist da ba a ambaci sunansa ba wanda ya bayyana a cikin wani nassi.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Wani Firist"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "किसी शास्त्रभाग में भाग लेने वाला कोई अनाम याजक।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "एक याजक"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Otu onye nchụàjà a na-akpọghị aha ya nke na-ekere òkè nʼotu akụkụ Akwụkwọ Nsọ.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Otu Onye Nchụàjà"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Seorang imam tanpa nama yang berperan serta dalam suatu nas.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Seorang Imam"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "धर्मशास्‍त्रको कुनै खण्डमा सहभागी एक नाम नखुलेका पुजारी वा पूजाहारी।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "एक पुजारी"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Um sacerdote não identificado que participa de uma passagem.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Um sacerdote"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Безымянный священник, участвующий в отрывке.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Священник"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Un sacerdote no identificado que participa en un pasaje.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Un sacerdote"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Kuhani asiyetajwa jina anayeshiriki katika kifungu.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Kuhani"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Wanpela pris i no gat nem i insait long wanpela stori o hap bilong Baibel.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Wanpela Pris"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Một thầy tế lễ không nêu tên tham gia vào một phân đoạn Kinh Thánh.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Một thầy tế lễ"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "在经文片段中出现的一位未具名的祭司。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "一位祭司"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "在經文中出現的未具名祭司。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "某祭司"
+    }
+  },
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "primary_id": "person:GenericPriest",
+  "pronominal_referents": {},
+  "references": [
+    "40002005",
+    "42020039"
+  ],
+  "speeches": {
+    "SBLGNT": [
+      {
+        "quote_type": "Dialogue",
+        "words": [
+          "n40002005005",
+          "n40002005006",
+          "n40002005007",
+          "n40002005008",
+          "n40002005009",
+          "n40002005010",
+          "n40002005011",
+          "n40002005012",
+          "n40002005013",
+          "n40002005014",
+          "n40002006001",
+          "n40002006002",
+          "n40002006003",
+          "n40002006004",
+          "n40002006005",
+          "n40002006006",
+          "n40002006007",
+          "n40002006008",
+          "n40002006009",
+          "n40002006010",
+          "n40002006011",
+          "n40002006012",
+          "n40002006013",
+          "n40002006014",
+          "n40002006015",
+          "n40002006016",
+          "n40002006017",
+          "n40002006018",
+          "n40002006019",
+          "n40002006020",
+          "n40002006021",
+          "n40002006022",
+          "n40002006023",
+          "n40002006024"
+        ]
+      },
+      {
+        "quote_type": "Dialogue",
+        "words": [
+          "n40021031001",
+          "n40021031002",
+          "n40021031003",
+          "n40021031004",
+          "n40021031005",
+          "n40021031006",
+          "n40021031007",
+          "n40021031008",
+          "n40021031009"
+        ]
+      },
+      {
+        "delivery": "serious",
+        "quote_type": "Dialogue",
+        "words": [
+          "n40021041003",
+          "n40021041004",
+          "n40021041005",
+          "n40021041006",
+          "n40021041007",
+          "n40021041008",
+          "n40021041009",
+          "n40021041010",
+          "n40021041011",
+          "n40021041012",
+          "n40021041013",
+          "n40021041014",
+          "n40021041015",
+          "n40021041016",
+          "n40021041017",
+          "n40021041018",
+          "n40021041019",
+          "n40021041020",
+          "n40021041021"
+        ]
+      },
+      {
+        "delivery": "interceding",
+        "quote_type": "Dialogue",
+        "words": [
+          "n42007004012",
+          "n42007004013",
+          "n42007004014",
+          "n42007004015",
+          "n42007004016",
+          "n42007005001",
+          "n42007005002",
+          "n42007005003",
+          "n42007005004",
+          "n42007005005",
+          "n42007005006",
+          "n42007005007",
+          "n42007005008",
+          "n42007005009",
+          "n42007005010",
+          "n42007005011"
+        ]
+      },
+      {
+        "delivery": "testing",
+        "quote_type": "Dialogue",
+        "words": [
+          "n42010025009",
+          "n42010025010",
+          "n42010025011",
+          "n42010025012",
+          "n42010025013",
+          "n42010025014"
+        ]
+      },
+      {
+        "delivery": "warning",
+        "quote_type": "Dialogue",
+        "words": [
+          "n42013031010",
+          "n42013031011",
+          "n42013031012",
+          "n42013031013",
+          "n42013031014",
+          "n42013031015",
+          "n42013031016",
+          "n42013031017",
+          "n42013031018"
+        ]
+      },
+      {
+        "delivery": "complimenting",
+        "quote_type": "Dialogue",
+        "words": [
+          "n42020039007",
+          "n42020039008",
+          "n42020039009"
+        ]
+      },
+      {
+        "delivery": "gracious",
+        "quote_type": "Normal",
+        "words": [
+          "n44013015017",
+          "n44013015018",
+          "n44013015019",
+          "n44013015020",
+          "n44013015021",
+          "n44013015022",
+          "n44013015023",
+          "n44013015024",
+          "n44013015025",
+          "n44013015026",
+          "n44013015027",
+          "n44013015028"
+        ]
+      }
+    ]
+  },
+  "subject_referents": {
+    "SBLGNT": [
+      [
+        "n40021023011",
+        "n40021023014"
+      ],
+      [
+        "n40021041001"
+      ],
+      [
+        "n42007003009"
+      ],
+      [
+        "n42007004010"
+      ],
+      [
+        "n42013031007"
+      ],
+      [
+        "n42013031008"
+      ],
+      [
+        "n44013015012"
+      ],
+      [
+        "n44013015015"
+      ]
+    ]
+  },
+  "type": "person"
+}

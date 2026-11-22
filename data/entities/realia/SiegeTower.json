@@ -1,0 +1,248 @@
+{
+  "alternate_sources": {
+    "ubsdbh": [
+      "000899001001000",
+      "004282001001000",
+      "004297002002000",
+      "004298001002000"
+    ],
+    "ubsrealia": [
+      "realia:2.19.3"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "realia:SiegeTower",
+    "review_status": "source_unreviewed",
+    "source_id": "realia:SiegeTower",
+    "source_primary_id": "realia:SiegeTower",
+    "source_sha256": "6db11fc03267a457abb7c4fb300605c397851c48d4f244ef2b237a5d0e0e795e"
+  },
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o230230130131",
+        "o230230130132"
+      ],
+      [
+        "o230290030061"
+      ],
+      [
+        "o050200200141"
+      ],
+      [
+        "o230290030091"
+      ]
+    ]
+  },
+  "id": "realia:SiegeTower",
+  "key_references": [
+    "10020015",
+    "26004002",
+    "33004014",
+    "23029003"
+  ],
+  "lemmas": {
+    "he": [
+      "בַּחוּן",
+      "מֻצָּב",
+      "מָצֹור",
+      "מְצוּרָה"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "برج خشب عالي وفوقه منصة، بيستعملوه الجنود عشان يهاجموا المدينة المحاصرة.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "برج حصار"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "بناء خشبي مرتفع في أعلاه منصة، يستخدمه الجنود للهجوم على مدينة محاصرة.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "بُرْجُ حِصَارٍ"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan tol taua we oli wokem long wud mo i gat wan platfom antap long hem, we ol soldia oli yusum blong faet agens long wan taon we oli blokem hem.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "wud taua blong faet"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Siege-Works"
+      ],
+      "descriptions": [
+        {
+          "article": "realia:SiegeTower",
+          "description": "A tall wooden structure with a platform on top, used by soldiers to attack a besieged city.",
+          "gloss": "Siege Tower",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Siege Tower"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "سازه‌ای چوبی و بلند با جایگاهی در بالای آن، که سربازان برای حمله به یک شهر تحت محاصره از آن استفاده می‌کردند.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "برج محاصره"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Haute structure en bois surmontée d'une plateforme, utilisée par les soldats pour attaquer une ville assiégée.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "tour de siège"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Wani dogon gini na katako mai dandalin tsayuwa a samansa, wanda sojoji ke amfani da shi wajen kai hari a birnin da aka yi wa ƙawanya.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Hasumiyar ƙawanya"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "ऊपर चबूतरे वाला लकड़ी का एक ऊँचा ढाँचा, जिसका उपयोग सैनिकों द्वारा घेरे गए नगर पर आक्रमण करने के लिए किया जाता था।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "घेराबंदी का बुर्ज"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Ogologo ụlọ elu e ji osisi rụọ nke nwere ikpo okwu nʼelu, nke ndị agha na-eji ebuso obodo a nọchibidoro agha.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "ụlọ elu nnọchibido"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Struktur kayu tinggi dengan panggung di bagian atasnya, yang digunakan tentara untuk menyerang kota yang dikepung.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "menara pengepungan"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "घेराबन्दी गरिएको सहरमा आक्रमण गर्न सिपाहीहरूले प्रयोग गर्ने, माथि मञ्च भएको काठको अग्लो संरचना वा धरहरा।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "घेरा-धरहरा"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Uma estrutura alta de madeira com uma plataforma no topo, usada por soldados para atacar uma cidade sitiada.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "torre de cerco"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Высокое деревянное сооружение с площадкой наверху, используемое воинами для штурма осажденного города.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Осадная башня"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Estructura alta de madera con una plataforma en la parte superior, utilizada por los soldados para atacar una ciudad sitiada.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "torre de asedio"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Mnara mrefu wa mbao wenye jukwaa juu, uliotumiwa na askari kushambulia mji uliozingirwa.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Mnara wa kuzingiria"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Longpela taua diwai i gat wanpela platfom antap, em ol soldia i save yusim bilong pait long wanpela taun ol i banisim.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "taua bilong pait"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Một cấu trúc bằng gỗ cao có bục trên đỉnh, được binh lính sử dụng để tấn công một thành phố đang bị bao vây.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Tháp công thành"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "顶部设有平台的木制高台建筑，士兵用于攻击被围困的城市。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "攻城木塔"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "一種頂部設有平臺的高大木製結構，士兵藉此攻擊被圍困的城市。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "攻城塔"
+    }
+  },
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "primary_id": "realia:SiegeTower",
+  "pronominal_referents": {},
+  "realia_type": "other",
+  "references": [
+    "05020020",
+    "23023013",
+    "23029003"
+  ],
+  "subject_referents": {},
+  "type": "realia",
+  "ubsdbh": [
+    "000899001001000",
+    "004282001001000",
+    "004297002002000",
+    "004298001002000"
+  ]
+}

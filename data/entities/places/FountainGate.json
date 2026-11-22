@@ -1,0 +1,262 @@
+{
+  "added_entry": false,
+  "alternate_sources": {
+    "tipnr": [
+      "Fountain_Gate@Neh.2.14-"
+    ],
+    "ubsdbh": [
+      "005389003004000"
+    ],
+    "vizbible": [
+      "recxDEP8UZTymLeVj"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "place:FountainGate",
+    "review_status": "source_unreviewed",
+    "source_id": "place:FountainGate",
+    "source_primary_id": "place:FountainGate",
+    "source_sha256": "0e8fd193c9ee372d6e7731600ecef57e2746ddb7c578a0227d34454009706e7c"
+  },
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o160020140042"
+      ],
+      [
+        "o160030150032"
+      ],
+      [
+        "o160120370032"
+      ]
+    ]
+  },
+  "geocoordinates": {
+    "obi": {
+      "lat": "31.777444",
+      "lon": "35.234935"
+    },
+    "vizbible": {
+      "lat": "31.777444",
+      "lon": "35.234935"
+    }
+  },
+  "id": "place:FountainGate",
+  "is_artifact": true,
+  "is_person": false,
+  "key_references": [
+    "16012037",
+    "16002014",
+    "16003015"
+  ],
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "باب في أورشليم في مدينة داود.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "باب العين"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "بَابٌ مِنْ أَبْوَابِ أُورُشَلِيمَ فِي مَدِينَةِ دَاوُدَ.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "بَابُ ٱلْعَيْنِ"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan doa blong Jerusalem long Taon blong Deved.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Doa blong Springwota"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Gate of the Well",
+        "Gate of the Fountain",
+        " Gate",
+        "Fountain"
+      ],
+      "descriptions": [
+        {
+          "article": "place:FountainGate",
+          "description": "A gate of Jerusalem in the City of David.",
+          "gloss": "Fountain Gate",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Fountain Gate"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "دروازه‌ای در اورشلیم واقع در شهر داوود.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "دروازهٔ چشمه"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Une porte de Jérusalem dans la cité de David.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "porte de la source"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Wata ƙofar Urushalima a Birnin Dawuda.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ƙofar Maɓuɓɓuga"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "दाऊदपुर में यरूशलेम का एक फाटक।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "सोता फाटक"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Ọnụ ụzọ ama nke Jerusalem dị nʼObodo Devid.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ọnụ Ụzọ Ama Isi Iyi"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Pintu gerbang Yerusalem di Kota Daud.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Pintu Gerbang Mata Air"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "दाऊदको सहरमा रहेको यरूशलेमको एउटा ढोका।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "फुहारा ढोका"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Uma porta de Jerusalém na Cidade de Davi.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Porta da Fonte"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Ворота Иерусалима в Городе Давида.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ворота Источника"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Puerta de Jerusalén en la Ciudad de David.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Puerta de la Fuente"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Lango la Yerusalemu katika Mji wa Daudi.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Lango la Chemchemi"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Wanpela dua bilong Jerusalem long Taun Bilong Devit.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Dua Bilong Hul Wara"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Một cổng của Giê-ru-sa-lem tại Thành Đa-vít.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Cổng Suối"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "耶路撒冷大卫城的一座城门。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "泉门"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "大衛城內耶路撒冷的一座城門。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "泉門"
+    }
+  },
+  "mentioned_in_bible": true,
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "place_types": {
+    "acai": [
+      "gate"
+    ],
+    "obi": [
+      "gate"
+    ],
+    "vizbible": [
+      "Landmark"
+    ]
+  },
+  "primary_id": "place:FountainGate",
+  "pronominal_referents": {},
+  "references": [
+    "16002014",
+    "16003015",
+    "16012037"
+  ],
+  "subject_referents": {},
+  "subregion_of": [
+    "place:CityOfDavid"
+  ],
+  "type": "place",
+  "ubsdbh": [
+    "005389003004000"
+  ]
+}

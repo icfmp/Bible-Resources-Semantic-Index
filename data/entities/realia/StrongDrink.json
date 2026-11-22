@@ -1,0 +1,257 @@
+{
+  "alternate_sources": {
+    "aquifer": [
+      "8637|Strong Drink|TyndaleBibleDictionary",
+      "27123|Strong Drink|UWTranslationWords"
+    ],
+    "ubsdbh": [
+      "004979001001000"
+    ],
+    "ubsdgnt": [
+      "6.200"
+    ],
+    "ubsrealia": [
+      "realia:9.2"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "realia:StrongDrink",
+    "review_status": "source_unreviewed",
+    "source_id": "realia:StrongDrink",
+    "source_primary_id": "realia:StrongDrink",
+    "source_sha256": "14dc9df4879d11022b8cde53897c8cfeca675cd850986a9c82a1930d544d98bf"
+  },
+  "explicit_instances": {
+    "SBLGNT": [
+      [
+        "n42001015010"
+      ]
+    ],
+    "wlc": [
+      [
+        "o230010220041",
+        "o230010220042"
+      ],
+      [
+        "o280040180021",
+        "o280040180022"
+      ],
+      [
+        "o340010100053",
+        "o340010100054"
+      ]
+    ]
+  },
+  "id": "realia:StrongDrink",
+  "key_references": [
+    "23001022",
+    "28004018",
+    "42001015"
+  ],
+  "lemmas": {
+    "el": [
+      "σίκερα"
+    ],
+    "he": [
+      "סֹבֶא"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "مشروب مسكر معمول من الحبوب.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "مسكر"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "مشروب كحولي مصنوع من الحبوب.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "مسكر"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan strong dring we oli wokem long gren.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "strong dring"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Liquor",
+        "Beer"
+      ],
+      "descriptions": [
+        {
+          "article": "realia:StrongDrink",
+          "description": "An alcoholic beverage made from grain.",
+          "gloss": "Strong Drink",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Strong Drink"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "نوشیدنی الکلی که از غلات تهیه می‌شد.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "مشروب سکرآور"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Une boisson alcoolisée fabriquée à partir de céréales.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "boisson forte"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Abin sha mai sa maye da aka yi da hatsi.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Giya mai ƙarfi"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "अनाज से बना एक नशीला पेय।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "मदिरा"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Ihe ọṅụṅụ na-egbu egbu nke e ji mkpụrụ osisi mee.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "ihe ọṅụṅụ na-egbu egbu"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Minuman beralkohol yang terbuat dari biji-bijian.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "minuman keras"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "अन्‍नबाट बनाइने कडा मद्य।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "कडा मद्य"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Uma bebida alcoólica feita de cereais.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "bebida forte"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Алкогольный напиток, изготовленный из зерна.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Сикера"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Bebida alcohólica elaborada a partir de cereales.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "licor"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Kinywaji chenye kileo kinachotengenezwa kwa nafaka.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Kinywaji Kikali"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Kain dring i gat gip (alkohol) ol i save wokim long wit o ol arapela kain wit.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "strongpela dring"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Một loại thức uống có cồn làm từ ngũ cốc.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Rượu mạnh"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "一种用谷物酿制的酒精饮料。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "浓酒"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "用穀物釀製的烈性酒精飲料。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "濃酒"
+    }
+  },
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "primary_id": "realia:StrongDrink",
+  "pronominal_referents": {},
+  "realia_type": "other",
+  "references": [
+    "23001022",
+    "28004018",
+    "34001010",
+    "42001015"
+  ],
+  "subject_referents": {},
+  "type": "realia",
+  "ubsdbh": [
+    "004979001001000"
+  ],
+  "ubsdgnt": [
+    "6.200"
+  ]
+}

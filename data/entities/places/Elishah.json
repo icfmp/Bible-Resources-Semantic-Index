@@ -1,0 +1,260 @@
+{
+  "added_entry": false,
+  "alternate_sources": {
+    "aquifer": [
+      "5022|Elishah|TyndaleBibleDictionary"
+    ],
+    "tipnr": [
+      "Elishah|Cyprus@Num.24.24-Act"
+    ],
+    "ubsdbh": [
+      "000437001002000"
+    ],
+    "vizbible": [
+      "rec9iLE1EPBSXW9He"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "place:Cyprus",
+    "review_status": "source_unreviewed",
+    "source_id": "place:Elishah",
+    "source_primary_id": "place:Cyprus",
+    "source_sha256": "d19afd3c331b390f8c3a1cc0bb69b992e2d2ea617c27b35e9527af3d2e9b2e4d"
+  },
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o260270070121"
+      ]
+    ]
+  },
+  "geocoordinates": {
+    "obi": {
+      "lat": "35.018306",
+      "lon": "33.207693"
+    },
+    "vizbible": {
+      "lat": "35.018306",
+      "lon": "33.207693"
+    }
+  },
+  "id": "place:Elishah",
+  "is_artifact": false,
+  "is_person": false,
+  "key_references": [
+    "26027007"
+  ],
+  "lemmas": {
+    "he": [
+      "אֱלִישָׁה"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "جزيرة كانت مشهورة بتجارة القماش المصبوغ مع صور؛ وممكن تكون اسم تاني لقبرص.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "أليشة"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "جزيرة عُرفت بتجارة الأقمشة المصبوغة مع صور؛ وربما كانت اسماً آخر لقبرص.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "أَلِيشَة"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan aelan we i g困难/stret nem blong hem i stap long bisnis blong daenem kaliko wetem Taea; maet hem i wan narafala nem blong Saepras.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Elisa"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Cyprus"
+      ],
+      "descriptions": [
+        {
+          "article": "place:Elishah",
+          "description": "An island known for trading dyed cloth with Tyre; possibly another name for Cyprus.",
+          "gloss": "Elishah",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Elishah"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "جزیره‌ای مشهور به تجارت پارچه‌های رنگ‌شده با صور؛ احتمالاً نام دیگری برای قبرس.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "الیشه"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Une île connue pour son commerce d’étoffes teintes avec Tyr ; peut-être un autre nom pour Chypre.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Élischa"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Wani tsibiri da aka sani da cinikin tufafi masu launi tare da Taya; mai yiwuwa wani suna ne na Saifurus.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Elisha"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "सोर के साथ रंगे हुए वस्त्रों के व्यापार के लिए जाना जाने वाला एक द्वीप; संभवतः साइप्रस का दूसरा नाम।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "एलीशा"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Agwaetiti a maara maka ịzụ ahịa ákwà a boyere ágbá na Taya; ikekwe ọ bụ aha ọzọ a na-akpọ Saịprọs.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Elisha"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Sebuah pulau yang dikenal karena memperdagangkan kain celupan dengan Tirus; mungkin nama lain untuk Siprus.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Elisa"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "सोरसँग रङ्गाइएका कपडाको व्यापार गर्नका लागि परिचित एक टापु; सम्भवतः साइप्रसको अर्को नाम।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "एलीशाह"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Uma ilha conhecida pelo comércio de tecido tingido com Tiro; possivelmente outro nome para Chipre.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Elisá"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Остров, известный торговлей окрашенными тканями с Тиром; возможно, другое название Кипра.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Елиса"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Isla conocida por comerciar telas teñidas con Tiro; posiblemente otro nombre para Chipre.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Elisá"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Kisiwa kilichojulikana kwa kufanya biashara ya nguo zilizotiwa rangi na Tiro; huenda lilikuwa jina lingine la Kipro.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Elisha"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Wanpela ailan em ol manmeri i save baim na salim ol naispela laplap i gat kala wantaim taun Tair; ating em narapela nem bilong Saiprus.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Elisa"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Một hòn đảo nổi tiếng về việc buôn bán vải nhuộm với Ty-rơ; có thể là một tên khác của Síp.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ê-li-sa"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "一个以与推罗进行染色布匹贸易而闻名的岛屿；可能是塞浦路斯的另一名称。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "以利沙"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "一座以與推羅進行染色布料貿易而聞名的島嶼；可能是塞浦路斯的別名。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "以利沙"
+    }
+  },
+  "mentioned_in_bible": true,
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "place_types": {
+    "acai": [
+      "island"
+    ],
+    "obi": [
+      "island",
+      "settlement",
+      "region"
+    ]
+  },
+  "possibly_same_as": [
+    "place:Cyprus"
+  ],
+  "primary_id": "place:Cyprus",
+  "pronominal_referents": {},
+  "references": [
+    "26027007"
+  ],
+  "referred_to_as": [
+    "place:Cyprus"
+  ],
+  "subject_referents": {},
+  "tribal_area": "group:Cyprus",
+  "type": "place",
+  "ubsdbh": [
+    "000437001002000"
+  ]
+}

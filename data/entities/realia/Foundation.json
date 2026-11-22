@@ -1,0 +1,505 @@
+{
+  "alternate_sources": {
+    "aquifer": [
+      "26613|Foundation|UWTranslationWords"
+    ],
+    "ubsdbh": [
+      "000725001001000",
+      "002969001001000",
+      "002970001001000",
+      "003782001001000",
+      "003783001001000",
+      "003784001001000",
+      "003785001001000",
+      "004144001001000"
+    ],
+    "ubsdgnt": [
+      "7.41",
+      "7.43",
+      "7.42"
+    ],
+    "ubsrealia": [
+      "realia:3.1.1"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "realia:Foundation",
+    "review_status": "source_unreviewed",
+    "source_id": "realia:Foundation",
+    "source_primary_id": "realia:Foundation",
+    "source_sha256": "7dd93a430d8f07bd649d3729e4106446cd045a0ce1d982c0db50743155d9bf4f"
+  },
+  "explicit_instances": {
+    "SBLGNT": [
+      [
+        "n66021018003"
+      ],
+      [
+        "n42006048012"
+      ],
+      [
+        "n42006049016"
+      ],
+      [
+        "n42014029005"
+      ],
+      [
+        "n44016026009"
+      ],
+      [
+        "n45015020013"
+      ],
+      [
+        "n46003010012"
+      ],
+      [
+        "n46003012007"
+      ],
+      [
+        "n49002020004"
+      ],
+      [
+        "n58011010005"
+      ],
+      [
+        "n66021014007"
+      ],
+      [
+        "n66021019002"
+      ],
+      [
+        "n66021019012"
+      ],
+      [
+        "n40007025021"
+      ],
+      [
+        "n58001010008"
+      ]
+    ],
+    "wlc": [
+      [
+        "o150040120222",
+        "o150040120223"
+      ],
+      [
+        "o150050160061",
+        "o150050160062"
+      ],
+      [
+        "o150060030182",
+        "o150060030183"
+      ],
+      [
+        "o020290120141"
+      ],
+      [
+        "o030040070211"
+      ],
+      [
+        "o030040180181"
+      ],
+      [
+        "o030040250151"
+      ],
+      [
+        "o030040300151"
+      ],
+      [
+        "o030040340161"
+      ],
+      [
+        "o030050090111"
+      ],
+      [
+        "o030080150191"
+      ],
+      [
+        "o030090090181"
+      ],
+      [
+        "o180040190071",
+        "o180040190072"
+      ],
+      [
+        "o180220160071",
+        "o180220160072"
+      ],
+      [
+        "o191370070122"
+      ],
+      [
+        "o260130140111",
+        "o260130140112"
+      ],
+      [
+        "o330010060102",
+        "o330010060103"
+      ],
+      [
+        "o350030130121"
+      ],
+      [
+        "o190870010051",
+        "o190870010052"
+      ],
+      [
+        "o140080160071"
+      ],
+      [
+        "o230280160141"
+      ],
+      [
+        "o050320220131"
+      ],
+      [
+        "o190180080042"
+      ],
+      [
+        "o190820050091"
+      ],
+      [
+        "o200080290091"
+      ],
+      [
+        "o230240180181"
+      ],
+      [
+        "o230580120051"
+      ],
+      [
+        "o240310370091"
+      ],
+      [
+        "o330060020071"
+      ],
+      [
+        "o260410080071"
+      ],
+      [
+        "o100220080042"
+      ],
+      [
+        "o100220080051"
+      ],
+      [
+        "o100220160051"
+      ],
+      [
+        "o190180160051"
+      ],
+      [
+        "o230400210111"
+      ],
+      [
+        "o240510260072"
+      ],
+      [
+        "o110070090113"
+      ]
+    ]
+  },
+  "id": "realia:Foundation",
+  "key_references": [
+    "11006036",
+    "23028016",
+    "40007025",
+    "49002020"
+  ],
+  "lemmas": {
+    "el": [
+      "ἐνδώμησις",
+      "θεμέλιος",
+      "θεμελιόω"
+    ],
+    "he": [
+      "אֹשׁ",
+      "יְסֹוד",
+      "יְסוּדָה",
+      "מוּסָד",
+      "מֹוסָד",
+      "מוּסָדָה",
+      "מֹוסָדָה",
+      "מַסָּד"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "الجزء التحتي من المبنى البشيل كل شي مبني فوقه.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "أساس"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "الجزء السفلي من البناء الذي يدعم كل ما يُبنى فوقه.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "أَسَاس"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Haf we i stap daon long stamba blong wan bilding we i karem hevi blong evri samting we oli bildim antap long hem.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "fandesen"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Base",
+        "Foundation Stone",
+        "To Lay a Foundation",
+        "To Found Something Upon",
+        "Cornerstone"
+      ],
+      "descriptions": [
+        {
+          "article": "realia:Foundation",
+          "description": "The bottom part of a building that supports everything built on top of it.",
+          "gloss": "Foundation",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Foundation"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "پایین‌ترین بخش یک ساختمان که وزن تمام سازه روی آن قرار می‌گیرد.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "شالوده"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Partie inférieure d'un bâtiment qui soutient tout ce qui est construit au-dessus.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "fondement"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Ƙasan gini da yake ɗaukar dukan abin da aka gina a kansa.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "harsashi"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "किसी भवन का निचला भाग जो उसके ऊपर बनी हर चीज़ को सहारा देता है।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "नींव"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Akụkụ ala nke ụlọ nke na-akwado ihe niile e wuru nʼelu ya.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "ntọala"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Bagian paling bawah dari suatu bangunan yang menopang segala sesuatu yang dibangun di atasnya.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "fondasi"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "भवनको तल्लो भाग जसले त्यसको माथि बनेका सबै कुरालाई थाम्छ।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "जग"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "A parte inferior de uma construção que sustenta tudo o que é edificado sobre ela.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "fundamento"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Нижняя часть строения, служащая опорой для всего, что возведено над ней.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "основание"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Parte inferior de un edificio que sostiene todo lo que se construye sobre ella.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "cimiento"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Sehemu ya chini ya jengo inayotegemeza kila kitu kilichojengwa juu yake.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Msingi"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "As o pat bilong haus i stap daunbilo we i holim na karim hevi bilong olgeta samting ol i wokim antap long en.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "as bilong haus"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Phần dưới cùng của một công trình xây dựng, nâng đỡ toàn bộ những gì được xây cất bên trên nó.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "nền móng"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "建筑物的底部，用来支撑其上方建造的一切结构。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "根基"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "建築物的底部結構，用來支撐上方所有的建築。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "根基"
+    }
+  },
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "primary_id": "realia:Foundation",
+  "pronominal_referents": {
+    "SBLGNT": [
+      [
+        "n66021014011"
+      ]
+    ]
+  },
+  "realia_type": "other",
+  "references": [
+    "02029012",
+    "03004007",
+    "03004018",
+    "03004025",
+    "03004030",
+    "03004034",
+    "03005009",
+    "03008015",
+    "03009009",
+    "05032022",
+    "10022008",
+    "10022016",
+    "11007009",
+    "14008016",
+    "15004012",
+    "15005016",
+    "15006003",
+    "18004019",
+    "18022016",
+    "19018008",
+    "19018016",
+    "19082005",
+    "19087001",
+    "19137007",
+    "20008029",
+    "23024018",
+    "23028016",
+    "23040021",
+    "23058012",
+    "24031037",
+    "24051026",
+    "26013014",
+    "26041008",
+    "33001006",
+    "33006002",
+    "35003013",
+    "40007025",
+    "42006048",
+    "42006049",
+    "42014029",
+    "44016026",
+    "45015020",
+    "46003010",
+    "46003012",
+    "49002020",
+    "58001010",
+    "58011010",
+    "66021014",
+    "66021018",
+    "66021019"
+  ],
+  "subject_referents": {
+    "SBLGNT": [
+      [
+        "n46003011009"
+      ]
+    ],
+    "wlc": [
+      [
+        "o230280160151"
+      ],
+      [
+        "o190180080072"
+      ],
+      [
+        "o100220080082"
+      ]
+    ]
+  },
+  "type": "realia",
+  "ubsdbh": [
+    "000725001001000",
+    "002969001001000",
+    "002970001001000",
+    "003782001001000",
+    "003783001001000",
+    "003784001001000",
+    "003785001001000",
+    "004144001001000"
+  ],
+  "ubsdgnt": [
+    "7.41",
+    "7.43",
+    "7.42"
+  ]
+}

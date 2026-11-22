@@ -1,0 +1,759 @@
+{
+  "alternate_sources": {
+    "aquifer": [
+      "3321|Abram|TyndaleBibleDictionary"
+    ],
+    "tipnr": [
+      "Abram|Abraham@Gen.11.26-1Pe"
+    ],
+    "ubsdbh": [
+      "000086001001000"
+    ],
+    "vizbible": [
+      "reccdFYIq50NyxNej"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "person:Abraham",
+    "review_status": "source_unreviewed",
+    "source_id": "person:Abram",
+    "source_primary_id": "person:Abraham",
+    "source_sha256": "b07bb6cc1e3a12679d259f209735a53c71a6d67466488280c076f8120ce513f4"
+  },
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o010110260071"
+      ],
+      [
+        "o010110270071"
+      ],
+      [
+        "o010110290021"
+      ],
+      [
+        "o010110290081"
+      ],
+      [
+        "o010110310041"
+      ],
+      [
+        "o010110310161"
+      ],
+      [
+        "o010120010041"
+      ],
+      [
+        "o010120040021"
+      ],
+      [
+        "o010120040102"
+      ],
+      [
+        "o010120050021"
+      ],
+      [
+        "o010120060021"
+      ],
+      [
+        "o010120070041"
+      ],
+      [
+        "o010120090021"
+      ],
+      [
+        "o010120100051"
+      ],
+      [
+        "o010120140031"
+      ],
+      [
+        "o010120160013"
+      ],
+      [
+        "o010120170131"
+      ],
+      [
+        "o010120180032"
+      ],
+      [
+        "o010130010021"
+      ],
+      [
+        "o010130020012"
+      ],
+      [
+        "o010130040101"
+      ],
+      [
+        "o010130050051"
+      ],
+      [
+        "o010130070061"
+      ],
+      [
+        "o010130080021"
+      ],
+      [
+        "o010130120011"
+      ],
+      [
+        "o010130140041"
+      ],
+      [
+        "o010130180021"
+      ],
+      [
+        "o010140120081"
+      ],
+      [
+        "o010140130042"
+      ],
+      [
+        "o010140130181"
+      ],
+      [
+        "o010140140021"
+      ],
+      [
+        "o010140190041"
+      ],
+      [
+        "o010140210051"
+      ],
+      [
+        "o010140220021"
+      ],
+      [
+        "o010140230161"
+      ],
+      [
+        "o010150010081"
+      ],
+      [
+        "o010150010131"
+      ],
+      [
+        "o010150020021"
+      ],
+      [
+        "o010150030021"
+      ],
+      [
+        "o010150110071"
+      ],
+      [
+        "o010150120071"
+      ],
+      [
+        "o010150130022"
+      ],
+      [
+        "o010150180061"
+      ],
+      [
+        "o010160010031"
+      ],
+      [
+        "o010160020041"
+      ],
+      [
+        "o010160020181"
+      ],
+      [
+        "o010160030041"
+      ],
+      [
+        "o010160030131"
+      ],
+      [
+        "o010160030182"
+      ],
+      [
+        "o010160050041"
+      ],
+      [
+        "o010160060021"
+      ],
+      [
+        "o010160150032"
+      ],
+      [
+        "o010160150061"
+      ],
+      [
+        "o010160160012"
+      ],
+      [
+        "o010160160112"
+      ],
+      [
+        "o010170010021"
+      ],
+      [
+        "o010170010111"
+      ],
+      [
+        "o010170030021"
+      ],
+      [
+        "o010170050061"
+      ],
+      [
+        "o130010270011"
+      ],
+      [
+        "o160090070072"
+      ]
+    ]
+  },
+  "father": "person:Terah",
+  "gender": "male",
+  "id": "person:Abram",
+  "key_references": [
+    "01011026",
+    "01012001",
+    "01017001",
+    "01017002",
+    "01017003",
+    "01017004",
+    "01017005",
+    "16009007"
+  ],
+  "lemmas": {
+    "he": [
+      "אַבְרָם"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "أول الآباء لإسرائيل، بعدين اتسمى إبراهيم. زوج سارة وهاجر وقطورة، وأبو إسماعيل وإسحاق وأولاد تانيين.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "أبرام (إبراهيم)"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "أول آباء إسرائيل، دُعي لاحقًا إبراهيم. وهو زوج سارة وهاجر وقطورة، وأبو إسماعيل وإسحاق وبنين آخرين.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "أَبْرَام (إِبْرَاهِيمَ)"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Fas patriake blong Isrel, we biaen nem blong hem Ebraham. Man blong Sera, Hega, mo Ketura, mo papa blong Ismael, Aeseak, mo ol narafala boe.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ebram (Ebraham)"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Abraham"
+      ],
+      "descriptions": [
+        {
+          "article": "person:Abram",
+          "description": "The first patriarch of Israel, later named Abraham. Husband of Sarah, Hagar, and Keturah, and father of Ishmael, Isaac, and other sons.",
+          "gloss": "Abraham",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Abram (Abraham)"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "نخستین پاتریارک (جد بزرگ) اسرائیل، که بعداً ابراهیم نامیده شد؛ همسر ساره، هاجر و قطوره، و پدر اسماعیل، اسحاق و پسران دیگر.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "ابرام (ابراهیم)"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Premier patriarche d'Israël, nommé plus tard Abraham. Époux de Sara, Agar et Ketura, et père d'Ismaël, Isaac et d'autres fils.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Abram (Abraham)"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Uban iyali na farko na Isra’ila, wanda daga baya aka kira Ibrahim. Mijin Saratu, Hagar, da Ketura, kuma mahaifin Ishmayel, Ishaku, da sauran ’ya’ya maza.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Abram (Ibrahim)"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "इस्राएल का पहला कुलपिता, जिसका नाम बाद में अब्राहम रखा गया। सारा, हागार और कतूरा का पति, तथा इश्माएल, इसहाक और अन्य पुत्रों का पिता।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "अब्राम (अब्राहम)"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Nna nna mbụ nke Izrel, nke e mesịrị kpọọ Ebraham. Di Sera, Hega, na Ketura, na nna Ishmael, Aịzik, na ụmụ ndị ọzọ.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ebram (Ebraham)"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Bapa leluhur pertama Israel, yang kemudian dinamai Abraham. Suami dari Sara, Hagar, dan Ketura, serta ayah dari Ismael, Ishak, dan anak-anak lainnya.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Abram (Abraham)"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "इस्राएलका पहिलो धर्मपिता, जसको पछिल्लो नाउँ अब्राहाम राखियो। सारा, हागार र कतूराका पति, तथा इश्माएल, इसहाक र अन्य छोराहरूका पिता।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "अब्राम (अब्राहाम)"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "O primeiro patriarca de Israel, mais tarde chamado de Abraão. Marido de Sara, Hagar e Quetura, e pai de Ismael, Isaque e outros filhos.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Abrão (Abraão)"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Первый патриарх Израиля, позже названный Авраамом. Муж Сарры, Агари и Хеттуры, а также отец Исмаила, Исаака и других сыновей.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Аврам (Авраам)"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Primer patriarca de Israel, llamado más tarde Abraham. Esposo de Sara, Agar y Cetura, y padre de Ismael, Isaac y otros hijos.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Abram (Abraham)"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Patriarki wa kwanza wa Israeli, baadaye akaitwa Abrahamu. Mume wa Sara, Hajiri, na Ketura, na baba wa Ishmaeli, Isaka, na wana wengine.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Abramu (Abrahamu)"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Nambawan bikpela tumbuna man bilong Israel, bihain ol i kolim em Abraham. Man bilong Sara, Hagar, na Ketura, na papa bilong Ismael, Aisak, na sampela arapela pikinini man.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Abram (Abraham)"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Tổ phụ đầu tiên của Y-sơ-ra-ên, về sau được đổi tên thành Áp-ra-ham. Chồng của Sa-ra, Ha-ga và Kê-tu-ra, và là cha của Ích-ma-ên, Y-sác cùng những người con trai khác.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Áp-ram (Áp-ra-ham)"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "以色列的第一位先祖，后来改名为亚伯拉罕。撒拉、夏甲和基土拉的丈夫，以实玛利、以撒及其他儿子的父亲。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "亚伯兰 (亚伯拉罕)"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "以色列的第一位先祖，後來得名亞伯拉罕。撒拉、夏甲和基土拉的丈夫，以實瑪利、以撒及其他兒子的父親。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "亞伯蘭（亞伯拉罕）"
+    }
+  },
+  "non_biblical": false,
+  "offspring": [
+    "person:Ishmael",
+    "person:Isaac",
+    "person:Zimran",
+    "person:Jokshan",
+    "person:Medan",
+    "person:Midian",
+    "person:Ishbak",
+    "person:Shuah"
+  ],
+  "only_mentioned_in_apocrypha": false,
+  "partners": [
+    "person:Sarah",
+    "person:Hagar",
+    "person:Keturah"
+  ],
+  "primary_id": "person:Abraham",
+  "pronominal_referents": {
+    "wlc": [
+      [
+        "o010130010041"
+      ],
+      [
+        "o010130080181"
+      ],
+      [
+        "o010130110121"
+      ],
+      [
+        "o010130140161"
+      ],
+      [
+        "o010130150061"
+      ],
+      [
+        "o010140130062"
+      ],
+      [
+        "o010140150041"
+      ],
+      [
+        "o010150020082"
+      ],
+      [
+        "o010150150012"
+      ],
+      [
+        "o130010270021"
+      ]
+    ]
+  },
+  "references": [
+    "01011026",
+    "01011027",
+    "01011029",
+    "01011031",
+    "01012001",
+    "01012004",
+    "01012005",
+    "01012006",
+    "01012007",
+    "01012009",
+    "01012010",
+    "01012014",
+    "01012016",
+    "01012017",
+    "01012018",
+    "01013001",
+    "01013002",
+    "01013004",
+    "01013005",
+    "01013007",
+    "01013008",
+    "01013012",
+    "01013014",
+    "01013018",
+    "01014012",
+    "01014013",
+    "01014014",
+    "01014019",
+    "01014021",
+    "01014022",
+    "01014023",
+    "01015001",
+    "01015002",
+    "01015003",
+    "01015011",
+    "01015012",
+    "01015013",
+    "01015018",
+    "01016001",
+    "01016002",
+    "01016003",
+    "01016005",
+    "01016006",
+    "01016015",
+    "01016016",
+    "01017001",
+    "01017003",
+    "01017005",
+    "13001027",
+    "16009007"
+  ],
+  "referred_to_as": [
+    "person:Abraham"
+  ],
+  "related_places": {
+    "birth_place": [
+      "place:Ur"
+    ]
+  },
+  "roles": [
+    "Shepherd",
+    "Patriarch"
+  ],
+  "siblings": [
+    "person:Nahor.2",
+    "person:Haran",
+    "person:Sarah"
+  ],
+  "subject_referents": {
+    "wlc": [
+      [
+        "o010110310182"
+      ],
+      [
+        "o010110310222"
+      ],
+      [
+        "o010110310252"
+      ],
+      [
+        "o010110310282"
+      ],
+      [
+        "o010120010051"
+      ],
+      [
+        "o010120020072"
+      ],
+      [
+        "o010120050141"
+      ],
+      [
+        "o010120050181"
+      ],
+      [
+        "o010120050202"
+      ],
+      [
+        "o010120050212"
+      ],
+      [
+        "o010120050242"
+      ],
+      [
+        "o010120070112"
+      ],
+      [
+        "o010120080012"
+      ],
+      [
+        "o010120080072"
+      ],
+      [
+        "o010120080142"
+      ],
+      [
+        "o010120080182"
+      ],
+      [
+        "o010120100072"
+      ],
+      [
+        "o010120110031"
+      ],
+      [
+        "o010120110042"
+      ],
+      [
+        "o010120110062"
+      ],
+      [
+        "o010120110121"
+      ],
+      [
+        "o010120180071"
+      ],
+      [
+        "o010120180111"
+      ],
+      [
+        "o010120190021"
+      ],
+      [
+        "o010120190121"
+      ],
+      [
+        "o010120190132"
+      ],
+      [
+        "o010130030012"
+      ],
+      [
+        "o010130040051"
+      ],
+      [
+        "o010130060052"
+      ],
+      [
+        "o010130060121"
+      ],
+      [
+        "o010130060132"
+      ],
+      [
+        "o010130090102"
+      ],
+      [
+        "o010130090132"
+      ],
+      [
+        "o010130110112"
+      ],
+      [
+        "o010130140091"
+      ],
+      [
+        "o010130140122"
+      ],
+      [
+        "o010130170011",
+        "o010130170021"
+      ],
+      [
+        "o010130180032"
+      ],
+      [
+        "o010130180042"
+      ],
+      [
+        "o010130180092"
+      ],
+      [
+        "o010140140062"
+      ],
+      [
+        "o010140140152"
+      ],
+      [
+        "o010140150062"
+      ],
+      [
+        "o010140150072"
+      ],
+      [
+        "o010140160012"
+      ],
+      [
+        "o010140160101"
+      ],
+      [
+        "o010140170072"
+      ],
+      [
+        "o010140200082"
+      ],
+      [
+        "o010140210061"
+      ],
+      [
+        "o010140210101"
+      ],
+      [
+        "o010140220061"
+      ],
+      [
+        "o010140230071"
+      ],
+      [
+        "o010150010121"
+      ],
+      [
+        "o010150050051"
+      ],
+      [
+        "o010150050082"
+      ],
+      [
+        "o010150050111"
+      ],
+      [
+        "o010150050122"
+      ],
+      [
+        "o010150060012"
+      ],
+      [
+        "o010150070142"
+      ],
+      [
+        "o010150080012"
+      ],
+      [
+        "o010150080051"
+      ],
+      [
+        "o010150080071"
+      ],
+      [
+        "o010150090031"
+      ],
+      [
+        "o010150100012"
+      ],
+      [
+        "o010150100062"
+      ],
+      [
+        "o010150100092"
+      ],
+      [
+        "o010150100171"
+      ],
+      [
+        "o010150130041"
+      ],
+      [
+        "o010150150061"
+      ],
+      [
+        "o010160020101"
+      ],
+      [
+        "o010160040012"
+      ],
+      [
+        "o010170010171"
+      ],
+      [
+        "o010170010192"
+      ],
+      [
+        "o010170040052"
+      ]
+    ]
+  },
+  "tribe": "group:Earlypatriarchs",
+  "type": "person",
+  "ubsdbh": [
+    "000086001001000"
+  ]
+}

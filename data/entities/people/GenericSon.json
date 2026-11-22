@@ -1,0 +1,329 @@
+{
+  "bsi": {
+    "canonical_id": "person:GenericSon",
+    "editorial_evidence": [
+      "Pinned Macula WLC 2 Kings 4:1 o120040010012 feminine noun 'woman' Ncfsa; other genuine plural child terms o120040010041 ('sons') and o120040010261 ('children') are distinct source tokens",
+      "https://github.com/Clear-Bible/macula-hebrew/blob/47db250bd55d0d8577f2a94fba114ef16c35b23c/WLC/lowfat/12-2Ki-004-lowfat.xml",
+      "Frozen ACAI person:GenericSon incorrectly claims the woman word; person:Widow has two original repeated singleton subject groups for the same word, preserved untouched"
+    ],
+    "editorial_reason": "2 Kings 4:1 uses the feminine singular Hebrew אִשָּׁה ('a woman') at o120040010012 to name the widow, not an unnamed son. The same verse separately mentions sons of prophets and her two children with other exact Hebrew tokens; without resolving those distinct child roles, remove only this demonstrably false source word from GenericSon. Preserve the source verse reference and original record; do not fabricate a replacement child word or merge the widow and her sons.",
+    "review_status": "editorially_reviewed",
+    "source_id": "person:GenericSon",
+    "source_primary_id": "person:GenericSon",
+    "source_sha256": "99963a484512ac2f1fe751778b9904b0e8d0627471700e83e8a0631ac2e66389"
+  },
+  "explicit_instances": {},
+  "id": "person:GenericSon",
+  "key_references": [
+    "12004001",
+    "12004006",
+    "12004019",
+    "20007001"
+  ],
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "ابن (ولد) بدون اسم مشارك في مقطع كتابي.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "ابن"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "ابن لم يُذكر اسمه مشارك في نص كتابي.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "ابن"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan pikinini boe we Baebol i no talem nem blong hem we i tekpat long wan stori.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Wan Pikinini Boe"
+    },
+    "eng": {
+      "descriptions": [
+        {
+          "description": "An unnamed son participating in a passage.",
+          "gloss": "A Son",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "A Son"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "پسری بی‌نام که در یک متن حضور دارد.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "یک پسر"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Un fils anonyme participant à un passage.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "un fils"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Wani ɗa da ba a ambaci sunansa ba wanda ya bayyana a cikin wani nassi.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Wani Ɗa"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "किसी शास्त्रभाग में भाग लेने वाला कोई अनाम पुत्र।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "एक पुत्र"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Otu nwa nwoke a na-akpọghị aha ya nke na-ekere òkè nʼotu akụkụ Akwụkwọ Nsọ.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Otu Nwa Nwoke"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Seorang anak laki-laki tanpa nama yang berperan serta dalam suatu nas.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Seorang Anak Laki-laki"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "धर्मशास्‍त्रको कुनै खण्डमा सहभागी एक नाम नखुलेका छोरा।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "एक छोरा"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Um filho não identificado que participa de uma passagem.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Um filho"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Безымянный сын, участвующий в отрывке.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Сын"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Un hijo no identificado que participa en un pasaje.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Un hijo"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Mwana asiyetajwa jina anayeshiriki katika kifungu.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Mwana"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Wanpela pikinini man i no gat nem i insait long wanpela stori o hap bilong Baibel.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Wanpela Pikinini Man"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Một người con trai không nêu tên tham gia vào một phân đoạn Kinh Thánh.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Một người con trai"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "在经文片段中出现的一位未具名的儿子。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "一个儿子"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "在經文中出現的未具名兒子。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "某個兒子"
+    }
+  },
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "primary_id": "person:GenericSon",
+  "pronominal_referents": {},
+  "references": [
+    "12004001",
+    "12004006",
+    "12004019",
+    "20007001"
+  ],
+  "speeches": {
+    "SBLGNT": [
+      {
+        "quote_type": "Dialogue",
+        "words": [
+          "n44023020004",
+          "n44023020005",
+          "n44023020006",
+          "n44023020007",
+          "n44023020008",
+          "n44023020009",
+          "n44023020010",
+          "n44023020011",
+          "n44023020012",
+          "n44023020013",
+          "n44023020014",
+          "n44023020015",
+          "n44023020016",
+          "n44023020017",
+          "n44023020018",
+          "n44023020019",
+          "n44023020020",
+          "n44023020021",
+          "n44023020022",
+          "n44023020023",
+          "n44023020024",
+          "n44023021001",
+          "n44023021002",
+          "n44023021003",
+          "n44023021004",
+          "n44023021005",
+          "n44023021006",
+          "n44023021007",
+          "n44023021008",
+          "n44023021009",
+          "n44023021010",
+          "n44023021011",
+          "n44023021012",
+          "n44023021013",
+          "n44023021014",
+          "n44023021015",
+          "n44023021016",
+          "n44023021017",
+          "n44023021018",
+          "n44023021019",
+          "n44023021020",
+          "n44023021021",
+          "n44023021022",
+          "n44023021023",
+          "n44023021024",
+          "n44023021025",
+          "n44023021026",
+          "n44023021027",
+          "n44023021028",
+          "n44023021029",
+          "n44023021030",
+          "n44023021031",
+          "n44023021032",
+          "n44023021033"
+        ]
+      }
+    ],
+    "wlc": [
+      {
+        "quote_type": "Dialogue",
+        "words": [
+          "o120040060071",
+          "o120040060072",
+          "o120040060081",
+          "o120040060082",
+          "o120040060091",
+          "o120040060101"
+        ]
+      },
+      {
+        "quote_type": "Normal",
+        "words": [
+          "o120040190091",
+          "o120040190092",
+          "o120040190101",
+          "o120040190111",
+          "o120040190112"
+        ]
+      },
+      {
+        "quote_type": "Hypothetical",
+        "words": [
+          "o200070040031",
+          "o200070040032",
+          "o200070040041"
+        ]
+      }
+    ]
+  },
+  "subject_referents": {
+    "SBLGNT": [
+      [
+        "n44023016004"
+      ],
+      [
+        "n44023020001"
+      ]
+    ],
+    "wlc": [
+      [
+        "o120040060042"
+      ],
+      [
+        "o120040190031"
+      ],
+      [
+        "o120040190062"
+      ],
+      [
+        "o200070010011"
+      ],
+      [
+        "o200070040011"
+      ]
+    ]
+  },
+  "type": "person"
+}

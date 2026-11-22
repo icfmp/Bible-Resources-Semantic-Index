@@ -1,0 +1,933 @@
+{
+  "alternate_sources": {
+    "aquifer": [
+      "6202|James (Person)|TyndaleBibleDictionary",
+      "6201|James, Letter of|TyndaleBibleDictionary",
+      "132065|James|BiblicaStudyNotesKeyTerms",
+      "280118|james|FIAKeyTerms",
+      "26742|James Son of Zebedee|UWTranslationWords",
+      "131988|James the apostle|BiblicaStudyNotesKeyTerms"
+    ],
+    "tipnr": [
+      "James@Mat.4.21-Act"
+    ],
+    "ubsdgnt": [
+      "93.158a",
+      "93.158c",
+      "93.158e"
+    ],
+    "vizbible": [
+      "rechkAyIwugqcLaaY"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "person:James",
+    "review_status": "source_unreviewed",
+    "source_id": "person:James",
+    "source_primary_id": "person:James",
+    "source_sha256": "a29329ea83d8c19ce08247f927b12ca0d2a08797f4fc951386fe8e16cf14e3e1"
+  },
+  "explicit_instances": {
+    "SBLGNT": [
+      [
+        "n40004021008"
+      ],
+      [
+        "n40010002019"
+      ],
+      [
+        "n40017001011"
+      ],
+      [
+        "n41001019005"
+      ],
+      [
+        "n41001029015"
+      ],
+      [
+        "n41003017002"
+      ],
+      [
+        "n41003017011"
+      ],
+      [
+        "n41005037013"
+      ],
+      [
+        "n41005037018"
+      ],
+      [
+        "n41009002012"
+      ],
+      [
+        "n41010035004"
+      ],
+      [
+        "n41010041008"
+      ],
+      [
+        "n41013003018"
+      ],
+      [
+        "n41014033006"
+      ],
+      [
+        "n42005010004"
+      ],
+      [
+        "n42006014012"
+      ],
+      [
+        "n42008051018"
+      ],
+      [
+        "n42009028016"
+      ],
+      [
+        "n42009054005"
+      ],
+      [
+        "n44001013017"
+      ],
+      [
+        "n44012002003"
+      ]
+    ]
+  },
+  "father": "person:Zebedee",
+  "gender": "male",
+  "id": "person:James",
+  "key_references": [
+    "40004021",
+    "40020020",
+    "41001019",
+    "41003017",
+    "41010035",
+    "44012001",
+    "44012002"
+  ],
+  "lemmas": {
+    "el": [
+      "Ἰάκωβος"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "واحد من رسل يسوع الاثنا عشر، أخو الرسول والمبشر يوحنا، وولد زبدي. استشهد في سبيل الإيمان المسيحي على يد الملك هيرودس أغريباس الأول.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "يعقوب"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "أحد رسل يسوع الاثني عشر، وأخو يوحنا الرسول والإنجيلي، وابن زبدي. استُشهد في سبيل الإيمان المسيحي على يد الملك هيرودس أغريباس الأول.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "يَعْقوب"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan long ol twelf aposol blong Jisas, brata blong aposol mo evaenjelis Jon, mo pikinini boe blong Sebedi. King Herod Agripa I i kilim hem i ded from bilif blong hem long Kraes.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Jemes"
+    },
+    "eng": {
+      "descriptions": [
+        {
+          "article": "person:James",
+          "description": "One of the twelve apostles of Jesus, brother of the apostle and evangelist John, and son of Zebedee. He was martyred for the Christian faith by King Herod Agrippa I.",
+          "gloss": "James",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "James"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "یکی از دوازده رسول عیسی، برادر یوحنای رسول و انجیل‌نگار، و پسر زبدی. او به خاطر ایمان مسیحی توسط هیرودیس اگریپای اول به شهادت رسید.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "یعقوب"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "L'un des douze apôtres de Jésus, frère de l'apôtre et évangéliste Jean, et fils de Zébédée. Il est mort martyr pour la foi chrétienne sous le roi Hérode Agrippa Ier.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Jacques"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Ɗaya daga cikin manzannin Yesu goma sha biyu, ɗan’uwan manzo kuma mai bishara Yohanna, kuma ɗan Zebedi. Sarki Hirudus Agaribas I ya kashe shi saboda bangaskiyar Kirista.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Yaƙub"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "यीशु के बारह प्रेरितों में से एक, प्रेरित और सुसमाचार प्रचारक यूहन्ना का भाई, और जब्दी का पुत्र। वह मसीही विश्वास के कारण राजा हेरोदेस अग्रिप्पा प्रथम द्वारा शहीद किया गया था।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "याकूब"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Otu nʼime ndị ozi iri na abụọ nke Jizọs, nwanne onyeozi na onye mgbasa ozi ọma bụ Jọn, na nwa Zebedi. Eze Herọd Agripa nke Mbụ gburu ya nʼihi okwukwe Kraịst.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Jemis"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Salah satu dari dua belas rasul Yesus, saudara dari rasul dan penginjil Yohanes, serta anak Zebedeus. Ia mati martir demi iman Kristen di tangan Raja Herodes Agripa I.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Yakobus"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "येशूका बाह्र प्रेरितहरूमध्ये एक, प्रेरित तथा सुसमाचार प्रचारक यूहन्‍नाका भाइ र जब्दियाका छोरा। राजा हेरोद अग्रिप्पा प्रथमद्वारा उनलाई ख्रीष्टियन विश्वासका निम्ति सहिद बनाइएको थियो।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "याकूब"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Um dos doze apóstolos de Jesus, irmão do apóstolo e evangelista João e filho de Zebedeu. Ele foi martirizado pela fé cristã pelo rei Herodes Agripa I.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Tiago"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Один из двенадцати апостолов Иисуса, брат апостола и евангелиста Иоанна и сын Зеведея. Принял мученическую смерть за христианскую веру от царя Ирода Агриппы I.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Иаков"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Uno de los doce apóstoles de Jesús, hermano del apóstol y evangelista Juan, e hijo de Zebedeo. Murió como mártir por la fe cristiana a manos del rey Herodes Agripa I.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Jacobo"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Mmoja wa mitume kumi na wawili wa Yesu, ndugu yake mtume na mwinjilisti Yohana, na mwana wa Zebedayo. Aliuawa kwa ajili ya imani ya Kikristo na Mfalme Herode Agripa I.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Yakobo"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Wanpela bilong ol 12-pela aposel bilong Jisas, brata bilong aposel na man bilong autim gutnius Jon, na pikinini man bilong Sebedi. King Herot Agripa I i bin kilim em i dai bicos long bilip bilong en long Krais.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Jems"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Một trong mười hai sứ đồ của Chúa Giê-xu, anh/em của sứ đồ và trước giả sách Phúc Âm Giăng, và là con trai của Xê-bê-đê. Ông đã tử vì đạo cho đức tin Cơ Đốc dưới thời Vua Hê-rốt Ạc-ríp-ba I.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Gia-cơ"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "耶稣的十二使徒之一，使徒兼布道者约翰的兄弟，西庇太的儿子。他因基督信仰被希律·亚基帕一世杀害殉道。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "雅各"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "耶穌十二使徒之一，使徒兼傳福音者約翰的兄弟，西庇太的兒子。他為了基督信仰被希律·亞基帕一世王殺害殉道。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "雅各"
+    }
+  },
+  "mother": "person:WifeOfZebedee",
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "primary_id": "person:James",
+  "pronominal_referents": {
+    "SBLGNT": [
+      [
+        "n40004021016"
+      ],
+      [
+        "n40010002008"
+      ],
+      [
+        "n40010002027"
+      ],
+      [
+        "n40010005001"
+      ],
+      [
+        "n40017001016"
+      ],
+      [
+        "n40017001019"
+      ],
+      [
+        "n40017001024"
+      ],
+      [
+        "n40017002004"
+      ],
+      [
+        "n40017003004"
+      ],
+      [
+        "n40017004011"
+      ],
+      [
+        "n40017005008"
+      ],
+      [
+        "n41001019013"
+      ],
+      [
+        "n41001019015"
+      ],
+      [
+        "n41001020004"
+      ],
+      [
+        "n41001020009"
+      ],
+      [
+        "n41001031015"
+      ],
+      [
+        "n41003017014"
+      ],
+      [
+        "n41009002017"
+      ],
+      [
+        "n41009002022"
+      ],
+      [
+        "n41009002027"
+      ],
+      [
+        "n41009004003"
+      ],
+      [
+        "n41009005011"
+      ],
+      [
+        "n41009007005"
+      ],
+      [
+        "n41009008012"
+      ],
+      [
+        "n41009009003"
+      ],
+      [
+        "n41009009008"
+      ],
+      [
+        "n41009010006"
+      ],
+      [
+        "n41009012004"
+      ],
+      [
+        "n41009013003"
+      ],
+      [
+        "n41010035020"
+      ],
+      [
+        "n41010036004"
+      ],
+      [
+        "n41010036008"
+      ],
+      [
+        "n41010037001"
+      ],
+      [
+        "n41010037006"
+      ],
+      [
+        "n41010038005"
+      ],
+      [
+        "n41010039001"
+      ],
+      [
+        "n41010039010"
+      ],
+      [
+        "n41013003015"
+      ],
+      [
+        "n41013004002"
+      ],
+      [
+        "n41013005006"
+      ],
+      [
+        "n41013005010"
+      ],
+      [
+        "n41013009003",
+        "n41013009004"
+      ],
+      [
+        "n41013009006"
+      ],
+      [
+        "n41013011004"
+      ],
+      [
+        "n41013011014"
+      ],
+      [
+        "n41013011024"
+      ],
+      [
+        "n41013021005"
+      ],
+      [
+        "n41013023001"
+      ],
+      [
+        "n41013023005"
+      ],
+      [
+        "n41013029003"
+      ],
+      [
+        "n41013030003"
+      ],
+      [
+        "n41013036005"
+      ],
+      [
+        "n41013037003"
+      ],
+      [
+        "n41014034003"
+      ],
+      [
+        "n41014037005"
+      ],
+      [
+        "n41014040005"
+      ],
+      [
+        "n41014040009"
+      ],
+      [
+        "n41014041007"
+      ],
+      [
+        "n42005010009"
+      ],
+      [
+        "n42005029021"
+      ],
+      [
+        "n42008056009"
+      ],
+      [
+        "n44001014001"
+      ],
+      [
+        "n44001014001"
+      ],
+      [
+        "n44001017005"
+      ],
+      [
+        "n44001017005"
+      ],
+      [
+        "n44001021005"
+      ],
+      [
+        "n44001021005"
+      ],
+      [
+        "n44001021015"
+      ],
+      [
+        "n44001021015"
+      ],
+      [
+        "n44001022012"
+      ],
+      [
+        "n44001022012"
+      ],
+      [
+        "n44001022018"
+      ],
+      [
+        "n44001022018"
+      ]
+    ]
+  },
+  "references": [
+    "40004021",
+    "40010002",
+    "40017001",
+    "41001019",
+    "41001029",
+    "41003017",
+    "41005037",
+    "41009002",
+    "41010035",
+    "41010041",
+    "41013003",
+    "41014033",
+    "42005010",
+    "42006014",
+    "42008051",
+    "42009028",
+    "42009054",
+    "44001013",
+    "44012002"
+  ],
+  "related_places": {
+    "death_place": [
+      "place:Judea"
+    ]
+  },
+  "roles": [
+    "Martyr",
+    "Apostle",
+    "Disciple"
+  ],
+  "siblings": [
+    "person:John.2"
+  ],
+  "speeches": {
+    "SBLGNT": [
+      {
+        "delivery": "puzzled",
+        "quote_type": "Dialogue",
+        "words": [
+          "n40017010007",
+          "n40017010008",
+          "n40017010009",
+          "n40017010010",
+          "n40017010011",
+          "n40017010012",
+          "n40017010013",
+          "n40017010014",
+          "n40017010015",
+          "n40017010016"
+        ]
+      },
+      {
+        "delivery": "boldly",
+        "quote_type": "Dialogue",
+        "words": [
+          "n40020022020"
+        ]
+      },
+      {
+        "quote_type": "Dialogue",
+        "words": [
+          "n40024003016",
+          "n40024003017",
+          "n40024003018",
+          "n40024003019",
+          "n40024003020",
+          "n40024003021",
+          "n40024003022",
+          "n40024003023",
+          "n40024003024",
+          "n40024003025",
+          "n40024003026",
+          "n40024003027",
+          "n40024003028",
+          "n40024003029",
+          "n40024003030",
+          "n40024003031"
+        ]
+      },
+      {
+        "delivery": "puzzled",
+        "quote_type": "Dialogue",
+        "words": [
+          "n41009011005",
+          "n41009011006",
+          "n41009011007",
+          "n41009011008",
+          "n41009011009",
+          "n41009011010",
+          "n41009011011",
+          "n41009011012",
+          "n41009011013"
+        ]
+      },
+      {
+        "delivery": "boldly",
+        "quote_type": "Dialogue",
+        "words": [
+          "n41010035012",
+          "n41010035013",
+          "n41010035014",
+          "n41010035015",
+          "n41010035016",
+          "n41010035017",
+          "n41010035018",
+          "n41010035019",
+          "n41010035020"
+        ]
+      },
+      {
+        "delivery": "boldly",
+        "quote_type": "Dialogue",
+        "words": [
+          "n41010037005",
+          "n41010037006",
+          "n41010037007",
+          "n41010037008",
+          "n41010037009",
+          "n41010037010",
+          "n41010037011",
+          "n41010037012",
+          "n41010037013",
+          "n41010037014",
+          "n41010037015",
+          "n41010037016",
+          "n41010037017",
+          "n41010037018",
+          "n41010037019",
+          "n41010037020"
+        ]
+      },
+      {
+        "quote_type": "Dialogue",
+        "words": [
+          "n41013004001",
+          "n41013004002",
+          "n41013004003",
+          "n41013004004",
+          "n41013004005",
+          "n41013004006",
+          "n41013004007",
+          "n41013004008",
+          "n41013004009",
+          "n41013004010",
+          "n41013004011",
+          "n41013004012",
+          "n41013004013",
+          "n41013004014"
+        ]
+      },
+      {
+        "quote_type": "Dialogue",
+        "words": [
+          "n42009054009",
+          "n42009054010",
+          "n42009054011",
+          "n42009054012",
+          "n42009054013",
+          "n42009054014",
+          "n42009054015",
+          "n42009054016",
+          "n42009054017",
+          "n42009054018",
+          "n42009054019"
+        ]
+      },
+      {
+        "quote_type": "Dialogue",
+        "words": [
+          "n42021007005",
+          "n42021007006",
+          "n42021007007",
+          "n42021007008",
+          "n42021007009",
+          "n42021007010",
+          "n42021007011",
+          "n42021007012",
+          "n42021007013",
+          "n42021007014",
+          "n42021007015",
+          "n42021007016",
+          "n42021007017"
+        ]
+      },
+      {
+        "quote_type": "Dialogue",
+        "words": [
+          "n43021003009",
+          "n43021003010",
+          "n43021003011",
+          "n43021003012",
+          "n43021003013"
+        ]
+      }
+    ]
+  },
+  "subject_referents": {
+    "SBLGNT": [
+      [
+        "n40017005026"
+      ],
+      [
+        "n41001020006"
+      ],
+      [
+        "n41001020017"
+      ],
+      [
+        "n41001021002"
+      ],
+      [
+        "n41001029006",
+        "n41001029007"
+      ],
+      [
+        "n41001030009"
+      ],
+      [
+        "n41005038002"
+      ],
+      [
+        "n41009005015"
+      ],
+      [
+        "n41009006008"
+      ],
+      [
+        "n41009007019"
+      ],
+      [
+        "n41009008003"
+      ],
+      [
+        "n41009008006"
+      ],
+      [
+        "n41009009012",
+        "n41009009013"
+      ],
+      [
+        "n41009010004"
+      ],
+      [
+        "n41009010007"
+      ],
+      [
+        "n41009011002"
+      ],
+      [
+        "n41009011004"
+      ],
+      [
+        "n41009014002"
+      ],
+      [
+        "n41009014006"
+      ],
+      [
+        "n41010035010"
+      ],
+      [
+        "n41010035013"
+      ],
+      [
+        "n41010035017"
+      ],
+      [
+        "n41010036006"
+      ],
+      [
+        "n41010037016"
+      ],
+      [
+        "n41010038007"
+      ],
+      [
+        "n41010038009",
+        "n41010038010",
+        "n41010038011"
+      ],
+      [
+        "n41010038023"
+      ],
+      [
+        "n41010039005"
+      ],
+      [
+        "n41010039016"
+      ],
+      [
+        "n41010039023"
+      ],
+      [
+        "n41013005007"
+      ],
+      [
+        "n41013007003"
+      ],
+      [
+        "n41013007009"
+      ],
+      [
+        "n41013009012"
+      ],
+      [
+        "n41013009018"
+      ],
+      [
+        "n41013011007"
+      ],
+      [
+        "n41013011009"
+      ],
+      [
+        "n41013011020"
+      ],
+      [
+        "n41013013002",
+        "n41013013003"
+      ],
+      [
+        "n41013014003"
+      ],
+      [
+        "n41013018001"
+      ],
+      [
+        "n41013021007"
+      ],
+      [
+        "n41013021011"
+      ],
+      [
+        "n41013021014"
+      ],
+      [
+        "n41013028005"
+      ],
+      [
+        "n41013028019"
+      ],
+      [
+        "n41013029005"
+      ],
+      [
+        "n41013033001",
+        "n41013033002"
+      ],
+      [
+        "n41013033004"
+      ],
+      [
+        "n41013035001"
+      ],
+      [
+        "n41013035004"
+      ],
+      [
+        "n41013037007"
+      ],
+      [
+        "n41014034011"
+      ],
+      [
+        "n41014034014"
+      ],
+      [
+        "n41014038001"
+      ],
+      [
+        "n41014038003"
+      ],
+      [
+        "n41014038006"
+      ],
+      [
+        "n41014040015"
+      ],
+      [
+        "n41014040017"
+      ],
+      [
+        "n41014041008"
+      ],
+      [
+        "n41014041012"
+      ],
+      [
+        "n41014041017"
+      ],
+      [
+        "n41014042001",
+        "n41014042002",
+        "n41014042003"
+      ],
+      [
+        "n42005011002"
+      ],
+      [
+        "n42005011008"
+      ],
+      [
+        "n42005011010"
+      ],
+      [
+        "n42008056011"
+      ]
+    ]
+  },
+  "type": "person",
+  "ubsdgnt": [
+    "93.158a",
+    "93.158c",
+    "93.158e"
+  ]
+}

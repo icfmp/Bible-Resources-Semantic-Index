@@ -1,0 +1,279 @@
+{
+  "added_entry": false,
+  "alternate_sources": {
+    "aquifer": [
+      "8104|Salem|TyndaleBibleDictionary"
+    ],
+    "geonames": [
+      "http://sws.geonames.org/1629104"
+    ],
+    "tipnr": [
+      "Salem|Jerusalem@Jos.10.1-Rev"
+    ],
+    "ubsdgnt": [
+      "93.321 93.566"
+    ],
+    "vizbible": [
+      "recXmfE7tECVVSN23"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "place:Jerusalem",
+    "review_status": "source_unreviewed",
+    "source_id": "place:Salem",
+    "source_primary_id": "place:Jerusalem",
+    "source_sha256": "6d906e373590e5cd6a137de980d2c90c43beed86f4aed852548b854a1ed27c90"
+  },
+  "explicit_instances": {
+    "SBLGNT": [
+      [
+        "n58007001006"
+      ],
+      [
+        "n58007002017"
+      ]
+    ],
+    "wlc": [
+      [
+        "o010140180041"
+      ],
+      [
+        "o190760030022"
+      ]
+    ]
+  },
+  "geocoordinates": {
+    "obi": {
+      "lat": "31.777444",
+      "lon": "35.234935"
+    },
+    "recogito": {
+      "lat": "-7.1825",
+      "lon": "108.8059"
+    },
+    "vizbible": {
+      "lat": "31.777444",
+      "lon": "35.234935"
+    }
+  },
+  "id": "place:Salem",
+  "is_artifact": false,
+  "is_person": false,
+  "key_references": [
+    "01014018",
+    "58007001"
+  ],
+  "lemmas": {
+    "el": [
+      "Σαλήμ"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "بلدة كان بحكمها ملكي صادق في زمن إبراهيم؛ وبتطابق مع أورشليم.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "شاليم"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "بلدة حكمها ملكي صادق في زمن إبراهيم؛ ومطابقة لأورشليم.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "شَالِيمَ"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan taon we Melkisedek i rul long hem long taem blong Ebraham; i semfala ples wetem Jerusalem.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Salem"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Jerusalem"
+      ],
+      "descriptions": [
+        {
+          "article": "place:Salem",
+          "description": "A town ruled by Melchizedek during the time of Abraham; to be identified with Jerusalem.",
+          "gloss": "Salem",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Salem"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "شهری که در زمان ابراهیم تحت فرمانروایی مِلکیصِدِق بود؛ این شهر همان اورشلیم دانسته می‌شود.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "سالیم"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Une ville gouvernée par Melchisédek à l'époque d'Abraham ; à identifier avec Jérusalem.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Salem"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Wani gari da Melkizedek ya yi sarauta a kansa a zamanin Ibrahim; ana ɗauka birnin Urushalima ne.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Salem"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "अब्राहम के समय में मलिकिसिदक द्वारा शासित एक नगर; इसकी पहचान यरूशलेम से की जाती है।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "शालेम"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Otu obodo Melkizedek chịrị nʼoge Ebraham; a na-amata ya dị ka Jerusalem.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Salem"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Sebuah kota yang diperintah oleh Melkisedek pada zaman Abraham; diidentifikasi dengan Yerusalem.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Salem"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "अब्राहामको समयमा मल्कीसेदेकले शासन गरेको एउटा सहर; यसलाई यरूशलेम भनेर चिनिन्छ।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "शालेम"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Uma cidade governada por Melquisedeque durante a época de Abraão; identificada com Jerusalém.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Salém"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Город, которым во времена Авраама правил Мелхиседек; отождествляется с Иерусалимом.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Салим"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Un pueblo gobernado por Melquisedec durante la época de Abraham; se identifica con Jerusalén.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Salem"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Mji uliotawaliwa na Melkizedeki wakati wa Ibrahimu; unatambulishwa na Yerusalemu.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Salemu"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Wanpela taun Melkisedek i bin bosim long taim bilong Abraham; em i wankain olsem Jerusalem.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Salem"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Một thị trấn do Mên-chi-xê-đéc cai trị vào thời Áp-ra-ham; được đồng nhất với Giê-ru-sa-lem.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Sa-lem"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "亚伯拉罕时代由麦基洗德统治的城镇；被认定为耶路撒冷。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "撒冷"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "亞伯拉罕時代由麥基洗德統治的城鎮；被認定為耶路撒冷。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "撒冷"
+    }
+  },
+  "mentioned_in_bible": true,
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "place_types": {
+    "acai": [
+      "town"
+    ],
+    "obi": [
+      "settlement"
+    ],
+    "vizbible": [
+      "City"
+    ]
+  },
+  "primary_id": "place:Jerusalem",
+  "pronominal_referents": {},
+  "references": [
+    "01014018",
+    "19076003",
+    "58007001",
+    "58007002"
+  ],
+  "referred_to_as": [
+    "place:Jerusalem"
+  ],
+  "subject_referents": {},
+  "type": "place",
+  "ubsdgnt": [
+    "93.321 93.566"
+  ]
+}

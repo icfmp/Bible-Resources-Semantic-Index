@@ -1,0 +1,620 @@
+{
+  "alternate_sources": {
+    "aquifer": [
+      "6160|Jackal|TyndaleBibleDictionary"
+    ],
+    "ubsdbh": [
+      "000239001001000",
+      "000316001002000",
+      "007259001001000",
+      "007859001001000"
+    ],
+    "ubsdgnt": [
+      "4.10"
+    ],
+    "ubsfauna": [
+      "fauna:2.22"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "fauna:Jackal",
+    "review_status": "source_unreviewed",
+    "source_id": "fauna:Jackal",
+    "source_primary_id": "fauna:Jackal",
+    "source_sha256": "7130a91ecf703095aa32e27c00625272fed04472b24fa9aaf705b15425dd1d42"
+  },
+  "explicit_instances": {
+    "SBLGNT": [
+      [
+        "n40008020007"
+      ],
+      [
+        "n42009058007"
+      ],
+      [
+        "n42013032007"
+      ],
+      [
+        "n40007006014"
+      ],
+      [
+        "n40008030007"
+      ],
+      [
+        "n40008031016"
+      ],
+      [
+        "n40008032011"
+      ],
+      [
+        "n41005011008"
+      ],
+      [
+        "n41005012009"
+      ],
+      [
+        "n41005013013"
+      ],
+      [
+        "n41005016013"
+      ],
+      [
+        "n42008032005"
+      ],
+      [
+        "n42008033011"
+      ],
+      [
+        "n42015015018"
+      ],
+      [
+        "n42015016013"
+      ],
+      [
+        "n61002022014"
+      ]
+    ],
+    "wlc": [
+      [
+        "o230130210061"
+      ],
+      [
+        "o230130220021"
+      ],
+      [
+        "o230340140041"
+      ],
+      [
+        "o240500390051"
+      ],
+      [
+        "o070150040061"
+      ],
+      [
+        "o160030350111"
+      ],
+      [
+        "o190630110061"
+      ],
+      [
+        "o220020150031"
+      ],
+      [
+        "o220020150041"
+      ],
+      [
+        "o250050180051"
+      ],
+      [
+        "o260130040012"
+      ],
+      [
+        "o180300290032"
+      ],
+      [
+        "o190440200041"
+      ],
+      [
+        "o230130220042"
+      ],
+      [
+        "o230340130091"
+      ],
+      [
+        "o230350070081"
+      ],
+      [
+        "o230430200041"
+      ],
+      [
+        "o240090100061"
+      ],
+      [
+        "o240100220151"
+      ],
+      [
+        "o240140060072"
+      ],
+      [
+        "o240490330041"
+      ],
+      [
+        "o240510370051"
+      ],
+      [
+        "o250040030031"
+      ],
+      [
+        "o330010080112"
+      ],
+      [
+        "o390010030102"
+      ],
+      [
+        "o030110070022"
+      ],
+      [
+        "o050140080022"
+      ],
+      [
+        "o190800140021"
+      ],
+      [
+        "o200110220041"
+      ],
+      [
+        "o230650040072"
+      ],
+      [
+        "o230660030121"
+      ],
+      [
+        "o230660170112"
+      ],
+      [
+        "o010370200081"
+      ],
+      [
+        "o010370200091"
+      ],
+      [
+        "o010370330051"
+      ],
+      [
+        "o010370330061"
+      ],
+      [
+        "o030260060081"
+      ],
+      [
+        "o030260060091"
+      ],
+      [
+        "o260050170042"
+      ],
+      [
+        "o260050170051"
+      ],
+      [
+        "o260140150021"
+      ],
+      [
+        "o260140150031"
+      ],
+      [
+        "o260140210132"
+      ],
+      [
+        "o260140210141"
+      ],
+      [
+        "o260340250061"
+      ],
+      [
+        "o260340250071"
+      ]
+    ]
+  },
+  "fauna_type": "Mammals",
+  "id": "fauna:Jackal",
+  "key_references": [
+    "07015004",
+    "25004003",
+    "40008020"
+  ],
+  "lemmas": {
+    "el": [
+      "ἀλώπηξ"
+    ],
+    "he": [
+      "אֹחַ",
+      "אִי",
+      "שׁוּעָל",
+      "תַּן"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "حيوان بيشبه الكلب عندو نخرة مروّسة وضنب كثيف.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "ابن آوى"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "حيوان يشبه الكلب ذو خطم مدبب وذيل كثيف.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "ابْن آوَى"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan anamol we i olsem dog we i gat poyenfala nus mo busbus tel.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "wael dog"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Fox",
+        "Fennec",
+        "Hyena"
+      ],
+      "descriptions": [
+        {
+          "article": "fauna:Jackal",
+          "description": "A dog-like animal with a pointed nose and bushy tail.",
+          "gloss": "Jackal",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Jackal"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "جانوری شبیه به سگ با پوزه‌ای نوک‌تیز و دمی پرپشت.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "شغال"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Animal ressemblant au chien, au museau pointu et à la queue touffue.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "chacal"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Dabba mai kama da kare mai nuni hanci da wutsiya mai kauri.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Dila"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "नुकीली नाक और घनी पूँछ वाला कुत्ते जैसा एक जानवर।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "सियार"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Anụmanụ yiri nkịta nke nwere imi dị nkọ na ọdụ nwere ajị dị ukwuu.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Nkịta ọhịa"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Hewan mirip anjing dengan moncong runcing dan ekor lebat berbulu.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "anjing hutan"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "चुच्चो परेको नाक र झुप्पा परेको पुच्छर भएको कुकुरजस्तो जनावर।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "स्याल"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Animal semelhante a um cão, com focinho pontudo e cauda espessa.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "chacal"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Животное из семейства псовых с заостренной мордой и пушистым хвостом.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Шакал"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Animal parecido al perro, de hocico puntiagudo y cola espesa.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "chacal"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Mnyama anayefanana na mbwa mwenye pua iliyochongoka na mkia wenye manyoya mengi.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Mbweha"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Wanpela animal i luk olsem dok na i gat sap poret maus na gras long tel.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "weldok"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Một loài động vật giống chó có mõm nhọn và đuôi rậm rạp.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "chó rừng"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "一种似狗的动物，鼻子尖细，尾巴蓬松。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "豺狼"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "一種犬科動物，長著尖鼻子和毛茸茸的尾巴。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "豺狗"
+    }
+  },
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "possibly_same_as": [
+    "fauna:Hyena"
+  ],
+  "primary_id": "fauna:Jackal",
+  "pronominal_referents": {
+    "SBLGNT": [
+      [
+        "n40007006021"
+      ],
+      [
+        "n41005012012"
+      ]
+    ],
+    "wlc": [
+      [
+        "o230340160072"
+      ],
+      [
+        "o230340160101"
+      ],
+      [
+        "o230340160202"
+      ],
+      [
+        "o230340170032"
+      ],
+      [
+        "o230340170072"
+      ],
+      [
+        "o230340160072"
+      ],
+      [
+        "o230340160101"
+      ],
+      [
+        "o230340160202"
+      ],
+      [
+        "o230340170032"
+      ],
+      [
+        "o230340170072"
+      ],
+      [
+        "o230350070092"
+      ],
+      [
+        "o250040030072"
+      ],
+      [
+        "o030110070061"
+      ],
+      [
+        "o030110070102"
+      ],
+      [
+        "o030110070151"
+      ],
+      [
+        "o030110080013"
+      ],
+      [
+        "o030110080044"
+      ],
+      [
+        "o030110080081"
+      ],
+      [
+        "o050140080061"
+      ],
+      [
+        "o050140080101"
+      ],
+      [
+        "o050140080123"
+      ],
+      [
+        "o050140080154"
+      ]
+    ]
+  },
+  "references": [
+    "01037020",
+    "01037033",
+    "03011007",
+    "03026006",
+    "05014008",
+    "07015004",
+    "16003035",
+    "18030029",
+    "19044020",
+    "19063011",
+    "19080014",
+    "20011022",
+    "22002015",
+    "23013021",
+    "23013022",
+    "23034013",
+    "23034014",
+    "23035007",
+    "23043020",
+    "23065004",
+    "23066003",
+    "23066017",
+    "24009010",
+    "24010022",
+    "24014006",
+    "24049033",
+    "24050039",
+    "24051037",
+    "25004003",
+    "25005018",
+    "26005017",
+    "26013004",
+    "26014015",
+    "26014021",
+    "26034025",
+    "33001008",
+    "39001003",
+    "40007006",
+    "40008020",
+    "40008030",
+    "40008031",
+    "40008032",
+    "41005011",
+    "41005012",
+    "41005013",
+    "41005016",
+    "41016018",
+    "42008032",
+    "42008033",
+    "42009058",
+    "42013032",
+    "42015015",
+    "42015016",
+    "61002022"
+  ],
+  "subject_referents": {
+    "SBLGNT": [
+      [
+        "n42013032009"
+      ],
+      [
+        "n40007006016"
+      ],
+      [
+        "n40007006023"
+      ],
+      [
+        "n40007006024"
+      ]
+    ],
+    "wlc": [
+      [
+        "o230340160131"
+      ],
+      [
+        "o230340170111"
+      ],
+      [
+        "o230340170141"
+      ],
+      [
+        "o160030350122"
+      ],
+      [
+        "o220020150061"
+      ],
+      [
+        "o230340160131"
+      ],
+      [
+        "o230340170111"
+      ],
+      [
+        "o230340170141"
+      ],
+      [
+        "o250040030061"
+      ],
+      [
+        "o030110070072"
+      ],
+      [
+        "o260050170062"
+      ],
+      [
+        "o260140150062"
+      ]
+    ]
+  },
+  "type": "fauna",
+  "ubsdbh": [
+    "000239001001000",
+    "000316001002000",
+    "007259001001000",
+    "007859001001000"
+  ],
+  "ubsdgnt": [
+    "4.10"
+  ]
+}

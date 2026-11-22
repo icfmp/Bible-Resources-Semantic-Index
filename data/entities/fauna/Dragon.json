@@ -1,0 +1,696 @@
+{
+  "alternate_sources": {
+    "aquifer": [
+      "4895|Dragon|TyndaleBibleDictionary"
+    ],
+    "ubsdbh": [
+      "007870001001000"
+    ],
+    "ubsdgnt": [
+      "4.54"
+    ],
+    "ubsfauna": [
+      "fauna:7.2"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "fauna:Dragon",
+    "review_status": "source_unreviewed",
+    "source_id": "fauna:Dragon",
+    "source_primary_id": "fauna:Dragon",
+    "source_sha256": "aa87fb38b300fd88b7deaf6d8492a55af9580d28283975ac7b1cb617d09cd4ec"
+  },
+  "explicit_instances": {
+    "SBLGNT": [
+      [
+        "n66012003010"
+      ],
+      [
+        "n66012004020"
+      ],
+      [
+        "n66012007017"
+      ],
+      [
+        "n66012007020"
+      ],
+      [
+        "n66012009004"
+      ],
+      [
+        "n66012013005"
+      ],
+      [
+        "n66012016021"
+      ],
+      [
+        "n66012017004"
+      ],
+      [
+        "n66013002026"
+      ],
+      [
+        "n66013004004"
+      ],
+      [
+        "n66013011018"
+      ],
+      [
+        "n66016013007"
+      ],
+      [
+        "n66020002004"
+      ]
+    ],
+    "wlc": [
+      [
+        "o010010210042"
+      ],
+      [
+        "o180070120041"
+      ],
+      [
+        "o190740130071"
+      ],
+      [
+        "o191480070061"
+      ],
+      [
+        "o230270010192"
+      ],
+      [
+        "o230510090181"
+      ],
+      [
+        "o240510340142"
+      ],
+      [
+        "o260290030122"
+      ],
+      [
+        "o260320020152"
+      ],
+      [
+        "o020070090192"
+      ],
+      [
+        "o020070100202"
+      ],
+      [
+        "o020070120052"
+      ],
+      [
+        "o050320330021"
+      ],
+      [
+        "o180030080061"
+      ],
+      [
+        "o180400250021"
+      ],
+      [
+        "o190740140041"
+      ],
+      [
+        "o190910130072"
+      ],
+      [
+        "o191040260041"
+      ],
+      [
+        "o230140290151"
+      ],
+      [
+        "o230270010101"
+      ],
+      [
+        "o230270010141"
+      ],
+      [
+        "o230300060112"
+      ]
+    ]
+  },
+  "fauna_type": "Mythical Monsters",
+  "id": "fauna:Dragon",
+  "key_references": [
+    "01001021",
+    "18007012",
+    "66012003"
+  ],
+  "lemmas": {
+    "el": [
+      "δράκων"
+    ],
+    "he": [
+      "תַּנִּין"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "كائن زاحف وخرافي وضخم، غالباً بوصفوه بأنه تعبان مجنح كبير أو وحش بحري.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "تنين"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "مخلوق زاحف هائل غالبًا ما يُوصف بأنه حيّة مجنحة عملاقة أو وحش بحري.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "تِنّين"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan anamol olsem reptael we i kabanis, we plante taem oli tokbaot olsem wan bigfala snek we i gat wing no wan bigfala monster blong solwota.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "dregon"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Sea Monster"
+      ],
+      "descriptions": [
+        {
+          "article": "fauna:Dragon",
+          "description": "A monstrous reptile creature often described as a giant winged serpent or sea monster.",
+          "gloss": "Dragon",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Dragon"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "موجودی خزنده و هیولامانند که اغلب به صورت ماری غول‌پیکر و بالدار یا هیولای دریایی توصیف می‌شود.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "اژدها"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Créature reptilienne monstrueuse souvent décrite comme un serpent ailé géant ou un monstre marin.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "dragon"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Wata ƙatuwar dabbar rarrafe mai ban tsoro da aka saba siffantawa a matsayin ƙaton maciji mai fiffike ko dodon ruwa.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Dodanniya"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "एक विशालकाय सरीसृप जीव जिसे अक्सर पंखों वाले विशाल सर्प या समुद्री जीव के रूप में वर्णित किया जाता है।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "अजगर"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Nnukwu anụ na-akpụ akpụ dị egwu nke a na-akọwakarị dị ka agwọ ukwu nwere nku maọbụ anụ mmiri dị egwu.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "dragọn"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Makhluk reptil raksasa yang sering digambarkan sebagai ular bersayap raksasa atau monster laut.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "naga"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "प्रायः पखेटा भएको विशाल सर्प वा समुद्री राक्षसको रूपमा वर्णन गरिएको एक भयानक घस्रने जन्तु।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "अजिङ्गर"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Uma criatura reptiliana monstruosa frequentemente descrita como uma serpente alada gigante ou monstro marinho.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "dragão"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Чудовищное пресмыкающееся существо, часто описываемое как гигантский крылатый змей или морское чудовище.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Дракон"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Monstruosa criatura reptiliana a menudo descrita como una serpiente alada gigante o un monstruo marino.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "dragón"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Kiumbe mkubwa sana wa jamii ya reptilia anayeelezewa mara nyingi kama nyoka mkubwa mwenye mabawa au mnyama mkubwa wa baharini.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Joka"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Wanpela bikpela animal bilong stori nating olsem traipela snek i gat wing o traipela snek masalai bilong solwara.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "dregon"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Một sinh vật bò sát khổng lồ thường được mô tả là loài rắn có cánh khổng lồ hoặc quái vật biển.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Rồng"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "一种巨大的爬行类怪兽，常被描述为长有翅膀的巨蛇或海怪。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "龙"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "一種巨大的爬行類怪獸，常被描述為巨大的有翼巨蛇或海怪。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "龍"
+    }
+  },
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "possibly_same_as": [
+    "fauna:GiantCroccodile"
+  ],
+  "primary_id": "fauna:Dragon",
+  "pronominal_referents": {
+    "SBLGNT": [
+      [
+        "n66012003023"
+      ],
+      [
+        "n66012004004"
+      ],
+      [
+        "n66012007025"
+      ],
+      [
+        "n66012008007"
+      ],
+      [
+        "n66012009029"
+      ],
+      [
+        "n66012009031"
+      ],
+      [
+        "n66012016025"
+      ],
+      [
+        "n66013002029"
+      ],
+      [
+        "n66013002033"
+      ],
+      [
+        "n66020002009"
+      ],
+      [
+        "n66020002017"
+      ],
+      [
+        "n66020003003"
+      ],
+      [
+        "n66020003012"
+      ],
+      [
+        "n66020003028"
+      ]
+    ],
+    "wlc": [
+      [
+        "o010010220022"
+      ],
+      [
+        "o260290030162"
+      ],
+      [
+        "o260290030192"
+      ],
+      [
+        "o260290030202"
+      ],
+      [
+        "o260290030212"
+      ],
+      [
+        "o260290030222"
+      ],
+      [
+        "o180400250062"
+      ],
+      [
+        "o180400260033"
+      ],
+      [
+        "o180400260062"
+      ],
+      [
+        "o180400280042"
+      ],
+      [
+        "o180400290022"
+      ],
+      [
+        "o180400290043"
+      ],
+      [
+        "o180400300022"
+      ],
+      [
+        "o180400300042"
+      ],
+      [
+        "o180400310032"
+      ],
+      [
+        "o180400310062"
+      ],
+      [
+        "o180400320022"
+      ],
+      [
+        "o180410010062"
+      ],
+      [
+        "o180410020042"
+      ],
+      [
+        "o180410040022"
+      ],
+      [
+        "o180410040042"
+      ],
+      [
+        "o180410040082"
+      ],
+      [
+        "o180410050042"
+      ],
+      [
+        "o180410050062"
+      ],
+      [
+        "o180410060022"
+      ],
+      [
+        "o180410060062"
+      ],
+      [
+        "o180410100012"
+      ],
+      [
+        "o180410100043"
+      ],
+      [
+        "o180410110013"
+      ],
+      [
+        "o180410120013"
+      ],
+      [
+        "o180410130012"
+      ],
+      [
+        "o180410130053"
+      ],
+      [
+        "o180410140013"
+      ],
+      [
+        "o180410140044"
+      ],
+      [
+        "o180410150022"
+      ],
+      [
+        "o180410150052"
+      ],
+      [
+        "o180410160012"
+      ],
+      [
+        "o180410170013"
+      ],
+      [
+        "o180410180012"
+      ],
+      [
+        "o180410200022"
+      ],
+      [
+        "o180410200072"
+      ],
+      [
+        "o180410220012"
+      ],
+      [
+        "o180410240012"
+      ],
+      [
+        "o180410250042"
+      ],
+      [
+        "o180410260051"
+      ],
+      [
+        "o190740140052"
+      ],
+      [
+        "o191040260051"
+      ],
+      [
+        "o191040270012"
+      ],
+      [
+        "o191040270052"
+      ],
+      [
+        "o191040280022"
+      ],
+      [
+        "o191040290052"
+      ],
+      [
+        "o191040290082"
+      ]
+    ]
+  },
+  "references": [
+    "01001021",
+    "02007009",
+    "02007010",
+    "02007012",
+    "05032033",
+    "18003008",
+    "18007012",
+    "18040025",
+    "19074013",
+    "19074014",
+    "19091013",
+    "19104026",
+    "19148007",
+    "23014029",
+    "23027001",
+    "23030006",
+    "23051009",
+    "24051034",
+    "26029003",
+    "26032002",
+    "41016018",
+    "66012003",
+    "66012004",
+    "66012007",
+    "66012009",
+    "66012013",
+    "66012016",
+    "66012017",
+    "66013002",
+    "66013004",
+    "66013011",
+    "66016013",
+    "66020002"
+  ],
+  "subject_referents": {
+    "SBLGNT": [
+      [
+        "n66012004034"
+      ],
+      [
+        "n66012008003"
+      ],
+      [
+        "n66012009012"
+      ],
+      [
+        "n66012009018"
+      ],
+      [
+        "n66012009022"
+      ],
+      [
+        "n66012013007"
+      ],
+      [
+        "n66012013011"
+      ],
+      [
+        "n66012017009"
+      ],
+      [
+        "n66012017010"
+      ],
+      [
+        "n66012018002"
+      ],
+      [
+        "n66013004006"
+      ],
+      [
+        "n66020003015"
+      ]
+    ],
+    "wlc": [
+      [
+        "o010010220051"
+      ],
+      [
+        "o010010220062"
+      ],
+      [
+        "o010010220072"
+      ],
+      [
+        "o260290030142"
+      ],
+      [
+        "o260290030181"
+      ],
+      [
+        "o180400270012"
+      ],
+      [
+        "o180400270051"
+      ],
+      [
+        "o180400280012"
+      ],
+      [
+        "o180410190011"
+      ],
+      [
+        "o180410210042"
+      ],
+      [
+        "o180410220041"
+      ],
+      [
+        "o180410230011"
+      ],
+      [
+        "o180410230051"
+      ],
+      [
+        "o180410240021"
+      ],
+      [
+        "o180410240041"
+      ],
+      [
+        "o180410260041"
+      ],
+      [
+        "o191040260072"
+      ],
+      [
+        "o191040280031"
+      ],
+      [
+        "o191040280061"
+      ],
+      [
+        "o191040290031"
+      ],
+      [
+        "o191040290061"
+      ],
+      [
+        "o191040290091"
+      ],
+      [
+        "o191040300031"
+      ],
+      [
+        "o230140290161"
+      ],
+      [
+        "o230300060121"
+      ]
+    ]
+  },
+  "type": "fauna",
+  "ubsdbh": [
+    "007870001001000"
+  ],
+  "ubsdgnt": [
+    "4.54"
+  ]
+}
