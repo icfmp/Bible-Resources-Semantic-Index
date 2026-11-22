@@ -38,25 +38,25 @@ class WorkspaceTests(unittest.TestCase):
         workflows = sorted((*workflow_dir.glob("*.yml"), *workflow_dir.glob("*.yaml")))
         self.assertTrue(workflows, "Missing source-pinned workflows")
         forbidden_patterns = {
-            "write access": r"(?mi)^\\s*contents\\s*:\\s*write(?:\\s|$)",
-            "release event": r"(?mi)^\\s*release\\s*:",
-            "tag trigger": r"(?mi)^\\s*tags\\s*:",
+            "write access": r"(?mi)^\s*contents\s*:\s*write(?:\s|$)",
+            "release event": r"(?mi)^\s*release\s*:",
+            "tag trigger": r"(?mi)^\s*tags\s*:",
             "artifact upload": r"(?i)actions/upload-artifact",
             "GitHub release action": r"(?i)(?:softprops/action-gh-release|ncipollo/release-action|actions/create-release)",
-            "release command": r"(?i)\\bgh\\s+release\\s+create\\b",
-            "git push command": r"(?i)\\bgit\\s+push\\b",
+            "release command": r"(?i)\bgh\s+release\s+create\b",
+            "git push command": r"(?i)\bgit\s+push\b",
         }
         for path in workflows:
             with self.subTest(workflow=path.name):
                 content = path.read_text(encoding="utf-8")
-                executable = "\\n".join(
+                executable = "\n".join(
                     line for line in content.splitlines()
                     if not line.lstrip().startswith("#")
                 )
                 # Permissions are deliberately read-only even for manual jobs;
                 # no tag/release/CI-artifact automation is authorized.
-                self.assertRegex(content, r"(?m)^permissions:\\s*$")
-                self.assertRegex(content, r"(?m)^\\s+contents:\\s*read\\s*$")
+                self.assertRegex(content, r"(?m)^permissions:\s*$")
+                self.assertRegex(content, r"(?m)^\s+contents:\s*read\s*$")
                 for name, pattern in forbidden_patterns.items():
                     self.assertNotRegex(executable, pattern, (path, name))
 
