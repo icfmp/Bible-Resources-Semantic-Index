@@ -15,7 +15,7 @@ from collections import defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-PAREN_QUALIFIER = re.compile(r"\\s+\\([^()]*\\)$")
+PAREN_QUALIFIER = re.compile(r"\s+\([^()]*\)$")
 
 
 def base_name(name: str) -> str:
