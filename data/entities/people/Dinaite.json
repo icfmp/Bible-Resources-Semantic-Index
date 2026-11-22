@@ -7,6 +7,22 @@
   },
   "bsi": {
     "canonical_id": "person:Dinaite",
+    "editorial_field_changes": [
+      {
+        "action": "correct_inherited_reference",
+        "evidence": [
+          "Ezra 4:9",
+          "https://classic.net.bible.org/verse.php?book=Ezr&chapter=4&verse=9",
+          "https://biblehub.com/lexicon/ezra/4-9.htm"
+        ],
+        "reason": "Ezra 4:9 has the Aramaic Dinaites/judges translation variation. 'Judges' is a possible lexical gloss or role, not evidence of a distinct group:Judges entity; preserve the word evidence and labels but remove this nonexistent group-identity alias.",
+        "removed_relation_values": {
+          "referred_to_as": [
+            "group:Judges"
+          ]
+        }
+      }
+    ],
     "review_status": "source_unreviewed",
     "source_id": "person:Dinaite",
     "source_primary_id": "person:Dinaite",
@@ -208,9 +224,6 @@
   "pronominal_referents": {},
   "references": [
     "15004009"
-  ],
-  "referred_to_as": [
-    "group:Judges"
   ],
   "subject_referents": {},
   "type": "person"
