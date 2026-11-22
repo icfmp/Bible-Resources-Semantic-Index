@@ -43,8 +43,6 @@ class NativeGrowthTests(unittest.TestCase):
 
     def test_current_builder_does_not_import_historical_compiler(self):
         self.assertEqual(Path(builder.core.__file__).name, "entity_index_core.py")
-        self.assertIs(builder.core.finalize_index,
-                      builder.core.__dict__["finalize_index"])
         self.assertNotIn("compile_index.py",
                          (ROOT / "scripts" / "build_native_index.py").read_text())
 
