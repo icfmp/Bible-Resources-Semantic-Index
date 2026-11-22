@@ -20,6 +20,24 @@ BSI dataset. They are **not** rebuilt by replaying historical ACAI patches.
 5. If an identity was quarantined, keep its original evidence under
    `data/quarantined/`, with a reason; never silently drop its source record.
 
+## Native source-file integrity
+
+The native builder reads canonical JSON **strictly**: repeated object keys,
+nonstandard numbers such as `NaN`/`Infinity`, unrecognized entity category
+directories and nested JSON records are rejected. A file placed outside the
+documented `data/entities/<category>/<name>.json` or corresponding quarantine
+layout must never be silently skipped. All copied source record SHA-256 values
+must be 64 lowercase hexadecimal characters; a BRSI-native record must not
+claim a fabricated original ACAI fingerprint.
+
+Every quarantined imported identity needs its own original source fingerprint,
+nonempty reason and explicit supporting evidence. This prevents apparent
+cleanup from silently erasing the reason for withholding an identity.
+
+These are **format and provenance checks**, not independent biblical
+verification. They do not assign new entity identities, normalize biblical
+references, change editorial approval states or rewrite any source records.
+
 ## Bible references
 
 Treat `references` and `key_references` as separate inherited ACAI ORG
