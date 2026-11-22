@@ -209,6 +209,17 @@ def build(source_root: Path, source_lock: dict, editorial: dict,
             entry["editorial_reason"] = decision["reason"]
         entries.append(entry)
 
+    return finalize_index(entries, quarantined, source_lock, source_absences,
+                          source_verse_absences, reference_qualifications,
+                          source_snapshot_sha256, len(originals))
+
+
+def finalize_index(entries: list, quarantined: list, source_lock: dict,
+                   source_absences: dict | None,
+                   source_verse_absences: dict | None,
+                   reference_qualifications: dict | None,
+                   source_snapshot_sha256: str, source_record_count: int) -> dict:
+    """Shared deterministic link/index validation for old and current BSI records."""
     entries.sort(key=lambda x: x["id"])
     assigned_ids = [entry["id"] for entry in entries]
     if len(set(assigned_ids)) != len(entries):
@@ -468,7 +479,7 @@ def build(source_root: Path, source_lock: dict, editorial: dict,
             "source_corpora": source_lock["source_corpora"],
         },
         "statistics": {
-            "source_records": len(originals),
+            "source_records": source_record_count,
             "index_entities": len(entries),
             "quarantined_records": len(quarantined),
             "reviewed_entries": sum(e["review_status"] == "editorially_reviewed"
