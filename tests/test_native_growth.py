@@ -121,6 +121,71 @@ class NativeGrowthTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "Imported entity lacks English working identity label"):
             builder.build(self.data)
 
+    def test_duplicate_json_keys_cannot_override_original_fields(self):
+        path = self.data / "entities" / "people" / "Mary.2.json"
+        original = path.read_text(encoding="utf-8")
+        path.write_text('{"duplicate":1,"duplicate":2,' + original.lstrip()[1:],
+                        encoding="utf-8")
+        with self.assertRaisesRegex(ValueError, "Duplicate JSON object key"):
+            builder.build(self.data)
+
+    def test_nonstandard_json_numbers_are_rejected(self):
+        path = self.data / "entities" / "people" / "Mary.2.json"
+        original = path.read_text(encoding="utf-8")
+        path.write_text('{"nonstandard":NaN,' + original.lstrip()[1:],
+                        encoding="utf-8")
+        with self.assertRaisesRegex(ValueError, "Nonstandard JSON number"):
+            builder.build(self.data)
+
+    def test_unknown_entity_category_is_not_silently_ignored(self):
+        unexpected = self.data / "entities" / "unknown_category"
+        unexpected.mkdir()
+        (unexpected / "Unindexed.json").write_text('{"id":"fake:Foo"}',
+                                                    encoding="utf-8")
+        with self.assertRaisesRegex(ValueError, "Unsupported native entity category"):
+            builder.build(self.data)
+
+    def test_nested_entity_json_is_not_silently_ignored(self):
+        nested = self.data / "entities" / "people" / "nested"
+        nested.mkdir()
+        (nested / "Unindexed.json").write_text('{"id":"person:Unindexed"}',
+                                               encoding="utf-8")
+        with self.assertRaisesRegex(ValueError, "Unindexed or nested native entity JSON"):
+            builder.build(self.data)
+
+    def test_imported_source_fingerprint_rejects_nonhex_bytes(self):
+        path = self.data / "entities" / "people" / "Mary.2.json"
+        record = json.loads(path.read_text(encoding="utf-8"))
+        record["bsi"]["source_sha256"] = "g" * 64
+        path.write_text(json.dumps(record, ensure_ascii=False), encoding="utf-8")
+        with self.assertRaisesRegex(ValueError, "Invalid imported source SHA-256"):
+            builder.build(self.data)
+
+    def test_quarantined_source_provenance_is_validated(self):
+        path = self.data / "quarantined" / "people" / "Shiloh.json"
+        original = json.loads(path.read_text(encoding="utf-8"))
+        for field, new_value, message in (
+            ("source_sha256", "z" * 64, "Invalid imported source SHA-256"),
+            ("reason", "", "Quarantine needs a documented reason"),
+            ("evidence", [], "Quarantine needs source evidence"),
+        ):
+            with self.subTest(field=field):
+                record = copy.deepcopy(original)
+                record["bsi"][field] = new_value
+                path.write_text(json.dumps(record, ensure_ascii=False), encoding="utf-8")
+                with self.assertRaisesRegex(ValueError, message):
+                    builder.build(self.data)
+        path.write_text(json.dumps(original, ensure_ascii=False), encoding="utf-8")
+        builder.build(self.data)
+
+    def test_native_entities_cannot_claim_acai_source_hash(self):
+        path = self.add_native_work()
+        record = json.loads(path.read_text(encoding="utf-8"))
+        record["bsi"]["source_sha256"] = "a" * 64
+        path.write_text(json.dumps(record, ensure_ascii=False), encoding="utf-8")
+        with self.assertRaisesRegex(ValueError, "must not claim an ACAI source SHA-256"):
+            builder.build(self.data)
+
     def test_historical_source_cannot_disappear(self):
         (self.data / "entities" / "people" / "Jashar.json").unlink()
         with self.assertRaisesRegex(ValueError, "Imported ACAI entity identities changed"):
