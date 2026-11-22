@@ -19,22 +19,21 @@ def audit(data: Path, *, limit: int = 30) -> dict:
     if limit < 0:
         raise ValueError("Negative report limit")
     people = {}
-    for path in sorted((data / "entities" / "people").glob("*.json")):
+    nonperson_targets = {}
+    all_ids = set()
+    for path in sorted((data / "entities").glob("*/*.json")):
         record = json.loads(path.read_text(encoding="utf-8"))
         identity = record.get("id")
-        if not isinstance(identity, str) or identity in people:
-            raise ValueError(f"Missing or duplicate current person identity: {path}")
-        people[identity] = record
+        if not isinstance(identity, str) or identity in all_ids:
+            raise ValueError(f"Missing or duplicate current entity identity: {path}")
+        all_ids.add(identity)
+        if record.get("type") == "person":
+            people[identity] = record
+        else:
+            # Reclassified native groups may still live in an original
+            # ACAI people/ source category; classify by reviewed type.
+            nonperson_targets[identity] = record.get("type", "<missing>")
     canonical = {id_: doc["bsi"]["canonical_id"] for id_, doc in people.items()}
-    # These are CURRENT identities, including any reviewed reclassifications
-    # in other folders. A person->group child pointer is a valid target ID
-    # structurally, but it is not a person-to-person genealogy.
-    nonperson_targets = {}
-    for path in sorted((data / "entities").glob("*/*.json")):
-        if path.parent.name == "people":
-            continue
-        record = json.loads(path.read_text(encoding="utf-8"))
-        nonperson_targets[record["id"]] = record["type"]
     stats = Counter()
     conflicts = []
     nonperson_examples = []
