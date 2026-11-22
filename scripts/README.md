@@ -37,10 +37,10 @@ historical ACAI patches or import an upstream snapshot during normal editing.
 
 ## Historical or restricted workflows
 
-- `compile_index.py`: historical ACAI-source reconstruction, retained solely
-  for independent migration/parity regression tests; **not** the current
-  editable-source build. Previous one-off v0.1 label and ZIP packaging
-  scripts are preserved in Git history, not the maintained tool surface.
+- The historical ACAI compiler was moved to
+  [test support](../tests/support/legacy_acai_compiler.py), separate from
+  production scripts. Original v0.1 label/ZIP preparers remain only in Git
+  history. The current native index does not import or replay ACAI sources.
 - `work_snapshot.py`: active runner-local packing and integrity verification
   of temporary source-pinned research states; this does **not** publish, upload,
   or provide a durable private backup. The retired private uploader was never
