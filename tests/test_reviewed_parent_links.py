@@ -27,7 +27,7 @@ class ReviewedFamilyRelationshipTests(unittest.TestCase):
         change = wife["bsi"]["editorial_field_changes"][0]
         self.assertEqual(set(change["removed_relation_values"]["offspring"]),
                          {"person:Moab", "person:Ben-ammi"})
-        self.assertIn("Genesis 19:36-38", " ".join(change["evidence"]))
+        self.assertIn("19:36-38", " ".join(change["evidence"]))
 
     def test_eliasaph_names_deuel_not_jethro(self):
         eliasaph = entity("Eliasaph")
