@@ -59,6 +59,14 @@ class NativeGrowthTests(unittest.TestCase):
         self.assertIsNone(new["bsi:work:Fixture"]["source_sha256"])
         self.assertTrue(path.exists())
 
+    def test_nonworking_translated_names_are_rejected(self):
+        path = self.data / "entities" / "people" / "Mary.2.json"
+        record = json.loads(path.read_text(encoding="utf-8"))
+        record["localizations"]["fra"] = {"preferred_label": "Marie"}
+        path.write_text(json.dumps(record, ensure_ascii=False), encoding="utf-8")
+        with self.assertRaisesRegex(ValueError, "Redundant translated label"):
+            builder.build(self.data)
+
     def test_source_biographies_are_rejected(self):
         path = self.data / "entities" / "people" / "Mary.2.json"
         record = json.loads(path.read_text(encoding="utf-8"))
