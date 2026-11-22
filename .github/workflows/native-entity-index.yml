@@ -10,6 +10,9 @@ on:
       - "scripts/build_native_index.py"
       - "tests/test_native_growth.py"
       - "scripts/compile_index.py"
+      - "scripts/release_contract.py"
+      - "release/**"
+      - "docs/RELEASE_CONTRACT.md"
       - "docs/EDITING_ENTITIES.md"
       - ".github/workflows/native-entity-index.yml"
   pull_request:
@@ -19,6 +22,9 @@ on:
       - "data/migration/**"
       - "scripts/build_native_index.py"
       - "scripts/compile_index.py"
+      - "scripts/release_contract.py"
+      - "release/**"
+      - "docs/RELEASE_CONTRACT.md"
       - ".github/workflows/native-entity-index.yml"
   workflow_dispatch:
 
@@ -44,6 +50,30 @@ jobs:
             --hebrew links/dictionaries/ubs-hebrew/index.json \
             --output /tmp/bsi-integrity-receipt.json
           cat /tmp/bsi-integrity-receipt.json
+      - name: Stage three local v1 integrity receipts (never distribute lexical baselines)
+        shell: bash
+        run: |
+          set -euo pipefail
+          revision="$(git rev-parse HEAD)"
+          python3 -I scripts/release_contract.py local-receipt \
+            --kind entities --input /tmp/bsi-current.json \
+            --producer-revision "$revision" \
+            --output /tmp/brsi-entities-local.json
+          python3 -I scripts/release_contract.py local-receipt \
+            --kind ubs_greek --input links/dictionaries/ubs-greek/index.json \
+            --producer-revision "$revision" \
+            --output /tmp/brsi-greek-local.json
+          python3 -I scripts/release_contract.py local-receipt \
+            --kind ubs_hebrew --input links/dictionaries/ubs-hebrew/index.json \
+            --producer-revision "$revision" \
+            --output /tmp/brsi-hebrew-local.json
+          python3 -I scripts/release_contract.py verify \
+            --manifest /tmp/brsi-entities-local.json --artifact /tmp/bsi-current.json
+          python3 -I scripts/release_contract.py verify \
+            --manifest /tmp/brsi-greek-local.json --artifact links/dictionaries/ubs-greek/index.json
+          python3 -I scripts/release_contract.py verify \
+            --manifest /tmp/brsi-hebrew-local.json --artifact links/dictionaries/ubs-hebrew/index.json
+          # No upload, tag, release, public archive, or source witness snapshot.
       - name: Verify output scope and original-word integrity
         run: |
           python3 - <<'PY'
