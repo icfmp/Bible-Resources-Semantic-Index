@@ -1,44 +1,51 @@
-# Legacy localization field handling
+# BRSI identification metadata and source provenance
 
-**BRSI is an identity/link index, not a multilingual encyclopedia.**
-This policy supersedes the prior plan to correct and translate all inherited
-ACAI biographies. See [#30](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/30).
+BRSI identifies entities and joins them to external resources; it does **not**
+maintain multilingual encyclopedia text or translated display-name catalogs.
 
-The original ACAI `localizations.*.descriptions` are not part of the
-intended BRSI data model. They have been removed from all editable native records
-through four independently verified category batches (PRs #33–#36). The exact source text remains recoverable from the
-immutable pinned ACAI commit identified in `data/source.lock.json`,
-each entity's `bsi.source_sha256`, and Git history. Each batch showed byte-identical native index output before/after removal,
-without touching Bible references, original-word IDs, structural relations,
-source IDs or reviewed identity hints. Native builds and offline CI now
-reject reintroduced encyclopedia descriptions.
+## Current native entity contract
 
-## Identification versus descriptions
+- Preserve exact `id`, `bsi.source_id`, `bsi.canonical_id`, source SHA-256,
+  verse references, original-language word witnesses, reviewed relations,
+  editorial evidence and uncertainty.
+- Retain the inherited `localizations.eng.preferred_label` as a **single
+  working-language identification aid**, not an approved identity assertion.
+  The inherited English alternate labels are retained where present, subject
+  to explicit editorial holds (including Johanan, Perez-Uzzah, Gadara).
+- Add an optional, **short and independently source-reviewed**
+  `bsi.identity_hint` when homonyms genuinely need human disambiguation.
+  Its evidence references must match verses present in the entity. No mass
+  guessed qualifiers or automatic promotion from source-only labels.
+- Never include `localizations.*.descriptions` or redundant translated
+  preferred labels in BRSI's current native records. Native CI and the
+  direct builder reject attempted reintroductions.
 
-Store a short, source-backed and independently reviewed `bsi.identity_hint`
-where needed to tell similarly named entities apart. It contains a single
-working-language name and short qualifier plus exact evidence verse IDs.
-Human identification **does not justify** an encyclopedic biography or
-nineteen translated paragraphs.
+The older ACAI source had 19 translated `preferred_label` fields per record,
+plus biographical descriptions. Four verified source-prose batches
+([#33–#36](https://github.com/icfmp/Bible-Resources-Semantic-Index/pull/36))
+removed all inherited descriptions, and three verified source-label batches
+([#40](https://github.com/icfmp/Bible-Resources-Semantic-Index/pull/40),
+[#41](https://github.com/icfmp/Bible-Resources-Semantic-Index/pull/41),
+[#42](https://github.com/icfmp/Bible-Resources-Semantic-Index/pull/42))
+removed only unneeded non-English display labels.
 
-A hint does not replace source ID, canonical ID, exact original-language
-word groups, existing evidence or validated cross-entity relationships.
-Missing hints are allowed. No automatic disambiguation by guessing.
+## Data lineage, reversibility and unresolved names
 
-## Existing inheritance safeguards
+The complete original ACAI source remains available at the exact pinned commit
+in `data/source.lock.json`, with per-record `bsi.source_sha256`; BRSI Git
+history preserves the previous editable versions. Removing duplicate source
+prose or translated display labels does **not** delete original evidence.
+The compact native index remained **byte-for-byte identical** in every batch.
 
-The legacy `bsi.inherited_localizations` metadata records remaining
-unapproved source labels/aliases (e.g. Johanan, Perez-Uzzah, Gadara).
-Malformed/unknown flags are rejected by native build CI.
+`scripts/localization_policy.py` always refuses reader-facing descriptions
+and returns explicit `source_unreviewed` status for source-only names.
+Editorial hold selectors can block conflicting labels/aliases even if still
+present in source fields. A caller asking for a missing non-English label
+receives no label; BRSI does not invent a fallback or claim it is reviewed.
 
-`scripts/localization_policy.py` **never permits reader-facing description
-access**, including from native records not yet pruned. For labels and aliases,
-it respects field/language holds and returns explicit source-unreviewed status.
-It is not a license to present those fields as reviewed identity names.
+The historical `scripts/minimal_labels.py` is an old v0.1 source-only
+packager, **not** the approved BRSI identity exporter. Future distributions
+must honor the release/rights contract and exclude the 868 permission-only
+Key Terms, unapproved source identifications and all non-index prose.
 
-The v0.1 `scripts/minimal_labels.py` is an old source-label builder,
-not a reviewed BRSI identity provider. Any future public package must use
-the validated identifier-only contract and explicitly exclude encyclopedia
-text, unreviewed alias conflations and the 868 restricted ACAI Key Terms.
-
-This is a migration and audit document, **not** a roadmap for translation.
+This is a provenance and identification policy, not a translation roadmap.
