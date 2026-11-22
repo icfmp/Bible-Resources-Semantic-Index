@@ -10,7 +10,22 @@
     "review_status": "source_unreviewed",
     "source_id": "place:Ain.3",
     "source_primary_id": "place:Ain.3",
-    "source_sha256": "0feac9bd67c0786ae6bc9434edec74f88a0bf49103cf7f9127a06237972cd865"
+    "source_sha256": "0feac9bd67c0786ae6bc9434edec74f88a0bf49103cf7f9127a06237972cd865",
+    "editorial_field_changes": [
+      {
+        "action": "add_directly_attested_source_verse",
+        "added_reference_values": {
+          "references": [
+            "06021016"
+          ]
+        },
+        "reason": "Joshua 21:16 explicitly names Ain, the Levitical city allotted from Judah/Simeon. The separately indexed Ain (of Simeon) source already carries Joshua 21:16 as key verse.",
+        "evidence": [
+          "Joshua 21:16",
+          "https://tips.translation.bible/story/sil-translators-notes-on-joshua-2116/"
+        ]
+      }
+    ]
   },
   "explicit_instances": {},
   "id": "place:Ain.3",
@@ -38,7 +53,9 @@
   ],
   "primary_id": "place:Ain.3",
   "pronominal_referents": {},
-  "references": [],
+  "references": [
+    "06021016"
+  ],
   "subject_referents": {},
   "subregion_of": [
     "place:TerritoryOfSimeon",

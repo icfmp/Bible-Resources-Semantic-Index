@@ -5,7 +5,22 @@
     "review_status": "source_unreviewed",
     "source_id": "place:Aphek.4",
     "source_primary_id": "place:Aphek.4",
-    "source_sha256": "fc52f8a7e3af9a73be5eb7105ab36051b7a7f8893c3c2e5787ca53d476794a29"
+    "source_sha256": "fc52f8a7e3af9a73be5eb7105ab36051b7a7f8893c3c2e5787ca53d476794a29",
+    "editorial_field_changes": [
+      {
+        "action": "add_directly_attested_source_verse",
+        "added_reference_values": {
+          "references": [
+            "06013004"
+          ]
+        },
+        "reason": "Joshua 13:4 explicitly names Aphek on the northern boundary in the context of Lebanon/Sidon; this matches the separately indexed northern Aphek source key, not other homonymous Aphek towns.",
+        "evidence": [
+          "Joshua 13:4",
+          "https://classic.net.bible.org/verse.php?book=Jos&chapter=13&verse=4"
+        ]
+      }
+    ]
   },
   "explicit_instances": {},
   "id": "place:Aphek.4",
@@ -32,7 +47,9 @@
   },
   "primary_id": "place:Aphek.4",
   "pronominal_referents": {},
-  "references": [],
+  "references": [
+    "06013004"
+  ],
   "subject_referents": {},
   "subregion_of": [
     "place:Lebanon"

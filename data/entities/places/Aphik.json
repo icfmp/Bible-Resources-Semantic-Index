@@ -10,7 +10,22 @@
     "review_status": "source_unreviewed",
     "source_id": "place:Aphik",
     "source_primary_id": "place:Aphik",
-    "source_sha256": "fc1f38d0020dee1fccf4bff6a4a7cd8a727bf21f038e1785538ddd298fa97efb"
+    "source_sha256": "fc1f38d0020dee1fccf4bff6a4a7cd8a727bf21f038e1785538ddd298fa97efb",
+    "editorial_field_changes": [
+      {
+        "action": "add_directly_attested_source_verse",
+        "added_reference_values": {
+          "references": [
+            "07001031"
+          ]
+        },
+        "reason": "Judges 1:31 explicitly names Aphik among the sites from which Asher did not expel the inhabitants. This is the matching Asher territory place source key.",
+        "evidence": [
+          "Judges 1:31",
+          "https://www.biblegateway.com/passage/?search=Judges+1%3A31&version=KJV"
+        ]
+      }
+    ]
   },
   "explicit_instances": {},
   "id": "place:Aphik",
@@ -34,7 +49,9 @@
   },
   "primary_id": "place:Aphik",
   "pronominal_referents": {},
-  "references": [],
+  "references": [
+    "07001031"
+  ],
   "subject_referents": {},
   "subregion_of": [
     "place:TerritoryOfAsher"

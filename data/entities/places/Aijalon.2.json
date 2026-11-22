@@ -10,7 +10,22 @@
     "review_status": "source_unreviewed",
     "source_id": "place:Aijalon.2",
     "source_primary_id": "place:Aijalon.2",
-    "source_sha256": "fa5ac8da7eff78d25c86ace479897330d7bd9e70eb69f2c26d2cbc24101f6c01"
+    "source_sha256": "fa5ac8da7eff78d25c86ace479897330d7bd9e70eb69f2c26d2cbc24101f6c01",
+    "editorial_field_changes": [
+      {
+        "action": "add_directly_attested_source_verse",
+        "added_reference_values": {
+          "references": [
+            "07012012"
+          ]
+        },
+        "reason": "Judges 12:12 explicitly names Aijalon in Zebulun as the burial place of Elon; the existing place qualifier and key verse match, but its direct scripture reference was omitted.",
+        "evidence": [
+          "Judges 12:12",
+          "https://classic.net.bible.org/verse.php?book=Jdg&chapter=12&verse=12"
+        ]
+      }
+    ]
   },
   "explicit_instances": {},
   "id": "place:Aijalon.2",
@@ -37,7 +52,9 @@
   },
   "primary_id": "place:Aijalon.2",
   "pronominal_referents": {},
-  "references": [],
+  "references": [
+    "07012012"
+  ],
   "subject_referents": {},
   "subregion_of": [
     "place:TerritoryOfZebulun"
