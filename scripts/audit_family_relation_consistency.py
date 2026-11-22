@@ -49,6 +49,8 @@ def audit(data: Path, *, limit: int = 30) -> dict:
                 kind = nonperson_targets.get(child_id)
                 if kind:
                     stats["offspring_target_nonperson_kind"] += 1
+                elif child_id.startswith("keyterm:"):
+                    stats["offspring_target_restricted_keyterm_unavailable"] += 1
                 else:
                     stats["offspring_target_not_found_in_current_entity_data"] += 1
                 nonperson_examples.append({
@@ -77,6 +79,10 @@ def audit(data: Path, *, limit: int = 30) -> dict:
                 "child_named_parent_canonical_id": canonical.get(direct, direct),
             })
     conflicts.sort(key=lambda x: (x["child"], x["relation"], x["claiming_parent"]))
+    missing_examples = sorted(
+        (row for row in nonperson_examples if row["target_kind_if_known"] is None),
+        key=lambda row: (row["claiming_parent"], row["child_target"]),
+    )
     return {
         "schema_version": 1,
         "policy": "source_inherited_inverse_claim_candidate_review_only",
@@ -87,6 +93,7 @@ def audit(data: Path, *, limit: int = 30) -> dict:
             nonperson_examples,
             key=lambda x: (x["claiming_parent"], x["child_target"])
         )[:limit],
+        "unresolved_offspring_target_examples": missing_examples[:limit],
         "warning": (
             "A mismatch is a review candidate, not proof of a fabricated person "
             "or authority to delete genealogy. Parent roles may be incomplete, "
