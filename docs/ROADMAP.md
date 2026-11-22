@@ -75,11 +75,14 @@ developed in parallel where no source/data/publication gate is bypassed.
   [#3](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/3):
   5,773 current editable entities + 3 quarantined originals from 5,776
   permitted original records. The 868 Key Terms remain withheld.
-- [x] **Resolve broken inherited structured relationships.**
+- [x] **Repair typed inherited links and guard raw source placeholders.**
   [#6](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/6),
-  PRs #12–#18: 15,541 existing structure links were verified with no
-  unresolved targets. Dinaite, Syria/Edom and Gadara/Gerasa corrections retain
-  original source evidence and lexical ambiguity.
+  PRs #12–#18: 15,541 previously recognized typed links were verified,
+  with no dangling references. PR #53 later resolved a previously missed
+  **untyped TIPNR descendant placeholder** using an already present
+  `group:Ludim` key; native build now rejects untyped `offspring` values.
+  Dinaite, Syria/Edom and Gadara/Gerasa decisions retain source evidence
+  and unresolved interpretation choices.
 - [x] **Retire inherited encyclopedia prose; preserve minimal identity.**
   [#30](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/30).
   BRSI is an identity/link index, **not** a multilingual descriptive resource.
@@ -105,8 +108,15 @@ developed in parallel where no source/data/publication gate is bypassed.
   cross-resource links.
 - [ ] **Review ambiguous entity identities and real matching aliases only.**
   [#6](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/6).
-  Finish the actual Gadara demonym/source-variant link question; distinguish
-  historical place/person identities from unsafe aliases, without guessing.
+  Finish the Gadara/Gerasa/Gergesa demonym/source-variant question.
+  Parent-link QA (PRs #49–#53) corrected two explicit biblical-source
+  misattributions (Lot's wife/grandsons and Eliasaph/Deuel), and established
+  all **22** collective descendant targets as valid group IDs with no
+  missing `offspring` target. **Five person-parent discrepancy candidates**
+  remain: three disputed Azubah/Jerioth mother claims, one unnamed husband
+  of Mary/Mark conflation, and the Zimmah genealogy. Ludim's inherited
+  `group_origin` also needs source review. Do not invent identity links
+  merely to eliminate warnings. Track case evidence in #6.
 - [x] **Build a read-only triage for same-name identities.**
   PRs [#44–#46](https://github.com/icfmp/Bible-Resources-Semantic-Index/pull/46)
   detected **641 candidate homonym groups / 2,228 source records**.
@@ -123,12 +133,12 @@ developed in parallel where no source/data/publication gate is bypassed.
   and native-build rejection of malformed holds. PR #47 introduced
   source-reference-shape triage: **477 records** with key verse identifiers
   outside the general reference list, and **118 biblically marked records**
-  without general verse/explicit-word witnesses. These are audit
-  candidates, **not proved errors**; the original ACAI ORG-versification
-  and the distinction between `key_references` and `references` require
-  provenance review before stronger assertions. Future reader-facing
-  exporters must use the inherited-field hold policy. Further source
-  invariant checks remain open.
+  without general verse/explicit-word witnesses. These are audit candidates,
+  **not proved errors**. PR #48 validated the two independent ACAI ORG BCV8
+  lists without inventing a subset constraint or original-word witness.
+  PR #53 added typed descendant-link validation. Future reader-facing
+  exporters must obey inherited-field hold policy; further source
+  evidence review and native invariants remain open.
 
 **Phase exit:** all distributable fields have evidence or explicit abstention;
 source IDs, manuscript word anchors, versification and original-text variants
