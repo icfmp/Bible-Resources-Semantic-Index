@@ -19,3 +19,9 @@ have separate source-pinned CI jobs. Their development baselines are
 
 The removed monorepo test path prefix and old `entity-index.yml` workflow
 are retired. Use the commands above.
+
+Both source-pinned UBS CI workflows run every `test_*.py` file in their
+respective Greek/Hebrew directories as a separate isolated Python process,
+with fail-fast behavior. New source-specific regression modules are therefore
+automatically included; keep the `test_` naming convention and preserve
+source-pinned rebuild verification as a separate CI stage.
