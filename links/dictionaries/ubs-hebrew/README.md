@@ -97,7 +97,7 @@ Shin and sin marks remain meaningful, and multiple matching UBS headwords
 are explicitly rejected. The added link is **entry-only**; no original
 `sdbh` is translated or assumed to preserve its sense between editions.
 
-The full-source [orthography audit](audit_orthography_gaps.py) identified
+The full-source [historical orthography audit](https://github.com/icfmp/Bible-Resources-Semantic-Index/blob/264846eca3c16ae20d2d8439cf7ed3ba85385edf/links/dictionaries/ubs-hebrew/audit_orthography_gaps.py) identified
 12,387 originally unresolved selected lexical-class occurrences. In addition
 to the 2,895 verb corrections, **311** nouns, adjectives and adverbs with a
 unique matching consonantal UBS headword and independent same-language Strong
@@ -394,9 +394,8 @@ is neither necessary nor an acceptance gate.
 
 - [build_index.py](build_index.py) produces `index.json`, preserving `by_sdbh` and `by_strong`, adding `by_entry_strong_family` for corroboration and retaining full coverage statistics. The generated index never contains dictionary definitions.
 - [audit_direct_sense_fidelity.py](audit_direct_sense_fidelity.py) measures 165,214 raw equal-ID overlaps against independent MACULA/UBS lemmas and Strong identities.
-- [audit_lexical_gaps.py](audit_lexical_gaps.py) groups unresolved lexical occurrences by original language/lemma.
 - [audit_strong_reconciliation.py](audit_strong_reconciliation.py) reconstructs the **review-only** candidate report. Its original word-ID witnesses allow review without inventing entries.
-- [test_index.py](test_index.py), [test_lexical_gaps.py](test_lexical_gaps.py), [test_strong_reconciliation.py](test_strong_reconciliation.py), [test_word_anchored.py](test_word_anchored.py), and [test_dictionary_scope.py](test_dictionary_scope.py) include offline synthetic regression tests.
+- [test_index.py](test_index.py), [test_strong_reconciliation.py](test_strong_reconciliation.py), [test_word_anchored.py](test_word_anchored.py), and [test_dictionary_scope.py](test_dictionary_scope.py) include offline synthetic regression tests.
 - The [GitHub Actions workflow](../../../../.github/workflows/bsi-ubs-hebrew.yml) verifies the exact pinned sources, runs the maintained source-verification audits, regenerates both committed JSON datasets, and compares them deterministically. It operates in **read-only mode** after the validated source snapshot is committed.
 
 The original source annotations and original WLC IDs are never rewritten. The next appropriate step is **edition-aware lexical reconciliation with an editorially validated sense policy**, not assuming numeric `LEXID` equality is a semantic guarantee.

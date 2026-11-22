@@ -76,6 +76,15 @@ Tracking: [issue #22](https://github.com/icfmp/Bible-Resources-Semantic-Index/is
   repository tests also audit all entities, including Key Terms exclusion.
   The original transformation implementations remain in Git history.
 
+- `links/dictionaries/ubs-hebrew/audit_lexical_gaps.py`,
+  `test_lexical_gaps.py`, and `audit_orthography_gaps.py`: old lexical-family
+  frequency and consonantal-form candidate research that only wrote unconsumed
+  temporary reports. Their exact analyses and original source evidence remain
+  available from Git history; the original published conclusions remain in
+  the source README. The current CI retains source-pinned candidate build,
+  dictionary-scope audit, explicit disposition registers and every approved
+  decision/abstention verifier.
+
 ## Verified CI entrypoints
 
 - `offline-checks.yml`: native unit tests, identity and relationship audits,
