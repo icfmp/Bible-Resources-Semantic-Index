@@ -17,7 +17,8 @@ class WorkspaceTests(unittest.TestCase):
         self.assertTrue((ROOT / "scripts" / "build_native_index.py").is_file())
         for sub in ("work", "links/dictionaries", "links/encyclopedias"):
             self.assertTrue((ROOT / sub / "README.md").is_file(), sub)
-        self.assertTrue((ROOT / "scripts" / "compile_index.py").is_file())
+        self.assertTrue((ROOT / "scripts" / "entity_index_core.py").is_file())
+        self.assertTrue((ROOT / "tests" / "support" / "legacy_acai_compiler.py").is_file())
         self.assertTrue((ROOT / "data" / "editorial-decisions.json").is_file())
 
     def test_source_pinned_lexical_workflows_never_publish_ci_evidence(self):
