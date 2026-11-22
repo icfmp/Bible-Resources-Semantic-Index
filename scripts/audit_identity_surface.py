@@ -75,7 +75,7 @@ def audit(data: Path) -> dict:
             "key_refs_not_in_references_count": len(key_refs_absent_from_references),
             "biblical_flag_without_reference_or_word_count": len(biblical_flag_without_reference_or_word),
             "key_ref_examples": key_refs_absent_from_references[:12],
-            "unanchored_biblical_place_examples": biblical_flag_without_reference_or_word[:12],
+            "unanchored_biblical_entity_examples": biblical_flag_without_reference_or_word[:12],
             "policy": "candidate_review_only_not_automatic_field_correction",
         },
         "source_labels_by_language": dict(sorted(labels.items())),
