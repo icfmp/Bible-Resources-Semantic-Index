@@ -1,17 +1,23 @@
-# BSI sources — immutable upstream witnesses
+# Original upstream provenance (historical)
 
-This directory **owns source acquisition and provenance**, not editorial changes.
+The canonical, **editable** BSI entity data now lives in
+[../data/entities/](../data/entities/), not in an ACAI checkout.
 
-## Pinned witness
+## Frozen historical baseline
 
-- ACAI: `https://github.com/icfmp/ACAI`, immutable revision recorded in [../source.lock.json](../source.lock.json). Its complete **6,644 original JSON records** remain in that historical repository. Do not manually edit, normalize, or duplicate them in the working tree.
-- MACULA Hebrew: `https://github.com/Clear-Bible/macula-hebrew`, revision pinned by the same source lock.
-- MACULA Greek: `https://github.com/Clear-Bible/macula-greek`, revision pinned by the same source lock.
+- Source: [ACAI at pinned commit e80a874](https://github.com/icfmp/ACAI/tree/e80a874e8282f996199c595378a3b3b9a43aac22).
+- Original imported entity set: **6,644** JSON records across eight categories.
+- Original source license: **CC BY-SA 4.0** (Mission Mutual / BiblioNexus attribution).
+- Exact original SHA-256 snapshot: in [../data/source.lock.json](../data/source.lock.json).
+- One-time migration manifest: [../data/migration/acai-baseline-materialization.json](../data/migration/acai-baseline-materialization.json).
+- Current editable corrections: each BSI record contains provenance and any reviewed editorial evidence.
+- All 868 ACAI keyterms remain counted but excluded from this public BSI source branch, pending field-level permission verification for Paratext UBS material ([issue #5](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/5)).
 
-Run `./bible-semantic-index/sources/checkout-acai.sh` from the repository root to populate `bible-semantic-index/sources/checkouts/acai/` with the exact original revision. This local tree is ignored by Git. The existing source-integrity audit checks both the locked commit and SHA-256 fingerprint of original JSON bytes.
+The source is **not fetched or patched by the current BSI builder**. Source
+checkout and the old patch-replay generator survive only in Git history and
+the draft migration's independent equivalence checks, not as the active editing
+process. Do not edit the pinned ACAI original.
 
-The MACULA TSV witnesses are checked out at their exact revisions by the existing GitHub Actions workflow. No original-language Bible text is bundled in the published BSI ZIP.
-
-**Rights:** the source license is not automatically a license for every upstream third-party component. See [../BSI_V0_1_RIGHTS_AUDIT.md](../BSI_V0_1_RIGHTS_AUDIT.md). Key Terms remain outside the v0.1 distribution.
-
-Do not place generated indexes, editorial decisions, or dictionary links here.
+MACULA Hebrew/Greek and UBS dictionaries remain independent, edition-pinned
+lexical evidence sources. Their texts and permission-only annotations must
+not be copied into public releases without explicit rights clearance.
