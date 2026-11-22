@@ -30,10 +30,7 @@ jobs:
       - name: Audit current structured relationships without modifying any data
         run: |
           python3 -I tests/test_entity_relationships.py
-          python3 -I scripts/audit_entity_relationships.py --report /tmp/bsi-native-relationships.json --fail-on-unresolved
-      - name: Preserve complete audited relationship findings
-        uses: actions/upload-artifact@v4
-        with:
-          name: bsi-native-relationship-audit
-          path: /tmp/bsi-native-relationships.json
-          retention-days: 14
+          # The audit prints aggregate counts and any actionable unresolved
+          # link IDs to the job log. Do not publish the full working report
+          # as a downloadable CI artifact from this public repository.
+          python3 -I scripts/audit_entity_relationships.py --fail-on-unresolved
