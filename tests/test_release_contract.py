@@ -92,7 +92,6 @@ class ArtifactContractTests(unittest.TestCase):
         changes = [
             ("artifact", "filename", "../unsafe.zip"),
             ("artifact", "bytes", True),
-            ("artifact", "sha256", "f" * 64),
             ("publication", "approved", True),
             ("publication", "tag", "brsi-entities-v1.0.0"),
             ("rights", "redistribution_cleared", True),
@@ -105,6 +104,11 @@ class ArtifactContractTests(unittest.TestCase):
                 test[section][key] = value
                 with self.assertRaises(ValueError):
                     contract.validate_manifest(test)
+        changed_hash = copy.deepcopy(base)
+        changed_hash["artifact"]["sha256"] = "f" * 64
+        contract.validate_manifest(changed_hash)  # Well-formed but wrong for the bytes.
+        with self.assertRaisesRegex(ValueError, "checksum"):
+            contract.verify_bytes(changed_hash, raw)
         with self.assertRaisesRegex(ValueError, "manifest"):
             contract.validate_manifest({**base, "sneaky": True})
 
