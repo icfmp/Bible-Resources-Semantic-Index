@@ -44,6 +44,12 @@ Tracking: [issue #22](https://github.com/icfmp/Bible-Resources-Semantic-Index/is
   reference-/verse-supported candidate verification remains in CI, as do all
   original approved/abstained source decisions. No lexical baseline changed.
 
+- `links/dictionaries/ubs-hebrew/audit_unmatched.py`: early diagnostic-only
+  unresolved-row categorization, producing `/tmp/bsi-ubs-hebrew-unmatched-audit.json`
+  with no downstream consumer, tests or retained editorial ledger. Retired
+  together with its CI step; the more precise lexical gap, dictionary scope,
+  source attestation and abstention verifiers are still maintained.
+
 ## Verified CI entrypoints
 
 - `offline-checks.yml`: native unit tests, identity and relationship audits,
