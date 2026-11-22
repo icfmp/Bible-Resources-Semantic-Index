@@ -65,34 +65,34 @@ removed prose into new `identity_hint` fields. Never remove source word
 groups, verse references, canonical identity information or necessary
 source-backed aliases merely because they are not descriptive prose.
 
-## Retiring inherited encyclopedia prose
+## Inherited encyclopedia prose — already removed
 
-`localizations.*.descriptions` are not BRSI index data. To remove them
-without editing IDs, original-word witnesses, references, relationships,
-source-backed aliases, or independently reviewed short identity qualifiers:
+All inherited `localizations.*.descriptions` fields and obsolete
+description-only review holds were removed in the historical, reviewed
+migration (PRs #33–#36). **Do not reintroduce them** in BRSI: prose belongs
+in separately licensed encyclopedic resources, not the identity index.
+
+The write-capable ACAI migration pruner is no longer a maintained command.
+Its original code remains in Git history, alongside the reviewed migration
+diffs, pinned upstream source revision and original `bsi.source_sha256`
+receipts. For any *new* externally sourced identity, import only permitted,
+reviewed identity fields; never run a bulk prose-stripping command over the
+current canonical tree.
+
+Validate any change from the repository root:
 
 ```sh
-# Dry run: show counts, change no files
-python3 -I scripts/prune_inherited_descriptions.py --categories deities fauna flora
-# Explicit, reviewable writing pass
-python3 -I scripts/prune_inherited_descriptions.py --categories deities fauna flora --write
-# Strict postcondition for selected categories
-python3 -I scripts/prune_inherited_descriptions.py --categories deities fauna flora --check
+python3 -I scripts/build_native_index.py --data data --output /tmp/brsi-current.json
+python3 -I -m unittest discover -s tests -p 'test_*.py'
 ```
 
-The existing corpus has already been cleaned (PRs #33–#36); use the same
-commands only for audited future imports or to check that no prose returns.
-The tool validates the entire selected batch before writing, reports counts
-without logging source biographies, and removes only description arrays and
-their now-obsolete `descriptions` hold selectors. Other hold selectors and
-all identity fields are retained. Run native index builds **before and after**
-each batch and compare their SHA-256, then run all native/lexical/regression
-checks. No generated biographies or universal hint-filling are allowed.
-A hint is optional and requires independent verse-level review.
-
-Recover original inherited prose from the exact pinned ACAI commit and
-`bsi.source_sha256`, not from a parallel BRSI description archive. Existing
-Git history also keeps each discarded working-field version.
+The builder rejects inherited prose, obsolete prose holds and unsupported
+translations; permanent tests scan the full committed entity dataset.
+Never remove original word groups, references, canonical IDs, necessary
+source-backed aliases or independent identity evidence as part of cleanup.
+A short identity hint is optional and requires independent verse-level review.
+The original source text is recoverable from the pinned ACAI revision, not a
+parallel BRSI description archive.
 
 ## One-language working labels
 
@@ -106,22 +106,18 @@ Do not silently convert source-unreviewed English names or aliases into
 approved identity assertions. The existing reviewed-hold mechanism still
 blocks contradictory English labels for the relevant records.
 
-For explicitly approved redundant inherited display names, use
-`scripts/prune_nonworking_labels.py` in categories:
+The historical bulk non-English label pruner is no longer a maintained
+command. The current dataset has already been normalized, and its original
+translations remain recoverable from the pinned ACAI source and Git history.
+For imported identities the canonical builder requires one nonempty English
+working label, rejects redundant non-English localization entries, and
+rejects unsupported non-English inherited field holds. No linguistic,
+lexical or editorial source evidence may be discarded as a display duplicate.
 
-```sh
-python3 -I scripts/prune_nonworking_labels.py --categories deities fauna flora
-python3 -I scripts/prune_nonworking_labels.py --categories deities fauna flora --write
-python3 -I scripts/prune_nonworking_labels.py --categories deities fauna flora --check
-```
-
-The tool **fails** if any non-English localization includes a field other than
-`preferred_label`, or if any field is under an unresolved language-specific
-editorial hold. A non-English dictionary link, article identifier or genuine
-source alias must never be thrown away as if it were a display translation.
-Compare native built indexes byte-for-byte before/after every batch.
-Original ACAI labels remain retrievable from the pinned source commit and
-`bsi.source_sha256`; do not duplicate all languages in an archival sidecar.
+Review additions and edits directly in the canonical entity JSON files, then
+run the native build and full regression suite shown above. If an imported
+record contains an unexpected non-English dictionary link, article identifier
+or genuine source alias, investigate its provenance rather than deleting it.
 
 ## Finding genuine name ambiguity
 
