@@ -1,0 +1,35 @@
+name: Verify native BSI entities against historical build
+
+on:
+  push:
+    branches: [migration/materialize-entities]
+    paths:
+      - "scripts/validate_native_entities.py"
+      - "data/entities/**"
+      - "data/quarantined/**"
+      - ".github/workflows/verify-native-entities.yml"
+  pull_request:
+    paths:
+      - "scripts/validate_native_entities.py"
+      - "data/entities/**"
+      - "data/quarantined/**"
+      - ".github/workflows/verify-native-entities.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  compare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch the exact original ACAI witness
+        run: |
+          git clone --quiet https://github.com/icfmp/ACAI.git /tmp/acai-verify
+          git -C /tmp/acai-verify checkout --quiet e80a874e8282f996199c595378a3b3b9a43aac22
+          test "$(git -C /tmp/acai-verify rev-parse HEAD)" = "e80a874e8282f996199c595378a3b3b9a43aac22"
+          test -z "$(git -C /tmp/acai-verify status --porcelain)"
+      - name: Verify each record, rationale, source checksum and original word link
+        run: |
+          python3 -I scripts/validate_native_entities.py --source /tmp/acai-verify --native data
