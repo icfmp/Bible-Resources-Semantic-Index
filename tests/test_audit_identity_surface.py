@@ -22,7 +22,9 @@ class IdentityInventoryTests(unittest.TestCase):
             path.parent.mkdir(parents=True)
             data = {
                 "id": "person:A", "type": "person",
-                "bsi": {"review_status": "source_unreviewed"},
+                "references": [], "key_references": ["06011008"],
+                "mentioned_in_bible": True, "explicit_instances": {},
+                "bsi": {"source_id": "person:A", "review_status": "source_unreviewed"},
                 "localizations": {
                     "eng": {
                         "preferred_label": "A",
@@ -41,6 +43,12 @@ class IdentityInventoryTests(unittest.TestCase):
             self.assertEqual(result["source_alias_sets_by_language"], {"eng": 1})
             self.assertEqual(result["non_label_source_field_presence"]["roles"], 1)
             self.assertNotIn("Sensitive", json.dumps(result))
+            review = result["reference_shape_triage"]
+            self.assertEqual(review["key_refs_not_in_references_count"], 1)
+            self.assertEqual(review["biblical_flag_without_reference_or_word_count"], 1)
+            self.assertEqual(review["key_ref_examples"][0]["source_id"], "person:A")
+            self.assertEqual(review["unanchored_biblical_entity_examples"][0]["key_references"], ["06011008"])
+            self.assertEqual(json.loads(path.read_text()), data)
 
 
 if __name__ == "__main__":
