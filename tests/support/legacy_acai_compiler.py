@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build a standalone, offline biblical entity-to-original-word index.
+"""Historical ACAI-source entity compiler, retained for regression tests only.
 
 ACAI is a pinned data witness, not the authority for our published identities.
 Neither biblical source words nor original source files are ever edited.
@@ -16,7 +16,7 @@ from pathlib import Path
 import importlib.util
 
 _core_spec = importlib.util.spec_from_file_location(
-    "brsi_entity_index_core", Path(__file__).with_name("entity_index_core.py"))
+    "brsi_entity_index_core", Path(__file__).resolve().parents[2] / "scripts" / "entity_index_core.py")
 core = importlib.util.module_from_spec(_core_spec)
 _core_spec.loader.exec_module(core)
 CATEGORIES = core.CATEGORIES

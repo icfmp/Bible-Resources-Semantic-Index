@@ -58,7 +58,7 @@ python3 -I -m unittest discover -s tests -p 'test_*.py'
 The native builder consumes the **current** `data/entities/` and
 `data/quarantined/` records and edition-specific qualification metadata.
 It does **not** download ACAI or replay `data/editorial-decisions.json`.
-That decisions file and `scripts/compile_index.py` remain as historical
+That decisions file and `tests/support/legacy_acai_compiler.py` remain as historical
 migration evidence and tested index-finalization support, not the regular
 editing interface. Never silently rewrite biblical references, original-word
 IDs, text-critical evidence, or source descriptions.

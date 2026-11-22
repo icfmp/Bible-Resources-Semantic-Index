@@ -31,3 +31,9 @@ obsolete localization holds, translated fields and missing imported working
 identity labels. Its synthetic negative cases in `test_native_growth.py`, plus
 full-tree `test_index_only_entities.py` and `test_one_language_identity.py`,
 replace the former one-time migration-pruner checks.
+
+The historical ACAI source-to-index regression lives in
+`tests/support/legacy_acai_compiler.py` and is exercised by `test_build.py`.
+It imports the maintained `scripts/entity_index_core.py` only for the shared
+link/finalization policy. The **current** builder does not import this historical
+replay code; keep regression provenance separate from active tooling.
