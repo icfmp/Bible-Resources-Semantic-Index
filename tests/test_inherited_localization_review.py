@@ -6,10 +6,10 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CASES = {
-    "people/Jashar.json": ("work:BookOfJashar", {"descriptions"}),
-    "people/Perez-uzzah.json": ("place:PerezUzzah", {"descriptions", "preferred_label", "alternate_labels"}),
-    "people/Johanan.json": ("person:Johanan", {"descriptions", "preferred_label", "alternate_labels"}),
-    "people/Shallum.5.json": ("person:Shallum.5", {"descriptions"}),
+    "people/Jashar.json": ("work:BookOfJashar", set()),
+    "people/Perez-uzzah.json": ("place:PerezUzzah", {"preferred_label", "alternate_labels"}),
+    "people/Johanan.json": ("person:Johanan", {"preferred_label", "alternate_labels"}),
+    "people/Shallum.5.json": ("person:Shallum.5", set()),
     "places/Gadara.json": ("place:Gadara", {"eng.alternate_labels"}),
 }
 
@@ -20,13 +20,14 @@ class InheritedLocalizationReviewTests(unittest.TestCase):
             with self.subTest(path=path):
                 record = json.loads((ROOT / "data/entities" / path).read_text(encoding="utf-8"))
                 self.assertEqual(record["id"], expected_id)
-                metadata = record["bsi"]["inherited_localizations"]
-                self.assertEqual(metadata["status"], "withheld_pending_review")
-                self.assertEqual(metadata["source"], "acai")
-                self.assertEqual(set(metadata["fields"]), fields)
-                self.assertTrue(metadata["reason"].strip())
-                self.assertIn("descriptions", record["localizations"]["eng"])
-                self.assertIn("descriptions", record["localizations"]["fra"])
+                metadata = record["bsi"].get("inherited_localizations")
+                self.assertEqual(set(metadata["fields"]) if metadata else set(), fields)
+                if metadata:
+                    self.assertEqual(metadata["status"], "withheld_pending_review")
+                    self.assertEqual(metadata["source"], "acai")
+                    self.assertTrue(metadata["reason"].strip())
+                for localized in record.get("localizations", {}).values():
+                    self.assertNotIn("descriptions", localized)
 
     def test_two_false_person_aliases_are_removed_with_receipts(self):
         for path, alias in (("people/Johanan.json", "Jehoahaz"),

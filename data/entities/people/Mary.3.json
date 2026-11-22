@@ -23,7 +23,16 @@
     "review_status": "source_unreviewed",
     "source_id": "person:Mary.3",
     "source_primary_id": "person:Mary.3",
-    "source_sha256": "e42d11132a170ee72ad6fecf1663a4ea3793d8bf54224dc217bcb97fff35293e"
+    "source_sha256": "e42d11132a170ee72ad6fecf1663a4ea3793d8bf54224dc217bcb97fff35293e",
+    "identity_hint": {
+      "name": "Mary",
+      "qualifier": "of Bethany, sister of Martha",
+      "language": "eng",
+      "evidence_references": [
+        "43011001"
+      ],
+      "review_status": "editorially_reviewed"
+    }
   },
   "explicit_instances": {
     "SBLGNT": [
@@ -78,176 +87,60 @@
   },
   "localizations": {
     "apd": {
-      "descriptions": [
-        {
-          "description": "صاحبة ليسوع، وأخت مرثا ولعازر من بيت عنيا.",
-          "source": "acai"
-        }
-      ],
       "preferred_label": "مريم (بيت عنيا)"
     },
     "arb": {
-      "descriptions": [
-        {
-          "description": "صَدِيقَةٌ لِيَسُوعَ، وَأُخْتُ مَرْثَا وَلِعَازَرَ مِنْ بَيْتِ عَنْيَا.",
-          "source": "acai"
-        }
-      ],
       "preferred_label": "مَرْيَم (مِن بَيْتِ عَنْيَا)"
     },
     "bis": {
-      "descriptions": [
-        {
-          "description": "Wan fren blong Jisas, mo sista blong Mata wetem Lasaros blong Betani.",
-          "source": "acai"
-        }
-      ],
       "preferred_label": "Meri (blong Betani)"
     },
     "eng": {
-      "descriptions": [
-        {
-          "article": "person:Mary.3",
-          "description": "A friend of Jesus, and sister of Martha and Lazarus from Bethany.",
-          "gloss": "Mary (of Bethany)",
-          "source": "acai"
-        }
-      ],
       "preferred_label": "Mary (of Bethany)"
     },
     "fas": {
-      "descriptions": [
-        {
-          "description": "دوست عیسی و خواهر مارتا و ایلعازر از بیت‌عنیا.",
-          "source": "acai"
-        }
-      ],
       "preferred_label": "مریم (بیت‌عنیا)"
     },
     "fra": {
-      "descriptions": [
-        {
-          "description": "Amie de Jésus, et sœur de Marthe et de Lazare de Béthanie.",
-          "source": "acai"
-        }
-      ],
       "preferred_label": "Marie (de Béthanie)"
     },
     "hau": {
-      "descriptions": [
-        {
-          "description": "Wata abokiyar Yesu, kuma ’yar’uwar Marta da Lazarus daga Betani.",
-          "source": "acai"
-        }
-      ],
       "preferred_label": "Maryamu (ta Betani)"
     },
     "hin": {
-      "descriptions": [
-        {
-          "description": "यीशु की एक सखी, तथा बैतनिय्याह के मार्था और लाज़र की बहन।",
-          "source": "acai"
-        }
-      ],
       "preferred_label": "मरियम (बैतनिय्याह की)"
     },
     "ibo": {
-      "descriptions": [
-        {
-          "description": "Enyi Jisọs, na nwanne Mata na Lazarọs si Betani.",
-          "source": "acai"
-        }
-      ],
       "preferred_label": "Meri (onye Betani)"
     },
     "ind": {
-      "descriptions": [
-        {
-          "description": "Sahabat Yesus, serta saudara perempuan Marta dan Lazarus dari Betania.",
-          "source": "acai"
-        }
-      ],
       "preferred_label": "Maria (dari Betania)"
     },
     "nep": {
-      "descriptions": [
-        {
-          "description": "येशूकी एक मित्र, र बेथानियाका मार्था र लाजरसकी बहिनी।",
-          "source": "acai"
-        }
-      ],
       "preferred_label": "मरियम (बेथानियाकी)"
     },
     "por": {
-      "descriptions": [
-        {
-          "description": "Amiga de Jesus e irmã de Marta e Lázaro, de Betânia.",
-          "source": "acai"
-        }
-      ],
       "preferred_label": "Maria (de Betânia)"
     },
     "rus": {
-      "descriptions": [
-        {
-          "description": "Друг Иисуса, сестра Марфы и Лазаря из Вифании.",
-          "source": "acai"
-        }
-      ],
       "preferred_label": "Мария (из Вифании)"
     },
     "spa": {
-      "descriptions": [
-        {
-          "description": "Amiga de Jesús y hermana de Marta y de Lázaro, de Betania.",
-          "source": "acai"
-        }
-      ],
       "preferred_label": "María (de Betania)"
     },
     "swh": {
-      "descriptions": [
-        {
-          "description": "Rafiki ya Yesu, na dada yake Martha na Lazaro kutoka Bethania.",
-          "source": "acai"
-        }
-      ],
       "preferred_label": "Mariamu (wa Bethania)"
     },
     "tpi": {
-      "descriptions": [
-        {
-          "description": "Wanpela pren bilong Jisas, na susa bilong Marta na Lasarus bilong Betani.",
-          "source": "acai"
-        }
-      ],
       "preferred_label": "Maria (bilong Betani)"
     },
     "vie": {
-      "descriptions": [
-        {
-          "description": "Một người bạn của Chúa Giê-xu, là chị/em của Ma-thê và La-xa-rơ ở Bê-tha-ni.",
-          "source": "acai"
-        }
-      ],
       "preferred_label": "Ma-ri (ở Bê-tha-ni)"
     },
     "zhs": {
-      "descriptions": [
-        {
-          "description": "耶稣的朋友，来自伯大尼，是马大和拉撒路的妹妹。",
-          "source": "acai"
-        }
-      ],
       "preferred_label": "马利亚（伯大尼）"
     },
     "zht": {
-      "descriptions": [
-        {
-          "description": "耶穌的朋友，也是伯大尼的馬大和拉撒路的妹妹。",
-          "source": "acai"
-        }
-      ],
       "preferred_label": "馬利亞（伯大尼）"
     }
   },

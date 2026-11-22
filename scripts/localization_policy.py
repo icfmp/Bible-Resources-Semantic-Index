@@ -1,14 +1,15 @@
 #!/usr/bin/env python3
 """Fail-closed access to unreviewed inherited localization fields.
 
-Source text remains unchanged in native records. This policy is for future
-reader-facing projections, not for changing the historical ACAI witness.
+Legacy inherited descriptions must never be exposed as BRSI content.
+This policy is for short source labels and alias candidates only.
 """
 from __future__ import annotations
 
 import copy
 
 FIELDS = frozenset({"descriptions", "preferred_label", "alternate_labels"})
+READER_FIELDS = frozenset({"preferred_label", "alternate_labels"})
 HOLD_STATUS = "withheld_pending_review"
 
 
@@ -56,7 +57,7 @@ def reader_field(record: dict, language: str, field: str):
     """
     if not isinstance(language, str) or len(language) != 3 or not language.isalpha() or not language.islower():
         raise ValueError("Expected a three-letter lowercase language tag")
-    if field not in FIELDS:
+    if field not in READER_FIELDS:
         raise ValueError(f"Unsupported reader-facing localization field: {field}")
     held = validated_holds(record)
     if field in held or f"{language}.{field}" in held:

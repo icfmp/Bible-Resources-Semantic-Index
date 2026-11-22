@@ -20,6 +20,42 @@ BSI dataset. They are **not** rebuilt by replaying historical ACAI patches.
 5. If an identity was quarantined, keep its original evidence under
    `data/quarantined/`, with a reason; never silently drop its source record.
 
+## Minimal identity identification (not encyclopedic prose)
+
+BRSI is a **source-backed index of identities and links**, not a multilingual
+encyclopedia. Keep the stable source/canonical IDs, kind, verse and original-word
+witnesses, reviewed structural relations, provenance and uncertainty.
+
+When `person:Mary.2` alone is unclear, use an optional **single-language
+editorially checked** `bsi.identity_hint` to distinguish it from namesakes:
+
+```json
+{
+  "name": "Mary",
+  "qualifier": "mother of James the younger and Joses",
+  "language": "eng",
+  "evidence_references": ["41015040"],
+  "review_status": "editorially_reviewed"
+}
+```
+
+The qualifier is a **short identifying precision, not a biography**. Prefer
+existing verified identity relations and exact source word/verse identifiers
+for machine matching. Provide a hint only where a human genuinely needs to
+distinguish a key. Evidence references must be present in that entity's current
+source references; source/provenance of wider editorial conclusions remains in
+`bsi.editorial_evidence`. The hint's review status is independent of the
+whole entity's `bsi.review_status` and must not imply an unrelated field is
+reviewed. `scripts/identity_policy.py` checks every provided hint at build
+time, without requiring invented hints on all historical records.
+
+Inherited `localizations.*.descriptions` are **not BRSI data**. They may be
+pruned from current records with exact upstream ACAI snapshot/record hashes
+and historical Git commits retained as recovery evidence. Do not paste the
+removed prose into new `identity_hint` fields. Never remove source word
+groups, verse references, canonical identity information or necessary
+source-backed aliases merely because they are not descriptive prose.
+
 ## Adding new BSI-owned entities
 
 Do not invent an ACAI source identity for new research. A new reviewed
