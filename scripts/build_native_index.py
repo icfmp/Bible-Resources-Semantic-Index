@@ -49,7 +49,7 @@ def build(data: Path = ROOT / "data") -> dict:
                 raise ValueError("Restricted keyterm record unexpectedly in approved native data")
             origin = metadata.get("origin")
             if origin == "bsi":
-                if not sid.startswith("bsi:" + expected_prefix + ":"):
+                if sid != f"bsi:{expected_prefix}:{path.stem}":
                     raise ValueError(f"Incorrect BSI-native identity provenance: {path}: {sid}")
                 if not isinstance(metadata.get("editorial_reason"), str) or not metadata["editorial_reason"].strip():
                     raise ValueError(f"BSI-native record lacks editorial reason: {path}")
@@ -111,7 +111,7 @@ def build(data: Path = ROOT / "data") -> dict:
             else:
                 raise ValueError(f"Unsupported quarantine provenance: {path}")
             quarantined.append({
-                "source_id": sid, "source_sha256": metadata["source_sha256"],
+                "source_id": sid, "source_sha256": metadata.get("source_sha256"),
                 "reason": metadata["reason"], "evidence": metadata["evidence"],
             })
     if manifest["written_records"] + manifest["restricted_unpublished_keyterms"] != manifest["source_records"]:
