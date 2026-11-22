@@ -131,19 +131,23 @@ developed in parallel where no source/data/publication gate is bypassed.
   These are *review priorities, not approved identifications*. The exact
   ten source IDs and evidence pointers are tracked in
   [#6](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/6).
-- [ ] **Enforce stronger current and future native-data integrity.**
+- [x] **Enforce stronger current and future native-data integrity.**
   [#23](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/23).
-  Extend schema/reference/lexical source tests. PR #29 added a
-  source-preserving fail-closed localization policy, tests using real records,
-  and native-build rejection of malformed holds. PR #47 introduced
-  source-reference-shape triage: **477 records** with key verse identifiers
-  outside the general reference list, and **118 biblically marked records**
-  without general verse/explicit-word witnesses. These are audit candidates,
-  **not proved errors**. PR #48 validated the two independent ACAI ORG BCV8
-  lists without inventing a subset constraint or original-word witness.
-  PR #53 added typed descendant-link validation. Future reader-facing
-  exporters must obey inherited-field hold policy; further source
-  evidence review and native invariants remain open.
+  Source and identity validation is part of native builds and offline CI:
+  strict JSON/provenance/layout, stable historical inventory without a
+  ceiling on new independently reviewed native works, typed current and
+  canonical identities, existing canonical targets, source-edition-locked
+  original-word/BCV8 keys, reference-qualification abstentions and
+  fail-closed inherited localization holds. The exact-word reader resolver
+  preserves ambiguous candidates and rejects mismatched editions, Unicode
+  lookalikes and unapproved context senses. PRs #29, #48, #53, #84,
+  #86, #91, #93, #94 and #96 contain the substantive regression gates.
+  **Scope boundary:** 477 records with distinct key/general reference
+  lists and 118 without explicit mention witnesses remain source audit
+  candidates, *not format failures or invented references*. Unattested
+  tokens and unresolved textual variants remain identified holds;
+  release rights/editorial approval remain separate under #62.
+  No silent source correction or source-word reassignment is permitted.
 
 **Phase exit:** all distributable fields have evidence or explicit abstention;
 source IDs, manuscript word anchors, versification and original-text variants
