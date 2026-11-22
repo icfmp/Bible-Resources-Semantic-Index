@@ -19,6 +19,14 @@ Tracking: [issue #22](https://github.com/icfmp/Bible-Resources-Semantic-Index/is
 | `docs/V0_1_*.md`, `docs/BSI_V0_1_*.md` | Historical editorial/release evidence | Keep only verifiable decisions and published evidence, mark as historical |
 | `work/`, `sources/`, `release/` | Recovery policy, source provenance, historical release locks | Never imply publication or durable archival that did not occur |
 
+## Removed with verified absence of callers
+
+- `links/dictionaries/ubs-hebrew/inspect_sources.py`: initial read-only
+  schema/TSV sample printer. Not referenced by either pinned source workflow,
+  current tests, or indexed repository code search; its inspection is not a
+  canonical build or source-specific editorial decision. Removing this helper
+  does not remove any reviewed JSON ledger or frozen source baseline.
+
 ## Verified CI entrypoints
 
 - `offline-checks.yml`: native unit tests, identity and relationship audits,
