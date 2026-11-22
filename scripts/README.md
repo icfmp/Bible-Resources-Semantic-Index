@@ -1,24 +1,52 @@
-# BSI shared scripts
+# BRSI shared scripts
 
-Only the source-neutral **entity index** tools live here:
+This directory contains the **current native entity build**, reusable validators,
+distribution-contract utilities, and explicitly retained historical tools.
+It is **not** a directory of exclusively current production commands.
 
-- `compile_index.py` — immutable ACAI source snapshot + audited entity index
-- `resolve.py` — source-word and edition-aware candidate resolver
-- `distribution_profile.py` — keyterm-free public projection
-- `minimal_labels.py` — minimal approved source label selection
-- `package_candidate.py` — deterministic candidate archive and manifest
-- `audit_person_overlaps.py` — reusable person-word overlap analysis
-- `build_native_index.py` — current Git-owned, keyterm-free native entity build
-- `write_integrity_receipt.py` — simple local SHA-256 and byte-size receipt
-- `release_contract.py` — strict v1 multi-kind manifest and consumer-pin verifier; **never publishes**
+## Current native entity workflow
 
-The historical `package_candidate.py` and `minimal_labels.py` reproduce the *old v0.1 source workflow*; they do not automatically stage current edited native data or validate new lexical publication rights. See [phase 1 release contract](../docs/RELEASE_CONTRACT.md).
+From the repository root:
 
-Regression tests are in [../tests/](../tests/). Source locks, reviewed edits
-and exception inventories are in [../data/](../data/); outputs go into
-ignored `../dist/`. See [../README.md](../README.md).
+```sh
+python3 -I scripts/build_native_index.py --data data --output /tmp/brsi-current.json
+python3 -I -m unittest discover -s tests -p 'test_*.py'
+```
 
-UBS Hebrew- and Greek-specific scripts are **not generic**: they are kept
-with their pinned dictionary editions in `../links/dictionaries/`.
-Never infer a contextual sense or republish source wording from the
-presence of a matching lexical ID.
+The canonical editable records are `data/entities/` (plus the deliberately
+quarantined source identities and qualification evidence). Do **not** replay
+historical ACAI patches or import an upstream snapshot during normal editing.
+
+## Reusable tools and checks
+
+- `build_native_index.py`: canonical native entity build.
+- `resolve.py`, `reference_policy.py`, `identity_policy.py`,
+  `localization_policy.py`, `offspring_target_policy.py`: shared policy
+  and resolution logic.
+- `distribution_profile.py`, `stage_entity_candidate.py`,
+  `release_contract.py`, `verify_historical_asset.py`,
+  `write_integrity_receipt.py`: projection, staging and integrity checks,
+  **not authorization to publish**.
+- `audit_*.py`: non-mutating entity data and relationship audits.
+- `prune_inherited_descriptions.py`, `prune_nonworking_labels.py`:
+  historical, tested normalization commands; CI uses `--check` only.
+
+## Historical or restricted workflows
+
+- `compile_index.py`, `minimal_labels.py`, `package_candidate.py`:
+  retained for migration/v0.1 reconstruction evidence or compatibility tests;
+  **not** the current editable-source build.
+- `work_snapshot.py`, `publish_private_work_snapshot.sh`:
+  historical private archival tooling, **not currently active**. No private
+  storage or durable backup is implied by their presence; see
+  [working-state limitations](../work/README.md).
+
+The UBS Greek and Hebrew lexical workflows, their tests and reviewed
+source-specific decisions live under
+[links/dictionaries/](../links/dictionaries/), not here. Their source-pinned
+CI jobs verify rebuilds without publishing. Never infer a unique contextual
+sense merely from a matching dictionary or Strong identifier.
+
+See the [phase 2 inventory](../docs/MAINTENANCE_INVENTORY.md) for removal
+boundaries, [release contract](../docs/RELEASE_CONTRACT.md), and
+[regression entrypoints](../tests/README.md).
