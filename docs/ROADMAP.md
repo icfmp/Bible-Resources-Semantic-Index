@@ -70,8 +70,12 @@ uncommitted research note.
 - [ ] **P1 · Review inherited descriptions and classification questions.**
   Five source-description sets still disagree with reviewed BSI identities;
   determine whether `person:Dinaite` is the appropriate category for Ezra 4:9,
-  and examine the inherited Syria/Edom alternate label without conflating
-  textual variants. No guessed translations or invented entities.
+  and preserve the distinction between geographic aliases and textual variants.
+  The inherited `Edom` synonym for Syria was removed in PR #15, and the
+  misleading `Gerasa` city synonym for Gadara in PR #16, with source
+  evidence and native regressions. Remaining source-specific demonyms and
+  multilingual descriptions need editorial review. No guessed translations
+  or invented entities.
   [Issue #6](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/6).
 - [ ] **P1 · Finish the standalone migration acceptance.** Check current
   entrypoints, original source references, mixed code/data license notices,
