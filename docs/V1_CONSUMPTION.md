@@ -50,6 +50,11 @@ a new artifact.
 
 The output contains one concise read-only receipt per archive, including
 its kind, original tag, matched ZIP digest and number of lookup records.
+The inspector rejects restricted Key Terms in both the entity list **and**
+reverse original-word candidates, malformed candidate rows and incompatible
+Hebrew publication flag types. Passing the archive digest does not override
+these public-data boundaries.
+
 **The resulting summary is not a rights determination or editorial review.**
 
 ## 3. What the current public JSON actually means
