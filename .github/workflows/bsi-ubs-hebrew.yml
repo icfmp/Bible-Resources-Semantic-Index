@@ -23,30 +23,18 @@ jobs:
     timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
-      - name: Offline regression tests
+      - name: Offline regression tests (all hebrew modules)
+        shell: bash
         run: |
-          python3 -I links/dictionaries/ubs-hebrew/test_index.py
-          python3 -I links/dictionaries/ubs-hebrew/test_lexical_gaps.py
-          python3 -I links/dictionaries/ubs-hebrew/test_strong_reconciliation.py
-          python3 -I links/dictionaries/ubs-hebrew/test_word_anchored.py
-          python3 -I links/dictionaries/ubs-hebrew/test_dictionary_scope.py
-          python3 -I links/dictionaries/ubs-hebrew/test_family_register.py
-          python3 -I links/dictionaries/ubs-hebrew/test_editorial_scope_dispositions.py
-          python3 -I links/dictionaries/ubs-hebrew/test_lexical_nonidentity.py
-          python3 -I links/dictionaries/ubs-hebrew/test_multi_headword_abstentions.py
-          python3 -I links/dictionaries/ubs-hebrew/test_reviewed_headwords.py
-          python3 -I links/dictionaries/ubs-hebrew/test_source_morpheme_abstentions.py
-          python3 -I links/dictionaries/ubs-hebrew/test_v1_disposition_coverage.py
-          python3 -I links/dictionaries/ubs-hebrew/test_single_candidate_abstentions.py
-          python3 -I links/dictionaries/ubs-hebrew/test_reviewed_word_anchor_preview.py
-          python3 -I links/dictionaries/ubs-hebrew/test_positive_family_unwitnessed.py
-          python3 -I links/dictionaries/ubs-hebrew/test_additional_word_headwords.py
-          python3 -I links/dictionaries/ubs-hebrew/test_private_reviewed_candidate.py
-          python3 -I links/dictionaries/ubs-hebrew/test_package_reviewed_v1_candidate.py
-          python3 -I links/dictionaries/ubs-hebrew/test_promote_verified_ubs_release.py
-          python3 -I links/dictionaries/ubs-hebrew/test_v11_semantic_feasibility.py
-          python3 -I links/dictionaries/ubs-hebrew/test_v11_context_pilot.py
-          python3 -I links/dictionaries/ubs-hebrew/test_v11_context_pilot_screening.py
+          set -euo pipefail
+          tests=(links/dictionaries/ubs-hebrew/test_*.py)
+          [[ -f "${tests[0]}" ]] || { echo "No UBS hebrew regression tests found" >&2; exit 1; }
+          printf 'Running %s UBS hebrew regression modules\n' "${#tests[@]}"
+          for test_file in "${tests[@]}"; do
+            echo "::group::${test_file}"
+            python3 -I "${test_file}"
+            echo "::endgroup::"
+          done
       - name: Check out exact UBS Hebrew EN/FR 0.9.4 source
         uses: actions/checkout@v4
         with:
