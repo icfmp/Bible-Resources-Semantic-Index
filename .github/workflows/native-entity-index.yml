@@ -20,6 +20,9 @@ on:
       - "scripts/stage_entity_candidate.py"
       - "release/**"
       - "docs/RELEASE_CONTRACT.md"
+      - "docs/V1_CONSUMPTION.md"
+      - "scripts/inspect_v1_published_assets.py"
+      - "tests/test_v1_published_consumer.py"
       - "docs/EDITING_ENTITIES.md"
       - ".github/workflows/native-entity-index.yml"
   pull_request:
@@ -41,6 +44,9 @@ on:
       - "scripts/release_contract.py"
       - "release/**"
       - "docs/RELEASE_CONTRACT.md"
+      - "docs/V1_CONSUMPTION.md"
+      - "scripts/inspect_v1_published_assets.py"
+      - "tests/test_v1_published_consumer.py"
       - ".github/workflows/native-entity-index.yml"
   workflow_dispatch:
 
