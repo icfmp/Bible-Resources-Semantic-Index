@@ -152,6 +152,27 @@ unknown manifest field, unapproved candidate or wrong tag fail closed.
 Do not fetch \`main\`, infer a version from the latest GitHub release, or
 automatically "repair" a missing checksum.
 
+## Historic asset digests independently locked
+
+The three GitHub release asset **digests returned by the original
+Bible-Resources Releases API** (checked 2026-11-22) are pinned at
+[release/historical-assets.lock.json](../release/historical-assets.lock.json).
+This is an inventory of existing assets, **not** a new release manifest:
+
+| Historical tag | Archive ZIP SHA-256 |
+| --- | --- |
+| \`bsi-v0.1.0\` | \`3685b09b157f89c42f7766c4f42cf7d5c9fe1e8cde153c8f633afc7a6d2d4c41\` |
+| \`bsi-ubs-greek-v0.1.0\` | \`eeaf6f1b0dfa7335c522c52374a1d5261412819e074520a455a4822b728eddaf\` |
+| \`bsi-ubs-hebrew-v1.0.0\` | \`e448c7e4b6c0cb892789d78b487a3afe3dbe18cfb8c0b13be5fd910deabf640f\` |
+
+Both UBS original-source workflows now rebuild their own historically
+approved *public-scope projections* and independently verify them
+**byte-for-byte** against those historical published ZIP digests, via
+\`scripts/verify_historical_asset.py\`. Never mistake this historical
+reproduction for a new BRSI release or source-redistribution authorization.
+The current native entity candidate has **newer edited source records**, so
+its local ZIP deliberately differs from the historical entities 0.1.0 ZIP.
+
 ## Historical releases remain immutable
 
 The following existing **Bible-Resources** tags and public asset URLs are
