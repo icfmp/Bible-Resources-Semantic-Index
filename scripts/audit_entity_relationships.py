@@ -121,8 +121,7 @@ def main():
     parser.add_argument("--fail-on-unresolved", action="store_true")
     args = parser.parse_args()
     result = audit(args.data)
-    output = json.dumps(result, ensure_ascii=False, indent=2, sort_keys=True) + "
-"
+    output = json.dumps(result, ensure_ascii=False, indent=2, sort_keys=True) + "\n"
     if args.report:
         args.report.parent.mkdir(parents=True, exist_ok=True)
         args.report.write_text(output, encoding="utf-8")
