@@ -223,8 +223,8 @@ def validate_manifest(manifest: dict) -> None:
             or type(artifact["bytes"]) is not int or artifact["bytes"] <= 0):
         raise ValueError("Unsafe artifact filename or invalid fingerprint")
     if artifact["input_class"] not in {
-            "native_keyterm_free_index", "checked_in_nonpublic_lexical_baseline",
-            "source_reviewed_public_projection"}:
+            "native_keyterm_free_index", "nonpublishing_entity_zip_candidate",
+            "checked_in_nonpublic_lexical_baseline", "source_reviewed_public_projection"}:
         raise ValueError("Unknown artifact input class")
     pub = manifest["publication"]
     exact_keys(pub, {"status", "approved", "tag", "repository"}, "publication")
@@ -241,14 +241,20 @@ def validate_manifest(manifest: dict) -> None:
             raise ValueError("Release tag/version mismatch")
     elif pub["status"] in {"candidate_unapproved", "local_integrity_only"}:
         if (pub["approved"] is not False or pub["tag"] is not None
-                or rights["redistribution_cleared"]
-                or not filename.endswith(".json")):
+                or rights["redistribution_cleared"]):
             raise ValueError("Local receipts must never claim publication approval")
-        expected_class = ("native_keyterm_free_index" if kind == "entities"
-                          else "checked_in_nonpublic_lexical_baseline")
-        expected_status = ("candidate_unapproved" if kind == "entities"
-                           else "local_integrity_only")
-        if artifact["input_class"] != expected_class or pub["status"] != expected_status:
+        if kind == "entities":
+            candidates = {
+                "native_keyterm_free_index": ".json",
+                "nonpublishing_entity_zip_candidate": ".zip",
+            }
+            if (pub["status"] != "candidate_unapproved"
+                    or artifact["input_class"] not in candidates
+                    or not filename.endswith(candidates[artifact["input_class"]])):
+                raise ValueError("Invalid nonpublishing entity candidate")
+        elif (artifact["input_class"] != "checked_in_nonpublic_lexical_baseline"
+              or pub["status"] != "local_integrity_only"
+              or not filename.endswith(".json")):
             raise ValueError("Private baseline cannot be promoted to public candidate")
     else:
         raise ValueError("Unknown publication status")
