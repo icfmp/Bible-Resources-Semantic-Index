@@ -48,7 +48,7 @@ def audit(data: Path, *, limit: int = 30) -> dict:
                 # *here* classify valid source pointers to another kind.
                 kind = nonperson_targets.get(child_id)
                 if kind:
-                    stats["offspring_target_outside_people_folder"] += 1
+                    stats["offspring_target_nonperson_kind"] += 1
                 else:
                     stats["offspring_target_not_found_in_current_entity_data"] += 1
                 nonperson_examples.append({
@@ -83,7 +83,7 @@ def audit(data: Path, *, limit: int = 30) -> dict:
         "person_records_scanned": len(people),
         "counts": dict(sorted(stats.items())),
         "conflicting_inverse_claim_examples": conflicts[:limit],
-        "offspring_outside_person_folder_examples": sorted(
+        "nonperson_or_unresolved_offspring_examples": sorted(
             nonperson_examples,
             key=lambda x: (x["claiming_parent"], x["child_target"])
         )[:limit],
