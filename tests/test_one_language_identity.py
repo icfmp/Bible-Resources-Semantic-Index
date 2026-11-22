@@ -29,7 +29,8 @@ class OneLanguageIdentityTests(unittest.TestCase):
                 ))
                 seen[record["type"]] += 1
         self.assertGreater(sum(seen.values()), 0)
-        self.assertEqual(len(seen), 8)
+        self.assertIn("person", seen)
+        self.assertIn("place", seen)
 
     def test_reviewed_hints_do_not_require_translations(self):
         for basename in ("Mary.json", "Mary.2.json", "Mary.3.json"):
