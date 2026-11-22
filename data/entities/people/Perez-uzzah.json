@@ -16,6 +16,23 @@
       "Macula WLC 2SA 6:8 o100060080121 o100060080131",
       "Macula WLC 1CH 13:11 o130130110111 o130130110121"
     ],
+    "editorial_field_changes": [
+      {
+        "action": "remove_inherited_inconsistent_relation_or_attribute",
+        "evidence": [
+          "2 Samuel 6:8",
+          "1 Chronicles 13:11",
+          "Existing reviewed BSI replacement of person:Perez-uzzah with place:PerezUzzah"
+        ],
+        "reason": "Perez-uzzah is the place named after the incident involving Uzzah, not Uzzah himself. Human parentage, gender, siblings and a person-name alias are inherited from the rejected ACAI person identity.",
+        "removed_fields": [
+          "father",
+          "gender",
+          "referred_to_as",
+          "siblings"
+        ]
+      }
+    ],
     "editorial_reason": "The named place Perez-uzzah is attested at 2 Samuel 6:8 and 1 Chronicles 13:11, distinct from Uzzah the man.",
     "review_status": "editorially_reviewed",
     "source_id": "person:Perez-uzzah",
@@ -34,8 +51,6 @@
       ]
     ]
   },
-  "father": "person:Abinadab",
-  "gender": "male",
   "id": "place:PerezUzzah",
   "key_references": [
     "10006008"
@@ -230,13 +245,6 @@
   "references": [
     "10006008",
     "13013011"
-  ],
-  "referred_to_as": [
-    "person:Uzzah"
-  ],
-  "siblings": [
-    "person:Eleazar.3",
-    "person:Ahio"
   ],
   "subject_referents": {},
   "type": "place",

@@ -20,6 +20,7 @@ jobs:
           python3 -I tests/test_workspace_layout.py
           python3 -I tests/test_work_snapshot.py
           python3 -I tests/test_distribution_profile.py
+          python3 -I tests/test_editorial_field_provenance.py
           python3 -I tests/test_build.py
           python3 -I tests/test_resolve.py
           python3 -I tests/test_audit_person_overlaps.py

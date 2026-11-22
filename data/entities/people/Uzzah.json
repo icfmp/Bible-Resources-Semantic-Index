@@ -16,6 +16,20 @@
     "editorial_evidence": [
       "Macula WLC 2SA 6:8"
     ],
+    "editorial_field_changes": [
+      {
+        "action": "remove_inherited_inconsistent_relation_or_attribute",
+        "evidence": [
+          "2 Samuel 6:8",
+          "1 Chronicles 13:11",
+          "Existing BSI person:Perez-uzzah to place:PerezUzzah decision"
+        ],
+        "reason": "The reviewed identity person:Perez-uzzah is now a distinct place, not a second personal name for Uzzah. The original alias therefore conflicts with the accepted identity separation.",
+        "removed_fields": [
+          "referred_to_as"
+        ]
+      }
+    ],
     "editorial_reason": "The compound Perez-uzzah is a place-name; genuine personal-name tokens including o100060080082 remain untouched.",
     "review_status": "editorially_reviewed",
     "source_id": "person:Uzzah",
@@ -250,9 +264,6 @@
     "13013009",
     "13013010",
     "13013011"
-  ],
-  "referred_to_as": [
-    "person:Perez-uzzah"
   ],
   "siblings": [
     "person:Eleazar.3",

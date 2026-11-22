@@ -19,6 +19,19 @@
       "Pinned ACAI places/json/Gerasa.json: MRK 5:1!12 n41005001012 and LUK 8:26!7 n42008026007 are Gerasenes, while the Matthew Gadarenes token is also claimed; preserve ambiguity until site-specific textual review",
       "Inherited ACAI issue #7: full source-token and regional-demonym audit"
     ],
+    "editorial_field_changes": [
+      {
+        "action": "remove_inherited_inconsistent_relation_or_attribute",
+        "evidence": [
+          "Existing reviewed BSI place:Gadara versus place:Gerasa editorial decision",
+          "Distinct historical Decapolis cities, Gadara (Umm Qais) and Gerasa (Jerash)"
+        ],
+        "reason": "Gadara and Gerasa are independently identified places. Their inherited cross-alias would silently restore the explicitly rejected conflation.",
+        "removed_fields": [
+          "referred_to_as"
+        ]
+      }
+    ],
     "editorial_reason": "Gadara (Umm Qais) and Gerasa (Jerash) are historically distinct Decapolis cities, not equivalent name forms. The source's Gadara.primary_id=place:Gerasa falsely merges their identities. Preserve ALL exact original Greek demonym word groups and verse references as candidates, including cross-gospel textual variants; a demonym is not proof of the precise miracle site. Gadara.2 (Perea) remains separate.",
     "review_status": "editorially_reviewed",
     "source_id": "place:Gadara",
@@ -250,9 +263,6 @@
     "41005001",
     "42008026",
     "42008037"
-  ],
-  "referred_to_as": [
-    "place:Gerasa"
   ],
   "subject_referents": {},
   "subregion_of": [

@@ -19,6 +19,21 @@
       "Macula WLC 1CH 3:15 o130030150041: proper Hebrew name Johanan, ref 1CH 3:15!4",
       "ACAI issue #71 inherited royal-identity follow-up"
     ],
+    "editorial_field_changes": [
+      {
+        "action": "remove_inherited_inconsistent_relation_or_attribute",
+        "evidence": [
+          "1 Chronicles 3:15",
+          "2 Kings 23:30-31",
+          "Jeremiah 22:11",
+          "Existing reviewed BSI person:Johanan identity correction"
+        ],
+        "reason": "The reviewed Johanan son of Josiah is distinct from the regnal Jehoahaz/Shallum identity; the inherited alias would undo that correction.",
+        "removed_fields": [
+          "referred_to_as"
+        ]
+      }
+    ],
     "editorial_reason": "1 Chronicles 3:15 explicitly identifies Johanan as a distinct son of Josiah, while the source incorrectly canonicalizes this name form under person:Jehoahaz.3. The precise Johanan word remains attached to its own individual; no guess is made about Shallum.5.",
     "review_status": "editorially_reviewed",
     "source_id": "person:Johanan",
@@ -229,9 +244,6 @@
   "pronominal_referents": {},
   "references": [
     "13003015"
-  ],
-  "referred_to_as": [
-    "person:Jehoahaz.3"
   ],
   "related_places": {
     "birth_place": [
