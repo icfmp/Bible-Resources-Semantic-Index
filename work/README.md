@@ -28,12 +28,11 @@ has been verified in this repository.** A successful build or a source lock
 is not a substitute for an independently verified durable backup of every
 intermediate file.
 
-The generic `scripts/work_snapshot.py` and
-`scripts/publish_private_work_snapshot.sh` remain in source control as
-historical, not currently invoked tooling. Their existence does not imply a
-private destination was provisioned, or that an archive was ever uploaded.
-The private-storage workflow from the former Bible-Resources tree is **not
-active here**. Do not re-enable it or upload full source-derived evidence
+The former private-snapshot packaging and upload scripts were retired: no
+active caller or configured private storage destination was verified, and the
+old uploader referred to a removed monorepo path. Git history retains the
+historical implementation, but it is **not a working backup**. No complete
+private research archive is claimed. Do not introduce a new upload path
 without an explicit rights and storage decision.
 
 ## Reproducible recovery available now
