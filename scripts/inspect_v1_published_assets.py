@@ -103,11 +103,12 @@ def inspect(kind: str, raw: bytes, lock: dict) -> dict:
                or str(row.get("id", "")).startswith("keyterm:")
                for row in lookup):
             raise ValueError("Published entity index exposes restricted Key Terms or malformed entities")
-        entity_ids = {row.get("id") for row in lookup}
+        identifiers = [row.get("id") for row in lookup]
         if (any(not isinstance(entity_id, str) or not entity_id
-                for entity_id in entity_ids)
-                or len(entity_ids) != len(lookup)):
+                for entity_id in identifiers)
+                or len(set(identifiers)) != len(lookup)):
             raise ValueError("Published entity identities are absent or duplicated")
+        entity_ids = set(identifiers)
         reverse = index.get("by_word")
         if not isinstance(reverse, dict):
             raise ValueError("Published entity original-word lookup is missing")
