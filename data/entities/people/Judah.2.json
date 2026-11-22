@@ -21,13 +21,36 @@
     "review_status": "source_unreviewed",
     "source_id": "person:Judah.2",
     "source_primary_id": "person:Hodiah.2",
-    "source_sha256": "fac91bbc1000b97d11493ec62dc37da722ea56c8857c735081e40de2ed5d42d3"
+    "source_sha256": "fac91bbc1000b97d11493ec62dc37da722ea56c8857c735081e40de2ed5d42d3",
+    "editorial_field_changes": [
+      {
+        "action": "correct_inherited_unrelated_verse_token_attribution",
+        "removed_relation_values": {
+          "references": [
+            "15003009"
+          ],
+          "key_references": [
+            "15003009"
+          ]
+        },
+        "removed_original_word_groups": {
+          "wlc": [
+            [
+              "o150030090081"
+            ]
+          ]
+        },
+        "reason": "Ezra 3:9's Judah refers to the descendants/family of Hodaviah in the Ezra 2:40 and Nehemiah 7:43 Levite register; this verse cannot be directly assigned to the separate Nehemiah 8:7 teacher Hodiah identity. Keep Nehemiah source-anchored claims and ACAI original unchanged.",
+        "evidence": [
+          "Ezra 2:40; Ezra 3:9; Nehemiah 7:43",
+          "https://classic.net.bible.org/passage.php?passage=Ezr+3%3A9",
+          "https://www.biblegateway.com/passage/?search=Ezra+2%3A40%2CEzra+3%3A9%2CNehemiah+7%3A43&version=NET%3BNKJV"
+        ]
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
-      [
-        "o150030090081"
-      ],
       [
         "o160120080061"
       ]
@@ -36,7 +59,6 @@
   "gender": "male",
   "id": "person:Judah.2",
   "key_references": [
-    "15003009",
     "16012008"
   ],
   "lemmas": {
@@ -58,7 +80,6 @@
   "primary_id": "person:Hodiah.2",
   "pronominal_referents": {},
   "references": [
-    "15003009",
     "16012008"
   ],
   "referred_to_as": [
