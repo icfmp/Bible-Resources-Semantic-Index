@@ -25,6 +25,23 @@
   },
   "bsi": {
     "canonical_id": "group:Syria",
+    "editorial_field_changes": [
+      {
+        "action": "correct_inherited_reference",
+        "evidence": [
+          "Existing BSI data/entities/places/Syria.json English source article=place:Syria.2",
+          "Existing ACAI-derived group:Syria localization: Syrians/Arameans residing in Syria",
+          "1 Kings 10:29 and 2 Samuel 8:12 must retain their own textual/source variants"
+        ],
+        "reason": "The inherited group origin names place:Syria.2, an absent identifier; the existing canonical place:Syria record explicitly preserves the source article ID place:Syria.2 and describes the same Syrian/Aramean region. Resolve the reference to that extant place, without creating a new source entity.",
+        "replaced_relation_values": {
+          "group_origin": {
+            "from": "place:Syria.2",
+            "to": "place:Syria"
+          }
+        }
+      }
+    ],
     "review_status": "source_unreviewed",
     "source_id": "group:Syria",
     "source_primary_id": "group:Syria",
@@ -246,7 +263,7 @@
       ]
     ]
   },
-  "group_origin": "place:Syria.2",
+  "group_origin": "place:Syria",
   "group_type": "residence",
   "id": "group:Syria",
   "key_references": [
