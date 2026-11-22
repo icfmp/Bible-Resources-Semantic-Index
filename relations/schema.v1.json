@@ -108,19 +108,19 @@
           },
           "source_id": {
             "type": "string",
-            "pattern": "^[A-Za-z][A-Za-z_-]*:[^\\\\s:]+$"
+            "pattern": "^[A-Za-z][A-Za-z_-]*:[^\\s:]+$"
           },
           "source_canonical_id": {
             "type": "string",
-            "pattern": "^[A-Za-z][A-Za-z_-]*:[^\\\\s:]+$"
+            "pattern": "^[A-Za-z][A-Za-z_-]*:[^\\s:]+$"
           },
           "target_id": {
             "type": "string",
-            "pattern": "^[A-Za-z][A-Za-z_-]*:[^\\\\s:]+$"
+            "pattern": "^[A-Za-z][A-Za-z_-]*:[^\\s:]+$"
           },
           "target_canonical_id": {
             "type": "string",
-            "pattern": "^[A-Za-z][A-Za-z_-]*:[^\\\\s:]+$"
+            "pattern": "^[A-Za-z][A-Za-z_-]*:[^\\s:]+$"
           },
           "predicate": {
             "oneOf": [
@@ -164,7 +164,7 @@
             "properties": {
               "source_record_id": {
                 "type": "string",
-                "pattern": "^[A-Za-z][A-Za-z_-]*:[^\\\\s:]+$"
+                "pattern": "^[A-Za-z][A-Za-z_-]*:[^\\s:]+$"
               },
               "source_record_path": {
                 "type": "string",
