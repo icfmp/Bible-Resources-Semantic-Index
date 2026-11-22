@@ -36,6 +36,14 @@ Tracking: [issue #22](https://github.com/icfmp/Bible-Resources-Semantic-Index/is
   Retained source-specific lexical checks and decision ledgers are unchanged.
   The three associated no-longer-needed workflow stages were retired together.
 
+- `links/dictionaries/ubs-greek/audit_sense_form_witnesses.py` and
+  `audit_sense_reference_shapes.py`, plus their dedicated offline negative
+  tests: exploratory reports of original UBS form and LEXReferences *shapes*
+  from earlier contextual research. Both reports were runner-local and
+  unconsumed downstream. Subsequent source-pinned form-supported and
+  reference-/verse-supported candidate verification remains in CI, as do all
+  original approved/abstained source decisions. No lexical baseline changed.
+
 ## Verified CI entrypoints
 
 - `offline-checks.yml`: native unit tests, identity and relationship audits,

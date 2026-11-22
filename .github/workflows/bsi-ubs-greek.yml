@@ -54,9 +54,7 @@ jobs:
           python3 -I links/dictionaries/ubs-greek/test_unresolved_semantic_priorities.py
           python3 -I links/dictionaries/ubs-greek/test_lower_confidence_single_sense.py
           python3 -I links/dictionaries/ubs-greek/test_context_review_batches.py
-          python3 -I links/dictionaries/ubs-greek/test_sense_form_witnesses.py
           python3 -I links/dictionaries/ubs-greek/test_form_supported_provisional_senses.py
-          python3 -I links/dictionaries/ubs-greek/test_sense_reference_shapes.py
           python3 -I links/dictionaries/ubs-greek/test_ubs_source_verse_witnesses.py
           python3 -I links/dictionaries/ubs-greek/test_source_verse_provisional_senses.py
           python3 -I links/dictionaries/ubs-greek/test_ubs_token_position_alignment.py
@@ -859,13 +857,7 @@ jobs:
           assert r['contextually_verified']==0 and r['source_modified'] is False and r['published'] is False
           print('GREEK_2728_AMBIGUOUS_UBS_ORIGINAL_WORDS_GROUPED_WITHOUT_CONTEXTUAL_SELECTION')
           PY
-      - name: Compare original UBS bilingual form evidence for Greek ἰδού and ἴδε
-        run: |
-          python3 -I links/dictionaries/ubs-greek/audit_sense_form_witnesses.py \
-            --batches /tmp/bsi-ubs-greek-2728-contextual-review-batches-PRIVATE.json \
-            --english ubs-source/dictionaries/greek/JSON/UBSGreekNTDic-v1.0-en.JSON \
-            --french ubs-source/dictionaries/greek/JSON/UBSGreekNTDic-v1.0-fr.JSON \
-            --output /tmp/bsi-ubs-greek-ide-idou-original-source-form-evidence-PRIVATE.json
+
       - name: Stage 223 authentic source-form-specific Greek UBS provisional sense choices
         run: |
           python3 -I links/dictionaries/ubs-greek/build_form_supported_provisional_senses.py \
@@ -886,13 +878,7 @@ jobs:
           assert x['publication_approved'] is False
           print('GREEK_223_SOURCE_FORM_SUPPORTED_PROVISIONAL_SENSES_NO_CONTEXT_VERIFICATION')
           PY
-      - name: Inspect actual UBS bilingual LEXReferences fields for all 2728 ambiguous Greek source words
-        run: |
-          python3 -I links/dictionaries/ubs-greek/audit_sense_reference_shapes.py \
-            --batches /tmp/bsi-ubs-greek-2728-contextual-review-batches-PRIVATE.json \
-            --english ubs-source/dictionaries/greek/JSON/UBSGreekNTDic-v1.0-en.JSON \
-            --french ubs-source/dictionaries/greek/JSON/UBSGreekNTDic-v1.0-fr.JSON \
-            --output /tmp/bsi-ubs-greek-sense-lexreferences-structure-PRIVATE.json
+
       - name: Independently audit UBS LEXID passage witnesses against all original MACULA Greek word IDs
         run: |
           python3 -I links/dictionaries/ubs-greek/audit_ubs_source_verse_witnesses.py \
