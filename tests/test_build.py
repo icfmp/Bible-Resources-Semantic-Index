@@ -774,6 +774,74 @@ class EntityIndexTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "conflicts with exact original word anchor"):
             self.build(reference_qualifications=claim_manifest)
 
+    def test_source_qualification_manifests_reject_noninteger_schema_versions(self):
+        self.write_record("people", "Test", references=["45016027"],
+                          subject_referents={"wlc": [["o020020130103"]]})
+        manifests = (
+            ("source_absences", {
+                "schema_version": 1, "corpus": "wlc",
+                "source_edition": "pinned-test", "word_ids": [],
+                "provenance": [],
+            }),
+            ("source_verse_absences", {
+                "schema_version": 1, "corpus": "sblgnt",
+                "source_edition": "pinned-test", "verse_ids": [],
+                "provenance": [],
+            }),
+            ("reference_qualifications", {
+                "schema_version": 1, "corpus": "sblgnt",
+                "source_edition": "pinned-test", "claims": [],
+            }),
+        )
+        for field, manifest in manifests:
+            with self.subTest(field=field):
+                self.build(**{field: manifest})
+                for version in (True, 1.0, "1"):
+                    with self.subTest(version=version), self.assertRaisesRegex(
+                            ValueError, "schema"):
+                        self.build(**{field: dict(manifest, schema_version=version)})
+
+    def test_malformed_source_word_and_verse_id_collections_fail_closed(self):
+        self.write_record("people", "Test", references=["45016027"],
+                          subject_referents={"wlc": [["o020020130103"]]})
+        word_manifest = {
+            "schema_version": 1, "corpus": "wlc",
+            "source_edition": "pinned-test",
+            "word_ids": [], "provenance": [],
+        }
+        verse_manifest = {
+            "schema_version": 1, "corpus": "sblgnt",
+            "source_edition": "pinned-test",
+            "verse_ids": [], "provenance": [],
+        }
+        for bad in ([["o020020130103"]], [123], [None]):
+            with self.subTest(kind="word", bad=bad), self.assertRaisesRegex(
+                    ValueError, "Malformed source-word audit manifest"):
+                self.build(source_absences=dict(word_manifest, word_ids=bad))
+            with self.subTest(kind="verse", bad=bad), self.assertRaisesRegex(
+                    ValueError, "Malformed absent-verse inventory manifest"):
+                self.build(source_verse_absences=dict(verse_manifest, verse_ids=bad))
+
+    def test_reference_qualification_rejects_unicode_digit_lookalikes(self):
+        self.write_record("people", "Test", references=["45016027"])
+        manifest = {
+            "schema_version": 1, "corpus": "sblgnt",
+            "source_edition": "pinned-test",
+            "claims": [{
+                "source_id": "person:Test", "verse_id": "45016027",
+                "classification": "traditional_subscription_candidate",
+                "evidence": ["Synthetic source witness"],
+            }],
+        }
+        self.assertEqual(
+            self.build(reference_qualifications=manifest)
+                ["statistics"]["qualified_source_reference_claims"], 1)
+        for bad in ("４５０１６０２７", "4501602７", "4501602²"):
+            with self.subTest(bad=bad):
+                claim = dict(manifest["claims"][0], verse_id=bad)
+                with self.assertRaisesRegex(ValueError, "Invalid reference qualification claim"):
+                    self.build(reference_qualifications=dict(manifest, claims=[claim]))
+
     def test_distinguish_edition_apparatus_from_alternate_verse_numbering(self):
         original=self.write_record(
             "people","A",references=["45016027","47013014"])
