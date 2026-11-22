@@ -35,7 +35,7 @@ historical ACAI patches or import an upstream snapshot during normal editing.
   in `build_native_index.py` and covered by native/index-only tests. The old
   one-time ACAI prose/label pruning programs are preserved only in Git history.
 
-## Historical or restricted workflows
+## Historical test support and restricted research packaging
 
 - The historical ACAI compiler was moved to
   [test support](../tests/support/legacy_acai_compiler.py), separate from
@@ -52,6 +52,6 @@ source-specific decisions live under
 CI jobs verify rebuilds without publishing. Never infer a unique contextual
 sense merely from a matching dictionary or Strong identifier.
 
-See the [phase 2 inventory](../docs/MAINTENANCE_INVENTORY.md) for removal
-boundaries, [release contract](../docs/RELEASE_CONTRACT.md), and
+See the [maintained tooling map](../docs/MAINTENANCE_INVENTORY.md) for the
+current caller and source boundaries, [release contract](../docs/RELEASE_CONTRACT.md), and
 [regression entrypoints](../tests/README.md).
