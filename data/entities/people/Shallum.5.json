@@ -19,6 +19,23 @@
       "NET Bible 1 Chronicles 3:15 and ESV Reformation Study Bible 1 Chronicles 3:15 identify Shallum with Jehoahaz; genealogical order remains a contextual textual question",
       "Inherited ACAI issue #71: distinguish Johanan and other royal name forms"
     ],
+    "editorial_field_changes": [
+      {
+        "action": "remove_inherited_inconsistent_relation_or_attribute",
+        "evidence": [
+          "1 Chronicles 3:15",
+          "Jeremiah 22:11",
+          "2 Kings 23:30-31",
+          "Existing BSI canonical identity person:Shallum.5 -> person:Jehoahaz.3"
+        ],
+        "reason": "The accepted BSI canonical identity of Shallum.5 is Jehoahaz.3, so the inherited sibling entry points to the same canonical person.",
+        "removed_relation_values": {
+          "siblings": [
+            "person:Jehoahaz.3"
+          ]
+        }
+      }
+    ],
     "editorial_reason": "The fourth son Shallum in 1 Chronicles 3:15 is commonly identified with Jehoahaz, Josiah's successor. Jeremiah 22:11 directly names Shallum son of Josiah who reigned in his father's place; 2 Kings 23:30–31 records successor Jehoahaz. Source word n/a: original WLC o130030150101 distinctly reads Shallum and is preserved. This aliases a historical individual without conflating the separate son Johanan (o130030150041), and without silently rewriting the source genealogy.",
     "review_status": "editorially_reviewed",
     "source_id": "person:Shallum.5",
@@ -222,7 +239,6 @@
     "13003015"
   ],
   "siblings": [
-    "person:Jehoahaz.3",
     "person:Jehoiakim",
     "person:Zedekiah.3"
   ],
