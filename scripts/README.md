@@ -31,8 +31,9 @@ historical ACAI patches or import an upstream snapshot during normal editing.
   `write_integrity_receipt.py`: projection, staging and integrity checks,
   **not authorization to publish**.
 - `audit_*.py`: non-mutating entity data and relationship audits.
-- `prune_inherited_descriptions.py`, `prune_nonworking_labels.py`:
-  historical, tested normalization commands; CI uses `--check` only.
+- Canonical identity and source-localization constraints are enforced directly
+  in `build_native_index.py` and covered by native/index-only tests. The old
+  one-time ACAI prose/label pruning programs are preserved only in Git history.
 
 ## Historical or restricted workflows
 
