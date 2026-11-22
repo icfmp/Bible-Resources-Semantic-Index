@@ -92,6 +92,17 @@ developed in parallel where no source/data/publication gate is bypassed.
   `localizations.*.descriptions`. No forced translated descriptions or mass
   invented identity hints. Pinned ACAI provenance and historic releases stay
   intact.
+- [x] **Reduce redundant translated display names to one working label.**
+  [#38](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/38).
+  PR #39 added fail-closed, source-safe field-level pruning; PRs #40–#42
+  removed the 18 inherited non-English `preferred_label` translations from
+  all 5,773 current entities in verified category batches. **English source
+  names and 2,898 inherited English alternate-label sets remain**, with
+  their explicit editorial holds and review status; reviewed eight-record
+  identity hints remain independent. Every batch rebuilt the compact native
+  index byte-for-byte unchanged. CI and native builder now prevent accidental
+  reintroduction of redundant names, without barring independently reviewed
+  cross-resource links.
 - [ ] **Review ambiguous entity identities and real matching aliases only.**
   [#6](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/6).
   Finish the actual Gadara demonym/source-variant link question; distinguish
