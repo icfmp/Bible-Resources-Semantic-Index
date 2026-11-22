@@ -43,6 +43,22 @@
             "person:Mary.5"
           ]
         }
+      },
+      {
+        "action": "remove_false_wife_as_husband_alias",
+        "removed_localization_values": {
+          "eng": {
+            "alternate_labels": [
+              "Mary"
+            ]
+          }
+        },
+        "reason": "The woman named Mary is not an alternate name of an unnamed male husband; inherited source-only placeholder aliases must not equate two different identities.",
+        "evidence": [
+          "Acts 12:12",
+          "Matthew 27:56",
+          "Pinned ACAI original record, retained in source.lock.json"
+        ]
       }
     ],
     "editorial_reason": "Withhold disputed or unnamed family identity assignments; preserve source texts, names, original-word witnesses, and all approved source IDs.",
@@ -58,9 +74,6 @@
   ],
   "localizations": {
     "eng": {
-      "alternate_labels": [
-        "Mary"
-      ],
       "preferred_label": "Husband of Mary"
     }
   },
