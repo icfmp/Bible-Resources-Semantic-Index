@@ -11,6 +11,7 @@ on:
       - "tests/test_native_growth.py"
       - "scripts/compile_index.py"
       - "scripts/release_contract.py"
+      - "scripts/stage_entity_candidate.py"
       - "release/**"
       - "docs/RELEASE_CONTRACT.md"
       - "docs/EDITING_ENTITIES.md"
@@ -74,6 +75,20 @@ jobs:
           python3 -I scripts/release_contract.py verify \
             --manifest /tmp/brsi-hebrew-local.json --artifact links/dictionaries/ubs-hebrew/index.json
           # No upload, tag, release, public archive, or source witness snapshot.
+      - name: Stage and reverify deterministic unapproved entity ZIP locally
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -I scripts/stage_entity_candidate.py stage \
+            --index /tmp/bsi-current.json \
+            --lock data/source.lock.json \
+            --producer-revision "$(git rev-parse HEAD)" \
+            --output /tmp/brsi-entities-unapproved.zip \
+            --receipt /tmp/brsi-entities-unapproved.json
+          python3 -I scripts/stage_entity_candidate.py verify \
+            --archive /tmp/brsi-entities-unapproved.zip \
+            --receipt /tmp/brsi-entities-unapproved.json
+          # No upload-artifact step; candidate bytes never leave this job.
       - name: Verify output scope and original-word integrity
         run: |
           python3 - <<'PY'
