@@ -18,7 +18,25 @@
     "review_status": "source_unreviewed",
     "source_id": "person:Azubah.2",
     "source_primary_id": "person:Azubah.2",
-    "source_sha256": "f2834da2415b770e6dec9c6c0d86f449ad699c2d1356159480fe5b0efee7607e"
+    "source_sha256": "f2834da2415b770e6dec9c6c0d86f449ad699c2d1356159480fe5b0efee7607e",
+    "editorial_field_changes": [
+      {
+        "action": "withhold_inferred_genealogical_identity",
+        "removed_fields": [
+          "offspring"
+        ],
+        "reason": "1 Chronicles 2:18's maternal antecedent and whether Azubah/Jerioth are one or two women are disputed. Withhold positive maternal identity claims while preserving all independent source word/reference anchors.",
+        "evidence": [
+          "1 Chronicles 2:18",
+          "https://classic.net.bible.org/passage.php?passage=1Ch+2%3A18"
+        ]
+      }
+    ],
+    "editorial_reason": "Withhold disputed or unnamed family identity assignments; preserve source texts, names, original-word witnesses, and all approved source IDs.",
+    "editorial_evidence": [
+      "1 Chronicles 2:18",
+      "https://classic.net.bible.org/passage.php?passage=1Ch+2%3A18"
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -42,11 +60,6 @@
     }
   },
   "non_biblical": false,
-  "offspring": [
-    "person:Ardon",
-    "person:Jesher",
-    "person:Shobab.2"
-  ],
   "only_mentioned_in_apocrypha": false,
   "partners": [
     "person:Caleb.2"
