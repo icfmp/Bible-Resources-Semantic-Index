@@ -1,82 +1,106 @@
 # Bible Semantic Index (BSI)
 
-**Independent, offline, source-pinned biblical semantic and lexical indexes.**
-This standalone repository contains BSI builders, editorial evidence, tests and UBS dictionary
-crosswalks. It is **not** a Bible translation, a SWORD module, or the Bible
-application itself.
+Open-source, offline, source-pinned **biblical entity and lexical indexes**.
+This is the authoritative development repository for BSI. Bible-Resources
+retains the three **historically published** BSI ZIP releases until a separate
+delivery/publication migration is approved. BSI is neither the Bible application
+nor a SWORD module.
 
-> **Repository relocation (2026-11-22):** This project was extracted unchanged from `icfmp/Bible-Resources/bible-semantic-index/`. The original three public release tags and assets are still hosted in Bible-Resources and are not automatically republished here. The 212 extracted source files were independently compared by Git blob SHA with the origin. The source-pinned CI and future publication migration are separate tasks; this is not yet the release authority. The native entity migration is staged in PR #4: 5,773 active records + 3 quarantined, with 868 permission-sensitive keyterms pending rights review.
+## Current sources of truth
 
-**Editing policy:** The current BSI entity JSON files under [`data/entities/`](data/entities/) are the data source for future corrections. [`scripts/build_native_index.py`](scripts/build_native_index.py) produces the index directly from those files, without pulling ACAI or replaying historical patches. See [editing instructions](docs/EDITING_ENTITIES.md). The historical published release assets remain where they were originally published.\n\n## Where the indexes actually are
-
-| Resource | Tracked in this repository | Permanent published data |
+| Stream | Current development inputs | Existing published edition |
 | --- | --- | --- |
-| Biblical entity index (ACAI-derived, v0.1.0) | [Source lock](data/source.lock.json), [reviewed decisions](data/editorial-decisions.json), [builder](scripts/compile_index.py); 5,773 corrected current files [tracked directly](data/entities/), plus [quarantine](data/quarantined/); the 868 keyterms remain under separate rights review | [BSI entity v0.1.0 release](https://github.com/icfmp/Bible-Resources/releases/tag/bsi-v0.1.0), ZIP containing `index.json` |
-| UBS Greek 1.0 lexical crosswalk | [Committed source baseline](links/dictionaries/ubs-greek/index.json); full private evidence index **not** tracked | [Greek word-ID crosswalk v0.1.0](https://github.com/icfmp/Bible-Resources/releases/tag/bsi-ubs-greek-v0.1.0), `BSI-UBS-Greek-0.1.0.zip` containing `index.json` |
-| UBS Hebrew 0.9.4 lexical crosswalk | [Committed source baseline](links/dictionaries/ubs-hebrew/index.json); additional verified word-specific reviews are reproducible from Git | [Hebrew lexical crosswalk v1.0.0](https://github.com/icfmp/Bible-Resources/releases/tag/bsi-ubs-hebrew-v1.0.0), `BSI-UBSHebrew-0.9.4-v1.0.0.zip` containing `index.json` |
+| Biblical entities | [5,773 editable, corrected BSI records](data/entities/), [3 quarantined originals](data/quarantined/), [source lock](data/source.lock.json), [migration manifest](data/migration/acai-baseline-materialization.json) | [Entity index v0.1.0](https://github.com/icfmp/Bible-Resources/releases/tag/bsi-v0.1.0) |
+| UBS Greek lexical links | [Pinned bilingual source baseline and reviewed data](links/dictionaries/ubs-greek/) | [Identifier-only v0.1.0](https://github.com/icfmp/Bible-Resources/releases/tag/bsi-ubs-greek-v0.1.0) |
+| UBS Hebrew lexical links | [Pinned bilingual source baseline and reviewed data](links/dictionaries/ubs-hebrew/) | [Lexical v1.0.0](https://github.com/icfmp/Bible-Resources/releases/tag/bsi-ubs-hebrew-v1.0.0) |
 
-**Important:** the committed dictionary `index.json` files are *baseline
-crosswalks*, not identical to their published versions or all intermediate
-editorial candidate overlays. All official versioned release ZIPs are stored
-as durable **GitHub Release assets**, not scattered across source folders.
-Download the named ZIP and examine its manifest/attribution to identify the
-exact distributed schema and version. A GitHub Actions artifact under
-`/tmp/` or `dist/` is **temporary build output**, not the permanent index.
-Nothing is automatically exported to the Bible application.
+**Current entity data are versioned directly in Git.** We imported and
+materialized the already reviewed edits exactly once: original ACAI
+`e80a874e8282f996199c595378a3b3b9a43aac22` (6,644 records) was
+validated, but the **868 Key Terms** were excluded from this public dataset
+pending their separate third-party rights review. These excluded records are
+**not** claimed to be present here. They are not to be published for now.
 
-**Working-state preservation:** source-verified complete internal states are
-different from the published and source-baseline indexes. The new
-[private working-state archive procedure](work/README.md) covers the entity,
-Greek and Hebrew streams, with commit-locked manifests, SHA-256 checks and
-private-only immutable GitHub Release storage. **The archiving destination
-must first be configured; no durable private backup is claimed before the
-private repository exists and an actual archive is uploaded/read back.**
+The migrated 5,776 entity source records preserve inherited fields, original
+source IDs and fingerprints, original-word groups, editorial decisions and
+evidence. Their corrected index output was compared **byte-for-byte** with the
+previous, keyterm-free BSI index before the migration was merged. The historical
+ACAI checkout is not used for normal BSI builds. See [editing current entities](docs/EDITING_ENTITIES.md)
+and [source provenance](sources/README.md).
 
-## Directory map
+## Build the entity index
 
-```text
-
-├── README.md            Project entrypoint and index locations
-├── docs/                BSI release decisions, editorial background and methods
-├── scripts/             Shared BSI entity builder, resolver and packaging
-├── tests/               Regression tests for shared BSI tooling
-├── data/                Source locks, reviewed editorial decisions and evidence
-├── sources/             Pinned ACAI checkout procedure; downloaded originals ignored
-├── work/                Private working-state archive policy and recovery instructions
-└── links/
-    ├── schema.v1.json   Reviewed link schema
-    ├── dictionaries/
-    │   ├── ubs-greek/   Greek pinned dictionary pipeline and its tests
-    │   └── ubs-hebrew/  Hebrew pinned dictionary pipeline and its tests
-    └── encyclopedias/   Future independently licensed links
-```
-
-Dictionary-specific scripts and tests intentionally remain *inside their
-own dictionary directory*: their pinned source, exact reviewed decisions,
-regression fixtures and source-pinned workflows form a single reproducible
-unit. They are **not shared generic scripts**. Do not move or delete them
-based on filenames alone; follow tested callers and the immutable releases.
-
-## Rebuild and verification
-
-Fetch the frozen ACAI data **without editing it**, then generate a private
-index into ignored build output:
+From a fresh checkout of **this repository** (Python 3 required):
 
 ```bash
-bash sources/checkout-acai.sh
-python3 -I scripts/compile_index.py \
-  --source sources/checkouts/acai \
-  --verify-source-commit \
-  --output dist/index.json
+python3 -I scripts/build_native_index.py --data data --output /tmp/bsi-current.json
+python3 -I tests/test_workspace_layout.py
+python3 -I tests/test_build.py
+python3 -I tests/test_resolve.py
 ```
 
-The [BSI source-pinned GitHub Actions workflow](
-../.github/workflows/entity-index.yml) runs shared offline tests plus full
-original-data build verification. Each UBS dictionary has its own pinned
-source workflow; see [UBS Greek](links/dictionaries/ubs-greek/README.md)
-and [UBS Hebrew](links/dictionaries/ubs-hebrew/README.md).
+The native builder consumes the **current** `data/entities/` and
+`data/quarantined/` records and edition-specific qualification metadata.
+It does **not** download ACAI or replay `data/editorial-decisions.json`.
+That decisions file and `scripts/compile_index.py` remain as historical
+migration evidence and tested index-finalization support, not the regular
+editing interface. Never silently rewrite biblical references, original-word
+IDs, text-critical evidence, or source descriptions.
 
-**Editorial policy:** lexical identity is not proof of a contextual sense.
-Keep alternative valid candidates, attest source and edition, record
-reversible decisions, abstain where sources remain uncertain. Do not alter
-original scripture, Strong/LN/SDBH or source dictionary entries.
+## CI and source evidence
+
+- [Native entity build](.github/workflows/native-entity-index.yml) verifies
+  the canonical entity records without an ACAI checkout.
+- [Offline regressions](.github/workflows/offline-checks.yml) check BSI tools,
+  source invariants and source-workflow safety.
+- [Greek UBS verification](.github/workflows/bsi-ubs-greek.yml) and
+  [Hebrew UBS verification](.github/workflows/bsi-ubs-hebrew.yml)
+  rebuild and test against the exact pinned original-language and dictionary
+  source revisions. They do not publish new releases or expose source-derived
+  private working evidence as public GitHub Actions artifacts.
+- [Entity relationship audit](.github/workflows/audit-native-relations.yml)
+  reports inherited cross-entity links without rewriting them. Remaining
+  editorial review is tracked in [issue #6](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/6).
+
+**Publishing is a separate, explicitly authorized step.** The three historical
+release URLs remain valid; the project does not automatically synchronize
+or republish those archives. Bible-Resources should eventually consume approved
+BSI releases by **version and checksum**, not copy files from a moving branch.
+
+## Layout
+
+```text
+data/entities/         Current, editable BSI entity JSON records
+data/quarantined/      Retained inactive historical identities
+data/migration/        One-time source transfer manifest
+data/*.json            Edition locks, original evidence and historical decisions
+links/dictionaries/    Source-specific UBS Greek and Hebrew data/tools/tests
+links/encyclopedias/   Future reviewed external links
+scripts/               Shared BSI build, validation and research tools
+tests/                 Independent regression tests
+sources/               Historical source provenance (no live ACAI checkout)
+docs/                  Current methods and reviewed editorial background
+work/                  Rebuildability, snapshot format and data-handling limits
+```
+
+The inherited dictionary-specific research scripts intentionally remain
+beside their source-locked evidence and regression fixtures. The complete
+source-derived intermediate evidence is **not** stored in the public tree.
+See [working-state limitations](work/README.md): a successful CI build
+is not proof of permanent archival of every intermediate file.
+
+## Editorial and rights policy
+
+Preserve source provenance, source-versification differences, uncertainties,
+competing candidates and evidence. No lexical lemma, Strong/LN reference or
+candidate dictionary ID proves a contextually unique sense on its own.
+Never invent verse text, references, entities or semantic choices to obtain
+100% coverage.
+
+The imported ACAI-derived dataset is subject to **CC BY-SA 4.0** attribution
+and adaptation obligations. Source-derived UBS/MACULA fields may have
+separate restrictions. Data and code licensing must be evaluated separately;
+the repository's GPL code notice is not a license grant for third-party data.
+The 868 Key Terms remain withheld as agreed. See [the rights audit](docs/BSI_V0_1_RIGHTS_AUDIT.md)
+and [issue #5](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/5)
+for the specifically excluded source class.
