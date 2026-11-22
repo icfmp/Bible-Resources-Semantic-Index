@@ -49,27 +49,27 @@
       }
     ],
     "editorial_reason": "Gadara (Umm Qais) and Gerasa (Jerash) are historically distinct Decapolis cities, not equivalent name forms. The source's Gadara.primary_id=place:Gerasa falsely merges their identities. Preserve ALL exact original Greek demonym word groups and verse references as candidates, including cross-gospel textual variants; a demonym is not proof of the precise miracle site. Gadara.2 (Perea) remains separate.",
-    "review_status": "editorially_reviewed",
-    "source_id": "place:Gadara",
-    "source_primary_id": "place:Gerasa",
-    "source_sha256": "8d397dcc2efa797f75e8f71cc2f30d048d76b9f8809dd094712c9f5fbb08f106",
+    "identity_hint": {
+      "evidence_references": [
+        "40008028"
+      ],
+      "language": "eng",
+      "name": "Gadara",
+      "qualifier": "Decapolis city at Umm Qais, distinct from Gerasa",
+      "review_status": "editorially_reviewed"
+    },
     "inherited_localizations": {
-      "status": "withheld_pending_review",
       "fields": [
         "eng.alternate_labels"
       ],
       "reason": "English demonym and manuscript-variant name forms must be analyzed before being served as alternate names of the historically distinct city of Gadara. Existing city descriptions are not automatically contradicted.",
-      "source": "acai"
+      "source": "acai",
+      "status": "withheld_pending_review"
     },
-    "identity_hint": {
-      "name": "Gadara",
-      "qualifier": "Decapolis city at Umm Qais, distinct from Gerasa",
-      "language": "eng",
-      "evidence_references": [
-        "40008028"
-      ],
-      "review_status": "editorially_reviewed"
-    }
+    "review_status": "editorially_reviewed",
+    "source_id": "place:Gadara",
+    "source_primary_id": "place:Gerasa",
+    "source_sha256": "8d397dcc2efa797f75e8f71cc2f30d048d76b9f8809dd094712c9f5fbb08f106"
   },
   "explicit_instances": {
     "SBLGNT": [
@@ -96,15 +96,6 @@
     ]
   },
   "localizations": {
-    "apd": {
-      "preferred_label": "جدارا (بتاعت المدن العشرة)"
-    },
-    "arb": {
-      "preferred_label": "جَدَارَا (المدن العشر)"
-    },
-    "bis": {
-      "preferred_label": "Gadara (blong Dekapolis)"
-    },
     "eng": {
       "alternate_labels": [
         "Gergesene",
@@ -114,51 +105,6 @@
         "Gadara"
       ],
       "preferred_label": "Gadara (of the Decapolis)"
-    },
-    "fas": {
-      "preferred_label": "جدرا (دکاپولیس)"
-    },
-    "fra": {
-      "preferred_label": "Gadara (de la Décapole)"
-    },
-    "hau": {
-      "preferred_label": "Gadara (na Dekafolis)"
-    },
-    "hin": {
-      "preferred_label": "गदारा (दिकापुलिस का)"
-    },
-    "ibo": {
-      "preferred_label": "Gedara (nke Dekapọlis)"
-    },
-    "ind": {
-      "preferred_label": "Gadara (di Dekapolis)"
-    },
-    "nep": {
-      "preferred_label": "गदारा (डिकापोलिसको)"
-    },
-    "por": {
-      "preferred_label": "Gadara (da Decápolis)"
-    },
-    "rus": {
-      "preferred_label": "Гадара (в Десятиградии)"
-    },
-    "spa": {
-      "preferred_label": "Gadara (de la Decápolis)"
-    },
-    "swh": {
-      "preferred_label": "Gadara (ya Dekapoli)"
-    },
-    "tpi": {
-      "preferred_label": "Gadara (bilong Dekapolis)"
-    },
-    "vie": {
-      "preferred_label": "Ga-đa-ra (thuộc Đê-ca-bô-li)"
-    },
-    "zhs": {
-      "preferred_label": "加大拉 (低加坡里)"
-    },
-    "zht": {
-      "preferred_label": "加大拉（低加坡里）"
     }
   },
   "mentioned_in_bible": true,
