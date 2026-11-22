@@ -55,9 +55,9 @@ def audit(data: Path) -> dict:
             reclassified = current_type != original_type
             identity_changed = current_id != source_id
             canonical_id = meta.get("canonical_id")
-            if not (reclassified or identity_changed or (canonical_id and canonical_id != source_id)):
-                continue
-            issues = []
+            # An explicit replace_identity decision can correct only primary_id
+            # even if current id, kind and canonical ID stay textually equal.
+            issues = ["explicit_reviewed_identity_change"]
             if reclassified:
                 issues.append("type_reclassified")
             if identity_changed:
@@ -82,7 +82,7 @@ def audit(data: Path) -> dict:
                                                   "description": row.get("description")})
                 if isinstance(obj, dict) and obj.get("preferred_label"):
                     labels[language] = obj["preferred_label"]
-            if (reclassified or identity_changed or canonical_id != source_id) and original_articles:
+            if original_articles:
                 issues.append("inherited_unreviewed_descriptions")
             audited.append({
                 "path": path.relative_to(data).as_posix(),
