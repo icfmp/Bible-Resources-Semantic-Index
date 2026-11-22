@@ -114,6 +114,23 @@ Compare native built indexes byte-for-byte before/after every batch.
 Original ACAI labels remain retrievable from the pinned source commit and
 `bsi.source_sha256`; do not duplicate all languages in an archival sidecar.
 
+## Finding genuine name ambiguity
+
+`python3 -I scripts/audit_name_ambiguities.py --sample-limit 15`
+reports source labels that *could* refer to multiple independently indexed
+canonical identities. It groups by source type and the name before one
+trailing display-only parenthetical qualifier; this is merely **triage**.
+For example, the same raw name might designate two biblical persons, while
+two source records that share one reviewed canonical ID are not necessarily
+two historical people.
+
+A collision is **not** evidence that names refer to the same individual.
+A distinct `bsi.identity_hint` must be justified manually using existing
+biblical references, exact original-word evidence and relevant reviewed
+family/place links. Never automatically derive qualifiers from unreviewed
+source biographies, aliases, or apparent name similarities. Candidate reports
+remain read-only and source text is not changed.
+
 ## Adding new BSI-owned entities
 
 Do not invent an ACAI source identity for new research. A new reviewed

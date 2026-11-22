@@ -23,6 +23,7 @@ jobs:
           python3 -I scripts/prune_inherited_descriptions.py --categories deities fauna flora groups people places realia --check
           python3 -I scripts/prune_nonworking_labels.py --categories deities fauna flora groups people places realia --check
           python3 -I scripts/audit_identity_surface.py
+          python3 -I scripts/audit_name_ambiguities.py --sample-limit 8
       - name: UBS source-baseline regressions
         run: |
           python3 -I links/dictionaries/ubs-greek/test_index.py
