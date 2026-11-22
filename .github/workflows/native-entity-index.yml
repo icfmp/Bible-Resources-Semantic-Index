@@ -88,6 +88,17 @@ jobs:
           python3 -I scripts/stage_entity_candidate.py verify \
             --archive /tmp/brsi-entities-unapproved.zip \
             --receipt /tmp/brsi-entities-unapproved.json
+          # Independently stage a second time from the exact same current
+          # native build and immutable commit. The ZIP and its sidecar must
+          # have identical bytes, not just equivalent semantic JSON.
+          python3 -I scripts/stage_entity_candidate.py stage \
+            --index /tmp/bsi-current.json \
+            --lock data/source.lock.json \
+            --producer-revision "$(git rev-parse HEAD)" \
+            --output /tmp/brsi-entities-second.zip \
+            --receipt /tmp/brsi-entities-second.json
+          cmp /tmp/brsi-entities-unapproved.zip /tmp/brsi-entities-second.zip
+          cmp /tmp/brsi-entities-unapproved.json /tmp/brsi-entities-second.json
           # No upload-artifact step; candidate bytes never leave this job.
       - name: Verify output scope and original-word integrity
         run: |
