@@ -2,9 +2,17 @@ name: Audit inherited fields of reclassified BSI entities
 
 on:
   push:
-    branches: [audit/reclassified-entity-fields]
+    branches: [main, audit/reclassified-entity-fields]
+    paths:
+      - "data/editorial-decisions.json"
+      - "data/entities/**"
+      - "scripts/audit_reclassified_entity_fields.py"
+      - "tests/test_reclassified_entity_fields.py"
+      - ".github/workflows/audit-reclassified-fields.yml"
   pull_request:
     paths:
+      - "data/editorial-decisions.json"
+      - "data/entities/**"
       - "scripts/audit_reclassified_entity_fields.py"
       - "tests/test_reclassified_entity_fields.py"
       - ".github/workflows/audit-reclassified-fields.yml"
