@@ -50,6 +50,15 @@ def build(data: Path = ROOT / "data") -> dict:
         directory = data / "entities" / category
         for path in sorted(directory.glob("*.json")):
             record = read(path)
+            # BRSI indexes identities and source links, never biographies.
+            # Prevent an old ACAI import from silently restoring prose even
+            # when a caller invokes this builder without running CI.
+            localized = record.get("localizations", {})
+            if not isinstance(localized, dict) or any(
+                not isinstance(fields, dict) or "descriptions" in fields
+                for fields in localized.values()
+            ):
+                raise ValueError(f"Encyclopedia descriptions forbidden in current BRSI record: {path}")
             # Reject malformed/unknown editorial holds rather than letting a
             # future reader-facing exporter silently treat them as approved.
             localization_policy.validated_holds(record)
