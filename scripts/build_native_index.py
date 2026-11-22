@@ -197,8 +197,22 @@ def build(data: Path = ROOT / "data") -> dict:
             for field in ("editorial_evidence", "editorial_reason"):
                 if field in metadata:
                     entry[field] = copy.deepcopy(metadata[field])
-            if not isinstance(entry["id"], str) or not isinstance(entry["canonical_id"], str):
-                raise ValueError("Missing canonical identity in " + str(path))
+            # Source category may differ from a reviewed reclassification
+            # (e.g. inherited people/Dinaite.json -> group:Dinaite), but
+            # public kind must match the current canonical typed identity.
+            kind_prefix = {"literary_work": "work"}.get(entry["kind"], entry["kind"])
+            if (not isinstance(entry["id"], str)
+                    or not entry["id"].startswith(f"{kind_prefix}:")
+                    or not entry["id"].split(":", 1)[1]
+                    or not isinstance(entry["canonical_id"], str)
+                    or not entry["canonical_id"].startswith(f"{kind_prefix}:")
+                    or not entry["canonical_id"].split(":", 1)[1]):
+                raise ValueError(f"Invalid typed canonical entity identity in {path}")
+            if origin == "bsi" and (entry["id"] != f"{expected_prefix}:{path.stem}"
+                    or entry["canonical_id"] != entry["id"]
+                    or record.get("primary_id") != entry["id"]
+                    or record.get("type") != "literary_work"):
+                raise ValueError(f"Incorrect BSI-native identity type or owner: {path}")
             entries.append(entry)
         directory = data / "quarantined" / category
         for path in sorted(directory.glob("*.json")):
@@ -255,6 +269,12 @@ def build(data: Path = ROOT / "data") -> dict:
         raise ValueError(f"Imported ACAI entity identities changed: missing={missing[:5]}, unexpected={unexpected[:5]}")
     if len(seen_source) != len(imported_source_ids) + len(native_source_ids):
         raise ValueError("Native source identity collision")
+    current_ids = {entry["id"] for entry in entries}
+    for entry in entries:
+        if entry["canonical_id"] not in current_ids:
+            raise ValueError(
+                f"Canonical target missing from current index: "
+                f"{entry['source_id']} -> {entry['canonical_id']}")
     words = set()
     references = set()
     for entry in entries:
