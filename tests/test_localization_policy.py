@@ -33,10 +33,10 @@ class LocalizationPolicyTests(unittest.TestCase):
     def test_language_scoped_hold_does_not_block_unrelated_field(self):
         rec = current_record("places/Gadara.json")
         self.assertIsNone(policy.reader_field(rec, "eng", "alternate_labels"))
-        label = policy.reader_field(rec, "fra", "preferred_label")
+        label = policy.reader_field(rec, "eng", "preferred_label")
         self.assertEqual(label["review_status"], "source_unreviewed")
         self.assertEqual(label["source_id"], "place:Gadara")
-        self.assertEqual(label["value"], rec["localizations"]["fra"]["preferred_label"])
+        self.assertEqual(label["value"], rec["localizations"]["eng"]["preferred_label"])
         sample = {"bsi": {"source_id": "person:Fixture"}, "localizations": {
             "eng": {"alternate_labels": ["Name"]}}}
         aliases = policy.reader_field(sample, "eng", "alternate_labels")
