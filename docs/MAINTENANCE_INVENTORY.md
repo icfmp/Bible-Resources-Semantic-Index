@@ -20,15 +20,16 @@ All **868 restricted ACAI Key Terms** remain outside the public entity data.
 The native builder must not rewrite original word IDs, verse references,
 editorial metadata or translation-source choices.
 
-## Shared scripts — 19 Python files
+## Shared scripts — 22 Python files
 
 | Maintained role | Scripts | Current caller or protection |
 | --- | --- | --- |
 | Canonical native index | `build_native_index.py`, `entity_index_core.py` | Native entity CI and synthetic native growth tests; the current builder does not import the ACAI-era compiler |
+| V2-only graph research | `build_relation_index.py` | Internal nonpublishing research/tests only; **not** product V1 or a V1 release dependency |
 | Identity and relation policy | `identity_policy.py`, `localization_policy.py`, `offspring_target_policy.py`, `reference_policy.py` | Native build and corresponding offline tests |
 | Read-only identity audits | `audit_entity_relationships.py`, `audit_family_relation_consistency.py`, `audit_identity_surface.py`, `audit_name_ambiguities.py`, `audit_person_overlaps.py`, `audit_reclassified_entity_fields.py` | Native/reclassified/offline workflows for invoked audits; remaining reusable audit covered by standalone tests |
-| Lookup and distribution helpers | `resolve.py`, `distribution_profile.py`, `release_contract.py`, `stage_entity_candidate.py` | Dedicated unit tests; candidate/contract verification in native CI, never direct publication |
-| Integrity and historical-asset checks | `write_integrity_receipt.py`, `verify_historical_asset.py` | Native build / pinned lexical CI and their tests |
+| Lookup and distribution helpers | `resolve.py`, `distribution_profile.py`, `release_contract.py`, `stage_entity_candidate.py`, `validate_external_crosswalk.py` | Dedicated unit tests; candidate/contract verification in native CI, never direct publication |
+| Integrity and historical-asset checks | `write_integrity_receipt.py`, `verify_historical_asset.py`, `inspect_v1_published_assets.py` | Native build / pinned lexical CI and their tests; read-only V1 public ZIP compatibility inspection |
 | Runner-local evidence packaging | `work_snapshot.py` | Greek/Hebrew CI packs and verifies a **temporary** private research state, without upload or durable-storage claim |
 
 Only current reusable scripts belong in `scripts/`. The historical ACAI
