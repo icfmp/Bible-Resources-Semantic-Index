@@ -9,7 +9,7 @@ and the V1 public-projection gate.
 
 | Case | V1 decision | Primary witness / competing readings |
 | --- | --- | --- |
-| Mary, mother of John Mark | Preserve `person:Mark.mother=person:Mary.5` and the reciprocal child record. Remove assertions that a **specific unnamed husband** is Mark's father or either Mary's spouse; leave both source-only `HusbandOfMary*` identifiers **unreviewed** and without unsupported family edges. | [Acts 12:12](https://www.biblegateway.com/passage/?search=Acts+12%3A12), [Matthew 27:56](https://www.biblegateway.com/passage/?search=Matthew+27%3A56), Mark 15:40. None of these passages names the husband or equates the two mothers called Mary. |
+| Mary, mother of John Mark | Preserve `person:Mark.mother=person:Mary.5` and the reciprocal child record. Remove assertions that a **specific unnamed husband** is Mark's father or either Mary's spouse; quarantine both source-only `HusbandOfMary*` records, preserving their original bytes/field receipts but excluding the fictive persons from the public index. Remove any remaining implied paternal links in the other children and John Mark alias. | [Acts 12:12](https://www.biblegateway.com/passage/?search=Acts+12%3A12), [Matthew 27:56](https://www.biblegateway.com/passage/?search=Matthew+27%3A56), Mark 15:40. None of these passages names the husband or equates the two mothers called Mary. |
 | Caleb / Azubah / Jerioth | Preserve `person:Caleb.2` as father and all individual name/word witnesses. Withhold assignment of a *unique mother* for Jesher, Shobab and Ardon, as well as reciprocal Azubah-as-mother assertions pending the disputed antecedent. Do **not** merge Azubah and Jerioth or conclude either is not a mother. | [1 Chronicles 2:18](https://classic.net.bible.org/passage.php?passage=1Ch+2%3A18), [SIL translator notes](https://tips.translation.bible/story/sil-translators-notes-on-1-chronicles-218/). Different translation analyses distinguish two women or take Jerioth as an alternate name. |
 | Zimmah / Jahath / Shimei | Withhold the *single merged-entity father assertion* and competing reciprocal `offspring` edges. Retain **both source verse and exact original-word occurrences** on `person:Zimmah`; retain both independently attested genealogical texts. The two witnesses are **not** repaired, combined or declared erroneous. | [1 Chronicles 6:20](https://biblehub.com/1_chronicles/6-20.htm) and [6:42](https://classic.net.bible.org/verse.php?book=1Ch&chapter=6&verse=42), respectively Heb. 6:5 and 6:27. |
 | Lud / Ludim | Retain the already approved narrowly justified separation: Gen 10:13 and 1 Chr 1:11 (Mizraim's Ludim) vs Gen 10:22 and 1 Chr 1:17 (Shem's Lud). Later mentions remain unreviewed. | [PR #92](https://github.com/icfmp/Bible-Resources-Semantic-Index/pull/92) and its case-level source receipts. |
@@ -31,8 +31,8 @@ not be automatically merged, assigned a new biographical qualifier or promoted
 to reviewed status. Their detailed source pointers remain recoverable via
 `scripts/audit_name_ambiguities.py` and the [original source-triage
 record](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/6#issuecomment-7083272773).
-The ten are: `HusbandOfMary`, `HusbandOfMary.2` (unsupported unnamed
-husband identifiers, whose female-name aliases were removed);
+The original ten included `HusbandOfMary`, `HusbandOfMary.2`
+(unsupported unnamed husbands now quarantined with exact source receipts);
 `Judah`/`Judah.2` (shared Ezra 3:9 original-word witness);
 `SecondProstitute` (role identity without explicit name token);
 and `Caesarea.2`, `Gadara.2`, `Heres.2`, `Neapolis.2`,
@@ -51,19 +51,23 @@ occurrence is still a source claim, **not** a verified identity proof or
 contextual lexical sense. The standalone V1 projection regression test enforces
 the family/alias exclusion.
 
-**Important limitation:** the nonpublishing candidate still contains all
-permitted canonical source *identity IDs*, including source-unreviewed
-unanchored placeholders. Their presence is not a verified person identification
-and must not be turned into user-facing named biographies or precise kinship.
-A later data-model change to hide or quarantine generic placeholder identities
-requires a separate, consistent editorial and release-compatibility review.
-Do not claim those source-level identities have been adjudicated by this pass.
+**Current limitation:** this batch excludes both fabricated husband records,
+but other independently sourced, source-unreviewed records remain in the
+candidate. Being present in a source index does not establish historical
+identity or license the display of a biographical relationship. Each other
+unanchored candidate still requires its own evidence-based review.
 
 ## Scope and release gate
 
-This closes the concrete, source-conflicted **V1 genealogy/variant claims** with
-reversible corrections or explicit evidence-based abstentions, *not* the historical
-research question of every homonym. Any future work to resolve a particular
+The reopened issue #6 remains under substantive review. PR #99 performs
+additional source-based data fixes instead of merely hiding warnings:
+quarantine of unsupported husbands; removing the falsely inferred Salome
+mother/daughter relationship in Mark 15:40 and 16:1; removing a demonstrably
+misassigned Ezra 3:9 word from the unrelated Hodiah teacher; correcting
+directly attested place references in Judges 1:35 and Joshua 11:8; removing
+the SBLGNT Matthew 8:28 Gadarenes token from the Gerasa city lookup.
+Other homonym/genealogical uncertainties remain evidence-dependent; no
+unsupported assertion is promoted to editorial approval. Any future work to resolve a particular
 unreviewed textual/ethnographic claim requires exact edition witnesses, a scoped
 issue and new editorial evidence. A V1 release remains blocked under [#62](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/62)
 until rights/consumer/owner approval, irrespective of this issue's status.

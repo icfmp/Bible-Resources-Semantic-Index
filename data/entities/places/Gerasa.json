@@ -38,6 +38,22 @@
           "https://classic.net.bible.org/passage.php?passage=Mar+5%3A1-19",
           "https://classic.net.bible.org/passage.php?passage=Mat+8%3A28-34"
         ]
+      },
+      {
+        "action": "remove_conflicting_original_word_city_claim",
+        "removed_original_word_groups": {
+          "SBLGNT": [
+            [
+              "n40008028011"
+            ]
+          ]
+        },
+        "reason": "The pinned SBLGNT Matt 8:28 reads Γαδαρηνῶν (Gadarenes), not Γερασηνῶν (Gerasenes). The two historical cities have distinct IDs. Keep the Matthew parallel pericope as a contextual reference but stop claiming the exact Gadarenes token as an explicit Gerasa entity word. Mark 5:1 and Luke 8:26/37 Gerasenes candidates are unchanged.",
+        "evidence": [
+          "https://www.biblegateway.com/passage/?search=Matthew+8&version=SBLGNT",
+          "https://www.biblegateway.com/passage/?search=Mark+5&version=SBLGNT",
+          "Historical PR #16 and PR #95 demonstrate distinct Gadara/Gerasa identity and source-variant holds"
+        ]
       }
     ],
     "inherited_localizations": {
@@ -51,9 +67,6 @@
   },
   "explicit_instances": {
     "SBLGNT": [
-      [
-        "n40008028011"
-      ],
       [
         "n41005001012"
       ],

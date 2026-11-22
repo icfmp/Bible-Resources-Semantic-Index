@@ -30,7 +30,7 @@ class GadaraAliasTests(unittest.TestCase):
         self.assertEqual(gerasa["bsi"]["inherited_localizations"]["fields"],
                          ["eng.alternate_labels"])
         self.assertEqual(gerasa["explicit_instances"]["SBLGNT"],
-                         [["n40008028011"], ["n41005001012"],
+                         [["n41005001012"],
                           ["n42008026007"], ["n42008037010"]])
         self.assertEqual(gerasa["references"],
                          ["40008028", "41005001", "42008026", "42008037"])

@@ -17,8 +17,8 @@ spec.loader.exec_module(policy)
 class NativeReferenceFieldTests(unittest.TestCase):
     def test_independent_reference_lists_preserved(self):
         for path, expected in (
-            ("places/ValleyOfMizpeh.json", ([], ["06011008"])),
-            ("places/Heres.2.json", ([], [])),
+            ("places/ValleyOfMizpeh.json", (["06011008"], ["06011008"])),
+            ("places/Heres.2.json", (["07001035"], ["07001035"])),
             ("deities/Ashtaroth.json", (
                 ["07002013", "07010006", "09007003", "09007004",
                  "09012010", "09031010"],
@@ -33,6 +33,13 @@ class NativeReferenceFieldTests(unittest.TestCase):
                     (record["references"], record["key_references"]), expected)
                 policy.validate_reference_fields(record)
                 self.assertEqual(record, original)
+                if path.startswith("places/"):
+                    reviewed = [edit for edit in record["bsi"].get("editorial_field_changes", [])
+                                if edit["action"] == "add_directly_attested_source_verse"]
+                    self.assertEqual(len(reviewed), 1)
+                    self.assertEqual(reviewed[0]["added_reference_values"]["references"],
+                                     expected[0])
+                    self.assertTrue(reviewed[0]["evidence"])
 
     def test_rejects_non_bcv8_and_malformed_collections(self):
         valid = {"references": ["01001001"], "key_references": ["01001002"]}

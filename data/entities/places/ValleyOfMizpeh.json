@@ -5,7 +5,22 @@
     "review_status": "source_unreviewed",
     "source_id": "place:ValleyOfMizpeh",
     "source_primary_id": "place:ValleyOfMizpeh",
-    "source_sha256": "c5ce5205a6c70c3864b8eff745e49b4180a23a27dd95b31d4843f31337b726c4"
+    "source_sha256": "c5ce5205a6c70c3864b8eff745e49b4180a23a27dd95b31d4843f31337b726c4",
+    "editorial_field_changes": [
+      {
+        "action": "add_directly_attested_source_verse",
+        "added_reference_values": {
+          "references": [
+            "06011008"
+          ]
+        },
+        "reason": "Joshua 11:8 explicitly names the valley of Mizpeh; the record already had this source key_references verse but omitted it from general references. This case is a verified direct place mention, not a blanket key-references subset normalization.",
+        "evidence": [
+          "Joshua 11:8",
+          "https://www.kingjamesbibleonline.org/strongs-concordance/?v=Joshua-11-8"
+        ]
+      }
+    ]
   },
   "explicit_instances": {},
   "id": "place:ValleyOfMizpeh",
@@ -36,7 +51,9 @@
   },
   "primary_id": "place:ValleyOfMizpeh",
   "pronominal_referents": {},
-  "references": [],
+  "references": [
+    "06011008"
+  ],
   "subject_referents": {},
   "type": "place"
 }

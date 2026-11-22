@@ -179,6 +179,10 @@ class RelationIndexTests(unittest.TestCase):
                          set(claim["properties"]["predicate"]["oneOf"][0]["enum"]))
 
     def test_real_source_examples_do_not_prove_genealogical_agreement(self):
+        relation_audit = projection.relation_audit.audit(ROOT / "data")
+        self.assertEqual(relation_audit["review_candidates"], [],
+                         "Active links to missing/quarantined identities: " +
+                         json.dumps(relation_audit["review_candidates"][:30]))
         graph = projection.build(ROOT / "data")
         self.assertGreaterEqual(graph["counts"]["indexed_claims"], 15000)
         self.assertEqual(

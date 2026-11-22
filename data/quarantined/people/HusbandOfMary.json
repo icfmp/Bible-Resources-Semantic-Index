@@ -64,6 +64,13 @@
     "editorial_reason": "Withhold disputed or unnamed family identity assignments; preserve source texts, names, original-word witnesses, and all approved source IDs.",
     "editorial_evidence": [
       "Acts 12:12"
+    ],
+    "state": "quarantined",
+    "reason": "Unanchored inferred male identity: the cited Scripture mentions Mary and/or a child but not this husband; no original-language token supports a separately identifiable person. Withhold the entire identity from V1 rather than only deleting asserted kinship links.",
+    "evidence": [
+      "Acts 12:12 names Mary mother of John Mark but no husband or father",
+      "Matthew 27:56 and Mark 15:40 name another Mary mother of James/Joses but no husband",
+      "Original ACAI identity and field-level editorial receipts preserved in this quarantined source record"
     ]
   },
   "explicit_instances": {},

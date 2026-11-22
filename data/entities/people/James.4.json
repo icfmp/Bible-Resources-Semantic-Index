@@ -21,7 +21,26 @@
     "review_status": "source_unreviewed",
     "source_id": "person:James.4",
     "source_primary_id": "person:James.4",
-    "source_sha256": "8cfd700e1deca547f9d052d4f72bb0be5e19130d5111757218d8864562575c76"
+    "source_sha256": "8cfd700e1deca547f9d052d4f72bb0be5e19130d5111757218d8864562575c76",
+    "editorial_field_changes": [
+      {
+        "action": "remove_unattested_inferred_parent",
+        "removed_fields": [
+          "father"
+        ],
+        "removed_relation_values": {
+          "father": [
+            "person:HusbandOfMary.2"
+          ]
+        },
+        "reason": "The original biblical passage names a mother or a related witness, not an identifiable husband/father. The former link points to a source-only invented husband placeholder now quarantined, so it cannot be retained as a live father.",
+        "evidence": [
+          "Matthew 27:56",
+          "Mark 15:40",
+          "Mark 16:1"
+        ]
+      }
+    ]
   },
   "explicit_instances": {
     "SBLGNT": [
@@ -33,7 +52,6 @@
       ]
     ]
   },
-  "father": "person:HusbandOfMary.2",
   "gender": "male",
   "id": "person:James.4",
   "key_references": [

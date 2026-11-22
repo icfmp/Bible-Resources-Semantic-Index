@@ -50,6 +50,19 @@
             "person:HusbandOfMary.2"
           ]
         }
+      },
+      {
+        "action": "remove_misread_conjoined_person_as_daughter",
+        "removed_relation_values": {
+          "offspring": [
+            "person:Salome"
+          ]
+        },
+        "reason": "Mark 15:40 distinguishes Salome from Mary, the mother of James and Joses; the source inferred a mother-daughter relationship by incorrectly attaching a separate conjunct.",
+        "evidence": [
+          "Mark 15:40",
+          "Mark 16:1"
+        ]
       }
     ],
     "editorial_reason": "Withhold disputed or unnamed family identity assignments; preserve source texts, names, original-word witnesses, and all approved source IDs.",
@@ -104,8 +117,7 @@
   "non_biblical": false,
   "offspring": [
     "person:James.4",
-    "person:Joseph.5",
-    "person:Salome"
+    "person:Joseph.5"
   ],
   "only_mentioned_in_apocrypha": false,
   "primary_id": "person:Mary.2",

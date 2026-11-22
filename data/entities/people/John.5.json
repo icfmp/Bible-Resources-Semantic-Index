@@ -25,7 +25,25 @@
     "review_status": "source_unreviewed",
     "source_id": "person:John.5",
     "source_primary_id": "person:Mark",
-    "source_sha256": "a90ea844fcfea2edcd22ba92976d486947bc3e908133a036873391c7ff50558d"
+    "source_sha256": "a90ea844fcfea2edcd22ba92976d486947bc3e908133a036873391c7ff50558d",
+    "editorial_field_changes": [
+      {
+        "action": "remove_unattested_inferred_parent",
+        "removed_fields": [
+          "father"
+        ],
+        "removed_relation_values": {
+          "father": [
+            "person:HusbandOfMary"
+          ]
+        },
+        "reason": "The original biblical passage names a mother or a related witness, not an identifiable husband/father. The former link points to a source-only invented husband placeholder now quarantined, so it cannot be retained as a live father.",
+        "evidence": [
+          "Acts 12:12",
+          "Acts 12:25"
+        ]
+      }
+    ]
   },
   "explicit_instances": {
     "SBLGNT": [
@@ -46,7 +64,6 @@
       ]
     ]
   },
-  "father": "person:HusbandOfMary",
   "gender": "male",
   "id": "person:John.5",
   "key_references": [
