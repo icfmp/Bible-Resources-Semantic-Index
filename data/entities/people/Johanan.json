@@ -32,13 +32,38 @@
         "removed_fields": [
           "referred_to_as"
         ]
+      },
+      {
+        "action": "remove_conflicting_inherited_english_alias",
+        "evidence": [
+          "Macula WLC 1CH 3:15 o130030150041: proper Hebrew name Johanan, ref 1CH 3:15!4",
+          "ACAI issue #71 inherited royal-identity follow-up"
+        ],
+        "reason": "The reviewed canonical BSI identity distinguishes the source record from the person denoted by this inherited alias; preserve the original source value in this reversible editorial decision.",
+        "removed_localization_values": {
+          "eng": {
+            "alternate_labels": [
+              "Jehoahaz"
+            ]
+          }
+        }
       }
     ],
     "editorial_reason": "1 Chronicles 3:15 explicitly identifies Johanan as a distinct son of Josiah, while the source incorrectly canonicalizes this name form under person:Jehoahaz.3. The precise Johanan word remains attached to its own individual; no guess is made about Shallum.5.",
     "review_status": "editorially_reviewed",
     "source_id": "person:Johanan",
     "source_primary_id": "person:Jehoahaz.3",
-    "source_sha256": "eb288b8b7d6577ac5e007f36838dfcb3728b96bcdccc06b10e824b2abba44ae1"
+    "source_sha256": "eb288b8b7d6577ac5e007f36838dfcb3728b96bcdccc06b10e824b2abba44ae1",
+    "inherited_localizations": {
+      "status": "withheld_pending_review",
+      "fields": [
+        "descriptions",
+        "preferred_label",
+        "alternate_labels"
+      ],
+      "reason": "Inherited description and compound labels conflate distinct Johanan with Jehoahaz; keep source strings for review.",
+      "source": "acai"
+    }
   },
   "explicit_instances": {
     "wlc": [
@@ -88,9 +113,6 @@
       "preferred_label": "Johanan (Joahas)"
     },
     "eng": {
-      "alternate_labels": [
-        "Jehoahaz"
-      ],
       "descriptions": [
         {
           "article": "person:Johanan",
