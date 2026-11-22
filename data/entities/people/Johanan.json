@@ -57,12 +57,20 @@
     "inherited_localizations": {
       "status": "withheld_pending_review",
       "fields": [
-        "descriptions",
         "preferred_label",
         "alternate_labels"
       ],
       "reason": "Inherited description and compound labels conflate distinct Johanan with Jehoahaz; keep source strings for review.",
       "source": "acai"
+    },
+    "identity_hint": {
+      "name": "Johanan",
+      "qualifier": "son of Josiah, distinct from Shallum/Jehoahaz",
+      "language": "eng",
+      "evidence_references": [
+        "13003015"
+      ],
+      "review_status": "editorially_reviewed"
     }
   },
   "explicit_instances": {
@@ -86,176 +94,60 @@
   },
   "localizations": {
     "apd": {
-      "descriptions": [
-        {
-          "description": "ملك ليهوذا، ولد يوشيا وحموطل، ومعروف كمان بيوحاز، مذكور في 2 ملوك 23:30.",
-          "source": "acai"
-        }
-      ],
       "preferred_label": "يوحانان (يهوآحاز)"
     },
     "arb": {
-      "descriptions": [
-        {
-          "description": "مَلِكٌ لِيَهُوذَا، وَابْنُ يُوشِيَّا وَحَمُوطَلَ، يُعْرَفُ أَيْضًا بِيَهُوآحَازَ، وَمَذْكُورٌ فِي 2 مُلُوك 23: 30.",
-          "source": "acai"
-        }
-      ],
       "preferred_label": "يُوحَانَانُ (يَهُوآحَازُ)"
     },
     "bis": {
-      "descriptions": [
-        {
-          "description": "Wan king blong Juda, pikinini blong Josaea wetem Hamutal, we oli kolem tu se Joahas, we 2 King 23:30 i tokbaot hem.",
-          "source": "acai"
-        }
-      ],
       "preferred_label": "Johanan (Joahas)"
     },
     "eng": {
-      "descriptions": [
-        {
-          "article": "person:Johanan",
-          "description": "A king of Judah, son of Josiah and Hamutal, also known as Jehoahaz, mentioned in 2 Kings 23:30.",
-          "gloss": "Jehoahaz",
-          "source": "acai"
-        }
-      ],
       "preferred_label": "Johanan (Jehoahaz)"
     },
     "fas": {
-      "descriptions": [
-        {
-          "description": "پادشاهی از یهودا، پسر یوشیا و حَمُوطَل، که به یهوآحاز نیز معروف است و در دوم پادشاهان ۲۳:۳۰ ذکر شده است.",
-          "source": "acai"
-        }
-      ],
       "preferred_label": "یوحانان (یهوآحاز)"
     },
     "fra": {
-      "descriptions": [
-        {
-          "description": "Roi de Juda, fils de Josias et de Hamuthal, également connu sous le nom de Joachaz, mentionné dans 2 Rois 23.30.",
-          "source": "acai"
-        }
-      ],
       "preferred_label": "Jochanan (Joachaz)"
     },
     "hau": {
-      "descriptions": [
-        {
-          "description": "Sarkin Yahuda, ɗan Yosiya da Hamutal, wanda aka fi sani da Yehoyahaz, an ambata a 2 Sarakuna 23:30.",
-          "source": "acai"
-        }
-      ],
       "preferred_label": "Yohanan (Yehoyahaz)"
     },
     "hin": {
-      "descriptions": [
-        {
-          "description": "यहूदा का एक राजा, योशिय्याह और हमूतल का पुत्र, जिसे यहोआहाज भी कहा जाता है, जिसका उल्लेख 2 राजा 23:30 में है।",
-          "source": "acai"
-        }
-      ],
       "preferred_label": "योहानान (यहोआहाज)"
     },
     "ibo": {
-      "descriptions": [
-        {
-          "description": "Eze Juda, nwa Josaya na Hamutal, nke a makwaara dị ka Jehoahaz, nke a kpọtụrụ aha na 2 Ndị Eze 23:30.",
-          "source": "acai"
-        }
-      ],
       "preferred_label": "Johanan (Jehoahaz)"
     },
     "ind": {
-      "descriptions": [
-        {
-          "description": "Seorang raja Yehuda, putra Yosia dan Hamutal, juga dikenal sebagai Yoahas, yang disebutkan dalam 2 Raja-raja 23:30.",
-          "source": "acai"
-        }
-      ],
       "preferred_label": "Yohanan (Yoahas)"
     },
     "nep": {
-      "descriptions": [
-        {
-          "description": "यहूदाका एक राजा, योशियाह र हमूतलका छोरा, जसलाई यहोआहाज पनि भनिन्छ, २ राजा २३:३० मा उल्लेख गरिएको छ।",
-          "source": "acai"
-        }
-      ],
       "preferred_label": "योहानान (यहोआहाज)"
     },
     "por": {
-      "descriptions": [
-        {
-          "description": "Um rei de Judá, filho de Josias e Hamutal, também conhecido como Jeoacaz, mencionado em 2 Reis 23:30.",
-          "source": "acai"
-        }
-      ],
       "preferred_label": "Joanã (Jeoacaz)"
     },
     "rus": {
-      "descriptions": [
-        {
-          "description": "Царь Иудеи, сын Иосии и Хамутали, также известный как Иоахаз, упоминаемый в 4 Царств 23:30.",
-          "source": "acai"
-        }
-      ],
       "preferred_label": "Иоханан (Иоахаз)"
     },
     "spa": {
-      "descriptions": [
-        {
-          "description": "Rey de Judá, hijo de Josías y Hamutal, también conocido como Joacaz, mencionado en 2 Reyes 23:30.",
-          "source": "acai"
-        }
-      ],
       "preferred_label": "Johanán (Joacaz)"
     },
     "swh": {
-      "descriptions": [
-        {
-          "description": "Mfalme wa Yuda, mwana wa Yosia na Hamutali, pia ajulikanaye kama Yehoahazi, anayetajwa katika 2 Wafalme 23:30.",
-          "source": "acai"
-        }
-      ],
       "preferred_label": "Yohanani (Yehoahazi)"
     },
     "tpi": {
-      "descriptions": [
-        {
-          "description": "Wanpela king bilong Juda, pikinini man bilong Josaia na Hamutal, narapela nem bilong en em Joahas, ol i stori long en long 2 King 23:30.",
-          "source": "acai"
-        }
-      ],
       "preferred_label": "Johanan (Joahas)"
     },
     "vie": {
-      "descriptions": [
-        {
-          "description": "Vua của Giu-đa, con trai của Giô-si-a và Ha-mu-tanh, cũng được gọi là Giê-hô-a-ha, được nhắc đến trong 2 Các Vua 23:30.",
-          "source": "acai"
-        }
-      ],
       "preferred_label": "Giô-ha-nan (Giê-hô-a-ha)"
     },
     "zhs": {
-      "descriptions": [
-        {
-          "description": "犹大王，约西亚和哈慕她的儿子，又名约哈斯，见于列王纪下23:30。",
-          "source": "acai"
-        }
-      ],
       "preferred_label": "约哈难 (约哈斯)"
     },
     "zht": {
-      "descriptions": [
-        {
-          "description": "猶大王，約西亞和哈慕他的兒子，又名約哈斯，記載於列王紀下23:30。",
-          "source": "acai"
-        }
-      ],
       "preferred_label": "約哈難（約哈斯）"
     }
   },
