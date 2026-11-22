@@ -26,12 +26,18 @@ source-record SHA-256. The [v1 schema](../relations/schema.v1.json) models
 | `tribe` | `reported_tribe` | Inherited group association, **not** asserted genetic descent |
 | `group_origin` | `reported_group_origin` | Preserves an inherited origin claim; **not** an ethnic/ancestral identification |
 | `subregion_of` | `reported_subregion_of` | Geographic containment claim; never infer place identity or historical permanence |
+| `associated_places` | `reported_associated_place` | Original association, not an asserted location or boundary |
+| `nearby_places` | `reported_nearby_place` | Reported vicinity, not exact geometry or symmetrical adjacency |
+| `related_places` | `reported_related_place` | Unspecified geographic relation, not identity or containment |
+| `tribal_area` | `reported_tribal_area` | Inherited territorial relation, not proof of descent or ethnonym identity |
+| `possibly_same_as`, `referred_to_as` | `null`, `withheld_identity_or_alias` | **Do not equate** similarly named persons, places, manuscripts or labels |
 | Any other typed field | `null`, `withheld_unclassified` | Exact source claim retained for review; no fabricated meaning |
 
 All recognized claims have `review_status=source_unreviewed`. A source
 record being `editorially_reviewed` does **not** automatically approve
-every relationship within it. Unknown typed fields are retained as
-`withheld_unclassified`; they cannot silently become a recognized predicate.
+every relationship within it. Identity- or label-ambiguous source fields are explicitly withheld as
+`withheld_identity_or_alias`. Unknown typed fields are retained as
+`withheld_unclassified`; neither class can silently become a predicate.
 
 This deliberately keeps **person**, **place**, **group**, **demonym** and
 **textual-variant** identities distinct. Neither matching labels nor a
@@ -107,4 +113,4 @@ this does **not** grant rights to republish the derived data.
    any new relation pack or changing the Bible application.
 
 Until those steps, **source-unreviewed is not approved** and
-**withheld-unclassified is not a semantic relation**.
+**all withheld claim classes are not semantic relations**.
