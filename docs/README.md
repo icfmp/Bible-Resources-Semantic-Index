@@ -1,13 +1,14 @@
-# BSI editorial and release documentation
+# BRSI editorial and release documentation
 
-This directory contains **BSI-specific** editorial and publication decisions;
+This directory contains **BRSI-specific** editorial and publication decisions;
 repository-wide formats, production pipelines and generic conventions belong
 in the [project README](../README.md) and [work plan](ROADMAP.md).
 
 **Current BRSI guidance:** [phase 1 source-locked release contract](RELEASE_CONTRACT.md),
 [editable entity IDs and field policies](EDITING_ENTITIES.md),
 [source rights and integrity](RIGHTS_AND_INTEGRITY.md), and
-[current roadmap](ROADMAP.md).
+[current roadmap](ROADMAP.md), and
+[maintained tooling map](MAINTENANCE_INVENTORY.md).
 
 **Historical BSI v0.1 evidence (preserved, not current commands):**
 
@@ -18,7 +19,7 @@ in the [project README](../README.md) and [work plan](ROADMAP.md).
 - [v0.1 release readiness and publication record](BSI_V0_1_RELEASE_READINESS.md)
 
 These are historical **evidence and editorial decisions**, not alternative
-current build instructions. Use the [BSI entrypoint](../README.md) for
+current build instructions. Use the [BRSI entrypoint](../README.md) for
 current layout and exact published index links. Greek/Hebrew dictionary
 editions document their own rights, scripts and decisions under their
 respective `links/dictionaries/ubs-*/` directories.

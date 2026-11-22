@@ -1,115 +1,88 @@
-# Phase 2 — maintenance and removal inventory
+# BRSI — Maintained tooling and source boundaries
 
-Status: **initial caller/provenance classification, not deletion approval**.
-Tracking: [issue #22](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/22).
+This is the **current working inventory**, not a migration diary. Historical
+removal decisions, exact file-level proofs and CI outcomes are recorded in
+[issue #22](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/22)
+and its merged pull requests. Do not keep copies of retired programs here.
 
-## Source-of-truth boundaries
+## Canonical source and provenance
 
-| Path | Classification | Required preservation |
+| Data | Authority and constraint |
+| --- | --- |
+| `data/entities/`, `data/quarantined/` | Canonical, editable BRSI-owned identity data and explicit quarantine. Do not reimport ACAI or replay patch sequences. |
+| `data/source.lock.json`, `data/migration/`, editorial/qualification JSON | Frozen ACAI attribution, original hashes, retained source IDs, reviewed decisions and abstentions. Do not delete or silently rewrite. |
+| `links/dictionaries/ubs-greek/index.json` | Checked-in Greek lexical baseline, regenerated only from source-pinned UBS/MACULA editions. |
+| `links/dictionaries/ubs-hebrew/index.json` | Checked-in Hebrew lexical baseline, regenerated only from source-pinned UBS/MACULA editions. |
+| `links/dictionaries/ubs-*/v1_*.json` and documented review ledgers | Durable editorial identity decisions and source evidence, **not** disposable temporary output. |
+| `release/`, `sources/`, `work/` | Distribution locks, upstream provenance, recovery limitations. None is authorization to republish. |
+
+All **868 restricted ACAI Key Terms** remain outside the public entity data.
+The native builder must not rewrite original word IDs, verse references,
+editorial metadata or translation-source choices.
+
+## Shared scripts — 19 Python files
+
+| Maintained role | Scripts | Current caller or protection |
 | --- | --- | --- |
-| `data/entities/`, `data/quarantined/` | Current canonical entity source | Stable identity, original references, reviewed edits and quarantine |
-| `data/*.json`, `data/migration/` | Locks, editorial decisions and provenance | Source fingerprints, rights, abstentions, migration evidence |
-| `links/dictionaries/ubs-greek/index.json`, `ubs-hebrew/index.json` | Versioned lexical development baselines | Checked-in bytes and pinned source identity; **not automatic release approval** |
-| `links/dictionaries/ubs-*/v1_*.json`, `family_register.json`, `reconciliation_candidates.json` | Source-specific editorial evidence / decisions | Do not delete as disposable generated output without confirming exact reproducibility and no irrecoverable review |
-| `scripts/build_native_index.py`, `scripts/entity_index_core.py`, `scripts/*policy.py`, `scripts/resolve.py` | Shared maintained tools | Native build and tested invariants |
-| `scripts/audit_*.py` | Shared read-only identity and relationship audits | Current CI checks and regression coverage |
-| `scripts/compile_index.py` | Historical ACAI-source reconstruction and tested support | Native builder now uses `entity_index_core.py`; retain old full rebuild only as independent migration parity evidence |
-| `scripts/work_snapshot.py` | Active runner-local snapshot pack/verification | Rebuild integrity evidence only; no persistent private backup or upload |
-| `links/dictionaries/ubs-*/audit_*.py`, `build_*.py`, `test_*.py` | UBS-specific research, builders and checks | Separate true maintained source-pinned workflows from obsolete one-offs by examining actual call graph |
-| `docs/V0_1_*.md`, `docs/BSI_V0_1_*.md` | Historical editorial/release evidence | Keep only verifiable decisions and published evidence, mark as historical |
-| `work/`, `sources/`, `release/` | Recovery policy, source provenance, historical release locks | Never imply publication or durable archival that did not occur |
+| Canonical native index | `build_native_index.py`, `entity_index_core.py` | Native entity CI and synthetic native growth tests; the current builder does not import the ACAI-era compiler |
+| Identity and relation policy | `identity_policy.py`, `localization_policy.py`, `offspring_target_policy.py`, `reference_policy.py` | Native build and corresponding offline tests |
+| Read-only identity audits | `audit_entity_relationships.py`, `audit_family_relation_consistency.py`, `audit_identity_surface.py`, `audit_name_ambiguities.py`, `audit_person_overlaps.py`, `audit_reclassified_entity_fields.py` | Native/reclassified/offline workflows for invoked audits; remaining reusable audit covered by standalone tests |
+| Lookup and distribution helpers | `resolve.py`, `distribution_profile.py`, `release_contract.py`, `stage_entity_candidate.py` | Dedicated unit tests; candidate/contract verification in native CI, never direct publication |
+| Integrity and historical-asset checks | `write_integrity_receipt.py`, `verify_historical_asset.py` | Native build / pinned lexical CI and their tests |
+| Runner-local evidence packaging | `work_snapshot.py` | Greek/Hebrew CI packs and verifies a **temporary** private research state, without upload or durable-storage claim |
 
-## Removed with verified absence of callers
+Only current reusable scripts belong in `scripts/`. The historical ACAI
+source-replay compiler is isolated in
+[`tests/support/legacy_acai_compiler.py`](../tests/support/legacy_acai_compiler.py)
+and exercised by `tests/test_build.py`; it is **not** a production
+source-import path.
 
-- `links/dictionaries/ubs-hebrew/inspect_sources.py`: initial read-only
-  schema/TSV sample printer. Not referenced by either pinned source workflow,
-  current tests, or indexed repository code search; its inspection is not a
-  canonical build or source-specific editorial decision. Removing this helper
-  does not remove any reviewed JSON ledger or frozen source baseline.
+## Source-specific lexical processes
 
-- `links/dictionaries/ubs-hebrew/analyze_alignment.py`: print-only
-  exploratory comparison of original source inventory; the maintained
-  `build_index.py` and pinned verifications independently check source identity.
-- `links/dictionaries/ubs-hebrew/audit_variants.py` and
-  `audit_top_lemmas.py`: former exploratory morphology/frequency reports,
-  written only to temporary JSON files; no later workflow step consumes them.
-  Retained source-specific lexical checks and decision ledgers are unchanged.
-  The three associated no-longer-needed workflow stages were retired together.
+| Stream | Python tools and tests | Executable entrypoint | Retained editorial authority |
+| --- | ---: | --- | --- |
+| UBS Greek | 78 total; 36 `test_*.py` modules | [Pinned Greek workflow](../.github/workflows/bsi-ubs-greek.yml) and its source-local builders | Original source locks, reviewed JSON headword/word-ID ledgers, explicit sense abstentions |
+| UBS Hebrew | 43 total; 21 `test_*.py` modules | [Pinned Hebrew workflow](../.github/workflows/bsi-ubs-hebrew.yml) and its source-local builders | Original source locks, reviewed JSON identity/disposition/abstention ledgers, v1 and v1.1 reviews |
 
-- `links/dictionaries/ubs-greek/audit_sense_form_witnesses.py` and
-  `audit_sense_reference_shapes.py`, plus their dedicated offline negative
-  tests: exploratory reports of original UBS form and LEXReferences *shapes*
-  from earlier contextual research. Both reports were runner-local and
-  unconsumed downstream. Subsequent source-pinned form-supported and
-  reference-/verse-supported candidate verification remains in CI, as do all
-  original approved/abstained source decisions. No lexical baseline changed.
+The Greek and Hebrew workflows first verify exact upstream commits and
+source checksums, then reconstruct source-backed indexes, check reviewed
+decisions and compare historical public archives. Every source-local
+`test_*.py` runs individually via a fail-fast glob. Their full research
+chains remain where the source-specific build genuinely depends on them;
+a report-only stage with no downstream use is not a reason to keep an
+obsolete script forever.
 
-- `links/dictionaries/ubs-hebrew/audit_unmatched.py`: early diagnostic-only
-  unresolved-row categorization, producing `/tmp/bsi-ubs-hebrew-unmatched-audit.json`
-  with no downstream consumer, tests or retained editorial ledger. Retired
-  together with its CI step; the more precise lexical gap, dictionary scope,
-  source attestation and abstention verifiers are still maintained.
+Detailed editorial assumptions and source exceptions belong in each
+source's README, not in a generic shared script or a special-case rule
+inside the application.
 
-- `links/dictionaries/ubs-hebrew/audit_unmatched.py`: superseded read-only
-  early unresolved-row census with no downstream JSON consumer or editorial
-  decision ledger. Its CI stage was removed in PR #69, while the maintained
-  lexical-gap, dictionary scope and abstention audits remain.
-- `scripts/publish_private_work_snapshot.sh`: inactive private uploader with
-  no current CI caller, no verified destination and an obsolete monorepo path.
-  Removed in PR #70. The actively invoked runner-local `work_snapshot.py`
-  and its regression tests were explicitly retained; these **do not upload**.
+## CI entrypoints
 
-- `scripts/minimal_labels.py` and `scripts/package_candidate.py`: retired ACAI-era
-  one-off candidate-label and BSI v0.1 ZIP preparers. No current Python tests,
-  native/UBS workflows or application entrypoint referenced either; their
-  historical instructions are explicitly identified as non-runnable records in
-  `docs/BSI_V0_1_RELEASE_READINESS.md`. The old script bytes remain in Git
-  history; published artifact locks, editorial judgments and current native
-  staging are unchanged.
+- `offline-checks.yml`: native/workspace unit tests, identity audits and UBS
+  baseline smoke tests, with no external source checkout.
+- `native-entity-index.yml`: canonical native entity build, candidate
+  integrity and source-lock checks; explicitly nonpublishing.
+- `audit-native-relations.yml` and `audit-reclassified-fields.yml`:
+  independent relational and inherited-field audits.
+- `bsi-ubs-greek.yml` and `bsi-ubs-hebrew.yml`: full pinned-source
+  lexical reproducibility and historical-archive verification. Runner
+  evidence remains local; no source-derived restricted data upload.
 
-- `scripts/prune_inherited_descriptions.py` and
-  `scripts/prune_nonworking_labels.py`, together with their isolated
-  source-mutation regression suites: one-time ACAI-to-BRSI normalization.
-  Their sole current consumers were `--check` calls in offline CI. The
-  permanent native build rejects prose, obsolete prose holds, translated
-  records/holds and missing imported English identity labels; canonical
-  repository tests also audit all entities, including Key Terms exclusion.
-  The original transformation implementations remain in Git history.
+## Rules for further retirement
 
-- `links/dictionaries/ubs-hebrew/audit_lexical_gaps.py`,
-  `test_lexical_gaps.py`, and `audit_orthography_gaps.py`: old lexical-family
-  frequency and consonantal-form candidate research that only wrote unconsumed
-  temporary reports. Their exact analyses and original source evidence remain
-  available from Git history; the original published conclusions remain in
-  the source README. The current CI retains source-pinned candidate build,
-  dictionary-scope audit, explicit disposition registers and every approved
-  decision/abstention verifier.
+1. Check real callers, imports, active workflow steps, offline tests and
+   current documentation; also verify no workflow references a missing
+   Python script.
+2. Distinguish a reproducible temporary report from a unique reviewed
+   source decision, abstention, rights receipt or provenance record.
+3. Verify old and new index bytes, published archive hashes and source locks
+   when touching a producing chain. Never infer a semantic sense from
+   Strong, `sdbh` or `LEXID` resemblance alone.
+4. Validate the affected offline/native and source-pinned workflow(s) on
+   a PR before merging. Preserve failing evidence; no bypasses to make CI green.
+5. Never turn verification or candidate generation into publication.
+   Rights and authorized release remain gated by
+   [issue #62](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/62).
 
-## Verified CI entrypoints
-
-- `offline-checks.yml`: native unit tests, identity and relationship audits,
-  description/label `--check` commands, baseline UBS index unit tests.
-- `native-entity-index.yml`: canonical entity build and candidate validation.
-- `bsi-ubs-greek.yml` and `bsi-ubs-hebrew.yml`: external source-pinned
-  lexical rebuilds; their dependency chains must be followed before retiring
-  a source-specific builder or audit.
-- `audit-native-relations.yml`, `audit-reclassified-fields.yml`:
-  independent audit workflows.
-
-## Removal gate (mandatory)
-
-1. Find direct calls in workflows, imports, other scripts, tests and current
-   documentation; a filename that looks historical is not sufficient evidence.
-2. Identify the exact source lock, reproducible generator and retained
-   editorial decision ledger, if any.
-3. Demonstrate that deletion does not change canonical source records,
-   checked-in indexes, approved identities, version/provenance metadata or
-   the historical published assets.
-4. Delete in coherent batches and run the offline, native entity and
-   **both** source-pinned UBS checks before merging each removal batch.
-5. Keep releases disabled. Publication and redistribution rights remain
-   separately gated in [issue #62](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/62).
-
-This inventory deliberately does **not** certify any UBS audit/builder as
-unused yet. Full caller-level inspection is the next task; losing a reviewed
-lexical decision in the name of tidiness would be a regression.
+Historical actions and obsolete scripts are recoverable from Git commits
+and PRs. This file describes only the supported **present**.
