@@ -42,6 +42,11 @@ evidence for one of:
 - `source_rights_unverified`: this link/source field has not cleared review;
 - `edition_unverified`: source version/provenance cannot be confirmed.
 
+The same entity/entry pair cannot be both a reviewed external link and a
+withheld candidate in the same edition file. Such contradictory decisions fail
+validation; different entity IDs or different external entry IDs remain
+independent and are not automatically equated.
+
 An absent mapping is **unknown**, not an automatic `same_subject` match. A
 withheld mapping is not an approved link. Preserve conflicting candidates
 rather than guessing a single identity. Never create links to unavailable
