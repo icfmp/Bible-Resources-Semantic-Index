@@ -1,0 +1,70 @@
+name: Verify BRSI entity word IDs against pinned Macula originals
+
+on:
+  pull_request:
+    paths:
+      - "data/entities/**"
+      - "data/source.lock.json"
+      - "data/source-unattested-words.json"
+      - "scripts/verify_pinned_entity_words.py"
+      - "tests/test_verify_pinned_entity_words.py"
+      - ".github/workflows/verify-entity-original-words.yml"
+  push:
+    branches: [main]
+    paths:
+      - "data/entities/**"
+      - "data/source.lock.json"
+      - "data/source-unattested-words.json"
+      - "scripts/verify_pinned_entity_words.py"
+      - "tests/test_verify_pinned_entity_words.py"
+      - ".github/workflows/verify-entity-original-words.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-source-word-attestation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test source identity and strict word-inventory validator
+        run: python3 -I tests/test_verify_pinned_entity_words.py
+      - name: Pin exact Macula Hebrew WLC source inventory
+        uses: actions/checkout@v4
+        with:
+          repository: Clear-Bible/macula-hebrew
+          ref: 47db250bd55d0d8577f2a94fba114ef16c35b23c
+          path: macula-hebrew
+          sparse-checkout: WLC/tsv
+          lfs: true
+          persist-credentials: false
+      - name: Pin exact Macula Greek SBLGNT source inventory
+        uses: actions/checkout@v4
+        with:
+          repository: Clear-Bible/macula-greek
+          ref: 8423afe47b9e8f24b7772e808af45c7159a6fe7e
+          path: macula-greek
+          sparse-checkout: SBLGNT/tsv
+          lfs: true
+          persist-credentials: false
+      - name: Compare checked-out commits to locked input editions
+        run: |
+          python3 - <<'PY'
+          import json
+          import subprocess
+          from pathlib import Path
+          source=json.loads(Path("data/source.lock.json").read_text())
+          for corpus, directory, repo in (
+              ("wlc","macula-hebrew","Clear-Bible/macula-hebrew"),
+              ("sblgnt","macula-greek","Clear-Bible/macula-greek"),
+          ):
+              actual=subprocess.check_output(
+                  ["git", "-C", directory, "rev-parse", "HEAD"], text=True).strip()
+              assert source["source_editions"][corpus]["edition"] == f"{repo}@{actual}"
+          PY
+      - name: Check every active exact original-word claim against pinned source
+        run: |
+          python3 -I scripts/verify_pinned_entity_words.py             --data data             --wlc macula-hebrew/WLC/tsv/macula-hebrew.tsv             --sblgnt macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv
+          # Read-only source verification. No copy/publish of source inventories.
