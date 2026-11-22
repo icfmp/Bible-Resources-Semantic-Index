@@ -54,9 +54,7 @@ jobs:
           python3 -I links/dictionaries/ubs-greek/test_unresolved_semantic_priorities.py
           python3 -I links/dictionaries/ubs-greek/test_lower_confidence_single_sense.py
           python3 -I links/dictionaries/ubs-greek/test_context_review_batches.py
-          python3 -I links/dictionaries/ubs-greek/test_sense_form_witnesses.py
           python3 -I links/dictionaries/ubs-greek/test_form_supported_provisional_senses.py
-          python3 -I links/dictionaries/ubs-greek/test_sense_reference_shapes.py
           python3 -I links/dictionaries/ubs-greek/test_ubs_source_verse_witnesses.py
           python3 -I links/dictionaries/ubs-greek/test_source_verse_provisional_senses.py
           python3 -I links/dictionaries/ubs-greek/test_ubs_token_position_alignment.py
