@@ -102,11 +102,11 @@ class FamilyInverseTests(unittest.TestCase):
             result = family.audit(root)
             counts = result["counts"]
             self.assertEqual(result["person_records_scanned"], 1)
-            self.assertEqual(counts["offspring_target_outside_people_folder"], 2)
+            self.assertEqual(counts["offspring_target_nonperson_kind"], 2)
             self.assertEqual(counts["offspring_target_not_found_in_current_entity_data"], 1)
             examples = {
                 row["child_target"]: row["target_kind_if_known"]
-                for row in result["offspring_outside_person_folder_examples"]
+                for row in result["nonperson_or_unresolved_offspring_examples"]
             }
             self.assertEqual(examples, {
                 "group:Tribe": "group",
