@@ -59,6 +59,11 @@ def source_editions(kind: str, acai_lock: dict) -> list[dict]:
         raise ValueError("Missing pinned original ACAI source commit")
     if kind not in KINDS:
         raise ValueError("Unknown BRSI kind")
+    if (acai_lock.get("reviewed_greek_source") !=
+            f"Clear-Bible/macula-greek@{SOURCE_GREEK}"
+            or acai_lock.get("reviewed_hebrew_source") !=
+            f"Clear-Bible/macula-hebrew@{SOURCE_HEBREW}"):
+        raise ValueError("Current BRSI source lock drifted from lexical edition pins")
     records = {
         "acai": {
             "name": "ACAI", "revision": acai_lock["source_commit"],
@@ -182,8 +187,16 @@ def validate_manifest(manifest: dict) -> None:
     kind = manifest["kind"]
     if kind not in KINDS:
         raise ValueError("Unknown artifact kind")
-    if not isinstance(manifest["payload_schema"], str) or not manifest["payload_schema"]:
-        raise ValueError("Missing format/schema identity")
+    allowed_schemas = {
+        "entities": {"bsi.native-entity-index.v1"},
+        "ubs_greek": {
+            "bsi-ubs-greek-lexical-crosswalk.v1",
+            "bsi.ubs-greek-word-crosswalk.v1",
+        },
+        "ubs_hebrew": {"bsi-ubs-hebrew-lexical-crosswalk.v1"},
+    }
+    if manifest["payload_schema"] not in allowed_schemas[kind]:
+        raise ValueError("Unknown original/approved payload schema for BRSI kind")
     if not isinstance(manifest["version"], str) or not VERSION.fullmatch(manifest["version"]):
         raise ValueError("Invalid version")
     if not isinstance(manifest["producer_revision"], str) or not SHA40.fullmatch(manifest["producer_revision"]):
@@ -203,6 +216,23 @@ def validate_manifest(manifest: dict) -> None:
         names.append(entry["name"])
     if len(set(names)) != len(names):
         raise ValueError("Duplicate source editions")
+    expected_names = {
+        "entities": {"ACAI", "MACULA SBLGNT", "MACULA WLC"},
+        "ubs_greek": {"UBS Greek Dictionary", "MACULA SBLGNT"},
+        "ubs_hebrew": {"UBS Hebrew Dictionary", "MACULA WLC"},
+    }
+    if set(names) != expected_names[kind]:
+        raise ValueError("Unknown original source set for artifact kind")
+    immutable_revisions = {
+        "MACULA SBLGNT": SOURCE_GREEK,
+        "MACULA WLC": SOURCE_HEBREW,
+        "UBS Greek Dictionary": SOURCE_UBS,
+        "UBS Hebrew Dictionary": SOURCE_UBS,
+    }
+    for entry in sources:
+        if (entry["name"] in immutable_revisions
+                and entry["revision"] != immutable_revisions[entry["name"]]):
+            raise ValueError("Original source revision differs from pinned edition")
     rights = manifest["rights"]
     exact_keys(rights, {"data_license", "attribution", "redistribution_cleared",
                         "excluded_keyterms"}, "rights")
