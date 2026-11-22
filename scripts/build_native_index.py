@@ -13,6 +13,9 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+# New BSI-owned records may be added without inventing a matching ACAI source.
+# Work is already a reviewed canonical identity kind in the native entity index.
+NATIVE_CATEGORIES = {"works": "work"}
 spec = importlib.util.spec_from_file_location("bsi_link_finalizer", ROOT / "scripts" / "compile_index.py")
 legacy = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(legacy)
@@ -30,7 +33,10 @@ def build(data: Path = ROOT / "data") -> dict:
     if manifest["source_snapshot_sha256"] != lock["source_snapshot_sha256"]:
         raise ValueError("Native baseline source digest mismatch")
     entries, quarantined, seen_source = [], [], set()
-    for category in legacy.CATEGORIES:
+    imported_source_ids = set()
+    native_source_ids = set()
+    for category in (*legacy.CATEGORIES, *NATIVE_CATEGORIES):
+        expected_prefix = legacy.CATEGORIES.get(category, NATIVE_CATEGORIES.get(category))
         directory = data / "entities" / category
         for path in sorted(directory.glob("*.json")):
             record = read(path)
@@ -41,14 +47,35 @@ def build(data: Path = ROOT / "data") -> dict:
             seen_source.add(sid)
             if category == "keyterms":
                 raise ValueError("Restricted keyterm record unexpectedly in approved native data")
-            if not sid.startswith(legacy.CATEGORIES[category] + ":"):
-                raise ValueError(f"Category/source mismatch {path}: {sid}")
+            origin = metadata.get("origin")
+            if origin == "bsi":
+                if sid != f"bsi:{expected_prefix}:{path.stem}":
+                    raise ValueError(f"Incorrect BSI-native identity provenance: {path}: {sid}")
+                if not isinstance(metadata.get("editorial_reason"), str) or not metadata["editorial_reason"].strip():
+                    raise ValueError(f"BSI-native record lacks editorial reason: {path}")
+                evidence = metadata.get("editorial_evidence")
+                if not isinstance(evidence, list) or not evidence or any(
+                        not isinstance(item, str) or not item.strip() for item in evidence):
+                    raise ValueError(f"BSI-native record lacks source evidence: {path}")
+                if metadata.get("review_status") != "editorially_reviewed":
+                    raise ValueError(f"BSI-native record must be reviewed: {path}")
+                native_source_ids.add(sid)
+            elif origin in (None, "acai"):
+                if category in NATIVE_CATEGORIES:
+                    raise ValueError(f"New BSI category cannot masquerade as ACAI: {path}")
+                if sid != f"{expected_prefix}:{path.stem}":
+                    raise ValueError(f"Historical source path/ID mismatch: {path}: {sid}")
+                if not isinstance(metadata.get("source_sha256"), str) or len(metadata["source_sha256"]) != 64:
+                    raise ValueError(f"Imported record lacks source SHA-256: {path}")
+                imported_source_ids.add(sid)
+            else:
+                raise ValueError(f"Unsupported entity provenance origin: {path}: {origin}")
             entry = {
                 "id": record["id"], "kind": record["type"],
                 "canonical_id": metadata["canonical_id"],
                 "source_id": sid,
                 "source_primary_id": metadata["source_primary_id"],
-                "source_sha256": metadata["source_sha256"],
+                "source_sha256": metadata.get("source_sha256"),
                 "review_status": metadata["review_status"],
                 "references": copy.deepcopy(record["references"]),
                 "key_references": copy.deepcopy(record["key_references"]),
@@ -73,20 +100,40 @@ def build(data: Path = ROOT / "data") -> dict:
             if sid in seen_source:
                 raise ValueError("Quarantine duplicates a source identity: " + sid)
             seen_source.add(sid)
+            if metadata.get("origin") == "bsi":
+                if not sid.startswith("bsi:" + expected_prefix + ":"):
+                    raise ValueError(f"Incorrect BSI quarantine source ID: {path}")
+                native_source_ids.add(sid)
+            elif metadata.get("origin") in (None, "acai"):
+                if sid != f"{expected_prefix}:{path.stem}":
+                    raise ValueError(f"Historical quarantined source ID mismatch: {path}")
+                imported_source_ids.add(sid)
+            else:
+                raise ValueError(f"Unsupported quarantine provenance: {path}")
             quarantined.append({
-                "source_id": sid, "source_sha256": metadata["source_sha256"],
+                "source_id": sid, "source_sha256": metadata.get("source_sha256"),
                 "reason": metadata["reason"], "evidence": metadata["evidence"],
             })
-    if len(entries) + len(quarantined) != manifest["written_records"]:
-        raise ValueError("Native entity set incomplete compared with migration manifest")
-    if len(entries) != manifest["active_legacy_entities"] - manifest["restricted_unpublished_keyterms"]:
-        raise ValueError("Native active records missing or changed")
-    if len(quarantined) != manifest["quarantined_legacy"]:
-        raise ValueError("Native quarantine records missing or changed")
     if manifest["written_records"] + manifest["restricted_unpublished_keyterms"] != manifest["source_records"]:
-        raise ValueError("Native source completeness accounting invalid")
-    if len(seen_source) != manifest["written_records"]:
-        raise ValueError("Duplicated native source records")
+        raise ValueError("Historical source completeness accounting invalid")
+    # The migration manifest is an immutable inventory, not a ceiling on
+    # evolving BSI data. The original source IDs must never disappear, but
+    # independently evidenced new BSI entries are permitted.
+    baseline_sources = set()
+    for migrated_path in manifest["written_paths"]:
+        section, category, filename = Path(migrated_path).parts
+        if section not in ("entities", "quarantined") or category not in legacy.CATEGORIES:
+            raise ValueError(f"Unexpected historical migration path: {migrated_path}")
+        basename = Path(filename).stem
+        baseline_sources.add(f"{legacy.CATEGORIES[category]}:{basename}")
+    if len(baseline_sources) != manifest["written_records"]:
+        raise ValueError("Historical source manifest has duplicate identities")
+    if imported_source_ids != baseline_sources:
+        missing = sorted(baseline_sources - imported_source_ids)
+        unexpected = sorted(imported_source_ids - baseline_sources)
+        raise ValueError(f"Imported ACAI entity identities changed: missing={missing[:5]}, unexpected={unexpected[:5]}")
+    if len(seen_source) != len(imported_source_ids) + len(native_source_ids):
+        raise ValueError("Native source identity collision")
     words = set()
     references = set()
     for entry in entries:
