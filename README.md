@@ -1,9 +1,11 @@
 # Bible Semantic Index (BSI)
 
 **Independent, offline, source-pinned biblical semantic and lexical indexes.**
-This directory contains BSI builders, source evidence, tests and UBS dictionary
+This standalone repository contains BSI builders, editorial evidence, tests and UBS dictionary
 crosswalks. It is **not** a Bible translation, a SWORD module, or the Bible
 application itself.
+
+> **Repository relocation (2026-11-22):** This project was extracted unchanged from `icfmp/Bible-Resources/bible-semantic-index/`. The original three public release tags and assets are still hosted in Bible-Resources and are not automatically republished here. The 212 extracted source files were independently compared by Git blob SHA with the origin. The source-pinned CI and future publication migration are separate tasks; this is not yet the release authority.
 
 ## Where the indexes actually are
 
@@ -33,7 +35,7 @@ private repository exists and an actual archive is uploaded/read back.**
 ## Directory map
 
 ```text
-bible-semantic-index/
+
 ├── README.md            Project entrypoint and index locations
 ├── docs/                BSI release decisions, editorial background and methods
 ├── scripts/             Shared BSI entity builder, resolver and packaging
@@ -61,11 +63,11 @@ Fetch the frozen ACAI data **without editing it**, then generate a private
 index into ignored build output:
 
 ```bash
-bash bible-semantic-index/sources/checkout-acai.sh
-python3 -I bible-semantic-index/scripts/compile_index.py \
-  --source bible-semantic-index/sources/checkouts/acai \
+bash sources/checkout-acai.sh
+python3 -I scripts/compile_index.py \
+  --source sources/checkouts/acai \
   --verify-source-commit \
-  --output bible-semantic-index/dist/index.json
+  --output dist/index.json
 ```
 
 The [BSI source-pinned GitHub Actions workflow](
