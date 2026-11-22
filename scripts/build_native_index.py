@@ -36,6 +36,12 @@ reference_spec = importlib.util.spec_from_file_location(
 reference_policy = importlib.util.module_from_spec(reference_spec)
 reference_spec.loader.exec_module(reference_policy)
 
+offspring_spec = importlib.util.spec_from_file_location(
+    "brsi_offspring_target_policy", ROOT / "scripts" / "offspring_target_policy.py")
+offspring_policy = importlib.util.module_from_spec(offspring_spec)
+offspring_spec.loader.exec_module(offspring_policy)
+
+
 def read(path: Path):
     return json.loads(path.read_text(encoding="utf-8"))
 
@@ -74,6 +80,7 @@ def build(data: Path = ROOT / "data") -> dict:
             localization_policy.validated_holds(record)
             identity_policy.validate_identity_hint(record)
             reference_policy.validate_reference_fields(record)
+            offspring_policy.validate_offspring_targets(record)
             metadata = record.get("bsi", {})
             sid = metadata.get("source_id")
             if not isinstance(sid, str) or sid in seen_source:
