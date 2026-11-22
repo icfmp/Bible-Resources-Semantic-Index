@@ -1,0 +1,100 @@
+{
+  "alternate_sources": {
+    "tipnr": [
+      "husband_of_Mary@Mat.27.56-Act"
+    ],
+    "vizbible": [
+      "rec8Z7vWWsitSvAKJ"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "person:HusbandOfMary.2",
+    "review_status": "source_unreviewed",
+    "source_id": "person:HusbandOfMary.2",
+    "source_primary_id": "person:HusbandOfMary.2",
+    "source_sha256": "d63b06b16f429a5d57b0575b5ecdff0f612ba6a7111459ca24ec57d2b067d49f",
+    "editorial_field_changes": [
+      {
+        "action": "withhold_inferred_genealogical_identity",
+        "removed_fields": [
+          "offspring"
+        ],
+        "reason": "Source placeholder combines Matthew 27:56's unnamed husband inference with Acts 12:12's mother of John Mark; neither names a father.",
+        "evidence": [
+          "Matthew 27:56",
+          "Acts 12:12"
+        ],
+        "removed_relation_values": {
+          "offspring": [
+            "person:Mark"
+          ]
+        }
+      },
+      {
+        "action": "withhold_inferred_genealogical_identity",
+        "removed_fields": [
+          "partners"
+        ],
+        "reason": "The biblical mother of James/Joses is not supplied with a named husband in Matthew 27:56 or Mark 15:40.",
+        "evidence": [
+          "Matthew 27:56",
+          "Mark 15:40"
+        ],
+        "removed_relation_values": {
+          "partners": [
+            "person:Mary.2"
+          ]
+        }
+      },
+      {
+        "action": "remove_false_wife_as_husband_alias",
+        "removed_localization_values": {
+          "eng": {
+            "alternate_labels": [
+              "Mary"
+            ]
+          }
+        },
+        "reason": "The woman named Mary is not an alternate name of an unnamed male husband; inherited source-only placeholder aliases must not equate two different identities.",
+        "evidence": [
+          "Acts 12:12",
+          "Matthew 27:56",
+          "Pinned ACAI original record, retained in source.lock.json"
+        ]
+      }
+    ],
+    "editorial_reason": "Withhold disputed or unnamed family identity assignments; preserve source texts, names, original-word witnesses, and all approved source IDs.",
+    "editorial_evidence": [
+      "Matthew 27:56",
+      "Acts 12:12",
+      "Mark 15:40"
+    ],
+    "state": "quarantined",
+    "reason": "Unanchored inferred male identity: the cited Scripture mentions Mary and/or a child but not this husband; no original-language token supports a separately identifiable person. Withhold the entire identity from V1 rather than only deleting asserted kinship links.",
+    "evidence": [
+      "Acts 12:12 names Mary mother of John Mark but no husband or father",
+      "Matthew 27:56 and Mark 15:40 name another Mary mother of James/Joses but no husband",
+      "Original ACAI identity and field-level editorial receipts preserved in this quarantined source record"
+    ]
+  },
+  "explicit_instances": {},
+  "gender": "male",
+  "id": "person:HusbandOfMary.2",
+  "key_references": [
+    "44012012"
+  ],
+  "localizations": {
+    "eng": {
+      "preferred_label": "Husband of Mary (Matthew 27:56)"
+    }
+  },
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "primary_id": "person:HusbandOfMary.2",
+  "pronominal_referents": {},
+  "references": [
+    "44012012"
+  ],
+  "subject_referents": {},
+  "type": "person"
+}
