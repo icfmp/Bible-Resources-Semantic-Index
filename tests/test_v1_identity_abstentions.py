@@ -71,6 +71,11 @@ class V1AbstentionTests(unittest.TestCase):
                 self.assertTrue(receipt["reason"].strip(), name)
                 for field in receipt["removed_fields"]:
                     self.assertNotIn(field, record, (name, field))
+                    self.assertEqual(set(receipt["removed_relation_values"]), {field})
+                    self.assertTrue(receipt["removed_relation_values"][field])
+                    self.assertTrue(all(
+                        isinstance(x, str) and x for x in
+                        receipt["removed_relation_values"][field]))
 
 
 if __name__ == "__main__":
