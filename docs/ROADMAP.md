@@ -80,15 +80,18 @@ developed in parallel where no source/data/publication gate is bypassed.
   PRs #12–#18: 15,541 existing structure links were verified with no
   unresolved targets. Dinaite, Syria/Edom and Gadara/Gerasa corrections retain
   original source evidence and lexical ambiguity.
-- [ ] **Retire inherited encyclopedia prose; preserve minimal identity.**
+- [x] **Retire inherited encyclopedia prose; preserve minimal identity.**
   [#30](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/30).
   BRSI is an identity/link index, **not** a multilingual descriptive resource.
-  The first reviewed eight-record pilot has short source-backed identity
-  qualifiers (three distinct Mary records and five reclassified/ambiguous
-  records), and removes 152 ACAI description rows. Continue the generic
-  evidence-preserving cleanup in batches until no encyclopedia paragraphs
-  remain. Do not translate descriptions into dozens of languages or turn
-  a disambiguator into a biography. Retain original ACAI SHA provenance.
+  PR #31 established eight short reviewed source-backed identity qualifiers;
+  PR #32 provided a guarded cleanup tool; PRs #33–#36 removed inherited
+  biographies from all seven permitted source categories in bounded batches.
+  Every transformed batch passed an **identical native build before/after**
+  comparison and independently passed source/relationship regressions.
+  A permanent native build guard and CI now reject any reintroduced
+  `localizations.*.descriptions`. No forced translated descriptions or mass
+  invented identity hints. Pinned ACAI provenance and historic releases stay
+  intact.
 - [ ] **Review ambiguous entity identities and real matching aliases only.**
   [#6](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/6).
   Finish the actual Gadara demonym/source-variant link question; distinguish

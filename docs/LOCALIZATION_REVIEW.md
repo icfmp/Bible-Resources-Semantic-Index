@@ -5,12 +5,13 @@ This policy supersedes the prior plan to correct and translate all inherited
 ACAI biographies. See [#30](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/30).
 
 The original ACAI `localizations.*.descriptions` are not part of the
-intended BRSI data model. They are being removed from editable native records
-in validated batches. The exact source text remains recoverable from the
+intended BRSI data model. They have been removed from all editable native records
+through four independently verified category batches (PRs #33–#36). The exact source text remains recoverable from the
 immutable pinned ACAI commit identified in `data/source.lock.json`,
-each entity's `bsi.source_sha256`, and Git history. The first batch removed
-152 description rows from 8 real entities, without touching their Bible
-references, source word IDs, structural relations or original source IDs.
+each entity's `bsi.source_sha256`, and Git history. Each batch showed byte-identical native index output before/after removal,
+without touching Bible references, original-word IDs, structural relations,
+source IDs or reviewed identity hints. Native builds and offline CI now
+reject reintroduced encyclopedia descriptions.
 
 ## Identification versus descriptions
 

@@ -71,6 +71,8 @@ python3 -I scripts/prune_inherited_descriptions.py --categories deities fauna fl
 python3 -I scripts/prune_inherited_descriptions.py --categories deities fauna flora --check
 ```
 
+The existing corpus has already been cleaned (PRs #33–#36); use the same
+commands only for audited future imports or to check that no prose returns.
 The tool validates the entire selected batch before writing, reports counts
 without logging source biographies, and removes only description arrays and
 their now-obsolete `descriptions` hold selectors. Other hold selectors and
