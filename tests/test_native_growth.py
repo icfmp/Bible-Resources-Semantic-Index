@@ -82,6 +82,45 @@ class NativeGrowthTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "Encyclopedia descriptions forbidden"):
             builder.build(self.data)
 
+    def test_top_level_encyclopedia_prose_is_rejected(self):
+        path = self.data / "entities" / "people" / "Mary.2.json"
+        record = json.loads(path.read_text(encoding="utf-8"))
+        record["descriptions"] = ["Old imported biography"]
+        path.write_text(json.dumps(record, ensure_ascii=False), encoding="utf-8")
+        with self.assertRaisesRegex(ValueError, "Encyclopedia descriptions forbidden"):
+            builder.build(self.data)
+
+    def test_obsolete_prose_review_hold_is_rejected(self):
+        path = self.data / "entities" / "people" / "Mary.2.json"
+        record = json.loads(path.read_text(encoding="utf-8"))
+        record["bsi"]["inherited_localizations"] = {
+            "status": "withheld_pending_review", "source": "acai",
+            "reason": "Synthetic obsolete hold", "fields": ["descriptions"],
+        }
+        path.write_text(json.dumps(record, ensure_ascii=False), encoding="utf-8")
+        with self.assertRaisesRegex(ValueError, "Obsolete inherited encyclopedia prose hold"):
+            builder.build(self.data)
+
+    def test_nonworking_language_review_hold_is_rejected(self):
+        path = self.data / "entities" / "people" / "Mary.2.json"
+        record = json.loads(path.read_text(encoding="utf-8"))
+        record["bsi"]["inherited_localizations"] = {
+            "status": "withheld_pending_review", "source": "acai",
+            "reason": "Synthetic nonworking-language hold",
+            "fields": ["fra.preferred_label"],
+        }
+        path.write_text(json.dumps(record, ensure_ascii=False), encoding="utf-8")
+        with self.assertRaisesRegex(ValueError, "Redundant translated localization hold"):
+            builder.build(self.data)
+
+    def test_imported_identity_must_keep_english_working_label(self):
+        path = self.data / "entities" / "people" / "Mary.2.json"
+        record = json.loads(path.read_text(encoding="utf-8"))
+        record["localizations"]["eng"]["preferred_label"] = ""
+        path.write_text(json.dumps(record, ensure_ascii=False), encoding="utf-8")
+        with self.assertRaisesRegex(ValueError, "Imported entity lacks English working identity label"):
+            builder.build(self.data)
+
     def test_historical_source_cannot_disappear(self):
         (self.data / "entities" / "people" / "Jashar.json").unlink()
         with self.assertRaisesRegex(ValueError, "Imported ACAI entity identities changed"):
