@@ -27,6 +27,15 @@ Tracking: [issue #22](https://github.com/icfmp/Bible-Resources-Semantic-Index/is
   canonical build or source-specific editorial decision. Removing this helper
   does not remove any reviewed JSON ledger or frozen source baseline.
 
+- `links/dictionaries/ubs-hebrew/analyze_alignment.py`: print-only
+  exploratory comparison of original source inventory; the maintained
+  `build_index.py` and pinned verifications independently check source identity.
+- `links/dictionaries/ubs-hebrew/audit_variants.py` and
+  `audit_top_lemmas.py`: former exploratory morphology/frequency reports,
+  written only to temporary JSON files; no later workflow step consumes them.
+  Retained source-specific lexical checks and decision ledgers are unchanged.
+  The three associated no-longer-needed workflow stages were retired together.
+
 ## Verified CI entrypoints
 
 - `offline-checks.yml`: native unit tests, identity and relationship audits,
