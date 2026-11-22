@@ -36,10 +36,6 @@ historical ACAI patches or import an upstream snapshot during normal editing.
 - `compile_index.py`, `minimal_labels.py`, `package_candidate.py`:
   retained for migration/v0.1 reconstruction evidence or compatibility tests;
   **not** the current editable-source build.
-- `work_snapshot.py`, `publish_private_work_snapshot.sh`:
-  historical private archival tooling, **not currently active**. No private
-  storage or durable backup is implied by their presence; see
-  [working-state limitations](../work/README.md).
 
 The UBS Greek and Hebrew lexical workflows, their tests and reviewed
 source-specific decisions live under
