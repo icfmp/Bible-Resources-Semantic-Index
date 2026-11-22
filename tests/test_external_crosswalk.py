@@ -142,6 +142,26 @@ class ExternalCrosswalkTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "Duplicate withheld external mapping"):
             self.check(altered)
 
+    def test_reviewed_entry_cannot_also_be_withheld_for_same_entity(self):
+        altered = copy.deepcopy(self.doc)
+        altered["abstentions"][0]["entity_id"] = "person:Mary.2"
+        altered["abstentions"][0]["candidate_entry_ids"] = [
+            "synthetic-entry-001", "synthetic-geo-B"]
+        with self.assertRaisesRegex(ValueError, "conflicts with reviewed external mapping"):
+            self.check(altered)
+
+        # A candidate with the same external ID for another biblical identity
+        # is not automatically the same subject and remains independently withheld.
+        altered["abstentions"][0]["entity_id"] = "place:Gadara"
+        self.assertEqual(self.check(altered)["withheld_mappings"], 1)
+
+        # Same identity can still have distinct, independently reviewed and
+        # withheld external entries without making a contextual identity claim.
+        altered["abstentions"][0]["entity_id"] = "person:Mary.2"
+        altered["abstentions"][0]["candidate_entry_ids"] = [
+            "synthetic-geo-A", "synthetic-geo-B"]
+        self.assertEqual(self.check(altered)["reviewed_links"], 1)
+
     def test_schema_matches_validator_and_is_backward_compatible_for_links_only(self):
         self.assertFalse(self.schema["additionalProperties"])
         self.assertIn("abstentions", self.schema["properties"])

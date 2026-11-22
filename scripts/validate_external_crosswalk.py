@@ -136,6 +136,9 @@ def validate(document: dict, active_ids: set[str], schema: dict) -> dict:
         _evidence(item["evidence"], label + ".evidence")
         if "notes" in item and not isinstance(item["notes"], str):
             raise ValueError(f"{label}.notes must be text")
+        conflicting_entries = set(candidates) & {entry for linked_id, entry, _ in seen_links if linked_id == identity}
+        if conflicting_entries:
+            raise ValueError(f"{label} conflicts with reviewed external mapping: {sorted(conflicting_entries)}")
         duplicate = (identity, reason, tuple(sorted(candidates)))
         if duplicate in seen_abstentions:
             raise ValueError(f"Duplicate withheld external mapping: {duplicate}")
