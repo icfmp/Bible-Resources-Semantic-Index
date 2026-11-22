@@ -73,7 +73,9 @@ class PruneLocaleTests(unittest.TestCase):
                             .read_text(encoding="utf-8"))
         before = copy.deepcopy(record)
         cleaned, removed = tool.prune_record(record)
-        self.assertEqual(removed, 18)
+        # The same test must remain valid after all redundant display
+        # languages have been pruned from the production record.
+        self.assertEqual(removed, len(before["localizations"]) - 1)
         self.assertEqual(list(cleaned["localizations"]), ["eng"])
         self.assertEqual(cleaned["bsi"]["identity_hint"],
                          before["bsi"]["identity_hint"])
