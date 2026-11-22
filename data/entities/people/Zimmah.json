@@ -19,7 +19,27 @@
     "review_status": "source_unreviewed",
     "source_id": "person:Zimmah",
     "source_primary_id": "person:Zimmah",
-    "source_sha256": "ee7c9d7efd4186b874285f2fb5cc477c2940cdd7ff5e97a35e56315b069e22cb"
+    "source_sha256": "ee7c9d7efd4186b874285f2fb5cc477c2940cdd7ff5e97a35e56315b069e22cb",
+    "editorial_field_changes": [
+      {
+        "action": "withhold_inferred_genealogical_identity",
+        "removed_fields": [
+          "father"
+        ],
+        "reason": "1 Chronicles 6:20 (Hebrew 6:5) lists Jahath as Zimmah's predecessor; 6:42 (Hebrew 6:27) lists Shimei. The same-record Zimmah identity across genealogical lists cannot safely assert a unique father without deciding list correspondence.",
+        "evidence": [
+          "1 Chronicles 6:20",
+          "1 Chronicles 6:42",
+          "https://biblehub.com/commentaries/1_chronicles/6-20.htm"
+        ]
+      }
+    ],
+    "editorial_reason": "Withhold disputed or unnamed family identity assignments; preserve source texts, names, original-word witnesses, and all approved source IDs.",
+    "editorial_evidence": [
+      "1 Chronicles 6:20",
+      "1 Chronicles 6:42",
+      "https://biblehub.com/commentaries/1_chronicles/6-20.htm"
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -31,7 +51,6 @@
       ]
     ]
   },
-  "father": "person:Shimei.2",
   "gender": "male",
   "id": "person:Zimmah",
   "key_references": [
