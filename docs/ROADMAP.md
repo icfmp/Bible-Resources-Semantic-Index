@@ -207,10 +207,12 @@ no obsolete active workflows, source-pinned rebuilds remain reproducible.
 - [x] **Permit new independently evidenced BRSI entity records.**
   PR #11 supports source-provenanced new identities without replaying ACAI
   patches or losing imported source IDs.
-- [ ] **Add reviewed external dictionary/encyclopedia links.**
+- [ ] **Add reviewed external dictionary/encyclopedia links (V1).**
   [#25](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/25).
-  Pin source editions/identifiers and field-specific rights; prefer existing
-  standards and abstain when mapping is ambiguous.
+  Pin exact source editions and rights, and review entry-level IDs manually.
+  The standalone versioned crosswalk schema and validator preserve explicit
+  abstentions; actual mappings still require source selection, evidence and
+  rights. This is independent of the entity-to-entity graph deferred to V2.
 
 **Phase exit for current V1-related work:** independently documented, tested
 and source-pinned external resource references; no invented person/place
