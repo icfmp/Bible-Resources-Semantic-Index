@@ -2,7 +2,7 @@
 
 This directory contains **BSI-specific** editorial and publication decisions;
 repository-wide formats, production pipelines and generic conventions belong
-in [repository documentation](../../docs/README.md).
+in the [project README](../README.md) and [work plan](ROADMAP.md).
 
 - [v0.1 source and distribution handoff](V0_1_CANDIDATE_HANDOFF.md)
 - [v0.1 source-word and name pilot](V0_1_NAME_PILOT.md)
