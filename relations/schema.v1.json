@@ -60,7 +60,9 @@
         "indexed_claims",
         "excluded_restricted_keyterm_claims",
         "source_unreviewed",
-        "withheld_unclassified"
+        "withheld_unclassified",
+        "by_source_field",
+        "unclassified_by_field"
       ],
       "properties": {
         "source_relationships": {
@@ -82,6 +84,20 @@
         "withheld_unclassified": {
           "type": "integer",
           "minimum": 0
+        },
+        "by_source_field": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "unclassified_by_field": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "integer",
+            "minimum": 0
+          }
         }
       }
     },
