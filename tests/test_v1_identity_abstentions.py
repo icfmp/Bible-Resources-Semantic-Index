@@ -43,13 +43,14 @@ class V1AbstentionTests(unittest.TestCase):
                          [["o130060050061"], ["o130060270041"]])
         self.assertEqual(by_id["place:Gerasa"]["occurrences"]
                          ["explicit_instances"]["SBLGNT"],
-                         [["n40008028011"], ["n41005001012"],
+                         [["n41005001012"],
                           ["n42008026007"], ["n42008037010"]])
         self.assertIn("person:Mark", by_id)
         self.assertIn("person:Mary.5", by_id)
-        self.assertIn("person:HusbandOfMary", by_id)
-        self.assertEqual(by_id["person:HusbandOfMary"]["review_status"],
-                         "source_unreviewed")
+        for name in ("HusbandOfMary", "HusbandOfMary.2"):
+            self.assertNotIn("person:" + name, by_id)
+            self.assertIn("person:" + name,
+                          {row["source_id"] for row in self.index["quarantined"]})
 
     def test_disputed_genealogy_source_records_have_a_reversible_withhold_receipt(self):
         affected = (
@@ -58,8 +59,9 @@ class V1AbstentionTests(unittest.TestCase):
             "Zimmah", "Jahath.2", "Shimei.2",
         )
         for name in affected:
+            directory = "quarantined" if name.startswith("HusbandOfMary") else "entities"
             record = json.loads(
-                (ROOT / "data" / "entities" / "people" /
+                (ROOT / "data" / directory / "people" /
                  (name + ".json")).read_text(encoding="utf-8"))
             receipts = [x for x in record["bsi"]["editorial_field_changes"]
                         if x["action"] == "withhold_inferred_genealogical_identity"]
