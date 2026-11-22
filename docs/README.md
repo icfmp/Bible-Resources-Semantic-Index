@@ -4,6 +4,13 @@ This directory contains **BSI-specific** editorial and publication decisions;
 repository-wide formats, production pipelines and generic conventions belong
 in the [project README](../README.md) and [work plan](ROADMAP.md).
 
+**Current BRSI guidance:** [phase 1 source-locked release contract](RELEASE_CONTRACT.md),
+[editable entity IDs and field policies](EDITING_ENTITIES.md),
+[source rights and integrity](RIGHTS_AND_INTEGRITY.md), and
+[current roadmap](ROADMAP.md).
+
+**Historical BSI v0.1 evidence (preserved, not current commands):**
+
 - [v0.1 source and distribution handoff](V0_1_CANDIDATE_HANDOFF.md)
 - [v0.1 source-word and name pilot](V0_1_NAME_PILOT.md)
 - [v0.1 source-word and topic pilot](V0_1_TOPIC_PILOT.md)

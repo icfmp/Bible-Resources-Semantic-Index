@@ -17,5 +17,5 @@ Greek and Hebrew UBS source-original checks live in their respective
 have separate source-pinned CI jobs. Their development baselines are
 **not** approved public lexical assets.
 
-Historical monorepo paths `bible-semantic-index/tests/...` and the old
-`entity-index.yml` workflow are retired. Use the commands above.
+The removed monorepo test path prefix and old `entity-index.yml` workflow
+are retired. Use the commands above.
