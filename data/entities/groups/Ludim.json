@@ -18,7 +18,30 @@
     "review_status": "source_unreviewed",
     "source_id": "group:Ludim",
     "source_primary_id": "group:Ludim",
-    "source_sha256": "2d7301686d20d3de2a0a0588699cdcf5149638cc7b5c243e54cff1dd87025420"
+    "source_sha256": "2d7301686d20d3de2a0a0588699cdcf5149638cc7b5c243e54cff1dd87025420",
+    "editorial_field_changes": [
+      {
+        "action": "remove_inherited_incorrect_group_origin",
+        "removed_fields": [
+          "group_origin"
+        ],
+        "evidence": [
+          "Genesis 10:13 and 1 Chronicles 1:11 identify Ludim among the descendants of Mizraim (Egypt).",
+          "Genesis 10:22 and 1 Chronicles 1:17 separately identify Lud among the sons of Shem.",
+          "The current BRSI person:Lud record explicitly has father person:Shem, whereas the inherited group:Ludim group_origin points to person:Lud.",
+          "International Standard Bible Encyclopedia, 'Lud; Ludim', explicitly distinguishes these two genealogical claims (https://www.bibletools.org/index.cfm/fuseaction/Def.show/RTD/ISBE/ID/5604/Lud-Ludim.htm)."
+        ],
+        "reason": "The inherited group_origin unconditionally identifies the Egyptian Ludim descendants of Mizraim with the distinct Lud, son of Shem. Remove only this unsupported genealogical identity edge; do not assert a new group origin, merge original-word mentions, or decide disputed later ethnic identifications."
+      }
+    ],
+    "editorial_reason": "Genesis 10:13 / 1 Chronicles 1:11 attribute Ludim to Mizraim, not to the person Lud who is named as son of Shem in Genesis 10:22 / 1 Chronicles 1:17.",
+    "editorial_evidence": [
+      "Genesis 10:13",
+      "Genesis 10:22",
+      "1 Chronicles 1:11",
+      "1 Chronicles 1:17",
+      "ISBE 'Lud; Ludim' historical entry"
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -33,7 +56,6 @@
       ]
     ]
   },
-  "group_origin": "person:Lud",
   "group_type": "relation",
   "id": "group:Ludim",
   "key_references": [
