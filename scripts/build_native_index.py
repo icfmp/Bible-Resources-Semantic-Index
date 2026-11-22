@@ -2,7 +2,8 @@
 """Build the BSI entity index from VERSIONED CURRENT native BSI records.
 
 No ACAI fetch, original-source replay, or editorial patch application is used.
-Shared identity/link finalization comes from the maintained entity_index_core.py;\nno historical ACAI rebuild code is imported.
+Shared identity/link finalization comes from the maintained entity_index_core.py;
+no historical ACAI rebuild code is imported.
 """
 from __future__ import annotations
 
