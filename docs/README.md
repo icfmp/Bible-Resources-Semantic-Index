@@ -8,7 +8,8 @@ in the [project README](../README.md) and [work plan](ROADMAP.md).
 [editable entity IDs and field policies](EDITING_ENTITIES.md),
 [source rights and integrity](RIGHTS_AND_INTEGRITY.md), and
 [current roadmap](ROADMAP.md), and
-[maintained tooling map](MAINTENANCE_INVENTORY.md).
+[maintained tooling map](MAINTENANCE_INVENTORY.md), and
+[unapproved source-backed relation model](RELATION_MODEL.md).
 
 **Historical BSI v0.1 evidence (preserved, not current commands):**
 

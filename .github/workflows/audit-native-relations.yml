@@ -5,6 +5,9 @@ on:
     branches: [main]
     paths:
       - "scripts/audit_entity_relationships.py"
+      - "scripts/build_relation_index.py"
+      - "tests/test_relation_index.py"
+      - "relations/schema.v1.json"
       - "tests/test_entity_relationships.py"
       - "data/entities/**"
       - "data/quarantined/**"
@@ -12,6 +15,9 @@ on:
   pull_request:
     paths:
       - "scripts/audit_entity_relationships.py"
+      - "scripts/build_relation_index.py"
+      - "tests/test_relation_index.py"
+      - "relations/schema.v1.json"
       - "tests/test_entity_relationships.py"
       - "data/entities/**"
       - "data/quarantined/**"
@@ -30,7 +36,10 @@ jobs:
       - name: Audit current structured relationships without modifying any data
         run: |
           python3 -I tests/test_entity_relationships.py
+          python3 -I tests/test_relation_index.py
           # The audit prints aggregate counts and any actionable unresolved
           # link IDs to the job log. Do not publish the full working report
           # as a downloadable CI artifact from this public repository.
           python3 -I scripts/audit_entity_relationships.py --fail-on-unresolved
+          # Nonpublishing forward/reverse source-claim projection, runner-local only.
+          python3 -I scripts/build_relation_index.py --data data --output /tmp/brsi-relation-candidates.json
