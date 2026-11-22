@@ -191,10 +191,20 @@ class RelationIndexTests(unittest.TestCase):
         self.assertEqual(len(claims_for("person:Lot", "father", "person:Haran")), 1)
         self.assertEqual(
             len(claims_for("place:Gadara", "subregion_of", "place:Decapolis")), 1)
-        contested = claims_for("group:Ludim", "group_origin", "person:Lud")
-        self.assertEqual(len(contested), 1)
-        self.assertEqual(contested[0]["review_status"], "source_unreviewed")
-        self.assertNotIn("verse_ids", contested[0]["evidence"])
+        # This source-conflicted inherited ancestry was corrected in #92:
+        # Gen 10:13 / 1 Chr 1:11 place Ludim under Mizraim; Gen 10:22 /
+        # 1 Chr 1:17 separately place Lud under Shem. Do not re-infer it.
+        self.assertEqual(
+            claims_for("group:Ludim", "group_origin", "person:Lud"), [])
+        self.assertEqual(
+            len(claims_for("person:Lud", "father", "person:Shem")), 1)
+        group = json.loads((ROOT / "data" / "entities" / "groups" /
+                            "Ludim.json").read_text(encoding="utf-8"))
+        son = json.loads((ROOT / "data" / "entities" / "people" /
+                          "Lud.json").read_text(encoding="utf-8"))
+        self.assertIn("o010100130041", group["explicit_instances"]["wlc"][0])
+        self.assertNotIn("01010013", son["references"])
+        self.assertIn("01010022", son["references"])
 
 
 if __name__ == "__main__":
