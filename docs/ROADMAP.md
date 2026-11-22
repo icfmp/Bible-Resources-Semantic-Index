@@ -212,8 +212,11 @@ no obsolete active workflows, source-pinned rebuilds remain reproducible.
   Pin source editions/identifiers and field-specific rights; prefer existing
   standards and abstain when mapping is ambiguous.
 
-**Phase exit:** independently documented and tested relations; no invented
-person/place identities, unlicensed articles, or automatically promoted senses.
+**Phase exit for current V1-related work:** independently documented, tested
+and source-pinned external resource references; no invented person/place
+identities, unlicensed articles or automatically promoted senses.
+The semantic entity-to-entity graph is **not** a Phase 3/V1 exit criterion;
+it is explicitly deferred to product V2.
 
 ### Phase 4 — Prepare Bible application consumption (P3, later)
 
