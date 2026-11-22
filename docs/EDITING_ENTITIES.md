@@ -30,6 +30,12 @@ layout must never be silently skipped. All copied source record SHA-256 values
 must be 64 lowercase hexadecimal characters; a BRSI-native record must not
 claim a fabricated original ACAI fingerprint.
 
+Case-variant JSON filenames such as `*.JSON` or `*.Json` are rejected rather
+than silently ignored. Symlinked entity files and directories are forbidden:
+a source file must be a concrete, directly tracked record. The excluded 868
+ACAI Key Terms cannot be reintroduced through the quarantine directory either;
+their current public representation is **inventory-only**, never source payload.
+
 Every quarantined imported identity needs its own original source fingerprint,
 nonempty reason and explicit supporting evidence. This prevents apparent
 cleanup from silently erasing the reason for withholding an identity.

@@ -153,6 +153,41 @@ class NativeGrowthTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "Unindexed or nested native entity JSON"):
             builder.build(self.data)
 
+    def test_uppercase_json_entity_cannot_be_silently_skipped(self):
+        rogue = self.data / "entities" / "people" / "Unindexed.JSON"
+        rogue.write_text('{"id": "person:Unindexed"}', encoding="utf-8")
+        with self.assertRaisesRegex(ValueError, "Unindexed or nested native entity JSON"):
+            builder.build(self.data)
+
+    def test_uppercase_json_quarantine_cannot_be_silently_skipped(self):
+        rogue = self.data / "quarantined" / "people" / "Unindexed.Json"
+        rogue.write_text('{"id": "person:Unindexed"}', encoding="utf-8")
+        with self.assertRaisesRegex(ValueError, "Unindexed or nested native entity JSON"):
+            builder.build(self.data)
+
+    def test_native_data_symlinks_are_rejected(self):
+        source = self.data / "entities" / "people" / "Mary.2.json"
+        alias = self.data / "entities" / "people" / "DuplicateMary.json"
+        alias.symlink_to(source.name)
+        with self.assertRaisesRegex(ValueError, "Native entity symlinks are not permitted"):
+            builder.build(self.data)
+
+    def test_restricted_keyterms_are_rejected_in_quarantine(self):
+        restricted = self.data / "quarantined" / "keyterms"
+        restricted.mkdir()
+        payload = {
+            "bsi": {
+                "source_id": "keyterm:Unpublished", "origin": "acai",
+                "source_sha256": "a" * 64, "state": "quarantined",
+                "reason": "Synthetic fixture, not cleared for redistribution",
+                "evidence": ["Synthetic fixture only"],
+            },
+        }
+        (restricted / "Unpublished.json").write_text(
+            json.dumps(payload), encoding="utf-8")
+        with self.assertRaisesRegex(ValueError, "Restricted keyterm record"):
+            builder.build(self.data)
+
     def test_imported_source_fingerprint_rejects_nonhex_bytes(self):
         path = self.data / "entities" / "people" / "Mary.2.json"
         record = json.loads(path.read_text(encoding="utf-8"))

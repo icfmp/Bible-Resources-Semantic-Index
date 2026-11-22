@@ -83,11 +83,20 @@ def validate_entity_file_layout(data: Path) -> None:
         if not root.is_dir():
             raise ValueError(f"Missing native entity directory: {root}")
         for category in root.iterdir():
+            if category.is_symlink():
+                raise ValueError(f"Native entity symlinks are not permitted: {category}")
             if category.is_dir() and category.name not in known:
                 raise ValueError(f"Unsupported native entity category: {category}")
-        for path in root.rglob("*.json"):
+        # Check all case variants of JSON filenames: glob('*.json') would
+        # silently ignore *.JSON and mixed-case files on case-sensitive hosts.
+        for path in root.rglob("*"):
+            if path.is_symlink():
+                raise ValueError(f"Native entity symlinks are not permitted: {path}")
+            if not path.is_file() or path.suffix.lower() != ".json":
+                continue
             relative = path.relative_to(root)
-            if len(relative.parts) != 2 or relative.parts[0] not in known:
+            if (len(relative.parts) != 2 or relative.parts[0] not in known
+                    or path.suffix != ".json"):
                 raise ValueError(f"Unindexed or nested native entity JSON: {path}")
 
 
@@ -193,6 +202,8 @@ def build(data: Path = ROOT / "data") -> dict:
             entries.append(entry)
         directory = data / "quarantined" / category
         for path in sorted(directory.glob("*.json")):
+            if category == "keyterms":
+                raise ValueError("Restricted keyterm record unexpectedly in public native quarantine")
             record = read(path)
             metadata = record["bsi"]
             if metadata.get("state") != "quarantined":
