@@ -35,13 +35,15 @@
     "source_id": "person:Jashar",
     "source_primary_id": "person:Jashar",
     "source_sha256": "51655d63ae724b48360e0b96488de31f170fa2e34cf70d22ee4e8dd1c7b504f8",
-    "inherited_localizations": {
-      "status": "withheld_pending_review",
-      "fields": [
-        "descriptions"
+    "identity_hint": {
+      "name": "Book of Jashar",
+      "qualifier": "written work cited in Joshua and 2 Samuel",
+      "language": "eng",
+      "evidence_references": [
+        "06010013",
+        "10001018"
       ],
-      "reason": "Inherited biographies describe a male person, whereas the reviewed entity is a literary work; localization prose remains source evidence only.",
-      "source": "acai"
+      "review_status": "editorially_reviewed"
     }
   },
   "explicit_instances": {
@@ -61,179 +63,63 @@
   ],
   "localizations": {
     "apd": {
-      "descriptions": [
-        {
-          "description": "راجل عاش قبل قيام المملكة في إسرائيل، مذكور في يشوع 10: 13.",
-          "source": "acai"
-        }
-      ],
       "preferred_label": "ياشار"
     },
     "arb": {
-      "descriptions": [
-        {
-          "description": "رجل عاش قبل قيام الملكية في إسرائيل، ذُكر في يشوع 10: 13.",
-          "source": "acai"
-        }
-      ],
       "preferred_label": "يَاشَر"
     },
     "bis": {
-      "descriptions": [
-        {
-          "description": "Wan man we i laef bifo long taem we Isrel i gat king, we Josua 10:13 i tokbaot hem.",
-          "source": "acai"
-        }
-      ],
       "preferred_label": "Jasara"
     },
     "eng": {
       "alternate_labels": [
         "Jasher"
       ],
-      "descriptions": [
-        {
-          "article": "person:Jashar",
-          "description": "A man who lived before Israel's monarchy, mentioned in Joshua 10:13.",
-          "gloss": "Jashar",
-          "source": "acai"
-        }
-      ],
       "preferred_label": "Jashar"
     },
     "fas": {
-      "descriptions": [
-        {
-          "description": "مردی که پیش از دوران پادشاهی اسرائیل می‌زیست، ذکرشده در یوشع ۱۰:۱۳.",
-          "source": "acai"
-        }
-      ],
       "preferred_label": "یاشر"
     },
     "fra": {
-      "descriptions": [
-        {
-          "description": "Un homme qui vivait avant la monarchie d'Israël, mentionné dans Josué 10.13.",
-          "source": "acai"
-        }
-      ],
       "preferred_label": "Jaschar"
     },
     "hau": {
-      "descriptions": [
-        {
-          "description": "Wani mutum da ya rayu kafin zamanin sarautar Isra’ila, an ambace shi a Joshua 10:13.",
-          "source": "acai"
-        }
-      ],
       "preferred_label": "Yashar"
     },
     "hin": {
-      "descriptions": [
-        {
-          "description": "इस्राएल के राजतंत्र से पहले रहने वाला एक व्यक्ति, जिसका उल्लेख यहोशू 10:13 में है।",
-          "source": "acai"
-        }
-      ],
       "preferred_label": "याशार"
     },
     "ibo": {
-      "descriptions": [
-        {
-          "description": "Nwoke biri tupu oge ọchịchị ndị eze Izrel, nke a kpọtụrụ aha na Joshua 10:13.",
-          "source": "acai"
-        }
-      ],
       "preferred_label": "Jasha"
     },
     "ind": {
-      "descriptions": [
-        {
-          "description": "Seseorang yang hidup sebelum masa monarki Israel, disebutkan dalam Yosua 10:13.",
-          "source": "acai"
-        }
-      ],
       "preferred_label": "Yasar"
     },
     "nep": {
-      "descriptions": [
-        {
-          "description": "इस्राएलको राजतन्त्रभन्दा अघि बाँचेका एक पुरुष, जसको उल्लेख यहोशू १०:१३ मा गरिएको छ।",
-          "source": "acai"
-        }
-      ],
       "preferred_label": "याशार"
     },
     "por": {
-      "descriptions": [
-        {
-          "description": "Um homem que viveu antes da monarquia de Israel, mencionado em Josué 10:13.",
-          "source": "acai"
-        }
-      ],
       "preferred_label": "Jasar"
     },
     "rus": {
-      "descriptions": [
-        {
-          "description": "Человек, живший до эпохи израильской монархии, упомянутый в Иисуса Навина 10:13.",
-          "source": "acai"
-        }
-      ],
       "preferred_label": "Праведный"
     },
     "spa": {
-      "descriptions": [
-        {
-          "description": "Hombre que vivió antes de la monarquía de Israel, mencionado en Josué 10:13.",
-          "source": "acai"
-        }
-      ],
       "preferred_label": "Jaser"
     },
     "swh": {
-      "descriptions": [
-        {
-          "description": "Mwanamume aliyeishi kabla ya utawala wa kifalme wa Israeli, anayetajwa katika Yoshua 10:13.",
-          "source": "acai"
-        }
-      ],
       "preferred_label": "Yashari"
     },
     "tpi": {
-      "descriptions": [
-        {
-          "description": "Wanpela man i bin stap paslain long taim bilong ol king bilong Israel, em Josua 10:13 i kamapim nem bilong en.",
-          "source": "acai"
-        }
-      ],
       "preferred_label": "Jasar"
     },
     "vie": {
-      "descriptions": [
-        {
-          "description": "Một người sống trước thời chế độ quân chủ của Y-sơ-ra-ên, được nhắc đến trong Giô-suê 10:13.",
-          "source": "acai"
-        }
-      ],
       "preferred_label": "Gia-sa"
     },
     "zhs": {
-      "descriptions": [
-        {
-          "description": "生活在以色列君主制建立之前的一名男子，提及于约书亚记10:13。",
-          "source": "acai"
-        }
-      ],
       "preferred_label": "雅煞珥"
     },
     "zht": {
-      "descriptions": [
-        {
-          "description": "生活在以色列王國建立之前的一名男子，記載於約書亞記10:13。",
-          "source": "acai"
-        }
-      ],
       "preferred_label": "雅煞珥"
     }
   },
