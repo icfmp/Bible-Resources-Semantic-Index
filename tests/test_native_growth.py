@@ -283,7 +283,7 @@ class NativeGrowthTests(unittest.TestCase):
         path = self.data / "entities" / "people" / "Mary.2.json"
         record = json.loads(path.read_text(encoding="utf-8"))
         record["bsi"]["canonical_id"] = "person:Uninvented"
-        path.write_text(json.dumps(record, encoding="utf-8"))
+        path.write_text(json.dumps(record))
         with self.assertRaisesRegex(ValueError, "Canonical target missing from current index"):
             builder.build(self.data)
 
