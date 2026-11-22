@@ -110,6 +110,33 @@ class RelationIndexTests(unittest.TestCase):
         self.assertEqual(len(graph["by_target"]["place:B"]), 4)
         self.assertNotIn("place:B", graph["by_source"])
 
+    def test_disagreed_parent_claims_are_both_withheld_without_repair(self):
+        self.record("people", "A", gender="male", offspring=["person:C"])
+        self.record("people", "B", gender="male")
+        self.record("people", "C", father="person:B")
+        graph = projection.build(self.data)
+        self.assertEqual(graph["counts"]["inverse_disagreement_cases"], 1)
+        self.assertEqual(graph["counts"]["withheld_inverse_disagreement"], 2)
+        self.assertEqual(graph["counts"]["withheld_inverse_disagreement_by_field"],
+                         {"father": 1, "offspring": 1})
+        self.assertEqual(
+            {(row["source_id"], row["source_field"], row["target_id"])
+             for row in graph["claims"]
+             if row["review_status"] == "withheld_inverse_disagreement"},
+            {("person:A", "offspring", "person:C"),
+             ("person:C", "father", "person:B")})
+        self.assertEqual(len(graph["by_target"]["person:B"]), 1)
+        self.assertEqual(len(graph["by_target"]["person:C"]), 1)
+
+    def test_matching_inverse_claims_stay_unreviewed_not_approved(self):
+        self.record("people", "A", gender="male", offspring=["person:C"])
+        self.record("people", "C", father="person:A")
+        graph = projection.build(self.data)
+        self.assertEqual(graph["counts"]["inverse_disagreement_cases"], 0)
+        self.assertEqual(graph["counts"]["withheld_inverse_disagreement"], 0)
+        self.assertEqual({c["review_status"] for c in graph["claims"]},
+                         {"source_unreviewed"})
+
     def test_missing_and_quarantined_targets_fail_closed(self):
         self.record("people", "A", mother="person:Absent")
         with self.assertRaisesRegex(ValueError, "stale, quarantined or unresolved"):
