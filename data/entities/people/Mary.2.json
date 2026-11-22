@@ -33,7 +33,30 @@
     "review_status": "source_unreviewed",
     "source_id": "person:Mary.2",
     "source_primary_id": "person:Mary.2",
-    "source_sha256": "7c8385fb128c7948b3538fe39da8ff6e282e3c50e632252c4ea26390d4acd381"
+    "source_sha256": "7c8385fb128c7948b3538fe39da8ff6e282e3c50e632252c4ea26390d4acd381",
+    "editorial_field_changes": [
+      {
+        "action": "withhold_inferred_genealogical_identity",
+        "removed_fields": [
+          "partners"
+        ],
+        "reason": "Matthew 27:56 and Mark 15:40 identify Mary by James/Joses, but do not name a husband. Do not promote inferred placeholder identity as a spouse.",
+        "evidence": [
+          "Matthew 27:56",
+          "Mark 15:40"
+        ],
+        "removed_relation_values": {
+          "partners": [
+            "person:HusbandOfMary.2"
+          ]
+        }
+      }
+    ],
+    "editorial_reason": "Withhold disputed or unnamed family identity assignments; preserve source texts, names, original-word witnesses, and all approved source IDs.",
+    "editorial_evidence": [
+      "Matthew 27:56",
+      "Mark 15:40"
+    ]
   },
   "explicit_instances": {
     "SBLGNT": [
@@ -85,9 +108,6 @@
     "person:Salome"
   ],
   "only_mentioned_in_apocrypha": false,
-  "partners": [
-    "person:HusbandOfMary.2"
-  ],
   "primary_id": "person:Mary.2",
   "pronominal_referents": {
     "SBLGNT": [

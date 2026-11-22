@@ -19,7 +19,30 @@
     "review_status": "source_unreviewed",
     "source_id": "person:Shimei.2",
     "source_primary_id": "person:Shimei.2",
-    "source_sha256": "5702b48480269ad1af92dcac5f9af0b582f9f78064c30550c99d9f73ef0418d8"
+    "source_sha256": "5702b48480269ad1af92dcac5f9af0b582f9f78064c30550c99d9f73ef0418d8",
+    "editorial_field_changes": [
+      {
+        "action": "withhold_inferred_genealogical_identity",
+        "removed_fields": [
+          "offspring"
+        ],
+        "reason": "The Shimei-Zimmah genealogy in 1 Chronicles 6:42 does not by itself establish identity with the Zimmah son of Jahath in 6:20; abstain on the merged-person relationship.",
+        "evidence": [
+          "1 Chronicles 6:20",
+          "1 Chronicles 6:42"
+        ],
+        "removed_relation_values": {
+          "offspring": [
+            "person:Zimmah"
+          ]
+        }
+      }
+    ],
+    "editorial_reason": "Withhold disputed or unnamed family identity assignments; preserve source texts, names, original-word witnesses, and all approved source IDs.",
+    "editorial_evidence": [
+      "1 Chronicles 6:20",
+      "1 Chronicles 6:42"
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -45,9 +68,6 @@
     }
   },
   "non_biblical": false,
-  "offspring": [
-    "person:Zimmah"
-  ],
   "only_mentioned_in_apocrypha": false,
   "primary_id": "person:Shimei.2",
   "pronominal_referents": {},

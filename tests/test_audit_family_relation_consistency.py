@@ -65,23 +65,13 @@ class FamilyInverseTests(unittest.TestCase):
                 for p in (root / "entities" / "people").glob("*.json")
             })
 
-    def test_real_mark_case_is_reported_not_mutated(self):
-        result = family.audit(ROOT / "data")
-        example = next((
-            x for x in result["conflicting_inverse_claim_examples"]
-            if x["child"] == "person:Mark" and
-            x["claiming_parent"] == "person:HusbandOfMary.2"
-        ), None)
-        # The report may be bounded; use a larger sample for the full corpus
-        if example is None:
-            result = family.audit(ROOT / "data", limit=100000)
-            example = next((
-                x for x in result["conflicting_inverse_claim_examples"]
-                if x["child"] == "person:Mark" and
-                x["claiming_parent"] == "person:HusbandOfMary.2"
-            ), None)
-        self.assertIsNotNone(example)
-        self.assertEqual(example["child_named_parent"], "person:HusbandOfMary")
+    def test_real_source_case_holds_leave_no_inverse_parent_conflicts(self):
+        result = family.audit(ROOT / "data", limit=100000)
+        # Source-inferred maternal, unnamed-father and combined Zimmah
+        # identity links are withheld individually with editorial receipts.
+        self.assertEqual(result["counts"].get(
+            "different_named_parent_in_inverse_claim", 0), 0)
+        self.assertEqual(result["conflicting_inverse_claim_examples"], [])
         self.assertIn("review candidate", result["warning"])
 
     def test_group_targets_are_not_a_person_genealogy(self):

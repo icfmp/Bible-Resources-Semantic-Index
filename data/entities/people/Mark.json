@@ -19,7 +19,30 @@
     "review_status": "source_unreviewed",
     "source_id": "person:Mark",
     "source_primary_id": "person:Mark",
-    "source_sha256": "3d7632f7b4820344a4f79d540cf7fc50403a1a8f4aee0eaecf3d418aee57064a"
+    "source_sha256": "3d7632f7b4820344a4f79d540cf7fc50403a1a8f4aee0eaecf3d418aee57064a",
+    "editorial_field_changes": [
+      {
+        "action": "withhold_inferred_genealogical_identity",
+        "removed_fields": [
+          "father"
+        ],
+        "reason": "Acts 12:12 names Mary as John Mark's mother, but does not name any father or husband; an invented source-only placeholder cannot be asserted as an identified father.",
+        "evidence": [
+          "Acts 12:12",
+          "https://www.biblegateway.com/passage/?search=Acts+12%3A12&version=NET%3BKJV"
+        ],
+        "removed_relation_values": {
+          "father": [
+            "person:HusbandOfMary"
+          ]
+        }
+      }
+    ],
+    "editorial_reason": "Withhold disputed or unnamed family identity assignments; preserve source texts, names, original-word witnesses, and all approved source IDs.",
+    "editorial_evidence": [
+      "Acts 12:12",
+      "https://www.biblegateway.com/passage/?search=Acts+12%3A12&version=NET%3BKJV"
+    ]
   },
   "explicit_instances": {
     "SBLGNT": [
@@ -64,7 +87,6 @@
       ]
     ]
   },
-  "father": "person:HusbandOfMary",
   "gender": "male",
   "id": "person:Mark",
   "key_references": [

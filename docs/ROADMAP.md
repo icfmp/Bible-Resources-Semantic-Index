@@ -106,17 +106,22 @@ developed in parallel where no source/data/publication gate is bypassed.
   index byte-for-byte unchanged. CI and native builder now prevent accidental
   reintroduction of redundant names, without barring independently reviewed
   cross-resource links.
-- [ ] **Review ambiguous entity identities and real matching aliases only.**
+- [x] **Review V1 identity contradictions and explicitly abstain from unsupported aliases or kinship.**
   [#6](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/6).
-  Finish the Gadara/Gerasa/Gergesa demonym/source-variant question.
-  Parent-link QA (PRs #49–#53) corrected two explicit biblical-source
-  misattributions (Lot's wife/grandsons and Eliasaph/Deuel), and established
-  all **22** collective descendant targets as valid group IDs with no
-  missing `offspring` target. **Five person-parent discrepancy candidates**
-  remain: three disputed Azubah/Jerioth mother claims, one unnamed husband
-  of Mary/Mark conflation, and the Zimmah genealogy. Ludim's inherited
-  `group_origin` also needs source review. Do not invent identity links
-  merely to eliminate warnings. Track case evidence in #6.
+  PRs #49–#53 corrected source errors and established all 22 valid
+  collective descendant targets. PR #92 separated the genealogically
+  distinct Lud and Ludim without deciding later ethnic names. PR #95
+  withheld inferred unnamed-father/mother/spouse claims, Azubah/Jerioth
+  maternal antecedents and mixed Zimmah parent claims, and stripped
+  cross-city textual-variant aliases. Exact original-word witnesses,
+  source IDs, source hashes and all biblical references were preserved.
+  [V1 evidence dispositions](V1_IDENTITY_REVIEW.md) distinguish corrections
+  from unresolved source questions; the V1 entity projection is tested not
+  to export inherited parent/offspring/spouse fields or aliases.
+  **Safe abstention, not exhaustive identification**, closes this
+  V1 contradiction workstream. Further original-text historical identity
+  research is non-blocking until a specific independently evidenced case
+  requires review. Publication still requires #62 approval.
 - [x] **Build a read-only triage for same-name identities.**
   PRs [#44–#46](https://github.com/icfmp/Bible-Resources-Semantic-Index/pull/46)
   detected **641 candidate homonym groups / 2,228 source records**.

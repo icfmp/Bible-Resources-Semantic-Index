@@ -18,6 +18,22 @@ class GadaraAliasTests(unittest.TestCase):
         self.assertEqual(a["explicit_instances"]["SBLGNT"], [["n40008028011"]])
         self.assertEqual(a["bsi"]["source_id"], "place:Gadara")
         self.assertIn("place:Gadara", a["primary_id"])
+        self.assertNotIn("Gergesenes", a["localizations"]["eng"]["alternate_labels"])
+        self.assertNotIn("Gergesene", a["localizations"]["eng"]["alternate_labels"])
+
+    def test_gerasa_has_no_other_city_as_unqualified_synonym(self):
+        gerasa = json.loads(
+            (ROOT / "data/entities/places/Gerasa.json").read_text(encoding="utf-8"))
+        self.assertEqual(gerasa["localizations"]["eng"]["alternate_labels"],
+                         ["Gerasenes", "Gerasene"])
+        self.assertEqual(gerasa["bsi"]["review_status"], "source_unreviewed")
+        self.assertEqual(gerasa["bsi"]["inherited_localizations"]["fields"],
+                         ["eng.alternate_labels"])
+        self.assertEqual(gerasa["explicit_instances"]["SBLGNT"],
+                         [["n40008028011"], ["n41005001012"],
+                          ["n42008026007"], ["n42008037010"]])
+        self.assertEqual(gerasa["references"],
+                         ["40008028", "41005001", "42008026", "42008037"])
 
 
 if __name__ == "__main__":
