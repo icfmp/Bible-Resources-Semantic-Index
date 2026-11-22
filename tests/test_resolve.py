@@ -111,6 +111,10 @@ class ResolverTests(unittest.TestCase):
         self.assertEqual(self.lookup(verse_id="01001002")["status"],
                          "verse_context_mismatch")
         self.assertEqual(self.lookup(verse_id="bad")["status"], "invalid_verse_id")
+        self.assertEqual(self.lookup(verse_id="０１００１００１")["status"], "invalid_verse_id")
+        self.assertEqual(self.lookup(verse_id="٠١٠٠١٠٠١")["status"], "invalid_verse_id")
+        self.assertEqual(self.lookup(word_id="o０１００１００１００１１")["status"],
+                         "invalid_source_word_id")
         self.assertEqual(self.lookup(word_id="n010010010011")["status"],
                          "invalid_source_word_id")
         self.assertEqual(self.lookup(word_id="o010010010011suffix")["status"],
@@ -276,6 +280,11 @@ class ResolverTests(unittest.TestCase):
         data["schema_version"] = 2
         with self.assertRaisesRegex(ValueError, "Incompatible"):
             module.EntityResolver(data)
+        for malformed in (True, 1.0, "1"):
+            data = fixture()
+            data["schema_version"] = malformed
+            with self.assertRaisesRegex(ValueError, "Incompatible"):
+                module.EntityResolver(data)
         data = fixture()
         data["by_word"]["wlc:o010010010011"].append(
             {"entity_id": "person:Missing", "link_type": "explicit_instances"})

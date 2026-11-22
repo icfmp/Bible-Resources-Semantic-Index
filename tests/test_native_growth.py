@@ -255,6 +255,46 @@ class NativeGrowthTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "lacks source evidence"):
             builder.build(self.data)
 
+    def test_new_work_must_have_stable_typed_identity(self):
+        for field, replacement, message in (
+            ("type", "person", "Invalid typed canonical entity identity"),
+            ("id", "person:Fixture", "Invalid typed canonical entity identity"),
+            ("id", "work:Other", "Incorrect BSI-native identity type or owner"),
+            ("primary_id", "work:Other", "Incorrect BSI-native identity type or owner"),
+        ):
+            with self.subTest(field=field):
+                path = self.add_native_work()
+                record = json.loads(path.read_text(encoding="utf-8"))
+                record[field] = replacement
+                path.write_text(json.dumps(record), encoding="utf-8")
+                with self.assertRaisesRegex(ValueError, message):
+                    builder.build(self.data)
+                path.unlink()
+
+    def test_new_work_canonical_target_must_exist(self):
+        path = self.add_native_work()
+        record = json.loads(path.read_text(encoding="utf-8"))
+        record["bsi"]["canonical_id"] = "work:Unknown"
+        path.write_text(json.dumps(record), encoding="utf-8")
+        with self.assertRaisesRegex(ValueError, "Incorrect BSI-native identity type or owner"):
+            builder.build(self.data)
+
+    def test_imported_alias_cannot_target_missing_current_identity(self):
+        path = self.data / "entities" / "people" / "Mary.2.json"
+        record = json.loads(path.read_text(encoding="utf-8"))
+        record["bsi"]["canonical_id"] = "person:Uninvented"
+        path.write_text(json.dumps(record))
+        with self.assertRaisesRegex(ValueError, "Canonical target missing from current index"):
+            builder.build(self.data)
+
+    def test_imported_entity_kind_must_match_typed_current_identity(self):
+        path = self.data / "entities" / "people" / "Mary.2.json"
+        record = json.loads(path.read_text(encoding="utf-8"))
+        record["type"] = "place"
+        path.write_text(json.dumps(record), encoding="utf-8")
+        with self.assertRaisesRegex(ValueError, "Invalid typed canonical entity identity"):
+            builder.build(self.data)
+
     def test_source_id_mismatch_is_rejected(self):
         path = self.add_native_work()
         payload = json.loads(path.read_text())

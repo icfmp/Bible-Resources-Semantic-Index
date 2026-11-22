@@ -11,7 +11,9 @@ class EntityResolver:
     """Never infer identity from lemma, spelling, Strong or verse co-occurrence."""
 
     def __init__(self, index: dict):
-        if index.get("format") != "bible-entity-index" or index.get("schema_version") != 1:
+        if (index.get("format") != "bible-entity-index"
+                or type(index.get("schema_version")) is not int
+                or index["schema_version"] != 1):
             raise ValueError("Incompatible entity index schema")
         provenance = index.get("provenance", {})
         self.editions = provenance.get("source_editions")
@@ -64,12 +66,13 @@ class EntityResolver:
         elif edition != expected.get("edition"):
             result["status"] = "incompatible_source_edition"
         elif not (isinstance(verse_id, str) and len(verse_id) == 8
-                  and verse_id.isdigit()):
+                  and verse_id.isascii() and verse_id.isdigit()):
             result["status"] = "invalid_verse_id"
         elif not (isinstance(word_id, str)
                   and len(word_id) == (len(expected["word_id_prefix"])
                                        + expected["word_id_digits"])
                   and word_id.startswith(expected["word_id_prefix"])
+                  and word_id[len(expected["word_id_prefix"]):].isascii()
                   and word_id[len(expected["word_id_prefix"]):].isdigit()):
             result["status"] = "invalid_source_word_id"
         elif word_id[1:9] != verse_id:
