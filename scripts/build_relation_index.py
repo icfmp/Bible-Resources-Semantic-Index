@@ -20,6 +20,12 @@ spec = importlib.util.spec_from_file_location(
 relation_audit = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(relation_audit)
 
+family_spec = importlib.util.spec_from_file_location(
+    "brsi_existing_family_consistency_audit",
+    ROOT / "scripts" / "audit_family_relation_consistency.py")
+family_audit = importlib.util.module_from_spec(family_spec)
+family_spec.loader.exec_module(family_audit)
+
 # All names describe WHAT THE ORIGINAL FIELD CLAIMS, not established facts.
 # Never turn partners into spouses, offspring into proven biological children,
 # tribe into an ethnicity identity, or subregion_of into place equivalence.
@@ -57,6 +63,20 @@ def build(data: Path) -> dict:
     if any(audit["classifications"].get(kind, 0) for kind in unsafe):
         raise ValueError("Relation source contains stale, quarantined or unresolved links")
 
+    # A mismatch between two inherited inverse genealogy fields is *not*
+    # evidence that either field is false. Withhold both exact source claims,
+    # keeping every competing ID and field path for independent review.
+    family_report = family_audit.audit(data, limit=1000000)
+    disagreements = family_report["conflicting_inverse_claim_examples"]
+    if len(disagreements) != family_report["counts"].get(
+            "different_named_parent_in_inverse_claim", 0):
+        raise ValueError("Incomplete inverse-family disagreement evidence")
+    disputed_fields = set()
+    for row in disagreements:
+        disputed_fields.add((row["claiming_parent"], "offspring", row["child"]))
+        disputed_fields.add((row["child"], row["relation"],
+                             row["child_named_parent"]))
+
     records = {}
     for path in sorted((data / "entities").glob("*/*.json")):
         record = json.loads(path.read_text(encoding="utf-8"))
@@ -72,6 +92,7 @@ def build(data: Path) -> dict:
     field_counts = Counter()
     withheld_fields = Counter()
     ambiguous_identity_fields = Counter()
+    inverse_disagreement_fields = Counter()
     restricted_count = 0
     for source_id, (source_path, record) in sorted(records.items()):
         metadata = record.get("bsi", {})
@@ -88,8 +109,11 @@ def build(data: Path) -> dict:
             if not isinstance(source_field, str):
                 raise ValueError(f"Missing source field: {source_path}")
             predicate = SOURCE_PREDICATES.get(source_field)
-            status = ("source_unreviewed" if predicate else
-                      "withheld_identity_or_alias" if source_field in WITHHELD_IDENTITY_FIELDS
+            status = ("withheld_inverse_disagreement"
+                      if (source_id, source_field, target) in disputed_fields
+                      else "source_unreviewed" if predicate
+                      else "withheld_identity_or_alias"
+                      if source_field in WITHHELD_IDENTITY_FIELDS
                       else "withheld_unclassified")
             identity = {
                 "source_record_id": metadata["source_id"],
@@ -127,6 +151,8 @@ def build(data: Path) -> dict:
                 withheld_fields[source_field] += 1
             elif status == "withheld_identity_or_alias":
                 ambiguous_identity_fields[source_field] += 1
+            elif status == "withheld_inverse_disagreement":
+                inverse_disagreement_fields[source_field] += 1
 
     if len(claims) + restricted_count != audit["structured_relationships"]:
         raise ValueError("A source relation disappeared during projection")
@@ -147,9 +173,12 @@ def build(data: Path) -> dict:
             "source_unreviewed": statuses["source_unreviewed"],
             "withheld_unclassified": statuses["withheld_unclassified"],
             "withheld_identity_or_alias": statuses["withheld_identity_or_alias"],
+            "withheld_inverse_disagreement": statuses["withheld_inverse_disagreement"],
+            "inverse_disagreement_cases": len(disagreements),
             "by_source_field": dict(sorted(field_counts.items())),
             "unclassified_by_field": dict(sorted(withheld_fields.items())),
             "withheld_identity_or_alias_by_field": dict(sorted(ambiguous_identity_fields.items())),
+            "withheld_inverse_disagreement_by_field": dict(sorted(inverse_disagreement_fields.items())),
         },
         "claims": claims,
         "by_source": dict(sorted(by_source.items())),
