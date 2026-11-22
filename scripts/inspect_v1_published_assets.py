@@ -99,20 +99,35 @@ def inspect(kind: str, raw: bytes, lock: dict) -> dict:
         if (not isinstance(profile, dict)
                 or profile.get("excluded_kinds") != ["keyterm"]):
             raise ValueError("Published entity index does not exclude Key Terms")
-        if any(row.get("kind") == "keyterm" for row in lookup):
-            raise ValueError("Published entity index exposes restricted Key Terms")
-        if not isinstance(index.get("by_word"), dict):
+        if any(not isinstance(row, dict) or row.get("kind") == "keyterm"
+               or str(row.get("id", "")).startswith("keyterm:")
+               for row in lookup):
+            raise ValueError("Published entity index exposes restricted Key Terms or malformed entities")
+        reverse = index.get("by_word")
+        if not isinstance(reverse, dict):
             raise ValueError("Published entity original-word lookup is missing")
+        for token, candidates in reverse.items():
+            if not isinstance(token, str) or not isinstance(candidates, list):
+                raise ValueError("Malformed published entity reverse lookup")
+            if any(not isinstance(row, dict)
+                   or not isinstance(row.get("entity_id"), str)
+                   or row["entity_id"].startswith("keyterm:")
+                   for row in candidates):
+                raise ValueError("Restricted or malformed entity reverse candidate")
     elif kind == "ubs_greek":
         if (index.get("version") != "0.1.0"
                 or index.get("contextual_semantics_independently_verified") is not False):
             raise ValueError("Greek publication falsely approves contextual senses")
     else:
-        if (index.get("schema_version") != 1
+        publication = index.get("publication")
+        if (type(index.get("schema_version")) is not int
+                or index["schema_version"] != 1
                 or not isinstance(index.get("by_strong"), dict)
                 or not isinstance(index.get("by_sdbh"), dict)
-                or index.get("publication", {}).get("version") != "1.0.0"
-                or index.get("publication", {}).get("contextual_senses_inferred") != 0):
+                or not isinstance(publication, dict)
+                or publication.get("version") != "1.0.0"
+                or type(publication.get("contextual_senses_inferred")) is not int
+                or publication["contextual_senses_inferred"] != 0):
             raise ValueError("Hebrew release schema or sense-approval boundary changed")
     actual_index_hash = hashlib.sha256(files["index.json"]).hexdigest()
     if manifest.get("sha256") is not None and manifest["sha256"] != actual_index_hash:
