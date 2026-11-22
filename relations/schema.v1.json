@@ -1,0 +1,231 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/icfmp/Bible-Resources-Semantic-Index/blob/main/relations/schema.v1.json",
+  "title": "BRSI v1 offline inherited-entity relation candidates (not approved assertions)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "format",
+    "schema_version",
+    "publication_approved",
+    "source",
+    "counts",
+    "claims",
+    "by_source",
+    "by_target"
+  ],
+  "properties": {
+    "format": {
+      "const": "brsi-entity-source-relation-candidates"
+    },
+    "schema_version": {
+      "const": 1
+    },
+    "publication_approved": {
+      "const": false
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_repository",
+        "source_commit",
+        "source_snapshot_sha256",
+        "source_license"
+      ],
+      "properties": {
+        "source_repository": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_commit": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_snapshot_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "source_license": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "counts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_relationships",
+        "indexed_claims",
+        "excluded_restricted_keyterm_claims",
+        "source_unreviewed",
+        "withheld_unclassified"
+      ],
+      "properties": {
+        "source_relationships": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "indexed_claims": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "excluded_restricted_keyterm_claims": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "source_unreviewed": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "withheld_unclassified": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "claim_id",
+          "source_id",
+          "source_canonical_id",
+          "target_id",
+          "target_canonical_id",
+          "predicate",
+          "source_field",
+          "review_status",
+          "evidence"
+        ],
+        "properties": {
+          "claim_id": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "source_id": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z_-]*:[^\\\\s:]+$"
+          },
+          "source_canonical_id": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z_-]*:[^\\\\s:]+$"
+          },
+          "target_id": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z_-]*:[^\\\\s:]+$"
+          },
+          "target_canonical_id": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z_-]*:[^\\\\s:]+$"
+          },
+          "predicate": {
+            "oneOf": [
+              {
+                "enum": [
+                  "reported_father",
+                  "reported_mother",
+                  "reported_offspring",
+                  "reported_partner",
+                  "reported_sibling",
+                  "reported_tribe",
+                  "reported_group_origin",
+                  "reported_subregion_of"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "source_field": {
+            "type": "string",
+            "minLength": 1
+          },
+          "review_status": {
+            "enum": [
+              "source_unreviewed",
+              "withheld_unclassified"
+            ]
+          },
+          "evidence": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "source_record_id",
+              "source_record_path",
+              "source_record_sha256",
+              "json_path",
+              "evidence_scope"
+            ],
+            "properties": {
+              "source_record_id": {
+                "type": "string",
+                "pattern": "^[A-Za-z][A-Za-z_-]*:[^\\\\s:]+$"
+              },
+              "source_record_path": {
+                "type": "string",
+                "minLength": 1
+              },
+              "source_record_sha256": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "pattern": "^[0-9a-f]{64}$"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "json_path": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    {
+                      "type": "integer",
+                      "minimum": 0
+                    }
+                  ]
+                }
+              },
+              "evidence_scope": {
+                "const": "inherited_record_field_only"
+              }
+            }
+          }
+        }
+      }
+    },
+    "by_source": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "uniqueItems": true
+      }
+    },
+    "by_target": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "uniqueItems": true
+      }
+    }
+  }
+}
