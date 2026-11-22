@@ -28,9 +28,10 @@ The audit distinguishes these cases without modifying any record:
 - An `offspring` link to a non-person reviewed type, such as a collective
   group or tribe. This may denote lineage collectively rather than a child
   person; it needs **source-specific semantic review**, not deletion.
-- An `offspring` link to a target not present in the current allowed dataset
-  (e.g. a restricted or unsupported identity). Never invent the missing
-  identity just to satisfy a graph test.
+- An `offspring` link to a restricted `keyterm:` source, which must remain
+  **unavailable** in approved BRSI data, versus an otherwise absent exact
+  current source ID. The audit reports these separately and cannot create,
+  import or expose a restricted Key Term to fill a link.
 
 No negative inference is permitted: a missing reciprocal relationship
 is not evidence that two persons are unrelated. More than one claim can be

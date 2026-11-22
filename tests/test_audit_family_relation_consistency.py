@@ -88,7 +88,7 @@ class FamilyInverseTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as folder:
             root = Path(folder)
             write(root, "Parent", offspring=["group:Tribe", "group:FormerPerson",
-                                             "person:NotLoaded"])
+                                             "person:NotLoaded", "keyterm:Excluded"])
             group = root / "entities" / "groups" / "Tribe.json"
             group.parent.mkdir(parents=True)
             group.write_text(json.dumps({
@@ -105,6 +105,7 @@ class FamilyInverseTests(unittest.TestCase):
             self.assertEqual(result["person_records_scanned"], 1)
             self.assertEqual(counts["offspring_target_nonperson_kind"], 2)
             self.assertEqual(counts["offspring_target_not_found_in_current_entity_data"], 1)
+            self.assertEqual(counts["offspring_target_restricted_keyterm_unavailable"], 1)
             examples = {
                 row["child_target"]: row["target_kind_if_known"]
                 for row in result["nonperson_or_unresolved_offspring_examples"]
@@ -113,7 +114,12 @@ class FamilyInverseTests(unittest.TestCase):
                 "group:Tribe": "group",
                 "group:FormerPerson": "group",
                 "person:NotLoaded": None,
+                "keyterm:Excluded": None,
             })
+            self.assertEqual(
+                [row["child_target"] for row in result["unresolved_offspring_target_examples"]],
+                ["keyterm:Excluded", "person:NotLoaded"],
+            )
 
     def test_disallowed_negative_report_limit(self):
         with self.assertRaisesRegex(ValueError, "Negative"):
