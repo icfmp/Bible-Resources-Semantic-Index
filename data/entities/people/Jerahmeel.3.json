@@ -15,6 +15,26 @@
   },
   "bsi": {
     "canonical_id": "person:Jerahmeel.3",
+    "editorial_field_changes": [
+      {
+        "action": "correct_inherited_reference",
+        "evidence": [
+          "Jeremiah 36:26",
+          "Jeremiah 38:6",
+          "https://www.biblegateway.com/passage/?search=Jeremiah+36%3A26&version=ESV%3BNIV%3BNKJV",
+          "Existing BSI quarantine of source person:Hammelech"
+        ],
+        "reason": "The Hebrew expression 'son of the king' in Jeremiah 36:26 does not identify a man named Hammelech. That historical person record is correctly quarantined. Do not infer a specific named father from the royal title; keep the original textual uncertainty for later editorial review.",
+        "removed_fields": [
+          "father"
+        ],
+        "removed_relation_values": {
+          "father": [
+            "person:Hammelech"
+          ]
+        }
+      }
+    ],
     "review_status": "source_unreviewed",
     "source_id": "person:Jerahmeel.3",
     "source_primary_id": "person:Jerahmeel.3",
@@ -27,7 +47,6 @@
       ]
     ]
   },
-  "father": "person:Hammelech",
   "gender": "male",
   "id": "person:Jerahmeel.3",
   "key_references": [

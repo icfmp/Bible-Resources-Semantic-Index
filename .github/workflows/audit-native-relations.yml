@@ -2,12 +2,19 @@ name: Audit native BSI relationships
 
 on:
   push:
-    branches: [bsi/audit-native-relations]
+    branches: [main]
+    paths:
+      - "scripts/audit_entity_relationships.py"
+      - "tests/test_entity_relationships.py"
+      - "data/entities/**"
+      - "data/quarantined/**"
+      - ".github/workflows/audit-native-relations.yml"
   pull_request:
     paths:
       - "scripts/audit_entity_relationships.py"
       - "tests/test_entity_relationships.py"
       - "data/entities/**"
+      - "data/quarantined/**"
       - ".github/workflows/audit-native-relations.yml"
   workflow_dispatch:
 
@@ -23,7 +30,7 @@ jobs:
       - name: Audit current structured relationships without modifying any data
         run: |
           python3 -I tests/test_entity_relationships.py
-          python3 -I scripts/audit_entity_relationships.py --report /tmp/bsi-native-relationships.json
+          python3 -I scripts/audit_entity_relationships.py --report /tmp/bsi-native-relationships.json --fail-on-unresolved
       - name: Preserve complete audited relationship findings
         uses: actions/upload-artifact@v4
         with:

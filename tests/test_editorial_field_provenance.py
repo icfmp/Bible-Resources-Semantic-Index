@@ -28,6 +28,9 @@ class EditorialFieldProvenance(unittest.TestCase):
                                     for x in edit["evidence"]), path)
                 for field in edit.get("removed_fields", []):
                     self.assertNotIn(field, record, (path, field))
+                for field, replacement in edit.get("replaced_relation_values", {}).items():
+                    self.assertNotEqual(replacement["from"], replacement["to"], path)
+                    self.assertEqual(record.get(field), replacement["to"], (path, field))
                 for field, values in edit.get("removed_relation_values", {}).items():
                     self.assertTrue(all(value not in record.get(field, [])
                                         for value in values), (path, field))
