@@ -257,6 +257,7 @@ def validate_manifest(manifest: dict) -> None:
 def verify_bytes(manifest: dict, raw: bytes, *, expected_sha256: str | None = None,
                  expected_version: str | None = None,
                  expected_revision: str | None = None,
+                 expected_tag: str | None = None,
                  require_release: bool = False) -> None:
     validate_manifest(manifest)
     if digest(raw) != manifest["artifact"]["sha256"] or len(raw) != manifest["artifact"]["bytes"]:
@@ -264,8 +265,10 @@ def verify_bytes(manifest: dict, raw: bytes, *, expected_sha256: str | None = No
     if require_release:
         if (manifest["publication"]["status"] != "owner_approved_release"
                 or expected_sha256 is None or expected_version is None
-                or expected_revision is None):
-            raise ValueError("Pinned approved release version, SHA and producer revision required")
+                or expected_revision is None or expected_tag is None):
+            raise ValueError("Pinned approved release version, SHA, tag and producer revision required")
+    if expected_tag is not None and manifest["publication"]["tag"] != expected_tag:
+        raise ValueError("Artifact does not match consumer-pinned release tag")
     if expected_sha256 is not None and manifest["artifact"]["sha256"] != expected_sha256:
         raise ValueError("Artifact does not match consumer-pinned SHA-256")
     if expected_version is not None and manifest["version"] != expected_version:
@@ -290,6 +293,7 @@ def main() -> None:
     verify.add_argument("--expected-sha256")
     verify.add_argument("--expected-version")
     verify.add_argument("--expected-revision")
+    verify.add_argument("--expected-tag")
     verify.add_argument("--require-release", action="store_true")
     args = parser.parse_args()
     if args.command == "local-receipt":
@@ -309,6 +313,7 @@ def main() -> None:
                      expected_sha256=args.expected_sha256,
                      expected_version=args.expected_version,
                      expected_revision=args.expected_revision,
+                     expected_tag=args.expected_tag,
                      require_release=args.require_release)
         print(json.dumps({"verified": True, "kind": manifest["kind"],
                           "published": manifest["publication"]["approved"]}, sort_keys=True))
