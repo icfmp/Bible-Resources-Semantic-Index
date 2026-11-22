@@ -85,6 +85,35 @@ Recover original inherited prose from the exact pinned ACAI commit and
 `bsi.source_sha256`, not from a parallel BRSI description archive. Existing
 Git history also keeps each discarded working-field version.
 
+## One-language working labels
+
+ACAI originally supplied 19 translated `preferred_label` fields per
+record. A language-neutral **source ID**, canonical identity, verse/original
+word evidence and source-backed relations provide actual machine linking;
+a single existing English name serves as an internal human identification
+aid, with a separate short reviewed `bsi.identity_hint` if needed.
+
+Do not silently convert source-unreviewed English names or aliases into
+approved identity assertions. The existing reviewed-hold mechanism still
+blocks contradictory English labels for the relevant records.
+
+For explicitly approved redundant inherited display names, use
+`scripts/prune_nonworking_labels.py` in categories:
+
+```sh
+python3 -I scripts/prune_nonworking_labels.py --categories deities fauna flora
+python3 -I scripts/prune_nonworking_labels.py --categories deities fauna flora --write
+python3 -I scripts/prune_nonworking_labels.py --categories deities fauna flora --check
+```
+
+The tool **fails** if any non-English localization includes a field other than
+`preferred_label`, or if any field is under an unresolved language-specific
+editorial hold. A non-English dictionary link, article identifier or genuine
+source alias must never be thrown away as if it were a display translation.
+Compare native built indexes byte-for-byte before/after every batch.
+Original ACAI labels remain retrievable from the pinned source commit and
+`bsi.source_sha256`; do not duplicate all languages in an archival sidecar.
+
 ## Adding new BSI-owned entities
 
 Do not invent an ACAI source identity for new research. A new reviewed
