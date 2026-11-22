@@ -8,7 +8,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-SCRIPT = (Path(__file__).resolve().parents[1] / 'scripts' / 'compile_index.py')
+SCRIPT = (Path(__file__).resolve().parent / 'support' / 'legacy_acai_compiler.py')
 spec = importlib.util.spec_from_file_location("entity_index_builder", SCRIPT)
 builder = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(builder)
