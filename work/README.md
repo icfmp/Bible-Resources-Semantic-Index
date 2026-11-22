@@ -28,11 +28,14 @@ has been verified in this repository.** A successful build or a source lock
 is not a substitute for an independently verified durable backup of every
 intermediate file.
 
-The former private-snapshot packaging and upload scripts were retired: no
-active caller or configured private storage destination was verified, and the
-old uploader referred to a removed monorepo path. Git history retains the
-historical implementation, but it is **not a working backup**. No complete
-private research archive is claimed. Do not introduce a new upload path
+The active source-pinned Greek and Hebrew workflows still use
+`scripts/work_snapshot.py` to **pack and verify runner-local archives** from
+regenerated complete research states. These are not uploaded or retained
+beyond the job. The historical private uploader
+`scripts/publish_private_work_snapshot.sh` was retired: it had no active
+caller or configured private destination and still referenced a removed
+monorepo path. Git history preserves that old uploader. No complete durable
+private research archive is claimed. Do not introduce an upload destination
 without an explicit rights and storage decision.
 
 ## Reproducible recovery available now
