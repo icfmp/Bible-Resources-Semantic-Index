@@ -18,7 +18,25 @@
     "review_status": "source_unreviewed",
     "source_id": "person:Jesher",
     "source_primary_id": "person:Jesher",
-    "source_sha256": "80a67065e0c5135105a751f32604cc960e5774e7db1a5876c0610f3eac0ec2b5"
+    "source_sha256": "80a67065e0c5135105a751f32604cc960e5774e7db1a5876c0610f3eac0ec2b5",
+    "editorial_field_changes": [
+      {
+        "action": "withhold_inferred_genealogical_identity",
+        "removed_fields": [
+          "mother"
+        ],
+        "reason": "1 Chronicles 2:18 permits more than one grammatical/editorial association for Azubah and Jerioth; do not insist on a named mother without a source decision.",
+        "evidence": [
+          "1 Chronicles 2:18",
+          "https://tips.translation.bible/story/sil-translators-notes-on-1-chronicles-218/"
+        ]
+      }
+    ],
+    "editorial_reason": "Withhold disputed or unnamed family identity assignments; preserve source texts, names, original-word witnesses, and all approved source IDs.",
+    "editorial_evidence": [
+      "1 Chronicles 2:18",
+      "https://tips.translation.bible/story/sil-translators-notes-on-1-chronicles-218/"
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -44,7 +62,6 @@
       "preferred_label": "Jesher"
     }
   },
-  "mother": "person:Jerioth",
   "non_biblical": false,
   "only_mentioned_in_apocrypha": false,
   "primary_id": "person:Jesher",
