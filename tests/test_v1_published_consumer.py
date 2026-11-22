@@ -195,6 +195,13 @@ class ExistingV1ArchiveTests(unittest.TestCase):
         raw = archive("entities", entity)
         with self.assertRaisesRegex(ValueError, "Restricted or malformed entity reverse candidate"):
             inspect.inspect("entities", raw, match_lock("entities", raw))
+        for invalid_id in (None, [], {"malformed": "identity"}):
+            entity = public_index("entities")
+            entity["entities"][0]["id"] = invalid_id
+            raw = archive("entities", entity)
+            with self.subTest(invalid_id=invalid_id), self.assertRaisesRegex(
+                    ValueError, "identities are absent or duplicated"):
+                inspect.inspect("entities", raw, match_lock("entities", raw))
         entity = public_index("entities")
         entity["entities"].append({
             "id": "person:Mary.2", "kind": "person"})
