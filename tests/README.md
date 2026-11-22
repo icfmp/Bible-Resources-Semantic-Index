@@ -1,16 +1,21 @@
-# Shared BSI regression tests
+# BRSI regression tests (current standalone repository)
 
-Test the [shared scripts](../scripts/) without mutating the immutable
-ACAI/source input:
+From the **repository root** run the complete native regression suite:
 
-```bash
-python3 -I bible-semantic-index/tests/test_workspace_layout.py
-python3 -I bible-semantic-index/tests/test_build.py
-python3 -I bible-semantic-index/tests/test_resolve.py
-python3 -I bible-semantic-index/tests/test_distribution_profile.py
-python3 -I bible-semantic-index/tests/test_audit_person_overlaps.py
+```sh
+python3 -I -m unittest discover -s tests -p 'test_*.py'
+python3 -I scripts/build_native_index.py --data data --output /tmp/brsi-current.json
 ```
 
-These tests run in [the BSI GitHub Actions workflow](
-../../.github/workflows/entity-index.yml). Pinned UBS Greek/Hebrew
-dictionary tests remain beside their own pipelines and are run separately.
+Tests are automatically discovered by [offline CI](../.github/workflows/offline-checks.yml);
+the separately source-pinned [native build](../.github/workflows/native-entity-index.yml)
+also validates current BRSI entities and the unapproved phase 1 release candidate.
+
+Greek and Hebrew UBS source-original checks live in their respective
+[`ubs-greek`](../links/dictionaries/ubs-greek/) and
+[`ubs-hebrew`](../links/dictionaries/ubs-hebrew/) directories and
+have separate source-pinned CI jobs. Their development baselines are
+**not** approved public lexical assets.
+
+Historical monorepo paths `bible-semantic-index/tests/...` and the old
+`entity-index.yml` workflow are retired. Use the commands above.
