@@ -245,6 +245,60 @@ it is explicitly deferred to product V2.
 **Phase exit:** tested consumer fixtures and a compatible approved release
 contract. No implied application release or feature availability.
 
+### Post-V1 follow-up from completed identity and integrity issues
+
+The V1 gates in [#6](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/6)
+and [#23](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/23)
+are **closed for their bounded acceptance scope**, not because every source
+identity, reference and original-language witness has been independently
+adjudicated. Preserve these concrete follow-ups without reopening them as
+unbounded V1 blockers:
+
+- [ ] **Historical people and family relationships (editorial research).**
+  Revisit the Azubah/Jerioth maternal antecedent in 1 Chr 2:18; the two
+  Zimmah/Jahath/Shimei genealogical presentations in 1 Chr 6; and whether
+  either unnamed `HusbandOfMary*` source placeholder is independently
+  identifiable. Do not reinstate withheld parent/spouse links or remove a
+  source identity without actual edition-specific evidence. Receipts and
+  retained word/verse witnesses: [V1 identity review](V1_IDENTITY_REVIEW.md),
+  PR #95.
+- [ ] **Place names and textual variants (editorial research).** Examine
+  Gadara/Gerasa/Gergesa regional demonyms and competing Gospel readings
+  against exact Greek editions/manuscript witnesses. Distinguish a city,
+  region, demonym and textual variant; do not merge city IDs, assign the
+  miracle site, or promote alternate labels without proof. Revisit later
+  uses of Lud/Ludim only with source-specific evidence; Gen 10 and 1 Chr 1
+  distinctions remain protected (PRs #92, #95).
+- [ ] **Unresolved homonyms and minimally anchored source identities.**
+  Re-examine the ten specifically inventoried ambiguity candidates,
+  including Judah/Hodaviah overlaps, the second woman in 1 Kgs 3,
+  unanchored or postbiblical places, and unnamed-husband placeholders.
+  The read-only `scripts/audit_name_ambiguities.py` inventory contains
+  641 candidate groups, *not* 641 proven errors. Keep source IDs stable and
+  source-unreviewed unless a case is individually supported; consult
+  [V1 identity review](V1_IDENTITY_REVIEW.md) and closed #6.
+- [ ] **Reference shape and unattested mention audit (source investigation).**
+  Review the **477** imported entities whose `key_references` include
+  verses outside `references`, and the **118** biblically marked records
+  without general verse/explicit-original-word witnesses. These are triage
+  counts, **not** an instruction to force the lists to agree or to add
+  unsupported word IDs or references. Retain distinct reference-field
+  semantics and precise original source provenance (#23, PRs #47–#48).
+- [ ] **Deeper lexical source attestation and new-record support (as needed).**
+  Extend checks to additional independently pinned editions and new native
+  record kinds *when introduced*, including negative fixtures, corpus
+  inventory comparisons, all real source-absence exceptions and consumers'
+  fail-closed behavior. The existing source-pinned, type-checked technical
+  contract is complete for V1; it does **not** confer editorial approval
+  on each lemma, word-sense match or historical identity (#23, #27).
+
+**Trigger and ownership:** open a *new narrowly scoped issue* when a
+specific source edition, factual contradiction, reader-facing consumer or
+new kind justifies the work. Record primary evidence, field-level reversible
+changes and CI; do not silently edit a biblical witness. None of the above
+is permission to import restricted data, publish, or change `icfmp/Bible`.
+The future release gate remains [#62](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/62).
+
 ### Deferred and explicitly excluded work
 
 - [ ] **V2 ONLY — semantic entity relations and graph.**
