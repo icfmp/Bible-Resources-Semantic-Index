@@ -68,15 +68,6 @@ jobs:
             --macula macula-hebrew/WLC/tsv/macula-hebrew.tsv \
             --output /tmp/bsi-ubs-hebrew-index.json
 
-      - name: Rank every unresolved lexical occurrence by original language and lemma
-        run: |
-          python3 -I links/dictionaries/ubs-hebrew/audit_lexical_gaps.py \
-            --index /tmp/bsi-ubs-hebrew-index.json \
-            --english ubs/dictionaries/hebrew/JSON/UBSHebrewDic-v0.9.4-en.JSON \
-            --macula macula-hebrew/WLC/tsv/macula-hebrew.tsv \
-            --output /tmp/bsi-ubs-hebrew-lexical-gaps.json \
-
-
       - name: Audit source-grounded Strong numeric-family reconciliation candidates
         run: |
           python3 -I links/dictionaries/ubs-hebrew/audit_strong_reconciliation.py \
@@ -108,13 +99,6 @@ jobs:
             --english ubs/dictionaries/hebrew/JSON/UBSHebrewDic-v0.9.4-en.JSON \
             --macula macula-hebrew/WLC/tsv/macula-hebrew.tsv \
             --output /tmp/bsi-ubs-hebrew-sdbh-id-integrity.json
-      - name: Examine remaining Hebrew orthographic differences without inferring links
-        run: |
-          python3 -I links/dictionaries/ubs-hebrew/audit_orthography_gaps.py \
-            --index /tmp/bsi-ubs-hebrew-index.json \
-            --english ubs/dictionaries/hebrew/JSON/UBSHebrewDic-v0.9.4-en.JSON \
-            --macula macula-hebrew/WLC/tsv/macula-hebrew.tsv \
-            --output /tmp/bsi-ubs-hebrew-orthography-gaps.json
       - name: Audit full UBS dictionary headword scope for remaining lexical words
         run: |
           python3 -I links/dictionaries/ubs-hebrew/audit_dictionary_scope.py \
