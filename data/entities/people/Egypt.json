@@ -18,7 +18,47 @@
     "review_status": "source_unreviewed",
     "source_id": "person:Egypt",
     "source_primary_id": "person:Egypt",
-    "source_sha256": "0bca077aee88a2c2a7c57d84ee7d1b6af9edb6bfacc1e98d96ff6f55564f5bde"
+    "source_sha256": "0bca077aee88a2c2a7c57d84ee7d1b6af9edb6bfacc1e98d96ff6f55564f5bde",
+    "editorial_field_changes": [
+      {
+        "action": "replace_unqualified_inherited_offspring_target",
+        "replaced_relation_values": {
+          "offspring": {
+            "from": [
+              "Ludim@Gen.10.13-1Ch",
+              "group:Anamim",
+              "group:Lehabim",
+              "group:Naphtuhim",
+              "group:Pathrusim",
+              "group:Casluhim",
+              "group:Caphtorim"
+            ],
+            "to": [
+              "group:Ludim",
+              "group:Anamim",
+              "group:Lehabim",
+              "group:Naphtuhim",
+              "group:Pathrusim",
+              "group:Casluhim",
+              "group:Caphtorim"
+            ]
+          }
+        },
+        "evidence": [
+          "Genesis 10:13 and 1 Chronicles 1:11 identify Ludim as one of the descendants/peoples of Mizraim (Egypt).",
+          "Pinned ACAI people/json/Egypt.json uses the non-identity placeholder 'Ludim@Gen.10.13-1Ch' inside offspring, unlike its six fully typed group targets.",
+          "Existing current and pinned ACAI group:Ludim entity carries key_references 01010013 and 13001011, matching the cited identity.",
+          "The stored group:Ludim group_origin value referring to person:Lud is a separate inherited identification to review, not a justification to merge these two persons/peoples."
+        ],
+        "reason": "Resolve only the untyped source pointer to the independently existing exact group:Ludim identity. Preserve the rest of Egypt's descendants, all source claims, and the unresolved group:Ludim group_origin provenance."
+      }
+    ],
+    "editorial_reason": "The inherited Egypt/Mizraim offspring field contains an untyped Ludim@Gen.10.13-1Ch placeholder instead of a group identity. Convert only that field value to the existing group:Ludim (Gen 10:13; 1 Chr 1:11), preserving the original value in the change receipt.",
+    "editorial_evidence": [
+      "Genesis 10:13",
+      "1 Chronicles 1:11",
+      "Pinned ACAI people/json/Egypt.json and groups/json/Ludim.json; no original-word or verse field changes"
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -60,7 +100,7 @@
   },
   "non_biblical": false,
   "offspring": [
-    "Ludim@Gen.10.13-1Ch",
+    "group:Ludim",
     "group:Anamim",
     "group:Lehabim",
     "group:Naphtuhim",
