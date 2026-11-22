@@ -160,6 +160,53 @@ class ExistingV1ArchiveTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "restricted Key Terms"):
             inspect.inspect("entities", raw, match_lock("entities", raw))
 
+    def test_restricted_or_malformed_reverse_entity_candidates_are_refused(self):
+        variants = [
+            [{"entity_id": "keyterm:Private", "link_type": "explicit_instances"}],
+            [{"entity_id": None, "link_type": "explicit_instances"}],
+            ["unstructured-candidate"],
+        ]
+        for candidates in variants:
+            entity = public_index("entities")
+            entity["by_word"]["sblgnt:n41015040001"] = candidates
+            raw = archive("entities", entity)
+            with self.subTest(candidates=candidates), self.assertRaisesRegex(
+                    ValueError, "Restricted or malformed entity reverse candidate"):
+                inspect.inspect("entities", raw, match_lock("entities", raw))
+
+    def test_entity_list_and_reverse_map_require_structured_records(self):
+        for invalid in ("unknown", [], 42):
+            entity = public_index("entities")
+            entity["entities"][0] = invalid
+            raw = archive("entities", entity)
+            with self.subTest(invalid=invalid), self.assertRaisesRegex(
+                    ValueError, "malformed entities"):
+                inspect.inspect("entities", raw, match_lock("entities", raw))
+        entity = public_index("entities")
+        entity["by_word"]["sblgnt:n41015040001"] = "not a list"
+        raw = archive("entities", entity)
+        with self.assertRaisesRegex(ValueError, "Malformed published entity reverse lookup"):
+            inspect.inspect("entities", raw, match_lock("entities", raw))
+
+    def test_hebrew_published_type_confusions_fail_closed(self):
+        for key, replacement in (
+            ("schema_version", True),
+            ("schema_version", 1.0),
+            ("publication", None),
+            ("publication", []),
+        ):
+            hebrew = public_index("ubs_hebrew")
+            hebrew[key] = replacement
+            raw = archive("ubs_hebrew", hebrew)
+            with self.subTest(key=key, replacement=replacement), self.assertRaisesRegex(
+                    ValueError, "sense-approval boundary"):
+                inspect.inspect("ubs_hebrew", raw, match_lock("ubs_hebrew", raw))
+        hebrew = public_index("ubs_hebrew")
+        hebrew["publication"]["contextual_senses_inferred"] = False
+        raw = archive("ubs_hebrew", hebrew)
+        with self.assertRaisesRegex(ValueError, "sense-approval boundary"):
+            inspect.inspect("ubs_hebrew", raw, match_lock("ubs_hebrew", raw))
+
     def test_real_historical_release_lock_stays_three_kinds(self):
         lock = json.loads((ROOT / "release" / "historical-assets.lock.json")
                           .read_text(encoding="utf-8"))
