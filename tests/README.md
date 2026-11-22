@@ -25,3 +25,9 @@ respective Greek/Hebrew directories as a separate isolated Python process,
 with fail-fast behavior. New source-specific regression modules are therefore
 automatically included; keep the `test_` naming convention and preserve
 source-pinned rebuild verification as a separate CI stage.
+
+The canonical `build_native_index.py` now fails closed on inherited prose,
+obsolete localization holds, translated fields and missing imported working
+identity labels. Its synthetic negative cases in `test_native_growth.py`, plus
+full-tree `test_index_only_entities.py` and `test_one_language_identity.py`,
+replace the former one-time migration-pruner checks.
