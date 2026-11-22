@@ -12,7 +12,7 @@ Tracking: [issue #22](https://github.com/icfmp/Bible-Resources-Semantic-Index/is
 | `links/dictionaries/ubs-greek/index.json`, `ubs-hebrew/index.json` | Versioned lexical development baselines | Checked-in bytes and pinned source identity; **not automatic release approval** |
 | `links/dictionaries/ubs-*/v1_*.json`, `family_register.json`, `reconciliation_candidates.json` | Source-specific editorial evidence / decisions | Do not delete as disposable generated output without confirming exact reproducibility and no irrecoverable review |
 | `scripts/build_native_index.py`, `scripts/entity_index_core.py`, `scripts/*policy.py`, `scripts/resolve.py` | Shared maintained tools | Native build and tested invariants |
-| `scripts/audit_*.py`, `scripts/prune_*.py` | Shared audits and tested one-time normalization | Current CI checks and regression coverage |
+| `scripts/audit_*.py` | Shared read-only identity and relationship audits | Current CI checks and regression coverage |
 | `scripts/compile_index.py` | Historical ACAI-source reconstruction and tested support | Native builder now uses `entity_index_core.py`; retain old full rebuild only as independent migration parity evidence |
 | `scripts/work_snapshot.py` | Active runner-local snapshot pack/verification | Rebuild integrity evidence only; no persistent private backup or upload |
 | `links/dictionaries/ubs-*/audit_*.py`, `build_*.py`, `test_*.py` | UBS-specific research, builders and checks | Separate true maintained source-pinned workflows from obsolete one-offs by examining actual call graph |
@@ -66,6 +66,15 @@ Tracking: [issue #22](https://github.com/icfmp/Bible-Resources-Semantic-Index/is
   `docs/BSI_V0_1_RELEASE_READINESS.md`. The old script bytes remain in Git
   history; published artifact locks, editorial judgments and current native
   staging are unchanged.
+
+- `scripts/prune_inherited_descriptions.py` and
+  `scripts/prune_nonworking_labels.py`, together with their isolated
+  source-mutation regression suites: one-time ACAI-to-BRSI normalization.
+  Their sole current consumers were `--check` calls in offline CI. The
+  permanent native build rejects prose, obsolete prose holds, translated
+  records/holds and missing imported English identity labels; canonical
+  repository tests also audit all entities, including Key Terms exclusion.
+  The original transformation implementations remain in Git history.
 
 ## Verified CI entrypoints
 
