@@ -19,7 +19,7 @@ KNOWN_SOURCE_PREFIXES = ("person", "place", "group", "deity", "fauna", "flora",
 BSI_CATEGORIES = set(KNOWN_SOURCE_PREFIXES) | {"work", "literary_work"}
 IDENTITY_PATTERN = re.compile(r"^([A-Za-z][A-Za-z_-]*):(.+)$")
 # Keys contain source words/metadata and should never be mistaken for entity links.
-EXCLUDED_BRANCHES = {"bsi", "alternate_sources", "localizations", "references",
+EXCLUDED_BRANCHES = {"id", "primary_id", "bsi", "alternate_sources", "localizations", "references",
                      "key_references", "explicit_instances",
                      "pronominal_referents", "subject_referents"}
 
