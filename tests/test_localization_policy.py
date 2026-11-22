@@ -26,18 +26,22 @@ class LocalizationPolicyTests(unittest.TestCase):
                 rec = current_record(path)
                 original = copy.deepcopy(rec)
                 for language in ("eng", "fra", "spa"):
-                    self.assertIsNone(policy.reader_field(rec, language, "descriptions"))
+                    with self.assertRaisesRegex(ValueError, "Unsupported"):
+                        policy.reader_field(rec, language, "descriptions")
                 self.assertEqual(rec, original)
 
     def test_language_scoped_hold_does_not_block_unrelated_field(self):
         rec = current_record("places/Gadara.json")
         self.assertIsNone(policy.reader_field(rec, "eng", "alternate_labels"))
-        desc = policy.reader_field(rec, "fra", "descriptions")
-        self.assertEqual(desc["review_status"], "source_unreviewed")
-        self.assertEqual(desc["source_id"], "place:Gadara")
-        self.assertEqual(desc["value"], rec["localizations"]["fra"]["descriptions"])
-        desc["value"].clear()
-        self.assertTrue(rec["localizations"]["fra"]["descriptions"])
+        label = policy.reader_field(rec, "fra", "preferred_label")
+        self.assertEqual(label["review_status"], "source_unreviewed")
+        self.assertEqual(label["source_id"], "place:Gadara")
+        self.assertEqual(label["value"], rec["localizations"]["fra"]["preferred_label"])
+        sample = {"bsi": {"source_id": "person:Fixture"}, "localizations": {
+            "eng": {"alternate_labels": ["Name"]}}}
+        aliases = policy.reader_field(sample, "eng", "alternate_labels")
+        aliases["value"].append("Modified")
+        self.assertEqual(sample["localizations"]["eng"]["alternate_labels"], ["Name"])
 
     def test_reclassified_person_identity_labels_are_not_served(self):
         for path in ("people/Johanan.json", "people/Perez-uzzah.json"):
@@ -71,6 +75,13 @@ class LocalizationPolicyTests(unittest.TestCase):
         bad["bsi"]["inherited_localizations"]["fields"] = ["descriptions", "descriptions"]
         with self.assertRaisesRegex(ValueError, "Duplicate"):
             policy.validated_holds(bad)
+
+
+    def test_enyclopedic_prose_is_forbidden_even_if_still_present_in_source(self):
+        raw = {"bsi": {"source_id": "person:Fixture"}, "localizations": {
+            "eng": {"descriptions": [{"description": "Not index content"}]}}}
+        with self.assertRaisesRegex(ValueError, "Unsupported"):
+            policy.reader_field(raw, "eng", "descriptions")
 
     def test_unsupported_field_or_locale_never_falls_back(self):
         rec = current_record("places/Gadara.json")
