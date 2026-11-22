@@ -9,7 +9,30 @@
     "review_status": "source_unreviewed",
     "source_id": "person:WifeOfLot",
     "source_primary_id": "person:WifeOfLot",
-    "source_sha256": "d6afd3c104a7f1acf498698b351a0d5503de58b1cf8278784cb3cadd20461d82"
+    "source_sha256": "d6afd3c104a7f1acf498698b351a0d5503de58b1cf8278784cb3cadd20461d82",
+    "editorial_field_changes": [
+      {
+        "action": "remove_inherited_grandchild_as_child",
+        "removed_relation_values": {
+          "offspring": [
+            "person:Moab",
+            "person:Ben-ammi"
+          ]
+        },
+        "evidence": [
+          "Genesis 19:30-38, especially 19:36-38: Lot's elder daughter bore Moab and younger daughter bore Ben-ammi; their mother is not recorded as giving birth to them.",
+          "Pinned ACAI people/json/WifeOfLot.json source mistakenly lists the two grandsons as her direct offspring.",
+          "BRSI child records person:Moab and person:Ben-ammi already identify person:Daughter1OfLot and person:Daughter2OfLot respectively as their mothers.",
+          "https://www.biblegateway.com/passage/?search=Gen%C3%A8se+19%3A36-38&version=LSG"
+        ],
+        "reason": "The original source's offspring list conflates the two daughters' children with Lot's wife's own children. Retain daughters only; keep every person identity and original biblical word/ref witness unchanged."
+      }
+    ],
+    "editorial_reason": "Genesis 19:36-38 identifies Lot's daughters, not his wife, as the mothers of Moab and Ben-ammi. Remove only these two inherited grandchild-to-parent links. All other fields remain source-unreviewed.",
+    "editorial_evidence": [
+      "Genesis 19:36-38",
+      "Pinned ACAI people/json/WifeOfLot.json and BRSI person:Moab/person:Ben-ammi mother links"
+    ]
   },
   "explicit_instances": {},
   "gender": "female",
@@ -26,9 +49,7 @@
   "non_biblical": false,
   "offspring": [
     "person:Daughter1OfLot",
-    "person:Daughter2OfLot",
-    "person:Moab",
-    "person:Ben-ammi"
+    "person:Daughter2OfLot"
   ],
   "only_mentioned_in_apocrypha": false,
   "partners": [
