@@ -20,6 +20,7 @@ def write(folder: Path, name: str, *, canonical=None, gender="male",
     directory.mkdir(parents=True, exist_ok=True)
     obj = {
         "id": "person:" + name,
+        "type": "person",
         "bsi": {"canonical_id": canonical or "person:" + name},
     }
     if gender is not None:
