@@ -1062,6 +1062,27 @@ jobs:
           assert p.with_name(p.name+'.sha256').read_text().split()[0]==hashlib.sha256(p.read_bytes()).hexdigest()
           print('UBS_GREEK_V0_1_0_PUBLIC_IDENTIFIER_ONLY_PACKAGE_VERIFIED')
           PY
+      - name: Record source-rebuilt allowlisted ZIP fingerprint (no publication)
+        run: |
+          python3 - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+          filename = "BSI-UBS-Greek-0.1.0.zip"
+          path = Path("/tmp") / filename
+          raw = path.read_bytes()
+          sha = hashlib.sha256(raw).hexdigest()
+          expected = path.with_name(filename + ".sha256").read_text().split()[0]
+          assert sha == expected, "Source-verified ZIP drift"
+          assert len(raw) > 100000
+          print(json.dumps({
+              "kind": "ubs_greek",
+              "status": "source_rebuilt_allowlisted_historical_projection_not_a_new_release",
+              "filename": filename,
+              "sha256": sha,
+              "bytes": len(raw),
+              "release_uploaded": False,
+          }, sort_keys=True))
+          PY
       - name: Verify complete ubs-greek snapshot against actual pinned-source output (runner-local only)
         shell: bash
         run: |
