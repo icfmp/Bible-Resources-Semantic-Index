@@ -59,6 +59,11 @@ def build(data: Path = ROOT / "data") -> dict:
                 for fields in localized.values()
             ):
                 raise ValueError(f"Encyclopedia descriptions forbidden in current BRSI record: {path}")
+            # Only the working English identity label belongs to this index.
+            # Other language display names stay recoverable from pinned ACAI
+            # instead of being duplicated in 19 parallel BRSI fields.
+            if any(language != "eng" for language in localized):
+                raise ValueError(f"Redundant translated label not permitted in BRSI: {path}")
             # Reject malformed/unknown editorial holds rather than letting a
             # future reader-facing exporter silently treat them as approved.
             localization_policy.validated_holds(record)

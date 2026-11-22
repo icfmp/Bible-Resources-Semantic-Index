@@ -21,6 +21,7 @@ jobs:
       - name: Enforce index-only BRSI records and inspect identity metadata
         run: |
           python3 -I scripts/prune_inherited_descriptions.py --categories deities fauna flora groups people places realia --check
+          python3 -I scripts/prune_nonworking_labels.py --categories deities fauna flora groups people places realia --check
           python3 -I scripts/audit_identity_surface.py
       - name: UBS source-baseline regressions
         run: |
