@@ -75,7 +75,7 @@ def finalize_index(entries: list, quarantined: list, source_lock: dict,
             "source_edition": source_lock["source_editions"]["wlc"]["edition"],
             "word_ids": [], "provenance": [],
         }
-    if source_absences.get("schema_version") != 1:
+    if type(source_absences.get("schema_version")) is not int or source_absences["schema_version"] != 1:
         raise ValueError("Unsupported missing-word audit schema")
     corpus = source_absences.get("corpus")
     edition = source_absences.get("source_edition")
@@ -86,7 +86,8 @@ def finalize_index(entries: list, quarantined: list, source_lock: dict,
     digits = catalog.get("word_id_digits")
     reported_ids = source_absences.get("word_ids")
     evidence = source_absences.get("provenance")
-    if not isinstance(reported_ids, list) or not isinstance(evidence, list):
+    if (not isinstance(reported_ids, list) or not isinstance(evidence, list)
+            or any(not isinstance(word, str) for word in reported_ids)):
         raise ValueError("Malformed source-word audit manifest")
     if reported_ids and not evidence:
         raise ValueError("Unattested word claims require source provenance")
@@ -137,7 +138,7 @@ def finalize_index(entries: list, quarantined: list, source_lock: dict,
             "source_edition": source_lock["source_editions"]["sblgnt"]["edition"],
             "verse_ids": [], "provenance": [],
         }
-    if source_verse_absences.get("schema_version") != 1:
+    if type(source_verse_absences.get("schema_version")) is not int or source_verse_absences["schema_version"] != 1:
         raise ValueError("Unsupported absent-verse inventory schema")
     verse_corpus = source_verse_absences.get("corpus")
     verse_edition = source_verse_absences.get("source_edition")
@@ -146,7 +147,8 @@ def finalize_index(entries: list, quarantined: list, source_lock: dict,
         raise ValueError("Absent-verse inventory not pinned to this original edition")
     reported_verses = source_verse_absences.get("verse_ids")
     verse_evidence = source_verse_absences.get("provenance")
-    if not isinstance(reported_verses, list) or not isinstance(verse_evidence, list):
+    if (not isinstance(reported_verses, list) or not isinstance(verse_evidence, list)
+            or any(not isinstance(verse, str) for verse in reported_verses)):
         raise ValueError("Malformed absent-verse inventory manifest")
     if reported_verses and not verse_evidence:
         raise ValueError("Absent-verse inventory needs source audit provenance")
@@ -226,7 +228,7 @@ def finalize_index(entries: list, quarantined: list, source_lock: dict,
             "source_edition": source_lock["source_editions"]["sblgnt"]["edition"],
             "claims": [],
         }
-    if reference_qualifications.get("schema_version") != 1:
+    if type(reference_qualifications.get("schema_version")) is not int or reference_qualifications["schema_version"] != 1:
         raise ValueError("Unsupported reference-qualification schema")
     ref_corpus = reference_qualifications.get("corpus")
     ref_edition = reference_qualifications.get("source_edition")
@@ -250,7 +252,7 @@ def finalize_index(entries: list, quarantined: list, source_lock: dict,
         cls, proof = claim.get("classification"), claim.get("evidence")
         if (not isinstance(source_id, str)
                 or not isinstance(verse, str) or len(verse) != 8
-                or not verse.isdigit() or cls not in allowed
+                or not verse.isascii() or not verse.isdigit() or cls not in allowed
                 or not isinstance(proof, list) or not proof
                 or any(not isinstance(v, str) or not v.strip() for v in proof)):
             raise ValueError(f"Invalid reference qualification claim: {claim!r}")
