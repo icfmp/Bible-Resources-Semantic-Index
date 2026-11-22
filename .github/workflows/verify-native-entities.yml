@@ -42,11 +42,7 @@ jobs:
           python3 -I scripts/build_native_index.py --data data --output /tmp/bsi-from-native.json
       - name: Verify byte-identical public BSI index against old source-plus-overlays
         run: |
-          python3 -I scripts/compile_index.py \\
-            --source /tmp/acai-verify \\
-            --output /tmp/bsi-legacy.json
-          python3 -I scripts/distribution_profile.py \\
-            --input /tmp/bsi-legacy.json \\
-            --output /tmp/bsi-public-legacy.json
+          python3 -I scripts/compile_index.py --source /tmp/acai-verify --output /tmp/bsi-legacy.json
+          python3 -I scripts/distribution_profile.py --input /tmp/bsi-legacy.json --output /tmp/bsi-public-legacy.json
           cmp /tmp/bsi-public-legacy.json /tmp/bsi-from-native.json
           sha256sum /tmp/bsi-public-legacy.json /tmp/bsi-from-native.json
