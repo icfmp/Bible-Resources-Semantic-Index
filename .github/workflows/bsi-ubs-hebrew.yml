@@ -5,6 +5,8 @@ on:
     paths:
       - "links/dictionaries/ubs-hebrew/**"
       - ".github/workflows/bsi-ubs-hebrew.yml"
+      - "release/historical-assets.lock.json"
+      - "scripts/verify_historical_asset.py"
   push:
     branches: [main]
     paths:
@@ -564,6 +566,11 @@ jobs:
               "release_uploaded": False,
           }, sort_keys=True))
           PY
+      - name: Verify source-rebuilt ZIP exactly equals original historical GitHub release
+        run: |
+          python3 -I scripts/verify_historical_asset.py \
+            --kind ubs_hebrew \
+            --archive /tmp/BSI-UBSHebrew-0.9.4-v1.0.0.zip
       - name: Verify complete ubs-hebrew snapshot against actual pinned-source output (runner-local only)
         shell: bash
         run: |
