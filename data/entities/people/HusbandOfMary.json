@@ -12,7 +12,33 @@
     "review_status": "source_unreviewed",
     "source_id": "person:HusbandOfMary",
     "source_primary_id": "person:HusbandOfMary",
-    "source_sha256": "944d5da8cc79c147396e2eb79e24f6ac83469677e06d7e201baa4ec1898313c8"
+    "source_sha256": "944d5da8cc79c147396e2eb79e24f6ac83469677e06d7e201baa4ec1898313c8",
+    "editorial_field_changes": [
+      {
+        "action": "withhold_inferred_genealogical_identity",
+        "removed_fields": [
+          "offspring"
+        ],
+        "reason": "Acts 12:12 does not identify the father of John Mark; the source-only HusbandOfMary placeholder has no independent original-word anchor.",
+        "evidence": [
+          "Acts 12:12"
+        ]
+      },
+      {
+        "action": "withhold_inferred_genealogical_identity",
+        "removed_fields": [
+          "partners"
+        ],
+        "reason": "The source does not explicitly name Mary's spouse in Acts 12:12. Parentage is not spouse identity evidence.",
+        "evidence": [
+          "Acts 12:12"
+        ]
+      }
+    ],
+    "editorial_reason": "Withhold disputed or unnamed family identity assignments; preserve source texts, names, original-word witnesses, and all approved source IDs.",
+    "editorial_evidence": [
+      "Acts 12:12"
+    ]
   },
   "explicit_instances": {},
   "gender": "male",
@@ -29,13 +55,7 @@
     }
   },
   "non_biblical": false,
-  "offspring": [
-    "person:Mark"
-  ],
   "only_mentioned_in_apocrypha": false,
-  "partners": [
-    "person:Mary.5"
-  ],
   "primary_id": "person:HusbandOfMary",
   "pronominal_referents": {},
   "references": [
