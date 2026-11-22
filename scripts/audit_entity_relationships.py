@@ -136,8 +136,11 @@ def main():
                      sort_keys=True))
     print(json.dumps({"review_candidates": result["review_candidates"]},
                      ensure_ascii=False, sort_keys=True))
-    if args.fail_on_unresolved and result["classifications"].get("unresolved_identity", 0):
-        raise SystemExit("Unresolved cross-entity links require explicit review")
+    if args.fail_on_unresolved and any(
+            result["classifications"].get(kind, 0) for kind in
+            ("unresolved_identity", "old_identity", "old_identity_to_quarantined",
+             "current_to_quarantined")):
+        raise SystemExit("Unresolved, stale or quarantined cross-entity links require review")
 
 
 if __name__ == "__main__":
