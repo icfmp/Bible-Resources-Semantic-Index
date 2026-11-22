@@ -117,6 +117,7 @@ The imported ACAI-derived dataset is subject to **CC BY-SA 4.0** attribution
 and adaptation obligations. Source-derived UBS/MACULA fields may have
 separate restrictions. Data and code licensing must be evaluated separately;
 the repository's GPL code notice is not a license grant for third-party data.
-The 868 Key Terms remain withheld as agreed. See [current rights and integrity rules](docs/RIGHTS_AND_INTEGRITY.md),\n[the rights audit](docs/BSI_V0_1_RIGHTS_AUDIT.md)
+The 868 Key Terms remain withheld as agreed. See [current rights and integrity rules](docs/RIGHTS_AND_INTEGRITY.md),
+[the rights audit](docs/BSI_V0_1_RIGHTS_AUDIT.md)
 and [issue #5](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/5)
 for the specifically excluded source class.
