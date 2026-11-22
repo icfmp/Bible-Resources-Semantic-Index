@@ -18,7 +18,25 @@
     "review_status": "source_unreviewed",
     "source_id": "person:Ardon",
     "source_primary_id": "person:Ardon",
-    "source_sha256": "fae871d4defb30733490633bd25ca2f877ddebceceeee53de6f371a6b7e700d0"
+    "source_sha256": "fae871d4defb30733490633bd25ca2f877ddebceceeee53de6f371a6b7e700d0",
+    "editorial_field_changes": [
+      {
+        "action": "withhold_inferred_genealogical_identity",
+        "removed_fields": [
+          "mother"
+        ],
+        "reason": "The antecedent of 'her sons' in 1 Chronicles 2:18 is debated: assigning Jerioth rather than Azubah as their mother is not source-unique.",
+        "evidence": [
+          "1 Chronicles 2:18",
+          "https://classic.net.bible.org/passage.php?passage=1Ch+2%3A18"
+        ]
+      }
+    ],
+    "editorial_reason": "Withhold disputed or unnamed family identity assignments; preserve source texts, names, original-word witnesses, and all approved source IDs.",
+    "editorial_evidence": [
+      "1 Chronicles 2:18",
+      "https://classic.net.bible.org/passage.php?passage=1Ch+2%3A18"
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -44,7 +62,6 @@
       "preferred_label": "Ardon"
     }
   },
-  "mother": "person:Jerioth",
   "non_biblical": false,
   "only_mentioned_in_apocrypha": false,
   "primary_id": "person:Ardon",
