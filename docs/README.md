@@ -4,7 +4,8 @@ This directory contains **BRSI-specific** editorial and publication decisions;
 repository-wide formats, production pipelines and generic conventions belong
 in the [project README](../README.md) and [work plan](ROADMAP.md).
 
-**Current BRSI guidance:** [phase 1 source-locked release contract](RELEASE_CONTRACT.md),
+**Current BRSI guidance:** [how to consume the existing three ZIP releases (without an app integration)](V1_CONSUMPTION.md),
+[phase 1 source-locked release contract](RELEASE_CONTRACT.md),
 [editable entity IDs and field policies](EDITING_ENTITIES.md),
 [source rights and integrity](RIGHTS_AND_INTEGRITY.md), and
 [current roadmap](ROADMAP.md), and
