@@ -1,0 +1,172 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/icfmp/Bible-Resources-Semantic-Index/blob/main/release/manifest.schema.json",
+  "title": "BRSI artifact receipt and pinned consumption contract v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract",
+    "schema_version",
+    "kind",
+    "payload_schema",
+    "version",
+    "producer_revision",
+    "source_editions",
+    "rights",
+    "artifact",
+    "publication"
+  ],
+  "properties": {
+    "contract": {
+      "const": "brsi.artifact.v1"
+    },
+    "schema_version": {
+      "const": 1
+    },
+    "kind": {
+      "enum": [
+        "entities",
+        "ubs_greek",
+        "ubs_hebrew"
+      ]
+    },
+    "payload_schema": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+(?:-[a-zA-Z0-9][a-zA-Z0-9.-]*)?$"
+    },
+    "producer_revision": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{40}$"
+    },
+    "source_editions": {
+      "type": "array",
+      "minItems": 2,
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "name",
+          "revision",
+          "edition",
+          "license",
+          "url"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 2
+          },
+          "revision": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{40}$"
+          },
+          "edition": {
+            "type": "string",
+            "minLength": 1
+          },
+          "license": {
+            "type": "string",
+            "minLength": 1
+          },
+          "url": {
+            "type": "string",
+            "pattern": "^https://"
+          }
+        }
+      }
+    },
+    "rights": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "data_license",
+        "attribution",
+        "redistribution_cleared",
+        "excluded_keyterms"
+      ],
+      "properties": {
+        "data_license": {
+          "const": "CC BY-SA 4.0"
+        },
+        "attribution": {
+          "type": "string",
+          "minLength": 10
+        },
+        "excluded_keyterms": {
+          "const": true
+        },
+        "redistribution_cleared": {
+          "type": "boolean"
+        }
+      }
+    },
+    "artifact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "filename",
+        "sha256",
+        "bytes",
+        "input_class"
+      ],
+      "properties": {
+        "filename": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9._-]+\\.(json|zip)$"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "bytes": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "input_class": {
+          "enum": [
+            "native_keyterm_free_index",
+            "checked_in_nonpublic_lexical_baseline",
+            "source_reviewed_public_projection"
+          ]
+        }
+      }
+    },
+    "publication": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "approved",
+        "tag",
+        "repository"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "local_integrity_only",
+            "candidate_unapproved",
+            "owner_approved_release"
+          ]
+        },
+        "approved": {
+          "type": "boolean"
+        },
+        "tag": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "repository": {
+          "const": "icfmp/Bible-Resources-Semantic-Index"
+        }
+      }
+    }
+  }
+}
