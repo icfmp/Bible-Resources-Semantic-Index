@@ -53,6 +53,7 @@ def audit(data: Path, *, sample_limit: int = 15) -> dict:
             },
         })
     candidates = []
+    unresolved_samples = []
     for (kind, normalized), records in groups.items():
         identities = {r["canonical_id"] for r in records}
         if len(identities) <= 1:
@@ -80,6 +81,19 @@ def audit(data: Path, *, sample_limit: int = 15) -> dict:
                 evidence_class = "distinct_original_word_for_triage"
             else:
                 evidence_class = "not_distinguished_by_key_verses_or_explicit_words"
+            if (evidence_class == "not_distinguished_by_key_verses_or_explicit_words"
+                    and not row["has_reviewed_hint"]):
+                unresolved_samples.append({
+                    "kind": kind,
+                    "normalized_source_name": normalized,
+                    "source_id": row["source_id"],
+                    "canonical_id": row["canonical_id"],
+                    "key_references": sorted(row["_key_references"]),
+                    "explicit_word_ids": [
+                        f"{corpus}:{word}"
+                        for corpus, word in sorted(row["_explicit_words"])
+                    ][:16],
+                })
             result_records.append({
                 k: v for k, v in row.items() if not k.startswith("_")
             } | {"triage_evidence_class": evidence_class})
@@ -113,6 +127,11 @@ def audit(data: Path, *, sample_limit: int = 15) -> dict:
         "records_without_reviewed_hint": sum(g["without_reviewed_hint"] for g in candidates),
         "source_evidence_triage": dict(sorted(triage.items())),
         "unresolved_without_reviewed_hint": unresolved_without_hint,
+        "unresolved_source_examples": sorted(
+            unresolved_samples,
+            key=lambda row: (row["kind"], row["normalized_source_name"],
+                             row["source_id"]),
+        )[:20],
         "sample_groups": candidates[:sample_limit],
     }
 
