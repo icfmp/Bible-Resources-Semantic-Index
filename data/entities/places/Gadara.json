@@ -52,7 +52,15 @@
     "review_status": "editorially_reviewed",
     "source_id": "place:Gadara",
     "source_primary_id": "place:Gerasa",
-    "source_sha256": "8d397dcc2efa797f75e8f71cc2f30d048d76b9f8809dd094712c9f5fbb08f106"
+    "source_sha256": "8d397dcc2efa797f75e8f71cc2f30d048d76b9f8809dd094712c9f5fbb08f106",
+    "inherited_localizations": {
+      "status": "withheld_pending_review",
+      "fields": [
+        "eng.alternate_labels"
+      ],
+      "reason": "English demonym and manuscript-variant name forms must be analyzed before being served as alternate names of the historically distinct city of Gadara. Existing city descriptions are not automatically contradicted.",
+      "source": "acai"
+    }
   },
   "explicit_instances": {
     "SBLGNT": [
