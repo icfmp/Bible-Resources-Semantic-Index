@@ -14,7 +14,7 @@ Tracking: [issue #22](https://github.com/icfmp/Bible-Resources-Semantic-Index/is
 | `scripts/build_native_index.py`, `scripts/*policy.py`, `scripts/resolve.py` | Shared maintained tools | Native build and tested invariants |
 | `scripts/audit_*.py`, `scripts/prune_*.py` | Shared audits and tested one-time normalization | Current CI checks and regression coverage |
 | `scripts/compile_index.py`, `minimal_labels.py`, `package_candidate.py` | Historical construction and tested support | Retain until precise caller/rebuild migration is proven |
-| `scripts/work_snapshot.py`, `publish_private_work_snapshot.sh` | Historical, currently inactive | Do not describe as a working backup or silently reactivate |
+| `scripts/work_snapshot.py` | Active runner-local snapshot pack/verification | Rebuild integrity evidence only; no persistent private backup or upload |
 | `links/dictionaries/ubs-*/audit_*.py`, `build_*.py`, `test_*.py` | UBS-specific research, builders and checks | Separate true maintained source-pinned workflows from obsolete one-offs by examining actual call graph |
 | `docs/V0_1_*.md`, `docs/BSI_V0_1_*.md` | Historical editorial/release evidence | Keep only verifiable decisions and published evidence, mark as historical |
 | `work/`, `sources/`, `release/` | Recovery policy, source provenance, historical release locks | Never imply publication or durable archival that did not occur |
@@ -49,6 +49,15 @@ Tracking: [issue #22](https://github.com/icfmp/Bible-Resources-Semantic-Index/is
   with no downstream consumer, tests or retained editorial ledger. Retired
   together with its CI step; the more precise lexical gap, dictionary scope,
   source attestation and abstention verifiers are still maintained.
+
+- `links/dictionaries/ubs-hebrew/audit_unmatched.py`: superseded read-only
+  early unresolved-row census with no downstream JSON consumer or editorial
+  decision ledger. Its CI stage was removed in PR #69, while the maintained
+  lexical-gap, dictionary scope and abstention audits remain.
+- `scripts/publish_private_work_snapshot.sh`: inactive private uploader with
+  no current CI caller, no verified destination and an obsolete monorepo path.
+  Removed in PR #70. The actively invoked runner-local `work_snapshot.py`
+  and its regression tests were explicitly retained; these **do not upload**.
 
 ## Verified CI entrypoints
 
