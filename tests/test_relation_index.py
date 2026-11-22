@@ -81,6 +81,35 @@ class RelationIndexTests(unittest.TestCase):
         self.assertEqual(projection.canonical_bytes(graph),
                          projection.canonical_bytes(projection.build(self.data)))
 
+    def test_ambiguous_identity_links_are_withheld_not_merged(self):
+        self.record("people", "A", possibly_same_as=["person:B"],
+                    referred_to_as=["person:B"])
+        self.record("people", "B")
+        graph = projection.build(self.data)
+        self.assertEqual(graph["counts"]["withheld_identity_or_alias"], 2)
+        self.assertEqual(graph["counts"]["source_unreviewed"], 0)
+        self.assertEqual(graph["counts"]["withheld_identity_or_alias_by_field"], {
+            "possibly_same_as": 1, "referred_to_as": 1,
+        })
+        self.assertEqual(len(graph["by_target"]["person:B"]), 2)
+        for claim in graph["claims"]:
+            self.assertEqual(claim["review_status"], "withheld_identity_or_alias")
+            self.assertIsNone(claim["predicate"])
+            self.assertNotEqual(claim["source_id"], claim["target_id"])
+
+    def test_geographic_association_keeps_original_direction(self):
+        self.record("places", "A", associated_places=["place:B"],
+                    nearby_places=["place:B"], related_places=["place:B"],
+                    tribal_area=["place:B"])
+        self.record("places", "B")
+        graph = projection.build(self.data)
+        self.assertEqual(
+            {c["predicate"] for c in graph["claims"]},
+            {"reported_associated_place", "reported_nearby_place",
+             "reported_related_place", "reported_tribal_area"})
+        self.assertEqual(len(graph["by_target"]["place:B"]), 4)
+        self.assertNotIn("place:B", graph["by_source"])
+
     def test_missing_and_quarantined_targets_fail_closed(self):
         self.record("people", "A", mother="person:Absent")
         with self.assertRaisesRegex(ValueError, "stale, quarantined or unresolved"):
