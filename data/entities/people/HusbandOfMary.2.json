@@ -12,7 +12,37 @@
     "review_status": "source_unreviewed",
     "source_id": "person:HusbandOfMary.2",
     "source_primary_id": "person:HusbandOfMary.2",
-    "source_sha256": "d63b06b16f429a5d57b0575b5ecdff0f612ba6a7111459ca24ec57d2b067d49f"
+    "source_sha256": "d63b06b16f429a5d57b0575b5ecdff0f612ba6a7111459ca24ec57d2b067d49f",
+    "editorial_field_changes": [
+      {
+        "action": "withhold_inferred_genealogical_identity",
+        "removed_fields": [
+          "offspring"
+        ],
+        "reason": "Source placeholder combines Matthew 27:56's unnamed husband inference with Acts 12:12's mother of John Mark; neither names a father.",
+        "evidence": [
+          "Matthew 27:56",
+          "Acts 12:12"
+        ]
+      },
+      {
+        "action": "withhold_inferred_genealogical_identity",
+        "removed_fields": [
+          "partners"
+        ],
+        "reason": "The biblical mother of James/Joses is not supplied with a named husband in Matthew 27:56 or Mark 15:40.",
+        "evidence": [
+          "Matthew 27:56",
+          "Mark 15:40"
+        ]
+      }
+    ],
+    "editorial_reason": "Withhold disputed or unnamed family identity assignments; preserve source texts, names, original-word witnesses, and all approved source IDs.",
+    "editorial_evidence": [
+      "Matthew 27:56",
+      "Acts 12:12",
+      "Mark 15:40"
+    ]
   },
   "explicit_instances": {},
   "gender": "male",
@@ -29,13 +59,7 @@
     }
   },
   "non_biblical": false,
-  "offspring": [
-    "person:Mark"
-  ],
   "only_mentioned_in_apocrypha": false,
-  "partners": [
-    "person:Mary.2"
-  ],
   "primary_id": "person:HusbandOfMary.2",
   "pronominal_referents": {},
   "references": [
