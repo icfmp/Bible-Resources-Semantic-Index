@@ -34,8 +34,13 @@ fingerprints, original-word groups, structural relations, editorial decisions
 and evidence. Inherited encyclopedia descriptions have since been pruned
 from the editable 5,773 active records: BRSI is an identity/link index,
 not a multi-language biography store. The source text remains recoverable
-from the pinned ACAI edition and Git history. Their corrected index output was compared **byte-for-byte** with the
-previous, keyterm-free BSI index before the migration was merged. The historical
+from the pinned ACAI edition and Git history. The 18 redundant translated
+preferred labels per entity have also been retired, leaving one working
+English source label and preserved English aliases. This working label is
+**source-unreviewed** unless independently approved; the optional reviewed
+`bsi.identity_hint` is used for genuine homonym disambiguation. The
+original keyterm-free index build was byte-compared during migration, and
+each subsequent field-only cleanup preserved its index output exactly. The historical
 ACAI checkout is not used for normal BSI builds. See [editing current entities](docs/EDITING_ENTITIES.md)
 and [source provenance](sources/README.md).
 
