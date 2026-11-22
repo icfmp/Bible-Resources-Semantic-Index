@@ -6,7 +6,9 @@ retains the three **historically published** BSI ZIP releases until a separate
 delivery/publication migration is approved. BSI is neither the Bible application
 nor a SWORD module.
 
-**Outstanding work and postponed decisions:** [BSI work plan](docs/ROADMAP.md) — also records which UBS research evidence is retained versus reproducibly regenerated.\n\n## Current sources of truth
+**Outstanding work and postponed decisions:** [BSI work plan](docs/ROADMAP.md) — also records which UBS research evidence is retained versus reproducibly regenerated.
+
+## Current sources of truth
 
 | Stream | Current development inputs | Existing published edition |
 | --- | --- | --- |
@@ -34,9 +36,7 @@ From a fresh checkout of **this repository** (Python 3 required):
 
 ```bash
 python3 -I scripts/build_native_index.py --data data --output /tmp/bsi-current.json
-python3 -I tests/test_workspace_layout.py
-python3 -I tests/test_build.py
-python3 -I tests/test_resolve.py
+python3 -I -m unittest discover -s tests -p 'test_*.py'
 ```
 
 The native builder consumes the **current** `data/entities/` and
