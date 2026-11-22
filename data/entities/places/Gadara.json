@@ -46,6 +46,26 @@
             ]
           }
         }
+      },
+      {
+        "action": "remove_unverified_cross_city_and_editorial_aliases",
+        "removed_localization_values": {
+          "eng": {
+            "alternate_labels": [
+              "Gergesene",
+              "Gergesenes",
+              "Var"
+            ]
+          }
+        },
+        "reason": "Gergesenes and Gergesene are independent textual-variant demonyms, not place:Gadara alternate city names; Var is an editorial artifact, not a name. Gadara and Gerasa remain distinct.",
+        "evidence": [
+          "Matthew 8:28",
+          "Mark 5:1",
+          "Luke 8:26",
+          "https://classic.net.bible.org/passage.php?passage=Mar+5%3A1-19",
+          "https://classic.net.bible.org/passage.php?passage=Mat+8%3A28-34"
+        ]
       }
     ],
     "editorial_reason": "Gadara (Umm Qais) and Gerasa (Jerash) are historically distinct Decapolis cities, not equivalent name forms. The source's Gadara.primary_id=place:Gerasa falsely merges their identities. Preserve ALL exact original Greek demonym word groups and verse references as candidates, including cross-gospel textual variants; a demonym is not proof of the precise miracle site. Gadara.2 (Perea) remains separate.",
@@ -98,10 +118,7 @@
   "localizations": {
     "eng": {
       "alternate_labels": [
-        "Gergesene",
         "Gadarenes",
-        "Gergesenes",
-        "Var",
         "Gadara"
       ],
       "preferred_label": "Gadara (of the Decapolis)"
