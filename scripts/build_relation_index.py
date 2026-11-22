@@ -32,7 +32,15 @@ SOURCE_PREDICATES = {
     "tribe": "reported_tribe",
     "group_origin": "reported_group_origin",
     "subregion_of": "reported_subregion_of",
+    "associated_places": "reported_associated_place",
+    "nearby_places": "reported_nearby_place",
+    "related_places": "reported_related_place",
+    "tribal_area": "reported_tribal_area",
 }
+
+# The source may suggest an alias or a possible identity, but no equality
+# relation follows without independent editorial and manuscript evidence.
+WITHHELD_IDENTITY_FIELDS = frozenset({"possibly_same_as", "referred_to_as"})
 
 
 def canonical_bytes(value: object) -> bytes:
@@ -63,6 +71,7 @@ def build(data: Path) -> dict:
     statuses = Counter()
     field_counts = Counter()
     withheld_fields = Counter()
+    ambiguous_identity_fields = Counter()
     restricted_count = 0
     for source_id, (source_path, record) in sorted(records.items()):
         metadata = record.get("bsi", {})
@@ -79,7 +88,9 @@ def build(data: Path) -> dict:
             if not isinstance(source_field, str):
                 raise ValueError(f"Missing source field: {source_path}")
             predicate = SOURCE_PREDICATES.get(source_field)
-            status = "source_unreviewed" if predicate else "withheld_unclassified"
+            status = ("source_unreviewed" if predicate else
+                      "withheld_identity_or_alias" if source_field in WITHHELD_IDENTITY_FIELDS
+                      else "withheld_unclassified")
             identity = {
                 "source_record_id": metadata["source_id"],
                 "json_path": link["path"],
@@ -114,6 +125,8 @@ def build(data: Path) -> dict:
             field_counts[source_field] += 1
             if status == "withheld_unclassified":
                 withheld_fields[source_field] += 1
+            elif status == "withheld_identity_or_alias":
+                ambiguous_identity_fields[source_field] += 1
 
     if len(claims) + restricted_count != audit["structured_relationships"]:
         raise ValueError("A source relation disappeared during projection")
@@ -133,8 +146,10 @@ def build(data: Path) -> dict:
             "excluded_restricted_keyterm_claims": restricted_count,
             "source_unreviewed": statuses["source_unreviewed"],
             "withheld_unclassified": statuses["withheld_unclassified"],
+            "withheld_identity_or_alias": statuses["withheld_identity_or_alias"],
             "by_source_field": dict(sorted(field_counts.items())),
             "unclassified_by_field": dict(sorted(withheld_fields.items())),
+            "withheld_identity_or_alias_by_field": dict(sorted(ambiguous_identity_fields.items())),
         },
         "claims": claims,
         "by_source": dict(sorted(by_source.items())),
