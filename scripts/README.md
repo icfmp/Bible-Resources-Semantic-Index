@@ -17,6 +17,14 @@ The canonical editable records are `data/entities/` (plus the deliberately
 quarantined source identities and qualification evidence). Do **not** replay
 historical ACAI patches or import an upstream snapshot during normal editing.
 
+## Existing public V1 artifact inspection (read-only)
+
+The independent, already published entity/Greek/Hebrew release ZIPs can be
+checked together with `inspect_v1_published_assets.py`. It imports the
+maintained `verify_historical_asset.py` byte-lock verifier, inspects the
+three **different** public payload shapes, never downloads anything and
+never changes the application. See [V1 consumer guide](../docs/V1_CONSUMPTION.md).
+
 ## Reusable tools and checks
 
 - `build_native_index.py`: canonical native entity build, independent of the historical ACAI compiler.
