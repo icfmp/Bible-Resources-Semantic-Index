@@ -42,6 +42,16 @@ class RelationshipAuditTests(unittest.TestCase):
         self.assertEqual(result["review_candidates"][1]["target"], "place:Old")
         self.assertEqual(one.read_bytes(), before)
 
+    def test_compound_group_origins_preserve_source_bytes(self):
+        path = self.record("entities/people", "A", "person:A", "person:A",
+                           group_origin="person:A; person:B")
+        self.record("entities/people", "B", "person:B", "person:B")
+        original = path.read_bytes()
+        result = audit.audit(self.data)
+        self.assertEqual(result["classifications"]["current_identity"], 2)
+        self.assertEqual(result["structured_relationships"], 2)
+        self.assertEqual(path.read_bytes(), original)
+
     def test_quarantined_links_and_duplicate_source_ids(self):
         self.record("entities/people", "A", "person:A", "person:A",
                     partner="person:Quarantined")
