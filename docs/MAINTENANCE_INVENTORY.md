@@ -13,7 +13,7 @@ Tracking: [issue #22](https://github.com/icfmp/Bible-Resources-Semantic-Index/is
 | `links/dictionaries/ubs-*/v1_*.json`, `family_register.json`, `reconciliation_candidates.json` | Source-specific editorial evidence / decisions | Do not delete as disposable generated output without confirming exact reproducibility and no irrecoverable review |
 | `scripts/build_native_index.py`, `scripts/entity_index_core.py`, `scripts/*policy.py`, `scripts/resolve.py` | Shared maintained tools | Native build and tested invariants |
 | `scripts/audit_*.py`, `scripts/prune_*.py` | Shared audits and tested one-time normalization | Current CI checks and regression coverage |
-| `scripts/compile_index.py`, `minimal_labels.py`, `package_candidate.py` | Historical construction and tested support | Native builder now uses `entity_index_core.py`; retain legacy rebuild only for historical tests and evidence |
+| `scripts/compile_index.py` | Historical ACAI-source reconstruction and tested support | Native builder now uses `entity_index_core.py`; retain old full rebuild only as independent migration parity evidence |
 | `scripts/work_snapshot.py` | Active runner-local snapshot pack/verification | Rebuild integrity evidence only; no persistent private backup or upload |
 | `links/dictionaries/ubs-*/audit_*.py`, `build_*.py`, `test_*.py` | UBS-specific research, builders and checks | Separate true maintained source-pinned workflows from obsolete one-offs by examining actual call graph |
 | `docs/V0_1_*.md`, `docs/BSI_V0_1_*.md` | Historical editorial/release evidence | Keep only verifiable decisions and published evidence, mark as historical |
@@ -58,6 +58,14 @@ Tracking: [issue #22](https://github.com/icfmp/Bible-Resources-Semantic-Index/is
   no current CI caller, no verified destination and an obsolete monorepo path.
   Removed in PR #70. The actively invoked runner-local `work_snapshot.py`
   and its regression tests were explicitly retained; these **do not upload**.
+
+- `scripts/minimal_labels.py` and `scripts/package_candidate.py`: retired ACAI-era
+  one-off candidate-label and BSI v0.1 ZIP preparers. No current Python tests,
+  native/UBS workflows or application entrypoint referenced either; their
+  historical instructions are explicitly identified as non-runnable records in
+  `docs/BSI_V0_1_RELEASE_READINESS.md`. The old script bytes remain in Git
+  history; published artifact locks, editorial judgments and current native
+  staging are unchanged.
 
 ## Verified CI entrypoints
 

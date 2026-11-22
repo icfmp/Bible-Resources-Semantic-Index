@@ -36,9 +36,10 @@ historical ACAI patches or import an upstream snapshot during normal editing.
 
 ## Historical or restricted workflows
 
-- `compile_index.py`, `minimal_labels.py`, `package_candidate.py`:
-  retained for migration/v0.1 reconstruction evidence or compatibility tests;
-  **not** the current editable-source build.
+- `compile_index.py`: historical ACAI-source reconstruction, retained solely
+  for independent migration/parity regression tests; **not** the current
+  editable-source build. Previous one-off v0.1 label and ZIP packaging
+  scripts are preserved in Git history, not the maintained tool surface.
 - `work_snapshot.py`: active runner-local packing and integrity verification
   of temporary source-pinned research states; this does **not** publish, upload,
   or provide a durable private backup. The retired private uploader was never
