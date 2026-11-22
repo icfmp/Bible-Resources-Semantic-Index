@@ -29,8 +29,17 @@ incorrect identifications. The ten cases previously reported without unique
 key-verse/original-word/hint evidence remain unreviewed; their identities must
 not be automatically merged, assigned a new biographical qualifier or promoted
 to reviewed status. Their detailed source pointers remain recoverable via
-`scripts/audit_name_ambiguities.py`. The criterion for V1 is **safe abstention**,
-not inventing missing manuscript evidence.
+`scripts/audit_name_ambiguities.py` and the [original source-triage
+record](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/6#issuecomment-7083272773).
+The ten are: `HusbandOfMary`, `HusbandOfMary.2` (unsupported unnamed
+husband identifiers, whose female-name aliases were removed);
+`Judah`/`Judah.2` (shared Ezra 3:9 original-word witness);
+`SecondProstitute` (role identity without explicit name token);
+and `Caesarea.2`, `Gadara.2`, `Heres.2`, `Neapolis.2`,
+`ValleyOfMizpeh` (historical or reference-only geographic candidates).
+These source IDs remain **unreviewed**; absence of a differentiating witness
+is not permission to merge or delete one. The criterion for V1 is
+**safe abstention**, not inventing missing manuscript evidence.
 
 The current native index carries source IDs, canonical IDs, source reference
 lists and typed original-word occurrence claims; **it does not export**
