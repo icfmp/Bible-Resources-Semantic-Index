@@ -390,12 +390,6 @@ jobs:
             --macula macula-hebrew/WLC/tsv/macula-hebrew.tsv \
             --index /tmp/bsi-ubs-hebrew-index.json \
             --output /tmp/bsi-ubs-last-26-original-wlc-evidence.json
-      - name: Upload read-only original lexical source-word evidence for final review
-        uses: actions/upload-artifact@v4
-        with:
-          name: bsi-ubs-original-final-26-source-witnesses-REVIEW-ONLY
-          path: /tmp/bsi-ubs-last-26-original-wlc-evidence.json
-          retention-days: 7
       - name: Rebuild private source-word-verified v1 candidate without touching original index
         run: |
           python3 -I links/dictionaries/ubs-hebrew/build_private_reviewed_candidate.py \
@@ -511,33 +505,6 @@ jobs:
           assert d['original_released_v1_changed'] is False
           print('UBS_HEBREW_V11_SCREENING_VERIFIED_SOURCE_LINKED_0_NEW_CONTEXT_SENSES_APPROVED')
           PY
-      - name: Upload private source-verified Hebrew pilot screening (NOT PUBLISHED)
-        uses: actions/upload-artifact@v4
-        with:
-          name: bsi-ubs-hebrew-v11-72-screened-source-witnesses-PRIVATE-NOT-PUBLISHED
-          path: /tmp/bsi-ubs-hebrew-v11-72-contextual-screen-verification-PRIVATE.json
-          if-no-files-found: error
-          retention-days: 14
-      - name: Upload private 72-sample Hebrew UBS semantic context pilot (NOT PUBLISHED)
-        uses: actions/upload-artifact@v4
-        with:
-          name: bsi-ubs-hebrew-v11-72-context-samples-PRIVATE-NOT-PUBLISHED
-          path: /tmp/bsi-ubs-hebrew-v11-72-word-contextual-pilot-PRIVATE.json
-          if-no-files-found: error
-          retention-days: 14
-      - name: Upload Hebrew v1.1 semantic feasibility audit (PRIVATE, NO choices)
-        uses: actions/upload-artifact@v4
-        with:
-          name: bsi-ubs-hebrew-v11-source-semantic-feasibility-PRIVATE-NOT-PUBLISHED
-          path: /tmp/bsi-ubs-hebrew-v11-source-only-semantic-feasibility-PRIVATE.json
-          if-no-files-found: error
-          retention-days: 14
-      - name: Upload private final UBS v1 original-word-specific candidate (NOT released)
-        uses: actions/upload-artifact@v4
-        with:
-          name: bsi-ubs-final-275-word-source-verified-NOT-PUBLISHED
-          path: /tmp/bsi-ubs-v1-final-275-word-candidate.json
-          retention-days: 14
       - name: Verify reproducible, attributed UBS v1.0 technical RC package (NOT a release)
         run: |
           python3 -I links/dictionaries/ubs-hebrew/package_reviewed_v1_candidate.py \
@@ -576,41 +543,6 @@ jobs:
             --output /tmp/BSI-UBSHebrew-0.9.4-v1.0.0.zip \
             --preview
           (cd /tmp && sha256sum --check BSI-UBSHebrew-0.9.4-v1.0.0.zip.sha256)
-      - name: Upload approved payload for independent protected-main release verification
-        uses: actions/upload-artifact@v4
-        with:
-          name: bsi-ubs-hebrew-v1-publication-PREFLIGHT-NOT-PUBLISHED
-          path: |
-            /tmp/BSI-UBSHebrew-0.9.4-v1.0.0.zip
-            /tmp/BSI-UBSHebrew-0.9.4-v1.0.0.zip.sha256
-          retention-days: 14
-      - name: Upload NONPUBLISHED UBS 0.9.4 v1.0 technical RC package
-        uses: actions/upload-artifact@v4
-        with:
-          name: bsi-ubs-hebrew-v1-rc2-technical-NOT-PUBLISHED
-          path: |
-            /tmp/BSI-UBSHebrew-0.9.4-v1.0-rc2.zip
-            /tmp/BSI-UBSHebrew-0.9.4-v1.0-rc2.zip.sha256
-          retention-days: 14
-      - name: Upload private UBS 0.9.4 v1 word-level index candidate (NOT released)
-        uses: actions/upload-artifact@v4
-        with:
-          name: bsi-ubs-v1-private-reviewed-word-candidate
-          path: /tmp/bsi-ubs-v1-private-reviewed-candidate.json
-          retention-days: 7
-      - name: Upload generated QA index (not upstream dictionary definitions)
-        uses: actions/upload-artifact@v4
-        with:
-          name: bsi-ubs-hebrew-index-candidate
-          path: |
-            /tmp/bsi-ubs-hebrew-index.json
-            /tmp/bsi-ubs-hebrew-lexical-gaps.json
-            /tmp/bsi-ubs-hebrew-reconciliation.json
-            /tmp/bsi-ubs-hebrew-top-lemmas.json
-            /tmp/bsi-ubs-hebrew-sdbh-id-integrity.json
-            /tmp/bsi-ubs-hebrew-family-register.json
-          retention-days: 14
-
       - name: Verify complete ubs-hebrew snapshot against actual pinned-source output (runner-local only)
         shell: bash
         run: |
@@ -624,20 +556,3 @@ jobs:
             --file contextual-pilot-witnesses.json=/tmp/bsi-ubs-hebrew-v11-72-word-contextual-pilot-PRIVATE.json \
             --output "$output"
           python3 -I scripts/work_snapshot.py verify --archive "$output"
-      - name: Archive complete ubs-hebrew working state in PRIVATE repository (main only)
-        if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main'
-        env:
-          BSI_PRIVATE_SNAPSHOT_REPO: ${{ vars.BSI_PRIVATE_SNAPSHOT_REPO }}
-          GH_TOKEN: ${{ secrets.BSI_PRIVATE_SNAPSHOT_TOKEN }}
-        shell: bash
-        run: |
-          set -euo pipefail
-          if [[ -z "$BSI_PRIVATE_SNAPSHOT_REPO" || -z "$GH_TOKEN" ]]; then
-            echo "::warning::PRIVATE BSI ubs-hebrew working snapshot NOT saved durably: configure BSI_PRIVATE_SNAPSHOT_REPO and BSI_PRIVATE_SNAPSHOT_TOKEN. Existing 14-day CI artifact is NOT a substitute."
-            exit 0
-          fi
-          output="/tmp/bsi-work-ubs-hebrew-${GITHUB_SHA}.tar.gz"
-          bash scripts/publish_private_work_snapshot.sh "$output" "$GITHUB_SHA"
-
-# Historical Hebrew v1.0.0 publication stays in Bible-Resources.
-# The independent BSI repository verifies, but does not auto-republish.
