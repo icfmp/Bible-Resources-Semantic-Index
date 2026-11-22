@@ -1,0 +1,36 @@
+name: Audit inherited fields of reclassified BSI entities
+
+on:
+  push:
+    branches: [main, audit/reclassified-entity-fields]
+    paths:
+      - "data/editorial-decisions.json"
+      - "data/entities/**"
+      - "scripts/audit_reclassified_entity_fields.py"
+      - "tests/test_reclassified_entity_fields.py"
+      - ".github/workflows/audit-reclassified-fields.yml"
+  pull_request:
+    paths:
+      - "data/editorial-decisions.json"
+      - "data/entities/**"
+      - "scripts/audit_reclassified_entity_fields.py"
+      - "tests/test_reclassified_entity_fields.py"
+      - ".github/workflows/audit-reclassified-fields.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run read-only regression tests and audit current BSI records
+        run: |
+          python3 -I tests/test_reclassified_entity_fields.py
+          python3 -I scripts/audit_reclassified_entity_fields.py --report /tmp/bsi-reclassified-audit.json
+      - name: Verify no data changed
+        run: |
+          test -z "$(git status --porcelain -- data/entities data/quarantined)"
