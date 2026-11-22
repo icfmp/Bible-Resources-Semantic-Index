@@ -21,7 +21,23 @@
     "review_status": "source_unreviewed",
     "source_id": "person:Mary.5",
     "source_primary_id": "person:Mary.5",
-    "source_sha256": "cce3c86d7e20cd6460f9f346a7ebb159df131d7412e1377e194d8346ddc6bcaa"
+    "source_sha256": "cce3c86d7e20cd6460f9f346a7ebb159df131d7412e1377e194d8346ddc6bcaa",
+    "editorial_field_changes": [
+      {
+        "action": "withhold_inferred_genealogical_identity",
+        "removed_fields": [
+          "partners"
+        ],
+        "reason": "Acts 12:12 gives Mary as John Mark's mother but not any spouse's identity. Remove the source-inferred spouse link, not Mary's evidenced maternity.",
+        "evidence": [
+          "Acts 12:12"
+        ]
+      }
+    ],
+    "editorial_reason": "Withhold disputed or unnamed family identity assignments; preserve source texts, names, original-word witnesses, and all approved source IDs.",
+    "editorial_evidence": [
+      "Acts 12:12"
+    ]
   },
   "explicit_instances": {
     "SBLGNT": [
@@ -50,9 +66,6 @@
     "person:Mark"
   ],
   "only_mentioned_in_apocrypha": false,
-  "partners": [
-    "person:HusbandOfMary"
-  ],
   "primary_id": "person:Mary.5",
   "pronominal_referents": {},
   "references": [
