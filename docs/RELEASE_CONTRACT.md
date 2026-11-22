@@ -117,6 +117,14 @@ rights clearance and no release tag. The ZIP is **not** an approved public
 release, even when technically deterministic and correct. Further source
 license/editorial approval and a distinct release workflow are mandatory.
 
+Native CI independently stages the same entity candidate **twice** from
+the exact source commit and compares both ZIPs and both sidecar JSON receipts
+**byte-for-byte**. The manifest validator additionally refuses source sets
+from the wrong BRSI stream and missing/wrong pinned MACULA/UBS revisions;
+the public Greek projected payload schema is distinct from its richer
+checked-in development baseline. Schema names and original source locks
+cannot be silently changed in a candidate manifest.
+
 No analogous generic ZIP stage exists for checked-in UBS Greek/Hebrew
 development indexes. Their independently source-verified **public allowlist**
 builders remain the only candidate starting point, and a separate release
