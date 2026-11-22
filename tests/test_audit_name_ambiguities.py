@@ -16,13 +16,14 @@ spec.loader.exec_module(audit)
 
 class NameCandidateAuditTests(unittest.TestCase):
     def write(self, root, stem, label, canonical=None, kind="person",
-              hint=False):
+              hint=False, ref="41015040", words=()):
         folder = root / "entities" / ("people" if kind == "person" else "places")
         folder.mkdir(parents=True, exist_ok=True)
         sid = f"{kind}:{stem}"
         record = {
             "id": sid, "type": kind,
-            "key_references": ["41015040"],
+            "key_references": [ref],
+            "explicit_instances": {"sblgnt": [list(words)]} if words else {},
             "bsi": {"canonical_id": canonical or sid, "source_id": sid},
             "localizations": {"eng": {"preferred_label": label}},
         }
@@ -49,6 +50,24 @@ class NameCandidateAuditTests(unittest.TestCase):
             self.assertEqual(group["kind"], "person")
             self.assertEqual(group["candidate_record_count"], 4)
             self.assertEqual(audit.audit(data, sample_limit=0)["sample_groups"], [])
+
+    def test_distinguishing_verse_then_word_without_inventing_prose(self):
+        with tempfile.TemporaryDirectory() as temp:
+            data = Path(temp)
+            self.write(data, "Alice", "Alice", ref="41015040")
+            self.write(data, "Alice.2", "Alice", ref="41015041")
+            self.write(data, "Bob", "Bob", words=["n41015040001"])
+            self.write(data, "Bob.2", "Bob", words=["n41015040002"])
+            self.write(data, "Carol", "Carol", words=["n41015040003"])
+            self.write(data, "Carol.2", "Carol", words=["n41015040003"])
+            outcome = audit.audit(data)
+            self.assertEqual(outcome["ambiguous_display_name_groups"], 3)
+            self.assertEqual(outcome["source_evidence_triage"], {
+                "distinct_source_key_verse_for_triage": 2,
+                "distinct_original_word_for_triage": 2,
+                "not_distinguished_by_key_verses_or_explicit_words": 2,
+            })
+            self.assertEqual(outcome["unresolved_without_reviewed_hint"], 2)
 
     def test_same_source_identity_alias_is_not_a_homonym(self):
         with tempfile.TemporaryDirectory() as temp:
