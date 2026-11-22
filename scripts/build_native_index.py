@@ -25,6 +25,11 @@ policy_spec = importlib.util.spec_from_file_location(
 localization_policy = importlib.util.module_from_spec(policy_spec)
 policy_spec.loader.exec_module(localization_policy)
 
+identity_spec = importlib.util.spec_from_file_location(
+    "brsi_identity_policy", ROOT / "scripts" / "identity_policy.py")
+identity_policy = importlib.util.module_from_spec(identity_spec)
+identity_spec.loader.exec_module(identity_policy)
+
 
 def read(path: Path):
     return json.loads(path.read_text(encoding="utf-8"))
@@ -48,6 +53,7 @@ def build(data: Path = ROOT / "data") -> dict:
             # Reject malformed/unknown editorial holds rather than letting a
             # future reader-facing exporter silently treat them as approved.
             localization_policy.validated_holds(record)
+            identity_policy.validate_identity_hint(record)
             metadata = record.get("bsi", {})
             sid = metadata.get("source_id")
             if not isinstance(sid, str) or sid in seen_source:
