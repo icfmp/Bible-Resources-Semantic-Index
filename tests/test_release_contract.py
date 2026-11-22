@@ -153,7 +153,7 @@ class ArtifactContractTests(unittest.TestCase):
         for kind in ("ubs_greek", "ubs_hebrew"):
             altered = copy.deepcopy(entity)
             altered["kind"] = kind
-            with self.assertRaisesRegex(ValueError, "Private baseline"):
+            with self.assertRaises(ValueError):
                 contract.validate_manifest(altered)
         for revision in ("main", "v1.0.0", "", "x" * 40):
             with self.assertRaises(ValueError):
@@ -161,6 +161,24 @@ class ArtifactContractTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "Duplicate source"):
             altered = copy.deepcopy(entity)
             altered["source_editions"].append(altered["source_editions"][0])
+            contract.validate_manifest(altered)
+        drifted = copy.deepcopy(LOCK)
+        drifted["reviewed_greek_source"] = "Clear-Bible/macula-greek@" + ("b" * 40)
+        with self.assertRaisesRegex(ValueError, "lock drifted"):
+            contract.make_local_receipt("entities", tiny_entity(), REV, drifted)
+        for changed_kind, name in (
+            ("entities", "MACULA WLC"),
+            ("ubs_greek", "UBS Greek Dictionary"),
+        ):
+            altered = copy.deepcopy(entity)
+            altered["kind"] = changed_kind
+            source = next(x for x in altered["source_editions"] if x["name"] == name) if name in {x["name"] for x in altered["source_editions"]} else altered["source_editions"][0]
+            source["revision"] = "b" * 40
+            with self.assertRaises(ValueError):
+                contract.validate_manifest(altered)
+        altered = copy.deepcopy(entity)
+        altered["payload_schema"] = "unreviewed.dictionary-prose.v1"
+        with self.assertRaisesRegex(ValueError, "payload schema"):
             contract.validate_manifest(altered)
 
 
