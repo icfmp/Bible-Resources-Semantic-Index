@@ -68,7 +68,8 @@ python3 -I tests/test_relation_index.py
 python3 -I scripts/audit_entity_relationships.py --fail-on-unresolved
 ```
 
-The output contains `claims` and `by_source`/`by_target` lookup tables.
+The output contains `claims`, `by_source`/`by_target` lookup tables and
+aggregate counts by original source field, including withheld/unclassified\nfields. The latter are *review priorities*, not approval to assign meaning.
 Each claim ID is the SHA-256 of canonical JSON containing the original
 `bsi.source_id`, exact JSON field path (including array offsets) and
 original referenced target ID. Claims remain separate when two records
