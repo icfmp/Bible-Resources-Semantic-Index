@@ -22,7 +22,25 @@
     "review_status": "source_unreviewed",
     "source_id": "place:Syria",
     "source_primary_id": "place:Syria",
-    "source_sha256": "7b4a49ae4e1a34eee9ec0e5987979dd4b64a48e9bf6a5b407334b7b896400858"
+    "source_sha256": "7b4a49ae4e1a34eee9ec0e5987979dd4b64a48e9bf6a5b407334b7b896400858",
+    "editorial_field_changes": [
+      {
+        "action": "remove_inherited_textual_variant_as_geographic_alias",
+        "evidence": [
+          "2 Samuel 8:12 MT reads Aram; some Hebrew manuscripts, LXX and Syriac read Edom (NET textual note, https://classic.net.bible.org/bible.php?book=2Sa&chapter=8)",
+          "1 Chronicles 18:11 has Edom in the parallel passage (NET textual note, https://classic.net.bible.org/bible.php?book=1Ch&chapter=18)",
+          "Historical ACAI source locked at data/source.lock.json, with English alternate_labels=[\"Edom\"]"
+        ],
+        "reason": "Aram/Syria and Edom designate distinct historical regions. The alternate reading Edom for 2 Samuel 8:12 is a text-critical variant, not an unconditional geographic synonym of Syria. Remove only the misleading inherited English label; retain the exact historical source checksum, biblical references, WLC anchors and other localizations.",
+        "removed_localization_values": {
+          "eng": {
+            "alternate_labels": [
+              "Edom"
+            ]
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -74,9 +92,6 @@
       "preferred_label": "Siria"
     },
     "eng": {
-      "alternate_labels": [
-        "Edom"
-      ],
       "descriptions": [
         {
           "article": "place:Syria.2",
