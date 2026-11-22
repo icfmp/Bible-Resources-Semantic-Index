@@ -80,12 +80,19 @@ developed in parallel where no source/data/publication gate is bypassed.
   PRs #12–#18: 15,541 existing structure links were verified with no
   unresolved targets. Dinaite, Syria/Edom and Gadara/Gerasa corrections retain
   original source evidence and lexical ambiguity.
-- [ ] **Review inherited localizations and unresolved identity prose.**
+- [ ] **Retire inherited encyclopedia prose; preserve minimal identity.**
+  [#30](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/30).
+  BRSI is an identity/link index, **not** a multilingual descriptive resource.
+  The first reviewed eight-record pilot has short source-backed identity
+  qualifiers (three distinct Mary records and five reclassified/ambiguous
+  records), and removes 152 ACAI description rows. Continue the generic
+  evidence-preserving cleanup in batches until no encyclopedia paragraphs
+  remain. Do not translate descriptions into dozens of languages or turn
+  a disambiguator into a biography. Retain original ACAI SHA provenance.
+- [ ] **Review ambiguous entity identities and real matching aliases only.**
   [#6](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/6).
-  Review affected multilingual descriptions for Jashar, Perez-Uzzah,
-  Johanan, Shallum.5, and outstanding Gadara textual/demonym variants.
-  The fields marked `withheld_pending_review` remain **unapproved**;
-  no guessed translations or reintroduction of false aliases.
+  Finish the actual Gadara demonym/source-variant link question; distinguish
+  historical place/person identities from unsafe aliases, without guessing.
 - [ ] **Enforce stronger current and future native-data integrity.**
   [#23](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/23).
   Extend schema/reference/lexical source tests. PR #29 added a
@@ -96,9 +103,9 @@ developed in parallel where no source/data/publication gate is bypassed.
 
 **Phase exit:** all distributable fields have evidence or explicit abstention;
 source IDs, manuscript word anchors, versification and original-text variants
-remain traceable; all CI guards green. Inherited descriptions need not be
-forced to completeness to proceed with **identifier-only** packages, provided
-they stay excluded.
+remain traceable; all CI guards green. Entity identities can be identified
+with **small reviewed qualifiers**, not descriptions. No inherited biography
+text may enter a BRSI reader-facing package.
 
 ### Phase 1 — Independent BRSI builds and approved releases (P1)
 
