@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "source_repository": "icfmp/Bible-Resources",
+  "evidence": "GitHub Releases asset metadata SHA-256 digests inspected on 2026-11-22; not recreated or republished",
+  "releases": {
+    "entities": {
+      "tag": "bsi-v0.1.0",
+      "filename": "BSI-0.1.0.zip",
+      "bytes": 1867962,
+      "sha256": "3685b09b157f89c42f7766c4f42cf7d5c9fe1e8cde153c8f633afc7a6d2d4c41",
+      "historical": true
+    },
+    "ubs_greek": {
+      "tag": "bsi-ubs-greek-v0.1.0",
+      "filename": "BSI-UBS-Greek-0.1.0.zip",
+      "bytes": 1217257,
+      "sha256": "eeaf6f1b0dfa7335c522c52374a1d5261412819e074520a455a4822b728eddaf",
+      "historical": true
+    },
+    "ubs_hebrew": {
+      "tag": "bsi-ubs-hebrew-v1.0.0",
+      "filename": "BSI-UBSHebrew-0.9.4-v1.0.0.zip",
+      "bytes": 266358,
+      "sha256": "e448c7e4b6c0cb892789d78b487a3afe3dbe18cfb8c0b13be5fd910deabf640f",
+      "historical": true
+    }
+  }
+}
