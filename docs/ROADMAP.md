@@ -88,8 +88,11 @@ developed in parallel where no source/data/publication gate is bypassed.
   no guessed translations or reintroduction of false aliases.
 - [ ] **Enforce stronger current and future native-data integrity.**
   [#23](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/23).
-  Extend schema/reference/lexical source tests and make future reader-facing
-  exporters fail closed on withheld localization fields.
+  Extend schema/reference/lexical source tests. PR #29 added a
+  source-preserving fail-closed localization policy, tests using real records,
+  and native-build rejection of malformed holds. Future reader-facing
+  exporters must use this access policy; further source-invariant checks
+  remain open.
 
 **Phase exit:** all distributable fields have evidence or explicit abstention;
 source IDs, manuscript word anchors, versification and original-text variants
