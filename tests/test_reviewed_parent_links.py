@@ -43,11 +43,39 @@ class ReviewedFamilyRelationshipTests(unittest.TestCase):
                          {"from": "person:Jethro", "to": "person:Deuel"})
         self.assertIn("Numbers 1:14", " ".join(change["evidence"]))
 
-    def test_new_evidence_does_not_assert_other_unverified_fathers(self):
-        # The unrelated source-only unnamed-husband claim remains for
-        # manual biblical source review, not silently merged or fixed.
-        self.assertIn("person:Mark", entity("HusbandOfMary.2")["offspring"])
-        self.assertEqual(entity("Mark")["father"], "person:HusbandOfMary")
+    def test_unattested_husband_links_are_withheld_without_erasing_mary_mark(self):
+        self.assertNotIn("father", entity("Mark"))
+        self.assertEqual(entity("Mark")["mother"], "person:Mary.5")
+        self.assertIn("person:Mark", entity("Mary.5")["offspring"])
+        for name in ("HusbandOfMary", "HusbandOfMary.2"):
+            placeholder = entity(name)
+            self.assertNotIn("offspring", placeholder)
+            self.assertNotIn("partners", placeholder)
+            self.assertEqual(placeholder["bsi"]["review_status"], "source_unreviewed")
+            self.assertEqual(placeholder["explicit_instances"], {})
+        for name in ("Mary.2", "Mary.5"):
+            self.assertNotIn("partners", entity(name))
+        self.assertEqual(entity("Mary.2")["bsi"]["identity_hint"]["qualifier"],
+                         "mother of James the younger and Joses")
+
+    def test_source_ambiguous_maternal_links_are_not_exported_as_facts(self):
+        for name in ("Jesher", "Shobab.2", "Ardon"):
+            son = entity(name)
+            self.assertEqual(son["father"], "person:Caleb.2")
+            self.assertNotIn("mother", son)
+            self.assertEqual(son["references"], ["13002018"])
+            self.assertEqual(son["bsi"]["review_status"], "source_unreviewed")
+        self.assertNotIn("offspring", entity("Azubah.2"))
+        self.assertEqual(entity("Jerioth")["references"], ["13002018"])
+
+    def test_distinct_zimmah_genealogies_remain_witnesses_not_merged_parent(self):
+        self.assertNotIn("father", entity("Zimmah"))
+        self.assertNotIn("offspring", entity("Jahath.2"))
+        self.assertNotIn("offspring", entity("Shimei.2"))
+        self.assertEqual(entity("Zimmah")["references"], ["13006005", "13006027"])
+        self.assertEqual(entity("Zimmah")["bsi"]["review_status"], "source_unreviewed")
+        self.assertEqual(entity("Zimmah")["explicit_instances"]["wlc"],
+                         [["o130060050061"], ["o130060270041"]])
 
 
 if __name__ == "__main__":
