@@ -34,7 +34,15 @@
     "review_status": "editorially_reviewed",
     "source_id": "person:Jashar",
     "source_primary_id": "person:Jashar",
-    "source_sha256": "51655d63ae724b48360e0b96488de31f170fa2e34cf70d22ee4e8dd1c7b504f8"
+    "source_sha256": "51655d63ae724b48360e0b96488de31f170fa2e34cf70d22ee4e8dd1c7b504f8",
+    "inherited_localizations": {
+      "status": "withheld_pending_review",
+      "fields": [
+        "descriptions"
+      ],
+      "reason": "Inherited biographies describe a male person, whereas the reviewed entity is a literary work; localization prose remains source evidence only.",
+      "source": "acai"
+    }
   },
   "explicit_instances": {
     "wlc": [
