@@ -98,11 +98,11 @@
           "type": "string",
           "minLength": 10
         },
-        "no_original_text": {
-          "const": true
-        },
         "excluded_keyterms": {
           "const": true
+        },
+        "redistribution_cleared": {
+          "type": "boolean"
         }
       }
     },
