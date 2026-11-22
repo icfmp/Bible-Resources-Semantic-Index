@@ -14,6 +14,8 @@ nor a SWORD module.
 
 **Current milestones and issues:** [BRSI roadmap](docs/ROADMAP.md) — also records which UBS research evidence is retained versus reproducibly regenerated.
 
+**Phase 3 source-only relation model:** [versioned reversible candidate links](docs/RELATION_MODEL.md) — inherited graph fields remain unreviewed and no new public relations pack is approved.
+
 **Phase 1 release safety:** [versioned artifact and consumer contract](docs/RELEASE_CONTRACT.md) — local integrity receipts are not publication approvals and checked-in lexical baselines are not public distributions.
 
 ## Current sources of truth
