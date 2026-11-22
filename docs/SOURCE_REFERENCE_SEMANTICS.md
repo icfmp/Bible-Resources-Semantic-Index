@@ -39,6 +39,19 @@ general reference list, and **118** marked biblical despite lacking both
 general references and explicit original-word anchors. This is a **review
 queue, not a list of 477/118 proven defects**.
 
+## Exact identifier bytes, not visual similarity
+
+MACULA original-word IDs and ACAI ORG BCV8 verse IDs are **ASCII digit**
+sequences with their edition-pinned prefix/width. Unicode lookalike digits
+(e.g. Arabic-Indic or superscript numerals) are never interchangeable with
+original source IDs, even though some general-purpose programming-language
+digit predicates accept them.
+
+The source-link finalizer therefore rejects non-ASCII digits and non-string
+word IDs before constructing any reverse lookup. This is a *byte/identity*
+check only: it does not renumber verses, restore absent textual readings,
+reassign original-language token references or normalize source punctuation.
+
 ## Technical invariants
 
 The native builder uses `scripts/reference_policy.py` to reject malformed
