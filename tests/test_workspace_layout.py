@@ -30,6 +30,36 @@ class WorkspaceTests(unittest.TestCase):
             self.assertNotIn("publish_private_work_snapshot.sh", contents, workflow)
             self.assertNotIn("icfmp/ACAI", contents, workflow)
 
+    def test_every_active_workflow_is_nonpublishing_and_readonly(self):
+        """A local regression guard, not a substitute for GitHub permissions."""
+        import re
+
+        workflow_dir = ROOT / ".github" / "workflows"
+        workflows = sorted((*workflow_dir.glob("*.yml"), *workflow_dir.glob("*.yaml")))
+        self.assertTrue(workflows, "Missing source-pinned workflows")
+        forbidden_patterns = {
+            "write access": r"(?mi)^\\s*contents\\s*:\\s*write(?:\\s|$)",
+            "release event": r"(?mi)^\\s*release\\s*:",
+            "tag trigger": r"(?mi)^\\s*tags\\s*:",
+            "artifact upload": r"(?i)actions/upload-artifact",
+            "GitHub release action": r"(?i)(?:softprops/action-gh-release|ncipollo/release-action|actions/create-release)",
+            "release command": r"(?i)\\bgh\\s+release\\s+create\\b",
+            "git push command": r"(?i)\\bgit\\s+push\\b",
+        }
+        for path in workflows:
+            with self.subTest(workflow=path.name):
+                content = path.read_text(encoding="utf-8")
+                executable = "\\n".join(
+                    line for line in content.splitlines()
+                    if not line.lstrip().startswith("#")
+                )
+                # Permissions are deliberately read-only even for manual jobs;
+                # no tag/release/CI-artifact automation is authorized.
+                self.assertRegex(content, r"(?m)^permissions:\\s*$")
+                self.assertRegex(content, r"(?m)^\\s+contents:\\s*read\\s*$")
+                for name, pattern in forbidden_patterns.items():
+                    self.assertNotRegex(executable, pattern, (path, name))
+
     def test_current_docs_and_scripts_have_no_removed_monorepo_root(self):
         # The historical V0_1/RELEASE_READINESS notes intentionally retain
         # exact old commands and tag URLs as provenance. Current entrypoints
