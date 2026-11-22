@@ -71,14 +71,22 @@ def build(data: Path = ROOT / "data") -> dict:
                 for fields in localized.values()
             ):
                 raise ValueError(f"Encyclopedia descriptions forbidden in current BRSI record: {path}")
+            # An identity index must not retain inherited encyclopedia prose,
+            # even if a caller runs the native builder without the offline CI.
+            if "descriptions" in record:
+                raise ValueError(f"Encyclopedia descriptions forbidden in current BRSI record: {path}")
             # Only the working English identity label belongs to this index.
-            # Other language display names stay recoverable from pinned ACAI
-            # instead of being duplicated in 19 parallel BRSI fields.
+            # Other language display names stay recoverable from pinned ACAI.
             if any(language != "eng" for language in localized):
                 raise ValueError(f"Redundant translated label not permitted in BRSI: {path}")
-            # Reject malformed/unknown editorial holds rather than letting a
-            # future reader-facing exporter silently treat them as approved.
-            localization_policy.validated_holds(record)
+            # Reject obsolete prose holds and foreign-language selectors as
+            # well as malformed/unknown holds; legacy import pruners no longer
+            # run as part of the maintained build.
+            withheld = localization_policy.validated_holds(record)
+            if "descriptions" in withheld:
+                raise ValueError(f"Obsolete inherited encyclopedia prose hold in {path}")
+            if any("." in selector and not selector.startswith("eng.") for selector in withheld):
+                raise ValueError(f"Redundant translated localization hold in {path}")
             identity_policy.validate_identity_hint(record)
             reference_policy.validate_reference_fields(record)
             offspring_policy.validate_offspring_targets(record)
@@ -103,6 +111,11 @@ def build(data: Path = ROOT / "data") -> dict:
                     raise ValueError(f"BSI-native record must be reviewed: {path}")
                 native_source_ids.add(sid)
             elif origin in (None, "acai"):
+                english = localized.get("eng")
+                if (not isinstance(english, dict)
+                        or not isinstance(english.get("preferred_label"), str)
+                        or not english["preferred_label"].strip()):
+                    raise ValueError(f"Imported entity lacks English working identity label: {path}")
                 if category in NATIVE_CATEGORIES:
                     raise ValueError(f"New BSI category cannot masquerade as ACAI: {path}")
                 if sid != f"{expected_prefix}:{path.stem}":
