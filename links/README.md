@@ -10,6 +10,13 @@ content is copied into these mappings. The existing UBS Greek/Hebrew lexical
 bridges are separate source-specific research resources; their entries are
 **not** automatically BRSI person/place/term cross-references.
 
+## Candidate source assessment
+
+The historical International Standard Bible Encyclopedia has a [V1 source/edition
+feasibility assessment](ISBE_CANDIDATE_REVIEW.md). It identifies a stable
+article-key mechanism and outstanding rights and source-matching gates;
+**no article-to-entity mapping has been approved or added**.
+
 ## One file per independently verified resource edition
 
 ```text
