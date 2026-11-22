@@ -61,6 +61,8 @@ def build(data: Path) -> dict:
     seen_claim_ids = set()
     by_source, by_target = defaultdict(list), defaultdict(list)
     statuses = Counter()
+    field_counts = Counter()
+    withheld_fields = Counter()
     restricted_count = 0
     for source_id, (source_path, record) in sorted(records.items()):
         metadata = record.get("bsi", {})
@@ -109,6 +111,9 @@ def build(data: Path) -> dict:
             by_source[source_id].append(claim_id)
             by_target[target].append(claim_id)
             statuses[status] += 1
+            field_counts[source_field] += 1
+            if status == "withheld_unclassified":
+                withheld_fields[source_field] += 1
 
     if len(claims) + restricted_count != audit["structured_relationships"]:
         raise ValueError("A source relation disappeared during projection")
@@ -128,6 +133,8 @@ def build(data: Path) -> dict:
             "excluded_restricted_keyterm_claims": restricted_count,
             "source_unreviewed": statuses["source_unreviewed"],
             "withheld_unclassified": statuses["withheld_unclassified"],
+            "by_source_field": dict(sorted(field_counts.items())),
+            "unclassified_by_field": dict(sorted(withheld_fields.items())),
         },
         "claims": claims,
         "by_source": dict(sorted(by_source.items())),
