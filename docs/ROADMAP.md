@@ -224,9 +224,14 @@ it is explicitly deferred to product V2.
 
 - [ ] **Specify offline semantic packs and application contract.**
   [#26](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/26).
-  Stable downloadable pack format, version compatibility, FR/EN fallback,
-  checksums, reader-facing uncertainty and offline failure handling.
-  Implementation in `icfmp/Bible` requires its own authorized task.
+  The [V1 consumption guide](V1_CONSUMPTION.md) documents the **three existing
+  separately released ZIPs**, practical source-word keys, uncertainty and
+  edition-specific lexical semantics. A read-only ZIP inspector and
+  synthetic offline failure tests check the pinned byte hashes and public
+  payload shapes without downloading or publishing any assets. These
+  establish technical consumption feasibility, **not application integration**.
+  Remaining: separately approved future pack/update design, locale/source
+  licensing checks and a later explicitly authorized `icfmp/Bible` task.
 
 **Phase exit:** tested consumer fixtures and a compatible approved release
 contract. No implied application release or feature availability.
