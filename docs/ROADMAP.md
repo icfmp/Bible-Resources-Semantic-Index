@@ -146,22 +146,44 @@ remain traceable; all CI guards green. Entity identities can be identified
 with **small reviewed qualifiers**, not descriptions. No inherited biography
 text may enter a BRSI reader-facing package.
 
-### Phase 1 — Independent BRSI builds and approved releases (P1)
+### Phase 1 — Source-pinned builds and a safe versioned distribution contract (P1)
 
-- [ ] **Close remaining standalone migration acceptance items.**
+- [x] **Complete standalone BRSI migration acceptance.**
   [#1](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/1).
-  Reconcile stale documentation and checkboxes, record exact current-build
-  integrity receipts and independent source-pinned Greek/Hebrew validations,
-  and verify code/data rights boundaries.
-- [ ] **Specify and test the BRSI → Bible-Resources release contract.**
+  [PRs #58](https://github.com/icfmp/Bible-Resources-Semantic-Index/pull/58)
+  and [#61](https://github.com/icfmp/Bible-Resources-Semantic-Index/pull/61)
+  reconciled current paths, tested root-level instructions and preserved
+  historical monorepo commands/release URLs as explicitly historical.
+  All source-pinned build workflows and native tests are independently green.
+- [x] **Define, validate and test the BRSI producer/consumer contract.**
   [#21](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/21).
-  Immutable versioned artifacts, provenance/attribution manifest, schema
-  version, SHA-256 and byte sizes, independently verified consumption.
-  Historical release URLs remain unchanged. **Owner approval is required
-  separately before publication**, and no automatic republishing is enabled.
+  [PR #55](https://github.com/icfmp/Bible-Resources-Semantic-Index/pull/55)
+  added strict v1 manifests, source-edition rights metadata and a fail-closed
+  SHA-256/size/tag/version/producer-commit verifier. [PR #56](https://github.com/icfmp/Bible-Resources-Semantic-Index/pull/56)
+  stages a *nonpublishing* entity ZIP; [PR #60](https://github.com/icfmp/Bible-Resources-Semantic-Index/pull/60)
+  stages it **twice, byte-for-byte identically**, with source-kind guards.
+  Checked-in UBS development indexes receive **local integrity receipts
+  only**, never automatic public ZIPs.
+- [x] **Independently verify the historical public-scope projections.**
+  [PR #57](https://github.com/icfmp/Bible-Resources-Semantic-Index/pull/57)
+  reconstructed both Greek and Hebrew source-pinned public-scope ZIPs;
+  [PR #59](https://github.com/icfmp/Bible-Resources-Semantic-Index/pull/59)
+  requires byte-for-byte agreement with the **original published**
+  GitHub release SHA-256/size locks in `release/historical-assets.lock.json`.
+  The three original Bible-Resources releases and tags remain unchanged.
+- [ ] **Release new BRSI artifacts and implement the consuming repository.**
+  [#62](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/62).
+  **Explicit owner approval and a separate reviewed release are required.**
+  Source-field rights review, source-specific public projection verification,
+  independently pinned consumption in Bible-Resources and any Bible app
+  integration remain **not performed**. Do not activate auto-publication,
+  copy a moving branch or reinterpret historical v0.1/v1.0 approvals.
 
-**Phase exit:** a reproducible, validated *candidate* build and pinned
-consumer protocol. **Candidate build ≠ authorization to release.**
+**Phase 1 technical exit achieved:** independently pinned source builds, a
+verified deterministic **unapproved** entity candidate and a tested
+producer/consumer manifest contract. The actual publish/consume gate
+[#62](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/62)
+remains open by design. **Built ≠ rights-cleared ≠ owner-approved ≠ published.**
 
 ### Phase 2 — Maintainable repository (P2)
 
