@@ -36,12 +36,12 @@ class WorkspaceTests(unittest.TestCase):
 
         workflow_dir = ROOT / ".github" / "workflows"
         scripts = re.compile(
-            r"(?<![\\w/])(?:scripts|links/dictionaries/ubs-(?:greek|hebrew))/"
-            r"[A-Za-z0-9_/-]+\\.py\\b"
+            r"(?<![\w/])(?:scripts|links/dictionaries/ubs-(?:greek|hebrew))/"
+            r"[A-Za-z0-9_/-]+\.py\b"
         )
         for workflow in sorted(workflow_dir.glob("*.yml")):
             source = workflow.read_text(encoding="utf-8")
-            executable = "\\n".join(
+            executable = "\n".join(
                 line for line in source.splitlines()
                 if not line.lstrip().startswith("#")
             )
