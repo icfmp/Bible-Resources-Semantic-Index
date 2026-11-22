@@ -112,7 +112,7 @@ imported or leaked into a public projection. Runner-local output is not
 uploaded. The source-lock license is carried forward for investigation;
 this does **not** grant rights to republish the derived data.
 
-## What must be established before v2 or release
+## What must be established before a future product V2 release
 
 1. Resolve the full set of inherited source-field kinds and decide, with
    documented source evidence and rights, which deserve reviewed predicates.
