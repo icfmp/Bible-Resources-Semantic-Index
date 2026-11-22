@@ -106,22 +106,18 @@ developed in parallel where no source/data/publication gate is bypassed.
   index byte-for-byte unchanged. CI and native builder now prevent accidental
   reintroduction of redundant names, without barring independently reviewed
   cross-resource links.
-- [x] **Review V1 identity contradictions and explicitly abstain from unsupported aliases or kinship.**
-  [#6](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/6).
-  PRs #49–#53 corrected source errors and established all 22 valid
-  collective descendant targets. PR #92 separated the genealogically
-  distinct Lud and Ludim without deciding later ethnic names. PR #95
-  withheld inferred unnamed-father/mother/spouse claims, Azubah/Jerioth
-  maternal antecedents and mixed Zimmah parent claims, and stripped
-  cross-city textual-variant aliases. Exact original-word witnesses,
-  source IDs, source hashes and all biblical references were preserved.
-  [V1 evidence dispositions](V1_IDENTITY_REVIEW.md) distinguish corrections
-  from unresolved source questions; the V1 entity projection is tested not
-  to export inherited parent/offspring/spouse fields or aliases.
-  **Safe abstention, not exhaustive identification**, closes this
-  V1 contradiction workstream. Further original-text historical identity
-  research is non-blocking until a specific independently evidenced case
-  requires review. Publication still requires #62 approval.
+- [ ] **Resolve outstanding source identity and textual-variant problems.**
+  [#6](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/6)
+  **reopened**: PRs #92 and #95 corrected some source contradictions and
+  withheld unverified relationships, but did not finish the source-based
+  adjudication of Azubah/Jerioth, the two Zimmah genealogies, unanchored
+  HusbandOfMary placeholders, Gadara/Gerasa/Gergesa manuscript/demonym
+  claims or all ten homonym candidates. Review the actual pinned sources,
+  repair concrete errors with reversible receipts and test source mappings.
+  Legitimately undecidable evidence must receive a case-specific justified
+  editorial disposition, not be merely relabeled nonblocking. See
+  [current issue acceptance](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/6)
+  and [prior source triage](V1_IDENTITY_REVIEW.md).
 - [x] **Build a read-only triage for same-name identities.**
   PRs [#44–#46](https://github.com/icfmp/Bible-Resources-Semantic-Index/pull/46)
   detected **641 candidate homonym groups / 2,228 source records**.
@@ -131,29 +127,24 @@ developed in parallel where no source/data/publication gate is bypassed.
   These are *review priorities, not approved identifications*. The exact
   ten source IDs and evidence pointers are tracked in
   [#6](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/6).
-- [x] **Enforce stronger current and future native-data integrity.**
-  [#23](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/23).
-  Source and identity validation is part of native builds and offline CI:
-  strict JSON/provenance/layout, stable historical inventory without a
-  ceiling on new independently reviewed native works, typed current and
-  canonical identities, existing canonical targets, source-edition-locked
-  original-word/BCV8 keys, reference-qualification abstentions and
-  fail-closed inherited localization holds. The exact-word reader resolver
-  preserves ambiguous candidates and rejects mismatched editions, Unicode
-  lookalikes and unapproved context senses. PRs #29, #48, #53, #84,
-  #86, #91, #93, #94 and #96 contain the substantive regression gates.
-  **Scope boundary:** 477 records with distinct key/general reference
-  lists and 118 without explicit mention witnesses remain source audit
-  candidates, *not format failures or invented references*. Unattested
-  tokens and unresolved textual variants remain identified holds;
-  release rights/editorial approval remain separate under #62.
-  No silent source correction or source-word reassignment is permitted.
+- [ ] **Resolve source-integrity audit findings, beyond structural checks.**
+  [#23](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/23)
+  **reopened**: PRs #29, #48, #53, #84, #86, #91, #93, #94 and #96
+  implemented real fail-closed format, provenance, reference and resolver
+  validation. **Still not done:** investigate all 477 source records with
+  key verses outside general references; 118 biblically marked records
+  without general references or explicit word witnesses; edition-specific
+  original-word mappings, source absences and actual reverse-lookup cases.
+  Classify and correct proved errors, test the corrections, document valid
+  source editorial differences and any irresolvable uncertainty. Do not
+  impose fake subset rules, invent verses, or auto-approve senses.
 
-**Phase exit:** all distributable fields have evidence or explicit abstention;
-source IDs, manuscript word anchors, versification and original-text variants
-remain traceable; all CI guards green. Entity identities can be identified
-with **small reviewed qualifiers**, not descriptions. No inherited biography
-text may enter a BRSI reader-facing package.
+**Phase exit (not yet achieved):** source-identity and source-link anomalies
+are investigated and corrected where evidence supports a correction, genuine
+source ambiguities receive case-specific justified editorial dispositions, and
+all related source-locked CI remains green. Verified input schemas and safe
+output abstentions are necessary safeguards, **not substitutes for resolving
+the underlying issues**. No inherited biography may enter reader-facing packs.
 
 ### Phase 1 — Source-pinned builds and a safe versioned distribution contract (P1)
 
@@ -245,59 +236,20 @@ it is explicitly deferred to product V2.
 **Phase exit:** tested consumer fixtures and a compatible approved release
 contract. No implied application release or feature availability.
 
-### Post-V1 follow-up from completed identity and integrity issues
+### Outstanding source work — do not silently defer unresolved V1 issues
 
-The V1 gates in [#6](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/6)
+Issues [#6](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/6)
 and [#23](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/23)
-are **closed for their bounded acceptance scope**, not because every source
-identity, reference and original-language witness has been independently
-adjudicated. Preserve these concrete follow-ups without reopening them as
-unbounded V1 blockers:
+were **reopened at the owner's request** because recording uncertainty or
+hiding unsafe fields does not mean the data problem has been resolved.
+Their specific genealogical, identity, source-word and reference audits
+are active tasks above. Earlier PRs #95–#97 preserve useful evidence,
+reversible changes and test protections, but **do not close these tasks**.
 
-- [ ] **Historical people and family relationships (editorial research).**
-  Revisit the Azubah/Jerioth maternal antecedent in 1 Chr 2:18; the two
-  Zimmah/Jahath/Shimei genealogical presentations in 1 Chr 6; and whether
-  either unnamed `HusbandOfMary*` source placeholder is independently
-  identifiable. Do not reinstate withheld parent/spouse links or remove a
-  source identity without actual edition-specific evidence. Receipts and
-  retained word/verse witnesses: [V1 identity review](V1_IDENTITY_REVIEW.md),
-  PR #95.
-- [ ] **Place names and textual variants (editorial research).** Examine
-  Gadara/Gerasa/Gergesa regional demonyms and competing Gospel readings
-  against exact Greek editions/manuscript witnesses. Distinguish a city,
-  region, demonym and textual variant; do not merge city IDs, assign the
-  miracle site, or promote alternate labels without proof. Revisit later
-  uses of Lud/Ludim only with source-specific evidence; Gen 10 and 1 Chr 1
-  distinctions remain protected (PRs #92, #95).
-- [ ] **Unresolved homonyms and minimally anchored source identities.**
-  Re-examine the ten specifically inventoried ambiguity candidates,
-  including Judah/Hodaviah overlaps, the second woman in 1 Kgs 3,
-  unanchored or postbiblical places, and unnamed-husband placeholders.
-  The read-only `scripts/audit_name_ambiguities.py` inventory contains
-  641 candidate groups, *not* 641 proven errors. Keep source IDs stable and
-  source-unreviewed unless a case is individually supported; consult
-  [V1 identity review](V1_IDENTITY_REVIEW.md) and closed #6.
-- [ ] **Reference shape and unattested mention audit (source investigation).**
-  Review the **477** imported entities whose `key_references` include
-  verses outside `references`, and the **118** biblically marked records
-  without general verse/explicit-original-word witnesses. These are triage
-  counts, **not** an instruction to force the lists to agree or to add
-  unsupported word IDs or references. Retain distinct reference-field
-  semantics and precise original source provenance (#23, PRs #47–#48).
-- [ ] **Deeper lexical source attestation and new-record support (as needed).**
-  Extend checks to additional independently pinned editions and new native
-  record kinds *when introduced*, including negative fixtures, corpus
-  inventory comparisons, all real source-absence exceptions and consumers'
-  fail-closed behavior. The existing source-pinned, type-checked technical
-  contract is complete for V1; it does **not** confer editorial approval
-  on each lemma, word-sense match or historical identity (#23, #27).
-
-**Trigger and ownership:** open a *new narrowly scoped issue* when a
-specific source edition, factual contradiction, reader-facing consumer or
-new kind justifies the work. Record primary evidence, field-level reversible
-changes and CI; do not silently edit a biblical witness. None of the above
-is permission to import restricted data, publish, or change `icfmp/Bible`.
-The future release gate remains [#62](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/62).
+Follow-up belongs in a later version only when the underlying case has been
+investigated, any demonstrable error corrected, and a specific source
+limitation or future-dependent feature identified. Such deferrals must be
+explicitly justified by the owner. Otherwise keep the issue open.
 
 ### Deferred and explicitly excluded work
 
