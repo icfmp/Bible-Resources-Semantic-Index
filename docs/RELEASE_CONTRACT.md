@@ -99,6 +99,13 @@ tag. Local receipts are deterministic for the same input bytes, exact commit
 and source lock.
 
 
+**Product V1 boundary:** the experimental semantic relations prototype
+(`scripts/build_relation_index.py`, `relations/schema.v1.json`) is
+**deferred to V2**. It must not be included in the V1 entity ZIP,
+manifest, public API, approved release conditions or Bible application.
+A `schema_version: 1` on the experimental relation format does **not**
+mean product V1. Its ongoing offline tests are internal quality checks only.
+
 ### Deterministic entity-only ZIP candidate
 
 The current native entity profile can additionally be staged into an

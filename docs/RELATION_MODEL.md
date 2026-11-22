@@ -1,7 +1,15 @@
-# Source-backed entity relations — development v1
+# Semantic entity graph — deferred to product V2
 
-**Status: internal candidate projection only; no approved semantic graph,
-public release, Bible integration or added relation evidence.**
+**Decision (2026-11-22): the semantic relations graph is a V2 feature.
+No further graph development or integration is required for V1.**
+
+**Status: preserved internal research prototype only; no approved semantic
+graph, V1 pack, V1 release gate, Bible integration or added relation evidence.**
+
+The existing `relations/schema.v1.json` means version 1 of the **experimental
+relation file format**, not product BRSI V1. Retain the prototype and its
+regression tests as technical groundwork; do not promote its inherited claims
+to a V1 public or reader-facing feature.
 
 This document defines the first *read-only* contract for BRSI entity relations
 ([issue #24](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/24)).
@@ -104,7 +112,7 @@ imported or leaked into a public projection. Runner-local output is not
 uploaded. The source-lock license is carried forward for investigation;
 this does **not** grant rights to republish the derived data.
 
-## What must be established before v2 or release
+## What must be established before a future product V2 release
 
 1. Resolve the full set of inherited source-field kinds and decide, with
    documented source evidence and rights, which deserve reviewed predicates.

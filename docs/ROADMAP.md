@@ -207,17 +207,16 @@ no obsolete active workflows, source-pinned rebuilds remain reproducible.
 - [x] **Permit new independently evidenced BRSI entity records.**
   PR #11 supports source-provenanced new identities without replaying ACAI
   patches or losing imported source IDs.
-- [ ] **Specify and validate a semantic relationship model.**
-  [#24](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/24).
-  Define predicates, source vs editorial claims, ambiguity, verse and exact
-  original-word evidence, and deterministic reverse lookups.
 - [ ] **Add reviewed external dictionary/encyclopedia links.**
   [#25](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/25).
   Pin source editions/identifiers and field-specific rights; prefer existing
   standards and abstain when mapping is ambiguous.
 
-**Phase exit:** independently documented and tested relations; no invented
-person/place identities, unlicensed articles, or automatically promoted senses.
+**Phase exit for current V1-related work:** independently documented, tested
+and source-pinned external resource references; no invented person/place
+identities, unlicensed articles or automatically promoted senses.
+The semantic entity-to-entity graph is **not** a Phase 3/V1 exit criterion;
+it is explicitly deferred to product V2.
 
 ### Phase 4 — Prepare Bible application consumption (P3, later)
 
@@ -231,6 +230,18 @@ person/place identities, unlicensed articles, or automatically promoted senses.
 contract. No implied application release or feature availability.
 
 ### Deferred and explicitly excluded work
+
+- [ ] **V2 ONLY — semantic entity relations and graph.**
+  [#24](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/24).
+  PRs #81–#82 established an **internal, unapproved** proof of concept:
+  reversible inherited source-field links and explicit uncertainty/contradiction
+  holds. This work is **deferred until after V1**. Do not add a relation graph
+  to the V1 package, public API, Bible application UI or release criteria.
+  Only V1 identity, exact source-word/verse links, external resource pointers
+  and their rights/integrity gates are in scope. The internal schema's
+  `schema_version: 1` is a format version, **not** a BRSI product-V1 feature.
+  Revisit graph modeling, individual relation review and licensing for V2
+  under separate authorization.
 
 - [ ] **UBS Greek/Hebrew contextual-sense research:** [#27](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/27).
   Source-based, small independently verified pilots only. The Hebrew

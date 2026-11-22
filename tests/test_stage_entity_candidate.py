@@ -53,6 +53,10 @@ class LocalEntityCandidateTests(unittest.TestCase):
         manifest = stage.verify_candidate(first, one)
         self.assertEqual(manifest["publication"]["status"], "candidate_unapproved")
         self.assertEqual(set(manifest["files"]), stage.CONTENTS - {"manifest.json"})
+        self.assertFalse(any("relation" in member.lower()
+                             for member in manifest["files"]))
+        self.assertNotIn("relations.json", stage.CONTENTS)
+        self.assertNotIn("relation-index.json", stage.CONTENTS)
         self.assertEqual(manifest["source_editions"], one["source_editions"])
         with zipfile.ZipFile(io.BytesIO(first)) as z:
             self.assertEqual(z.read(stage.PREFIX + "index.json"), raw)
