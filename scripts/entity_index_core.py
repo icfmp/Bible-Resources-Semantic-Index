@@ -56,10 +56,12 @@ def finalize_index(entries: list, quarantined: list, source_lock: dict,
                                 or digits < 8):
                             raise ValueError(
                                 f"Invalid original word ID digit count for {standard_corpus}")
-                        if not word.startswith(expected_prefix):
+                        if not isinstance(word, str) or not word.startswith(expected_prefix):
                             raise ValueError(
                                 f"{entry['id']}: {corpus} word prefix incompatible: {word!r}")
-                        if len(word) != digits + len(expected_prefix) or not word[len(expected_prefix):].isdigit():
+                        if (len(word) != digits + len(expected_prefix)
+                                or not word[len(expected_prefix):].isascii()
+                                or not word[len(expected_prefix):].isdigit()):
                             raise ValueError(
                                 f"{entry['id']}: {corpus} malformed original word ID: {word!r}")
                         candidates[f"{standard_corpus}:{word}"].add((entry["id"], field))
@@ -96,6 +98,7 @@ def finalize_index(entries: list, quarantined: list, source_lock: dict,
                 or not isinstance(digits, int) or isinstance(digits, bool)
                 or len(word_id) != len(prefix) + digits
                 or not word_id.startswith(prefix)
+                or not word_id[len(prefix):].isascii()
                 or not word_id[len(prefix):].isdigit()):
             raise ValueError(f"Invalid source-unattested word ID: {word_id!r}")
         key = f"{corpus}:{word_id}"
@@ -170,7 +173,7 @@ def finalize_index(entries: list, quarantined: list, source_lock: dict,
             evidence = context.get("evidence")
             classification = context.get("classification")
             if (not isinstance(verse, str)
-                    or len(verse) != 8 or not verse.isdigit()
+                    or len(verse) != 8 or not verse.isascii() or not verse.isdigit()
                     or classification not in permitted
                     or not isinstance(explanation, str) or not explanation.strip()
                     or not isinstance(evidence, list) or len(evidence) < 2
@@ -182,7 +185,7 @@ def finalize_index(entries: list, quarantined: list, source_lock: dict,
             if equivalent is not None:
                 if (classification != "alternate_verse_number_for_final_benediction"
                         or not isinstance(equivalent, str)
-                        or len(equivalent) != 8 or not equivalent.isdigit()
+                        or len(equivalent) != 8 or not equivalent.isascii() or not equivalent.isdigit()
                         or equivalent == verse or equivalent[:5] != verse[:5]):
                     raise ValueError(f"Invalid verse-number comparison: {verse}")
             if (classification == "alternate_verse_number_for_final_benediction"
@@ -201,7 +204,7 @@ def finalize_index(entries: list, quarantined: list, source_lock: dict,
                 f"{sorted(set(reported_verses) - set(context_by_verse))}")
     unattested_verses = {}
     for verse in sorted(reported_verses):
-        if not isinstance(verse, str) or len(verse) != 8 or not verse.isdigit():
+        if not isinstance(verse, str) or len(verse) != 8 or not verse.isascii() or not verse.isdigit():
             raise ValueError(f"Malformed source-absent verse ID: {verse!r}")
         claims = [entry["id"] for entry in entries if verse in entry["references"]]
         if not claims:
