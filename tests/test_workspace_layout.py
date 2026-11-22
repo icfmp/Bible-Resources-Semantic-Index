@@ -20,6 +20,16 @@ class WorkspaceTests(unittest.TestCase):
         self.assertTrue((ROOT / "scripts" / "compile_index.py").is_file())
         self.assertTrue((ROOT / "data" / "editorial-decisions.json").is_file())
 
+    def test_source_pinned_lexical_workflows_never_publish_ci_evidence(self):
+        for workflow in ("bsi-ubs-greek.yml", "bsi-ubs-hebrew.yml"):
+            path = ROOT / ".github" / "workflows" / workflow
+            self.assertTrue(path.exists(), workflow)
+            contents = path.read_text(encoding="utf-8")
+            self.assertNotIn("actions/upload-artifact", contents, workflow)
+            self.assertNotIn("gh release create", contents, workflow)
+            self.assertNotIn("publish_private_work_snapshot.sh", contents, workflow)
+            self.assertNotIn("icfmp/ACAI", contents, workflow)
+
     def test_crosswalk_schema_is_narrow_and_review_based(self):
         schema = json.loads((ROOT / "links" / "schema.v1.json").read_text(encoding="utf-8"))
         self.assertEqual(schema["properties"]["schema_version"]["const"], 1)
