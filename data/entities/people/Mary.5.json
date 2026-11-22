@@ -31,7 +31,12 @@
         "reason": "Acts 12:12 gives Mary as John Mark's mother but not any spouse's identity. Remove the source-inferred spouse link, not Mary's evidenced maternity.",
         "evidence": [
           "Acts 12:12"
-        ]
+        ],
+        "removed_relation_values": {
+          "partners": [
+            "person:HusbandOfMary"
+          ]
+        }
       }
     ],
     "editorial_reason": "Withhold disputed or unnamed family identity assignments; preserve source texts, names, original-word witnesses, and all approved source IDs.",
