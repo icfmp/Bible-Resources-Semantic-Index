@@ -89,6 +89,7 @@ def validate(document: dict, active_ids: set[str], schema: dict) -> dict:
     if not isinstance(links, list):
         raise ValueError("links must be a list")
     seen_links = set()
+    seen_reviewed_pairs = set()
     for i, link in enumerate(links):
         label = f"links[{i}]"
         _fields(link, rule, label)
@@ -105,6 +106,10 @@ def validate(document: dict, active_ids: set[str], schema: dict) -> dict:
         duplicate = (identity, entry, relation)
         if duplicate in seen_links:
             raise ValueError(f"Duplicate reviewed external mapping: {duplicate}")
+        pair = (identity, entry)
+        if pair in seen_reviewed_pairs:
+            raise ValueError(f"Conflicting reviewed relations for external entry: {pair}")
+        seen_reviewed_pairs.add(pair)
         seen_links.add(duplicate)
 
     abstentions = document.get("abstentions", [])
