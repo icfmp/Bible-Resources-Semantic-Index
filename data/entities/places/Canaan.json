@@ -26,6 +26,22 @@
   ],
   "bsi": {
     "canonical_id": "place:Canaan",
+    "editorial_field_changes": [
+      {
+        "action": "correct_inherited_reference",
+        "evidence": [
+          "Hosea 12:7",
+          "https://classic.net.bible.org/bible.php/d/verse.php?book=Hos&chapter=12&verse=7",
+          "https://biblehub.com/text/hosea/12-7.htm"
+        ],
+        "reason": "The Hebrew Canaan/merchant sense in Hosea 12:7 is a lexical or rhetorical usage, not a distinct people-group entity called Trading. Preserve original lexical references and inherited alternate labels but remove the unsupported group identity alias.",
+        "removed_relation_values": {
+          "referred_to_as": [
+            "group:Trading"
+          ]
+        }
+      }
+    ],
     "review_status": "source_unreviewed",
     "source_id": "place:Canaan",
     "source_primary_id": "place:Canaan",
@@ -907,8 +923,7 @@
     "44013019"
   ],
   "referred_to_as": [
-    "group:Canaan",
-    "group:Trading"
+    "group:Canaan"
   ],
   "subject_referents": {
     "wlc": [
