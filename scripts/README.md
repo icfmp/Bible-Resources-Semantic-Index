@@ -20,6 +20,10 @@ historical ACAI patches or import an upstream snapshot during normal editing.
 ## Reusable tools and checks
 
 - `build_native_index.py`: canonical native entity build, independent of the historical ACAI compiler.
+- `validate_external_crosswalk.py`: nonpublishing, offline V1 **external
+  resource entry** crosswalk validator, separate from the deferred V2
+  entity-relationship graph. It enforces source edition locks, current entity
+  identity and explicit abstentions; never generates mappings.
 - `build_relation_index.py`: **deferred V2 research only**, read-only, unapproved source-claim graph projection with stable claim IDs and inverse lookups. Its regression checks do not make it a V1 build or release dependency; it never publishes or infers relations. See [relation model](../docs/RELATION_MODEL.md).
 - `entity_index_core.py`: shared deterministic identity, reference, original-word
   and source-qualification validation; used by the canonical builder and the
