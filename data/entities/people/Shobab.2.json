@@ -18,7 +18,25 @@
     "review_status": "source_unreviewed",
     "source_id": "person:Shobab.2",
     "source_primary_id": "person:Shobab.2",
-    "source_sha256": "17d16209acf067caa421752701bdce0973164ed3bf264fd7e578d860cd1e6afb"
+    "source_sha256": "17d16209acf067caa421752701bdce0973164ed3bf264fd7e578d860cd1e6afb",
+    "editorial_field_changes": [
+      {
+        "action": "withhold_inferred_genealogical_identity",
+        "removed_fields": [
+          "mother"
+        ],
+        "reason": "The single source verse does not independently establish Jerioth as mother rather than Azubah, or whether these are aliases.",
+        "evidence": [
+          "1 Chronicles 2:18",
+          "https://classic.net.bible.org/passage.php?passage=1Ch+2%3A18"
+        ]
+      }
+    ],
+    "editorial_reason": "Withhold disputed or unnamed family identity assignments; preserve source texts, names, original-word witnesses, and all approved source IDs.",
+    "editorial_evidence": [
+      "1 Chronicles 2:18",
+      "https://classic.net.bible.org/passage.php?passage=1Ch+2%3A18"
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -38,7 +56,6 @@
       "preferred_label": "Shobab (1 Chronicles 2:18)"
     }
   },
-  "mother": "person:Jerioth",
   "non_biblical": false,
   "only_mentioned_in_apocrypha": false,
   "primary_id": "person:Shobab.2",
