@@ -5,7 +5,28 @@
     "review_status": "source_unreviewed",
     "source_id": "place:Uqnu",
     "source_primary_id": "place:Uqnu",
-    "source_sha256": "de417ebc8cdd831a4156ff2022f6fd62851527f1cb4865637dcf63aa2b1eecf9"
+    "source_sha256": "de417ebc8cdd831a4156ff2022f6fd62851527f1cb4865637dcf63aa2b1eecf9",
+    "editorial_field_changes": [
+      {
+        "action": "correct_unattested_source_scope_flags",
+        "replaced_field_values": {
+          "mentioned_in_bible": {
+            "from": true,
+            "to": false
+          },
+          "non_biblical": {
+            "from": false,
+            "to": true
+          }
+        },
+        "reason": "Uqnû is an Elam/Babylonian-border river mentioned in Neo-Assyrian royal inscriptions, not a place explicitly named by a word in the pinned Hebrew or Greek biblical source. The inherited claim 'mentioned_in_bible=true' is unsupported; retain the historical place identity as nonbiblical background without fabricating a Bible reference.",
+        "evidence": [
+          "RINAP Neo-Assyrian royal inscriptions of Tiglath-pileser III and Sargon II, Uqnû River",
+          "https://oracc.museum.upenn.edu/rinap/downloads/Frame_RINAP_2.pdf",
+          "https://enenuru.net/pdfs/RlA%2014%205-6%20Uqair%20-%20Uzumua.pdf"
+        ]
+      }
+    ]
   },
   "explicit_instances": {},
   "id": "place:Uqnu",
@@ -24,8 +45,8 @@
       "preferred_label": "Uqnu"
     }
   },
-  "mentioned_in_bible": true,
-  "non_biblical": false,
+  "mentioned_in_bible": false,
+  "non_biblical": true,
   "only_mentioned_in_apocrypha": false,
   "place_types": {
     "acai": [
