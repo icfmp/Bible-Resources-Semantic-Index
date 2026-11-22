@@ -48,11 +48,15 @@ class ReviewedFamilyRelationshipTests(unittest.TestCase):
         self.assertEqual(entity("Mark")["mother"], "person:Mary.5")
         self.assertIn("person:Mark", entity("Mary.5")["offspring"])
         for name in ("HusbandOfMary", "HusbandOfMary.2"):
-            placeholder = entity(name)
+            placeholder = json.loads((ROOT / "data" / "quarantined" / "people" /
+                                      (name + ".json")).read_text(encoding="utf-8"))
             self.assertNotIn("offspring", placeholder)
             self.assertNotIn("partners", placeholder)
             self.assertEqual(placeholder["bsi"]["review_status"], "source_unreviewed")
             self.assertEqual(placeholder["explicit_instances"], {})
+            self.assertEqual(placeholder["bsi"]["state"], "quarantined")
+            self.assertFalse((ROOT / "data" / "entities" / "people" /
+                              (name + ".json")).exists())
         for name in ("Mary.2", "Mary.5"):
             self.assertNotIn("partners", entity(name))
         self.assertEqual(entity("Mary.2")["bsi"]["identity_hint"]["qualifier"],
