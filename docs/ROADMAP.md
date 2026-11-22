@@ -107,13 +107,28 @@ developed in parallel where no source/data/publication gate is bypassed.
   [#6](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/6).
   Finish the actual Gadara demonym/source-variant link question; distinguish
   historical place/person identities from unsafe aliases, without guessing.
+- [x] **Build a read-only triage for same-name identities.**
+  PRs [#44–#46](https://github.com/icfmp/Bible-Resources-Semantic-Index/pull/46)
+  detected **641 candidate homonym groups / 2,228 source records**.
+  **2,187** have distinctive source key-verse candidates, **31** have a
+  distinctive explicit original-word anchor, while **10** lack either
+  distinguishing anchor and a separately reviewed identity hint.
+  These are *review priorities, not approved identifications*. The exact
+  ten source IDs and evidence pointers are tracked in
+  [#6](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/6).
 - [ ] **Enforce stronger current and future native-data integrity.**
   [#23](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/23).
   Extend schema/reference/lexical source tests. PR #29 added a
   source-preserving fail-closed localization policy, tests using real records,
-  and native-build rejection of malformed holds. Future reader-facing
-  exporters must use this access policy; further source-invariant checks
-  remain open.
+  and native-build rejection of malformed holds. PR #47 introduced
+  source-reference-shape triage: **477 records** with key verse identifiers
+  outside the general reference list, and **118 biblically marked records**
+  without general verse/explicit-word witnesses. These are audit
+  candidates, **not proved errors**; the original ACAI ORG-versification
+  and the distinction between `key_references` and `references` require
+  provenance review before stronger assertions. Future reader-facing
+  exporters must use the inherited-field hold policy. Further source
+  invariant checks remain open.
 
 **Phase exit:** all distributable fields have evidence or explicit abstention;
 source IDs, manuscript word anchors, versification and original-text variants
