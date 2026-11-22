@@ -86,12 +86,16 @@ uncommitted research note.
   checkboxes and long-term engineering decisions.
   [Issue #1](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/1),
   [issue #3](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/3).
-- [ ] **P1 · Retire active duplicate BSI ownership in Bible-Resources.**
-  Only once the new repository is verified, replace the old active BSI
-  directory/workflows with concise pointers or pinned consumption as
-  appropriate; preserve historical commits, licenses, tags and release
-  downloads. This must be a separate, reviewable PR in
-  [Bible-Resources](https://github.com/icfmp/Bible-Resources).
+- [x] **P1 · Retire active duplicate BSI ownership in Bible-Resources.**
+  [Bible-Resources PR #482](https://github.com/icfmp/Bible-Resources/pull/482)
+  merged on 2026-11-22 (`564b8c849250eddad671aea35bd76fea6401849e`).
+  The old 212-file BSI workspace and four superseded workflows were removed;
+  six current documentation entrypoints now point to this authoritative repo.
+  Both resource validation and tool registry CI passed (runs
+  [#45047170105](https://github.com/icfmp/Bible-Resources/actions/runs/45047170105)
+  and [#45047170053](https://github.com/icfmp/Bible-Resources/actions/runs/45047170053)).
+  Historical Git commits, tags and BSI release archives were untouched.
+  The next delivery contract is separate: no automatic BSI republishing.
 - [ ] **P2 · Define the BSI → Bible-Resources delivery contract.**
   BSI produces immutable, owner-approved versioned releases with manifest,
   attribution and SHA-256; Bible-Resources **pulls** an approved fixed version
