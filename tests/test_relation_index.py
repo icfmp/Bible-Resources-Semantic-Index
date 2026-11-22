@@ -34,7 +34,7 @@ class RelationIndexTests(unittest.TestCase):
         identity = {"people": "person", "places": "place", "groups": "group"}[category] + ":" + name
         data = {
             "id": identity,
-            "type": category[:-1],
+            "type": {"people": "person", "places": "place", "groups": "group"}[category],
             "bsi": {
                 "source_id": identity,
                 "canonical_id": identity,
