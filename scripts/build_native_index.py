@@ -20,6 +20,11 @@ spec = importlib.util.spec_from_file_location("bsi_link_finalizer", ROOT / "scri
 legacy = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(legacy)
 
+policy_spec = importlib.util.spec_from_file_location(
+    "brsi_localization_policy", ROOT / "scripts" / "localization_policy.py")
+localization_policy = importlib.util.module_from_spec(policy_spec)
+policy_spec.loader.exec_module(localization_policy)
+
 
 def read(path: Path):
     return json.loads(path.read_text(encoding="utf-8"))
@@ -40,6 +45,9 @@ def build(data: Path = ROOT / "data") -> dict:
         directory = data / "entities" / category
         for path in sorted(directory.glob("*.json")):
             record = read(path)
+            # Reject malformed/unknown editorial holds rather than letting a
+            # future reader-facing exporter silently treat them as approved.
+            localization_policy.validated_holds(record)
             metadata = record.get("bsi", {})
             sid = metadata.get("source_id")
             if not isinstance(sid, str) or sid in seen_source:
