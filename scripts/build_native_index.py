@@ -2,7 +2,8 @@
 """Build the BSI entity index from VERSIONED CURRENT native BSI records.
 
 No ACAI fetch, original-source replay, or editorial patch application is used.
-The old historical builder remains only as an independent migration test.
+Shared identity/link finalization comes from the maintained entity_index_core.py;
+no historical ACAI rebuild code is imported.
 """
 from __future__ import annotations
 
@@ -16,9 +17,9 @@ ROOT = Path(__file__).resolve().parents[1]
 # New BSI-owned records may be added without inventing a matching ACAI source.
 # Work is already a reviewed canonical identity kind in the native entity index.
 NATIVE_CATEGORIES = {"works": "work"}
-spec = importlib.util.spec_from_file_location("bsi_link_finalizer", ROOT / "scripts" / "compile_index.py")
-legacy = importlib.util.module_from_spec(spec)
-spec.loader.exec_module(legacy)
+spec = importlib.util.spec_from_file_location("brsi_entity_index_core", ROOT / "scripts" / "entity_index_core.py")
+core = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(core)
 
 policy_spec = importlib.util.spec_from_file_location(
     "brsi_localization_policy", ROOT / "scripts" / "localization_policy.py")
@@ -56,8 +57,8 @@ def build(data: Path = ROOT / "data") -> dict:
     entries, quarantined, seen_source = [], [], set()
     imported_source_ids = set()
     native_source_ids = set()
-    for category in (*legacy.CATEGORIES, *NATIVE_CATEGORIES):
-        expected_prefix = legacy.CATEGORIES.get(category, NATIVE_CATEGORIES.get(category))
+    for category in (*core.CATEGORIES, *NATIVE_CATEGORIES):
+        expected_prefix = core.CATEGORIES.get(category, NATIVE_CATEGORIES.get(category))
         directory = data / "entities" / category
         for path in sorted(directory.glob("*.json")):
             record = read(path)
@@ -122,7 +123,7 @@ def build(data: Path = ROOT / "data") -> dict:
                 "key_references": copy.deepcopy(record["key_references"]),
                 "occurrences": {
                     field: copy.deepcopy(record.get(field, {}))
-                    for field in legacy.LINK_FIELDS
+                    for field in core.LINK_FIELDS
                 },
             }
             for field in ("editorial_evidence", "editorial_reason"):
@@ -163,10 +164,10 @@ def build(data: Path = ROOT / "data") -> dict:
     baseline_sources = set()
     for migrated_path in manifest["written_paths"]:
         section, category, filename = Path(migrated_path).parts
-        if section not in ("entities", "quarantined") or category not in legacy.CATEGORIES:
+        if section not in ("entities", "quarantined") or category not in core.CATEGORIES:
             raise ValueError(f"Unexpected historical migration path: {migrated_path}")
         basename = Path(filename).stem
-        baseline_sources.add(f"{legacy.CATEGORIES[category]}:{basename}")
+        baseline_sources.add(f"{core.CATEGORIES[category]}:{basename}")
     if len(baseline_sources) != manifest["written_records"]:
         raise ValueError("Historical source manifest has duplicate identities")
     if imported_source_ids != baseline_sources:
@@ -179,9 +180,9 @@ def build(data: Path = ROOT / "data") -> dict:
     references = set()
     for entry in entries:
         references.update(entry["references"])
-        for field in legacy.LINK_FIELDS:
+        for field in core.LINK_FIELDS:
             for corpus, groups in entry["occurrences"][field].items():
-                edition = legacy.canonical_source_corpus(lock, corpus)
+                edition = core.canonical_source_corpus(lock, corpus)
                 words.update(f"{edition}:{word}" for group in groups for word in group)
     absence = copy.deepcopy(read(data / "source-unattested-words.json"))
     absence["word_ids"] = [
@@ -202,7 +203,7 @@ def build(data: Path = ROOT / "data") -> dict:
         row for row in qualifications["claims"]
         if row["source_id"] in seen_source
     ]
-    result = legacy.finalize_index(
+    result = core.finalize_index(
         entries, quarantined, lock, absence, verse_absence, qualifications,
         manifest["source_snapshot_sha256"], manifest["source_records"],
     )

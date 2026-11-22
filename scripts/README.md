@@ -19,7 +19,10 @@ historical ACAI patches or import an upstream snapshot during normal editing.
 
 ## Reusable tools and checks
 
-- `build_native_index.py`: canonical native entity build.
+- `build_native_index.py`: canonical native entity build, independent of the historical ACAI compiler.
+- `entity_index_core.py`: shared deterministic identity, reference, original-word
+  and source-qualification validation; used by the canonical builder and the
+  retained legacy migration regression. This is the **maintained** finalizer.
 - `resolve.py`, `reference_policy.py`, `identity_policy.py`,
   `localization_policy.py`, `offspring_target_policy.py`: shared policy
   and resolution logic.

@@ -41,6 +41,11 @@ class NativeGrowthTests(unittest.TestCase):
         }, ensure_ascii=False), encoding="utf-8")
         return path
 
+    def test_current_builder_does_not_import_historical_compiler(self):
+        self.assertEqual(Path(builder.core.__file__).name, "entity_index_core.py")
+        self.assertNotIn("compile_index.py",
+                         (ROOT / "scripts" / "build_native_index.py").read_text())
+
     def test_new_reviewed_entity_does_not_rewrite_historical_baseline(self):
         baseline = builder.build(self.data)
         path = self.add_native_work()
