@@ -44,6 +44,11 @@ Treat `references` and `key_references` as separate inherited ACAI ORG
 BCV8 lists. A key reference does **not** prove there is an explicit matching
 original-language token in that verse, and no source-defined subset rule has
 been established. See [source reference semantics](SOURCE_REFERENCE_SEMANTICS.md).
+Pinned source-word absence, source-verse absence and reference-qualification
+manifests require an integer schema version (not a JSON boolean or float),
+properly typed identifier lists, and ASCII-only BCV8 verse IDs. The source
+identifiers are validated, never coerced, re-numbered or repaired automatically.
+
 Validate original-word anchors against the exact pinned WLC/SBLGNT edition;
 never generate a new biblical reference to make a test pass.
 
