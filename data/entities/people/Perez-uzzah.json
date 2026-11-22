@@ -31,13 +31,38 @@
           "referred_to_as",
           "siblings"
         ]
+      },
+      {
+        "action": "remove_conflicting_inherited_english_alias",
+        "evidence": [
+          "Macula WLC 2SA 6:8 o100060080121 o100060080131",
+          "Macula WLC 1CH 13:11 o130130110111 o130130110121"
+        ],
+        "reason": "The reviewed canonical BSI identity distinguishes the source record from the person denoted by this inherited alias; preserve the original source value in this reversible editorial decision.",
+        "removed_localization_values": {
+          "eng": {
+            "alternate_labels": [
+              "Uzzah"
+            ]
+          }
+        }
       }
     ],
     "editorial_reason": "The named place Perez-uzzah is attested at 2 Samuel 6:8 and 1 Chronicles 13:11, distinct from Uzzah the man.",
     "review_status": "editorially_reviewed",
     "source_id": "person:Perez-uzzah",
     "source_primary_id": "person:Uzzah",
-    "source_sha256": "3aa30fdd82e1f20ab36dda73d428a1648f3662126c4aface6653817d26d11709"
+    "source_sha256": "3aa30fdd82e1f20ab36dda73d428a1648f3662126c4aface6653817d26d11709",
+    "inherited_localizations": {
+      "status": "withheld_pending_review",
+      "fields": [
+        "descriptions",
+        "preferred_label",
+        "alternate_labels"
+      ],
+      "reason": "Inherited biography and naming identify Uzzah the man rather than Perez-Uzzah the place; do not publish without per-language correction.",
+      "source": "acai"
+    }
   },
   "explicit_instances": {
     "wlc": [
@@ -89,9 +114,6 @@
       "preferred_label": "Peres Usaha (Usaha)"
     },
     "eng": {
-      "alternate_labels": [
-        "Uzzah"
-      ],
       "descriptions": [
         {
           "article": "person:Perez-uzzah",
