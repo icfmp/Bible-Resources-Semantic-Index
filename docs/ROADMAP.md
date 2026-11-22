@@ -82,7 +82,7 @@ uncommitted research note.
   [Issue #6](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/6).
 - [ ] **P1 · Finish the standalone migration acceptance.** Check current
   entrypoints, original source references, mixed code/data license notices,
-  independent full tests and integrity receipts. Reconcile/close stale
+  independent full tests and integrity receipts. PR #19 enabled complete\n  native-test discovery; PR #20 added a mixed-rights guide and deterministic\n  local three-index SHA-256/byte-count receipts. Full release-level acceptance\n  remains pending. Reconcile/close stale
   checkboxes and long-term engineering decisions.
   [Issue #1](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/1),
   [issue #3](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/3).
