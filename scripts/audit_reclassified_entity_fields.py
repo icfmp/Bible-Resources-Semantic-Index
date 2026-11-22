@@ -24,6 +24,12 @@ SOURCE_PREFIXES = {
 
 
 def audit(data: Path) -> dict:
+    # Review only explicit BSI identity corrections, not every inherited ACAI
+    # primary_id alias. A historical alias is not automatically an anomaly.
+    decisions_file = data / "editorial-decisions.json"
+    decisions = json.loads(decisions_file.read_text(encoding="utf-8"))["decisions"]
+    explicit_replacements = {row["source_id"] for row in decisions
+                             if row["action"] == "replace_identity" and not row["source_id"].startswith("keyterm:")}
     audited = []
     source_ids = set()
     for directory in sorted((data / "entities").iterdir()):
@@ -41,6 +47,8 @@ def audit(data: Path) -> dict:
             source_ids.add(source_id)
             if not source_id.startswith(original_prefix + ":"):
                 raise ValueError(f"Source category mismatch: {path}")
+            if source_id not in explicit_replacements:
+                continue
             original_type = original_prefix
             current_type = record["type"]
             current_id = record["id"]
@@ -89,6 +97,8 @@ def audit(data: Path) -> dict:
                 "source_descriptions": original_articles,
                 "source_labels": labels,
             })
+    if {item["source_id"] for item in audited} != explicit_replacements:
+        raise ValueError("Some reviewed BSI identity changes were not found in native entity data")
     counter = Counter(code for record in audited for code in record["issue_codes"])
     return {"schema_version": 1, "policy": "read_only_preserve_original_editorial_text",
             "reviewed_changed_identity_records": len(audited),
