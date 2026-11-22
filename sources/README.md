@@ -13,10 +13,10 @@ The canonical, **editable** BSI entity data now lives in
 - Current editable corrections: each BSI record contains provenance and any reviewed editorial evidence.
 - All 868 ACAI keyterms remain counted but excluded from this public BSI source branch, pending field-level permission verification for Paratext UBS material ([issue #5](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/5)).
 
-The source is **not fetched or patched by the current BSI builder**. Source
-checkout and the old patch-replay generator survive only in Git history and
-the draft migration's independent equivalence checks, not as the active editing
-process. Do not edit the pinned ACAI original.
+The source is **not fetched or patched by the current BSI builder**. The legacy conversion and source-checkout helper are archived in Git
+history; the legacy `compile_index.py` is retained temporarily only because
+its deterministic output validation code is shared with the native builder.
+It must not be used as the current BSI editing process. Do not edit the pinned ACAI original.
 
 MACULA Hebrew/Greek and UBS dictionaries remain independent, edition-pinned
 lexical evidence sources. Their texts and permission-only annotations must
