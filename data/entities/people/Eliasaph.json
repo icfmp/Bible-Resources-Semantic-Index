@@ -18,7 +18,31 @@
     "review_status": "source_unreviewed",
     "source_id": "person:Eliasaph",
     "source_primary_id": "person:Eliasaph",
-    "source_sha256": "db557df80139e5753220933b5452317bbff9fea8526d246c5ddc9e6209e12413"
+    "source_sha256": "db557df80139e5753220933b5452317bbff9fea8526d246c5ddc9e6209e12413",
+    "editorial_field_changes": [
+      {
+        "action": "replace_inherited_incorrect_parent",
+        "replaced_relation_values": {
+          "father": {
+            "from": "person:Jethro",
+            "to": "person:Deuel"
+          }
+        },
+        "evidence": [
+          "Numbers 1:14: Eliasaph of Gad is explicitly called son of Deuel.",
+          "Numbers 2:14 has the same paternal name form represented in BRSI by person:Reuel, canonicalized to person:Deuel.",
+          "The original ACAI people/json/Eliasaph.json lists person:Jethro as father, while its person:Deuel and person:Reuel records already list Eliasaph as offspring.",
+          "https://fr.israel.fm/texts/numbers/1/14/"
+        ],
+        "reason": "Jethro the father-in-law of Moses is not the named father of Eliasaph of Gad. Preserve person:Jethro, person:Deuel and person:Reuel as distinct/alias identities as previously reviewed, and correct only the father pointer."
+      }
+    ],
+    "editorial_reason": "Numbers 1:14 gives Eliasaph's father as Deuel; the source pointer to Jethro is a misattributed relationship. No original word or reference lists have been changed.",
+    "editorial_evidence": [
+      "Numbers 1:14",
+      "Numbers 2:14",
+      "Pinned ACAI people/json/Eliasaph.json and existing Deuel/Reuel offspring relations"
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -39,7 +63,7 @@
       ]
     ]
   },
-  "father": "person:Jethro",
+  "father": "person:Deuel",
   "gender": "male",
   "id": "person:Eliasaph",
   "key_references": [
