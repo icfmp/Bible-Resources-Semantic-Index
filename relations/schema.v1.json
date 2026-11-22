@@ -62,7 +62,9 @@
         "source_unreviewed",
         "withheld_unclassified",
         "by_source_field",
-        "unclassified_by_field"
+        "unclassified_by_field",
+        "withheld_identity_or_alias",
+        "withheld_identity_or_alias_by_field"
       ],
       "properties": {
         "source_relationships": {
@@ -93,6 +95,17 @@
           }
         },
         "unclassified_by_field": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "withheld_identity_or_alias": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "withheld_identity_or_alias_by_field": {
           "type": "object",
           "additionalProperties": {
             "type": "integer",
@@ -149,7 +162,11 @@
                   "reported_sibling",
                   "reported_tribe",
                   "reported_group_origin",
-                  "reported_subregion_of"
+                  "reported_subregion_of",
+                  "reported_associated_place",
+                  "reported_nearby_place",
+                  "reported_related_place",
+                  "reported_tribal_area"
                 ]
               },
               {
@@ -164,7 +181,8 @@
           "review_status": {
             "enum": [
               "source_unreviewed",
-              "withheld_unclassified"
+              "withheld_unclassified",
+              "withheld_identity_or_alias"
             ]
           },
           "evidence": {
@@ -218,7 +236,50 @@
               }
             }
           }
-        }
+        },
+        "allOf": [
+          {
+            "if": {
+              "required": [
+                "predicate"
+              ],
+              "properties": {
+                "predicate": {
+                  "type": "null"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "review_status": {
+                  "enum": [
+                    "withheld_unclassified",
+                    "withheld_identity_or_alias"
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "required": [
+                "predicate"
+              ],
+              "properties": {
+                "predicate": {
+                  "type": "string"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "review_status": {
+                  "const": "source_unreviewed"
+                }
+              }
+            }
+          }
+        ]
       }
     },
     "by_source": {
