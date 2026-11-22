@@ -5,6 +5,8 @@ on:
     paths:
       - "links/dictionaries/ubs-greek/**"
       - ".github/workflows/bsi-ubs-greek.yml"
+      - "release/historical-assets.lock.json"
+      - "scripts/verify_historical_asset.py"
   push:
     branches: [main]
     paths:
@@ -1083,6 +1085,11 @@ jobs:
               "release_uploaded": False,
           }, sort_keys=True))
           PY
+      - name: Verify source-rebuilt ZIP exactly equals original historical GitHub release
+        run: |
+          python3 -I scripts/verify_historical_asset.py \
+            --kind ubs_greek \
+            --archive /tmp/BSI-UBS-Greek-0.1.0.zip
       - name: Verify complete ubs-greek snapshot against actual pinned-source output (runner-local only)
         shell: bash
         run: |
