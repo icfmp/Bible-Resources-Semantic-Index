@@ -25,6 +25,17 @@ excluded. The source pins are \`data/source.lock.json\` for ACAI/MACULA, and
 the separately locked Greek/Hebrew UBS source workflows. Stable original
 word IDs are not proof of reviewed contextual dictionary senses.
 
+## Standalone migration paths verified
+
+Current contributor instructions and shared code use **repository-root**
+paths such as `scripts/build_native_index.py` and
+`links/dictionaries/ubs-greek/`, not the removed old
+`bible-semantic-index/` monorepo prefix. Native offline CI now tests this
+explicitly. Historical v0.1 handoff documents deliberately preserve the
+former paths as a dated record, with a warning that they are not current
+commands. Existing Bible-Resources **release asset URLs** remain valid and
+unchanged.
+
 ## Sidecar manifest (v1)
 
 Machine-readable contract: [\`release/manifest.schema.json\`](../release/manifest.schema.json).
