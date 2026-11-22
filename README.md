@@ -6,7 +6,7 @@ retains the three **historically published** BSI ZIP releases until a separate
 delivery/publication migration is approved. BSI is neither the Bible application
 nor a SWORD module.
 
-## Current sources of truth
+**Outstanding work and postponed decisions:** [BSI work plan](docs/ROADMAP.md) — also records which UBS research evidence is retained versus reproducibly regenerated.\n\n## Current sources of truth
 
 | Stream | Current development inputs | Existing published edition |
 | --- | --- | --- |
