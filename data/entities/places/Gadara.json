@@ -30,6 +30,22 @@
         "removed_fields": [
           "referred_to_as"
         ]
+      },
+      {
+        "action": "remove_inherited_cross_city_label",
+        "evidence": [
+          "UNESCO World Heritage Centre, Gadara (modern Umm Qais), https://whc.unesco.org/en/tentativelists/1558/",
+          "Existing BSI canonical separation of place:Gadara from place:Gerasa (documented in bsi.editorial_reason)",
+          "Matthew 8:28, Mark 5:1 and Luke 8:26 have demonym and textual-variant issues that do not identify Gadara and Gerasa as the same city"
+        ],
+        "reason": "The original English alias Gerasa conflated two distinct Decapolis cities even after the reviewed identity split. Remove only the exact Gerasa synonym from Gadara; preserve the distinct place identity, source witness, all Greek demonym identifiers, references, and other inherited variants until specific textual review.",
+        "removed_localization_values": {
+          "eng": {
+            "alternate_labels": [
+              "Gerasa"
+            ]
+          }
+        }
       }
     ],
     "editorial_reason": "Gadara (Umm Qais) and Gerasa (Jerash) are historically distinct Decapolis cities, not equivalent name forms. The source's Gadara.primary_id=place:Gerasa falsely merges their identities. Preserve ALL exact original Greek demonym word groups and verse references as candidates, including cross-gospel textual variants; a demonym is not proof of the precise miracle site. Gadara.2 (Perea) remains separate.",
@@ -96,7 +112,6 @@
         "Gadarenes",
         "Gergesenes",
         "Var",
-        "Gerasa",
         "Gadara"
       ],
       "descriptions": [
