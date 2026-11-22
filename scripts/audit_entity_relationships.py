@@ -34,9 +34,15 @@ def walk_links(value, keypath=()):
         for i, child in enumerate(value):
             yield from walk_links(child, (*keypath, i))
     elif isinstance(value, str):
-        candidate = IDENTITY_PATTERN.fullmatch(value)
-        if candidate and candidate.group(1) in BSI_CATEGORIES:
-            yield {"path": list(keypath), "target": value}
+        # ACAI group_origin can hold a semicolon-separated set of exact IDs.
+        # This is not one missing identity; preserve each source string and
+        # report its members separately without rewriting the original field.
+        components = [v.strip() for v in value.split(";")]
+        matches = [IDENTITY_PATTERN.fullmatch(v) for v in components]
+        if all(match and match.group(1) in BSI_CATEGORIES for match in matches):
+            for i, item in enumerate(components):
+                loc = (*keypath, i) if len(components) > 1 else keypath
+                yield {"path": list(loc), "target": item}
 
 
 def audit(data: Path) -> dict:
