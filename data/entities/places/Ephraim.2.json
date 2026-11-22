@@ -16,7 +16,22 @@
     "review_status": "source_unreviewed",
     "source_id": "place:Ephraim.2",
     "source_primary_id": "place:Ephraim.2",
-    "source_sha256": "cdde18b63706f92e5a6ed5a4f2364f53b5274927678958b1848fc7ef0768cb61"
+    "source_sha256": "cdde18b63706f92e5a6ed5a4f2364f53b5274927678958b1848fc7ef0768cb61",
+    "editorial_field_changes": [
+      {
+        "action": "add_directly_attested_source_verse",
+        "added_reference_values": {
+          "references": [
+            "43011054"
+          ]
+        },
+        "reason": "John 11:54 explicitly names Ephraim as a town near the wilderness where Jesus stayed; the inherited place identity and key verse already identify the same town.",
+        "evidence": [
+          "John 11:54",
+          "https://classic.net.bible.org/verse.php?book=Joh&chapter=11&verse=54"
+        ]
+      }
+    ]
   },
   "explicit_instances": {},
   "id": "place:Ephraim.2",
@@ -51,7 +66,9 @@
   ],
   "primary_id": "place:Ephraim.2",
   "pronominal_referents": {},
-  "references": [],
+  "references": [
+    "43011054"
+  ],
   "subject_referents": {},
   "type": "place"
 }
