@@ -12,8 +12,9 @@ class WorkspaceTests(unittest.TestCase):
         self.assertEqual(lock["source_records_expected"], 6644)
         self.assertEqual(len(lock["source_snapshot_sha256"]), 64)
         self.assertEqual(len(lock["source_commit"]), 40)
-        self.assertTrue((ROOT / "sources" / "checkout-acai.sh").is_file())
-        self.assertIn("/checkouts/", (ROOT / "sources" / ".gitignore").read_text())
+        self.assertTrue((ROOT / "data" / "entities").is_dir())
+        self.assertTrue((ROOT / "data" / "migration" / "acai-baseline-materialization.json").is_file())
+        self.assertTrue((ROOT / "scripts" / "build_native_index.py").is_file())
         for sub in ("work", "links/dictionaries", "links/encyclopedias"):
             self.assertTrue((ROOT / sub / "README.md").is_file(), sub)
         self.assertTrue((ROOT / "scripts" / "compile_index.py").is_file())
