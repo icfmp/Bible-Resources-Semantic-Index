@@ -106,18 +106,26 @@ developed in parallel where no source/data/publication gate is bypassed.
   index byte-for-byte unchanged. CI and native builder now prevent accidental
   reintroduction of redundant names, without barring independently reviewed
   cross-resource links.
-- [ ] **Resolve outstanding source identity and textual-variant problems.**
-  [#6](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/6)
-  **reopened**: PRs #92 and #95 corrected some source contradictions and
-  withheld unverified relationships, but did not finish the source-based
-  adjudication of Azubah/Jerioth, the two Zimmah genealogies, unanchored
-  HusbandOfMary placeholders, Gadara/Gerasa/Gergesa manuscript/demonym
-  claims or all ten homonym candidates. Review the actual pinned sources,
-  repair concrete errors with reversible receipts and test source mappings.
-  Legitimately undecidable evidence must receive a case-specific justified
-  editorial disposition, not be merely relabeled nonblocking. See
-  [current issue acceptance](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/6)
-  and [prior source triage](V1_IDENTITY_REVIEW.md).
+- [x] **Correct the evidenced source-identity conflicts and adjudicate the
+  remaining textual ambiguities without fabricating identities.**
+  [#6](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/6).
+  PRs #92, #95, #99 and #101 corrected actual data: Lud vs Ludim,
+  invented unanchored husband identities (quarantined rather than merely
+  hidden), false paternal and Mary–Salome maternal claims, duplicate
+  Ezra 3:9 Judah/Hodiah original-word ownership, the Matthew 8:28
+  Gadarenes/Gerasenes city-token collision and confirmed place-verse
+  omissions. All ten originally undistinguished identity candidates
+  now have *individual* evidenced outcomes in
+  [the identity review](V1_IDENTITY_REVIEW.md), including historically
+  distinct nonbiblical places and a genuinely unnamed narrative role.
+  In 1 Chr 2:18 and 6:20/42 the text does not independently establish
+  a single unambiguous mother/father; the definitive editorial decision
+  is to withhold such invented assertions while retaining each exact
+  verse/word witness and reversible source receipts. No fabricated second
+  Zimmah, forced Mary merger or new Gospel city is asserted.
+  Four CI suites passed for each substantive data PR. This closes the
+  identified #6 data contradictions, not a claim that every conceivable
+  historical identity question can be solved from Scripture.
 - [x] **Build a read-only triage for same-name identities.**
   PRs [#44–#46](https://github.com/icfmp/Bible-Resources-Semantic-Index/pull/46)
   detected **641 candidate homonym groups / 2,228 source records**.
