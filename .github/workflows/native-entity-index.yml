@@ -8,6 +8,7 @@ on:
       - "data/quarantined/**"
       - "data/migration/**"
       - "scripts/build_native_index.py"
+      - "tests/test_native_growth.py"
       - "scripts/compile_index.py"
       - "docs/EDITING_ENTITIES.md"
       - ".github/workflows/native-entity-index.yml"
@@ -30,6 +31,8 @@ jobs:
     timeout-minutes: 12
     steps:
       - uses: actions/checkout@v4
+      - name: Verify native data can grow without dropping historical identities
+        run: python3 -I tests/test_native_growth.py
       - name: Build index from current versioned BSI entity records
         run: |
           python3 -I scripts/build_native_index.py --data data --output /tmp/bsi-current.json
