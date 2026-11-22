@@ -6,7 +6,7 @@
     ]
   },
   "bsi": {
-    "canonical_id": "person:Dinaite",
+    "canonical_id": "group:Dinaite",
     "editorial_field_changes": [
       {
         "action": "correct_inherited_reference",
@@ -21,12 +21,48 @@
             "group:Judges"
           ]
         }
+      },
+      {
+        "action": "reclassify_inherited_individual_as_collective",
+        "evidence": [
+          "Ezra 4:9: underlying Aramaic plural and both Dinaite/judges renderings: https://classic.net.bible.org/verse.php?book=Ezr&chapter=4&verse=9",
+          "BDB Aramaic entry דִּינָיֵא records ethnonym interpretation and judges variant: https://www.sefaria.org/BDB_Aramaic%2C_%D7%93%D6%B4%D6%BC%D7%99%D7%A0%D6%B8%D7%99%D6%B5%D7%90",
+          "Ezra 4:9 lexical witness and glosses: https://biblehub.com/lexicon/ezra/4-9.htm"
+        ],
+        "reason": "Plural ethnonym or officials; neither reading identifies a single male person. Original source identity, manuscript token, verse reference and localizations are preserved. Ethnonym-versus-judges remains explicitly unresolved.",
+        "replaced_fields": {
+          "id": {
+            "from": "person:Dinaite",
+            "to": "group:Dinaite"
+          },
+          "primary_id": {
+            "from": "person:Dinaite",
+            "to": "group:Dinaite"
+          },
+          "type": {
+            "from": "person",
+            "to": "group"
+          },
+          "bsi.canonical_id": {
+            "from": "person:Dinaite",
+            "to": "group:Dinaite"
+          }
+        },
+        "removed_fields": {
+          "gender": "male"
+        }
       }
     ],
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "person:Dinaite",
     "source_primary_id": "person:Dinaite",
-    "source_sha256": "399d7aced46f96c0bc70f25d80d8d6051fe239fb4a92eb26837d8e74c71593e3"
+    "source_sha256": "399d7aced46f96c0bc70f25d80d8d6051fe239fb4a92eb26837d8e74c71593e3",
+    "editorial_reason": "Ezra 4:9 contains the Aramaic plural dinaye, interpreted as an ethnonym (Dinaites) or as a plural title (judges) in major translation/lexical witnesses. Either interpretation denotes multiple people rather than one male individual. This corrects only the semantic type to a collective group, without deciding between ethnonym and office or changing the original Aramaic word witness.",
+    "editorial_evidence": [
+      "Ezra 4:9: underlying Aramaic plural and both Dinaite/judges renderings: https://classic.net.bible.org/verse.php?book=Ezr&chapter=4&verse=9",
+      "BDB Aramaic entry דִּינָיֵא records ethnonym interpretation and judges variant: https://www.sefaria.org/BDB_Aramaic%2C_%D7%93%D6%B4%D6%BC%D7%99%D7%A0%D6%B8%D7%99%D6%B5%D7%90",
+      "Ezra 4:9 lexical witness and glosses: https://biblehub.com/lexicon/ezra/4-9.htm"
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -35,8 +71,7 @@
       ]
     ]
   },
-  "gender": "male",
-  "id": "person:Dinaite",
+  "id": "group:Dinaite",
   "key_references": [
     "15004009"
   ],
@@ -220,11 +255,11 @@
   },
   "non_biblical": false,
   "only_mentioned_in_apocrypha": false,
-  "primary_id": "person:Dinaite",
+  "primary_id": "group:Dinaite",
   "pronominal_referents": {},
   "references": [
     "15004009"
   ],
   "subject_referents": {},
-  "type": "person"
+  "type": "group"
 }
