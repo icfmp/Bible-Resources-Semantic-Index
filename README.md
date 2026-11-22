@@ -1,6 +1,9 @@
 # Bible Resources Semantic Index (BRSI)
 
 Open-source, offline, source-pinned **biblical entity and lexical indexes**.
+BRSI identifies and disambiguates entities and original-language links so other,
+separately maintained resources can describe them. **It is not an encyclopedia**
+and does not maintain multilingual biographies.
 
 **BRSI** is the current project name. Historical `BSI` IDs, release tags,
 source filenames and GitHub URLs remain stable for compatibility.
