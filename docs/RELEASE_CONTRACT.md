@@ -87,6 +87,41 @@ candidate.** There is no release workflow, repository secret or automatic
 tag. Local receipts are deterministic for the same input bytes, exact commit
 and source lock.
 
+
+### Deterministic entity-only ZIP candidate
+
+The current native entity profile can additionally be staged into an
+**unapproved local archive** containing only the keyterm-free \`index.json\`,
+source lock, attribution notice, license note, README and an internal manifest
+with exact member SHA-256/byte sizes. No translations, biographies, keyterms,
+private original-word source TSVs, dictionary prose or UBS lexical baselines
+can be injected.
+
+\`\`\`sh
+python3 -I scripts/stage_entity_candidate.py stage \
+  --index /tmp/brsi-entities.json \
+  --producer-revision "$(git rev-parse HEAD)" \
+  --output /tmp/brsi-entities-unapproved.zip \
+  --receipt /tmp/brsi-entities-unapproved.json
+
+python3 -I scripts/stage_entity_candidate.py verify \
+  --archive /tmp/brsi-entities-unapproved.zip \
+  --receipt /tmp/brsi-entities-unapproved.json
+\`\`\`
+
+\`scripts/stage_entity_candidate.py\` fixes ZIP timestamps, member order,
+compression, JSON serialization and file permissions, then verifies every
+member and the overall ZIP hash. Its **sidecar receipt** has input class
+\`nonpublishing_entity_zip_candidate\`, \`candidate_unapproved\` status, false
+rights clearance and no release tag. The ZIP is **not** an approved public
+release, even when technically deterministic and correct. Further source
+license/editorial approval and a distinct release workflow are mandatory.
+
+No analogous generic ZIP stage exists for checked-in UBS Greek/Hebrew
+development indexes. Their independently source-verified **public allowlist**
+builders remain the only candidate starting point, and a separate release
+approval is required.
+
 ## Future consumer contract (Bible-Resources)
 
 After a **separate, explicit** owner-approved release, its signed-off
