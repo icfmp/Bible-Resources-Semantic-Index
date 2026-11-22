@@ -16,6 +16,8 @@ nor a SWORD module.
 
 **V2 only (deferred):** [semantic entity relations research prototype](docs/RELATION_MODEL.md). Its inherited claims remain unreviewed and are **not part of V1**, any V1 release candidate or the Bible app.
 
+**V1 consumption (documentation only):** [three published ZIP formats, source-word lookup rules and an offline archive inspector](docs/V1_CONSUMPTION.md) — no implementation in Bible.
+
 **Phase 1 release safety:** [versioned artifact and consumer contract](docs/RELEASE_CONTRACT.md) — local integrity receipts are not publication approvals and checked-in lexical baselines are not public distributions.
 
 ## Current sources of truth

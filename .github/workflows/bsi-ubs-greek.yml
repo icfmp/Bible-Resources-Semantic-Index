@@ -6,12 +6,19 @@ on:
       - "links/dictionaries/ubs-greek/**"
       - ".github/workflows/bsi-ubs-greek.yml"
       - "release/historical-assets.lock.json"
+      - "docs/V1_CONSUMPTION.md"
+      - "scripts/inspect_v1_published_assets.py"
+      - "tests/test_v1_published_consumer.py"
       - "scripts/verify_historical_asset.py"
   push:
     branches: [main]
     paths:
       - "links/dictionaries/ubs-greek/**"
       - ".github/workflows/bsi-ubs-greek.yml"
+      - "release/historical-assets.lock.json"
+      - "docs/V1_CONSUMPTION.md"
+      - "scripts/inspect_v1_published_assets.py"
+      - "tests/test_v1_published_consumer.py"
   workflow_dispatch:
 
 permissions:
