@@ -18,7 +18,42 @@
     "review_status": "source_unreviewed",
     "source_id": "person:Salome",
     "source_primary_id": "person:Salome",
-    "source_sha256": "80a8cda9a12d837903943ef86c898c3422993174b70001b27adb6827a154abf9"
+    "source_sha256": "80a8cda9a12d837903943ef86c898c3422993174b70001b27adb6827a154abf9",
+    "editorial_field_changes": [
+      {
+        "action": "remove_unattested_inferred_parent",
+        "removed_fields": [
+          "father"
+        ],
+        "removed_relation_values": {
+          "father": [
+            "person:HusbandOfMary.2"
+          ]
+        },
+        "reason": "The original biblical passage names a mother or a related witness, not an identifiable husband/father. The former link points to a source-only invented husband placeholder now quarantined, so it cannot be retained as a live father.",
+        "evidence": [
+          "Matthew 27:56",
+          "Mark 15:40",
+          "Mark 16:1"
+        ]
+      },
+      {
+        "action": "remove_misread_conjoined_person_as_daughter",
+        "removed_fields": [
+          "mother"
+        ],
+        "removed_relation_values": {
+          "mother": [
+            "person:Mary.2"
+          ]
+        },
+        "reason": "Mark 15:40 lists Mary (mother of James and Joses) AND Salome as distinct named women; Mark 16:1 repeats the list. Salome is not identified as a daughter of Mary.",
+        "evidence": [
+          "Mark 15:40",
+          "Mark 16:1"
+        ]
+      }
+    ]
   },
   "explicit_instances": {
     "SBLGNT": [
@@ -30,7 +65,6 @@
       ]
     ]
   },
-  "father": "person:HusbandOfMary.2",
   "gender": "female",
   "id": "person:Salome",
   "key_references": [
@@ -47,7 +81,6 @@
       "preferred_label": "Salome"
     }
   },
-  "mother": "person:Mary.2",
   "non_biblical": false,
   "only_mentioned_in_apocrypha": false,
   "primary_id": "person:Salome",
