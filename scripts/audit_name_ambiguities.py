@@ -11,7 +11,7 @@ import argparse
 import json
 import re
 import unicodedata
-from collections import defaultdict
+from collections import Counter, defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -45,23 +45,65 @@ def audit(data: Path, *, sample_limit: int = 15) -> dict:
             "source_id": bsi["source_id"],
             "has_reviewed_hint": bsi.get("identity_hint", {}).get("review_status") == "editorially_reviewed",
             "key_reference_count": len(record["key_references"]),
+            "_key_references": set(record["key_references"]),
+            "_explicit_words": {
+                (corpus.lower(), word)
+                for corpus, grouped in record.get("explicit_instances", {}).items()
+                for group in grouped for word in group
+            },
         })
     candidates = []
     for (kind, normalized), records in groups.items():
         identities = {r["canonical_id"] for r in records}
         if len(identities) <= 1:
             continue
+        # Collapse multiple source aliases to one canonical owner before
+        # checking whether an anchor is distinguishing within this group.
+        by_canonical = defaultdict(lambda: {"verses": set(), "words": set()})
+        for row in records:
+            owner = by_canonical[row["canonical_id"]]
+            owner["verses"].update(row["_key_references"])
+            owner["words"].update(row["_explicit_words"])
+        verse_owners = defaultdict(set)
+        word_owners = defaultdict(set)
+        for canonical_id, owner in by_canonical.items():
+            for verse in owner["verses"]:
+                verse_owners[verse].add(canonical_id)
+            for word in owner["words"]:
+                word_owners[word].add(canonical_id)
+        result_records = []
+        for row in records:
+            owner = by_canonical[row["canonical_id"]]
+            if any(len(verse_owners[v]) == 1 for v in owner["verses"]):
+                evidence_class = "distinct_source_key_verse_for_triage"
+            elif any(len(word_owners[w]) == 1 for w in owner["words"]):
+                evidence_class = "distinct_original_word_for_triage"
+            else:
+                evidence_class = "not_distinguished_by_key_verses_or_explicit_words"
+            result_records.append({
+                k: v for k, v in row.items() if not k.startswith("_")
+            } | {"triage_evidence_class": evidence_class})
         candidates.append({
             "kind": kind,
             "normalized_source_name": normalized,
             "candidate_record_count": len(records),
             "distinct_canonical_id_count": len(identities),
             "without_reviewed_hint": sum(not r["has_reviewed_hint"] for r in records),
-            "records": sorted(records, key=lambda row: (row["source_id"], row["id"])),
+            "records": sorted(result_records,
+                              key=lambda row: (row["source_id"], row["id"])),
         })
     candidates.sort(key=lambda g: (-g["distinct_canonical_id_count"],
                                     -g["candidate_record_count"],
                                     g["kind"], g["normalized_source_name"]))
+    triage = Counter(
+        record["triage_evidence_class"]
+        for group in candidates for record in group["records"]
+    )
+    unresolved_without_hint = sum(
+        record["triage_evidence_class"] == "not_distinguished_by_key_verses_or_explicit_words"
+        and not record["has_reviewed_hint"]
+        for group in candidates for record in group["records"]
+    )
     return {
         "schema_version": 1,
         "status": "review_candidates_only_no_identity_assertions",
@@ -69,6 +111,8 @@ def audit(data: Path, *, sample_limit: int = 15) -> dict:
         "ambiguous_display_name_groups": len(candidates),
         "records_in_groups": sum(g["candidate_record_count"] for g in candidates),
         "records_without_reviewed_hint": sum(g["without_reviewed_hint"] for g in candidates),
+        "source_evidence_triage": dict(sorted(triage.items())),
+        "unresolved_without_reviewed_hint": unresolved_without_hint,
         "sample_groups": candidates[:sample_limit],
     }
 
