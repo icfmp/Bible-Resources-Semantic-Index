@@ -56,6 +56,33 @@ removed prose into new `identity_hint` fields. Never remove source word
 groups, verse references, canonical identity information or necessary
 source-backed aliases merely because they are not descriptive prose.
 
+## Retiring inherited encyclopedia prose
+
+`localizations.*.descriptions` are not BRSI index data. To remove them
+without editing IDs, original-word witnesses, references, relationships,
+source-backed aliases, or independently reviewed short identity qualifiers:
+
+```sh
+# Dry run: show counts, change no files
+python3 -I scripts/prune_inherited_descriptions.py --categories deities fauna flora
+# Explicit, reviewable writing pass
+python3 -I scripts/prune_inherited_descriptions.py --categories deities fauna flora --write
+# Strict postcondition for selected categories
+python3 -I scripts/prune_inherited_descriptions.py --categories deities fauna flora --check
+```
+
+The tool validates the entire selected batch before writing, reports counts
+without logging source biographies, and removes only description arrays and
+their now-obsolete `descriptions` hold selectors. Other hold selectors and
+all identity fields are retained. Run native index builds **before and after**
+each batch and compare their SHA-256, then run all native/lexical/regression
+checks. No generated biographies or universal hint-filling are allowed.
+A hint is optional and requires independent verse-level review.
+
+Recover original inherited prose from the exact pinned ACAI commit and
+`bsi.source_sha256`, not from a parallel BRSI description archive. Existing
+Git history also keeps each discarded working-field version.
+
 ## Adding new BSI-owned entities
 
 Do not invent an ACAI source identity for new research. A new reviewed
