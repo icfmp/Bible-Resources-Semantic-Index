@@ -11,6 +11,7 @@ import argparse
 import copy
 import importlib.util
 import json
+import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -43,8 +44,51 @@ offspring_policy = importlib.util.module_from_spec(offspring_spec)
 offspring_spec.loader.exec_module(offspring_policy)
 
 
+SOURCE_SHA256 = re.compile(r"[0-9a-f]{64}\\Z")
+
+
+def _unique_json_keys(pairs):
+    """Never let JSON silently replace an earlier source field."""
+    result = {}
+    for key, value in pairs:
+        if key in result:
+            raise ValueError(f"Duplicate JSON object key {key!r}")
+        result[key] = value
+    return result
+
+
+def _reject_non_json_number(token):
+    raise ValueError(f"Nonstandard JSON number {token!r}")
+
+
 def read(path: Path):
-    return json.loads(path.read_text(encoding="utf-8"))
+    try:
+        return json.loads(path.read_text(encoding="utf-8"),
+                          object_pairs_hook=_unique_json_keys,
+                          parse_constant=_reject_non_json_number)
+    except (ValueError, UnicodeError) as exc:
+        raise ValueError(f"{path}: {exc}") from exc
+
+
+def validate_source_sha256(value, path: Path) -> None:
+    if not isinstance(value, str) or SOURCE_SHA256.fullmatch(value) is None:
+        raise ValueError(f"Invalid imported source SHA-256 at {path}")
+
+
+def validate_entity_file_layout(data: Path) -> None:
+    """Reject unrecognized or nested JSON silently excluded by glob('*.json')."""
+    known = set(core.CATEGORIES) | set(NATIVE_CATEGORIES)
+    for state in ("entities", "quarantined"):
+        root = data / state
+        if not root.is_dir():
+            raise ValueError(f"Missing native entity directory: {root}")
+        for category in root.iterdir():
+            if category.is_dir() and category.name not in known:
+                raise ValueError(f"Unsupported native entity category: {category}")
+        for path in root.rglob("*.json"):
+            relative = path.relative_to(root)
+            if len(relative.parts) != 2 or relative.parts[0] not in known:
+                raise ValueError(f"Unindexed or nested native entity JSON: {path}")
 
 
 def build(data: Path = ROOT / "data") -> dict:
@@ -54,6 +98,7 @@ def build(data: Path = ROOT / "data") -> dict:
         raise ValueError("Native baseline source commit does not match immutable provenance")
     if manifest["source_snapshot_sha256"] != lock["source_snapshot_sha256"]:
         raise ValueError("Native baseline source digest mismatch")
+    validate_entity_file_layout(data)
     entries, quarantined, seen_source = [], [], set()
     imported_source_ids = set()
     native_source_ids = set()
@@ -101,6 +146,8 @@ def build(data: Path = ROOT / "data") -> dict:
             if origin == "bsi":
                 if sid != f"bsi:{expected_prefix}:{path.stem}":
                     raise ValueError(f"Incorrect BSI-native identity provenance: {path}: {sid}")
+                if metadata.get("source_sha256") is not None:
+                    raise ValueError(f"BSI-native entity must not claim an ACAI source SHA-256: {path}")
                 if not isinstance(metadata.get("editorial_reason"), str) or not metadata["editorial_reason"].strip():
                     raise ValueError(f"BSI-native record lacks editorial reason: {path}")
                 evidence = metadata.get("editorial_evidence")
@@ -120,8 +167,7 @@ def build(data: Path = ROOT / "data") -> dict:
                     raise ValueError(f"New BSI category cannot masquerade as ACAI: {path}")
                 if sid != f"{expected_prefix}:{path.stem}":
                     raise ValueError(f"Historical source path/ID mismatch: {path}: {sid}")
-                if not isinstance(metadata.get("source_sha256"), str) or len(metadata["source_sha256"]) != 64:
-                    raise ValueError(f"Imported record lacks source SHA-256: {path}")
+                validate_source_sha256(metadata.get("source_sha256"), path)
                 imported_source_ids.add(sid)
             else:
                 raise ValueError(f"Unsupported entity provenance origin: {path}: {origin}")
@@ -155,13 +201,22 @@ def build(data: Path = ROOT / "data") -> dict:
             if sid in seen_source:
                 raise ValueError("Quarantine duplicates a source identity: " + sid)
             seen_source.add(sid)
+            if not isinstance(metadata.get("reason"), str) or not metadata["reason"].strip():
+                raise ValueError(f"Quarantine needs a documented reason: {path}")
+            proof = metadata.get("evidence")
+            if (not isinstance(proof, list) or not proof
+                    or any(not isinstance(item, str) or not item.strip() for item in proof)):
+                raise ValueError(f"Quarantine needs source evidence: {path}")
             if metadata.get("origin") == "bsi":
                 if not sid.startswith("bsi:" + expected_prefix + ":"):
                     raise ValueError(f"Incorrect BSI quarantine source ID: {path}")
+                if metadata.get("source_sha256") is not None:
+                    raise ValueError(f"BSI-native quarantine must not claim ACAI source SHA-256: {path}")
                 native_source_ids.add(sid)
             elif metadata.get("origin") in (None, "acai"):
                 if sid != f"{expected_prefix}:{path.stem}":
                     raise ValueError(f"Historical quarantined source ID mismatch: {path}")
+                validate_source_sha256(metadata.get("source_sha256"), path)
                 imported_source_ids.add(sid)
             else:
                 raise ValueError(f"Unsupported quarantine provenance: {path}")
