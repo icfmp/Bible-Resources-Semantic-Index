@@ -64,7 +64,10 @@
         "by_source_field",
         "unclassified_by_field",
         "withheld_identity_or_alias",
-        "withheld_identity_or_alias_by_field"
+        "withheld_identity_or_alias_by_field",
+        "withheld_inverse_disagreement",
+        "inverse_disagreement_cases",
+        "withheld_inverse_disagreement_by_field"
       ],
       "properties": {
         "source_relationships": {
@@ -106,6 +109,21 @@
           "minimum": 0
         },
         "withheld_identity_or_alias_by_field": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "withheld_inverse_disagreement": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "inverse_disagreement_cases": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "withheld_inverse_disagreement_by_field": {
           "type": "object",
           "additionalProperties": {
             "type": "integer",
@@ -182,7 +200,8 @@
             "enum": [
               "source_unreviewed",
               "withheld_unclassified",
-              "withheld_identity_or_alias"
+              "withheld_identity_or_alias",
+              "withheld_inverse_disagreement"
             ]
           },
           "evidence": {
@@ -274,7 +293,10 @@
             "then": {
               "properties": {
                 "review_status": {
-                  "const": "source_unreviewed"
+                  "enum": [
+                    "source_unreviewed",
+                    "withheld_inverse_disagreement"
+                  ]
                 }
               }
             }
