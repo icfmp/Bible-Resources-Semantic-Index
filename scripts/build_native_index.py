@@ -44,7 +44,7 @@ offspring_policy = importlib.util.module_from_spec(offspring_spec)
 offspring_spec.loader.exec_module(offspring_policy)
 
 
-SOURCE_SHA256 = re.compile(r"[0-9a-f]{64}\\Z")
+SOURCE_SHA256 = re.compile(r"[0-9a-f]{64}\Z")
 
 
 def _unique_json_keys(pairs):
