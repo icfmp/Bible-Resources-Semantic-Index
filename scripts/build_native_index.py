@@ -83,6 +83,8 @@ def validate_entity_file_layout(data: Path) -> None:
         if not root.is_dir():
             raise ValueError(f"Missing native entity directory: {root}")
         for category in root.iterdir():
+            if category.is_symlink():
+                raise ValueError(f"Native entity symlinks are not permitted: {category}")
             if category.is_dir() and category.name not in known:
                 raise ValueError(f"Unsupported native entity category: {category}")
         # Check all case variants of JSON filenames: glob('*.json') would
