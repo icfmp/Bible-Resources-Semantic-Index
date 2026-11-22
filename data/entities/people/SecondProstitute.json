@@ -4,7 +4,31 @@
     "review_status": "source_unreviewed",
     "source_id": "person:SecondProstitute",
     "source_primary_id": "person:SecondProstitute",
-    "source_sha256": "6f35d4311ce590672d76505a13db142afadb0e3e86a8c3049466ac97ea97c7e9"
+    "source_sha256": "6f35d4311ce590672d76505a13db142afadb0e3e86a8c3049466ac97ea97c7e9",
+    "identity_hint": {
+      "name": "Second woman",
+      "qualifier": "other litigant in Solomon's judgment about the living child",
+      "language": "eng",
+      "evidence_references": [
+        "11003022"
+      ],
+      "review_status": "editorially_reviewed"
+    },
+    "editorial_field_changes": [
+      {
+        "action": "add_source_anchored_role_identity_hint",
+        "added_fields": [
+          "bsi.identity_hint"
+        ],
+        "reason": "1 Kings 3:16 explicitly introduces two women; verse 22 distinguishes the other speaker from the first. The second woman can be identified as a narrative role without inventing a personal name or an explicit original-language name token.",
+        "evidence": [
+          "1 Kings 3:16",
+          "1 Kings 3:22",
+          "1 Kings 3:27",
+          "https://www.biblegateway.com/passage/?search=1+Kings+3%3A16-28&version=NET"
+        ]
+      }
+    ]
   },
   "explicit_instances": {},
   "id": "person:SecondProstitute",
