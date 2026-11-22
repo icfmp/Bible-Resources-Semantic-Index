@@ -16,18 +16,131 @@
     "review_status": "source_unreviewed",
     "source_id": "person:Lud",
     "source_primary_id": "person:Lud",
-    "source_sha256": "3e727cd450ae784d5e10590622080b6a0535f8c55cb71f4905847501388b36c0"
+    "source_sha256": "3e727cd450ae784d5e10590622080b6a0535f8c55cb71f4905847501388b36c0",
+    "editorial_field_changes": [
+      {
+        "action": "remove_conflated_ludim_witnesses_and_aliases",
+        "replaced_relation_values": {
+          "explicit_instances": {
+            "from": {
+              "wlc": [
+                [
+                  "o010100130041"
+                ],
+                [
+                  "o010100220062"
+                ],
+                [
+                  "o130010110051"
+                ],
+                [
+                  "o130010170062"
+                ],
+                [
+                  "o230660190112"
+                ],
+                [
+                  "o240460090112"
+                ],
+                [
+                  "o260270100022"
+                ],
+                [
+                  "o260300050032"
+                ]
+              ]
+            },
+            "to": {
+              "wlc": [
+                [
+                  "o010100220062"
+                ],
+                [
+                  "o130010170062"
+                ],
+                [
+                  "o230660190112"
+                ],
+                [
+                  "o240460090112"
+                ],
+                [
+                  "o260270100022"
+                ],
+                [
+                  "o260300050032"
+                ]
+              ]
+            }
+          },
+          "references": {
+            "from": [
+              "01010013",
+              "01010022",
+              "13001011",
+              "13001017",
+              "23066019",
+              "24046009",
+              "26027010",
+              "26030005"
+            ],
+            "to": [
+              "01010022",
+              "13001017",
+              "23066019",
+              "24046009",
+              "26027010",
+              "26030005"
+            ]
+          },
+          "localizations": {
+            "from": {
+              "eng": {
+                "preferred_label": "Lud",
+                "alternate_labels": [
+                  "Lydia",
+                  "Lydian",
+                  "Ludiim",
+                  "Ludim"
+                ]
+              }
+            },
+            "to": {
+              "eng": {
+                "alternate_labels": [
+                  "Lydia",
+                  "Lydian"
+                ],
+                "preferred_label": "Lud"
+              }
+            }
+          }
+        },
+        "removed_fields": [
+          "referred_to_as"
+        ],
+        "evidence": [
+          "Genesis 10:13 and 1 Chronicles 1:11 identify the Ludim group among Mizraim's descendants, not the individual Lud named in Genesis 10:22 and 1 Chronicles 1:17.",
+          "The exact WLC original-word IDs o010100130041 and o130010110051 occur in the Ludim-group record as the plural name, and were also inherited as person:Lud explicit instances.",
+          "The inherited person:Lud reference lists also contained those two collective-origin verses; they are no longer independent evidence for this person.",
+          "International Standard Bible Encyclopedia, 'Lud; Ludim' distinguishes their original genealogical contexts: https://www.bibletools.org/index.cfm/fuseaction/Def.show/RTD/ISBE/ID/5604/Lud-Ludim.htm"
+        ],
+        "reason": "Remove the two secure Ludim-only verse/word assignments, unqualified collective aliases and the reciprocal group equivalence inherited by the individual Lud (son of Shem). Retain all remaining later names/references as source-unreviewed, since their ethnic identification requires independent evidence."
+      }
+    ],
+    "editorial_reason": "Separate the explicitly attested Ludim of Mizraim (Gen 10:13; 1 Chr 1:11) from Lud son of Shem (Gen 10:22; 1 Chr 1:17). Other occurrence identities remain unreviewed.",
+    "editorial_evidence": [
+      "Genesis 10:13",
+      "Genesis 10:22",
+      "1 Chronicles 1:11",
+      "1 Chronicles 1:17",
+      "ISBE 'Lud; Ludim' historical entry"
+    ]
   },
   "explicit_instances": {
     "wlc": [
       [
-        "o010100130041"
-      ],
-      [
         "o010100220062"
-      ],
-      [
-        "o130010110051"
       ],
       [
         "o130010170062"
@@ -58,9 +171,7 @@
     "eng": {
       "alternate_labels": [
         "Lydia",
-        "Lydian",
-        "Ludiim",
-        "Ludim"
+        "Lydian"
       ],
       "preferred_label": "Lud"
     }
@@ -76,17 +187,12 @@
     ]
   },
   "references": [
-    "01010013",
     "01010022",
-    "13001011",
     "13001017",
     "23066019",
     "24046009",
     "26027010",
     "26030005"
-  ],
-  "referred_to_as": [
-    "group:Ludim"
   ],
   "roles": [
     "Leader",
