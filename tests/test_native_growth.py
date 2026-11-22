@@ -186,6 +186,27 @@ class NativeGrowthTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "must not claim an ACAI source SHA-256"):
             builder.build(self.data)
 
+    def test_original_word_ids_reject_unicode_digit_lookalikes(self):
+        path = self.data / "entities" / "people" / "Mary.2.json"
+        record = json.loads(path.read_text(encoding="utf-8"))
+        original = record["explicit_instances"]["SBLGNT"][0][0]
+        self.assertTrue(original[1:].isascii())
+        # An Arabic-Indic digit passes Python str.isdigit(), but does not
+        # belong to the exact pinned MACULA SBLGNT source word ID.
+        record["explicit_instances"]["SBLGNT"][0][0] = (
+            original[0] + "\u0661" + original[2:])
+        path.write_text(json.dumps(record, ensure_ascii=False), encoding="utf-8")
+        with self.assertRaisesRegex(ValueError, "malformed original word ID"):
+            builder.build(self.data)
+
+    def test_original_word_ids_reject_nonstring_token(self):
+        path = self.data / "entities" / "people" / "Mary.2.json"
+        record = json.loads(path.read_text(encoding="utf-8"))
+        record["explicit_instances"]["SBLGNT"][0][0] = 12345
+        path.write_text(json.dumps(record, ensure_ascii=False), encoding="utf-8")
+        with self.assertRaisesRegex(ValueError, "word prefix incompatible"):
+            builder.build(self.data)
+
     def test_historical_source_cannot_disappear(self):
         (self.data / "entities" / "people" / "Jashar.json").unlink()
         with self.assertRaisesRegex(ValueError, "Imported ACAI entity identities changed"):
