@@ -5,13 +5,33 @@
     "review_status": "source_unreviewed",
     "source_id": "place:Heres.2",
     "source_primary_id": "place:Heres.2",
-    "source_sha256": "f043d45c52f7817b8adc76038a12990390e66cc4e23b8e7ffb2d5da3d8668cb9"
+    "source_sha256": "f043d45c52f7817b8adc76038a12990390e66cc4e23b8e7ffb2d5da3d8668cb9",
+    "editorial_field_changes": [
+      {
+        "action": "add_directly_attested_source_verse",
+        "added_reference_values": {
+          "references": [
+            "07001035"
+          ],
+          "key_references": [
+            "07001035"
+          ]
+        },
+        "reason": "Judges 1:35 explicitly names Mount Heres (Har-Heres); the ACAI entity was incorrectly marked mentioned_in_bible=true with no scripture reference. Add the attested verse but no invented MACULA token.",
+        "evidence": [
+          "Judges 1:35",
+          "https://lemma.gebible.app/v/judges/1/35"
+        ]
+      }
+    ]
   },
   "explicit_instances": {},
   "id": "place:Heres.2",
   "is_artifact": false,
   "is_person": false,
-  "key_references": [],
+  "key_references": [
+    "07001035"
+  ],
   "localizations": {
     "eng": {
       "alternate_labels": [
@@ -33,7 +53,9 @@
   ],
   "primary_id": "place:Heres.2",
   "pronominal_referents": {},
-  "references": [],
+  "references": [
+    "07001035"
+  ],
   "subject_referents": {},
   "subregion_of": [
     "place:TerritoryOfDan"
