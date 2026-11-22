@@ -132,12 +132,14 @@ class ArtifactContractTests(unittest.TestCase):
             contract.verify_bytes(approved, payload, require_release=True)
         kwargs = dict(
             require_release=True, expected_sha256=contract.digest(payload),
-            expected_version="1.0.0", expected_revision=REV)
+            expected_version="1.0.0", expected_revision=REV,
+            expected_tag="brsi-entities-v1.0.0")
         contract.verify_bytes(approved, payload, **kwargs)
         for changed in (
             {"expected_sha256": "f" * 64},
             {"expected_version": "2.0.0"},
             {"expected_revision": "b" * 40},
+            {"expected_tag": "brsi-entities-v2.0.0"},
         ):
             with self.subTest(changed=changed), self.assertRaisesRegex(ValueError, "pinned"):
                 contract.verify_bytes(approved, payload, **{**kwargs, **changed})
