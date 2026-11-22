@@ -36,6 +36,14 @@ jobs:
       - name: Build index from current versioned BSI entity records
         run: |
           python3 -I scripts/build_native_index.py --data data --output /tmp/bsi-current.json
+      - name: Record local build file-byte integrity (not publication approval)
+        run: |
+          python3 -I scripts/write_integrity_receipt.py \
+            --entity /tmp/bsi-current.json \
+            --greek links/dictionaries/ubs-greek/index.json \
+            --hebrew links/dictionaries/ubs-hebrew/index.json \
+            --output /tmp/bsi-integrity-receipt.json
+          cat /tmp/bsi-integrity-receipt.json
       - name: Verify output scope and original-word integrity
         run: |
           python3 - <<'PY'
