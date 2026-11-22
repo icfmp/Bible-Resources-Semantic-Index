@@ -1,0 +1,18 @@
+# Generated products and temporary checkouts
+/dist/
+/build/
+/checkouts/
+/tmp/
+/.cache/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+*.log
+
+# BSI complete internal source-evidence snapshots: never commit or publish
+*.tar.gz
+*.tar.gz.sha256
+/work/snapshots/
+
+# Source-specific tracked lexical baselines in links/ are intentionally NOT ignored.
