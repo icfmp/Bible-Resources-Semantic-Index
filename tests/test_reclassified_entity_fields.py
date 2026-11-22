@@ -19,6 +19,9 @@ class ReclassifiedEntityTests(unittest.TestCase):
         self.data = Path(t.name)
         (self.data / "entities" / "people").mkdir(parents=True)
         (self.data / "entities" / "places").mkdir(parents=True)
+        (self.data / "editorial-decisions.json").write_text(json.dumps({"decisions": [
+            {"source_id": "person:Perez-uzzah", "action": "replace_identity"},
+        ]}), encoding="utf-8")
 
     def make(self, folder, name, doc):
         path = self.data / "entities" / folder / (name + ".json")
@@ -48,6 +51,9 @@ class ReclassifiedEntityTests(unittest.TestCase):
         self.assertEqual(path.read_bytes(), before)
 
     def test_same_kind_canonical_identity_change_still_reviewed(self):
+        (self.data / "editorial-decisions.json").write_text(json.dumps({"decisions": [
+            {"source_id": "person:A", "action": "replace_identity"},
+        ]}), encoding="utf-8")
         self.make("people", "A", {"id": "person:A", "type": "person",
                   "bsi": {"source_id": "person:A", "canonical_id": "person:B"},
                   "localizations": {"fra": {"preferred_label": "A"}}})
