@@ -22,7 +22,12 @@
         "reason": "Acts 12:12 does not identify the father of John Mark; the source-only HusbandOfMary placeholder has no independent original-word anchor.",
         "evidence": [
           "Acts 12:12"
-        ]
+        ],
+        "removed_relation_values": {
+          "offspring": [
+            "person:Mark"
+          ]
+        }
       },
       {
         "action": "withhold_inferred_genealogical_identity",
@@ -32,7 +37,12 @@
         "reason": "The source does not explicitly name Mary's spouse in Acts 12:12. Parentage is not spouse identity evidence.",
         "evidence": [
           "Acts 12:12"
-        ]
+        ],
+        "removed_relation_values": {
+          "partners": [
+            "person:Mary.5"
+          ]
+        }
       }
     ],
     "editorial_reason": "Withhold disputed or unnamed family identity assignments; preserve source texts, names, original-word witnesses, and all approved source IDs.",
