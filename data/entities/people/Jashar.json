@@ -16,6 +16,20 @@
       "Macula WLC JOS 10:13 o060100130142",
       "Macula WLC 2SA 1:18 o100010180102"
     ],
+    "editorial_field_changes": [
+      {
+        "action": "remove_inherited_inconsistent_relation_or_attribute",
+        "evidence": [
+          "Joshua 10:13",
+          "2 Samuel 1:18",
+          "Existing reviewed BSI replacement of person:Jashar with work:BookOfJashar"
+        ],
+        "reason": "The reviewed entity is a literary work, not a man. An inherited male-gender field must not describe a book.",
+        "removed_fields": [
+          "gender"
+        ]
+      }
+    ],
     "editorial_reason": "Joshua 10:13 and 2 Samuel 1:18 name a literary work, not a historical man; aligned Hebrew adjectives are the title epithet, not the whole phrase.",
     "review_status": "editorially_reviewed",
     "source_id": "person:Jashar",
@@ -32,7 +46,6 @@
       ]
     ]
   },
-  "gender": "male",
   "id": "work:BookOfJashar",
   "key_references": [
     "06010013",
