@@ -25,6 +25,12 @@ The audit distinguishes these cases without modifying any record:
 - Parent roles unavailable in source metadata.
 - A **potential conflict** where the child names a different parent of the
   same role.
+- An `offspring` link to a non-person reviewed type, such as a collective
+  group or tribe. This may denote lineage collectively rather than a child
+  person; it needs **source-specific semantic review**, not deletion.
+- An `offspring` link to a target not present in the current allowed dataset
+  (e.g. a restricted or unsupported identity). Never invent the missing
+  identity just to satisfy a graph test.
 
 No negative inference is permitted: a missing reciprocal relationship
 is not evidence that two persons are unrelated. More than one claim can be

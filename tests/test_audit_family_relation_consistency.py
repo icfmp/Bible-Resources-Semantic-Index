@@ -20,6 +20,7 @@ def write(folder: Path, name: str, *, canonical=None, gender="male",
     directory.mkdir(parents=True, exist_ok=True)
     obj = {
         "id": "person:" + name,
+        "type": "person",
         "bsi": {"canonical_id": canonical or "person:" + name},
     }
     if gender is not None:
@@ -82,6 +83,37 @@ class FamilyInverseTests(unittest.TestCase):
         self.assertIsNotNone(example)
         self.assertEqual(example["child_named_parent"], "person:HusbandOfMary")
         self.assertIn("review candidate", result["warning"])
+
+    def test_group_targets_are_not_a_person_genealogy(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            write(root, "Parent", offspring=["group:Tribe", "group:FormerPerson",
+                                             "person:NotLoaded"])
+            group = root / "entities" / "groups" / "Tribe.json"
+            group.parent.mkdir(parents=True)
+            group.write_text(json.dumps({
+                "id": "group:Tribe", "type": "group",
+                "bsi": {"canonical_id": "group:Tribe"}
+            }), encoding="utf-8")
+            migrated = root / "entities" / "people" / "FormerPerson.json"
+            migrated.write_text(json.dumps({
+                "id": "group:FormerPerson", "type": "group",
+                "bsi": {"canonical_id": "group:FormerPerson"},
+            }), encoding="utf-8")
+            result = family.audit(root)
+            counts = result["counts"]
+            self.assertEqual(result["person_records_scanned"], 1)
+            self.assertEqual(counts["offspring_target_nonperson_kind"], 2)
+            self.assertEqual(counts["offspring_target_not_found_in_current_entity_data"], 1)
+            examples = {
+                row["child_target"]: row["target_kind_if_known"]
+                for row in result["nonperson_or_unresolved_offspring_examples"]
+            }
+            self.assertEqual(examples, {
+                "group:Tribe": "group",
+                "group:FormerPerson": "group",
+                "person:NotLoaded": None,
+            })
 
     def test_disallowed_negative_report_limit(self):
         with self.assertRaisesRegex(ValueError, "Negative"):

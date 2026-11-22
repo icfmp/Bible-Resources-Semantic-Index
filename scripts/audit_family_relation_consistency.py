@@ -19,15 +19,24 @@ def audit(data: Path, *, limit: int = 30) -> dict:
     if limit < 0:
         raise ValueError("Negative report limit")
     people = {}
-    for path in sorted((data / "entities" / "people").glob("*.json")):
+    nonperson_targets = {}
+    all_ids = set()
+    for path in sorted((data / "entities").glob("*/*.json")):
         record = json.loads(path.read_text(encoding="utf-8"))
         identity = record.get("id")
-        if not isinstance(identity, str) or identity in people:
-            raise ValueError(f"Missing or duplicate current person identity: {path}")
-        people[identity] = record
+        if not isinstance(identity, str) or identity in all_ids:
+            raise ValueError(f"Missing or duplicate current entity identity: {path}")
+        all_ids.add(identity)
+        if record.get("type") == "person":
+            people[identity] = record
+        else:
+            # Reclassified native groups may still live in an original
+            # ACAI people/ source category; classify by reviewed type.
+            nonperson_targets[identity] = record.get("type", "<missing>")
     canonical = {id_: doc["bsi"]["canonical_id"] for id_, doc in people.items()}
     stats = Counter()
     conflicts = []
+    nonperson_examples = []
     for identity, person in sorted(people.items()):
         gender = person.get("gender")
         role = {"male": "father", "female": "mother"}.get(gender)
@@ -35,8 +44,18 @@ def audit(data: Path, *, limit: int = 30) -> dict:
             stats["offspring_claims"] += 1
             child = people.get(child_id)
             if child is None:
-                # Missing references have their own exhaustive exact-ID audit.
-                stats["nonperson_child_targets"] += 1
+                # Missing references have their own exhaustive exact-ID audit;
+                # *here* classify valid source pointers to another kind.
+                kind = nonperson_targets.get(child_id)
+                if kind:
+                    stats["offspring_target_nonperson_kind"] += 1
+                else:
+                    stats["offspring_target_not_found_in_current_entity_data"] += 1
+                nonperson_examples.append({
+                    "claiming_parent": identity,
+                    "child_target": child_id,
+                    "target_kind_if_known": kind,
+                })
                 continue
             if role is None:
                 stats["parent_role_unknown"] += 1
@@ -64,6 +83,10 @@ def audit(data: Path, *, limit: int = 30) -> dict:
         "person_records_scanned": len(people),
         "counts": dict(sorted(stats.items())),
         "conflicting_inverse_claim_examples": conflicts[:limit],
+        "nonperson_or_unresolved_offspring_examples": sorted(
+            nonperson_examples,
+            key=lambda x: (x["claiming_parent"], x["child_target"])
+        )[:limit],
         "warning": (
             "A mismatch is a review candidate, not proof of a fabricated person "
             "or authority to delete genealogy. Parent roles may be incomplete, "
