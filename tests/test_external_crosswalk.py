@@ -162,6 +162,23 @@ class ExternalCrosswalkTests(unittest.TestCase):
             "synthetic-geo-A", "synthetic-geo-B"]
         self.assertEqual(self.check(altered)["reviewed_links"], 1)
 
+    def test_same_external_entry_cannot_have_two_reviewed_relation_types(self):
+        altered = copy.deepcopy(self.doc)
+        conflicting = copy.deepcopy(altered["links"][0])
+        conflicting["relation"] = "related_subject"
+        altered["links"].append(conflicting)
+        with self.assertRaisesRegex(ValueError, "Conflicting reviewed relations"):
+            self.check(altered)
+
+        # Distinct entries remain independently reviewable for the same entity.
+        altered["links"][1]["entry_id"] = "synthetic-entry-002"
+        self.assertEqual(self.check(altered)["reviewed_links"], 2)
+
+        # The same source entry may link to a different identity only when
+        # reviewed independently; the validator never merges those identities.
+        altered["links"][1]["entity_id"] = "place:Gadara"
+        self.assertEqual(self.check(altered)["reviewed_links"], 2)
+
     def test_schema_matches_validator_and_is_backward_compatible_for_links_only(self):
         self.assertFalse(self.schema["additionalProperties"])
         self.assertIn("abstentions", self.schema["properties"])
