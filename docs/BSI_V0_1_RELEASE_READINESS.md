@@ -1,5 +1,12 @@
 # Bible Semantic Index (BSI) — v0.1 release readiness
 
+> **Historical publication record.** The `bible-semantic-index/` workspace
+> and commands below refer to the old Bible-Resources monorepo state in 2026.
+> They are deliberately preserved as publication provenance, **not runnable
+> instructions for the current standalone BRSI repository**. Current build
+> and release-contract instructions are in [the BRSI README](../README.md)
+> and [phase 1 contract](RELEASE_CONTRACT.md).
+
 **Status: PUBLISHED 2026-11-18** — [Bible Semantic Index v0.1.0](https://github.com/icfmp/Bible-Resources/releases/tag/bsi-v0.1.0). Key Terms are excluded from this version. This page preserves the preparation evidence and release criteria; see [the scoped rights audit](BSI_V0_1_RIGHTS_AUDIT.md).
 
 ## Identity and scope
