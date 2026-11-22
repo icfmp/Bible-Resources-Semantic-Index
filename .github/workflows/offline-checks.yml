@@ -1,0 +1,34 @@
+name: BSI standalone offline checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  offline-regressions:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Entity and workspace regressions
+        run: |
+          python3 -I tests/test_workspace_layout.py
+          python3 -I tests/test_work_snapshot.py
+          python3 -I tests/test_distribution_profile.py
+          python3 -I tests/test_build.py
+          python3 -I tests/test_resolve.py
+          python3 -I tests/test_audit_person_overlaps.py
+      - name: UBS source-baseline regressions
+        run: |
+          python3 -I links/dictionaries/ubs-greek/test_index.py
+          python3 -I links/dictionaries/ubs-hebrew/test_index.py
+
+# Full upstream source-pinned BSI / UBS workflows are deliberately NOT copied
+# unchanged from Bible-Resources. Their paths, restricted private snapshots,
+# release triggers, and cross-repository dependencies require dedicated review.
+# Historical releases remain owned by Bible-Resources during this migration.
