@@ -68,6 +68,15 @@ class NameCandidateAuditTests(unittest.TestCase):
                 "not_distinguished_by_key_verses_or_explicit_words": 2,
             })
             self.assertEqual(outcome["unresolved_without_reviewed_hint"], 2)
+            self.assertEqual(
+                {row["source_id"] for row in outcome["unresolved_source_examples"]},
+                {"person:Carol", "person:Carol.2"},
+            )
+            self.assertTrue(all(
+                row["key_references"] == ["41015040"]
+                and row["explicit_word_ids"] == ["sblgnt:n41015040003"]
+                for row in outcome["unresolved_source_examples"]
+            ))
 
     def test_same_source_identity_alias_is_not_a_homonym(self):
         with tempfile.TemporaryDirectory() as temp:
