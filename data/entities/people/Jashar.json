@@ -31,20 +31,20 @@
       }
     ],
     "editorial_reason": "Joshua 10:13 and 2 Samuel 1:18 name a literary work, not a historical man; aligned Hebrew adjectives are the title epithet, not the whole phrase.",
-    "review_status": "editorially_reviewed",
-    "source_id": "person:Jashar",
-    "source_primary_id": "person:Jashar",
-    "source_sha256": "51655d63ae724b48360e0b96488de31f170fa2e34cf70d22ee4e8dd1c7b504f8",
     "identity_hint": {
-      "name": "Book of Jashar",
-      "qualifier": "written work cited in Joshua and 2 Samuel",
-      "language": "eng",
       "evidence_references": [
         "06010013",
         "10001018"
       ],
+      "language": "eng",
+      "name": "Book of Jashar",
+      "qualifier": "written work cited in Joshua and 2 Samuel",
       "review_status": "editorially_reviewed"
-    }
+    },
+    "review_status": "editorially_reviewed",
+    "source_id": "person:Jashar",
+    "source_primary_id": "person:Jashar",
+    "source_sha256": "51655d63ae724b48360e0b96488de31f170fa2e34cf70d22ee4e8dd1c7b504f8"
   },
   "explicit_instances": {
     "wlc": [
@@ -62,65 +62,11 @@
     "10001018"
   ],
   "localizations": {
-    "apd": {
-      "preferred_label": "ياشار"
-    },
-    "arb": {
-      "preferred_label": "يَاشَر"
-    },
-    "bis": {
-      "preferred_label": "Jasara"
-    },
     "eng": {
       "alternate_labels": [
         "Jasher"
       ],
       "preferred_label": "Jashar"
-    },
-    "fas": {
-      "preferred_label": "یاشر"
-    },
-    "fra": {
-      "preferred_label": "Jaschar"
-    },
-    "hau": {
-      "preferred_label": "Yashar"
-    },
-    "hin": {
-      "preferred_label": "याशार"
-    },
-    "ibo": {
-      "preferred_label": "Jasha"
-    },
-    "ind": {
-      "preferred_label": "Yasar"
-    },
-    "nep": {
-      "preferred_label": "याशार"
-    },
-    "por": {
-      "preferred_label": "Jasar"
-    },
-    "rus": {
-      "preferred_label": "Праведный"
-    },
-    "spa": {
-      "preferred_label": "Jaser"
-    },
-    "swh": {
-      "preferred_label": "Yashari"
-    },
-    "tpi": {
-      "preferred_label": "Jasar"
-    },
-    "vie": {
-      "preferred_label": "Gia-sa"
-    },
-    "zhs": {
-      "preferred_label": "雅煞珥"
-    },
-    "zht": {
-      "preferred_label": "雅煞珥"
     }
   },
   "non_biblical": false,
