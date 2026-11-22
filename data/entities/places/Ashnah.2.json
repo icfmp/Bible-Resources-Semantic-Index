@@ -10,7 +10,22 @@
     "review_status": "source_unreviewed",
     "source_id": "place:Ashnah.2",
     "source_primary_id": "place:Ashnah.2",
-    "source_sha256": "0019a99cda0bae9165749f8eaf79906d8217edd6950ac0fdc9a6b398ee7f2227"
+    "source_sha256": "0019a99cda0bae9165749f8eaf79906d8217edd6950ac0fdc9a6b398ee7f2227",
+    "editorial_field_changes": [
+      {
+        "action": "add_directly_attested_source_verse",
+        "added_reference_values": {
+          "references": [
+            "06015043"
+          ]
+        },
+        "reason": "Joshua 15:43 explicitly names Ashnah in the second Judah city group. The existing source identity specifically disambiguates it by that verse from the Ashnah of Joshua 15:33.",
+        "evidence": [
+          "Joshua 15:43",
+          "https://www.esv.org/Joshua%2015%3A43/"
+        ]
+      }
+    ]
   },
   "explicit_instances": {},
   "id": "place:Ashnah.2",
@@ -34,7 +49,9 @@
   },
   "primary_id": "place:Ashnah.2",
   "pronominal_referents": {},
-  "references": [],
+  "references": [
+    "06015043"
+  ],
   "subject_referents": {},
   "subregion_of": [
     "place:TerritoryOfJudah"
