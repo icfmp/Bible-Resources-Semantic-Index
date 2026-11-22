@@ -187,12 +187,13 @@ remains open by design. **Built ≠ rights-cleared ≠ owner-approved ≠ publis
 
 ### Phase 2 — Maintainable repository (P2)
 
-- [ ] **Consolidate scripts, tests, current docs and UBS-specific research.**
+- [x] **Consolidate scripts, tests, current docs and UBS-specific research.**
   [#22](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/22).
-  Audit callers first; keep general methods reusable and source-specific
-  decisions beside their sources; retire one-off code only after tests and
-  preservation checks. Adopt the BRSI name in current documentation without
-  changing stable IDs or release paths.
+  The [maintained tooling map](MAINTENANCE_INVENTORY.md) identifies current
+  generic, native, lexical and historical-test responsibilities. Historical
+  ACAI replay is isolated from the canonical builder, unused migration and
+  research diagnostics were retired with CI verification, and current docs
+  use BRSI while stable IDs, release paths and source locks stay unchanged.
 - [x] **Remove old duplicate BSI workspace and workflows from
   Bible-Resources.** [Bible-Resources PR #482](https://github.com/icfmp/Bible-Resources/pull/482)
   removed the historical 212-file working tree and four old workflows after
