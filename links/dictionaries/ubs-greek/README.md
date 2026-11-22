@@ -91,15 +91,15 @@ Encyclopedia crosswalks remain separate under `links/encyclopedias/`.
 With separately pinned original sources checked out:
 
 ```bash
-python3 -I bible-semantic-index/links/dictionaries/ubs-greek/build_index.py \
+python3 -I links/dictionaries/ubs-greek/build_index.py \
   --english ubs-source/dictionaries/greek/JSON/UBSGreekNTDic-v1.0-en.JSON \
   --french ubs-source/dictionaries/greek/JSON/UBSGreekNTDic-v1.0-fr.JSON \
   --macula macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv \
   --output /tmp/ubs-greek-rebuilt.json
-python3 -I bible-semantic-index/links/dictionaries/ubs-greek/test_index.py
+python3 -I links/dictionaries/ubs-greek/test_index.py
 ```
 
-The [automated workflow](../../../../.github/workflows/bsi-ubs-greek.yml)
+The [automated workflow](../../../.github/workflows/bsi-ubs-greek.yml)
 verifies the exact upstream revisions and blob IDs, rebuilds against both
 language source files and the full Macula TSV, and structurally compares
 the generated index with the committed version. **No source file is modified.**
@@ -967,7 +967,7 @@ from pathlib import Path
 import json
 import runpy
 
-root = Path("bible-semantic-index/links/dictionaries/ubs-greek")
+root = Path("links/dictionaries/ubs-greek")
 lookup = runpy.run_path(str(root / "build_consolidated_v1_review_index.py"))["lookup"]
 candidate = json.loads(Path("/tmp/bsi-ubs-greek-v1-consolidated-original-word-index-PRIVATE.json").read_text())
 word = lookup(candidate, "n40001001003")
@@ -979,8 +979,8 @@ This is a **private research/provisional review artifact**, not the public
 runtime format. The complete original-word index is reproduced by the
 source-pinned GitHub Actions workflow with original UBS EN/FR Dictionary 1.0,
 MACULA SBLGNT, all previously reviewed word-specific source decisions and
-exact lexical evidence cross-checks. CI uploads it as an **expiring private
-14-day artifact**, not as a tagged release or public downloadable module.
+exact lexical evidence cross-checks. CI keeps it **runner-local** for source verification and does not upload
+it as a public artifact, tagged release or downloadable module.
 The original Greek, Strong, Louw–Nida, morphology, verses, and UBS
 dictionary definitions are never rewritten or bundled.
 
