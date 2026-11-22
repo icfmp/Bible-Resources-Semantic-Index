@@ -24,7 +24,9 @@ approval or a replacement for source-specific license notices.
 - **868 imported ACAI Key Terms are excluded** from current BSI source data
   and publication, pending separate field-specific permission investigation.
   Permission-only Paratext/UBS content must not be reintroduced incidentally.
-- Inherited multilingual descriptions may also be editorially unapproved;
+- Inherited multilingual biographies and redundant translated display names
+  were retired from editable BRSI records. The retained English source labels
+  and some aliases are **source-unreviewed**, not independently approved;
   see `docs/LOCALIZATION_REVIEW.md` for the fail-closed reader-export rule.
 
 The existing historical releases and their original attribution documents
