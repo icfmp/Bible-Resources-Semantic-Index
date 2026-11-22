@@ -50,28 +50,28 @@
       }
     ],
     "editorial_reason": "1 Chronicles 3:15 explicitly identifies Johanan as a distinct son of Josiah, while the source incorrectly canonicalizes this name form under person:Jehoahaz.3. The precise Johanan word remains attached to its own individual; no guess is made about Shallum.5.",
-    "review_status": "editorially_reviewed",
-    "source_id": "person:Johanan",
-    "source_primary_id": "person:Jehoahaz.3",
-    "source_sha256": "eb288b8b7d6577ac5e007f36838dfcb3728b96bcdccc06b10e824b2abba44ae1",
+    "identity_hint": {
+      "evidence_references": [
+        "13003015"
+      ],
+      "language": "eng",
+      "name": "Johanan",
+      "qualifier": "son of Josiah, distinct from Shallum/Jehoahaz",
+      "review_status": "editorially_reviewed"
+    },
     "inherited_localizations": {
-      "status": "withheld_pending_review",
       "fields": [
         "preferred_label",
         "alternate_labels"
       ],
       "reason": "Inherited description and compound labels conflate distinct Johanan with Jehoahaz; keep source strings for review.",
-      "source": "acai"
+      "source": "acai",
+      "status": "withheld_pending_review"
     },
-    "identity_hint": {
-      "name": "Johanan",
-      "qualifier": "son of Josiah, distinct from Shallum/Jehoahaz",
-      "language": "eng",
-      "evidence_references": [
-        "13003015"
-      ],
-      "review_status": "editorially_reviewed"
-    }
+    "review_status": "editorially_reviewed",
+    "source_id": "person:Johanan",
+    "source_primary_id": "person:Jehoahaz.3",
+    "source_sha256": "eb288b8b7d6577ac5e007f36838dfcb3728b96bcdccc06b10e824b2abba44ae1"
   },
   "explicit_instances": {
     "wlc": [
@@ -93,62 +93,8 @@
     ]
   },
   "localizations": {
-    "apd": {
-      "preferred_label": "يوحانان (يهوآحاز)"
-    },
-    "arb": {
-      "preferred_label": "يُوحَانَانُ (يَهُوآحَازُ)"
-    },
-    "bis": {
-      "preferred_label": "Johanan (Joahas)"
-    },
     "eng": {
       "preferred_label": "Johanan (Jehoahaz)"
-    },
-    "fas": {
-      "preferred_label": "یوحانان (یهوآحاز)"
-    },
-    "fra": {
-      "preferred_label": "Jochanan (Joachaz)"
-    },
-    "hau": {
-      "preferred_label": "Yohanan (Yehoyahaz)"
-    },
-    "hin": {
-      "preferred_label": "योहानान (यहोआहाज)"
-    },
-    "ibo": {
-      "preferred_label": "Johanan (Jehoahaz)"
-    },
-    "ind": {
-      "preferred_label": "Yohanan (Yoahas)"
-    },
-    "nep": {
-      "preferred_label": "योहानान (यहोआहाज)"
-    },
-    "por": {
-      "preferred_label": "Joanã (Jeoacaz)"
-    },
-    "rus": {
-      "preferred_label": "Иоханан (Иоахаз)"
-    },
-    "spa": {
-      "preferred_label": "Johanán (Joacaz)"
-    },
-    "swh": {
-      "preferred_label": "Yohanani (Yehoahazi)"
-    },
-    "tpi": {
-      "preferred_label": "Johanan (Joahas)"
-    },
-    "vie": {
-      "preferred_label": "Giô-ha-nan (Giê-hô-a-ha)"
-    },
-    "zhs": {
-      "preferred_label": "约哈难 (约哈斯)"
-    },
-    "zht": {
-      "preferred_label": "約哈難（約哈斯）"
     }
   },
   "mother": "person:Hamutal",

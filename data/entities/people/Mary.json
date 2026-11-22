@@ -22,19 +22,19 @@
   },
   "bsi": {
     "canonical_id": "person:Mary",
-    "review_status": "source_unreviewed",
-    "source_id": "person:Mary",
-    "source_primary_id": "person:Mary",
-    "source_sha256": "c3d18b3e6d8b68e686af70c599edffae2c2509037b7e79c708098d69b4c51184",
     "identity_hint": {
-      "name": "Mary",
-      "qualifier": "mother of Jesus",
-      "language": "eng",
       "evidence_references": [
         "40001018"
       ],
+      "language": "eng",
+      "name": "Mary",
+      "qualifier": "mother of Jesus",
       "review_status": "editorially_reviewed"
-    }
+    },
+    "review_status": "source_unreviewed",
+    "source_id": "person:Mary",
+    "source_primary_id": "person:Mary",
+    "source_sha256": "c3d18b3e6d8b68e686af70c599edffae2c2509037b7e79c708098d69b4c51184"
   },
   "explicit_instances": {
     "SBLGNT": [
@@ -112,62 +112,8 @@
     ]
   },
   "localizations": {
-    "apd": {
-      "preferred_label": "مريم (أم يسوع)"
-    },
-    "arb": {
-      "preferred_label": "مَرْيَم (أُمّ يَسُوع)"
-    },
-    "bis": {
-      "preferred_label": "Meri (Mama blong Jisas)"
-    },
     "eng": {
       "preferred_label": "Mary (Mother of Jesus)"
-    },
-    "fas": {
-      "preferred_label": "مریم (مادر عیسی)"
-    },
-    "fra": {
-      "preferred_label": "Marie (mère de Jésus)"
-    },
-    "hau": {
-      "preferred_label": "Maryamu (Mahaifiyar Yesu)"
-    },
-    "hin": {
-      "preferred_label": "मरियम (यीशु की माता)"
-    },
-    "ibo": {
-      "preferred_label": "Meri (nne Jisọs)"
-    },
-    "ind": {
-      "preferred_label": "Maria (ibu Yesus)"
-    },
-    "nep": {
-      "preferred_label": "मरियम (येशूकी आमा)"
-    },
-    "por": {
-      "preferred_label": "Maria (mãe de Jesus)"
-    },
-    "rus": {
-      "preferred_label": "Мария (мать Иисуса)"
-    },
-    "spa": {
-      "preferred_label": "María (madre de Jesús)"
-    },
-    "swh": {
-      "preferred_label": "Mariamu (Mama yake Yesu)"
-    },
-    "tpi": {
-      "preferred_label": "Maria (mama bilong Jisas)"
-    },
-    "vie": {
-      "preferred_label": "Ma-ri (mẹ Chúa Giê-xu)"
-    },
-    "zhs": {
-      "preferred_label": "马利亚（耶稣之母）"
-    },
-    "zht": {
-      "preferred_label": "馬利亞（耶穌的母親）"
     }
   },
   "non_biblical": false,

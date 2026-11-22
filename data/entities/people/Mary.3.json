@@ -20,19 +20,19 @@
   },
   "bsi": {
     "canonical_id": "person:Mary.3",
-    "review_status": "source_unreviewed",
-    "source_id": "person:Mary.3",
-    "source_primary_id": "person:Mary.3",
-    "source_sha256": "e42d11132a170ee72ad6fecf1663a4ea3793d8bf54224dc217bcb97fff35293e",
     "identity_hint": {
-      "name": "Mary",
-      "qualifier": "of Bethany, sister of Martha",
-      "language": "eng",
       "evidence_references": [
         "43011001"
       ],
+      "language": "eng",
+      "name": "Mary",
+      "qualifier": "of Bethany, sister of Martha",
       "review_status": "editorially_reviewed"
-    }
+    },
+    "review_status": "source_unreviewed",
+    "source_id": "person:Mary.3",
+    "source_primary_id": "person:Mary.3",
+    "source_sha256": "e42d11132a170ee72ad6fecf1663a4ea3793d8bf54224dc217bcb97fff35293e"
   },
   "explicit_instances": {
     "SBLGNT": [
@@ -86,62 +86,8 @@
     ]
   },
   "localizations": {
-    "apd": {
-      "preferred_label": "مريم (بيت عنيا)"
-    },
-    "arb": {
-      "preferred_label": "مَرْيَم (مِن بَيْتِ عَنْيَا)"
-    },
-    "bis": {
-      "preferred_label": "Meri (blong Betani)"
-    },
     "eng": {
       "preferred_label": "Mary (of Bethany)"
-    },
-    "fas": {
-      "preferred_label": "مریم (بیت‌عنیا)"
-    },
-    "fra": {
-      "preferred_label": "Marie (de Béthanie)"
-    },
-    "hau": {
-      "preferred_label": "Maryamu (ta Betani)"
-    },
-    "hin": {
-      "preferred_label": "मरियम (बैतनिय्याह की)"
-    },
-    "ibo": {
-      "preferred_label": "Meri (onye Betani)"
-    },
-    "ind": {
-      "preferred_label": "Maria (dari Betania)"
-    },
-    "nep": {
-      "preferred_label": "मरियम (बेथानियाकी)"
-    },
-    "por": {
-      "preferred_label": "Maria (de Betânia)"
-    },
-    "rus": {
-      "preferred_label": "Мария (из Вифании)"
-    },
-    "spa": {
-      "preferred_label": "María (de Betania)"
-    },
-    "swh": {
-      "preferred_label": "Mariamu (wa Bethania)"
-    },
-    "tpi": {
-      "preferred_label": "Maria (bilong Betani)"
-    },
-    "vie": {
-      "preferred_label": "Ma-ri (ở Bê-tha-ni)"
-    },
-    "zhs": {
-      "preferred_label": "马利亚（伯大尼）"
-    },
-    "zht": {
-      "preferred_label": "馬利亞（伯大尼）"
     }
   },
   "non_biblical": false,

@@ -21,19 +21,19 @@
   },
   "bsi": {
     "canonical_id": "person:Mary.2",
-    "review_status": "source_unreviewed",
-    "source_id": "person:Mary.2",
-    "source_primary_id": "person:Mary.2",
-    "source_sha256": "7c8385fb128c7948b3538fe39da8ff6e282e3c50e632252c4ea26390d4acd381",
     "identity_hint": {
-      "name": "Mary",
-      "qualifier": "mother of James the younger and Joses",
-      "language": "eng",
       "evidence_references": [
         "41015040"
       ],
+      "language": "eng",
+      "name": "Mary",
+      "qualifier": "mother of James the younger and Joses",
       "review_status": "editorially_reviewed"
-    }
+    },
+    "review_status": "source_unreviewed",
+    "source_id": "person:Mary.2",
+    "source_primary_id": "person:Mary.2",
+    "source_sha256": "7c8385fb128c7948b3538fe39da8ff6e282e3c50e632252c4ea26390d4acd381"
   },
   "explicit_instances": {
     "SBLGNT": [
@@ -74,62 +74,8 @@
     ]
   },
   "localizations": {
-    "apd": {
-      "preferred_label": "مريم"
-    },
-    "arb": {
-      "preferred_label": "مَرْيَم"
-    },
-    "bis": {
-      "preferred_label": "Meri"
-    },
     "eng": {
       "preferred_label": "Mary"
-    },
-    "fas": {
-      "preferred_label": "مریم"
-    },
-    "fra": {
-      "preferred_label": "Marie"
-    },
-    "hau": {
-      "preferred_label": "Maryamu"
-    },
-    "hin": {
-      "preferred_label": "मरियम"
-    },
-    "ibo": {
-      "preferred_label": "Meri"
-    },
-    "ind": {
-      "preferred_label": "Maria"
-    },
-    "nep": {
-      "preferred_label": "मरियम"
-    },
-    "por": {
-      "preferred_label": "Maria"
-    },
-    "rus": {
-      "preferred_label": "Мария"
-    },
-    "spa": {
-      "preferred_label": "María"
-    },
-    "swh": {
-      "preferred_label": "Mariamu"
-    },
-    "tpi": {
-      "preferred_label": "Maria"
-    },
-    "vie": {
-      "preferred_label": "Ma-ri"
-    },
-    "zhs": {
-      "preferred_label": "马利亚"
-    },
-    "zht": {
-      "preferred_label": "馬利亞"
     }
   },
   "non_biblical": false,

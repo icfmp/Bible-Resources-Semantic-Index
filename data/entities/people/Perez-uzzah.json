@@ -49,29 +49,29 @@
       }
     ],
     "editorial_reason": "The named place Perez-uzzah is attested at 2 Samuel 6:8 and 1 Chronicles 13:11, distinct from Uzzah the man.",
-    "review_status": "editorially_reviewed",
-    "source_id": "person:Perez-uzzah",
-    "source_primary_id": "person:Uzzah",
-    "source_sha256": "3aa30fdd82e1f20ab36dda73d428a1648f3662126c4aface6653817d26d11709",
+    "identity_hint": {
+      "evidence_references": [
+        "10006008",
+        "13013011"
+      ],
+      "language": "eng",
+      "name": "Perez-Uzzah",
+      "qualifier": "place named after Uzzah's death, not the man",
+      "review_status": "editorially_reviewed"
+    },
     "inherited_localizations": {
-      "status": "withheld_pending_review",
       "fields": [
         "preferred_label",
         "alternate_labels"
       ],
       "reason": "Inherited biography and naming identify Uzzah the man rather than Perez-Uzzah the place; do not publish without per-language correction.",
-      "source": "acai"
+      "source": "acai",
+      "status": "withheld_pending_review"
     },
-    "identity_hint": {
-      "name": "Perez-Uzzah",
-      "qualifier": "place named after Uzzah's death, not the man",
-      "language": "eng",
-      "evidence_references": [
-        "10006008",
-        "13013011"
-      ],
-      "review_status": "editorially_reviewed"
-    }
+    "review_status": "editorially_reviewed",
+    "source_id": "person:Perez-uzzah",
+    "source_primary_id": "person:Uzzah",
+    "source_sha256": "3aa30fdd82e1f20ab36dda73d428a1648f3662126c4aface6653817d26d11709"
   },
   "explicit_instances": {
     "wlc": [
@@ -95,62 +95,8 @@
     ]
   },
   "localizations": {
-    "apd": {
-      "preferred_label": "فارص عزة (عزة)"
-    },
-    "arb": {
-      "preferred_label": "فارص عُزَّة (عُزَّة)"
-    },
-    "bis": {
-      "preferred_label": "Peres Usaha (Usaha)"
-    },
     "eng": {
       "preferred_label": "Perez-uzzah (Uzzah)"
-    },
-    "fas": {
-      "preferred_label": "فارِص‌عُزّه (عُزّه)"
-    },
-    "fra": {
-      "preferred_label": "Pérets-Uzza (Uzza)"
-    },
-    "hau": {
-      "preferred_label": "Ferez Uzza (Uzza)"
-    },
-    "hin": {
-      "preferred_label": "पेरेसुज्जा (उज्जा)"
-    },
-    "ibo": {
-      "preferred_label": "Perez Ụza (Ụza)"
-    },
-    "ind": {
-      "preferred_label": "Peres-Uza (Uza)"
-    },
-    "nep": {
-      "preferred_label": "फारेस-उज्‍जाह (उज्‍जाह)"
-    },
-    "por": {
-      "preferred_label": "Perez-Uzá (Uzá)"
-    },
-    "rus": {
-      "preferred_label": "Перец-Узза (Оза)"
-    },
-    "spa": {
-      "preferred_label": "Pérez-uza (Uza)"
-    },
-    "swh": {
-      "preferred_label": "Peres-Uza (Uza)"
-    },
-    "tpi": {
-      "preferred_label": "Peres-Usa (Usa)"
-    },
-    "vie": {
-      "preferred_label": "Phê-rết U-xa (U-xa)"
-    },
-    "zhs": {
-      "preferred_label": "毗列斯·乌撒 (乌撒)"
-    },
-    "zht": {
-      "preferred_label": "毗列斯‧烏撒（烏撒）"
     }
   },
   "non_biblical": false,
