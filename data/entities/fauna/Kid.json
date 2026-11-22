@@ -1,0 +1,342 @@
+{
+  "alternate_sources": {
+    "aquifer": [
+      "6578|Kid|TyndaleBibleDictionary"
+    ],
+    "ubsdbh": [
+      "001305001001000",
+      "001309001001000"
+    ],
+    "ubsdgnt": [
+      "4.19"
+    ],
+    "ubsfauna": [
+      "fauna:2.16.1"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "fauna:Kid",
+    "review_status": "source_unreviewed",
+    "source_id": "fauna:Kid",
+    "source_primary_id": "fauna:Kid",
+    "source_sha256": "ba6ab2c6ef66464c958f7043ae8f745f1cb1ba08cfd76a0578f7827a70384064"
+  },
+  "explicit_instances": {
+    "SBLGNT": [
+      [
+        "n40025033011"
+      ],
+      [
+        "n40025032021"
+      ],
+      [
+        "n42015029022"
+      ]
+    ],
+    "wlc": [
+      [
+        "o010270090091"
+      ],
+      [
+        "o010270160031"
+      ],
+      [
+        "o010380170041"
+      ],
+      [
+        "o010380200041"
+      ],
+      [
+        "o010380230102"
+      ],
+      [
+        "o020230190101"
+      ],
+      [
+        "o020340260101"
+      ],
+      [
+        "o050140210211"
+      ],
+      [
+        "o070060190041"
+      ],
+      [
+        "o070130150111"
+      ],
+      [
+        "o070130190041"
+      ],
+      [
+        "o070140060072"
+      ],
+      [
+        "o070150010102"
+      ],
+      [
+        "o090100030201"
+      ],
+      [
+        "o090160200072"
+      ],
+      [
+        "o230110060071"
+      ],
+      [
+        "o220010080131",
+        "o220010080132"
+      ]
+    ]
+  },
+  "fauna_type": "Mammals",
+  "id": "fauna:Kid",
+  "key_references": [
+    "01027009",
+    "02023019",
+    "42015029"
+  ],
+  "lemmas": {
+    "el": [
+      "ἐρίφιον",
+      "ἔριφος"
+    ],
+    "he": [
+      "גְּדִי",
+      "גְּדִיָּה"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "صغير الماعز، ممكن يكون دكر ولا نتاية.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "جدي"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "صغير الماعز، وقد يكون ذكرًا أو أنثى.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "جَدْي"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan pikinini nani, we i save man no woman.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "smol nani"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Young Goat"
+      ],
+      "descriptions": [
+        {
+          "article": "fauna:Kid",
+          "description": "A young goat, which can be either male or female.",
+          "gloss": "Kid",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Kid"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "بز جوانی که می‌تواند نر یا ماده باشد.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "بزغاله"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Jeune chèvre, mâle ou femelle.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "chevreau"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Ƙaramin akuya ko bunsuru, wato ɗan akuya ko ƙaramar akuya.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ɗan akuya"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "बकरी का एक छोटा बच्चा (मेम्ना), जो नर या मादा दोनों में से कोई भी हो सकता है।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "बकरी का बच्चा"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Nwa ewu, nke pụrụ ịbụ nke oke ma ọ bụ nke nne.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Nwa ewu"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Anak kambing, baik jantan maupun betina.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "anak kambing"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "बाख्राको सानो बच्चा, जुन भाले वा पोथी दुवै हुन सक्छ।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "पाठो"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Um bode ou cabra jovem, que pode ser macho ou fêmea.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Cabrito"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Молодой козел (козленок), мужского или женского пола.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Козленок"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Cría de la cabra, que puede ser macho o hembra.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "cabrito"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Mbuzi mchanga, ambaye anaweza kuwa dume au jike.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Mwana-mbuzi"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Wanpela yangpela meme, em inap man o meri.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "pikinini meme"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Một con dê con, có thể là đực hoặc cái.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "dê con"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "小山羊，可指公或母。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "山羊羔"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "小山羊，可為雄性或雌性。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "山羊羔"
+    }
+  },
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "primary_id": "fauna:Kid",
+  "pronominal_referents": {
+    "wlc": [
+      [
+        "o010270090132"
+      ],
+      [
+        "o010380230112"
+      ],
+      [
+        "o020230190122"
+      ],
+      [
+        "o020340260122"
+      ],
+      [
+        "o050140210232"
+      ],
+      [
+        "o230110060162"
+      ]
+    ]
+  },
+  "references": [
+    "01027009",
+    "01027016",
+    "01038017",
+    "01038020",
+    "01038023",
+    "02023019",
+    "02034026",
+    "05014021",
+    "07006019",
+    "07013015",
+    "07013019",
+    "07014006",
+    "07015001",
+    "09010003",
+    "09016020",
+    "22001008",
+    "23011006",
+    "40025032",
+    "40025033",
+    "42015029"
+  ],
+  "subject_referents": {},
+  "type": "fauna",
+  "ubsdbh": [
+    "001305001001000",
+    "001309001001000"
+  ],
+  "ubsdgnt": [
+    "4.19"
+  ]
+}

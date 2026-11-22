@@ -1,0 +1,259 @@
+{
+  "alternate_sources": {
+    "aquifer": [
+      "4862|Dishon|TyndaleBibleDictionary"
+    ],
+    "tipnr": [
+      "Dishon@Gen.36.21-1Ch"
+    ],
+    "vizbible": [
+      "recSb23V3EQtfldTc"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "person:Dishon",
+    "editorial_evidence": [
+      "Pinned Macula WLC 1CH 1:38 o130010380072: Dishon among Seir's sons",
+      "Pinned Macula WLC 1CH 1:41 o130010410031 and o130010410051: Dishon introduced as son of Anah then repeated as father of named sons",
+      "ACAI pinned person:Dishon father=person:Seir; person:Dishon.2 father=person:Anah.2; both had the 1CH 1:41 tokens",
+      "Pinned Macula WLC GEN 36:26 o010360260031 has Hebrew lemma דִּישָׁן (Dishan), not assumed a Dishon identity in this edit",
+      "Inherited ACAI #75 exact-person token collisions; our derived-index audit #307"
+    ],
+    "editorial_reason": "1 Chronicles 1:38 names Dishon among the sons of Seir, while 1 Chronicles 1:41 explicitly lists a different Dishon as a son of Anah and immediately repeats his name before naming his sons. Both WLC word tokens in 1:41 therefore refer to person:Dishon.2 (Anah's son), not person:Dishon (Seir's son). Only these two wrong direct-name claims and the now-unsupported 1:41 source reference are removed in the derived index; their original source fields remain immutable. Genesis 36:26 has a lexically different Dishan word in pinned WLC, so it is not guessed or reassigned here.",
+    "review_status": "editorially_reviewed",
+    "source_id": "person:Dishon",
+    "source_primary_id": "person:Dishon",
+    "source_sha256": "ad7142935ff622b8220ea28b39af0a9a3202a6f87a988c32328579e67ca33f2d"
+  },
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o010360210012"
+      ],
+      [
+        "o010360260031"
+      ],
+      [
+        "o010360300021"
+      ],
+      [
+        "o130010380072"
+      ]
+    ]
+  },
+  "father": "person:Seir",
+  "gender": "male",
+  "id": "person:Dishon",
+  "key_references": [
+    "01036025",
+    "01036026",
+    "13001041"
+  ],
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "ديشون كان ابن عنى، اللي كان زعيم للحوريين. ديشون كان أبو حَمْدان، وإشبان، ويِثْران، وكَران.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "ديشون"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "كان ديشون ابن عنى الذي كان أحد أمراء الحوريين. وكان ديشون والد حَمْدان وأَشْبان ويِثْران وكَران.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "دِيشُون"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Dison i pikinini boe blong Anaha, we hem i wan jif blong ol man Hor. Dison hem i papa blong Hemdan, Esban, Jitran, mo Keran.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Dison"
+    },
+    "eng": {
+      "descriptions": [
+        {
+          "article": "person:Dishon",
+          "description": "Dishon was the son of Anah, who was a chief of the Horites. Dishon was the father of Hemdan, Eshban, Ithran, and Cheran.",
+          "gloss": "Dishon",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Dishon"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "دیشون پسر عنه بود که از رؤسای حوریان به شمار می‌رفت. دیشون پدر حمدان، اشبان، یتران و کران بود.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "دیشون"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Dischon était le fils d’Ana, chef des Horiens. Dischon était le père de Hemdan, Eschban, Jithran et Kerân.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Dischon"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Dishon ɗan Ana ne, wanda yake shugaban Horiyawa. Dishon shi ne uban Hemdan, Eshban, Itran, da Keran.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Dishon"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "दीशोन अना का पुत्र था, जो होरियों का एक अधिपति था। दीशोन हेमदान, एशबान, यित्रान और करान का पिता था।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "दीशोन"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Dishọn bụ nwa Ana, onye bụ onyeisi ndị Hori. Dishọn bụ nna Hemdan, Eshban, Itran, na Keran.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Dishọn"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Disyon adalah anak Ana, yang merupakan kepala kaum orang Hori. Disyon adalah ayah dari Hemdan, Esyban, Yitran, dan Keran.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Disyon"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "दीशोन अनाका छोरा थिए, जो होरीहरूका एक नाइके थिए। दीशोन हेमदान, एश्‍बान, यित्रान र करानका पिता थिए।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "दीशोन"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Disom era filho de Aná, que era um chefe dos horeus. Disom foi o pai de Hendã, Esbã, Itrã e Querã.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Disom"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Дишон был сыном Аны, вождя хорреев. Дишон был отцом Хемдана, Эшбана, Ифрана и Херана.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Дишон"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Disón fue hijo de Aná, quien era un jefe de los horeos. Disón fue padre de Hemdán, Esbán, Itrán y Querán.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Disón"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Dishoni alikuwa mwana wa Ana, aliyekuwa kiongozi wa Wahori. Dishoni alikuwa baba wa Hemdani, Eshbani, Ithrani, na Kerani.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Dishoni"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Dison em i pikinini man bilong Ana, em wanpela hetman bilong ol lain Hor. Dison em i papa bilong Hamran, Esban, Itran, na Keran.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Dison"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Đi-sôn là con trai của A-na, một tộc trưởng của người Hô-rít. Đi-sôn là cha của Hem-đan, Ếch-ban, Ích-ran và Kê-ran.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Đi-sôn"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "底顺是亚拿的儿子，亚拿为何利人的族长。底顺是欣但、伊是班、益兰和基兰的父亲。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "底顺"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "底順是何利人族長亞拿的兒子。底順是欣但、伊是班、益蘭和基蘭的父親。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "底順"
+    }
+  },
+  "non_biblical": false,
+  "offspring": [
+    "person:Hemdan",
+    "person:Eshban",
+    "person:Ithran",
+    "person:Cheran"
+  ],
+  "only_mentioned_in_apocrypha": false,
+  "primary_id": "person:Dishon",
+  "pronominal_referents": {},
+  "references": [
+    "01036021",
+    "01036026",
+    "01036030",
+    "13001038"
+  ],
+  "roles": [
+    "Leader",
+    "Patriarch"
+  ],
+  "siblings": [
+    "person:Lotan",
+    "person:Shobal",
+    "person:Zibeon.2",
+    "person:Anah.2",
+    "person:Ezer",
+    "person:Dishan",
+    "person:Timna.2"
+  ],
+  "subject_referents": {},
+  "tribe": "group:Edom",
+  "type": "person"
+}

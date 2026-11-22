@@ -1,0 +1,231 @@
+{
+  "alternate_sources": {
+    "ubsdgnt": [
+      "7.52"
+    ],
+    "ubsrealia": [
+      "realia:3.1.7"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "realia:Step",
+    "review_status": "source_unreviewed",
+    "source_id": "realia:Step",
+    "source_primary_id": "realia:Step",
+    "source_sha256": "ae018bf90fc46abbf0a798acc296c801a6ac1f6b92de0cbc7a4a5042dded49a5"
+  },
+  "explicit_instances": {
+    "SBLGNT": [
+      [
+        "n44021035006"
+      ],
+      [
+        "n44021040009"
+      ]
+    ]
+  },
+  "id": "realia:Step",
+  "key_references": [
+    "44021035",
+    "44021040"
+  ],
+  "lemmas": {
+    "el": [
+      "ἀναβαθμός"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "سطح مسطح بتعفص عليه كجزء من السلم.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "درجة سلم"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "سطح مستوٍ يُوطأ عليه بالأقدام وهو جزء من الدرج.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "دَرَجَة"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan flat ples we man i putum leg blong hem long hem taem i stap go antap no godaon long wan step.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "step"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Flight of Steps",
+        "Stairs",
+        "Steps"
+      ],
+      "descriptions": [
+        {
+          "article": "realia:Step",
+          "description": "A flat surface you step on as part of a staircase.",
+          "gloss": "Step",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Step"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "سطحی صاف که در پلکان بر روی آن پا می‌گذارند.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "پله"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Surface plane sur laquelle on pose le pied et qui fait partie d'un escalier.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "marche"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Wurin sharewa a matakala inda ake ɗora ƙafa yayin hawa ko sauka.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Mataki"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "सीढ़ी का एक सपाट भाग जिस पर कदम रखा जाता है।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "सीढ़ी का पायदान"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Ihe dị larịị a na-azọ ụkwụ na ya nʼime steepụ maọbụ nrịgoro.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ihe nrịgo"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Permukaan datar yang diinjak sebagai bagian dari tangga.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "anak tangga"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "सिँढीको भागको रूपमा गोडा राखिने समतल सतह।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "सिँढीको खुड्किलो"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Uma superfície plana onde se pisa, como parte de uma escadaria.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "degrau"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Плоская поверхность, на которую наступают при подъеме или спуске по лестнице.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ступень"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Superficie plana sobre la que se pisa como parte de una escalera.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "escalón"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Sehemu tambarare unayokanyaga ukiwa kwenye ngazi.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Daraja la ngazi"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Wanpela flatpela hap yu putim lek long en long lata bilong haus.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "lata"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Mặt phẳng bước chân lên, là một phần của cầu thang.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Bậc thềm"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "台阶或楼梯中供人踩踏的平面。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "台阶"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "樓梯階梯中供人踩踏的平面。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "臺階"
+    }
+  },
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "primary_id": "realia:Step",
+  "pronominal_referents": {},
+  "realia_type": "other",
+  "references": [
+    "44021035",
+    "44021040"
+  ],
+  "subject_referents": {},
+  "type": "realia",
+  "ubsdgnt": [
+    "7.52"
+  ]
+}

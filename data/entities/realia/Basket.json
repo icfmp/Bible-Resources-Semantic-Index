@@ -1,0 +1,426 @@
+{
+  "alternate_sources": {
+    "aquifer": [
+      "280193|basket|FIAKeyTerms"
+    ],
+    "ubsdbh": [
+      "001590001001000",
+      "002702001001000",
+      "003317001001000",
+      "005076001001000"
+    ],
+    "ubsdgnt": [
+      "6.150",
+      "6.148",
+      "6.149"
+    ],
+    "ubsrealia": [
+      "realia:5.18.2"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "realia:Basket",
+    "review_status": "source_unreviewed",
+    "source_id": "realia:Basket",
+    "source_primary_id": "realia:Basket",
+    "source_sha256": "7285f6956e9ef72a959d30f8c4249f19526ec8116bf3842e6f7994a98775c37e"
+  },
+  "explicit_instances": {
+    "SBLGNT": [
+      [
+        "n40014020013"
+      ],
+      [
+        "n40016009012"
+      ],
+      [
+        "n41006043005"
+      ],
+      [
+        "n41008019010"
+      ],
+      [
+        "n42009017012"
+      ],
+      [
+        "n43006013006"
+      ],
+      [
+        "n47011033005"
+      ],
+      [
+        "n40015037013"
+      ],
+      [
+        "n40016010009"
+      ],
+      [
+        "n41008008010"
+      ],
+      [
+        "n41008020009"
+      ],
+      [
+        "n44009025014"
+      ]
+    ],
+    "wlc": [
+      [
+        "o120100070152"
+      ],
+      [
+        "o190810070052"
+      ],
+      [
+        "o240240010051"
+      ],
+      [
+        "o240240020012"
+      ],
+      [
+        "o240240020083"
+      ],
+      [
+        "o050260020152"
+      ],
+      [
+        "o050260040032"
+      ],
+      [
+        "o050280050021",
+        "o050280050022"
+      ],
+      [
+        "o050280170021",
+        "o050280170022"
+      ],
+      [
+        "o240050270012"
+      ],
+      [
+        "o300080010061"
+      ],
+      [
+        "o300080020071"
+      ],
+      [
+        "o010400160151"
+      ],
+      [
+        "o010400170013"
+      ],
+      [
+        "o010400170122"
+      ],
+      [
+        "o010400180072"
+      ],
+      [
+        "o020290030041"
+      ],
+      [
+        "o020290030082"
+      ],
+      [
+        "o020290230102"
+      ],
+      [
+        "o020290320102"
+      ],
+      [
+        "o030080020191"
+      ],
+      [
+        "o030080260013"
+      ],
+      [
+        "o030080310192"
+      ],
+      [
+        "o040060150012"
+      ],
+      [
+        "o040060170081"
+      ],
+      [
+        "o040060190122"
+      ],
+      [
+        "o070060190112"
+      ]
+    ]
+  },
+  "id": "realia:Basket",
+  "key_references": [
+    "40014020",
+    "40016009",
+    "41006043",
+    "44009025"
+  ],
+  "lemmas": {
+    "el": [
+      "κόφινος",
+      "σαργάνη",
+      "σπυρίς"
+    ],
+    "he": [
+      "דּוּד",
+      "טֶנֶא",
+      "כְּלוּב",
+      "סַל"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "وعاء كبير مصنوع من مواد منسوجة زي القش أو البوص، بيستعمل لحمل أو تخزين حاجات مختلفة زي الأكل.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "قفة"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "وِعَاءٌ كَبِيرٌ مَصْنُوعٌ مِنْ مَوَادَّ مَنْسُوجَةٍ كَٱلْعُشْبِ أَوِ ٱلْقَصَبِ، يُسْتَخْدَمُ لِحَمْلِ أَوْ تَخْزِينِ أَشْيَاءَ مُخْتَلِفَةٍ كَٱلطَّعَامِ.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "سَلَّة"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan bigfala samting we oli wivim long gras no rop, we oli yusum blong karem no storem ol samting olsem kakae.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Basket"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Large Basket",
+        "Cage"
+      ],
+      "descriptions": [
+        {
+          "article": "realia:Basket",
+          "description": "A large container made of woven material like grass or reeds, used for carrying or storing various items such as food.",
+          "gloss": "Basket",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Basket"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "ظرفی بزرگ ساخته‌شده از مواد بافته‌شده مانند علف یا نی که برای حمل یا نگهداری وسایل گوناگون مانند خوراک به کار می‌رود.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "سبد"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Un grand récipient fait de matière tressée comme des herbes ou des roseaux, utilisé pour transporter ou stocker divers éléments tels que de la nourriture.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "panier"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Wani babban akwatin kaya da aka yi da saƙar abubuwa kamar ciyawa ko kuringa, wanda ake amfani da shi don ɗauka ko adana kayayyaki daban-daban kamar abinci.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Kwando"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "घास या सरकंडों जैसी बुनी हुई सामग्री से बना एक बड़ा पात्र, जिसका उपयोग भोजन जैसी विभिन्न वस्तुओं को ले जाने या रखने के लिए किया जाता है।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "टोकरी"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Nnukwu arịa e ji ihe a kpara akpa dị ka ahịhịa maọbụ amị mee, nke a na-eji ebu maọbụ echekwa ihe dị iche iche dị ka nri.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Nkata"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Wadah besar yang terbuat dari anyaman rumput atau buluh, digunakan untuk membawa atau menyimpan berbagai benda seperti makanan.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "bakul"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "खानेकुराजस्ता विभिन्‍न वस्तुहरू बोक्न वा भण्डारण गर्न प्रयोग गरिने घाँस वा निगालो आदिबाट बुनेको ठूलो भाँडो।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "टोकरी"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Um recipiente grande feito de material trançado, como palha ou juncos, usado para carregar ou armazenar diversos itens, como alimentos.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "cesto"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Большая емкость из плетеного материала, такого как трава или тростник, используемая для переноски или хранения различных предметов, например пищи.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "корзина"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Recipiente grande fabricado de material tejido, como hierba o juncos, utilizado para transportar o almacenar diversos artículos, como comida.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "cesta"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Chombo kikubwa kilichotengenezwa kwa kusuka nyenzo kama vile nyasi au mafunjo, kinachotumiwa kubeba au kuhifadhi vitu mbalimbali kama vile chakula.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Kikapu"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Bikpela samting ol i wokim long kanda, gras o wara-saksak bilong karim o putim ol kain kain samting olsem kaikai.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "basket"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Đồ đựng lớn làm bằng vật liệu đan như cỏ hoặc lau sậy, dùng để mang hoặc chứa nhiều thứ như thực phẩm.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Giỏ"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "由草或芦苇等编织材料制成的大容器，用于携带或储存食物等各种物品。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "篮子"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "一種用草或蘆葦等編織材料製成的大型容器，用於攜帶或存放食物等各種物品。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "籃子"
+    }
+  },
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "primary_id": "realia:Basket",
+  "pronominal_referents": {
+    "wlc": [
+      [
+        "o050260040053"
+      ],
+      [
+        "o050260100123"
+      ],
+      [
+        "o010400180101"
+      ]
+    ]
+  },
+  "realia_type": "other",
+  "references": [
+    "01040016",
+    "01040017",
+    "01040018",
+    "02029003",
+    "02029023",
+    "02029032",
+    "03008002",
+    "03008026",
+    "03008031",
+    "04006015",
+    "04006017",
+    "04006019",
+    "05026002",
+    "05026004",
+    "05028005",
+    "05028017",
+    "07006019",
+    "12010007",
+    "19081007",
+    "24005027",
+    "24024001",
+    "24024002",
+    "30008001",
+    "30008002",
+    "40014020",
+    "40015037",
+    "40016009",
+    "40016010",
+    "41006043",
+    "41008008",
+    "41008019",
+    "41008020",
+    "42009017",
+    "43006013",
+    "44009025",
+    "47011033"
+  ],
+  "subject_referents": {
+    "SBLGNT": [
+      [
+        "n42009017009"
+      ]
+    ]
+  },
+  "type": "realia",
+  "ubsdbh": [
+    "001590001001000",
+    "002702001001000",
+    "003317001001000",
+    "005076001001000"
+  ],
+  "ubsdgnt": [
+    "6.150",
+    "6.148",
+    "6.149"
+  ]
+}

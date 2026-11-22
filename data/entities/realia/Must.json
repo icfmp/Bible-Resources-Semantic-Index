@@ -1,0 +1,482 @@
+{
+  "alternate_sources": {
+    "ubsdbh": [
+      "005574001001000",
+      "007790001001000"
+    ],
+    "ubsdgnt": [
+      "6.198"
+    ],
+    "ubsrealia": [
+      "realia:9.1.1"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "realia:Must",
+    "review_status": "source_unreviewed",
+    "source_id": "realia:Must",
+    "source_primary_id": "realia:Must",
+    "source_sha256": "587d62419a27d6dd9be49d8d4591eb11b232a038790d2d5d70b311e3c3fe1ed2"
+  },
+  "explicit_instances": {
+    "SBLGNT": [
+      [
+        "n40009017003"
+      ],
+      [
+        "n40009017025"
+      ],
+      [
+        "n41002022004"
+      ],
+      [
+        "n41002022019"
+      ],
+      [
+        "n41002022025"
+      ],
+      [
+        "n42005037004"
+      ],
+      [
+        "n42005037014"
+      ],
+      [
+        "n42005038002"
+      ]
+    ],
+    "wlc": [
+      [
+        "o220080020102"
+      ],
+      [
+        "o230490260063"
+      ],
+      [
+        "o290010050091"
+      ],
+      [
+        "o300090130151"
+      ],
+      [
+        "o010270280102"
+      ],
+      [
+        "o010270370162"
+      ],
+      [
+        "o040180120061"
+      ],
+      [
+        "o050070130102",
+        "o050070130103"
+      ],
+      [
+        "o050110140092",
+        "o050110140093"
+      ],
+      [
+        "o050120170072",
+        "o050120170073"
+      ],
+      [
+        "o050140230131",
+        "o050140230132"
+      ],
+      [
+        "o050180040031",
+        "o050180040032"
+      ],
+      [
+        "o050280510131"
+      ],
+      [
+        "o050330280102"
+      ],
+      [
+        "o070090130061",
+        "o070090130062"
+      ],
+      [
+        "o120180320102"
+      ],
+      [
+        "o140310050081"
+      ],
+      [
+        "o140320280042"
+      ],
+      [
+        "o160050110122"
+      ],
+      [
+        "o160100380081"
+      ],
+      [
+        "o160100400122"
+      ],
+      [
+        "o160130050152"
+      ],
+      [
+        "o160130120063"
+      ],
+      [
+        "o190040080062",
+        "o190040080063"
+      ],
+      [
+        "o200030100042"
+      ],
+      [
+        "o230240070021"
+      ],
+      [
+        "o230360170102"
+      ],
+      [
+        "o230620080171",
+        "o230620080172"
+      ],
+      [
+        "o230650080062"
+      ],
+      [
+        "o240310120121"
+      ],
+      [
+        "o280020100093"
+      ],
+      [
+        "o280020110062",
+        "o280020110063"
+      ],
+      [
+        "o280020240062"
+      ],
+      [
+        "o280040110032"
+      ],
+      [
+        "o280070140112"
+      ],
+      [
+        "o280090020052"
+      ],
+      [
+        "o290010100091"
+      ],
+      [
+        "o290020190103"
+      ],
+      [
+        "o290020240061"
+      ],
+      [
+        "o330060150112"
+      ],
+      [
+        "o370010110102"
+      ],
+      [
+        "o380090170082"
+      ]
+    ]
+  },
+  "id": "realia:Must",
+  "key_references": [
+    "04018012",
+    "20003010",
+    "40009017"
+  ],
+  "lemmas": {
+    "el": [
+      "οἶνος"
+    ],
+    "he": [
+      "עָסִיס",
+      "תִּירֹושׁ"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "عصير عنب معصور جديد، وأحياناً بيبدأ يتخمر، وبيتشرب.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "خمرة جديدة"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "عصير عنب طازج معصور، يبدأ أحيانًا في التخمّر، يُستخدم كشراب.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "مسطار"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Jus blong greps we oli jes skwisim aot, we samtaem i stat blong kam strong, we oli dring olsem wan dring.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "niu waen"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Fresh Wine",
+        "Wine",
+        "New Wine",
+        "Grape Juice"
+      ],
+      "descriptions": [
+        {
+          "article": "realia:Must",
+          "description": "Freshly pressed grape juice, sometimes starting to ferment, used as a drink.",
+          "gloss": "Must",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Must"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "آب انگور تازه‌فشرده‌شده، که گاهی شروع به تخمیر می‌کرد و به عنوان نوشیدنی استفاده می‌شد.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "شیره انگور (شراب تازه)"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Jus de raisin fraîchement pressé, commençant parfois à fermenter, consommé comme boisson.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "moût"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Sabuwar matsattsiyar ruwan ’ya’yan inabi, wadda wani lokaci takan fara dāsuwa, da ake sha a matsayin abin sha.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Sabon ruwan inabi"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "अंगूरों का ताजा निचोड़ा हुआ रस, जिसमें कभी-कभी खमीर उठना शुरू हो जाता है, और जिसे पेय के रूप में उपयोग किया जाता है।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "नया दाखमधु"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Mkpụrụ vaịn a gbakasịrị ọhụrụ, nke na-amalite ịgba ụka mgbe ụfọdụ, a na-aṅụ ya dị ka ihe ọṅụṅụ.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Mmanya ọhụrụ"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Air perasan buah anggur yang segar, yang terkadang mulai berfermentasi, digunakan sebagai minuman.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "anggur baru"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "भर्खरै निचोरेको अङ्गुरको रस, कहिलेकाहीँ अमिलिन थाल्ने, पेय पदार्थको रूपमा प्रयोग गरिन्थ्यो।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "नयाँ दाखमद्य"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Suco de uva recém-espremido, às vezes começando a fermentar, usado como bebida.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Mosto"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Свежевыжатый виноградный сок, иногда начинающий бродить, использовавшийся в качестве напитка.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Молодое вино"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Jugo de uva recién exprimido, a veces en inicio de fermentación, utilizado como bebida.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "mosto"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Maji safi ya zabibu yaliyokamuliwa hivi karibuni, wakati mwingine yakianza kuchacha, yakitumiwa kama kinywaji.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Divai mpya"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Wara bilong grep ol i frestaim traim na mekim dring, sampela taim em i kirap tan i go long kamap wain.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Nupela wain"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Nước nho mới ép, đôi khi bắt đầu lên men, dùng làm đồ uống.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Rượu mới"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "刚榨出的葡萄汁，有时已开始发酵，用作饮料。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "新酒"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "鮮榨的葡萄汁，有時剛開始發酵，用作飲料。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "新酒"
+    }
+  },
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "primary_id": "realia:Must",
+  "pronominal_referents": {
+    "SBLGNT": [
+      [
+        "n40009017031"
+      ],
+      [
+        "n42005037020"
+      ]
+    ],
+    "wlc": [
+      [
+        "o230620080202"
+      ],
+      [
+        "o230620090073"
+      ],
+      [
+        "o230620090082"
+      ],
+      [
+        "o280020110073"
+      ],
+      [
+        "o280020240092"
+      ],
+      [
+        "o290020190132"
+      ]
+    ]
+  },
+  "realia_type": "other",
+  "references": [
+    "01027028",
+    "01027037",
+    "04018012",
+    "05007013",
+    "05011014",
+    "05012017",
+    "05014023",
+    "05018004",
+    "05028051",
+    "05033028",
+    "07009013",
+    "12018032",
+    "14031005",
+    "14032028",
+    "16005011",
+    "16010038",
+    "16010040",
+    "16013005",
+    "16013012",
+    "19004008",
+    "20003010",
+    "22008002",
+    "23024007",
+    "23036017",
+    "23049026",
+    "23062008",
+    "23065008",
+    "24031012",
+    "28002010",
+    "28002011",
+    "28002024",
+    "28004011",
+    "28007014",
+    "28009002",
+    "29001005",
+    "29001010",
+    "29002019",
+    "29002024",
+    "30009013",
+    "33006015",
+    "37001011",
+    "38009017",
+    "40009017",
+    "41002022",
+    "42005037",
+    "42005038"
+  ],
+  "subject_referents": {
+    "wlc": [
+      [
+        "o290010050111"
+      ],
+      [
+        "o070090130072"
+      ]
+    ]
+  },
+  "type": "realia",
+  "ubsdbh": [
+    "005574001001000",
+    "007790001001000"
+  ],
+  "ubsdgnt": [
+    "6.198"
+  ]
+}

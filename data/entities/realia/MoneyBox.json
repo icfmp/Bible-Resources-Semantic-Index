@@ -1,0 +1,237 @@
+{
+  "alternate_sources": {
+    "ubsdgnt": [
+      "6.143",
+      "6.140"
+    ],
+    "ubsrealia": [
+      "realia:5.18.1.4"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "realia:MoneyBox",
+    "review_status": "source_unreviewed",
+    "source_id": "realia:MoneyBox",
+    "source_primary_id": "realia:MoneyBox",
+    "source_sha256": "20389ecaaad44efcdda5c38fc763aacd10b994abb7454807da5c6b910ff973ec"
+  },
+  "explicit_instances": {
+    "SBLGNT": [
+      [
+        "n43012006017"
+      ],
+      [
+        "n43013029006"
+      ],
+      [
+        "n40002011021"
+      ]
+    ]
+  },
+  "id": "realia:MoneyBox",
+  "key_references": [
+    "40002011",
+    "43012006",
+    "43013029"
+  ],
+  "lemmas": {
+    "el": [
+      "γλωσσόκομον",
+      "θησαυρός"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "علبة أو صندوق بيستعمل لحفظ القروش.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "صندوق قروش"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "وعاء أو صندوق يُستخدم لحفظ المال.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "صندوق المال"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan kontena no bokis we oli yusum blong putum mo holem mane long hem.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "bokis blong mane"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Treasure Box"
+      ],
+      "descriptions": [
+        {
+          "article": "realia:MoneyBox",
+          "description": "A container or chest used for storing money.",
+          "gloss": "Money Box",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Money Box"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "ظرف یا صندوقی که برای نگهداری پول به کار می‌رفت.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "صندوق پول"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Récipient ou coffre utilisé pour garder de l'argent.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "boîte à argent"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Akwati ko akwatin ajiya da ake amfani da shi wajen ajiye kuɗi.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Akwatin kuɗi"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "पैसे रखने या संग्रहीत करने के लिए उपयोग किया जाने वाला एक डिब्बा, सन्दूक या थैला।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "थैली"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Ihe maọbụ igbe e ji adọba ego.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Igbe ego"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Wadah atau peti yang digunakan untuk menyimpan uang.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "kotak uang"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "पैसा राख्न प्रयोग गरिने भाँडो वा बाकस।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "पैसाको बाकस"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Um recipiente ou caixa usado para guardar dinheiro.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Caixa de dinheiro"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Емкость или ларь, использовавшийся для хранения денег.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Денежный ящик"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Recipiente o cofre utilizado para guardar dinero.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "bolsa del dinero"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Chombo au sanduku lililotumiwa kuhifadhia fedha.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Sanduku la fedha"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Wanpela bokis o paus bilong putim na holim mani.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Bokis mani"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Hộp hoặc rương dùng để đựng tiền.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Hộp đựng tiền"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "用于存放钱财的容器或箱子。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "钱箱"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "用來存放金錢的容器或箱子。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "錢箱"
+    }
+  },
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "primary_id": "realia:MoneyBox",
+  "pronominal_referents": {},
+  "realia_type": "other",
+  "references": [
+    "40002011",
+    "43012006",
+    "43013029"
+  ],
+  "subject_referents": {},
+  "type": "realia",
+  "ubsdgnt": [
+    "6.143",
+    "6.140"
+  ]
+}

@@ -1,0 +1,301 @@
+{
+  "added_entry": false,
+  "alternate_sources": {
+    "aquifer": [
+      "3762|Arpad|TyndaleBibleDictionary"
+    ],
+    "geonames": [
+      "http://sws.geonames.org/163476"
+    ],
+    "tipnr": [
+      "Arpad@2Ki.18.34-Jer"
+    ],
+    "ubsdbh": [
+      "000713001001000"
+    ],
+    "vizbible": [
+      "recKPPAyXwKEJ9Ht8"
+    ]
+  },
+  "associated_places": [
+    "place:Hamath"
+  ],
+  "bsi": {
+    "canonical_id": "place:Arpad",
+    "review_status": "source_unreviewed",
+    "source_id": "place:Arpad",
+    "source_primary_id": "place:Arpad",
+    "source_sha256": "66e4bf647a4af5299c21752c53c828cf29cd0f2ab66e9ac6a21f172786489486"
+  },
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o120180340042"
+      ],
+      [
+        "o120190130051"
+      ],
+      [
+        "o230100090062"
+      ],
+      [
+        "o230360190042"
+      ],
+      [
+        "o230370130051"
+      ],
+      [
+        "o240490230042"
+      ]
+    ]
+  },
+  "geocoordinates": {
+    "obi": {
+      "lat": "35.136204",
+      "lon": "36.749488"
+    },
+    "recogito": {
+      "lat": "36.47229",
+      "lon": "37.09471"
+    },
+    "vizbible": {
+      "lat": "36.47229",
+      "lon": "37.09471"
+    }
+  },
+  "id": "place:Arpad",
+  "is_artifact": false,
+  "is_person": false,
+  "key_references": [
+    "23036019",
+    "12018034"
+  ],
+  "lemmas": {
+    "he": [
+      "אַרְפַּד"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "بلدة في شمال سوريا، غزاها الآشوريين.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "أرفاد"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "بلدة في شمال سوريا، فتحتها أشور.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "أَرْفَاد"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan taon long Not Siria, we Asiria i winim hem.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Apad"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Arphad"
+      ],
+      "descriptions": [
+        {
+          "article": "place:Arpad",
+          "description": "A town in North Syria, which was conquered by Assyria.",
+          "gloss": "Arpad",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Arpad"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "شهری در شمال سوریه که توسط آشور فتح شد.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "ارفاد"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Une ville du nord de la Syrie, qui fut conquise par l'Assyrie.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Arpad"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Wani gari a Arewacin Siriya, wanda Assuriya ta ci shi da yaƙi.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Arfad"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "उत्तरी सीरिया का एक नगर, जिसे अश्शूर द्वारा जीत लिया गया था।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "अर्पाद"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Otu obodo dị nʼelu ugwu Siria, nke Asiria meriri.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Apad"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Sebuah kota di Siria Utara, yang ditaklukkan oleh Asyur.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Arpad"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "उत्तर सिरियाको एउटा सहर, जसलाई अश्शूरले जितेको थियो।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "अर्पाद"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Uma cidade no norte da Síria, que foi conquistada pela Assíria.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Arpade"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Город в Северной Сирии, завоеванный Ассирией.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Арпад"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Una ciudad en el norte de Siria, que fue conquistada por Asiria.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Arfad"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Mji ulioko kaskazini mwa Siria, uliotekwa na Ashuru.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Arpadi"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Wanpela taun long Not Siria, em Asiria i bin daunim.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Arpat"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Một thị trấn ở miền Bắc Sy-ri, bị A-sy-ri đánh chiếm.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "A-bát"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "位于叙利亚北部的一座城镇，曾被亚述攻占。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "亚珥拔"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "敘利亞北部的一座城鎮，曾被亞述征服。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "亞珥拔"
+    }
+  },
+  "mentioned_in_bible": true,
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "place_types": {
+    "acai": [
+      "town"
+    ],
+    "obi": [
+      "settlement"
+    ],
+    "vizbible": [
+      "City"
+    ]
+  },
+  "primary_id": "place:Arpad",
+  "pronominal_referents": {
+    "wlc": [
+      [
+        "o230360200052"
+      ]
+    ]
+  },
+  "references": [
+    "12018034",
+    "12019013",
+    "23010009",
+    "23036019",
+    "23037013",
+    "24049023"
+  ],
+  "subject_referents": {
+    "wlc": [
+      [
+        "o240490230081",
+        "o240490230091"
+      ]
+    ]
+  },
+  "subregion_of": [
+    "place:Syria"
+  ],
+  "type": "place",
+  "ubsdbh": [
+    "000713001001000"
+  ]
+}

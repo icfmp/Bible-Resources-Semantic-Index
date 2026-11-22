@@ -1,0 +1,214 @@
+{
+  "bsi": {
+    "canonical_id": "person:GenericRuler",
+    "review_status": "source_unreviewed",
+    "source_id": "person:GenericRuler",
+    "source_primary_id": "person:GenericRuler",
+    "source_sha256": "9541d0d83b8f9b6479585a6d37c9446166053356789a9c911a1f6fe40e35ff78"
+  },
+  "explicit_instances": {},
+  "id": "person:GenericRuler",
+  "key_references": [
+    "20025007"
+  ],
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "حاكم جماعة أو قبيلة أو أمة.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "حاكم"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "حاكم جماعة أو سبط أو أمة.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "حاكم"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Lida o rula blong wan grup, wan laen, o wan neson.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Wan Rula"
+    },
+    "eng": {
+      "descriptions": [
+        {
+          "description": "The ruler of a group, tribe, or nation.",
+          "gloss": "A Ruler",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "A Ruler"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "حاکم یک قوم، قبیله، یا ملت.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "یک حاکم"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Le dirigeant d’un groupe, d’une tribu ou d’une nation.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "un dirigeant"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Shugaban wata ƙungiya, ƙabila, ko al’umma.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Wani Mai Mulki"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "किसी समूह, गोत्र, या जाति का शासक।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "एक शासक"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Onye na-achị otu ìgwè mmadụ, agbụrụ, ma ọ bụ mba.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Onye Ọchịchị"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Pemimpin dari suatu kelompok, suku, atau bangsa.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Seorang Pemimpin"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "कुनै समूह, कुल वा जातिको शासक।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "एक शासक"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "O governante de um grupo, tribo ou nação.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Um governante"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Правитель группы, племени или народа.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Правитель"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "El gobernante de un grupo, tribu o nación.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Un gobernante"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Mtawala wa kikundi, kabila, au taifa.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Mtawala"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Rula o hetman bilong wanpela lain manmeri, o traib, o kantri.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Wanpela Rula"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Người cai trị của một nhóm, bộ tộc, hoặc quốc gia.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Một người cai trị"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "一个群体、支派或国家的统治者。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "统治者"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "一個群體、支派或國家的統治者。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "統治者"
+    }
+  },
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "primary_id": "person:GenericRuler",
+  "pronominal_referents": {},
+  "references": [
+    "20025007"
+  ],
+  "speeches": {
+    "wlc": [
+      {
+        "quote_type": "Hypothetical",
+        "words": [
+          "o200250070051",
+          "o200250070061"
+        ]
+      }
+    ]
+  },
+  "subject_referents": {
+    "wlc": [
+      [
+        "o200250070031"
+      ]
+    ]
+  },
+  "type": "person"
+}

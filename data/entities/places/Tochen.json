@@ -1,0 +1,246 @@
+{
+  "added_entry": false,
+  "alternate_sources": {
+    "tipnr": [
+      "Tochen@1Ch.4.32"
+    ],
+    "ubsdbh": [
+      "007802002001000"
+    ],
+    "vizbible": [
+      "rec3kU3cxeTCp8t2S"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "place:Tochen",
+    "review_status": "source_unreviewed",
+    "source_id": "place:Tochen",
+    "source_primary_id": "place:Tochen",
+    "source_sha256": "6c23ad3836fc5c0347ef9a59772d6c0bd7d35e2bfca33a56a2fb1ca3497c557c"
+  },
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o130040320052"
+      ]
+    ]
+  },
+  "geocoordinates": {
+    "obi": {
+      "lat": "31.8099",
+      "lon": "34.9365"
+    },
+    "vizbible": {
+      "lat": "31.8099",
+      "lon": "34.9365"
+    }
+  },
+  "id": "place:Tochen",
+  "is_artifact": false,
+  "is_person": false,
+  "key_references": [
+    "13004032"
+  ],
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "قرية في أرض شمعون.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "توكن"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "قرية في أرض شمعون.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "تُوكَن"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan vilej long teritori blong Simeon.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Token"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Token"
+      ],
+      "descriptions": [
+        {
+          "article": "place:Tochen",
+          "description": "A village in the territory of Simeon.",
+          "gloss": "Tochen",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Tochen"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "روستایی در قلمرو شمعون.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "توکن"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Un village situé sur le territoire de Siméon.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Thoken"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Wani ƙauye a yankin Simiyon.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Token"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "शिमोन के क्षेत्र में एक गाँव।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "तोकेन"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Otu ime obodo dị nʼókèala Simiọn.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Token"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Sebuah desa di wilayah suku Simeon.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Tokhen"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "शिमोनको इलाकामा रहेको एउटा गाउँ।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "तोकेन"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Um povoado no território de Simeão.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Toquém"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Селение в уделе Симеона.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Фокен"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Una aldea en el territorio de Simeón.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Toquén"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Kijiji katika eneo la Simeoni.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Tokeni"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Wanpela ples long teritori bilong Simeon.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Token"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Một ngôi làng trong lãnh thổ Si-mê-ôn.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Tô-ken"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "西缅领地内的一个村庄。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "陀健"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "西緬領地內的一個村莊。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "陀健"
+    }
+  },
+  "mentioned_in_bible": true,
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "place_types": {
+    "acai": [
+      "village"
+    ],
+    "obi": [
+      "settlement"
+    ],
+    "vizbible": [
+      "City"
+    ]
+  },
+  "primary_id": "place:Tochen",
+  "pronominal_referents": {},
+  "references": [
+    "13004032"
+  ],
+  "subject_referents": {},
+  "type": "place",
+  "ubsdbh": [
+    "007802002001000"
+  ]
+}

@@ -1,0 +1,676 @@
+{
+  "added_entry": false,
+  "alternate_sources": {
+    "aquifer": [
+      "8950|Tyre|TyndaleBibleDictionary",
+      "27184|Tyre|UWTranslationWords",
+      "132421|Tyre and Sidon|BiblicaStudyNotesKeyTerms",
+      "280184|tyre|FIAKeyTerms"
+    ],
+    "digital_atlas_roman_empire": [
+      "https://imperium.ahlfeldt.se/places/21116"
+    ],
+    "obi": [
+      "a160272"
+    ],
+    "tipnr": [
+      "Tyre@Jos.19.29-Act",
+      "palm|Tyre@Jos.19.29-Act"
+    ],
+    "vizbible": [
+      "reco9Wc4YyNXZq43z"
+    ],
+    "wikidata": [
+      "http://www.wikidata.org/entity/Q82070"
+    ]
+  },
+  "associated_places": [
+    "place:Sidon"
+  ],
+  "bsi": {
+    "canonical_id": "place:Tyre",
+    "review_status": "source_unreviewed",
+    "source_id": "place:Tyre",
+    "source_primary_id": "place:Tyre",
+    "source_sha256": "4708f307e21f3c302c4dc07a103febf92c6c19496aa2709038d2f77721b8775f"
+  },
+  "explicit_instances": {
+    "SBLGNT": [
+      [
+        "n40011021010"
+      ],
+      [
+        "n40011022004"
+      ],
+      [
+        "n40015021010"
+      ],
+      [
+        "n41003008014"
+      ],
+      [
+        "n41007024008"
+      ],
+      [
+        "n41007031007"
+      ],
+      [
+        "n42006017028"
+      ],
+      [
+        "n42010013010"
+      ],
+      [
+        "n42010014002"
+      ],
+      [
+        "n44012020004"
+      ],
+      [
+        "n44021003015"
+      ],
+      [
+        "n44021007007"
+      ]
+    ],
+    "wlc": [
+      [
+        "o060190290071"
+      ],
+      [
+        "o100050110041"
+      ],
+      [
+        "o100240070031"
+      ],
+      [
+        "o110050150041"
+      ],
+      [
+        "o110070130072"
+      ],
+      [
+        "o110070140091"
+      ],
+      [
+        "o110090110031"
+      ],
+      [
+        "o110090120032"
+      ],
+      [
+        "o130140010051"
+      ],
+      [
+        "o130220040083"
+      ],
+      [
+        "o140020020061"
+      ],
+      [
+        "o140020100041"
+      ],
+      [
+        "o140020130081"
+      ],
+      [
+        "o150030070093"
+      ],
+      [
+        "o160130160013"
+      ],
+      [
+        "o190450130021"
+      ],
+      [
+        "o190830080071"
+      ],
+      [
+        "o190870040072"
+      ],
+      [
+        "o230230010021"
+      ],
+      [
+        "o230230050061"
+      ],
+      [
+        "o230230080051"
+      ],
+      [
+        "o230230150051"
+      ],
+      [
+        "o230230150152"
+      ],
+      [
+        "o230230170081"
+      ],
+      [
+        "o240250220041"
+      ],
+      [
+        "o240270030141"
+      ],
+      [
+        "o240470040092"
+      ],
+      [
+        "o260260020061"
+      ],
+      [
+        "o260260030081"
+      ],
+      [
+        "o260260040031"
+      ],
+      [
+        "o260260070091"
+      ],
+      [
+        "o260260150052"
+      ],
+      [
+        "o260270020061"
+      ],
+      [
+        "o260270030022"
+      ],
+      [
+        "o260270030171"
+      ],
+      [
+        "o260270080081"
+      ],
+      [
+        "o260270320082"
+      ],
+      [
+        "o260280020051"
+      ],
+      [
+        "o260280120071"
+      ],
+      [
+        "o260290180121"
+      ],
+      [
+        "o260290180242"
+      ],
+      [
+        "o280090130042"
+      ],
+      [
+        "o290040040051"
+      ],
+      [
+        "o300010090071"
+      ],
+      [
+        "o300010100041"
+      ],
+      [
+        "o380090020051"
+      ],
+      [
+        "o380090030021"
+      ]
+    ]
+  },
+  "geocoordinates": {
+    "biblica-maps": {
+      "lat": "33.26985",
+      "lon": "35.20384"
+    },
+    "obi": {
+      "lat": "33.27582782",
+      "lon": "35.19257454"
+    },
+    "recogito": {
+      "lat": "33.268071",
+      "lon": "35.209358"
+    },
+    "vizbible": {
+      "lat": "33.268071",
+      "lon": "35.209358"
+    }
+  },
+  "id": "place:Tyre",
+  "is_artifact": false,
+  "is_person": false,
+  "key_references": [
+    "26027001",
+    "26026001",
+    "44021003",
+    "40015021",
+    "41007024",
+    "23023001",
+    "10024007",
+    "06019029"
+  ],
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "مدينة ساحلية ومينا في الساحل الفينيقي، جنوب صيدون.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "صور"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "مَدِينَةٌ مِينَائِيَّةٌ عَلَى ٱلسَّاحِلِ ٱلْفِينِيقِيِّ، جَنُوبَ صَيْدُونَ.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "صُورُ"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan taon we i gat pot blong sip long kos blong Fonisia, long saot blong Saedon.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Taea"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Tyrus",
+        "Zemer",
+        "Tyrian",
+        "palm",
+        "Tyrians"
+      ],
+      "descriptions": [
+        {
+          "article": "place:Tyre",
+          "description": "A seaport town on the Phoenician coast, south of Sidon.",
+          "gloss": "Tyre",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Tyre"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "شهری بندری در ساحل فینیقیه، در جنوب صیدون.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "صور"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Une ville portuaire sur la côte phénicienne, au sud de Sidon.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Tyr"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Wani garin tashar jiragen ruwa a bakin tekun Funisiya, a kudancin Sidon.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Taya"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "सीदोन के दक्षिण में, फीनीके तट पर स्थित एक बंदरगाह नगर।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "सोर"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Obodo dị nʼọdụ ụgbọ mmiri nʼụsọ oké osimiri Fonisia, nʼebe ndịda Saịdọn.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Taịa"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Sebuah kota pelabuhan di pesisir Fenisia, di sebelah selatan Sidon.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Tirus"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "सीदोनको दक्षिणमा पर्ने फोनिसियाली तटमा अवस्थित एउटा बन्दरगाह सहर।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "टुरोस"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Uma cidade portuária na costa fenícia, ao sul de Sidom.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Tiro"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Приморский город на финикийском побережье, к югу от Сидона.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Тир"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Una ciudad portuaria en la costa fenicia, al sur de Sidón.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Tiro"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Mji wa bandari kwenye pwani ya Foinike, kusini mwa Sidoni.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Tiro"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Wanpela taun i gat wof long nambis bilong Fonisia, long hap saut bilong Saidon.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Tair"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Một thành phố cảng biển trên bờ biển Phê-ni-xi, ở phía nam Si-đôn.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ty-rơ"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "位于腓尼基海岸、西顿以南的一座海港城市。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "推罗"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "腓尼基海岸、西頓以南的一座海港城鎮。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "推羅"
+    }
+  },
+  "mentioned_in_bible": true,
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": true,
+  "place_types": {
+    "acai": [
+      "seaport"
+    ],
+    "obi": [
+      "settlement"
+    ],
+    "vizbible": [
+      "City"
+    ]
+  },
+  "primary_id": "place:Tyre",
+  "pronominal_referents": {
+    "SBLGNT": [
+      [
+        "n44012020026"
+      ],
+      [
+        "n44012021016"
+      ],
+      [
+        "n44021003016"
+      ],
+      [
+        "n44021004006"
+      ]
+    ],
+    "wlc": [
+      [
+        "o230230070012"
+      ],
+      [
+        "o240270060072"
+      ],
+      [
+        "o260270030181"
+      ],
+      [
+        "o260270030201"
+      ],
+      [
+        "o290040040031"
+      ],
+      [
+        "o290040040111"
+      ],
+      [
+        "o290040040161"
+      ],
+      [
+        "o380090040072"
+      ]
+    ]
+  },
+  "references": [
+    "06019029",
+    "10005011",
+    "10024007",
+    "11005015",
+    "11007013",
+    "11007014",
+    "11009011",
+    "11009012",
+    "13014001",
+    "13022004",
+    "14002002",
+    "14002010",
+    "14002013",
+    "15003007",
+    "16013016",
+    "19045013",
+    "19083008",
+    "19087004",
+    "23023001",
+    "23023003",
+    "23023004",
+    "23023005",
+    "23023008",
+    "23023010",
+    "23023015",
+    "23023017",
+    "24025022",
+    "24027003",
+    "24047004",
+    "26026002",
+    "26026003",
+    "26026004",
+    "26026005",
+    "26026007",
+    "26026015",
+    "26026019",
+    "26027002",
+    "26027003",
+    "26027008",
+    "26027032",
+    "26028002",
+    "26028012",
+    "26029018",
+    "26029020",
+    "28009013",
+    "29004004",
+    "30001009",
+    "30001010",
+    "38009002",
+    "38009003",
+    "38009004",
+    "38009005",
+    "40011021",
+    "40011022",
+    "40015021",
+    "41003008",
+    "41007024",
+    "41007031",
+    "42006017",
+    "42010013",
+    "42010014",
+    "44012020",
+    "44021003",
+    "44021007"
+  ],
+  "referred_to_as": [
+    "place:Palm",
+    "group:Tyre"
+  ],
+  "subject_referents": {
+    "SBLGNT": [
+      [
+        "n40011021026"
+      ],
+      [
+        "n42010013026",
+        "n42010013027"
+      ],
+      [
+        "n44012020009"
+      ],
+      [
+        "n44012020013"
+      ],
+      [
+        "n44012020021"
+      ]
+    ],
+    "wlc": [
+      [
+        "o160130160041"
+      ],
+      [
+        "o160130160082"
+      ],
+      [
+        "o230230010071"
+      ],
+      [
+        "o230230030082"
+      ],
+      [
+        "o230230070102"
+      ],
+      [
+        "o230230080062"
+      ],
+      [
+        "o230230170092"
+      ],
+      [
+        "o230230170112"
+      ],
+      [
+        "o260260020151"
+      ],
+      [
+        "o260260050031"
+      ],
+      [
+        "o260260050122"
+      ],
+      [
+        "o260260140061"
+      ],
+      [
+        "o260260140081"
+      ],
+      [
+        "o260260170081"
+      ],
+      [
+        "o260270030042"
+      ],
+      [
+        "o260270030081"
+      ],
+      [
+        "o260270250052"
+      ],
+      [
+        "o260270250062"
+      ],
+      [
+        "o260270330041"
+      ],
+      [
+        "o260270330101"
+      ],
+      [
+        "o260270340021"
+      ],
+      [
+        "o260270360061"
+      ],
+      [
+        "o290040050041"
+      ],
+      [
+        "o290040050071"
+      ],
+      [
+        "o290040060051"
+      ],
+      [
+        "o290040060091"
+      ],
+      [
+        "o290040070061"
+      ],
+      [
+        "o300010090181"
+      ],
+      [
+        "o380090020081"
+      ],
+      [
+        "o380090030052"
+      ]
+    ]
+  },
+  "subregion_of": [
+    "place:Phoenicia"
+  ],
+  "type": "place"
+}

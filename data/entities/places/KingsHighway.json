@@ -1,0 +1,267 @@
+{
+  "added_entry": false,
+  "alternate_sources": {
+    "aquifer": [
+      "6592|King’s Highway|TyndaleBibleDictionary"
+    ],
+    "geonames": [
+      "http://sws.geonames.org/7262515"
+    ],
+    "tipnr": [
+      "King's_Highway@Num.20.17"
+    ],
+    "ubsdbh": [
+      "004048001001000",
+      "001719001010000"
+    ],
+    "vizbible": [
+      "recy4WNqnI13AMRFp"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "place:KingsHighway",
+    "review_status": "source_unreviewed",
+    "source_id": "place:KingsHighway",
+    "source_primary_id": "place:KingsHighway",
+    "source_sha256": "7bf79d2dff86dec037cc9890990a5663f9fe7eb7f937a1bd453c322dd790ebd1"
+  },
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o040200170121"
+      ],
+      [
+        "o040200170132"
+      ],
+      [
+        "o040210220112"
+      ],
+      [
+        "o040210220122"
+      ]
+    ]
+  },
+  "geocoordinates": {
+    "obi": {
+      "lat": "31.18132579594509",
+      "lon": "35.70214779044711"
+    },
+    "recogito": {
+      "lat": "46.18399",
+      "lon": "-122.91715"
+    },
+    "vizbible": {
+      "lat": "31.18132579594509",
+      "lon": "35.70214779044711"
+    }
+  },
+  "id": "place:KingsHighway",
+  "is_artifact": false,
+  "is_person": false,
+  "key_references": [
+    "04020017",
+    "04021022"
+  ],
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "درب بيمر عبر شرق الأردن على طول حدود الصحرا، وبيربط دمشق بخليج العقبة.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "درب الملك"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "طريق يمر عبر عبر الأردن على طول حدود الصحراء، ويربط دمشق بخليج العقبة.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "طَرِيقِ ٱلْمَلِكِ"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan rod we i stap goraon long Transjordan klosap long desot, we i joenem Damaskes wetem Galf blong Akaba.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Bigrod"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Highway",
+        "King's Highway"
+      ],
+      "descriptions": [
+        {
+          "article": "place:KingsHighway",
+          "description": "A road leading through the Transjordan along the desert border, connecting Damascus with the Gulf of Aqabah.",
+          "gloss": "King’s Highway",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "King’s Highway"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "راهی که از فرااردن در امتداد مرز بیابان می‌گذشت و دمشق را به خلیج عقبه متصل می‌کرد.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "شاهراه (شاهراه پادشاه)"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Une route traversant la Transjordanie le long de la frontière du désert, reliant Damas au golfe d'Aqaba.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "route royale"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Hanya ce da ta bi ta hayin Urdun a gefen hamada, tana haɗa Damaskus da Mashigin Ruwa na Akaba.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Babbar Hanyar Sarki"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "रेगिस्तान की सीमा के साथ-साथ ट्रांसजॉर्डन से होकर जाने वाला एक मार्ग, जो दमिश्क को अकाबा की खाड़ी से जोड़ता था।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "राजमार्ग"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Ụzọ na-agafe Transjọdan nʼakụkụ oke ọzara ahụ, na-ejikọ Damaskọs na Ọwara Mmiri Akaba.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Okporoụzọ Eze"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Sebuah jalan yang melintasi Transyordan di sepanjang perbatasan padang gurun, menghubungkan Damaskus dengan Teluk Aqaba.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Jalan Besar Raja"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "मरुभूमिको सिमाना हुँदै ट्रान्सजोर्डन भएर जाने एउटा सडक, जसले दमस्कसलाई अकाबाको खाडीसँग जोड्थ्यो।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "शाही राजमार्ग"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Uma estrada que passava por Transjordânia ao longo da fronteira com o deserto, ligando Damasco ao golfo de Ácaba.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Estrada Real"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Дорога, проходившая через Заиорданье вдоль границы пустыни и соединявшая Дамаск с заливом Акаба.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Царская дорога"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Camino que atravesaba Transjordania a lo largo de la frontera del desierto, y que conectaba Damasco con el golfo de Áqaba.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Camino Real"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Barabara inayopita ng'ambo ya Yordani kando ya mpaka wa jangwa, ikiunganisha Dameski na Ghuba ya Akaba.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Njia Kuu ya Mfalme"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Wanpela rot i go brukim Transjodan klostu long arere bilong ples drai nating, na i bungim Damaskus wantaim Golp bilong Akaba.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Bikrot"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Một con đường đi qua vùng Ngoại Giô-đanh dọc theo ranh giới sa mạc, nối Damascus với Vịnh Aqaba.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Đường Cái của Vua"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "一条穿过约旦河东岸沿沙漠边界的道路，连接大马士革与阿卡巴湾。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "王道"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "一條穿過約旦河東岸、沿著沙漠邊界延伸的道路，連接大馬士革與阿卡巴灣。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "王道"
+    }
+  },
+  "mentioned_in_bible": true,
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "place_types": {
+    "acai": [
+      "road"
+    ],
+    "obi": [
+      "road"
+    ]
+  },
+  "primary_id": "place:KingsHighway",
+  "pronominal_referents": {},
+  "references": [
+    "04020017",
+    "04021022"
+  ],
+  "subject_referents": {},
+  "type": "place",
+  "ubsdbh": [
+    "004048001001000",
+    "001719001010000"
+  ]
+}

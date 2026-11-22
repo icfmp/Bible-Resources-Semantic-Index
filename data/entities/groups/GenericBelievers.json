@@ -1,0 +1,316 @@
+{
+  "bsi": {
+    "canonical_id": "group:GenericBelievers",
+    "review_status": "source_unreviewed",
+    "source_id": "group:GenericBelievers",
+    "source_primary_id": "group:GenericBelievers",
+    "source_sha256": "fa6ceb74aa088b94e33232068b8eebebb92f12b9c3372fbe1786eeee4a6524b2"
+  },
+  "explicit_instances": {},
+  "group_type": "other",
+  "id": "group:GenericBelievers",
+  "key_references": [
+    "44001015",
+    "44001024",
+    "44011002",
+    "44011003"
+  ],
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "جماعة من المؤمنين مشاركين في نص معين.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "المؤمنين"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "مجموعة من المؤمنين مذكورة في نص كتابي.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "مُؤْمِنُونَ"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan grup blong ol bilifman we oli tekpat long wan stori blong Baebol.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "ol bilifman"
+    },
+    "eng": {
+      "descriptions": [
+        {
+          "description": "A group of believers participating in a passage.",
+          "gloss": "Believers",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Believers"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "گروهی از ایمانداران که در یک متن کتاب‌مقدس حضور دارند.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "ایمانداران"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Groupe de croyants participant à un passage.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "croyants"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Rukunin masu bi da suka halarci wani nassi.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Masu bi"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "किसी संदर्भ/शास्त्रवचन में भाग लेने वाले विश्वासियों का एक समूह।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "विश्वासी"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Otu ndị kwere ekwe na-ekere òkè nʼotu akụkụ Akwụkwọ Nsọ.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ndị kwere ekwe"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Sekelompok orang percaya yang disebutkan dalam suatu nas.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "orang-orang percaya"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "कुनै खण्डमा सहभागी विश्वासीहरूको समूह।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "विश्वासीहरू"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Um grupo de crentes que participa de uma passagem.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "crentes"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Группа верующих, участвующих в отрывке.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Верующие"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Grupo de creyentes que participan en un pasaje.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "creyentes"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Kikundi cha waumini kinachoshiriki katika kifungu.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Waumini"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Wanpela lain bilipmanmeri i insait long wanpela stori bilong Baibel.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "ol manmeri i bilip"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Một nhóm các tín hữu tham gia trong một phân đoạn Kinh Thánh.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Các tín hữu"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "出现在经文段落中的一群信徒。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "信徒"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "出現在經文段落中的一群信徒。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "信徒"
+    }
+  },
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "primary_id": "group:GenericBelievers",
+  "pronominal_referents": {},
+  "references": [
+    "44001015",
+    "44001024",
+    "44011002",
+    "44011003"
+  ],
+  "speeches": {
+    "SBLGNT": [
+      {
+        "delivery": "praying",
+        "quote_type": "Normal",
+        "words": [
+          "n44001024004",
+          "n44001024005",
+          "n44001024006",
+          "n44001024007",
+          "n44001024008",
+          "n44001024009",
+          "n44001024010",
+          "n44001024011",
+          "n44001024012",
+          "n44001024013",
+          "n44001024014",
+          "n44001024015",
+          "n44001025001",
+          "n44001025002",
+          "n44001025003",
+          "n44001025004",
+          "n44001025005",
+          "n44001025006",
+          "n44001025007",
+          "n44001025008",
+          "n44001025009",
+          "n44001025010",
+          "n44001025011",
+          "n44001025012",
+          "n44001025013",
+          "n44001025014",
+          "n44001025015",
+          "n44001025016",
+          "n44001025017",
+          "n44001025018"
+        ]
+      },
+      {
+        "delivery": "critical",
+        "quote_type": "Normal",
+        "words": [
+          "n44011003003",
+          "n44011003004",
+          "n44011003005",
+          "n44011003006",
+          "n44011003007",
+          "n44011003008",
+          "n44011003009",
+          "n44011003010"
+        ]
+      },
+      {
+        "delivery": "rejoicing",
+        "quote_type": "Dialogue",
+        "words": [
+          "n44011018010",
+          "n44011018011",
+          "n44011018012",
+          "n44011018013",
+          "n44011018014",
+          "n44011018015",
+          "n44011018016",
+          "n44011018017",
+          "n44011018018",
+          "n44011018019",
+          "n44011018020"
+        ]
+      },
+      {
+        "quote_type": "Dialogue",
+        "words": [
+          "n44015005013",
+          "n44015005014",
+          "n44015005015",
+          "n44015005016",
+          "n44015005017",
+          "n44015005018",
+          "n44015005019",
+          "n44015005020",
+          "n44015005021"
+        ]
+      }
+    ]
+  },
+  "subject_referents": {
+    "SBLGNT": [
+      [
+        "n44001015015"
+      ],
+      [
+        "n44001024003"
+      ],
+      [
+        "n44011002010"
+      ],
+      [
+        "n44011003001"
+      ],
+      [
+        "n44011002010"
+      ],
+      [
+        "n44011018009"
+      ],
+      [
+        "n44015005003"
+      ],
+      [
+        "n44015005011"
+      ]
+    ]
+  },
+  "type": "group"
+}

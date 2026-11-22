@@ -1,0 +1,671 @@
+{
+  "alternate_sources": {
+    "aquifer": [
+      "8549|Snake|TyndaleBibleDictionary",
+      "27074|Serpent|UWTranslationWords"
+    ],
+    "ubsdbh": [
+      "001957001001000",
+      "004747001001000",
+      "007870001002000"
+    ],
+    "ubsdgnt": [
+      "4.52"
+    ],
+    "ubsfauna": [
+      "fauna:4.9"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "fauna:Snake",
+    "review_status": "source_unreviewed",
+    "source_id": "fauna:Snake",
+    "source_primary_id": "fauna:Snake",
+    "source_sha256": "a56af6cfa0e2eb34d2c1f007749ac05a4f35883b25a6a8f47deb70a5f1eae12b"
+  },
+  "explicit_instances": {
+    "SBLGNT": [
+      [
+        "n40007010006"
+      ],
+      [
+        "n40010016015"
+      ],
+      [
+        "n41016018001"
+      ],
+      [
+        "n42010019009"
+      ],
+      [
+        "n42011011014"
+      ],
+      [
+        "n43003014006"
+      ],
+      [
+        "n46010009012"
+      ],
+      [
+        "n47011003007"
+      ],
+      [
+        "n66009019021"
+      ],
+      [
+        "n66012009008"
+      ],
+      [
+        "n66012014033"
+      ],
+      [
+        "n66012015004"
+      ],
+      [
+        "n66020002006"
+      ],
+      [
+        "n40003007016"
+      ],
+      [
+        "n40012034002"
+      ],
+      [
+        "n40023033001"
+      ],
+      [
+        "n40023033003"
+      ],
+      [
+        "n42003007010"
+      ],
+      [
+        "n44010012008"
+      ],
+      [
+        "n44011006016"
+      ],
+      [
+        "n44028003013"
+      ],
+      [
+        "n45001023018"
+      ],
+      [
+        "n45003013011"
+      ],
+      [
+        "n59003007008"
+      ]
+    ],
+    "wlc": [
+      [
+        "o010030010013"
+      ],
+      [
+        "o010030020042"
+      ],
+      [
+        "o010030040022"
+      ],
+      [
+        "o010030130102"
+      ],
+      [
+        "o010030140052"
+      ],
+      [
+        "o010490170031"
+      ],
+      [
+        "o020040030072"
+      ],
+      [
+        "o020070150162"
+      ],
+      [
+        "o040210060052"
+      ],
+      [
+        "o040210070172"
+      ],
+      [
+        "o040210090031"
+      ],
+      [
+        "o040210090112"
+      ],
+      [
+        "o040210090161"
+      ],
+      [
+        "o050080150051"
+      ],
+      [
+        "o120180040121"
+      ],
+      [
+        "o180260130061"
+      ],
+      [
+        "o190580050051"
+      ],
+      [
+        "o191400040041"
+      ],
+      [
+        "o200230320022"
+      ],
+      [
+        "o200300190051"
+      ],
+      [
+        "o210100080081"
+      ],
+      [
+        "o210100110032"
+      ],
+      [
+        "o230140290111"
+      ],
+      [
+        "o230270010111"
+      ],
+      [
+        "o230270010151"
+      ],
+      [
+        "o230650250092"
+      ],
+      [
+        "o240080170051"
+      ],
+      [
+        "o240460220022"
+      ],
+      [
+        "o300050190152"
+      ],
+      [
+        "o300090030172"
+      ],
+      [
+        "o330070170032"
+      ],
+      [
+        "o020070090192"
+      ],
+      [
+        "o020070100202"
+      ],
+      [
+        "o020070120052"
+      ],
+      [
+        "o050320330021"
+      ],
+      [
+        "o190910130072"
+      ],
+      [
+        "o010490170061"
+      ]
+    ]
+  },
+  "fauna_type": "Snakes and Lizards",
+  "id": "fauna:Snake",
+  "key_references": [
+    "01003001",
+    "47011003",
+    "46010009"
+  ],
+  "lemmas": {
+    "el": [
+      "ὄφις"
+    ],
+    "he": [
+      "זֹחֶלֶת",
+      "נָחָשׁ",
+      "תַּנִּין"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "زاحف طويل ما عندو كرعين، بتحرك بالزحف، وغالباً برتبط بالخطر والخداع.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "دبيب"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "زاحف طويل عديم الأرجل يتحرك بالتملص أو الزحف، وغالبًا ما يرتبط بالخطر والخداع.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "حية"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan longfala reptael we i no gat leg we i stap muv long fasin blong krabokoko mo plante taem i joen wetem denja mo fasin blong trikim man.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "snek"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Serpent",
+        "Reptile"
+      ],
+      "descriptions": [
+        {
+          "article": "fauna:Snake",
+          "description": "A long, legless reptile that moves by wriggling or slithering and is often linked with danger and deception.",
+          "gloss": "Snake",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Snake"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "خزنده‌ای دراز و بدون دست و پا که با خزیدن حرکت می‌کند و اغلب با خطر و فریب پیوند خورده است.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "مار"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Long reptile dépourvu de pattes qui se déplace en ondulant ou en rampant, souvent associé au danger et à la tromperie.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "serpent"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Dogo, marar ƙafafu mai rarrafe wanda yake tafiya ta wajen yatsina ko laɓe kuma sau da yawa yana da alaƙa da haɗari da yaudara.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Maciji"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "एक लंबा, बिना पैरों वाला सरीसृप जो रेंगकर या फिसलकर चलता है और अक्सर खतरे व धोखे से जुड़ा होता है।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "साँप"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Ogologo anụ na-akpụ akpụ nke na-enweghị ụkwụ nke na-eji mmegharị ahụ ma ọ bụ ịkpụ akpụ aga ije, a na-ejikọkarịkwa ya na ihe ize ndụ na aghụghọ.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Agwọ"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Reptil panjang tanpa kaki yang bergerak dengan melata atau meliuk-liuk dan sering dikaitkan dengan bahaya serta tipu daya.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "ular"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "खुट्टा नभएको लामो घस्रने जनावर (सरीसृप), जो घस्रेर वा लतपत्तिएर हिँड्छ र प्रायः खतरा तथा छलसँग सम्बन्धित हुन्छ।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "सर्प"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Um réptil longo e sem pernas que se move rastejando ou ondulando e é frequentemente associado ao perigo e ao engano.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "serpente"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Длинное безногое пресмыкающееся, передвигающееся извиваясь или ползком и часто ассоциирующееся с опасностью и обманом.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Змея"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Reptil largo y sin patas que se desplaza serpenteando o arrastrándose, y que a menudo se asocia con el peligro y el engaño.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "serpiente"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Mnyama mtambaazi mrefu asiye na miguu anayetembea kwa kujipinda au kutambaa na mara nyingi huhusishwa na hatari na udanganyifu.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "nyoka"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Wanpela longpela abus i no gat lek, i save krungut na go i go long graun, na Baibel i save tok em i samting bilong givim bagarap na giamanim man.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "snek"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Một loài bò sát dài, không chân, di chuyển bằng cách uốn lượn hoặc trườn bò, và thường liên hệ với sự nguy hiểm và lừa dối.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "rắn"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "一种长条状、无足的爬行动物，靠蠕动或滑行移动，常与危险和欺骗联系在一起。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "蛇"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "一種細長無足的爬行動物，靠蠕動或滑行移動，常與危險和欺騙相聯繫。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "蛇"
+    }
+  },
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "possibly_same_as": [
+    "fauna:Cobra",
+    "fauna:Viper"
+  ],
+  "primary_id": "fauna:Snake",
+  "pronominal_referents": {
+    "SBLGNT": [
+      [
+        "n47011003013"
+      ],
+      [
+        "n66012015008"
+      ],
+      [
+        "n40023034007"
+      ],
+      [
+        "n40023034025"
+      ],
+      [
+        "n40023035004"
+      ],
+      [
+        "n40023036003"
+      ],
+      [
+        "n44011010009"
+      ]
+    ],
+    "wlc": [
+      [
+        "o010030140101"
+      ],
+      [
+        "o010030140172"
+      ],
+      [
+        "o010030140232"
+      ],
+      [
+        "o010030150032"
+      ],
+      [
+        "o010030150072"
+      ],
+      [
+        "o010030150112"
+      ],
+      [
+        "o010030150132"
+      ],
+      [
+        "o020040030103"
+      ],
+      [
+        "o020040040083"
+      ],
+      [
+        "o020040040122"
+      ],
+      [
+        "o040210090053"
+      ],
+      [
+        "o120180040252"
+      ],
+      [
+        "o120180040272"
+      ],
+      [
+        "o230650250112"
+      ]
+    ]
+  },
+  "references": [
+    "01003001",
+    "01003002",
+    "01003004",
+    "01003013",
+    "01003014",
+    "01049017",
+    "02004003",
+    "02007009",
+    "02007010",
+    "02007012",
+    "02007015",
+    "04021006",
+    "04021007",
+    "04021009",
+    "05008015",
+    "05032033",
+    "12018004",
+    "18026013",
+    "19058005",
+    "19091013",
+    "19140004",
+    "20023032",
+    "20030019",
+    "21010008",
+    "21010011",
+    "23014029",
+    "23027001",
+    "23065025",
+    "24008017",
+    "24046022",
+    "30005019",
+    "30009003",
+    "33007017",
+    "40003007",
+    "40007010",
+    "40010016",
+    "40012034",
+    "40023033",
+    "41016018",
+    "42003007",
+    "42010019",
+    "42011011",
+    "43003014",
+    "44010012",
+    "44011006",
+    "44028003",
+    "45001023",
+    "45003013",
+    "46010009",
+    "47011003",
+    "59003007",
+    "66009019",
+    "66012009",
+    "66012014",
+    "66012015",
+    "66020002"
+  ],
+  "speeches": {
+    "wlc": [
+      {
+        "quote_type": "Normal",
+        "words": [
+          "o010030010141",
+          "o010030010151",
+          "o010030010161",
+          "o010030010171",
+          "o010030010181",
+          "o010030010191",
+          "o010030010201",
+          "o010030010202",
+          "o010030010211",
+          "o010030010221",
+          "o010030010222"
+        ]
+      },
+      {
+        "quote_type": "Normal",
+        "words": [
+          "o010030040051",
+          "o010030040061",
+          "o010030040071",
+          "o010030040072",
+          "o010030050011",
+          "o010030050021",
+          "o010030050031",
+          "o010030050041",
+          "o010030050051",
+          "o010030050052",
+          "o010030050061",
+          "o010030050062",
+          "o010030050071",
+          "o010030050072",
+          "o010030050081",
+          "o010030050082",
+          "o010030050091",
+          "o010030050092",
+          "o010030050101",
+          "o010030050102",
+          "o010030050111",
+          "o010030050112",
+          "o010030050121",
+          "o010030050131",
+          "o010030050141",
+          "o010030050142"
+        ]
+      }
+    ]
+  },
+  "subject_referents": {
+    "SBLGNT": [
+      [
+        "n66012015018"
+      ],
+      [
+        "n40023033005"
+      ],
+      [
+        "n40023034003"
+      ],
+      [
+        "n40023034015"
+      ],
+      [
+        "n40023034017"
+      ],
+      [
+        "n40023034021"
+      ],
+      [
+        "n40023034027"
+      ],
+      [
+        "n40023035025"
+      ],
+      [
+        "n44028003017"
+      ]
+    ],
+    "wlc": [
+      [
+        "o010030010112"
+      ],
+      [
+        "o010030140071"
+      ],
+      [
+        "o010030140181"
+      ],
+      [
+        "o010030140201"
+      ],
+      [
+        "o010490170092"
+      ],
+      [
+        "o020040040132"
+      ],
+      [
+        "o040210060072"
+      ],
+      [
+        "o230650250131"
+      ],
+      [
+        "o230650250151"
+      ],
+      [
+        "o240080170112"
+      ],
+      [
+        "o300090030182"
+      ]
+    ]
+  },
+  "type": "fauna",
+  "ubsdbh": [
+    "001957001001000",
+    "004747001001000",
+    "007870001002000"
+  ],
+  "ubsdgnt": [
+    "4.52"
+  ]
+}

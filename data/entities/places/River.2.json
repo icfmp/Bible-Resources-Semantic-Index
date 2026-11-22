@@ -1,0 +1,131 @@
+{
+  "added_entry": false,
+  "alternate_sources": {
+    "tipnr": [
+      "river|Nile@Gen.41.1-Zec"
+    ],
+    "ubsdbh": [
+      "002737001003000",
+      "002737001001000"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "place:Nile",
+    "review_status": "source_unreviewed",
+    "source_id": "place:River.2",
+    "source_primary_id": "place:Nile",
+    "source_sha256": "e8efaae0768f1094f19194b6ddd25f46a4bfc1b2b6bd3abac5d9f4973e79dd07"
+  },
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o020020030202"
+      ],
+      [
+        "o020020050062"
+      ],
+      [
+        "o020020050112"
+      ],
+      [
+        "o020070190181"
+      ]
+    ]
+  },
+  "id": "place:River.2",
+  "is_artifact": false,
+  "is_person": false,
+  "key_references": [
+    "02002003",
+    "02002005",
+    "02007019"
+  ],
+  "lemmas": {
+    "he": [
+      "יְאֹר",
+      "ה"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "preferred_label": "البحر"
+    },
+    "arb": {
+      "preferred_label": "ٱلنَّهْر"
+    },
+    "bis": {
+      "preferred_label": "Reva"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Nile",
+        "river"
+      ],
+      "preferred_label": "River"
+    },
+    "fas": {
+      "preferred_label": "رود"
+    },
+    "fra": {
+      "preferred_label": "le Fleuve"
+    },
+    "hau": {
+      "preferred_label": "Kogi"
+    },
+    "hin": {
+      "preferred_label": "नदी"
+    },
+    "ibo": {
+      "preferred_label": "Osimiri"
+    },
+    "ind": {
+      "preferred_label": "Sungai Nil"
+    },
+    "nep": {
+      "preferred_label": "नदी"
+    },
+    "por": {
+      "preferred_label": "Rio"
+    },
+    "rus": {
+      "preferred_label": "Река"
+    },
+    "spa": {
+      "preferred_label": "río"
+    },
+    "swh": {
+      "preferred_label": "Mto"
+    },
+    "tpi": {
+      "preferred_label": "Wara"
+    },
+    "vie": {
+      "preferred_label": "Sông Nin"
+    },
+    "zhs": {
+      "preferred_label": "河"
+    },
+    "zht": {
+      "preferred_label": "河"
+    }
+  },
+  "mentioned_in_bible": true,
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "primary_id": "place:Nile",
+  "pronominal_referents": {},
+  "references": [
+    "02002003",
+    "02002005",
+    "02007019"
+  ],
+  "referred_to_as": [
+    "place:Nile"
+  ],
+  "subject_referents": {},
+  "type": "place",
+  "ubsdbh": [
+    "002737001003000",
+    "002737001001000"
+  ]
+}

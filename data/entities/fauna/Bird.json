@@ -1,0 +1,520 @@
+{
+  "alternate_sources": {
+    "ubsdbh": [
+      "006286001002000"
+    ],
+    "ubsdgnt": [
+      "4.38"
+    ],
+    "ubsfauna": [
+      "fauna:3.1"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "fauna:Bird",
+    "review_status": "source_unreviewed",
+    "source_id": "fauna:Bird",
+    "source_primary_id": "fauna:Bird",
+    "source_sha256": "34d7c6de4884e67484e7cedce20e76a0eafa4ceb05cdea96eabce0c981c95bc7"
+  },
+  "explicit_instances": {
+    "SBLGNT": [
+      [
+        "n66018002024"
+      ],
+      [
+        "n66019017016"
+      ],
+      [
+        "n66019021022"
+      ],
+      [
+        "n40023037021"
+      ],
+      [
+        "n42013034021"
+      ],
+      [
+        "n40013004015"
+      ],
+      [
+        "n41004004015"
+      ],
+      [
+        "n42012024025"
+      ],
+      [
+        "n45001023014"
+      ],
+      [
+        "n59003007007"
+      ],
+      [
+        "n46015039018"
+      ]
+    ],
+    "wlc": [
+      [
+        "o010070140181"
+      ],
+      [
+        "o010150100152"
+      ],
+      [
+        "o030140040061"
+      ],
+      [
+        "o030140050052"
+      ],
+      [
+        "o030140060022"
+      ],
+      [
+        "o030140060172"
+      ],
+      [
+        "o030140060202"
+      ],
+      [
+        "o030140070112"
+      ],
+      [
+        "o030140490061"
+      ],
+      [
+        "o030140500032"
+      ],
+      [
+        "o030140510112"
+      ],
+      [
+        "o030140510162"
+      ],
+      [
+        "o030140520052"
+      ],
+      [
+        "o030140520083"
+      ],
+      [
+        "o030140530032"
+      ],
+      [
+        "o050040170081"
+      ],
+      [
+        "o050140110021"
+      ],
+      [
+        "o050220060041"
+      ],
+      [
+        "o160050180112"
+      ],
+      [
+        "o180400290032"
+      ],
+      [
+        "o190080090011"
+      ],
+      [
+        "o190110010111"
+      ],
+      [
+        "o191020080032"
+      ],
+      [
+        "o191040170031"
+      ],
+      [
+        "o191240070022"
+      ],
+      [
+        "o191480100052"
+      ],
+      [
+        "o200060050043"
+      ],
+      [
+        "o200070230061"
+      ],
+      [
+        "o210090120123"
+      ],
+      [
+        "o210120040092"
+      ],
+      [
+        "o230310050012"
+      ],
+      [
+        "o250030520032"
+      ],
+      [
+        "o260170230151"
+      ],
+      [
+        "o260390040121"
+      ],
+      [
+        "o260390170092"
+      ],
+      [
+        "o300030050021"
+      ]
+    ]
+  },
+  "fauna_type": "Birds",
+  "id": "fauna:Bird",
+  "key_references": [
+    "01001020",
+    "03001014",
+    "40006026"
+  ],
+  "lemmas": {
+    "el": [
+      "ὄρνεον",
+      "ὄρνις",
+      "πετεινός",
+      "πτηνός"
+    ],
+    "he": [
+      "צִפֹּור"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "حيوان صغير بيطير عنده ريش وجنحات. في طيور معينة كان بيتقدم منها ذبائح وضحايا لله في العبادة.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "طير"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "حيوان طائر صغير ذو ريش وأجنحة. كانت بعض الطيور تُقدَّم ذبائح لله في العبادة.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "طائر"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan smol anamol we i flae wetem ol feda mo win. Sam pijin oli bin givim olsem sakrefaes long God long wosip.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "pijin"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Fowl"
+      ],
+      "descriptions": [
+        {
+          "article": "fauna:Bird",
+          "description": "A small flying animal with feathers and wings. Some birds were offered as sacrifices to God in worship.",
+          "gloss": "Bird",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Bird"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "حیوانی پرنده و کوچک با پر و بال. برخی از پرندگان در عبادت به عنوان قربانی به خدا تقدیم می‌شدند.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "پرنده"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Petit animal volant pourvu de plumes et d'ailes. Certains oiseaux étaient offerts en sacrifice à Dieu lors du culte.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "oiseau"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Wata ƙaramar halitta mai tashi sama mai fuka-fukai da fiffike. An miƙa wasu tsuntsaye a matsayin hadayu ga Allah a wurin ibada.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Tsuntsu"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "पंखों और डैनों वाला एक छोटा उड़ने वाला प्राणी। आराधना में कुछ पक्षी परमेश्वर को बलि के रूप में चढ़ाए जाते थे।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "पक्षी"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Obere anụ ufe nwere nku na ábụ́bà. A na-eji ụfọdụ nnụnụ achụrụ Chineke àjà nʼofufe.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Nnụnụ"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Hewan terbang berukuran kecil yang memiliki bulu dan sayap. Beberapa burung dipersembahkan sebagai kurban bagi Allah dalam ibadah.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "burung"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "प्वाँख र पखेटा भएको सानो उड्ने प्राणी। आराधना गर्दा केही पक्षीहरू परमेश्वरलाई बलिको रूपमा चढाइन्थ्यो।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "पक्षी"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Um pequeno animal voador com penas e asas. Algumas aves eram oferecidas como sacrifícios a Deus no culto.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "ave"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Небольшое летающее животное, покрытое перьями и имеющее крылья. Некоторые птицы приносились в жертву Богу при поклонении.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Птица"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Animal volador de pequeño tamaño con plumas y alas. Algunas aves se presentaban como ofrenda de sacrificio a Dios en el culto.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "ave"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Mnyama mdogo anayeruka mwenye manyoya na mabawa. Baadhi ya ndege walitolewa kama dhabihu kwa Mungu katika ibada.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ndege"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Wanpela liklik animal i gat feda na wing na i save flai. Bipo ol i save givim sampela pisin olsem ofa bilong lotuim God.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "pisin"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Một loài động vật biết bay nhỏ có lông vũ và cánh. Một số loài chim đã được dâng làm tế lễ cho Đức Chúa Trời trong sự thờ phượng.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Chim"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "一种长有羽毛和翅膀的小型飞行动物。在敬拜中，某些鸟类曾被献给上帝作为祭物。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "鸟"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "一種長有羽毛和翅膀的小型飛行動物。在敬拜中，有些鳥類被獻給上帝作為祭物。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "鳥"
+    }
+  },
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "primary_id": "fauna:Bird",
+  "pronominal_referents": {
+    "SBLGNT": [
+      [
+        "n40023037025"
+      ],
+      [
+        "n42013034023"
+      ]
+    ],
+    "wlc": [
+      [
+        "o030140060052"
+      ],
+      [
+        "o030140510142"
+      ],
+      [
+        "o050140120052"
+      ],
+      [
+        "o260390170242"
+      ],
+      [
+        "o260390190102"
+      ],
+      [
+        "o300030050082"
+      ]
+    ]
+  },
+  "references": [
+    "01007014",
+    "01015010",
+    "03014004",
+    "03014005",
+    "03014006",
+    "03014007",
+    "03014049",
+    "03014050",
+    "03014051",
+    "03014052",
+    "03014053",
+    "05004017",
+    "05014011",
+    "05022006",
+    "16005018",
+    "18040029",
+    "19008009",
+    "19011001",
+    "19102008",
+    "19104017",
+    "19124007",
+    "19148010",
+    "20006005",
+    "20007023",
+    "21009012",
+    "21012004",
+    "23031005",
+    "25003052",
+    "26017023",
+    "26039004",
+    "26039017",
+    "30003005",
+    "40013004",
+    "40023037",
+    "41004004",
+    "42012024",
+    "42013034",
+    "45001023",
+    "46015039",
+    "59003007",
+    "66018002",
+    "66019017",
+    "66019021"
+  ],
+  "subject_referents": {
+    "SBLGNT": [
+      [
+        "n66019017018"
+      ],
+      [
+        "n66019017021"
+      ],
+      [
+        "n66019017022"
+      ],
+      [
+        "n66019018002"
+      ],
+      [
+        "n40013004013"
+      ],
+      [
+        "n41004004017"
+      ]
+    ],
+    "wlc": [
+      [
+        "o030140060212"
+      ],
+      [
+        "o030140510172"
+      ],
+      [
+        "o050040170111"
+      ],
+      [
+        "o191020080041"
+      ],
+      [
+        "o230310050021"
+      ],
+      [
+        "o260170230201"
+      ],
+      [
+        "o260390170151"
+      ],
+      [
+        "o260390170162"
+      ],
+      [
+        "o260390170171"
+      ],
+      [
+        "o260390170302"
+      ],
+      [
+        "o260390170322"
+      ],
+      [
+        "o260390180031"
+      ],
+      [
+        "o260390180071"
+      ],
+      [
+        "o260390190012"
+      ],
+      [
+        "o260390190042"
+      ],
+      [
+        "o260390200012"
+      ]
+    ]
+  },
+  "type": "fauna",
+  "ubsdbh": [
+    "006286001002000"
+  ],
+  "ubsdgnt": [
+    "4.38"
+  ]
+}

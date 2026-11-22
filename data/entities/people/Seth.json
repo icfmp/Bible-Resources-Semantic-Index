@@ -1,0 +1,304 @@
+{
+  "alternate_sources": {
+    "aquifer": [
+      "8247|Seth|TyndaleBibleDictionary",
+      "27076|Seth|UWTranslationWords",
+      "132170|Seth|BiblicaStudyNotesKeyTerms"
+    ],
+    "tipnr": [
+      "Seth@Gen.4.25-Luk",
+      "Sheth|Seth@Gen.4.25-Luk"
+    ],
+    "vizbible": [
+      "recdvASnxGfjfmvDM"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "person:Seth",
+    "review_status": "source_unreviewed",
+    "source_id": "person:Seth",
+    "source_primary_id": "person:Seth",
+    "source_sha256": "837461d3694b456cd04111dd645ae1f1c979d2743ba02f57802043686bdaa829"
+  },
+  "explicit_instances": {
+    "SBLGNT": [
+      [
+        "n42003038004"
+      ]
+    ],
+    "wlc": [
+      [
+        "o010040250111"
+      ],
+      [
+        "o010040260013"
+      ],
+      [
+        "o010050030121"
+      ],
+      [
+        "o010050040071"
+      ],
+      [
+        "o010050060021"
+      ],
+      [
+        "o010050070021"
+      ],
+      [
+        "o010050080041"
+      ],
+      [
+        "o040240170191"
+      ],
+      [
+        "o130010010021"
+      ]
+    ]
+  },
+  "father": "person:Adam",
+  "gender": "male",
+  "id": "person:Seth",
+  "key_references": [
+    "01004025",
+    "42003038"
+  ],
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "الولد التالت لآدم وحواء، والأخو الأصغر لهابيل. ومذكور في سلسلة نسب يسوع.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "شيث"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "الابن الثالث لآدم وحواء، والأخ الأصغر لهابيل. ورد اسمه في نسب يسوع.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "شِيث"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Namba tri pikinini boe blong Adam mo Iv, smol brata blong Ebel. Nem blong hem i stap long laen blong Jisas.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Set"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Sheth",
+        "buttock"
+      ],
+      "descriptions": [
+        {
+          "article": "person:Seth",
+          "description": "Third son of Adam and Eve, the younger brother of Abel. He is listed in the family line of Jesus.",
+          "gloss": "Seth",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Seth"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "سومین پسر آدم و حوا و برادر کوچک‌تر هابیل. نام او در نسب‌نامه عیسی آمده است.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "شیث"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Troisième fils d'Adam et Ève, frère cadet d'Abel. Il figure dans la généalogie de Jésus.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Seth"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Ɗa na uku na Adamu da Hawwa’u, ƙaramin ƙanin Habila. An jera shi a cikin layin zuriyar Yesu.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Set"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "आदम और हव्वा का तीसरा पुत्र, हाबिल का छोटा भाई। वह यीशु की वंशावली में सूचीबद्ध है।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "शेत"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Nwa nwoke nke atọ nke Adam na Iiv mụtara, nwanne Ebel nke nta. E depụtara ya nʼagbụrụ Jisọs.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Set"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Putra ketiga Adam dan Hawa, adik laki-laki Habel. Ia terdaftar dalam garis keturunan Yesus.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Set"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "आदम र हव्वाका तेस्रो छोरा, हाबिलका कान्छा भाइ। येशूको वंशावलीमा उहाँको नाम उल्लेख गरिएको छ।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "शेत"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Terceiro filho de Adão e Eva, irmão mais novo de Abel. Ele está listado na genealogia de Jesus.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Sete"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Третий сын Адама и Евы, младший брат Авеля. Он числится в родословии Иисуса.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Сиф"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Tercer hijo de Adán y Eva, hermano menor de Abel. Figura en la genealogía de Jesús.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Set"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Mwana wa tatu wa Adamu na Hawa, ndugu mdogo wa Habili. Ameorodheshwa katika ukoo wa Yesu.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Sethi"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Namba 3 pikinini man bilong Adam wantaim Iv, na em i liklik brata bilong Abel. Em i stap long lain tumbuna bilong Jisas.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Set"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Con trai thứ ba của A-đam và Ê-va, em trai của A-bên. Ông được liệt kê trong dòng dõi của Chúa Cứu Thế Giê-xu.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Sết"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "亚当和夏娃的第三个儿子，亚伯的弟弟。他被列在耶稣的家谱中。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "塞特"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "亞當和夏娃的第三個兒子，亞伯的弟弟。他被列在耶穌的家譜中。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "塞特"
+    }
+  },
+  "mother": "person:Eve",
+  "non_biblical": false,
+  "offspring": [
+    "person:Enosh"
+  ],
+  "only_mentioned_in_apocrypha": false,
+  "primary_id": "person:Seth",
+  "pronominal_referents": {
+    "wlc": [
+      [
+        "o010040260031"
+      ]
+    ]
+  },
+  "references": [
+    "01004025",
+    "01004026",
+    "01005003",
+    "01005004",
+    "01005006",
+    "01005007",
+    "01005008",
+    "04024017",
+    "13001001",
+    "42003038"
+  ],
+  "referred_to_as": [
+    "person:Sheth"
+  ],
+  "related_places": {
+    "birth_place": [
+      "place:Eden"
+    ]
+  },
+  "roles": [
+    "Patriarch"
+  ],
+  "siblings": [
+    "person:Cain",
+    "person:Abel"
+  ],
+  "subject_referents": {
+    "wlc": [
+      [
+        "o010040260062"
+      ],
+      [
+        "o010050060072"
+      ],
+      [
+        "o010050070122"
+      ],
+      [
+        "o010050080112"
+      ]
+    ]
+  },
+  "tribe": "group:Earlypatriarchs",
+  "type": "person"
+}

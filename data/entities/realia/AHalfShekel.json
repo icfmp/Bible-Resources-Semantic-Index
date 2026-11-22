@@ -1,0 +1,229 @@
+{
+  "alternate_sources": {
+    "ubsdbh": [
+      "001143001001000"
+    ],
+    "ubsrealia": [
+      "realia:11.1.2"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "realia:AHalfShekel",
+    "review_status": "source_unreviewed",
+    "source_id": "realia:AHalfShekel",
+    "source_primary_id": "realia:AHalfShekel",
+    "source_sha256": "ba1b12fc22d597dc9ec2d8f6e7bacb4f765b30b1761bfcfbf3741a626dd2f82d"
+  },
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o010240220101"
+      ],
+      [
+        "o020380260011"
+      ]
+    ]
+  },
+  "id": "realia:AHalfShekel",
+  "key_references": [
+    "01024022",
+    "02038026"
+  ],
+  "lemmas": {
+    "he": [
+      "בֶּקַע"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "وزنة قدرها حوالي 5.75 جرام، وبتعادل 10 جيرات، بتستعمل لوزن الدهب والفضة.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "نص شيكل"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "وزن يبلغ حوالي 5.75 غرامًا، ويعادل 10 جيرات، كان يُستخدم لوزن الذهب والفضة.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "نِصْف شَاقِل"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan weit we i samwe long 5.75 gram, i sem mak long 10 gera, we oli yusum blong skelem gol mo silva.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "haf sekel"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Beka"
+      ],
+      "descriptions": [
+        {
+          "article": "realia:AHalfShekel",
+          "description": "A weight of about 5.75 grams, equal to 10 gerahs, used for measuring gold and silver.",
+          "gloss": "A Half Shekel",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "A Half Shekel"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "واحد وزنی حدود ۵٫۷۵ گرم، معادل ۱۰ جیره، که برای سنجش طلا و نقره استفاده می‌شد.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "نیم شِکِل"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Poids d'environ 5,75 grammes, équivalant à 10 guéras, utilisé pour peser l'or et l'argent.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "demi-sicle"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Ma'aunin nauyi mai kimanin giram 5.75, daidai da gera 10, wanda ake amfani da shi wajen auna zinariya da azurfa.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Rabin shekel"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "सोना और चाँदी तोलने के लिए इस्तेमाल किया जाने वाला लगभग 5.75 ग्राम का एक माप (वज़न), जो 10 गेरा के बराबर होता है।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "आधा शेकेल"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Ihe ọtụtụ dị ihe dị ka gram 5.75, nke ha nhata na gera 10, a na-eji atụle ọlaedo na ọlaọcha.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ọkara shekel"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Ukuran timbangan sekitar 5,75 gram, setara dengan 10 gera, yang digunakan untuk menimbang emas dan perak.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "setengah syikal"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "करिब ५.७५ ग्राम तौल, जुन १० गेराह बराबर हुन्छ, र सुन तथा चाँदी जोख्न प्रयोग गरिन्थ्यो।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "आधा शेकेल"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Peso de cerca de 5,75 gramas, equivalente a 10 geras, usado para pesar ouro e prata.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "meio siclo"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Вес около 5,75 грамма, равный 10 герам; использовался для взвешивания золота и серебра.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Полсикля"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Peso de unos 5,75 gramos, equivalente a 10 geras, utilizado para medir oro y plata.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "medio siclo"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Uzito wa takriban gramu 5.75, sawa na gera 10, uliotumiwa kupimia dhahabu na fedha.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Nusu shekeli"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Wanpela skel bilong hevi inap olsem 5.75 gram, em i wankain olsem 10 gera, na ol i save yusim bilong skelim gol na silva.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "haf sekel"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Đơn vị đo khối lượng khoảng 5,75 gam, bằng 10 ghê-ra, dùng để cân vàng và bạc.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Nửa siếc-lơ"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "一种约重5.75克的重量单位，等于10季拉，用于衡量金银。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "半舍客勒"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "一種重量單位，約5.75公克，等於10季拉，用於衡量金銀。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "半舍客勒"
+    }
+  },
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "primary_id": "realia:AHalfShekel",
+  "pronominal_referents": {},
+  "realia_type": "other",
+  "references": [
+    "01024022",
+    "02038026"
+  ],
+  "subject_referents": {},
+  "type": "realia",
+  "ubsdbh": [
+    "001143001001000"
+  ]
+}

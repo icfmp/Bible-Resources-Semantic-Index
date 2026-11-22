@@ -1,0 +1,366 @@
+{
+  "alternate_sources": {
+    "aquifer": [
+      "8121|Samaritans|TyndaleBibleDictionary"
+    ],
+    "tipnr": [
+      "Samaritan|Samaria@1Ki.13.32-Act"
+    ],
+    "ubsdbh": [
+      "007507001001000"
+    ],
+    "ubsdgnt": [
+      "93.569"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "group:Samaritan",
+    "review_status": "source_unreviewed",
+    "source_id": "group:Samaritan",
+    "source_primary_id": "group:Samaritan",
+    "source_sha256": "f0270436613e7d8f7e6d4d7cc9d0c2dc0c87ef54129d14aeec73c3790144f9c2"
+  },
+  "explicit_instances": {
+    "SBLGNT": [
+      [
+        "n40010005018"
+      ],
+      [
+        "n42009052012"
+      ],
+      [
+        "n42010033001"
+      ],
+      [
+        "n42017016014"
+      ],
+      [
+        "n43004009007"
+      ],
+      [
+        "n43004009017"
+      ],
+      [
+        "n43004009023"
+      ],
+      [
+        "n43004039011"
+      ],
+      [
+        "n43004040007"
+      ],
+      [
+        "n43008048012"
+      ],
+      [
+        "n44008025018"
+      ]
+    ],
+    "wlc": [
+      [
+        "o120170290112"
+      ]
+    ]
+  },
+  "group_origin": "place:Samaria",
+  "group_type": "residence",
+  "id": "group:Samaritan",
+  "key_references": [
+    "16004002",
+    "43004009",
+    "42009052",
+    "42009053"
+  ],
+  "lemmas": {
+    "el": [
+      "Σαμαρῖτις",
+      "Σαμαρίτης"
+    ],
+    "he": [
+      "שֹׁמְרֹונִי"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "الناس الساكنين في السامرة. السامريين بيتبعوا فرع من اليهودية بتوراة مختلفة وبيعتروا في جبل جرزيم بدل أورشليم.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "سامريين"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "شعب يسكن في السامرة. يتبع السامريون فرعاً من الديانة اليهودية بتوراة مختلفة، ويعبدون الله في جبل جرزيم بدلاً من أورشليم.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "السامريون"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Ol man we oli stap laef long Sameria. Ol man Sameria oli folem wan narafala fasin blong rilijin blong ol man Jiu wetem wan narafala Buk blong Loa, mo oli wosip long Hil ya Gerisim i no long Jerusalem.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ol man Sameria"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Samaria"
+      ],
+      "descriptions": [
+        {
+          "article": "group:Samaritan",
+          "description": "People who live in Samaria. Samaritans follow an offshoot of Judaism with a different Torah and worship at Mount Gerizim instead of in Jerusalem.",
+          "gloss": "Samaritans",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Samaritans"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "مردمی که در سامره زندگی می‌کنند. سامریان شاخه‌ای از یهودیت را با توراتی متفاوت پیروی کرده و به جای اورشلیم بر کوه جِرزّیم عبادت می‌کنند.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "سامریان"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Personnes qui vivent en Samarie. Les Samaritains suivent une branche dissidente du judaïsme dotée d'une Torah différente et adorent sur le mont Garizim plutôt qu'à Jérusalem.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Samaritains"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Mutanen da suke zaune a Samariya. Samariyawa suna bin wani reshe na addinin Yahudanci mai Uratsa dabam kuma suna bauta a Dutsen Gerizim maimakon a Urushalima.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Samariyawa"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "सामरिया में रहने वाले लोग। सामरी यहूदी धर्म की एक शाखा का पालन करते हैं, जिसका तोराह भिन्न है और वे यरूशलेम के बजाय गरजीम पर्वत पर आराधना करते हैं।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "सामरी"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Ndị bi na Sameria. Ndị Sameria na-agbaso alaka nke okpukpe ndị Juu nwere Torah dị iche ma na-efe ofufe n'Ugwu Gerizim kama ịbụ na Jerusalem.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "ndị Sameria"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Orang-orang yang tinggal di Samaria. Orang Samaria mengikuti cabang agama Yahudi dengan Taurat yang berbeda dan beribadah di Gunung Gerizim, bukan di Yerusalem.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "orang Samaria"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "सामरियामा बस्ने मानिसहरू। सामरीहरू फरक तोराह भएको यहूदी धर्मको एक शाखा पछ्याउँछन् र यरूशलेमको सट्टा गरीज्जीम डाँडामा आराधना गर्छन्।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "सामरीहरू"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Pessoas que vivem em Samaria. Os samaritanos seguem uma ramificação do judaísmo com uma Torá diferente e adoram no monte Gerizim em vez de em Jerusalém.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "samaritanos"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Жители Самарии. Самаряне следовали одной из ветвей иудаизма с особым текстом Торы и поклонялись Богу на горе Гаризим вместо Иерусалима.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Самаряне"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Pueblo que vivía en Samaria. Los samaritanos seguían una vertiente del judaísmo con una Torá diferente y adoraban en el monte Guerizín en lugar de Jerusalén.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "samaritanos"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Watu wanaoishi Samaria. Wasamaria hufuata tawi la Dini ya Kiyahudi lenye Torati tofauti na huabudu kwenye Mlima Gerizimu badala ya Yerusalemu.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Wasamaria"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Ol manmeri i save stap long Samaria. Ol Samaria i bihainim wanpela lain bilong lotu bilong ol Juda we i gat narapela Buk Lo na ol i save lotu long Maunten Gerisim, i no long Jerusalem.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ol Samaria"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Những người sống ở Sa-ma-ri. Người Sa-ma-ri theo một nhánh tách ra từ Do Thái giáo với một bộ Ngũ Thư khác và thờ phượng trên Núi Ga-ri-xim thay vì ở Giê-ru-sa-lem.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "người Sa-ma-ri"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "住在撒马利亚的人。撒玛利亚人遵循犹太教的一个分支，拥有不同的妥拉，并在基利心山而非耶路撒冷敬拜。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "撒玛利亚人"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "住在撒馬利亞的人。撒馬利亞人遵從猶太教的一個分支，擁有不同的妥拉，並在基利心山而非耶路撒冷敬拜。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "撒馬利亞人"
+    }
+  },
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "primary_id": "group:Samaritan",
+  "pronominal_referents": {
+    "SBLGNT": [
+      [
+        "n42010034016"
+      ],
+      [
+        "n42010035020"
+      ],
+      [
+        "n42010035024"
+      ],
+      [
+        "n42010036002"
+      ],
+      [
+        "n43004012007"
+      ],
+      [
+        "n43004012011"
+      ],
+      [
+        "n43004020003"
+      ],
+      [
+        "n43004022001"
+      ],
+      [
+        "n43004025016"
+      ],
+      [
+        "n43004040012"
+      ]
+    ]
+  },
+  "references": [
+    "12017029",
+    "40010005",
+    "42009052",
+    "42010033",
+    "42017016",
+    "43004009",
+    "43004039",
+    "43004040",
+    "43008048",
+    "44008025"
+  ],
+  "subject_referents": {
+    "SBLGNT": [
+      [
+        "n42010033004"
+      ],
+      [
+        "n42010033009",
+        "n42010033010"
+      ],
+      [
+        "n42010034002",
+        "n42010034003"
+      ],
+      [
+        "n42010034007"
+      ],
+      [
+        "n42010034011"
+      ],
+      [
+        "n42010034018"
+      ],
+      [
+        "n42010034023"
+      ],
+      [
+        "n42010035005"
+      ],
+      [
+        "n42010035008"
+      ],
+      [
+        "n42010035012"
+      ],
+      [
+        "n42010037005"
+      ],
+      [
+        "n43004021020"
+      ],
+      [
+        "n43004022005"
+      ],
+      [
+        "n43004040008"
+      ]
+    ]
+  },
+  "type": "group",
+  "ubsdbh": [
+    "007507001001000"
+  ],
+  "ubsdgnt": [
+    "93.570",
+    "93.569"
+  ]
+}

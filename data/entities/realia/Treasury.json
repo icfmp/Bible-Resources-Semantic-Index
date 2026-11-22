@@ -1,0 +1,317 @@
+{
+  "alternate_sources": {
+    "ubsdbh": [
+      "000669001001000"
+    ],
+    "ubsdgnt": [
+      "7.33",
+      "6.141"
+    ],
+    "ubsrealia": [
+      "realia:3.14.1.4"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "realia:Treasury",
+    "review_status": "source_unreviewed",
+    "source_id": "realia:Treasury",
+    "source_primary_id": "realia:Treasury",
+    "source_sha256": "ed773d4712477aece84478af47309981637634a6d050938179b705bcb41b6ace"
+  },
+  "explicit_instances": {
+    "SBLGNT": [
+      [
+        "n43008020007"
+      ],
+      [
+        "n41012041005"
+      ],
+      [
+        "n41012041014"
+      ],
+      [
+        "n41012043024"
+      ],
+      [
+        "n42021001008"
+      ],
+      [
+        "n40027006014"
+      ]
+    ],
+    "wlc": [
+      [
+        "o010500260102"
+      ],
+      [
+        "o120120100041"
+      ],
+      [
+        "o120120110062"
+      ],
+      [
+        "o140240080041"
+      ],
+      [
+        "o140240100082"
+      ],
+      [
+        "o140240110052"
+      ],
+      [
+        "o140240110232"
+      ]
+    ]
+  },
+  "id": "realia:Treasury",
+  "key_references": [
+    "12012010",
+    "14024008",
+    "43008020"
+  ],
+  "lemmas": {
+    "el": [
+      "γαζοφυλάκιον",
+      "κορβανᾶς"
+    ],
+    "he": [
+      "אֲרֹון"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "صندوق كبير أو أوضة بتتحفظ فيها التبرعات أو الحاجات الثمينة في الهيكل.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "خزينة"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "صُنْدُوقٌ كَبِيرٌ أَوْ غُرْفَةٌ تُسْتَخْدَمُ لِحِفْظِ ٱلتَّقْدِمَاتِ أَوِ ٱلْمُقْتَنَيَاتِ ٱلثَّمِينَةِ فِي ٱلْهَيْكَلِ.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "خِزَانَة"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan bigfala bokis no wan rum we oli yusum blong storem ol ofring no ol sas samting insaed long Haos Tempol.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "bokis blong kleksen"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Temple Treasury",
+        "Box",
+        "Chest",
+        "Coffin",
+        "Offering Box",
+        "Pinnacle"
+      ],
+      "descriptions": [
+        {
+          "article": "realia:Treasury",
+          "description": "A large box or a room used for storing offerings or valuable items in the Temple.",
+          "gloss": "Treasury",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Treasury"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "صندوقی بزرگ یا اتاقی در معبد که برای نگهداری هدایا یا اشیای قیمتی استفاده می‌شد.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "خزانه"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Grand coffre ou salle servant à entreposer les offrandes ou les objets de valeur dans le Temple.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "trésor"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Wani babban akwati ko ɗaki da ake amfani da shi don ajiye sadakoki ko abubuwa masu daraja a Haikali.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Wurin ajiye taska"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "एक बड़ा संदूक या कक्ष जिसका उपयोग मंदिर में भेंट या मूल्यवान वस्तुओं को रखने के लिए किया जाता था।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "भण्डार"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Nnukwu igbe ma ọ bụ ọnụ ụlọ a na-eji adọba onyinye ma ọ bụ ihe ndị dị oké ọnụ ahịa n'ime Ụlọnsọ.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ebe a na-adọba akụ̀"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Sebuah peti besar atau ruangan yang digunakan untuk menyimpan persembahan atau barang-barang berharga di Bait Allah.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "perbendaharaan"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "मन्दिरमा भेटीहरू वा बहुमूल्य वस्तुहरू भण्डारण गर्न प्रयोग गरिने ठूलो बाकस वा कोठा।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "ढुकुटी"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Uma grande caixa ou uma sala usada para guardar ofertas ou itens valiosos no Templo.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "tesouro"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Большой ящик или помещение в Храме, использовавшееся для хранения пожертвований или ценных предметов.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Сокровищница"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Gran cofre o sala utilizada para guardar ofrendas o artículos de valor en el templo.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "tesoro"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Sanduku kubwa au chumba kinachotumiwa kuhifadhia sadaka au vitu vya thamani Hekaluni.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Hazina"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Wanpela bikpela bokis o rum bilong putim ol ofa o mani na gutpela samting insait long Tempel.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "rum mani"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Một cái rương lớn hoặc một căn phòng dùng để chứa của dâng hoặc các vật có giá trị trong Đền Thờ.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Kho bạc"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "圣殿中用于存放奉献款项或贵重物品的大箱子或房间。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "库房"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "聖殿中用於存放奉獻物或貴重物品的大櫃子或房間。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "庫房"
+    }
+  },
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "primary_id": "realia:Treasury",
+  "pronominal_referents": {
+    "SBLGNT": [
+      [
+        "n42021002007"
+      ]
+    ],
+    "wlc": [
+      [
+        "o120120100083"
+      ],
+      [
+        "o120120100102"
+      ],
+      [
+        "o140240080063"
+      ],
+      [
+        "o140240110243"
+      ],
+      [
+        "o140240110253"
+      ],
+      [
+        "o140240110272"
+      ]
+    ]
+  },
+  "realia_type": "other",
+  "references": [
+    "01050026",
+    "12012010",
+    "12012011",
+    "14024008",
+    "14024010",
+    "14024011",
+    "40027006",
+    "41012041",
+    "41012043",
+    "42021001",
+    "43008020"
+  ],
+  "subject_referents": {},
+  "type": "realia",
+  "ubsdbh": [
+    "000669001001000"
+  ],
+  "ubsdgnt": [
+    "7.33",
+    "6.141"
+  ]
+}

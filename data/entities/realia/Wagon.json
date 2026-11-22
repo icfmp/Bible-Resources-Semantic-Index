@@ -1,0 +1,611 @@
+{
+  "alternate_sources": {
+    "ubsdbh": [
+      "000202001001000",
+      "001409001001000",
+      "001410001001000",
+      "001410001003000",
+      "005230001001000",
+      "006099001001000"
+    ],
+    "ubsdgnt": [
+      "6.53"
+    ],
+    "ubsrealia": [
+      "realia:8.2"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "realia:Wagon",
+    "review_status": "source_unreviewed",
+    "source_id": "realia:Wagon",
+    "source_primary_id": "realia:Wagon",
+    "source_sha256": "a8a4c80cc55234e927f9d042a65df4039f99b01513b8ad76d1c11f25aa78eb3e"
+  },
+  "explicit_instances": {
+    "SBLGNT": [
+      [
+        "n66018013026"
+      ]
+    ],
+    "wlc": [
+      [
+        "o020140250031"
+      ],
+      [
+        "o110070300021"
+      ],
+      [
+        "o110070320022"
+      ],
+      [
+        "o110070320062"
+      ],
+      [
+        "o110070320092"
+      ],
+      [
+        "o110070330022"
+      ],
+      [
+        "o110070330041"
+      ],
+      [
+        "o200200260071"
+      ],
+      [
+        "o230280270062"
+      ],
+      [
+        "o260010150041"
+      ],
+      [
+        "o260010160022"
+      ],
+      [
+        "o260010160132"
+      ],
+      [
+        "o260010160152"
+      ],
+      [
+        "o260010190042"
+      ],
+      [
+        "o260010190112"
+      ],
+      [
+        "o260010200113"
+      ],
+      [
+        "o260010200172"
+      ],
+      [
+        "o260010210092"
+      ],
+      [
+        "o260010210142"
+      ],
+      [
+        "o260030130092"
+      ],
+      [
+        "o260100060172"
+      ],
+      [
+        "o260100090041"
+      ],
+      [
+        "o260100090071"
+      ],
+      [
+        "o260100090122"
+      ],
+      [
+        "o260100090182"
+      ],
+      [
+        "o260100100072"
+      ],
+      [
+        "o260100100092"
+      ],
+      [
+        "o260100120063"
+      ],
+      [
+        "o260100120111",
+        "o260100120112"
+      ],
+      [
+        "o260100130012"
+      ],
+      [
+        "o260100160042"
+      ],
+      [
+        "o260100160152"
+      ],
+      [
+        "o260100190103"
+      ],
+      [
+        "o260110220053"
+      ],
+      [
+        "o340030020051"
+      ],
+      [
+        "o230280280091"
+      ],
+      [
+        "o190770190032"
+      ],
+      [
+        "o230050280112",
+        "o230050280113"
+      ],
+      [
+        "o240470030081",
+        "o240470030082"
+      ],
+      [
+        "o260100020102"
+      ],
+      [
+        "o260100060112"
+      ],
+      [
+        "o260100130042"
+      ],
+      [
+        "o260230240052"
+      ],
+      [
+        "o260260100072"
+      ],
+      [
+        "o010450190091"
+      ],
+      [
+        "o010450210081"
+      ],
+      [
+        "o010450270122"
+      ],
+      [
+        "o010460050152"
+      ],
+      [
+        "o040070030071"
+      ],
+      [
+        "o040070030121"
+      ],
+      [
+        "o040070060042"
+      ],
+      [
+        "o040070070032"
+      ],
+      [
+        "o040070080032"
+      ],
+      [
+        "o090060070041"
+      ],
+      [
+        "o090060070182"
+      ],
+      [
+        "o090060080082"
+      ],
+      [
+        "o090060100092"
+      ],
+      [
+        "o090060110062"
+      ],
+      [
+        "o090060140013"
+      ],
+      [
+        "o090060140162"
+      ],
+      [
+        "o100060030061"
+      ],
+      [
+        "o100060030192"
+      ],
+      [
+        "o130130070061"
+      ],
+      [
+        "o130130070132"
+      ],
+      [
+        "o190460100101"
+      ],
+      [
+        "o230050180072"
+      ],
+      [
+        "o300020130072"
+      ],
+      [
+        "o040070030081"
+      ],
+      [
+        "o230660200113"
+      ]
+    ]
+  },
+  "id": "realia:Wagon",
+  "key_references": [
+    "01045019",
+    "04007007",
+    "09006007",
+    "13013007"
+  ],
+  "lemmas": {
+    "el": [
+      "ῥέδη"
+    ],
+    "he": [
+      "אֹופַן",
+      "גִּלְגָּל",
+      "גַּלְגַּל",
+      "עֲגָלָה",
+      "צָב"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "مركبة ليها عجلتين أو أربعة عجلات، بتُستخدم لنقل البضايع أو الناس، وبتجرها الحيوانات.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "عجلة جر"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "مَرْكَبَةٌ ذَاتُ عَجَلَتَيْنِ أَوْ أَرْبَعِ عَجَلَاتٍ، تُسْتَخْدَمُ لِنَقْلِ البَضَائِعِ أَوِ النَّاسِ، وَتَجُرُّهَا الحَيَوَانَاتُ.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "عَجَلَة"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan trak we i gat tu no fo wil, we ol anamol oli stap pulum, blong karem ol samting no ol man.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "kat"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Wheel",
+        "Cart",
+        "Chariot",
+        "Carriage"
+      ],
+      "descriptions": [
+        {
+          "article": "realia:Wagon",
+          "description": "A vehicle with two or four wheels, used for carrying goods or people, pulled by animals.",
+          "gloss": "Wagon",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Wagon"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "وسیله‌ای نقلیه با دو یا چهار چرخ که برای جابه‌جایی کالا یا افراد به کار می‌رفت و حیوانات آن را می‌کشیدند.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "ارابه"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Un véhicule à deux ou quatre roues, utilisé pour transporter des marchandises ou des personnes, tiré par des animaux.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "char"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Abin hawa mai ƙafafu biyu ko huɗu, da ake amfani da shi wajen ɗaukar kaya ko mutane, wanda dabbobi ke jawo shi.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "keken shanu"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "सामान या लोगों को ले जाने के लिए दो या चार पहियों वाला एक वाहन, जिसे जानवरों द्वारा खींचा जाता है।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "गाड़ी"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Ụgbọ nwere ụkwụ abụọ ma ọ bụ anọ, nke a na-eji ebu ngwongwo ma ọ bụ mmadụ, nke ụmụ anụmanụ na-adọkpụ.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ụgbọala dọkpụ dọkpụ"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Kendaraan dengan dua atau empat roda, digunakan untuk mengangkut barang atau orang, ditarik oleh hewan.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "kereta"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "सामान वा मानिसहरू ओसार्न प्रयोग गरिने, जनावरहरूले तान्‍ने, दुई वा चार पाङ्ग्रा भएको सवारी साधन।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "गाडा"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Um veículo com duas ou quatro rodas, usado para transportar mercadorias ou pessoas, puxado por animais.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "carroça"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Двух- или четырехколесное транспортное средство, приводимое в движение животными и использовавшееся для перевозки грузов или людей.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Повозка"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Vehículo de dos o cuatro ruedas, utilizado para transportar personas o mercancías, tirado por animales.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "carro"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Chombo cha magurudumu mawili au manne kinachotumiwa kubeba mizigo au watu, kikiwa kimekokotwa na wanyama.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Gari la kukokotwa"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Wanpela wilkar i gat tupela o fopela wil, bilong karim ol kago o manmeri, na ol animal i save pulim.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "karis"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Một loại xe có hai hoặc bốn bánh, do súc vật kéo, dùng để chở hàng hóa hoặc người.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Xe kéo"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "一种有两个或四个轮子、由牲畜拉动、用于运载货物或人员的车辆。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "车辆"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "由牲畜牽引、有兩個或四個輪子用於載運貨物或人的車輛。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "車輛"
+    }
+  },
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "primary_id": "realia:Wagon",
+  "pronominal_referents": {
+    "wlc": [
+      [
+        "o020140250053"
+      ],
+      [
+        "o110070330062"
+      ],
+      [
+        "o110070330073"
+      ],
+      [
+        "o110070330083"
+      ],
+      [
+        "o110070330093"
+      ],
+      [
+        "o260010160033"
+      ],
+      [
+        "o260010160083"
+      ],
+      [
+        "o260010160093"
+      ],
+      [
+        "o260010160103"
+      ],
+      [
+        "o260010170032"
+      ],
+      [
+        "o260010170043"
+      ],
+      [
+        "o260010170083"
+      ],
+      [
+        "o260010180013"
+      ],
+      [
+        "o260010180063"
+      ],
+      [
+        "o260100100013"
+      ],
+      [
+        "o260100100043"
+      ],
+      [
+        "o260100160171"
+      ],
+      [
+        "o260100170092"
+      ],
+      [
+        "o040070030192"
+      ],
+      [
+        "o040070050102"
+      ],
+      [
+        "o040070060082"
+      ],
+      [
+        "o300020130082"
+      ],
+      [
+        "o300020130092"
+      ]
+    ]
+  },
+  "realia_type": "other",
+  "references": [
+    "01045019",
+    "01045021",
+    "01045027",
+    "01046005",
+    "02014025",
+    "04007003",
+    "04007006",
+    "04007007",
+    "04007008",
+    "09006007",
+    "09006008",
+    "09006010",
+    "09006011",
+    "09006014",
+    "10006003",
+    "11007030",
+    "11007032",
+    "11007033",
+    "13013007",
+    "19046010",
+    "19077019",
+    "20020026",
+    "23005018",
+    "23005028",
+    "23028027",
+    "23028028",
+    "23066020",
+    "24047003",
+    "26001015",
+    "26001016",
+    "26001019",
+    "26001020",
+    "26001021",
+    "26003013",
+    "26010002",
+    "26010006",
+    "26010009",
+    "26010010",
+    "26010012",
+    "26010013",
+    "26010016",
+    "26010019",
+    "26011022",
+    "26023024",
+    "26026010",
+    "30002013",
+    "34003002",
+    "66018013"
+  ],
+  "subject_referents": {
+    "wlc": [
+      [
+        "o260010170051"
+      ],
+      [
+        "o260010170071"
+      ],
+      [
+        "o260100170021"
+      ],
+      [
+        "o260100170041"
+      ],
+      [
+        "o010450270162"
+      ],
+      [
+        "o040070050032"
+      ],
+      [
+        "o040070050042"
+      ],
+      [
+        "o090060140082"
+      ]
+    ]
+  },
+  "type": "realia",
+  "ubsdbh": [
+    "000202001001000",
+    "001409001001000",
+    "001410001001000",
+    "001410001003000",
+    "005230001001000",
+    "006099001001000"
+  ],
+  "ubsdgnt": [
+    "6.53"
+  ]
+}

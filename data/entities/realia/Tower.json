@@ -1,0 +1,447 @@
+{
+  "alternate_sources": {
+    "aquifer": [
+      "8905|Tower|TyndaleBibleDictionary"
+    ],
+    "ubsdbh": [
+      "003685001001000",
+      "003685001003000",
+      "003686001001000"
+    ],
+    "ubsdgnt": [
+      "7.23"
+    ],
+    "ubsrealia": [
+      "realia:1.1.11"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "realia:Tower",
+    "review_status": "source_unreviewed",
+    "source_id": "realia:Tower",
+    "source_primary_id": "realia:Tower",
+    "source_sha256": "477848e1c6bcd8126456fa931638ed00b1af0355967183c26074b51c2c695273"
+  },
+  "explicit_instances": {
+    "SBLGNT": [
+      [
+        "n40021033021"
+      ],
+      [
+        "n41012001018"
+      ],
+      [
+        "n42013004009"
+      ],
+      [
+        "n42014028006"
+      ]
+    ],
+    "wlc": [
+      [
+        "o010110040062"
+      ],
+      [
+        "o010110050072"
+      ],
+      [
+        "o070080090102"
+      ],
+      [
+        "o070080170021"
+      ],
+      [
+        "o070090460041"
+      ],
+      [
+        "o070090470071"
+      ],
+      [
+        "o070090490221"
+      ],
+      [
+        "o070090510012"
+      ],
+      [
+        "o070090510192"
+      ],
+      [
+        "o070090520042"
+      ],
+      [
+        "o070090520102"
+      ],
+      [
+        "o120090170042"
+      ],
+      [
+        "o140140060092"
+      ],
+      [
+        "o140260090031"
+      ],
+      [
+        "o140260100021"
+      ],
+      [
+        "o140260150082"
+      ],
+      [
+        "o140270040082"
+      ],
+      [
+        "o140320050092"
+      ],
+      [
+        "o160030250063"
+      ],
+      [
+        "o160030260103"
+      ],
+      [
+        "o160030270072"
+      ],
+      [
+        "o190480130051",
+        "o190480130052"
+      ],
+      [
+        "o190610040051"
+      ],
+      [
+        "o200180100011"
+      ],
+      [
+        "o220040040012"
+      ],
+      [
+        "o220070050022"
+      ],
+      [
+        "o220070050122"
+      ],
+      [
+        "o220080100042"
+      ],
+      [
+        "o230020150031"
+      ],
+      [
+        "o230050020061"
+      ],
+      [
+        "o230300250171"
+      ],
+      [
+        "o230330180112"
+      ],
+      [
+        "o260260040051",
+        "o260260040052"
+      ],
+      [
+        "o260260090052",
+        "o260260090053"
+      ],
+      [
+        "o260270110082",
+        "o260270110083"
+      ],
+      [
+        "o160030010161"
+      ],
+      [
+        "o160120390122"
+      ],
+      [
+        "o100220510021"
+      ]
+    ]
+  },
+  "id": "realia:Tower",
+  "key_references": [
+    "23005002",
+    "40021033"
+  ],
+  "lemmas": {
+    "el": [
+      "πύργος"
+    ],
+    "he": [
+      "מִגְדָּל",
+      "מִגְדֹּל"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "مبنى حجري عالي بيستعملوه لحراسة الأماكن وتوفير الحماية.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "برج"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "بِنَاءٌ حَجَرِيٌّ مُرْتَفِعٌ يُسْتَخْدَمُ لِلْحِرَاسَةِ وَتَوْفِيرِ ٱلْحِمَايَةِ.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "بُرْج"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan hae bilding we oli wokem long ston blong lukaot gud long wan ples mo blong protektem ol man.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "wajhaos"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Watchtower"
+      ],
+      "descriptions": [
+        {
+          "article": "realia:Tower",
+          "description": "A tall stone structure used for guarding areas and providing protection.",
+          "gloss": "Tower",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Tower"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "سازه‌ای سنگی و بلند که برای نگهبانی از مناطق و تأمین محافظت به کار می‌رفت.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "برج"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Haute structure en pierre servant à surveiller et à assurer la protection d'un lieu.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "tour"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Wani dogon gini na dutse da ake amfani da shi don tsaron yankuna da kuma bayar da kariya.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Hasumiya"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "पत्थर की एक ऊँची संरचना जो क्षेत्रों की पहरेदारी और सुरक्षा प्रदान करने के लिए उपयोग की जाती थी।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "गुम्मट"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Ụlọ elu e ji nkume rụọ nke a na-eji eche nche ma ọ bụ chebe ebe.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ụlọ nche"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Sebuah struktur batu yang tinggi yang digunakan untuk menjaga wilayah dan menyediakan perlindungan.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "menara"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "क्षेत्रहरूको पहरा दिन र सुरक्षा प्रदान गर्न प्रयोग गरिने अग्लो ढुङ्गे संरचना।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "धरहरा"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Uma estrutura alta de pedra usada para vigiar áreas e fornecer proteção.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "torre"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Высокое каменное сооружение, использовавшееся для наблюдения за местностью и защиты.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Башня"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Estructura alta de piedra utilizada para vigilar zonas y brindar protección.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "torre"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Jengo refu la mawe lililotumiwa kulinda maeneo na kutoa ulinzi.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Mnara"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Wanpela longpela taua ol i wokim long ston bilong was long graun na bilong hait na kisim banis.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "taua"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Một công trình bằng đá cao được dùng để canh gác các khu vực và để bảo vệ.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Tháp canh"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "用于警戒防守和提供保护的高大石质建筑物。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "瞭望楼"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "用於守衛區域並提供保護的高大石頭建築。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "樓"
+    }
+  },
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "primary_id": "realia:Tower",
+  "pronominal_referents": {
+    "wlc": [
+      [
+        "o010110040073"
+      ],
+      [
+        "o070090520062"
+      ],
+      [
+        "o070090520113"
+      ],
+      [
+        "o140260090133"
+      ],
+      [
+        "o220040040092"
+      ]
+    ]
+  },
+  "realia_type": "other",
+  "references": [
+    "01011004",
+    "01011005",
+    "07008009",
+    "07008017",
+    "07009046",
+    "07009047",
+    "07009049",
+    "07009051",
+    "07009052",
+    "10022051",
+    "12009017",
+    "14014006",
+    "14026009",
+    "14026010",
+    "14026015",
+    "14027004",
+    "14032005",
+    "16003001",
+    "16003025",
+    "16003026",
+    "16003027",
+    "16012039",
+    "19048013",
+    "19061004",
+    "20018010",
+    "22004004",
+    "22007005",
+    "22008010",
+    "23002015",
+    "23005002",
+    "23030025",
+    "23033018",
+    "26026004",
+    "26026009",
+    "26027011",
+    "40021033",
+    "41012001",
+    "42013004",
+    "42014028"
+  ],
+  "subject_referents": {
+    "SBLGNT": [
+      [
+        "n42013004014"
+      ]
+    ],
+    "wlc": [
+      [
+        "o160030250072"
+      ],
+      [
+        "o160030260112"
+      ],
+      [
+        "o160030270092"
+      ],
+      [
+        "o220040040041"
+      ]
+    ]
+  },
+  "type": "realia",
+  "ubsdbh": [
+    "003685001001000",
+    "003685001003000",
+    "003686001001000"
+  ],
+  "ubsdgnt": [
+    "7.23"
+  ]
+}

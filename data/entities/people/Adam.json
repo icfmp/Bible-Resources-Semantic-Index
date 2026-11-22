@@ -1,0 +1,551 @@
+{
+  "alternate_sources": {
+    "aquifer": [
+      "3363|Adam (Person)|TyndaleBibleDictionary",
+      "3365|Adam, the Second|TyndaleBibleDictionary",
+      "26287|Adam|UWTranslationWords",
+      "132149|Adam|BiblicaStudyNotesKeyTerms"
+    ],
+    "tipnr": [
+      "Adam@Gen.2.19-Jud",
+      "man|Adam@Gen.2.19-Jud"
+    ],
+    "vizbible": [
+      "recyYgUiSETdWFgEP"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "person:Adam",
+    "review_status": "source_unreviewed",
+    "source_id": "person:Adam",
+    "source_primary_id": "person:Adam",
+    "source_sha256": "b845bacd5d2ce8bcaffeacfb6d573a00a4d3043e08b67c73fdce1d00d9767c67"
+  },
+  "explicit_instances": {
+    "SBLGNT": [
+      [
+        "n42003038006"
+      ],
+      [
+        "n45005014006"
+      ],
+      [
+        "n45005014019"
+      ],
+      [
+        "n46015022005"
+      ],
+      [
+        "n46015045008"
+      ],
+      [
+        "n46015045014"
+      ],
+      [
+        "n54002013001"
+      ],
+      [
+        "n54002014002"
+      ],
+      [
+        "n65001014007"
+      ]
+    ],
+    "wlc": [
+      [
+        "o010020190152"
+      ],
+      [
+        "o010020190242"
+      ],
+      [
+        "o010020200022"
+      ],
+      [
+        "o010020200113"
+      ],
+      [
+        "o010020210062"
+      ],
+      [
+        "o010020230022"
+      ],
+      [
+        "o010030080112"
+      ],
+      [
+        "o010030090052"
+      ],
+      [
+        "o010030170013"
+      ],
+      [
+        "o010030200022"
+      ],
+      [
+        "o010030210042"
+      ],
+      [
+        "o010040010013"
+      ],
+      [
+        "o010040250021"
+      ],
+      [
+        "o010050010041"
+      ],
+      [
+        "o010050010081"
+      ],
+      [
+        "o010050020091"
+      ],
+      [
+        "o010050030021"
+      ],
+      [
+        "o010050040031"
+      ],
+      [
+        "o010050050041"
+      ],
+      [
+        "o050320080061"
+      ],
+      [
+        "o130010010011"
+      ],
+      [
+        "o180310330032"
+      ],
+      [
+        "o280060070022"
+      ]
+    ]
+  },
+  "gender": "male",
+  "id": "person:Adam",
+  "key_references": [
+    "01001026",
+    "01002007",
+    "01005001",
+    "13001001",
+    "42003038",
+    "46015022"
+  ],
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "أول إنسان خلقه الله، متزوج من حواء، وجد الجنس البشري.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "آدم"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "أول إنسان خلقه الله، زوج حواء، وأصل الجنس البشري.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "آدَم"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Fas man we God i mekem, mared long Iv, mo bumbu blong olgeta man long wol.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Adam"
+    },
+    "eng": {
+      "alternate_labels": [
+        "man",
+        "others",
+        "mankind"
+      ],
+      "descriptions": [
+        {
+          "article": "person:Adam",
+          "description": "The first person created by God, married to Eve, and ancestor of the human race.",
+          "gloss": "Adam",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Adam"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "نخستین انسانی که خدا آفرید، همسر حوا و نیاکان نسل بشر.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "آدم"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Le premier être humain créé par Dieu, époux d’Ève et ancêtre de la race humaine.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Adam"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Mutum na farko da Allah ya halitta, mijin Hawwa’u, kuma kakan dukan ’yan adam.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Adamu"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "परमेश्वर द्वारा रचा गया पहला मनुष्य, हव्वा का पति, और मानव जाति का पूर्वज।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "आदम"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Onye mbụ Chineke kere, di Iv, na nna ochie nke agbụrụ mmadụ niile.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Adam"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Manusia pertama yang diciptakan oleh Allah, suami dari Hawa, dan nenek moyang umat manusia.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Adam"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "परमेश्वरद्वारा सृष्टि गरिएका पहिलो व्यक्ति, हव्वाका पति र मानव जातिका पुर्खा।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "आदम"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "A primeira pessoa criada por Deus, casado com Eva e ancestral da raça humana.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Adão"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Первый человек, сотворенный Богом, муж Евы и прародитель человеческого рода.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Адам"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "La primera persona creada por Dios, esposo de Eva y antepasado de la raza humana.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Adán"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Mtu wa kwanza kuumbwa na Mungu, aliyemwoa Hawa, na babu mkuu wa jamii ya wanadamu.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Adamu"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Namba wan man God i bin wokim, em marit long Iv, na em i tumbuna bilong olgeta manmeri bilong graun.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Adam"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Người đầu tiên được Đức Chúa Trời sáng tạo, chồng của Ê-va, và là tổ tiên của loài người.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "A-đam"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "上帝创造的第一人，夏娃的丈夫，人类的始祖。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "亚当"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "上帝創造的第一個人，夏娃的丈夫，全人類的始祖。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "亞當"
+    }
+  },
+  "non_biblical": false,
+  "offspring": [
+    "person:Cain",
+    "person:Abel",
+    "person:Seth"
+  ],
+  "only_mentioned_in_apocrypha": false,
+  "partners": [
+    "person:Eve"
+  ],
+  "primary_id": "person:Adam",
+  "pronominal_referents": {
+    "SBLGNT": [
+      [
+        "n45005014020"
+      ],
+      [
+        "n45005015014"
+      ],
+      [
+        "n45005016005"
+      ],
+      [
+        "n45005017005"
+      ],
+      [
+        "n45005017012"
+      ],
+      [
+        "n45005018005"
+      ]
+    ],
+    "wlc": [
+      [
+        "o010030100091"
+      ],
+      [
+        "o010030110071"
+      ],
+      [
+        "o010030190141"
+      ]
+    ]
+  },
+  "references": [
+    "01002019",
+    "01002020",
+    "01002021",
+    "01002023",
+    "01003008",
+    "01003009",
+    "01003017",
+    "01003020",
+    "01003021",
+    "01004001",
+    "01004025",
+    "01005001",
+    "01005002",
+    "01005003",
+    "01005004",
+    "01005005",
+    "05032008",
+    "13001001",
+    "18031033",
+    "28006007",
+    "42003038",
+    "45005014",
+    "46015022",
+    "46015045",
+    "54002013",
+    "54002014",
+    "65001014"
+  ],
+  "referred_to_as": [
+    "person:Man"
+  ],
+  "related_places": {
+    "birth_place": [
+      "place:Eden"
+    ]
+  },
+  "roles": [
+    "Patriarch"
+  ],
+  "siblings": [
+    "person:Eve"
+  ],
+  "speeches": {
+    "wlc": [
+      {
+        "quote_type": "Normal",
+        "words": [
+          "o010020230031",
+          "o010020230041",
+          "o010020230042",
+          "o010020230051",
+          "o010020230061",
+          "o010020230062",
+          "o010020230063",
+          "o010020230071",
+          "o010020230072",
+          "o010020230081",
+          "o010020230082",
+          "o010020230083",
+          "o010020230091",
+          "o010020230092",
+          "o010020230101",
+          "o010020230111",
+          "o010020230121",
+          "o010020230131",
+          "o010020230132",
+          "o010020230141",
+          "o010020230151"
+        ]
+      },
+      {
+        "quote_type": "Normal",
+        "words": [
+          "o010030100031",
+          "o010030100032",
+          "o010030100041",
+          "o010030100051",
+          "o010030100051ה",
+          "o010030100052",
+          "o010030100061",
+          "o010030100062",
+          "o010030100071",
+          "o010030100081",
+          "o010030100091",
+          "o010030100101",
+          "o010030100102"
+        ]
+      },
+      {
+        "quote_type": "Normal",
+        "words": [
+          "o010030120031",
+          "o010030120032",
+          "o010030120041",
+          "o010030120051",
+          "o010030120061",
+          "o010030120062",
+          "o010030120071",
+          "o010030120081",
+          "o010030120091",
+          "o010030120092",
+          "o010030120101",
+          "o010030120111",
+          "o010030120112",
+          "o010030120121",
+          "o010030120122"
+        ]
+      }
+    ]
+  },
+  "subject_referents": {
+    "SBLGNT": [
+      [
+        "n46015045003"
+      ]
+    ],
+    "wlc": [
+      [
+        "o010020190181"
+      ],
+      [
+        "o010020210072"
+      ],
+      [
+        "o010030100012"
+      ],
+      [
+        "o010030100041"
+      ],
+      [
+        "o010030100062"
+      ],
+      [
+        "o010030100102"
+      ],
+      [
+        "o010030110131"
+      ],
+      [
+        "o010030110151"
+      ],
+      [
+        "o010030170041"
+      ],
+      [
+        "o010030170072"
+      ],
+      [
+        "o010030170141"
+      ],
+      [
+        "o010030170201"
+      ],
+      [
+        "o010030180052"
+      ],
+      [
+        "o010030190031"
+      ],
+      [
+        "o010030190111"
+      ],
+      [
+        "o010030190171"
+      ],
+      [
+        "o010030230062"
+      ],
+      [
+        "o010030230101"
+      ],
+      [
+        "o010050030062"
+      ],
+      [
+        "o010050030092"
+      ],
+      [
+        "o010050040112"
+      ],
+      [
+        "o010050050061"
+      ],
+      [
+        "o010050050122"
+      ]
+    ]
+  },
+  "tribe": "group:Earlypatriarchs",
+  "type": "person"
+}

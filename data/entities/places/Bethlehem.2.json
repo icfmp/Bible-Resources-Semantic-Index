@@ -1,0 +1,274 @@
+{
+  "added_entry": false,
+  "alternate_sources": {
+    "aquifer": [
+      "4187|Bethlehem|TyndaleBibleDictionary",
+      "26388|Bethlehem|UWTranslationWords",
+      "132388|Bethlehem|BiblicaStudyNotesKeyTerms",
+      "280127|bethlehem|FIAKeyTerms"
+    ],
+    "geonames": [
+      "http://sws.geonames.org/295453"
+    ],
+    "tipnr": [
+      "Bethlehem@Jos.19.15"
+    ],
+    "ubsdbh": [
+      "000961001002000"
+    ],
+    "vizbible": [
+      "recsyolL81TBx45nu"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "place:Bethlehem.2",
+    "review_status": "source_unreviewed",
+    "source_id": "place:Bethlehem.2",
+    "source_primary_id": "place:Bethlehem.2",
+    "source_sha256": "3db70a33d9e78ef679acd5cae772228802a94484ce8ba45be9db717916e7d925"
+  },
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o060190150052",
+        "o060190150061"
+      ]
+    ]
+  },
+  "geocoordinates": {
+    "obi": {
+      "lat": "32.735379",
+      "lon": "35.189704"
+    },
+    "vizbible": {
+      "lat": "32.735379",
+      "lon": "35.189704"
+    }
+  },
+  "id": "place:Bethlehem.2",
+  "is_artifact": false,
+  "is_person": false,
+  "key_references": [
+    "07012010",
+    "07012008",
+    "06019015"
+  ],
+  "lemmas": {
+    "he": [
+      "בֵּית לֶחֶם",
+      "בֵּית לֶ֫חֶם"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "بلدة في أرض زبولون، اتولد ومات فيها القاضي إبصان.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "بيت لحم (تبع زبولون)"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "بَلْدَةٌ فِي أَرْضِ زَبُولُونَ، وُلِدَ فِيهَا ٱلْقَاضِي إِبْصَانُ وَدُفِنَ فِيهَا.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "بَيْتُ لَحْمٍ (زَبُولُون)"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan taon long teritri blong Sebulun, we jaj ya Ibsan i bon mo ded long hem.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Betlehem (blong Sebulun)"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Beth-Lehem"
+      ],
+      "descriptions": [
+        {
+          "article": "place:Bethlehem.2",
+          "description": "A town in the territory of Zebulun, where the judge Ibzan was born and died.",
+          "gloss": "Bethlehem (of Zebulun)",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Bethlehem (of Zebulun)"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "شهری در قلمرو زبولون، جایی که ابصانِ داور در آن متولد شد و درگذشت.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "بیت‌لحم (زبولون)"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Ville située sur le territoire de Zabulon, où le juge Ibtsan est né et mort.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Bethléhem (de Zabulon)"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Wani gari a yankin Zebulun, inda aka haifi alkali Ibzan aka kuma binne shi a can.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Betlehem (na Zebulun)"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "जबूलून के क्षेत्र का एक नगर, जहाँ इबसान न्यायी का जन्म और मृत्यु हुई थी।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "बैतलहम (जबूलून का)"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Otu obodo dị nʼókèala Zebụlọn, ebe a mụrụ onye ikpe bụ Ibzan ma bụrụkwa ebe ọ nwụrụ.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Betlehem (nke Zebụlọn)"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Sebuah kota di wilayah Zebulon, tempat hakim Ebzan lahir dan meninggal.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Betlehem (Zebulon)"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "जबूलूनको इलाकामा पर्ने एउटा सहर, जहाँ न्यायकर्ता इब्सानको जन्म र मृत्यु भएको थियो।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "बेथलेहेम (जबूलूनको)"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Uma cidade no território de Zebulom, onde o juiz Ibsã nasceu e morreu.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Belém (de Zebulom)"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Город в уделе Завулона, где родился и умер судья Есевон.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Вифлеем (Завулонов)"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Pueblo en el territorio de Zabulón, donde nació y murió el juez Ibsán.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Belén (de Zabulón)"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Mji katika eneo la Zabuloni, ambapo mwamuzi Ibzani alizaliwa na kufa.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Bethlehemu (ya Zabuloni)"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Wanpela taun long graun bilong Sebulun, em ples hetman Ipsan i bin bon na dai long en.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Betlehem (bilong Sebulun)"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Một thị trấn thuộc lãnh thổ Sa-bu-lôn, nơi quan xét Íp-san sinh ra và qua đời.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Bết-lê-hem (Sa-bu-lôn)"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "西布伦境内的一座城镇，士师以比赞出生并安葬于此。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "伯利恒（西布伦）"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "西布倫境內的一座城鎮，士師以比讚出生並埋葬於此。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "伯利恆（西布倫）"
+    }
+  },
+  "mentioned_in_bible": true,
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "place_types": {
+    "acai": [
+      "town"
+    ],
+    "obi": [
+      "settlement"
+    ],
+    "vizbible": [
+      "City"
+    ]
+  },
+  "primary_id": "place:Bethlehem.2",
+  "pronominal_referents": {
+    "wlc": [
+      [
+        "o060190160072"
+      ]
+    ]
+  },
+  "references": [
+    "06019015"
+  ],
+  "subject_referents": {},
+  "subregion_of": [
+    "place:TerritoryOfZebulun"
+  ],
+  "tribal_area": "group:Zebulun",
+  "type": "place",
+  "ubsdbh": [
+    "000961001002000"
+  ]
+}

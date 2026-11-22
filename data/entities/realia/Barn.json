@@ -1,0 +1,293 @@
+{
+  "alternate_sources": {
+    "aquifer": [
+      "27121|Storehouse|UWTranslationWords"
+    ],
+    "ubsdbh": [
+      "000565001001000",
+      "003630001001000",
+      "004078001001000"
+    ],
+    "ubsdgnt": [
+      "7.25"
+    ],
+    "ubsrealia": [
+      "realia:3.12.1"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "realia:Barn",
+    "review_status": "source_unreviewed",
+    "source_id": "realia:Barn",
+    "source_primary_id": "realia:Barn",
+    "source_sha256": "269aa3507d7b250de5c66543012ba2071d1ea683f6225d82e71a2340cadf9627"
+  },
+  "explicit_instances": {
+    "SBLGNT": [
+      [
+        "n40003012020"
+      ],
+      [
+        "n40006026015"
+      ],
+      [
+        "n40013030034"
+      ],
+      [
+        "n42003017018"
+      ],
+      [
+        "n42012018008"
+      ],
+      [
+        "n42012024014"
+      ]
+    ],
+    "wlc": [
+      [
+        "o050280080062",
+        "o050280080063"
+      ],
+      [
+        "o200030100021",
+        "o200030100022"
+      ],
+      [
+        "o240500260051",
+        "o240500260052"
+      ],
+      [
+        "o290010170081"
+      ]
+    ]
+  },
+  "id": "realia:Barn",
+  "key_references": [
+    "05028008",
+    "20003010",
+    "42012018"
+  ],
+  "lemmas": {
+    "el": [
+      "ἀποθήκη"
+    ],
+    "he": [
+      "אָסָם",
+      "מַאֲבוּס",
+      "מַמְּגוּרָה"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "مبنى بيستعمل لتخزين المحاصيل المحصودة أو الحبوب.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "شونة"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "بِنَاءٌ يُسْتَخْدَمُ لِتَخْزِينِ ٱلْمَحَاصِيلِ ٱلْمَحْصُودَةِ أَوِ ٱلْحُبُوبِ.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "مَخْزَن"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan bilding we oli yusum blong storem ol kakae no sid we oli havestem.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Haos blong storem kakae"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Granary",
+        "Storehouse",
+        "Grain-Store"
+      ],
+      "descriptions": [
+        {
+          "article": "realia:Barn",
+          "description": "A building used to store harvested crops or grain.",
+          "gloss": "Barn",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Barn"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "ساختمانی که برای نگهداری محصولات درو شده یا غلات استفاده می‌شود.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "انبار غله"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Un bâtiment utilisé pour entreposer les récoltes ou le grain.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "grenier"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Wani gini da ake amfani da shi don adana amfanin gona ko hatsi da aka girbe.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Rumbu"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "काटी गई फसलों या अनाज को रखने के लिए उपयोग की जाने वाली एक इमारत या भंडार-गृह।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "खत्ता"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Ụlọ a na-eji echekwa ihe ubi maọbụ mkpụrụ a ghọtara aghọta.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ọba"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Bangunan yang digunakan untuk menyimpan hasil panen atau biji-bijian.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "lumbung"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "बाली वा अन्‍न भण्डारण गर्न प्रयोग गरिने भवन वा ठाउँ।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "भकारी"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Uma edificação usada para armazenar colheitas ou cereais.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "celeiro"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Строение, используемое для хранения собранного урожая или зерна.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "житница"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Edificio utilizado para almacenar granos o cosechas recolectadas.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "granero"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Jengo linalotumiwa kuhifadhia mazao yaliyovunwa au nafaka.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ghala"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Haus bilong putim ol kaikai o wit ol i bin kisim long gaden.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "haus kaikai"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Một công trình dùng để chứa nông sản hoặc ngũ cốc sau thu hoạch.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Kho thóc"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "用于储存收获的农作物或粮食的建筑物。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "仓房"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "用來儲存收穫的農作物或糧食的建築物。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "倉房"
+    }
+  },
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "primary_id": "realia:Barn",
+  "pronominal_referents": {
+    "SBLGNT": [
+      [
+        "n42012018010"
+      ]
+    ]
+  },
+  "realia_type": "other",
+  "references": [
+    "05028008",
+    "20003010",
+    "24050026",
+    "29001017",
+    "40003012",
+    "40006026",
+    "40013030",
+    "42003017",
+    "42012018",
+    "42012024"
+  ],
+  "subject_referents": {},
+  "type": "realia",
+  "ubsdbh": [
+    "000565001001000",
+    "003630001001000",
+    "004078001001000"
+  ],
+  "ubsdgnt": [
+    "7.25"
+  ]
+}

@@ -1,0 +1,422 @@
+{
+  "alternate_sources": {
+    "aquifer": [
+      "6703|Leather|TyndaleBibleDictionary"
+    ],
+    "ubsdbh": [
+      "005311001002000"
+    ],
+    "ubsdgnt": [
+      "6.186",
+      "6.185"
+    ],
+    "ubsrealia": [
+      "realia:1.13"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "realia:Leather",
+    "review_status": "source_unreviewed",
+    "source_id": "realia:Leather",
+    "source_primary_id": "realia:Leather",
+    "source_sha256": "a8300420268c42c7b3d6552521cbdcd37f7ea75a9641690563d7f8592f6925c7"
+  },
+  "explicit_instances": {
+    "SBLGNT": [
+      [
+        "n44009043011"
+      ],
+      [
+        "n44010006006"
+      ],
+      [
+        "n44010032016"
+      ],
+      [
+        "n40003004014"
+      ],
+      [
+        "n41001006010"
+      ]
+    ],
+    "wlc": [
+      [
+        "o020250050012"
+      ],
+      [
+        "o020250050042"
+      ],
+      [
+        "o020260140041"
+      ],
+      [
+        "o020260140081"
+      ],
+      [
+        "o020350070012"
+      ],
+      [
+        "o020350070042"
+      ],
+      [
+        "o020350230122"
+      ],
+      [
+        "o020350230152"
+      ],
+      [
+        "o020360190041"
+      ],
+      [
+        "o020360190081"
+      ],
+      [
+        "o020390340031"
+      ],
+      [
+        "o020390340081"
+      ],
+      [
+        "o030110320141"
+      ],
+      [
+        "o030130480082"
+      ],
+      [
+        "o030130480121"
+      ],
+      [
+        "o030130490082"
+      ],
+      [
+        "o030130490161"
+      ],
+      [
+        "o030130510152"
+      ],
+      [
+        "o030130510192"
+      ],
+      [
+        "o030130520172"
+      ],
+      [
+        "o030130530161"
+      ],
+      [
+        "o030130560162"
+      ],
+      [
+        "o030130570121"
+      ],
+      [
+        "o030130580092"
+      ],
+      [
+        "o030130590161"
+      ],
+      [
+        "o030150170041"
+      ],
+      [
+        "o040040060041"
+      ],
+      [
+        "o040040080091"
+      ],
+      [
+        "o040040100081"
+      ],
+      [
+        "o040040110101"
+      ],
+      [
+        "o040040120171"
+      ],
+      [
+        "o040040140241"
+      ],
+      [
+        "o040310200051"
+      ],
+      [
+        "o120010080071"
+      ]
+    ]
+  },
+  "id": "realia:Leather",
+  "key_references": [
+    "02025005",
+    "04004006",
+    "40003004"
+  ],
+  "lemmas": {
+    "el": [
+      "βυρσεύς",
+      "δερμάτινος"
+    ],
+    "he": [
+      "עֹור"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "جلد بتاع حيوان مجهز ومحفوظ عشان يكون متين ولين، عن طريق إزالة الشعر وحمايتو من العفن.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "جلد"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "جلد حيوان مُعَدّ ومُعالَج ليكون متيناً ومرناً عن طريق إزالة الشعر ومنع التلف والتعفن.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "جِلْد"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Skin blong anamol we oli mekem i rere mo mekem i stap gud we i no save roten mo i save benben, taem oli tekemaot ol hea blong hem.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "leta"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Hide",
+        "Tanner",
+        "Maker of Leather",
+        "Of Leather"
+      ],
+      "descriptions": [
+        {
+          "article": "realia:Leather",
+          "description": "Animal skin prepared and preserved to be durable and flexible by removing the hair and preventing decay.",
+          "gloss": "Leather",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Leather"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "پوست حیوانی که با زدودن موها و جلوگیری از فاسد شدن، عمل‌آوری و نگهداری شده تا بادوام و انعطاف‌پذیر باشد.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "چرم"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Peau d'animal préparée et traitée pour être durable et souple en enlevant les poils et en empêchant la décomposition.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "cuir"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Fatar dabba da aka gyara kuma aka adana ta yadda za ta daɗe tana da taushi ta hanyar cire gashi da hana ruɓewa.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Fata"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "पशु की खाल जिसे बाल हटाकर और सड़ने से बचाकर टिकाऊ और लचीला बनाया गया हो।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "चमड़ा"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Akpụkpọ anụ a haziri ma kpuchie ka ọ dịgide ma na-ehulata site nʼiwepụ ajị na igbochi ya ire ure.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Akpụkpọ anụ"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Kulit binatang yang disiapkan dan diawetkan agar tahan lama dan lentur dengan membuang bulunya serta mencegah pembusukan.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "kulit"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "रौँ हटाएर र कुहिनबाट बचाएर बलियो र लचिलो बनाउन तयार पारिएको र प्रशोधित जनावरको छाला।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "छाला"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Pele de animal preparada e conservada para ser durável e flexível, mediante a remoção dos pelos e a prevenção da decomposição.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "couro"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Кожа животного, обработанная и сохраненная для прочности и гибкости путем удаления шерсти и предотвращения гниения.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Кожа"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Piel de animal preparada y preservada para ser duradera y flexible quitándole el pelo y evitando su descomposición.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "cuero"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Ngozi ya mnyama iliyotayarishwa na kuhifadhiwa ili idumu na kunyumbulika kwa kuondoa manyoya na kuzuia kuoza.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ngozi iliyotengenezwa"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Skin bilong animal ol i stretim na mekim drai bai i stap strong na malumalu long rot bilong rausim ol gras na pasim em long sting.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "skin bilong animal"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Da động vật được sơ chế và bảo quản để bền và dẻo dai bằng cách làm sạch lông và ngăn ngừa phân hủy.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "da thuộc"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "通过脱毛和防腐处理以使其耐用且柔韧的动物皮。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "皮革"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "經過加工與防腐處理的動物皮，透過除毛和防止腐爛使其耐用且具柔韌性。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "皮革"
+    }
+  },
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "primary_id": "realia:Leather",
+  "pronominal_referents": {
+    "wlc": [
+      [
+        "o030150170072"
+      ]
+    ]
+  },
+  "realia_type": "other",
+  "references": [
+    "02025005",
+    "02026014",
+    "02035007",
+    "02035023",
+    "02036019",
+    "02039034",
+    "03011032",
+    "03013048",
+    "03013049",
+    "03013051",
+    "03013052",
+    "03013053",
+    "03013056",
+    "03013057",
+    "03013058",
+    "03013059",
+    "03015017",
+    "04004006",
+    "04004008",
+    "04004010",
+    "04004011",
+    "04004012",
+    "04004014",
+    "04031020",
+    "12001008",
+    "40003004",
+    "41001006",
+    "44009043",
+    "44010006",
+    "44010032"
+  ],
+  "subject_referents": {
+    "wlc": [
+      [
+        "o020250050031"
+      ],
+      [
+        "o020260140061"
+      ],
+      [
+        "o020350070031"
+      ],
+      [
+        "o020350230141"
+      ],
+      [
+        "o020360190061"
+      ],
+      [
+        "o020390340052"
+      ],
+      [
+        "o030150170102"
+      ],
+      [
+        "o030150170122"
+      ]
+    ]
+  },
+  "type": "realia",
+  "ubsdbh": [
+    "005311001002000"
+  ],
+  "ubsdgnt": [
+    "6.186",
+    "6.185"
+  ]
+}

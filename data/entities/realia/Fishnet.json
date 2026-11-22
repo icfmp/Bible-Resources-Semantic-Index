@@ -1,0 +1,317 @@
+{
+  "alternate_sources": {
+    "ubsdbh": [
+      "004291001002000"
+    ],
+    "ubsdgnt": [
+      "6.11"
+    ],
+    "ubsrealia": [
+      "realia:1.3.1.3"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "realia:Fishnet",
+    "review_status": "source_unreviewed",
+    "source_id": "realia:Fishnet",
+    "source_primary_id": "realia:Fishnet",
+    "source_sha256": "f9684e475ce44b69a2a9fdd1cd8a6bd67cc8907b2368c7b70252cf900f162d3f"
+  },
+  "explicit_instances": {
+    "SBLGNT": [
+      [
+        "n40004020006"
+      ],
+      [
+        "n40004021027"
+      ],
+      [
+        "n41001018005"
+      ],
+      [
+        "n41001019021"
+      ],
+      [
+        "n42005002017"
+      ],
+      [
+        "n42005004016"
+      ],
+      [
+        "n42005005019"
+      ],
+      [
+        "n42005006011"
+      ],
+      [
+        "n43021006013"
+      ],
+      [
+        "n43021008022"
+      ],
+      [
+        "n43021011008"
+      ],
+      [
+        "n43021011024"
+      ]
+    ],
+    "wlc": [
+      [
+        "o180190060062",
+        "o180190060063"
+      ],
+      [
+        "o190660110022"
+      ],
+      [
+        "o210070260091"
+      ],
+      [
+        "o210090120102"
+      ],
+      [
+        "o260120130062",
+        "o260120130063"
+      ],
+      [
+        "o260170200052",
+        "o260170200053"
+      ]
+    ]
+  },
+  "id": "realia:Fishnet",
+  "key_references": [
+    "40004020",
+    "18019006",
+    "35001015"
+  ],
+  "lemmas": {
+    "el": [
+      "δίκτυον"
+    ],
+    "he": [
+      "מָצֹוד"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "شبكة فيها فتحات صغيرة وكبيرة، بتتمسك بعوامات وثقالات، بتستعمل لصيد السمك بحبسه في الموية.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "شبكة صيد"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "شبكة ذات فتحات صغيرة وكبيرة، تُثبّت بعوامات وأثقال، وتُستخدم لصيد الأسماك بحبسها في الماء.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "شَبَكَة صيد"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan net we i gat smol mo bigfala hol, we i gat samting blong mekem i flot mo ol heve samting blong mekem i draon, we oli yusum blong trapem mo kasem fis long wota.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "net blong kasem fis"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Net"
+      ],
+      "descriptions": [
+        {
+          "article": "realia:Fishnet",
+          "description": "A net with small and large mesh layers, held by floats and weights, used to catch fish by trapping them in the water.",
+          "gloss": "Fishnet",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Fishnet"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "توری با چشمه‌های ریز و درشت، نگه‌داشته‌شده توسط شناورها و وزنه‌ها، که برای به دام انداختن و صید ماهی در آب استفاده می‌شود.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "تور ماهیگیری"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Un filet comportant des couches de mailles petites et grandes, maintenu par des flotteurs et des poids, utilisé pour attraper des poissons en les piégeant dans l'eau.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "filet de pêche"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Raga mai ƙananan ramuka da manya, wadda take da abubuwa masu tasowa a sama da masu nauyi, da ake amfani da ita wajen kamo kifi ta hanyar tarko a cikin ruwa.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "ragar kamun kifi"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "छोटे और बड़े छेदों वाला एक जाल, जिसे प्लवकों (फ्लोट्स) और बाटों के सहारे पानी में रखकर मछलियों को फँसाने के लिए इस्तेमाल किया जाता है।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "मछली पकड़ने का जाल"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Ụgbụ nwere oghere nta na ndị buru ibu, nke ihe na-ese nʼelu mmiri na ihe dị arọ na-ejide, nke a na-eji ama azụ nʼime mmiri.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ụgbụ azụ"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Jaring dengan mata jala kecil dan besar, ditopang oleh pelampung dan pemberat, digunakan untuk menangkap ikan dengan menjebaknya di dalam air.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "jala"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "पानीमा माछा फसाएर समात्न प्रयोग गरिने, तैरिइरहने वस्तु र गह्रुङ्गो तौल जोडिएको साना र ठूला प्वालहरू भएको जाली।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "माछा मार्ने जाल"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Rede com camadas de malhas pequenas e grandes, sustentada por flutuadores e pesos, usada para capturar peixes prendendo-os na água.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "rede de pesca"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Сеть с мелкими и крупными ячеями, удерживаемая поплавками и грузилами, используемая для ловли рыбы путём её удержания в воде.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "рыболовная сеть"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Red con capas de mallas pequeñas y grandes, provista de flotadores y plomos, utilizada para pescar atrapando los peces en el agua.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "red de pescar"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Wavu wenye macho madogo na makubwa, unaowekwa maboya na vizito, unaotumiwa kuvulia samaki kwa kuwanasa majini.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "wavu wa kuvulia samaki"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Umben i gat ol liklik na bikpela ai bilong en, na i gat ol samting bilong mekim em i trip antap na ol hevi ston o ain bilong mekim em i go daun, ol i save yusim bilong trapim na kisim pis long wara.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "umben"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Một tấm lưới có các lớp mắt lưới nhỏ và lớn, gắn phao và chì, dùng để bủa bắt cá dưới nước.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "lưới đánh cá"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "一种由小网眼和大网眼层构成、配有浮标和铅坠的网，用于在水中困住鱼类以进行捕捞。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "渔网"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "一種由浮子和鉛墜固定的網，具有大小網眼層，用來在水中攔截並捕魚。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "漁網"
+    }
+  },
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "possibly_same_as": [
+    "realia:CastingNet",
+    "realia:Dragnet"
+  ],
+  "primary_id": "realia:Fishnet",
+  "pronominal_referents": {
+    "SBLGNT": [
+      [
+        "n43021006020"
+      ]
+    ]
+  },
+  "realia_type": "other",
+  "references": [
+    "18019006",
+    "19066011",
+    "21007026",
+    "21009012",
+    "26012013",
+    "26017020",
+    "40004020",
+    "40004021",
+    "41001018",
+    "41001019",
+    "42005002",
+    "42005004",
+    "42005005",
+    "42005006",
+    "43021006",
+    "43021008",
+    "43021011"
+  ],
+  "subject_referents": {},
+  "type": "realia",
+  "ubsdbh": [
+    "004291001002000"
+  ],
+  "ubsdgnt": [
+    "6.11"
+  ]
+}

@@ -1,0 +1,420 @@
+{
+  "alternate_sources": {
+    "aquifer": [
+      "7376|Net|TyndaleBibleDictionary",
+      "280167|fishing-net|FIAKeyTerms"
+    ],
+    "ubsdbh": [
+      "002544001001000",
+      "003987001001000",
+      "004291001002000",
+      "006951001001000"
+    ],
+    "ubsdgnt": [
+      "6.23"
+    ],
+    "ubsrealia": [
+      "realia:1.4.2"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "realia:Net",
+    "review_status": "source_unreviewed",
+    "source_id": "realia:Net",
+    "source_primary_id": "realia:Net",
+    "source_sha256": "d3c2107be7bfa65cc41baf0863185468dd665002218140e322b5d1f0cc8bf947"
+  },
+  "explicit_instances": {
+    "SBLGNT": [
+      [
+        "n42021035002"
+      ],
+      [
+        "n45011009009"
+      ]
+    ],
+    "wlc": [
+      [
+        "o210070260102"
+      ],
+      [
+        "o260260050021"
+      ],
+      [
+        "o260260140051"
+      ],
+      [
+        "o260320030132",
+        "o260320030133"
+      ],
+      [
+        "o260470100122"
+      ],
+      [
+        "o330070020151"
+      ],
+      [
+        "o350010150052",
+        "o350010150053"
+      ],
+      [
+        "o350010160042",
+        "o350010160043"
+      ],
+      [
+        "o350010170041",
+        "o350010170042"
+      ],
+      [
+        "o191410100022",
+        "o191410100023"
+      ],
+      [
+        "o230510200081"
+      ],
+      [
+        "o180190060062",
+        "o180190060063"
+      ],
+      [
+        "o190660110022"
+      ],
+      [
+        "o210070260091"
+      ],
+      [
+        "o210090120102"
+      ],
+      [
+        "o260120130062",
+        "o260120130063"
+      ],
+      [
+        "o260170200052",
+        "o260170200053"
+      ],
+      [
+        "o180180080032"
+      ],
+      [
+        "o190090160052"
+      ],
+      [
+        "o190100090112",
+        "o190100090113"
+      ],
+      [
+        "o190250150082"
+      ],
+      [
+        "o190310050022"
+      ],
+      [
+        "o190350070061",
+        "o190350070062"
+      ],
+      [
+        "o190350080052",
+        "o190350080053"
+      ],
+      [
+        "o190570070011"
+      ],
+      [
+        "o191400060071"
+      ],
+      [
+        "o200010170042"
+      ],
+      [
+        "o200290050051"
+      ],
+      [
+        "o250010130071"
+      ],
+      [
+        "o260120130031",
+        "o260120130032"
+      ],
+      [
+        "o260170200031",
+        "o260170200032"
+      ],
+      [
+        "o260190080081",
+        "o260190080082"
+      ],
+      [
+        "o260320030081",
+        "o260320030082"
+      ],
+      [
+        "o280050010172"
+      ],
+      [
+        "o280070120051",
+        "o280070120052"
+      ]
+    ]
+  },
+  "id": "realia:Net",
+  "key_references": [
+    "19025015",
+    "33007002",
+    "54003007"
+  ],
+  "lemmas": {
+    "el": [
+      "παγίς"
+    ],
+    "he": [
+      "חֵרֶם",
+      "מִכְמָר",
+      "מָצֹוד",
+      "רֶשֶׁת"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "أداة مصنوعة من حبال أو خيوط مشبكة مع بعض، بتُستعمل لصيد السمك أو الطيور أو حيوانات تانية.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "شبكة"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "أداة مصنوعة من حبال أو خيوط متشابكة، تُستخدم لصيد الأسماك أو الطيور أو غيرها من الحيوانات.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "شبكة"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan tul we oli wokem long ol rop no tred we oli tantanem wetem olgeta, we oli yusum blong kasem fis, pijin, no ol narafala anamol.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "net"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Dragnet",
+        "Trap",
+        "Snare"
+      ],
+      "descriptions": [
+        {
+          "article": "realia:Net",
+          "description": "A tool made of interconnected ropes or strings, used for catching fish, birds, or other animals.",
+          "gloss": "Net",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Net"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "ابزاری بافته‌شده از طناب‌ها یا نخ‌های به‌هم‌پیوسته که برای صید ماهی، پرندگان یا دیگر حیوانات به کار می‌رود.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "تور"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Outil fait de cordes ou de fils entrecroisés, utilisé pour capturer des poissons, des oiseaux ou d'autres animaux.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "filet"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Kayan aiki da aka yi da igiyoyi masu sarƙaƙiya, ana amfani da shi wajen kamo kifi, tsuntsaye, ko wasu dabbobi.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Tarko"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "आपस में जुड़ी हुई रस्सियों या डोरी से बना एक उपकरण, जिसका उपयोग मछलियाँ, पक्षी या अन्य जानवरों को पकड़ने के लिए किया जाता है।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "जाल"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Ngwá ọrụ e ji eriri ndị a kpara akpa mee, nke a na-eji ejide azụ̀, nnụnụ, ma ọ bụ anụmanụ ndị ọzọ.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ụgbụ"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Alat yang terbuat dari jalinan tali atau benang, digunakan untuk menangkap ikan, burung, atau hewan lainnya.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "jaring"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "माछा, चरा वा अन्य जनावरहरू समात्न प्रयोग गरिने डोरी वा धागोहरू आपसमा गाँसेर बनाइएको एक प्रकारको साधन।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "जाल"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Um instrumento feito de cordas ou fios entrelaçados, usado para capturar peixes, aves ou outros animais.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "rede"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Приспособление из переплетенных веревок или нитей, используемое для ловли рыбы, птиц или других животных.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Сеть"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Herramienta hecha de cuerdas o hilos entrelazados, que se usa para atrapar peces, aves u otros animales.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "red"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Kifaa kilichotengenezwa kwa kamba au nyuzi zilizofungamana, kinachotumika kukamata samaki, ndege, au wanyama wengine.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Wavu"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Samting ol i wokim long ol rop i paspas bilong kisim ol pis, pisin, o arapela animal.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "umben"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Dụng cụ được đan bằng dây thừng hoặc sợi chỉ, dùng để đánh bắt cá, chim hoặc các loài động vật khác.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "lưới"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "一种由绳线相互编织而成的工具，用于捕鱼、捕鸟或其他动物。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "网"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "由互相交織的繩或線製成的工具，用於捕撈魚類、鳥類或其他動物。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "網"
+    }
+  },
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "primary_id": "realia:Net",
+  "pronominal_referents": {
+    "wlc": [
+      [
+        "o350010160082"
+      ]
+    ]
+  },
+  "realia_type": "other",
+  "references": [
+    "18018008",
+    "18019006",
+    "19009016",
+    "19010009",
+    "19025015",
+    "19031005",
+    "19035007",
+    "19035008",
+    "19057007",
+    "19066011",
+    "19140006",
+    "19141010",
+    "20001017",
+    "20029005",
+    "21007026",
+    "21009012",
+    "23051020",
+    "25001013",
+    "26012013",
+    "26017020",
+    "26019008",
+    "26026005",
+    "26026014",
+    "26032003",
+    "26047010",
+    "28005001",
+    "28007012",
+    "33007002",
+    "35001015",
+    "35001016",
+    "35001017",
+    "42021035",
+    "45011009"
+  ],
+  "subject_referents": {
+    "wlc": [
+      [
+        "o280050010181"
+      ]
+    ]
+  },
+  "type": "realia",
+  "ubsdbh": [
+    "002544001001000",
+    "003987001001000",
+    "004291001002000",
+    "006951001001000"
+  ],
+  "ubsdgnt": [
+    "6.23"
+  ]
+}

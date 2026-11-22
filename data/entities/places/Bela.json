@@ -1,0 +1,164 @@
+{
+  "added_entry": false,
+  "alternate_sources": {
+    "aquifer": [
+      "4086|Bela (Place)|TyndaleBibleDictionary"
+    ],
+    "geonames": [
+      "http://sws.geonames.org/1276574"
+    ],
+    "tipnr": [
+      "Bela|Zoar@Gen.13.10-Jer"
+    ],
+    "ubsdbh": [
+      "001027002001000"
+    ],
+    "vizbible": [
+      "recz7g41dLAYpgPhB"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "place:Zoar",
+    "review_status": "source_unreviewed",
+    "source_id": "place:Bela",
+    "source_primary_id": "place:Zoar",
+    "source_sha256": "4207b476dc4398f24aafdb0ef20c6f328a6a43423f634410434f512f973249aa"
+  },
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o010140020191"
+      ],
+      [
+        "o010140080121"
+      ]
+    ]
+  },
+  "geocoordinates": {
+    "obi": {
+      "lat": "30.92652253",
+      "lon": "35.41906069"
+    },
+    "recogito": {
+      "lat": "25.92058",
+      "lon": "81.99629"
+    },
+    "vizbible": {
+      "lat": "30.92652253",
+      "lon": "35.41906069"
+    }
+  },
+  "id": "place:Bela",
+  "is_artifact": false,
+  "is_person": false,
+  "key_references": [],
+  "lemmas": {
+    "he": [
+      "בֶּלַע",
+      "בֶּ֫לַע"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "preferred_label": "بالع"
+    },
+    "arb": {
+      "preferred_label": "بَالَع"
+    },
+    "bis": {
+      "preferred_label": "Bela"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Zoar"
+      ],
+      "preferred_label": "Bela"
+    },
+    "fas": {
+      "preferred_label": "بالع"
+    },
+    "fra": {
+      "preferred_label": "Béla"
+    },
+    "hau": {
+      "preferred_label": "Bela"
+    },
+    "hin": {
+      "preferred_label": "बेला"
+    },
+    "ibo": {
+      "preferred_label": "Bela"
+    },
+    "ind": {
+      "preferred_label": "Bela"
+    },
+    "nep": {
+      "preferred_label": "बेला"
+    },
+    "por": {
+      "preferred_label": "Bela"
+    },
+    "rus": {
+      "preferred_label": "Бела"
+    },
+    "spa": {
+      "preferred_label": "Bela"
+    },
+    "swh": {
+      "preferred_label": "Bela"
+    },
+    "tpi": {
+      "preferred_label": "Bela"
+    },
+    "vie": {
+      "preferred_label": "Bê-la"
+    },
+    "zhs": {
+      "preferred_label": "比拉"
+    },
+    "zht": {
+      "preferred_label": "比拉"
+    }
+  },
+  "mentioned_in_bible": true,
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "place_types": {
+    "obi": [
+      "settlement"
+    ],
+    "vizbible": [
+      "City"
+    ]
+  },
+  "primary_id": "place:Zoar",
+  "pronominal_referents": {
+    "wlc": [
+      [
+        "o010140020201"
+      ],
+      [
+        "o010140080131"
+      ]
+    ]
+  },
+  "references": [
+    "01013010",
+    "01014002",
+    "01014008",
+    "01019022",
+    "01019023",
+    "01019030",
+    "05034003",
+    "23015005",
+    "24048034"
+  ],
+  "referred_to_as": [
+    "place:Zoar"
+  ],
+  "subject_referents": {},
+  "type": "place",
+  "ubsdbh": [
+    "001027002001000"
+  ]
+}

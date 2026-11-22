@@ -1,0 +1,265 @@
+{
+  "added_entry": false,
+  "alternate_sources": {
+    "aquifer": [
+      "5335|Gadara, Gadarenes|TyndaleBibleDictionary"
+    ],
+    "tipnr": [
+      "Gadara|Gerasa@Mat.8.28-Luk"
+    ],
+    "ubsdgnt": [
+      "93.438"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "place:Gadara",
+    "editorial_evidence": [
+      "UNESCO World Heritage Centre, Gadara (Modern Um Qeis or Qays): https://whc.unesco.org/en/tentativelists/1558/ — explicitly lists Gerasa as another, separate Decapolis city",
+      "Pinned ACAI places/json/Gadara.json: source_id place:Gadara, primary_id place:Gerasa; source word MAT 8:28!11 n40008028011 is Gadarenes",
+      "Pinned ACAI places/json/Gerasa.json: MRK 5:1!12 n41005001012 and LUK 8:26!7 n42008026007 are Gerasenes, while the Matthew Gadarenes token is also claimed; preserve ambiguity until site-specific textual review",
+      "Inherited ACAI issue #7: full source-token and regional-demonym audit"
+    ],
+    "editorial_reason": "Gadara (Umm Qais) and Gerasa (Jerash) are historically distinct Decapolis cities, not equivalent name forms. The source's Gadara.primary_id=place:Gerasa falsely merges their identities. Preserve ALL exact original Greek demonym word groups and verse references as candidates, including cross-gospel textual variants; a demonym is not proof of the precise miracle site. Gadara.2 (Perea) remains separate.",
+    "review_status": "editorially_reviewed",
+    "source_id": "place:Gadara",
+    "source_primary_id": "place:Gerasa",
+    "source_sha256": "8d397dcc2efa797f75e8f71cc2f30d048d76b9f8809dd094712c9f5fbb08f106"
+  },
+  "explicit_instances": {
+    "SBLGNT": [
+      [
+        "n40008028011"
+      ]
+    ]
+  },
+  "geocoordinates": {
+    "biblica-maps": {
+      "lat": "32.65592",
+      "lon": "35.67815"
+    }
+  },
+  "id": "place:Gadara",
+  "is_artifact": false,
+  "is_person": false,
+  "key_references": [
+    "40008028"
+  ],
+  "lemmas": {
+    "el": [
+      "Γαδαρηνός"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "مدينة من المدن العشرة جنوب غرب بحيرة الجليل؛ وهي أم قيس الحالية.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "جدارا (بتاعت المدن العشرة)"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "إحدى مدن الديكابوليس (المدن العشر) جنوب غرب بحر الجليل؛ وهي أم قيس الحالية.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "جَدَارَا (المدن العشر)"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan taon blong Dekapolis long saotfala-wes blong Lugun blong Galili; we tede nem blong hem Umm Qais.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Gadara (blong Dekapolis)"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Gergesene",
+        "Gadarenes",
+        "Gergesenes",
+        "Var",
+        "Gerasa",
+        "Gadara"
+      ],
+      "descriptions": [
+        {
+          "article": "place:Gadara.1",
+          "description": "A Decapolis city southwest of the Sea of Galilee; modern-day Umm Qais.",
+          "gloss": "Gadara (of the Decapolis)",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Gadara (of the Decapolis)"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "شهری از دکاپولیس در جنوب غربی دریای جلیل؛ ام‌قیس امروزی.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "جدرا (دکاپولیس)"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Ville de la Décapole située au sud-ouest de la mer de Galilée ; aujourd'hui Umm Qaïs.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Gadara (de la Décapole)"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Wani birnin Dekafolis a kudu maso yammacin Tekun Galili; Umm Qais na zamani.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Gadara (na Dekafolis)"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "गलील की झील के दक्षिण-पश्चिम में स्थित दिकापुलिस का एक नगर; आधुनिक उम्म क़ैस।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "गदारा (दिकापुलिस का)"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Otu obodo Dekapọlis dị na ndịda ọdịda anyanwụ nke Osimiri Galili; nke bụ Umm Qais nʼoge a.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Gedara (nke Dekapọlis)"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Sebuah kota Dekapolis di sebelah barat daya Danau Galilea; Umm Qais modern.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Gadara (di Dekapolis)"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "गालील समुद्रको दक्षिण-पश्‍चिममा अवस्थित डिकापोलिसको एउटा सहर; आधुनिक उम्र कैस।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "गदारा (डिकापोलिसको)"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Uma cidade da Decápolis a sudoeste do mar da Galileia; atual Umm Qais.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Gadara (da Decápolis)"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Город Десятиградия к юго-западу от Галилейского моря; современный Умм-Кайс.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Гадара (в Десятиградии)"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Ciudad de la Decápolis al suroeste del mar de Galilea; la actual Umm Qais.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Gadara (de la Decápolis)"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Mji wa Dekapoli kusini-magharibi mwa Bahari ya Galilaya; leo Umm Qais.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Gadara (ya Dekapoli)"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Wanpela taun bilong Dekapolis long sautwes bilong raunwara Galili; em Umm Qais bilong nau.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Gadara (bilong Dekapolis)"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Một thành phố thuộc vùng Thập Tỉnh (Đê-ca-bô-li) ở phía tây nam biển Ga-li-lê; ngày nay là Umm Qais.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ga-đa-ra (thuộc Đê-ca-bô-li)"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "位于加利利海西南面的低加坡里城邑；即现今的乌姆盖斯。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "加大拉 (低加坡里)"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "位於加利利海西南方的一座低加坡里城邑；即現今的烏姆蓋斯（Umm Qais）。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "加大拉（低加坡里）"
+    }
+  },
+  "mentioned_in_bible": true,
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "place_types": {
+    "acai": [
+      "city"
+    ],
+    "obi": [
+      "settlement"
+    ]
+  },
+  "primary_id": "place:Gadara",
+  "pronominal_referents": {},
+  "references": [
+    "40008028",
+    "41005001",
+    "42008026",
+    "42008037"
+  ],
+  "referred_to_as": [
+    "place:Gerasa"
+  ],
+  "subject_referents": {},
+  "subregion_of": [
+    "place:Decapolis"
+  ],
+  "type": "place",
+  "ubsdgnt": [
+    "93.438"
+  ]
+}

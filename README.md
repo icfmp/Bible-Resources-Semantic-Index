@@ -5,13 +5,13 @@ This standalone repository contains BSI builders, editorial evidence, tests and 
 crosswalks. It is **not** a Bible translation, a SWORD module, or the Bible
 application itself.
 
-> **Repository relocation (2026-11-22):** This project was extracted unchanged from `icfmp/Bible-Resources/bible-semantic-index/`. The original three public release tags and assets are still hosted in Bible-Resources and are not automatically republished here. The 212 extracted source files were independently compared by Git blob SHA with the origin. The source-pinned CI and future publication migration are separate tasks; this is not yet the release authority.
+> **Repository relocation (2026-11-22):** This project was extracted unchanged from `icfmp/Bible-Resources/bible-semantic-index/`. The original three public release tags and assets are still hosted in Bible-Resources and are not automatically republished here. The 212 extracted source files were independently compared by Git blob SHA with the origin. The source-pinned CI and future publication migration are separate tasks; this is not yet the release authority. The native entity migration is staged in PR #4: 5,773 active records + 3 quarantined, with 868 permission-sensitive keyterms pending rights review.
 
-## Where the indexes actually are
+**Editing policy:** The current BSI entity JSON files under [`data/entities/`](data/entities/) are the data source for future corrections. [`scripts/build_native_index.py`](scripts/build_native_index.py) produces the index directly from those files, without pulling ACAI or replaying historical patches. See [editing instructions](docs/EDITING_ENTITIES.md). The historical published release assets remain where they were originally published.\n\n## Where the indexes actually are
 
 | Resource | Tracked in this repository | Permanent published data |
 | --- | --- | --- |
-| Biblical entity index (ACAI-derived, v0.1.0) | [Source lock](data/source.lock.json), [reviewed decisions](data/editorial-decisions.json), [builder](scripts/compile_index.py); complete generated data **not** tracked | [BSI entity v0.1.0 release](https://github.com/icfmp/Bible-Resources/releases/tag/bsi-v0.1.0), ZIP containing `index.json` |
+| Biblical entity index (ACAI-derived, v0.1.0) | [Source lock](data/source.lock.json), [reviewed decisions](data/editorial-decisions.json), [builder](scripts/compile_index.py); 5,773 corrected current files [tracked directly](data/entities/), plus [quarantine](data/quarantined/); the 868 keyterms remain under separate rights review | [BSI entity v0.1.0 release](https://github.com/icfmp/Bible-Resources/releases/tag/bsi-v0.1.0), ZIP containing `index.json` |
 | UBS Greek 1.0 lexical crosswalk | [Committed source baseline](links/dictionaries/ubs-greek/index.json); full private evidence index **not** tracked | [Greek word-ID crosswalk v0.1.0](https://github.com/icfmp/Bible-Resources/releases/tag/bsi-ubs-greek-v0.1.0), `BSI-UBS-Greek-0.1.0.zip` containing `index.json` |
 | UBS Hebrew 0.9.4 lexical crosswalk | [Committed source baseline](links/dictionaries/ubs-hebrew/index.json); additional verified word-specific reviews are reproducible from Git | [Hebrew lexical crosswalk v1.0.0](https://github.com/icfmp/Bible-Resources/releases/tag/bsi-ubs-hebrew-v1.0.0), `BSI-UBSHebrew-0.9.4-v1.0.0.zip` containing `index.json` |
 

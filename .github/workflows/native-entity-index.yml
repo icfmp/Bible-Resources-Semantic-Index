@@ -1,0 +1,54 @@
+name: BSI native entity build (no ACAI checkout)
+
+on:
+  push:
+    branches: [main, migration/materialize-entities]
+    paths:
+      - "data/entities/**"
+      - "data/quarantined/**"
+      - "data/migration/**"
+      - "scripts/build_native_index.py"
+      - "scripts/compile_index.py"
+      - "docs/EDITING_ENTITIES.md"
+      - ".github/workflows/native-entity-index.yml"
+  pull_request:
+    paths:
+      - "data/entities/**"
+      - "data/quarantined/**"
+      - "data/migration/**"
+      - "scripts/build_native_index.py"
+      - "scripts/compile_index.py"
+      - ".github/workflows/native-entity-index.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-current-native-index:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build index from current versioned BSI entity records
+        run: |
+          python3 -I scripts/build_native_index.py --data data --output /tmp/bsi-current.json
+      - name: Verify output scope and original-word integrity
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          source=json.loads(Path("data/migration/acai-baseline-materialization.json").read_text())
+          built=json.loads(Path("/tmp/bsi-current.json").read_text())
+          assert built["schema_version"] == 1
+          assert built["statistics"]["source_records"] == source["source_records"]
+          assert built["statistics"]["index_entities"] + built["statistics"]["quarantined_records"] == source["written_records"]
+          assert built["provenance"]["source_snapshot_sha256"] == source["source_snapshot_sha256"]
+          assert built["distribution_profile"]["excluded_entity_count"] == source["restricted_unpublished_keyterms"]
+          assert all(not e["id"].startswith("keyterm:") for e in built["entities"])
+          for key, claims in built["by_word"].items():
+              assert ":" in key
+              assert claims
+              assert len(claims) == len({(r["entity_id"],r["link_type"]) for r in claims})
+          print("Current native records built and cross-indexed:", built["statistics"])
+          PY

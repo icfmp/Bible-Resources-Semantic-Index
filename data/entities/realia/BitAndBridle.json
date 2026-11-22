@@ -1,0 +1,280 @@
+{
+  "alternate_sources": {
+    "ubsdbh": [
+      "004551001001000",
+      "006844001001000"
+    ],
+    "ubsdgnt": [
+      "6.7"
+    ],
+    "ubsrealia": [
+      "realia:1.2.6"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "realia:BitAndBridle",
+    "review_status": "source_unreviewed",
+    "source_id": "realia:BitAndBridle",
+    "source_primary_id": "realia:BitAndBridle",
+    "source_sha256": "6d00bc2fabe7789622ce4ca44d03a4f1e63d8344d32f53b25485aa280fbf0068"
+  },
+  "explicit_instances": {
+    "SBLGNT": [
+      [
+        "n59003003006"
+      ],
+      [
+        "n66014020016"
+      ]
+    ],
+    "wlc": [
+      [
+        "o120190280102",
+        "o120190280103"
+      ],
+      [
+        "o190320090072"
+      ],
+      [
+        "o200260030031"
+      ],
+      [
+        "o230370290102",
+        "o230370290103"
+      ],
+      [
+        "o180410050061",
+        "o180410050062"
+      ],
+      [
+        "o190320090082"
+      ],
+      [
+        "o230300280112"
+      ]
+    ]
+  },
+  "id": "realia:BitAndBridle",
+  "key_references": [
+    "12019028",
+    "23030028",
+    "59003003"
+  ],
+  "lemmas": {
+    "el": [
+      "χαλινός"
+    ],
+    "he": [
+      "מֶתֶג",
+      "רֶסֶן"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "طقم بستعملوهو عشان يتحكمو في الحصان، فيهو حديدة بختوها في الخشم وسيور أو حبال مركبة فوق الراس.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "لجام وشكيمة"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "طقم يُستخدم للتحكم في الحصان، يتكون من قضيب معدني يوضع في فمه وسيور أو حبال تُثبّت فوق رأسه.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "لِجَامٌ وَرَسَنٌ"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan samting we oli yusum blong kontrolem hos, we i gat wan pis aean we i go insaed long maot mo ol rop we oli taetem raon long hed.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "rop mo aean blong maot blong hos"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Bridle"
+      ],
+      "descriptions": [
+        {
+          "article": "realia:BitAndBridle",
+          "description": "A set used to control a horse, with a metal bar placed in the mouth and straps or ropes fitted over the head.",
+          "gloss": "Bit and Bridle",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Bit and Bridle"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "مجموعه‌ای که برای مهار اسب به کار می‌رود و شامل میله‌ای فلزی در دهان و تسمه‌ها یا طناب‌هایی بر روی سر است.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "دهنه و لگام"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Ensemble utilisé pour diriger un cheval, constitué d'une barre de métal placée dans la bouche et de lanières ou de cordes ajustées sur la tête.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "mors et bride"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Kayan da ake amfani da su don sarrafa doki, wanda ke ɗauke da ƙarfen da ake sakawa a baki da kuma igiyoyi da ake sanyawa a kansa.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "linzami da ragama"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "घोड़े को वश में करने के लिए इस्तेमाल किया जाने वाला एक साधन, जिसमें मुँह में धातु की एक छड़ रखी जाती है और सिर पर पट्टियाँ या रस्सियाँ बांधी जाती हैं।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "लगाम"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Ihe e ji achịkwa ịnyịnya, nke nwere mkpụrụ igwe a na-etinye nʼọnụ ya na eriri a na-ekechi nʼisi ya.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Mkpụmkpụ igwe na eriri isi ịnyịnya"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Perlengkapan yang digunakan untuk mengendalikan kuda, berupa batang logam yang dipasang di mulut dan tali-temali yang dipasang di kepala.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "kekang dan pelana kendali"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "मुखमा राखिने धातुको पाता र टाउकोमा बाँधिने पेटी वा डोरीहरू भएको, घोडालाई नियन्त्रण गर्न प्रयोग गरिने सामग्री ।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "लगाम"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Um conjunto usado para controlar um cavalo, composto de uma barra de metal colocada na boca e correias ou cordas presas à cabeça.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "freio e rédea"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Приспособление для управления лошадью, состоящее из металлического стержня, вкладываемого в рот, и ремней или веревок, надеваемых на голову.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "удила и узда"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Conjunto utilizado para controlar un caballo, con una barra de metal colocada en la boca y correas o cuerdas ajustadas sobre la cabeza.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "freno y brida"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Vifaa vinavyotumika kumwongoza farasi, vikiwa na chuma kinachowekwa kinywani na mikanda au kamba zinazofungwa kichwani.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Lijamu na hatamu"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Ol samting ol i save yusim bilong bosim hos, em hap ain ol i save putim long maus bilong en na ol let o rop ol i save pasim long het bilong en.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "hap ain na rop bilong stiaim hos"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Bộ dụng cụ dùng để điều khiển ngựa, gồm một thanh kim loại đặt trong miệng và các dây da hoặc dây thừng vòng qua đầu.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "hàm thiếc và dây cương"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "用来控制马匹的一套用具，包括放在马嘴里的金属横杆以及套在马头上的皮带或绳索。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "嚼环与马嚼子"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "一套用來控制馬匹的用具，由置於口中的金屬條及套在頭上的皮帶或繩索組成。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "嚼環和轡頭"
+    }
+  },
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "primary_id": "realia:BitAndBridle",
+  "pronominal_referents": {},
+  "realia_type": "other",
+  "references": [
+    "12019028",
+    "18041005",
+    "19032009",
+    "20026003",
+    "23030028",
+    "23037029",
+    "59003003",
+    "66014020"
+  ],
+  "subject_referents": {
+    "wlc": [
+      [
+        "o230300280121"
+      ]
+    ]
+  },
+  "type": "realia",
+  "ubsdbh": [
+    "004551001001000",
+    "006844001001000"
+  ],
+  "ubsdgnt": [
+    "6.7"
+  ]
+}

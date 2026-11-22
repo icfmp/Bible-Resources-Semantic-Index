@@ -1,0 +1,267 @@
+{
+  "added_entry": false,
+  "alternate_sources": {
+    "aquifer": [
+      "7935|Ramoth (Place)|TyndaleBibleDictionary",
+      "27011|Ramoth|UWTranslationWords"
+    ],
+    "geonames": [
+      "http://sws.geonames.org/4453066"
+    ],
+    "tipnr": [
+      "Ramoth|Baalath-beer@Jos.19.8-1Ch"
+    ],
+    "ubsdbh": [
+      "006646002004000"
+    ],
+    "vizbible": [
+      "recevwD8aPKX3CoC6"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "place:Baalath-beer",
+    "review_status": "source_unreviewed",
+    "source_id": "place:Ramoth",
+    "source_primary_id": "place:Baalath-beer",
+    "source_sha256": "aaa2ba2e13fa259f80e69d14c821b818bd0959bb5f07b69045fc6ade51a11c4b"
+  },
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o090300270052"
+      ]
+    ]
+  },
+  "geocoordinates": {
+    "obi": {
+      "lat": "32.049953",
+      "lon": "35.733402"
+    },
+    "recogito": {
+      "lat": "35.60095",
+      "lon": "-82.55402"
+    },
+    "vizbible": {
+      "lat": "32.049953",
+      "lon": "35.733402"
+    }
+  },
+  "id": "place:Ramoth",
+  "is_artifact": false,
+  "is_person": false,
+  "key_references": [
+    "09030027"
+  ],
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "بلدة في أراضي شمعون؛ ومعروفة برضو باسم رامة الجنوب.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "راموت (في النقب)"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "بَلْدَةٌ فِي أَرْضِ شِمْعُونَ، تُعْرَفُ أَيْضًا بِرَامَةِ الْجَنُوبِ.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "رَامُوتُ (الْجَنُوبِ)"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan taon long teritori blong Simeon; we oli singaotem tu se Ramat Negeb.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ramot (blong Negeb)"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Ramoth-negev",
+        "Baalath-Beer",
+        "Ramoth"
+      ],
+      "descriptions": [
+        {
+          "article": "place:Ramoth.2",
+          "description": "A town in the territory of Simeon; also known as Ramath Negeb.",
+          "gloss": "Ramoth (of the Negeb)",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ramoth (of the Negeb)"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "شهری در قلمرو شمعون؛ همچنین معروف به رامت نِگِب.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "راموت (نِگِب)"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Une ville située sur le territoire de Siméon ; également connue sous le nom de Ramath-Négeb.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ramoth (du Négeb)"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Wani gari a yankin Simeyon; ana kuma kiran sa Ramat Negeb.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ramot (ta Negeb)"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "शिमोन के क्षेत्र का एक नगर; इसे रामत-नेगेव के नाम से भी जाना जाता है।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "रामोत (नेगेव का)"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Otu obodo dị nʼókèala Simiọn; nke a makwaara dị ka Ramat Negeb.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ramọt (nke Negeb)"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Sebuah kota di wilayah suku Simeon; juga dikenal sebagai Ramat-Negeb.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ramot (di Tanah Selatan)"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "शिमोनको इलाकामा अवस्थित एउटा सहर; यसलाई रामत नेगेब पनि भनिन्छ।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "रामोत (नेगेबको)"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Uma cidade no território de Simeão; também conhecida como Ramate do Neguebe.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ramote (do Neguebe)"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Город в уделе Симеона; также известный как Рамаф южный (Рамаф-Негев).",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Рамоф (южный)"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Una ciudad en el territorio de Simeón; también conocida como Ramat del Néguev.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ramot (del Néguev)"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Mji katika eneo la Simeoni; pia unajulikana kama Ramath-negebu.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ramothi (ya Negebu)"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Wanpela taun long hap graun bilong lain Simeon; ol i kolim tu olsem Ramat Negeb.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ramot (bilong Negeb)"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Một thành trong lãnh thổ của Si-mê-ôn; cũng được gọi là Ra-mát Nê-gép.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ra-mốt (ở Nê-gép)"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "西缅领地内的一座城镇；也称为南地拉末。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "拉末（南地）"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "西緬境內的一座城鎮；亦稱南地的拉末。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "拉末（南地）"
+    }
+  },
+  "mentioned_in_bible": true,
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "place_types": {
+    "acai": [
+      "town"
+    ],
+    "obi": [
+      "settlement",
+      "special"
+    ],
+    "vizbible": [
+      "City"
+    ]
+  },
+  "primary_id": "place:Baalath-beer",
+  "pronominal_referents": {},
+  "references": [
+    "09030027"
+  ],
+  "referred_to_as": [
+    "place:Baalath-beer"
+  ],
+  "subject_referents": {},
+  "subregion_of": [
+    "place:TerritoryOfSimeon"
+  ],
+  "tribal_area": "group:Simeon",
+  "type": "place",
+  "ubsdbh": [
+    "006646002004000"
+  ]
+}

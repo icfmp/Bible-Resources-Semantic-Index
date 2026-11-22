@@ -1,0 +1,448 @@
+{
+  "alternate_sources": {
+    "aquifer": [
+      "4020|Barzillai|TyndaleBibleDictionary"
+    ],
+    "tipnr": [
+      "Barzillai@2Sa.17.27-Neh"
+    ],
+    "ubsdbh": [
+      "001172001001000",
+      "001172001002000"
+    ],
+    "vizbible": [
+      "recV5xkoOmDWTIHZ5"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "person:Barzillai",
+    "editorial_evidence": [
+      "Pinned WLC Ezra 2:61 o150020610101 (לָקַח 'had taken'), o150020610152 (יִּקָּרֵא 'was called'); Nehemiah 7:63 o160070630101 and o160070630152. In both verses the priest first named Barzillai marries a daughter of Barzillai the Gileadite. Original frozen ACAI person:Barzillai is the Gileadite elder, person:Barzillai.3 the marrying priest; both have independent explicit name records and original word groups.",
+      "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c WLC/lowfat/15-Ezr-002-lowfat.xml and WLC/lowfat/16-Neh-007-lowfat.xml",
+      "Frozen ACAI names at icfmp/ACAI@e80a874e8282f996199c595378a3b3b9a43aac22 people/json/Barzillai.json and Barzillai.3.json"
+    ],
+    "editorial_reason": "Ezra 2:61 and Nehemiah 7:63 distinguish the descendant priest who married a daughter of Barzillai the Gileadite and assumed that family name from Barzillai the Gileadite himself (the older family namesake who supported David). The Hebrew singular verb 'took [a woman]' and passive 'was called [by their name]' refer to the marrying priest, already indexed as person:Barzillai.3, not the historically distinct Gileadite elder in person:Barzillai. The two direct proper-name tokens naming the Gileadite elder and both original verse references remain unchanged.",
+    "review_status": "editorially_reviewed",
+    "source_id": "person:Barzillai",
+    "source_primary_id": "person:Barzillai",
+    "source_sha256": "e6daad911f5648da935e0e320802781c63e2dc79d6df90ad608c57cafb4f0598"
+  },
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o100170270162"
+      ],
+      [
+        "o100190320012"
+      ],
+      [
+        "o100190330012"
+      ],
+      [
+        "o100190340041"
+      ],
+      [
+        "o100190350021"
+      ],
+      [
+        "o100190400102"
+      ],
+      [
+        "o110020070021"
+      ],
+      [
+        "o150020610121"
+      ],
+      [
+        "o160070630121"
+      ]
+    ]
+  },
+  "gender": "male",
+  "id": "person:Barzillai",
+  "key_references": [
+    "10017027",
+    "10019032",
+    "11002007"
+  ],
+  "lemmas": {
+    "he": [
+      "בַּרְזִלַּי"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "شيخ من روجليم وقف مع الملك داود في زمن مملكة إسرائيل الموحدة.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "برزلاي"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "شَيْخٌ مِنْ رُوجَلِيمَ سَانَدَ الْمَلِكَ دَاوُدَ فِي عَهْدِ الْمَمْلَكَةِ الْمُتَّحِدَةِ لِإِسْرَائِيلَ.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "بَرْزِلَّاي"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan elda blong Rogelim we i bin givhan long King Deved long taem blong kingdom blong Isrel we i joen gud.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Basilae"
+    },
+    "eng": {
+      "descriptions": [
+        {
+          "article": "person:Barzillai",
+          "description": "An elder from Rogelim who supported King David during the time of Israel’s united kingdom.",
+          "gloss": "Barzillai",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Barzillai"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "بزرگی از اهالی روجلیم که در دوران پادشاهی متحد اسرائیل از داوود پادشاه حمایت کرد.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "برزلای"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Un ancien de Roguelim qui a soutenu le roi David à l'époque du royaume unifié d'Israël.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Barzillaï"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Wani dattijo daga Rogelim wanda ya goyi bayan Sarki Dawuda a lokacin haɗaɗɗiyar masarautar Isra’ila.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Barzillai"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "रोगलीम का एक पुरनिया जिसने इस्राएल के संयुक्त राजतंत्र के समय राजा दाऊद की सहायता की थी।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "बर्जिल्लै"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Okenye si Rogelim onye kwadoro Eze Devid nʼoge alaeze dị nʼotu nke Izrel.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Bazilai"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Seorang tua-tua dari Rogelim yang mendukung Raja Daud pada masa kerajaan Israel bersatu.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Barzilai"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "इस्राएलको संयुक्त अधिराज्यको समयमा राजा दाऊदलाई सहयोग गर्ने रोगेलीमका एक जना धर्म-गुरु/अगुवा।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "बर्जिल्लै"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Um ancião de Rogelim que apoiou o rei Davi durante a época do reino unificado de Israel.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Barzilai"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Старейшина из Роглима, поддерживавший царя Давида во времена единого Израильского царства.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Верзеллий"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Anciano de Roguelim que apoyó al rey David durante la época de la monarquía unida de Israel.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Barzilai"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Mzee kutoka Rogelimu aliyemuunga mkono Mfalme Daudi wakati wa ufalme wa umoja wa Israeli.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Barzilai"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Wanpela hetman bilong Rogelim em i bin helpim King Devit long taim kantri Israel i stap wanbel yet.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Barsilai"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Một trưởng lão từ Rô-ghê-lim đã giúp đỡ Vua Đa-vít trong thời kỳ vương quốc thống nhất của Y-sơ-ra-ên.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Bát-xi-lai"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "来自罗基琳的长老，在以色列联合王国时期支持大卫王。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "巴西莱"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "來自羅基琳的長老，在以色列聯合王國時期支持大衛王。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "巴西萊"
+    }
+  },
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "primary_id": "person:Barzillai",
+  "pronominal_referents": {
+    "wlc": [
+      [
+        "o100190330072"
+      ],
+      [
+        "o100190330161"
+      ],
+      [
+        "o100190340051"
+      ],
+      [
+        "o100190360041"
+      ]
+    ]
+  },
+  "references": [
+    "10017027",
+    "10019032",
+    "10019033",
+    "10019034",
+    "10019035",
+    "10019040",
+    "11002007",
+    "15002061",
+    "16007063"
+  ],
+  "roles": [
+    "Leader"
+  ],
+  "speeches": {
+    "wlc": [
+      {
+        "quote_type": "Normal",
+        "words": [
+          "o100170290141",
+          "o100170290142",
+          "o100170290151",
+          "o100170290161",
+          "o100170290162",
+          "o100170290171",
+          "o100170290172",
+          "o100170290181",
+          "o100170290181ה",
+          "o100170290182"
+        ]
+      },
+      {
+        "quote_type": "Normal",
+        "words": [
+          "o100190350051",
+          "o100190350052",
+          "o100190350061",
+          "o100190350071",
+          "o100190350081",
+          "o100190350082",
+          "o100190350091",
+          "o100190350101",
+          "o100190350111",
+          "o100190350121",
+          "o100190350122",
+          "o100190350131",
+          "o100190360011",
+          "o100190360021",
+          "o100190360031",
+          "o100190360041",
+          "o100190360051",
+          "o100190360052",
+          "o100190360061",
+          "o100190360062",
+          "o100190360071",
+          "o100190360081",
+          "o100190360091",
+          "o100190360092",
+          "o100190360101",
+          "o100190360111",
+          "o100190360121",
+          "o100190360122",
+          "o100190360131",
+          "o100190360141",
+          "o100190360151",
+          "o100190360161",
+          "o100190360162",
+          "o100190360171",
+          "o100190360181",
+          "o100190360191",
+          "o100190360201",
+          "o100190360211",
+          "o100190360221",
+          "o100190360222",
+          "o100190360231",
+          "o100190360241",
+          "o100190360242",
+          "o100190360251",
+          "o100190360252",
+          "o100190360253",
+          "o100190360261",
+          "o100190360271",
+          "o100190360272",
+          "o100190360281",
+          "o100190360291",
+          "o100190360292",
+          "o100190360301",
+          "o100190360311",
+          "o100190360312",
+          "o100190360321",
+          "o100190360322",
+          "o100190370011",
+          "o100190370012",
+          "o100190370021",
+          "o100190370031",
+          "o100190370032",
+          "o100190370041",
+          "o100190370051",
+          "o100190370052",
+          "o100190370061",
+          "o100190370071",
+          "o100190370072",
+          "o100190370081",
+          "o100190370082",
+          "o100190370083",
+          "o100190370091",
+          "o100190370092",
+          "o100190370101",
+          "o100190370102",
+          "o100190370111",
+          "o100190370112",
+          "o100190370121",
+          "o100190370122",
+          "o100190380011",
+          "o100190380021",
+          "o100190380031",
+          "o100190380032",
+          "o100190380041",
+          "o100190380042",
+          "o100190380051",
+          "o100190380052",
+          "o100190380053",
+          "o100190380061",
+          "o100190380071",
+          "o100190380081",
+          "o100190380082",
+          "o100190380091",
+          "o100190380092",
+          "o100190380093",
+          "o100190380101",
+          "o100190380102",
+          "o100190380111",
+          "o100190380112",
+          "o100190380121",
+          "o100190380131",
+          "o100190380141",
+          "o100190380151",
+          "o100190380152",
+          "o100190380161",
+          "o100190380162",
+          "o100190380171",
+          "o100190380172",
+          "o100190380181",
+          "o100190380182",
+          "o100190380191",
+          "o100190380201",
+          "o100190380211",
+          "o100190380221",
+          "o100190380222",
+          "o100190380223"
+        ]
+      }
+    ]
+  },
+  "subject_referents": {
+    "wlc": [
+      [
+        "o100190320052"
+      ],
+      [
+        "o100190320092"
+      ],
+      [
+        "o100190350101"
+      ],
+      [
+        "o100190360062"
+      ],
+      [
+        "o100190390141"
+      ],
+      [
+        "o100190400122"
+      ]
+    ]
+  },
+  "type": "person",
+  "ubsdbh": [
+    "001172001001000",
+    "001172001002000"
+  ]
+}

@@ -1,0 +1,478 @@
+{
+  "alternate_sources": {
+    "aquifer": [
+      "4699|Crown|TyndaleBibleDictionary",
+      "26486|Crown|UWTranslationWords"
+    ],
+    "ubsdbh": [
+      "003479001001000",
+      "004716001004000",
+      "005370001001000"
+    ],
+    "ubsdgnt": [
+      "6.196",
+      "6.192"
+    ],
+    "ubsrealia": [
+      "realia:1.10.2"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "realia:Crown",
+    "review_status": "source_unreviewed",
+    "source_id": "realia:Crown",
+    "source_primary_id": "realia:Crown",
+    "source_sha256": "5a3269b81de08a7392c7562e729c8dd3fdcf9e5789d13b1aa53a96100c6c314d"
+  },
+  "explicit_instances": {
+    "SBLGNT": [
+      [
+        "n66012003025"
+      ],
+      [
+        "n66013001020"
+      ],
+      [
+        "n66019012012"
+      ],
+      [
+        "n40027029003"
+      ],
+      [
+        "n41015017010"
+      ],
+      [
+        "n43019002005"
+      ],
+      [
+        "n43019005009"
+      ],
+      [
+        "n46009025012"
+      ],
+      [
+        "n52002019008"
+      ],
+      [
+        "n59001012011"
+      ],
+      [
+        "n60005004010"
+      ],
+      [
+        "n66004004025"
+      ],
+      [
+        "n66004010024"
+      ],
+      [
+        "n66006002017"
+      ],
+      [
+        "n66009007017"
+      ],
+      [
+        "n66012001024"
+      ],
+      [
+        "n66014014020"
+      ]
+    ],
+    "wlc": [
+      [
+        "o170010110072"
+      ],
+      [
+        "o170020170141"
+      ],
+      [
+        "o170060080151"
+      ],
+      [
+        "o020290060071"
+      ],
+      [
+        "o020390300041"
+      ],
+      [
+        "o030080090151"
+      ],
+      [
+        "o100010100122"
+      ],
+      [
+        "o120110120082"
+      ],
+      [
+        "o140230110082"
+      ],
+      [
+        "o380090160101"
+      ],
+      [
+        "o100120300031"
+      ],
+      [
+        "o130200020041"
+      ],
+      [
+        "o170080150092"
+      ],
+      [
+        "o180190090051"
+      ],
+      [
+        "o180310360071"
+      ],
+      [
+        "o190210040071"
+      ],
+      [
+        "o200040090051"
+      ],
+      [
+        "o200120040031"
+      ],
+      [
+        "o200140240011"
+      ],
+      [
+        "o200160310011"
+      ],
+      [
+        "o200170060011"
+      ],
+      [
+        "o220030110072"
+      ],
+      [
+        "o230280010021"
+      ],
+      [
+        "o230280030031"
+      ],
+      [
+        "o230280050062"
+      ],
+      [
+        "o230620030021"
+      ],
+      [
+        "o240130180091"
+      ],
+      [
+        "o250050160021"
+      ],
+      [
+        "o260160120082"
+      ],
+      [
+        "o260210310082"
+      ],
+      [
+        "o260230420172"
+      ],
+      [
+        "o380060110051"
+      ],
+      [
+        "o380060140013"
+      ]
+    ]
+  },
+  "id": "realia:Crown",
+  "key_references": [
+    "02039030",
+    "17001011",
+    "40027029"
+  ],
+  "lemmas": {
+    "el": [
+      "διάδημα",
+      "στέφανος"
+    ],
+    "he": [
+      "כֶּתֶר",
+      "נֵזֶר",
+      "עֲטָרָה"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "غطا للرأس مصنوع من معادن وجواهر نفيسة، بيلبسوه الملوك والملكات والمسؤولين كرمز للسلطة والمكانة.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "تاج"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "غطاء للرأس مصنوع من معادن ثمينة وجواهر، يرتديه الملوك والملكات والمسؤولون كرمز للسلطة والمكانة.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "تاج"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan spesel hat we oli wokem long gol mo ston we i dia tumas, we ol king, kwin, mo ol haeman oli stap werem olsem saen blong hae nem mo pawa.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "hat blong king"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Diadem",
+        "Garland",
+        "Diadem Crown",
+        "Wreath"
+      ],
+      "descriptions": [
+        {
+          "article": "realia:Crown",
+          "description": "A headdress made of precious metals and jewels, worn by kings, queens, and officials as a symbol of authority and status.",
+          "gloss": "Crown",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Crown"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "سرپوشی ساخته‌شده از فلزات گرانبها و جواهرات، که پادشاهان، ملکه‌ها، و مقامات به عنوان نماد اقتدار و مقام بر سر می‌گذاشتند.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "تاج"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Une coiffure faite de métaux précieux et de joyaux, portée par les rois, les reines et les dignitaires comme symbole d'autorité et de rang.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "couronne"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Kambun da ake yi da karafa masu daraja da duwatsu masu daraja, wanda sarakuna, sarauniyoyi, da masu mulki suke sawa a matsayin alamar iko da matsayi.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Rawani"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "बहुमूल्य धातुओं और रत्नों से बना सिर का एक आभूषण, जिसे राजाओं, रानियों और अधिकारियों द्वारा अधिकार और पद के प्रतीक के रूप में पहना जाता है।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "राजमुकुट"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Okpu e ji ọla dị oké ọnụ ahịa na nkume dị oké ọnụ ahịa mee, nke ndị eze, ndị eze nwanyị, na ndị isi na-ekpu dị ka ihe nnọchianya nke ikike na ọkwá.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Okpueze"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Hiasan kepala yang terbuat dari logam berharga dan permata, dikenakan oleh raja, ratu, dan pejabat sebagai lambang kekuasaan dan kedudukan.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "mahkota"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "बहुमूल्य धातु र रत्नहरूले बनेको शिरपेच, जुन राजा, रानी र अधिकारीहरूले अधिकार र पदको प्रतीकको रूपमा पहिरिन्थे।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "मुकुट"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Um adorno para a cabeça feito de metais preciosos e joias, usado por reis, rainhas e autoridades como símbolo de autoridade e status.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "coroa"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Головной убор из драгоценных металлов и камней, который носят цари, царицы и сановники как символ власти и статуса.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "корона"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Tocado hecho de metales preciosos y joyas, usado por reyes, reinas y dignatarios como símbolo de autoridad y posición social.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "corona (real)"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Pambo la kuvaa kichwani lililotengenezwa kwa metali za thamani na vito, linalovaliwa na wafalme, malkia, na viongozi kama ishara ya mamlaka na hadhi.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "taji"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Wanpela bilas bilong het ol i wokim long gutpela gol na dia ston samting, em ol king, kwin, na ol bikman i save putim olsem mak bilong namba na biknem.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "hat bilong king"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Một vật đội đầu làm bằng kim loại quý và đá quý, do các vua, hoàng hậu và quan chức đội như biểu tượng của thẩm quyền và địa vị.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "vương miện"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "由贵金属和宝石制成的头冠，由君王、王后及官员佩戴，作为权力和地位的象征。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "王冠"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "由貴金屬和寶石製成的頭飾，由國王、王后及官員佩戴，作為權柄和地位的象徵。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "王冠"
+    }
+  },
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "primary_id": "realia:Crown",
+  "pronominal_referents": {
+    "SBLGNT": [
+      [
+        "n59001012014"
+      ]
+    ],
+    "wlc": [
+      [
+        "o100010100203"
+      ],
+      [
+        "o100120300073"
+      ],
+      [
+        "o130200020083"
+      ],
+      [
+        "o130200020123"
+      ]
+    ]
+  },
+  "realia_type": "other",
+  "references": [
+    "02029006",
+    "02039030",
+    "03008009",
+    "10001010",
+    "10012030",
+    "12011012",
+    "13020002",
+    "14023011",
+    "17001011",
+    "17002017",
+    "17006008",
+    "17008015",
+    "18019009",
+    "18031036",
+    "19021004",
+    "20004009",
+    "20012004",
+    "20014024",
+    "20016031",
+    "20017006",
+    "22003011",
+    "23028001",
+    "23028003",
+    "23028005",
+    "23062003",
+    "24013018",
+    "25005016",
+    "26016012",
+    "26021031",
+    "26023042",
+    "38006011",
+    "38006014",
+    "38009016",
+    "40027029",
+    "41015017",
+    "43019002",
+    "43019005",
+    "46009025",
+    "52002019",
+    "59001012",
+    "60005004",
+    "66004004",
+    "66004010",
+    "66006002",
+    "66009007",
+    "66012001",
+    "66012003",
+    "66013001",
+    "66014014",
+    "66019012"
+  ],
+  "subject_referents": {
+    "wlc": [
+      [
+        "o100120300122"
+      ],
+      [
+        "o130200020152"
+      ]
+    ]
+  },
+  "type": "realia",
+  "ubsdbh": [
+    "003479001001000",
+    "004716001004000",
+    "005370001001000"
+  ],
+  "ubsdgnt": [
+    "6.196",
+    "6.192"
+  ]
+}

@@ -1,0 +1,824 @@
+{
+  "alternate_sources": {
+    "ubsdbh": [
+      "000245001001000",
+      "001725001001000",
+      "001725001002000",
+      "001726001001000",
+      "001731001001000",
+      "002471001002000",
+      "002614001001000",
+      "003127001001000",
+      "004418001001000",
+      "004419001001000",
+      "005657002001000",
+      "005697001001000",
+      "006863001001000"
+    ],
+    "ubsdgnt": [
+      "3.14",
+      "3.29",
+      "3.15",
+      "3.48"
+    ],
+    "ubsflora": [
+      "flora:5.1.2"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "flora:Grass",
+    "review_status": "source_unreviewed",
+    "source_id": "flora:Grass",
+    "source_primary_id": "flora:Grass",
+    "source_sha256": "59cc16a8b2a98626425ed8b019c3d5c04748e4fd7e5dd193936c9476f90e9e49"
+  },
+  "explicit_instances": {
+    "SBLGNT": [
+      [
+        "n58006007013"
+      ],
+      [
+        "n40013032013"
+      ],
+      [
+        "n41004032010"
+      ],
+      [
+        "n42011042015"
+      ],
+      [
+        "n45014002009"
+      ],
+      [
+        "n40006030004"
+      ],
+      [
+        "n40013026005"
+      ],
+      [
+        "n40014019008"
+      ],
+      [
+        "n41006039011"
+      ],
+      [
+        "n42012028006"
+      ],
+      [
+        "n43006010010"
+      ],
+      [
+        "n46003012013"
+      ],
+      [
+        "n59001010011"
+      ],
+      [
+        "n59001011011"
+      ],
+      [
+        "n60001024005"
+      ],
+      [
+        "n60001024012"
+      ],
+      [
+        "n60001024015"
+      ],
+      [
+        "n66008007032"
+      ],
+      [
+        "n66009004008"
+      ],
+      [
+        "n41004028006"
+      ]
+    ],
+    "wlc": [
+      [
+        "o010410020122"
+      ],
+      [
+        "o010410180122"
+      ],
+      [
+        "o180080110061"
+      ],
+      [
+        "o280130150041"
+      ],
+      [
+        "o290020220061"
+      ],
+      [
+        "o010010110031"
+      ],
+      [
+        "o010010110051"
+      ],
+      [
+        "o010010120031"
+      ],
+      [
+        "o050320020091"
+      ],
+      [
+        "o100230040101"
+      ],
+      [
+        "o120190260101"
+      ],
+      [
+        "o180060050041"
+      ],
+      [
+        "o180380270061"
+      ],
+      [
+        "o190230020021"
+      ],
+      [
+        "o190370020061"
+      ],
+      [
+        "o200270250041"
+      ],
+      [
+        "o230150060101"
+      ],
+      [
+        "o230370270101"
+      ],
+      [
+        "o230660140052"
+      ],
+      [
+        "o240140050101"
+      ],
+      [
+        "o270040120102",
+        "o270040120103"
+      ],
+      [
+        "o270040200222",
+        "o270040200223"
+      ],
+      [
+        "o110180050161"
+      ],
+      [
+        "o120190260111"
+      ],
+      [
+        "o180080120071"
+      ],
+      [
+        "o180400150071"
+      ],
+      [
+        "o191030150022"
+      ],
+      [
+        "o191040140021"
+      ],
+      [
+        "o190370020022"
+      ],
+      [
+        "o191290060022"
+      ],
+      [
+        "o191470080091"
+      ],
+      [
+        "o190900050052"
+      ],
+      [
+        "o200270250021"
+      ],
+      [
+        "o230150060081"
+      ],
+      [
+        "o230350070101"
+      ],
+      [
+        "o230370270111"
+      ],
+      [
+        "o230400060091"
+      ],
+      [
+        "o230400070021"
+      ],
+      [
+        "o230400070111"
+      ],
+      [
+        "o230400080021"
+      ],
+      [
+        "o230440040031"
+      ],
+      [
+        "o230510120121"
+      ],
+      [
+        "o230050240062"
+      ],
+      [
+        "o230330110021"
+      ],
+      [
+        "o010010300171"
+      ],
+      [
+        "o010090030092"
+      ],
+      [
+        "o020100150231"
+      ],
+      [
+        "o040220040151"
+      ],
+      [
+        "o120190260092"
+      ],
+      [
+        "o190370020053"
+      ],
+      [
+        "o230150060111"
+      ],
+      [
+        "o230370270092"
+      ],
+      [
+        "o010470040091"
+      ],
+      [
+        "o130040390081"
+      ],
+      [
+        "o130040400021"
+      ],
+      [
+        "o130040410251"
+      ],
+      [
+        "o180390080031",
+        "o180390080032"
+      ],
+      [
+        "o230320140161"
+      ],
+      [
+        "o250010060131"
+      ],
+      [
+        "o260340140012"
+      ],
+      [
+        "o260340140142"
+      ],
+      [
+        "o260340180032"
+      ],
+      [
+        "o260340180071",
+        "o260340180072"
+      ],
+      [
+        "o290010180091"
+      ],
+      [
+        "o340020120042"
+      ],
+      [
+        "o230490090121",
+        "o230490090122"
+      ],
+      [
+        "o240250360111",
+        "o240250360112"
+      ],
+      [
+        "o230190070011"
+      ],
+      [
+        "o010010110061"
+      ],
+      [
+        "o010010120041"
+      ],
+      [
+        "o010010290081"
+      ],
+      [
+        "o010010300181"
+      ],
+      [
+        "o010020050081"
+      ],
+      [
+        "o010030180071"
+      ],
+      [
+        "o010090030101"
+      ],
+      [
+        "o020090220211"
+      ],
+      [
+        "o020090250151"
+      ],
+      [
+        "o020100120181"
+      ],
+      [
+        "o020100150111"
+      ],
+      [
+        "o050110150021"
+      ],
+      [
+        "o050290220141"
+      ],
+      [
+        "o050320020121"
+      ],
+      [
+        "o120190260071"
+      ],
+      [
+        "o180050250062"
+      ],
+      [
+        "o190720160122"
+      ],
+      [
+        "o190920080041"
+      ],
+      [
+        "o191020050022"
+      ],
+      [
+        "o191020120052"
+      ],
+      [
+        "o191040140042"
+      ],
+      [
+        "o191050350031"
+      ],
+      [
+        "o191060200071"
+      ],
+      [
+        "o200190120071"
+      ],
+      [
+        "o200270250061"
+      ],
+      [
+        "o230370270071"
+      ],
+      [
+        "o230420150051",
+        "o230420150052"
+      ],
+      [
+        "o240120040052"
+      ],
+      [
+        "o240140060121"
+      ],
+      [
+        "o300070020061"
+      ],
+      [
+        "o330050060121"
+      ],
+      [
+        "o380100010141"
+      ],
+      [
+        "o110050030061"
+      ]
+    ]
+  },
+  "flora_type": "Plants for Everyday Use",
+  "id": "flora:Grass",
+  "key_references": [
+    "01041002",
+    "59001011",
+    "23040007"
+  ],
+  "lemmas": {
+    "el": [
+      "βοτάνη",
+      "λάχανον",
+      "χόρτος"
+    ],
+    "he": [
+      "אָחוּ",
+      "דשׁא",
+      "דֶּשֶׁא",
+      "דֶּתֶא",
+      "חָצִיר",
+      "חֲשַׁשׁ",
+      "יֶרֶק",
+      "מִרְעֶה",
+      "מַרְעִית",
+      "עָרָה",
+      "עֵשֶׂב",
+      "רְעִי"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "اسم عام للنباتات الخضراء الصغيرة البتنمو في الحقول والمراعي، وغالباً بتاكلها الحيوانات وبيستعملوها البشر كغذاء.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "قش"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "مصطلح عام للنباتات الخضراء الصغيرة التي تنمو في الحقول والمراعي، وغالباً ما تتغذى عليها الحيوانات ويستخدمها البشر كغذاء.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "عُشْب"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan jeneral wod blong ol smosmol grin plant we oli stap gru long ol open ples mo ol grasgaren, we plante taem ol anamol oli stap kakae mo ol man tu oli stap yusum olsem kakae.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "gras"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Pasture Land",
+        "Reed Grass",
+        "Reeds",
+        "Rushes",
+        "Vegetation",
+        "Herbage",
+        "Plant",
+        "Sprout",
+        "Blade"
+      ],
+      "descriptions": [
+        {
+          "article": "flora:Grass",
+          "description": "A general term for small green plants that grow in fields and pastures, often eaten by animals and used as food by humans.",
+          "gloss": "Grass",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Grass"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "اصطلاحی عام برای گیاهان سبز و کوچک که در دشت‌ها و چراگاه‌ها می‌رویند، معمولاً خوراک دام‌ها هستند و توسط انسان نیز استفاده می‌شوند.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "علف"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Terme général désignant les petites plantes vertes qui poussent dans les champs et les pâturages, souvent broutées par les animaux et consommées par les êtres humains.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "herbe"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Gama-garin kalma ce ga ƙananan tsire-tsire masu launin kore waɗanda ke tsiro a gonaki da makiyaya, waɗanda dabbobi sukan ci sau da yawa kuma ’yan adam kan yi amfani da su a matsayin abinci.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ciyawa"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "खेतों और चरागाहों में उगने वाले छोटे हरे पौधों के लिए एक सामान्य शब्द, जिसे अक्सर जानवर चरते हैं और मनुष्य भोजन के रूप में उपयोग करते हैं।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "घास"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Okwu zuru oke maka obere ahịhịa ndụ na-eto n'ọhịa na ebe ịta nri, nke anụmanụ na-erikarị ma ndị mmadụ na-ejikwa ya dị ka nri.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "ahịhịa"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Istilah umum untuk tumbuhan hijau kecil yang tumbuh di ladang dan padang rumput, sering dimakan oleh hewan dan dimanfaatkan sebagai makanan oleh manusia.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "rumput"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "खेत र चरनहरूमा उम्रने साना हरिया वनस्पतिहरूको निम्ति एक सामान्य शब्द, जुन प्रायः जनावरहरूले खान्छन् र मानिसहरूद्वारा खानाको रूपमा पनि प्रयोग गरिन्छ।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "घाँस"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Termo geral para pequenas plantas verdes que crescem em campos e pastos, frequentemente comidas por animais e usadas como alimento por seres humanos.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "erva"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Общее название невысоких зеленых растений, растущих на полях и пастбищах, часто поедаемых животными и используемых в пищу людьми.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Трава"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Término general para las plantas verdes pequeñas que crecen en campos y pastos, a menudo consumidas por animales y utilizadas como alimento por los seres humanos.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "hierba"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Neno la jumla linalomaanisha mimea midogo ya kijani inayoota mashambani na malishoni, ambayo mara nyingi huliwa na wanyama na kutumiwa kama chakula na wanadamu.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Majani"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Tok piksa bilong ol liklik grin samting i save gro long ples klia na long gaden, em ol animal i save kaikai na tu ol manmeri i save yusim olsem kaikai.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "gras"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Thuật ngữ chung chỉ các loài thực vật nhỏ màu xanh mọc trên đồng cỏ và bãi chăn thả, thường làm thức ăn cho động vật và con người sử dụng.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Cỏ"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "生长在田野和牧场的小型绿色植物的统称，常被动物食用，也被人类用作食物。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "草"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "生長於田野和牧草地之低矮綠色植物的統稱，常用作動物飼料，亦可供人類食用。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "草"
+    }
+  },
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "primary_id": "flora:Grass",
+  "pronominal_referents": {
+    "SBLGNT": [
+      [
+        "n59001011015"
+      ]
+    ],
+    "wlc": [
+      [
+        "o180080120012"
+      ],
+      [
+        "o180080120023"
+      ],
+      [
+        "o230400070092"
+      ],
+      [
+        "o230190070123"
+      ],
+      [
+        "o010010120073"
+      ]
+    ]
+  },
+  "references": [
+    "01001011",
+    "01001012",
+    "01001029",
+    "01001030",
+    "01002005",
+    "01003018",
+    "01009003",
+    "01041002",
+    "01041018",
+    "01047004",
+    "02009022",
+    "02009025",
+    "02010012",
+    "02010015",
+    "04022004",
+    "05011015",
+    "05029022",
+    "05032002",
+    "10023004",
+    "11005003",
+    "11018005",
+    "12019026",
+    "13004039",
+    "13004040",
+    "13004041",
+    "18005025",
+    "18006005",
+    "18008011",
+    "18008012",
+    "18038027",
+    "18039008",
+    "18040015",
+    "19023002",
+    "19037002",
+    "19072016",
+    "19090005",
+    "19092008",
+    "19102005",
+    "19102012",
+    "19103015",
+    "19104014",
+    "19105035",
+    "19106020",
+    "19129006",
+    "19147008",
+    "20019012",
+    "20027025",
+    "23005024",
+    "23015006",
+    "23019007",
+    "23032014",
+    "23033011",
+    "23035007",
+    "23037027",
+    "23040006",
+    "23040007",
+    "23040008",
+    "23042015",
+    "23044004",
+    "23049009",
+    "23051012",
+    "23066014",
+    "24012004",
+    "24014005",
+    "24014006",
+    "24025036",
+    "25001006",
+    "26034014",
+    "26034018",
+    "27004012",
+    "27004020",
+    "28013015",
+    "29001018",
+    "29002022",
+    "30007002",
+    "33005006",
+    "34002012",
+    "38010001",
+    "40006030",
+    "40013026",
+    "40013032",
+    "40014019",
+    "41004028",
+    "41004032",
+    "41006039",
+    "41016018",
+    "42011042",
+    "42012028",
+    "43006010",
+    "45014002",
+    "46003012",
+    "58006007",
+    "59001010",
+    "59001011",
+    "60001024",
+    "66008007",
+    "66009004"
+  ],
+  "subject_referents": {
+    "SBLGNT": [
+      [
+        "n40006030008"
+      ],
+      [
+        "n40006030013"
+      ],
+      [
+        "n40013026008"
+      ],
+      [
+        "n42012028007"
+      ],
+      [
+        "n42012028013"
+      ]
+    ],
+    "wlc": [
+      [
+        "o180080120041"
+      ],
+      [
+        "o180080120081"
+      ],
+      [
+        "o191290060051"
+      ],
+      [
+        "o191290060061"
+      ],
+      [
+        "o230190070111"
+      ],
+      [
+        "o010010110071"
+      ],
+      [
+        "o010010120051"
+      ],
+      [
+        "o010010290091"
+      ],
+      [
+        "o010010290261"
+      ],
+      [
+        "o191040140072"
+      ]
+    ]
+  },
+  "type": "flora",
+  "ubsdbh": [
+    "000245001001000",
+    "001725001001000",
+    "001725001002000",
+    "001726001001000",
+    "001731001001000",
+    "002471001002000",
+    "002614001001000",
+    "003127001001000",
+    "004418001001000",
+    "004419001001000",
+    "005657002001000",
+    "005697001001000",
+    "006863001001000"
+  ],
+  "ubsdgnt": [
+    "3.14",
+    "3.29",
+    "3.15",
+    "3.48"
+  ]
+}

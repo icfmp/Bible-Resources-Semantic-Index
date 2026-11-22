@@ -1,0 +1,239 @@
+{
+  "alternate_sources": {
+    "ubsdgnt": [
+      "6.153"
+    ],
+    "ubsrealia": [
+      "realia:1.5.3.13"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "realia:LinenCloth",
+    "review_status": "source_unreviewed",
+    "source_id": "realia:LinenCloth",
+    "source_primary_id": "realia:LinenCloth",
+    "source_sha256": "1f4d784149e68d3e19380fa5aae7ea191b4fdf3d4c573ac57d467f9a6e5075a9"
+  },
+  "explicit_instances": {
+    "SBLGNT": [
+      [
+        "n44010011011"
+      ],
+      [
+        "n44011005016"
+      ]
+    ]
+  },
+  "id": "realia:LinenCloth",
+  "key_references": [
+    "44010011",
+    "44011005"
+  ],
+  "lemmas": {
+    "el": [
+      "ὀθόνη"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "قطعة قماش كبيرة، عادةً بتكون مصنوعة من الكتان.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "توب كتان"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "قطعة قماش كبيرة، تُصنع عادة من الكتان.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "ملاءة"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan bigfala pis kaliko, we plante taem oli wokem long linen.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "bigfala pis kaliko"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Sheet",
+        "Linen Sheet"
+      ],
+      "descriptions": [
+        {
+          "article": "realia:LinenCloth",
+          "description": "A large piece of cloth, usually made from linen.",
+          "gloss": "Linen Cloth",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Linen Cloth"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "تکه پارچه‌ای بزرگ، معمولاً از جنس کتان.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "پارچه کتانی"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Grand morceau d'étoffe, généralement fait de lin.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "toile de lin"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Babban yanki na tsumma ko yadi, wanda galibi ana yinsa daga lilin.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Mayafi"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "कपड़े का एक बड़ा टुकड़ा, जो आमतौर पर सन (लिनन) से बना होता है।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "चादर"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Nnukwu iberibe akwa, nke a na-ejikarị linen mee.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Akwa ọcha"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Sehelai kain berukuran besar, biasanya terbuat dari lenan.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "kain lebar"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "प्रायः सनपाटबाट बनेको ठूलो कपडाको टुक्रा।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "तन्ना"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Um pedaço grande de tecido, geralmente feito de linho.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "lençol de linho"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Большой кусок ткани, обычно льняной.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Полотно"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Gran pieza de tela, generalmente hecha de lino.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "lienzo"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Kipande kikubwa cha kitambaa, ambacho kwa kawaida kimetengenezwa kwa kitani.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Nguo ya kitani"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Wanpela bikpela hap laplap, planti taim ol i wokim long linen.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "bikpela laplap"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Một tấm vải lớn, thường được làm từ vải gai (lanh).",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Tấm vải"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "一大块布料，通常由细麻制成。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "大布"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "一大塊布，通常由細麻製成。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "大布"
+    }
+  },
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "primary_id": "realia:LinenCloth",
+  "pronominal_referents": {
+    "SBLGNT": [
+      [
+        "n44011006002"
+      ],
+      [
+        "n44011010009"
+      ]
+    ]
+  },
+  "realia_type": "other",
+  "references": [
+    "44010011",
+    "44011005"
+  ],
+  "subject_referents": {},
+  "type": "realia",
+  "ubsdgnt": [
+    "6.153"
+  ]
+}

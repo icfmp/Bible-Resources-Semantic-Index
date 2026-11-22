@@ -1,0 +1,337 @@
+{
+  "alternate_sources": {
+    "tipnr": [
+      "Sidon@Gen.10.19-Act"
+    ],
+    "ubsdbh": [
+      "006186001001000"
+    ],
+    "ubsdgnt": [
+      "93.579"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "group:Sidon",
+    "review_status": "source_unreviewed",
+    "source_id": "group:Sidon",
+    "source_primary_id": "group:Sidon",
+    "source_sha256": "9c82c1ef601443620b1bfbfe564197683d252e726c9ca9fe6548c90996feccbc"
+  },
+  "explicit_instances": {
+    "SBLGNT": [
+      [
+        "n44012020006"
+      ]
+    ],
+    "wlc": [
+      [
+        "o050030090011"
+      ],
+      [
+        "o060130040072"
+      ],
+      [
+        "o060130060101"
+      ],
+      [
+        "o070030030063"
+      ],
+      [
+        "o070100120012"
+      ],
+      [
+        "o070180070141"
+      ],
+      [
+        "o070180070252"
+      ],
+      [
+        "o110050200292"
+      ],
+      [
+        "o110110010131"
+      ],
+      [
+        "o110110050061"
+      ],
+      [
+        "o110110330071"
+      ],
+      [
+        "o110160310151"
+      ],
+      [
+        "o120230130181"
+      ],
+      [
+        "o130220040072"
+      ],
+      [
+        "o150030070082"
+      ],
+      [
+        "o260320300061"
+      ]
+    ]
+  },
+  "group_origin": "place:Sidon",
+  "group_type": "residence",
+  "id": "group:Sidon",
+  "key_references": [
+    "01010015",
+    "01010019",
+    "06010006"
+  ],
+  "lemmas": {
+    "el": [
+      "Σιδώνιος"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "أهل صيدون.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "الصيدونيين"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "أهل صيدون.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "الصيدونيون"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Ol man blong Saedon.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "ol man Saedon"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Sidon",
+        "Sidonian"
+      ],
+      "descriptions": [
+        {
+          "article": "group:Sidon",
+          "description": "The people of Sidon.",
+          "gloss": "Sidonians",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Sidonians"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "مردم صیدون.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "صیدونی‌ها"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Les habitants de Sidon.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Sidoniens"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Mutanen Sidon.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Sidoniyawa"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "सीदोन के लोग।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "सीदोनी"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Ndị bi na Saịdọn.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "ndị Saịdọn"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Penduduk Sidon.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "orang Sidon"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "सीदोनका बासिन्दाहरू।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "सीदोनीहरू"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "O povo de Sidom.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "sidônios"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Жители Сидона.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "сидоняне"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Los habitantes de Sidón.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "sidonios"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Watu wa Sidoni.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Wasidoni"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Ol manmeri bilong Saidon.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ol Saidon"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Dân thành Si-đôn.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Dân Si-đôn"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "西顿的居民。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "西顿人"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "西頓的人民。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "西頓人"
+    }
+  },
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "primary_id": "group:Sidon",
+  "pronominal_referents": {
+    "SBLGNT": [
+      [
+        "n44012020026"
+      ],
+      [
+        "n44012021016"
+      ]
+    ]
+  },
+  "references": [
+    "05003009",
+    "06013004",
+    "06013006",
+    "07003003",
+    "07010012",
+    "07018007",
+    "11005020",
+    "11011001",
+    "11011005",
+    "11011033",
+    "11016031",
+    "12023013",
+    "13022004",
+    "15003007",
+    "26032030",
+    "44012020"
+  ],
+  "subject_referents": {
+    "SBLGNT": [
+      [
+        "n44012020009"
+      ],
+      [
+        "n44012020013"
+      ],
+      [
+        "n44012020021"
+      ]
+    ],
+    "wlc": [
+      [
+        "o070030040012"
+      ],
+      [
+        "o260320300081"
+      ],
+      [
+        "o260320300131"
+      ],
+      [
+        "o260320300142"
+      ],
+      [
+        "o260320300192"
+      ]
+    ]
+  },
+  "type": "group",
+  "ubsdbh": [
+    "006186001001000"
+  ],
+  "ubsdgnt": [
+    "93.579"
+  ]
+}

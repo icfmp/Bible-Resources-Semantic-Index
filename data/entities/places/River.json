@@ -1,0 +1,376 @@
+{
+  "added_entry": false,
+  "alternate_sources": {
+    "tipnr": [
+      "River|Euphrates@Gen.2.14-Rev"
+    ],
+    "ubsdbh": [
+      "004680001005000",
+      "004679001001000"
+    ],
+    "vizbible": [
+      "rec9ygL3vIbmQQtNQ"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "place:Euphrates",
+    "review_status": "source_unreviewed",
+    "source_id": "place:River",
+    "source_primary_id": "place:Euphrates",
+    "source_sha256": "490adb42504a56031db74423faa7c219525ef861cd9ba0394ec23acdda3a8c40"
+  },
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o040220050102"
+      ],
+      [
+        "o050110240142",
+        "o050110240151"
+      ],
+      [
+        "o060240030072"
+      ],
+      [
+        "o060240140162"
+      ],
+      [
+        "o060240150222"
+      ],
+      [
+        "o150040100151"
+      ],
+      [
+        "o150040110131"
+      ],
+      [
+        "o150040160151"
+      ],
+      [
+        "o150040170171"
+      ],
+      [
+        "o150040200091"
+      ],
+      [
+        "o150050030081"
+      ],
+      [
+        "o150050060081"
+      ],
+      [
+        "o150050060151"
+      ],
+      [
+        "o150060060051"
+      ],
+      [
+        "o150060060121"
+      ],
+      [
+        "o150060080201"
+      ],
+      [
+        "o150060130051"
+      ],
+      [
+        "o150070210111"
+      ],
+      [
+        "o150070250181"
+      ],
+      [
+        "o150080360092"
+      ],
+      [
+        "o160020070132"
+      ],
+      [
+        "o160020090052"
+      ],
+      [
+        "o160030070142"
+      ],
+      [
+        "o190720080053"
+      ],
+      [
+        "o190800120061"
+      ],
+      [
+        "o230070200081"
+      ],
+      [
+        "o230080070082"
+      ],
+      [
+        "o230110150102"
+      ],
+      [
+        "o330070120121"
+      ],
+      [
+        "o380090100163"
+      ]
+    ]
+  },
+  "geocoordinates": {
+    "obi": {
+      "lat": "31.777444",
+      "lon": "35.234935"
+    },
+    "vizbible": {
+      "lat": "31.777444",
+      "lon": "35.234935"
+    }
+  },
+  "id": "place:River",
+  "is_artifact": false,
+  "is_person": false,
+  "key_references": [
+    "15004010"
+  ],
+  "lemmas": {
+    "he": [
+      "נָהָר"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "المنطقة بتاعة نهر الفرات.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "عبر النهر"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "منطقة نهر الفرات.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "عَبْر النَّهْر"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Rejon blong Yufretis Reva.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Narasaed long Reva"
+    },
+    "eng": {
+      "alternate_labels": [
+        "west of the Euphrates",
+        "west of the Euphrates River",
+        "Euphrates",
+        "River",
+        "Trans-Euphrates",
+        "beyond the Euphrates River"
+      ],
+      "descriptions": [
+        {
+          "article": "place:BeyondTheRiver",
+          "description": "The region of the Euphrates River.",
+          "gloss": "Beyond the River",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Beyond the River"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "منطقهٔ اطراف رود فرات (ماورای نهر).",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "آن‌سوی رود"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "La région de l'Euphrate.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "au-delà du Fleuve"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Yankin Kogin Yuferites.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ƙetaren Kogi"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "फ़रात (महानद) नदी का क्षेत्र।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "महानद के उस पार"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Mpaghara Osimiri Yufretis.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Nfegharị Osimiri"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Wilayah di sekitar Sungai Efrat.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Seberang Sungai Efrat"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "यूफ्रेटिस नदी वरपरको इलाका।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "नदीपारि"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "A região do Rio Eufrates.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Além do Rio"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Область реки Евфрат (Заречье).",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "За рекою"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "La región del río Éufrates.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "al otro lado del Río"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Eneo la Mto Frati.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ng’ambo ya Mto"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Hap provins long wara Yufretis.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Hapsait bilong Wara"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Vùng sông Ơ-phơ-rát.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Bên kia Sông"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "幼发拉底河一带地区。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "大河西"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "幼發拉底河一帶的地區。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "河西"
+    }
+  },
+  "mentioned_in_bible": true,
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "place_types": {
+    "acai": [
+      "region"
+    ],
+    "obi": [
+      "region"
+    ],
+    "vizbible": [
+      "Region"
+    ]
+  },
+  "primary_id": "place:Euphrates",
+  "pronominal_referents": {},
+  "references": [
+    "04022005",
+    "05011024",
+    "06024003",
+    "06024014",
+    "06024015",
+    "15004010",
+    "15004011",
+    "15004016",
+    "15004017",
+    "15004020",
+    "15005003",
+    "15005006",
+    "15006006",
+    "15006008",
+    "15006013",
+    "15007021",
+    "15007025",
+    "15008036",
+    "16002007",
+    "16002009",
+    "16003007",
+    "19072008",
+    "19080012",
+    "23007020",
+    "23008007",
+    "23011015",
+    "33007012",
+    "38009010"
+  ],
+  "referred_to_as": [
+    "place:Euphrates"
+  ],
+  "subject_referents": {},
+  "type": "place",
+  "ubsdbh": [
+    "004680001005000",
+    "004679001001000"
+  ]
+}

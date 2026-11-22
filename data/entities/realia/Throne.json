@@ -1,0 +1,680 @@
+{
+  "alternate_sources": {
+    "aquifer": [
+      "8825|Throne|TyndaleBibleDictionary",
+      "27160|Throne|UWTranslationWords"
+    ],
+    "ubsdbh": [
+      "003363001001000",
+      "003441001001000"
+    ],
+    "ubsdgnt": [
+      "6.112"
+    ],
+    "ubsrealia": [
+      "realia:1.10.1"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "realia:Throne",
+    "review_status": "source_unreviewed",
+    "source_id": "realia:Throne",
+    "source_primary_id": "realia:Throne",
+    "source_sha256": "dda04ec4505b1db3d6bf52aa75c07d496b0dcf239df491139fdafc556780f9b2"
+  },
+  "explicit_instances": {
+    "SBLGNT": [
+      [
+        "n40005034013"
+      ],
+      [
+        "n40019028024"
+      ],
+      [
+        "n40019028032"
+      ],
+      [
+        "n40023022010"
+      ],
+      [
+        "n40025031021"
+      ],
+      [
+        "n44002030020"
+      ],
+      [
+        "n44007049004"
+      ],
+      [
+        "n58001008006"
+      ],
+      [
+        "n58004016006"
+      ],
+      [
+        "n58008001014"
+      ],
+      [
+        "n58012002024"
+      ],
+      [
+        "n66001004030"
+      ],
+      [
+        "n66003021010"
+      ],
+      [
+        "n66003021023"
+      ],
+      [
+        "n66004002007"
+      ],
+      [
+        "n66004002015"
+      ],
+      [
+        "n66004003014"
+      ],
+      [
+        "n66004004004"
+      ],
+      [
+        "n66004004011"
+      ],
+      [
+        "n66004005004"
+      ],
+      [
+        "n66004005018"
+      ],
+      [
+        "n66004006004"
+      ],
+      [
+        "n66004006014"
+      ],
+      [
+        "n66004006018"
+      ],
+      [
+        "n66004009015"
+      ],
+      [
+        "n66004010011"
+      ],
+      [
+        "n66004010028"
+      ],
+      [
+        "n66005001010"
+      ],
+      [
+        "n66005006006"
+      ],
+      [
+        "n66005007012"
+      ],
+      [
+        "n66005011010"
+      ],
+      [
+        "n66005013031"
+      ],
+      [
+        "n66006016020"
+      ],
+      [
+        "n66007009025"
+      ],
+      [
+        "n66007010015"
+      ],
+      [
+        "n66007011008"
+      ],
+      [
+        "n66007011020"
+      ],
+      [
+        "n66007015006"
+      ],
+      [
+        "n66007015024"
+      ],
+      [
+        "n66007017008"
+      ],
+      [
+        "n66008003033"
+      ],
+      [
+        "n66011016013"
+      ],
+      [
+        "n66012005025"
+      ],
+      [
+        "n66014003008"
+      ],
+      [
+        "n66016010010"
+      ],
+      [
+        "n66016017020"
+      ],
+      [
+        "n66019004020"
+      ],
+      [
+        "n66019005005"
+      ],
+      [
+        "n66020004003"
+      ],
+      [
+        "n66020011003"
+      ],
+      [
+        "n66020012013"
+      ],
+      [
+        "n66021003007"
+      ],
+      [
+        "n66021005007"
+      ],
+      [
+        "n66022001013"
+      ],
+      [
+        "n66022003009"
+      ]
+    ],
+    "wlc": [
+      [
+        "o020170160051"
+      ],
+      [
+        "o070030200192"
+      ],
+      [
+        "o090010090122"
+      ],
+      [
+        "o090040130062"
+      ],
+      [
+        "o090040180082"
+      ],
+      [
+        "o110020190181",
+        "o110020190182"
+      ],
+      [
+        "o110020190201"
+      ],
+      [
+        "o110070070022"
+      ],
+      [
+        "o110100180031"
+      ],
+      [
+        "o110100190032"
+      ],
+      [
+        "o110100190062"
+      ],
+      [
+        "o110220100091",
+        "o110220100092"
+      ],
+      [
+        "o110220190111",
+        "o110220190112"
+      ],
+      [
+        "o120040100112"
+      ],
+      [
+        "o120110190261"
+      ],
+      [
+        "o140090170031"
+      ],
+      [
+        "o140090180032"
+      ],
+      [
+        "o140090180062"
+      ],
+      [
+        "o140180090091",
+        "o140180090092"
+      ],
+      [
+        "o140180180111",
+        "o140180180112"
+      ],
+      [
+        "o140230200291"
+      ],
+      [
+        "o170050010181"
+      ],
+      [
+        "o180260090031"
+      ],
+      [
+        "o190110040061",
+        "o190110040062"
+      ],
+      [
+        "o190470090081"
+      ],
+      [
+        "o200090140051"
+      ],
+      [
+        "o200200080041"
+      ],
+      [
+        "o230060010101"
+      ],
+      [
+        "o230140090142",
+        "o230140090143"
+      ],
+      [
+        "o230140130101",
+        "o230140130102"
+      ],
+      [
+        "o230470010111"
+      ],
+      [
+        "o230660010051",
+        "o230660010052"
+      ],
+      [
+        "o240010150131",
+        "o240010150132"
+      ],
+      [
+        "o240030170051"
+      ],
+      [
+        "o240140210071"
+      ],
+      [
+        "o240170120011"
+      ],
+      [
+        "o240430100181",
+        "o240430100182"
+      ],
+      [
+        "o260010260101"
+      ],
+      [
+        "o260010260132"
+      ],
+      [
+        "o260100010131"
+      ],
+      [
+        "o260260160031",
+        "o260260160032"
+      ],
+      [
+        "o260430070071",
+        "o260430070072"
+      ],
+      [
+        "o320030060072",
+        "o320030060073"
+      ],
+      [
+        "o270050200091"
+      ],
+      [
+        "o270070090051"
+      ],
+      [
+        "o270070090171",
+        "o270070090172"
+      ]
+    ]
+  },
+  "id": "realia:Throne",
+  "key_references": [
+    "02017016",
+    "11010018",
+    "66004002"
+  ],
+  "lemmas": {
+    "el": [
+      "θρόνος"
+    ],
+    "he": [
+      "כִּסֵּא",
+      "כָּרְסֵא"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "كرسي كبير وفخم بيقعدوا عليه الحكام أو الناس العندهم سلطة.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "عرش"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "كُرْسِيٌّ كَبِيرٌ وَفَخْمٌ يَجْلِسُ عَلَيْهِ ٱلْمُلُوكُ أَوِ ٱلْحُكَّامُ أَوْ ذَوُو ٱلسُّلْطَانِ.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "عَرْش"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan bigfala naesfala jea we ol rula o ol lida oli stap sidaon long hem.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "jea blong king"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Chair",
+        "Seat"
+      ],
+      "descriptions": [
+        {
+          "article": "realia:Throne",
+          "description": "A large, fancy chair used by rulers or people in authority.",
+          "gloss": "Throne",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Throne"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "صندلی بزرگ و باشکوهی که فرمانروایان یا افراد صاحب‌اقتدار از آن استفاده می‌کنند.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "تخت"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Un siège imposant et somptueux utilisé par les souverains ou les personnes en autorité.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "trône"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Babbar kujera mai kayan ado da sarakuna ko mutane masu iko suke amfani da ita.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Kursiyi"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "शासकों या अधिकार प्राप्त व्यक्तियों द्वारा उपयोग की जाने वाली एक भव्य, विशेष कुर्सी।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "सिंहासन"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Nnukwu oche mara mma nke ndị ọchịchị maọbụ ndị nwere ikike na-anọkwasị na ya.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ocheeze"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Kursi besar dan mewah yang digunakan oleh para penguasa atau orang yang berwenang.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "takhta"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "शासक वा अधिकारप्राप्त व्यक्तिहरूले प्रयोग गर्ने ठुलो, भव्य कुर्सी ।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "सिंहासन"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Cadeira grande e imponente usada por governantes ou pessoas em posição de autoridade.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "trono"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Большое роскошное кресло, используемое правителями или людьми, облеченными властью.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Престол"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Silla grande y adornada usada por gobernantes o personas con autoridad.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "trono"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Kiti kikubwa, cha fahari kinachotumiwa na watawala au watu wenye mamlaka.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Kiti cha enzi"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Wanpela bikpela na naispela sia em ol king o ol man i gat bikpela namba i save sindaun long en.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "sia king"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Một chiếc ghế lớn, lộng lẫy dành cho những người cai trị hoặc người có thẩm quyền sử dụng.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ngai"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "统治者或掌权者坐的大而华丽的椅子。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "宝座"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "統治者或掌權者所坐的華麗大椅。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "寶座"
+    }
+  },
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "primary_id": "realia:Throne",
+  "pronominal_referents": {
+    "SBLGNT": [
+      [
+        "n40023022018"
+      ],
+      [
+        "n66020004007"
+      ],
+      [
+        "n66020011010"
+      ]
+    ],
+    "wlc": [
+      [
+        "o110100180063"
+      ],
+      [
+        "o140090170063"
+      ],
+      [
+        "o180260090052"
+      ],
+      [
+        "o270070090212"
+      ]
+    ]
+  },
+  "realia_type": "other",
+  "references": [
+    "02017016",
+    "07003020",
+    "09001009",
+    "09004013",
+    "09004018",
+    "11002019",
+    "11007007",
+    "11010018",
+    "11010019",
+    "11022010",
+    "11022019",
+    "12004010",
+    "12011019",
+    "14009017",
+    "14009018",
+    "14018009",
+    "14018018",
+    "14023020",
+    "17005001",
+    "18026009",
+    "19011004",
+    "19047009",
+    "20009014",
+    "20020008",
+    "23006001",
+    "23014009",
+    "23014013",
+    "23047001",
+    "23066001",
+    "24001015",
+    "24003017",
+    "24014021",
+    "24017012",
+    "24043010",
+    "26001026",
+    "26010001",
+    "26026016",
+    "26043007",
+    "27005020",
+    "27007009",
+    "32003006",
+    "40005034",
+    "40019028",
+    "40023022",
+    "40025031",
+    "44002030",
+    "44007049",
+    "58001008",
+    "58004016",
+    "58008001",
+    "58012002",
+    "66001004",
+    "66003021",
+    "66004002",
+    "66004003",
+    "66004004",
+    "66004005",
+    "66004006",
+    "66004009",
+    "66004010",
+    "66005001",
+    "66005006",
+    "66005007",
+    "66005011",
+    "66005013",
+    "66006016",
+    "66007009",
+    "66007010",
+    "66007011",
+    "66007015",
+    "66007017",
+    "66008003",
+    "66011016",
+    "66012005",
+    "66014003",
+    "66016010",
+    "66016017",
+    "66019004",
+    "66019005",
+    "66020004",
+    "66020011",
+    "66020012",
+    "66021003",
+    "66021005",
+    "66022001",
+    "66022003"
+  ],
+  "subject_referents": {
+    "wlc": [
+      [
+        "o230060010111"
+      ],
+      [
+        "o230060010122"
+      ]
+    ]
+  },
+  "type": "realia",
+  "ubsdbh": [
+    "003363001001000",
+    "003441001001000"
+  ],
+  "ubsdgnt": [
+    "6.112"
+  ]
+}

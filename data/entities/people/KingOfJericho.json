@@ -1,0 +1,235 @@
+{
+  "bsi": {
+    "canonical_id": "person:KingOfJericho",
+    "review_status": "source_unreviewed",
+    "source_id": "person:KingOfJericho",
+    "source_primary_id": "person:KingOfJericho",
+    "source_sha256": "7b2b51e36634df28e8d1e9371c25751412e42230236def290dc6c8188d8486b7"
+  },
+  "explicit_instances": {},
+  "id": "person:KingOfJericho",
+  "key_references": [
+    "06002003"
+  ],
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "ملك أريحا.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "ملك أريحا"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "مَلِكُ أَرِيحَا.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "مَلِكُ أَرِيحَا"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "King blong Jeriko.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "King blong Jeriko"
+    },
+    "eng": {
+      "descriptions": [
+        {
+          "description": "The king of Jericho.",
+          "gloss": "King of Jericho",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "King of Jericho"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "پادشاه اریحا.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "پادشاه اریحا"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Le roi de Jéricho.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "roi de Jéricho"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Sarkin Yariko.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Sarkin Yariko"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "यरीहो का राजा।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "यरीहो का राजा"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Eze Jeriko.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Eze Jeriko"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Raja Yerikho.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Raja Yerikho"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "यरीहोका राजा ।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "यरीहोका राजा"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "O rei de Jericó.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "rei de Jericó"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Царь Иерихона.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Царь Иерихонский"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "El rey de Jericó.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "rey de Jericó"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Mfalme wa Yeriko.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Mfalme wa Yeriko"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "King bilong Jeriko.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "King bilong Jeriko"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Vua của Giê-ri-cô.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Vua Giê-ri-cô"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "耶利哥城的王。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "耶利哥王"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "耶利哥的王。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "耶利哥王"
+    }
+  },
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "primary_id": "person:KingOfJericho",
+  "pronominal_referents": {},
+  "references": [
+    "06002003"
+  ],
+  "speeches": {
+    "wlc": [
+      {
+        "quote_type": "Normal",
+        "words": [
+          "o060020030071",
+          "o060020030081",
+          "o060020030082",
+          "o060020030091",
+          "o060020030092",
+          "o060020030101",
+          "o060020030102",
+          "o060020030111",
+          "o060020030121",
+          "o060020030131",
+          "o060020030132",
+          "o060020030133",
+          "o060020030141",
+          "o060020030151",
+          "o060020030152",
+          "o060020030161",
+          "o060020030171",
+          "o060020030181",
+          "o060020030182",
+          "o060020030191"
+        ]
+      }
+    ]
+  },
+  "subject_referents": {
+    "wlc": [
+      [
+        "o060020030021"
+      ],
+      [
+        "o060020030062"
+      ]
+    ]
+  },
+  "type": "person"
+}

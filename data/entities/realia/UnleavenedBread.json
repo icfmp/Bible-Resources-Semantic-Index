@@ -1,0 +1,439 @@
+{
+  "alternate_sources": {
+    "aquifer": [
+      "8964|Unleavened Bread|TyndaleBibleDictionary",
+      "8963|Unleavened Bread, Festival of|TyndaleBibleDictionary",
+      "27186|Unleavened Bread|UWTranslationWords",
+      "26412|Bread|UWTranslationWords"
+    ],
+    "ubsdbh": [
+      "004288001001000"
+    ],
+    "ubsrealia": [
+      "realia:9.4.4"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "realia:UnleavenedBread",
+    "review_status": "source_unreviewed",
+    "source_id": "realia:UnleavenedBread",
+    "source_primary_id": "realia:UnleavenedBread",
+    "source_sha256": "a7eff975eb74788fdf54298f8e11d1c0d886f48f29aefbc9d1ca075002e559a0"
+  },
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o010190030122"
+      ],
+      [
+        "o020120080082"
+      ],
+      [
+        "o020120150031"
+      ],
+      [
+        "o020120170032"
+      ],
+      [
+        "o020120180081"
+      ],
+      [
+        "o020120200081"
+      ],
+      [
+        "o020120390081"
+      ],
+      [
+        "o020130060041"
+      ],
+      [
+        "o020130070011"
+      ],
+      [
+        "o020230150032"
+      ],
+      [
+        "o020230150081"
+      ],
+      [
+        "o020290020021"
+      ],
+      [
+        "o020290020041"
+      ],
+      [
+        "o020290020081"
+      ],
+      [
+        "o020290230112"
+      ],
+      [
+        "o020340180032"
+      ],
+      [
+        "o020340180081"
+      ],
+      [
+        "o030020040091"
+      ],
+      [
+        "o030020040131"
+      ],
+      [
+        "o030020050091"
+      ],
+      [
+        "o030060090061"
+      ],
+      [
+        "o030070120101"
+      ],
+      [
+        "o030070120141"
+      ],
+      [
+        "o030080020202"
+      ],
+      [
+        "o030080260022"
+      ],
+      [
+        "o030080260081"
+      ],
+      [
+        "o030100120181"
+      ],
+      [
+        "o030230060072"
+      ],
+      [
+        "o030230060111"
+      ],
+      [
+        "o040060150021"
+      ],
+      [
+        "o040060150081"
+      ],
+      [
+        "o040060170092"
+      ],
+      [
+        "o040060190091"
+      ],
+      [
+        "o040060190141"
+      ],
+      [
+        "o040090110111"
+      ],
+      [
+        "o040280170091"
+      ],
+      [
+        "o050160030091"
+      ],
+      [
+        "o050160080041"
+      ],
+      [
+        "o050160160152"
+      ],
+      [
+        "o060050110061"
+      ],
+      [
+        "o070060190081"
+      ],
+      [
+        "o070060200092"
+      ],
+      [
+        "o070060210113"
+      ],
+      [
+        "o070060210202"
+      ],
+      [
+        "o090280240111"
+      ],
+      [
+        "o120230090131"
+      ],
+      [
+        "o130230290062"
+      ],
+      [
+        "o140080130142"
+      ],
+      [
+        "o140300130082"
+      ],
+      [
+        "o140300210082"
+      ],
+      [
+        "o140350170112"
+      ],
+      [
+        "o150060220031"
+      ],
+      [
+        "o260450210121"
+      ]
+    ]
+  },
+  "id": "realia:UnleavenedBread",
+  "key_references": [
+    "02012008",
+    "03023006",
+    "40026017",
+    "46005008"
+  ],
+  "lemmas": {
+    "he": [
+      "מַצָּה"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "عيش رقيق زي البسكويت معمول بدون خميرة. الله أمر إنه يُستخدم في أعياد عبرية معينة.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "فطير"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "خُبْزٌ رَقِيقٌ يُشْبِهُ الرُّقَاقَ يُصْنَعُ بِدُونِ خَمِيرَةٍ. أَمَرَ اللهُ بِاسْتِخْدَامِهِ فِي أَعْيَادٍ عِبْرَانِيَّةٍ مُعَيَّنَةٍ.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "فَطِير"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan tin bred we oli wokem we i no gat is long hem. God i komandem se ol man Isrel oli mas kakae bred ya long sam lafet blong olgeta.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "bred we i no gat is long hem"
+    },
+    "eng": {
+      "descriptions": [
+        {
+          "article": "realia:UnleavenedBread",
+          "description": "Thin, cracker-like bread made without yeast. It was ordered by God to be used in certain Hebrew feasts. ",
+          "gloss": "Unleavened Bread",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Unleavened Bread"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "نان نازک و تردمانند که بدون خمیرمایه پخته می‌شد. خدا فرمان داده بود که از آن در برخی اعیاد عبرانیان استفاده شود.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "نان فطیر"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Pain fin sans levain semblable à une galette. Dieu a ordonné de l'utiliser lors de certaines fêtes hébraïques.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "pain sans levain"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Siririn burodi mai kama da biskit wanda aka yi ba tare da yisti ba. Allah ya ba da umarnin a yi amfani da shi a wasu bukukuwan Ibraniyawa.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "burodi marar yisti"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "बिना ख़मीर (यीस्ट) के बनाई जाने वाली पतली, पापड़ जैसी रोटी। परमेश्वर ने कुछ इब्रानी पर्वों में इसके उपयोग की आज्ञा दी थी।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "अख़मीरी रोटी"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Achịcha dị gịrịgịrị, nke na-akpọ nkụ e mepụtara nʼejighị ihe na-eko achịcha. Chineke nyere iwu ka a na-eji ya eme ihe nʼememme ndị Hibru ụfọdụ.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Achịcha na-ekoghị eko"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Roti tipis menyerupai biskuit yang dibuat tanpa ragi. Roti ini diperintahkan oleh Allah untuk digunakan dalam perayaan-perayaan Ibrani tertentu.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "roti tidak beragi"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "खमीर नहाली बनाइने पातलो, कुरुमकुरुम हुने रोटी। परमेश्‍वरले निश्चित हिब्रू चाडहरूमा यसको प्रयोग गर्न आज्ञा दिनुभएको थियो।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "अखमिरी रोटी"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Pão fino, semelhante a uma bolacha, feito sem fermento. Foi ordenado por Deus para ser usado em certas festas hebraicas.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "pão sem fermento"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Тонкий, похожий на крекер хлеб, приготовленный без закваски (дрожжей). По повелению Бога использовался во время определенных еврейских праздников.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Пресный хлеб"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Pan delgado y crujiente hecho sin levadura. Dios ordenó usarlo en ciertas festividades hebreas.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "pan sin levadura"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Mkate mwembamba usiochachwa uliotengenezwa bila hamira. Uliamriwa na Mungu kutumika katika sikukuu fulani za Kiebrania.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Mkate usiotiwa chachu"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Bred i slek na i no gat yis. God i bin tokim ol long mekim wok long en long sampela bikpela de bilong ol Hibru.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "bret i no gat yis"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Loại bánh mỏng và giòn làm không dùng men. Đức Chúa Trời truyền lệnh dùng bánh này trong một số ngày lễ của người Hê-bơ-rơ.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Bánh không men"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "不加酵母制作的薄脆饼。上帝吩咐在特定的希伯来节期中食用。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "无酵饼"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "不加酵母製成的薄脆餅狀餅食。上帝吩咐在希伯來人的某些節期中使用。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "無酵餅"
+    }
+  },
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "primary_id": "realia:UnleavenedBread",
+  "pronominal_referents": {
+    "wlc": [
+      [
+        "o020120170072"
+      ]
+    ]
+  },
+  "realia_type": "other",
+  "references": [
+    "01019003",
+    "02012008",
+    "02012015",
+    "02012017",
+    "02012018",
+    "02012020",
+    "02012039",
+    "02013006",
+    "02013007",
+    "02023015",
+    "02029002",
+    "02029023",
+    "02034018",
+    "03002004",
+    "03002005",
+    "03006009",
+    "03007012",
+    "03008002",
+    "03008026",
+    "03010012",
+    "03023006",
+    "04006015",
+    "04006017",
+    "04006019",
+    "04009011",
+    "04028017",
+    "05016003",
+    "05016008",
+    "05016016",
+    "06005011",
+    "07006019",
+    "07006020",
+    "07006021",
+    "09028024",
+    "12023009",
+    "13023029",
+    "14008013",
+    "14030013",
+    "14030021",
+    "14035017",
+    "15006022",
+    "26045021"
+  ],
+  "subject_referents": {
+    "wlc": [
+      [
+        "o040060150051"
+      ]
+    ]
+  },
+  "type": "realia",
+  "ubsdbh": [
+    "004288001001000"
+  ]
+}

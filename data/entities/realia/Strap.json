@@ -1,0 +1,238 @@
+{
+  "alternate_sources": {
+    "ubsdgnt": [
+      "6.20"
+    ],
+    "ubsrealia": [
+      "realia:6.13.1"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "realia:Strap",
+    "review_status": "source_unreviewed",
+    "source_id": "realia:Strap",
+    "source_primary_id": "realia:Strap",
+    "source_sha256": "0358e162ddea69ba0407314816a95baaf72d5bf88100a1a8d26598d671b7273b"
+  },
+  "explicit_instances": {
+    "SBLGNT": [
+      [
+        "n41001007017"
+      ],
+      [
+        "n42003016022"
+      ],
+      [
+        "n43001027013"
+      ],
+      [
+        "n44022025006"
+      ]
+    ]
+  },
+  "id": "realia:Strap",
+  "key_references": [
+    "41001007",
+    "42003016",
+    "43001027"
+  ],
+  "lemmas": {
+    "el": [
+      "ἱμάς"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "شريط من جلد بيستعمل لربط الصنادل أو جزء من كرباج.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "سير جلد"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "شريط جلدي يُستخدم لربط الصنادل أو كجزء من سوط.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "سير"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan pis letan we oli yusum blong fasem ol sandel no olsem haf blong wip.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "strap"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Thong"
+      ],
+      "descriptions": [
+        {
+          "article": "realia:Strap",
+          "description": "A leather strip used for binding sandals or as a part of a whip.",
+          "gloss": "Strap",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Strap"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "تسمه‌ای چرمی که برای بستن صندل یا به عنوان بخشی از تازیانه به کار می‌رفت.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "بند چرمی"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Une lanière de cuir utilisée pour attacher des sandales ou comme élément d'un fouet.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "courroie"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Igiya ko fatar da ake amfani da ita don ɗaure takalmi ko kuma a matsayin wani ɓangare na bulala.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Igiyar takalmi"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "चमड़े की एक पट्टी जिसका उपयोग जूतियों को बाँधने या कोड़े के एक हिस्से के रूप में किया जाता था।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "फीता"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Ihe e ji akpụkpọ anụ mee nke a na-eji eke akpụkpọụkwụ ma ọ bụ nke bụ akụkụ ụtarị.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "eriri akpụkpọụkwụ"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Carik kulit yang digunakan untuk mengikat kasut atau sebagai bagian dari cambuk.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "tali"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "चप्पल बाँध्न वा कोर्राको भागको रूपमा प्रयोग गरिने छालाको फित्ता।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "फित्ता"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Uma tira de couro usada para amarrar sandálias ou como parte de um chicote.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "correia"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Кожаная полоска, использовавшаяся для завязывания сандалий или как часть плети.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ремень"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Tira de cuero utilizada para atar sandalias o como parte de un látigo.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "correa"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Ukanda wa ngozi unaotumiwa kufungia viatu au kama sehemu ya mjeledi.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Kamba ya Kiatu"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Wanpela rop leta ol i save yusim bilong pasim su o bilong hap bilong wip.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "rop leta"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Một dải da dùng để buộc dép hoặc làm một phần của roi.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Quai dép"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "用来系绑凉鞋或用作皮鞭一部分的皮条。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "皮带"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "用於繫涼鞋或作為皮鞭一部分的皮條。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "皮帶"
+    }
+  },
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "primary_id": "realia:Strap",
+  "pronominal_referents": {},
+  "realia_type": "other",
+  "references": [
+    "41001007",
+    "42003016",
+    "43001027",
+    "44022025"
+  ],
+  "subject_referents": {},
+  "type": "realia",
+  "ubsdgnt": [
+    "6.20"
+  ]
+}

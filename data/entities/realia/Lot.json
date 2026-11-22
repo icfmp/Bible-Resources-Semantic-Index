@@ -1,0 +1,301 @@
+{
+  "alternate_sources": {
+    "aquifer": [
+      "6785|Lot|TyndaleBibleDictionary",
+      "26834|Lot|UWTranslationWords",
+      "132194|Lot|BiblicaStudyNotesKeyTerms"
+    ],
+    "ubsdbh": [
+      "001361001001000",
+      "005816001001000"
+    ],
+    "ubsdgnt": [
+      "6.219"
+    ],
+    "ubsrealia": [
+      "realia:4.9"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "realia:Lot",
+    "review_status": "source_unreviewed",
+    "source_id": "realia:Lot",
+    "source_primary_id": "realia:Lot",
+    "source_sha256": "23a09277a473347259d8b17b342d9f031f890db02e4c2d085bc62630286d9e40"
+  },
+  "explicit_instances": {
+    "SBLGNT": [
+      [
+        "n40027035009"
+      ],
+      [
+        "n41015024010"
+      ],
+      [
+        "n42023034019"
+      ],
+      [
+        "n43019024031"
+      ],
+      [
+        "n44001026003"
+      ]
+    ],
+    "wlc": [
+      [
+        "o030160080061"
+      ],
+      [
+        "o030160080071"
+      ],
+      [
+        "o030160080102"
+      ],
+      [
+        "o030160090082"
+      ],
+      [
+        "o030160100052"
+      ],
+      [
+        "o170030070121"
+      ],
+      [
+        "o170090240141"
+      ],
+      [
+        "o170090260092"
+      ]
+    ]
+  },
+  "id": "realia:Lot",
+  "key_references": [
+    "03016008",
+    "04026055",
+    "06014002",
+    "44001026"
+  ],
+  "lemmas": {
+    "el": [
+      "κλῆρος"
+    ],
+    "he": [
+      "גֹּורָל",
+      "פּוּר"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "حاجة مميزة بعلامة معينة، زي حصوة أو قطعة فخار، بتستعمل في اتخاذ القرارات عن طريق القرعة.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "قرعة"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "أداة ذات علامات خاصة، مثل حصاة أو كسرة فخار، تُستخدم لاتخاذ القرارات عن طريق القرعة.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "قرعة"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan samting we i gat spesel mak long hem, olsem wan smol ston o pis graonpot, we oli yusum blong faenemaot samting o mekem desisen tru long janis.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "spesel ston blong mekem laki"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Pottery Shard Lots"
+      ],
+      "descriptions": [
+        {
+          "article": "realia:Lot",
+          "description": "A specially marked object, like a pebble or piece of pottery, used to make decisions by chance.",
+          "gloss": "Lot",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Lot"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "شیئی با علامت‌گذاری خاص، مانند قلوه‌سنگ یا تکه‌ای سفال، که برای تصمیم‌گیری با شانس (قرعه‌کشی) استفاده می‌شد.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "قرعه"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Objet spécialement marqué, comme un caillou ou un tesson de poterie, utilisé pour prendre des décisions par tirage au sort.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "sort"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Wani abu da aka yi wa alama ta musamman, kamar tsakuwa ko ɓangaren tukunyar ƙasa, da ake amfani da shi wajen yanke shawara ta hanyar rabo.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ƙuri’a"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "संयोग या भाग्य द्वारा निर्णय लेने के लिए प्रयुक्त एक विशेष रूप से चिह्नित वस्तु, जैसे कि कंकड़ या ठीकर।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "चिट्ठी"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Ihe a kara akara pụrụ iche, dị ka obere nkume ma ọ bụ iberibe ite, nke a na-eji eme mkpebi site n'ike chi.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Nza"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Benda bertanda khusus, seperti kerikil atau pecahan tembikar, yang digunakan untuk mengambil keputusan melalui undian.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "undi"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "संयोग वा भाग्यद्वारा निर्णय गर्न प्रयोग गरिने ढुङ्गाको टुक्रा वा माटाको भाँडाको टुक्रा जस्तो विशेष चिह्न लगाइएको वस्तु।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "चिट्ठा"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Um objeto com marcações especiais, como uma pedra ou caco de cerâmica, usado para tomar decisões por sorteio.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "sorte"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Особым образом помеченный предмет (например, камешек или глиняный черепок), использовавшийся для принятия решений путем случайного выбора.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Жребий"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Objeto con una marca especial, como un guijarro o un pedazo de cerámica, utilizado para tomar decisiones por sorteo.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "suerte"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Kitu chenye alama maalum, kama vile kokoto au kigae, kinachotumiwa kufanya maamuzi kwa nasibu.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Kura"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Wanpela samting olsem ston o hap sospen graun ol i bin makim bilong mekim disisen long rot bilong pilai sat.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "sat"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Một vật được đánh dấu đặc biệt, như viên sỏi hoặc mảnh gốm, dùng để đưa ra quyết định bằng cách ngẫu nhiên.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Thăm"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "一种有特殊标记的物体，如卵石或陶片，用于凭偶然性做决定。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "签"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "一種有特別標記的物體（如卵石或陶片），用於抽籤作決定。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "鬮"
+    }
+  },
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "primary_id": "realia:Lot",
+  "pronominal_referents": {
+    "wlc": [
+      [
+        "o170030070131"
+      ],
+      [
+        "o170090240151"
+      ]
+    ]
+  },
+  "realia_type": "other",
+  "references": [
+    "03016008",
+    "03016009",
+    "03016010",
+    "17003007",
+    "17009024",
+    "17009026",
+    "40027035",
+    "41015024",
+    "42023034",
+    "43019024",
+    "44001026"
+  ],
+  "subject_referents": {},
+  "type": "realia",
+  "ubsdbh": [
+    "001361001001000",
+    "005816001001000"
+  ],
+  "ubsdgnt": [
+    "6.219"
+  ]
+}

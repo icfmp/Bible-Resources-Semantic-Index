@@ -1,0 +1,387 @@
+{
+  "alternate_sources": {
+    "aquifer": [
+      "4044|Beam|TyndaleBibleDictionary"
+    ],
+    "ubsdbh": [
+      "003398001001000",
+      "006423001002000",
+      "006987001002000"
+    ],
+    "ubsdgnt": [
+      "7.78"
+    ],
+    "ubsrealia": [
+      "realia:3.1.5.3"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "realia:Beam",
+    "review_status": "source_unreviewed",
+    "source_id": "realia:Beam",
+    "source_primary_id": "realia:Beam",
+    "source_sha256": "9a6483864840103084b94815e5123cd2922eda9a7a6e261042c937cd330bf7c7"
+  },
+  "explicit_instances": {
+    "SBLGNT": [
+      [
+        "n40007003019"
+      ],
+      [
+        "n40007004018"
+      ],
+      [
+        "n40007005009"
+      ],
+      [
+        "n42006041015"
+      ],
+      [
+        "n42006042023"
+      ],
+      [
+        "n42006042030"
+      ]
+    ],
+    "wlc": [
+      [
+        "o350020110052"
+      ],
+      [
+        "o140030070042"
+      ],
+      [
+        "o220010170011"
+      ],
+      [
+        "o110060090092"
+      ]
+    ]
+  },
+  "id": "realia:Beam",
+  "key_references": [
+    "14034011",
+    "22001017",
+    "40007003"
+  ],
+  "lemmas": {
+    "el": [
+      "δοκός"
+    ],
+    "he": [
+      "כָּפִיס",
+      "קֹורָה",
+      "שְׂדֵרָה"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "خشبة طويلة بيستعملوها عشان تسند سقف المبنى.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "خشبة السقف"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "قِطعةٌ طويلةٌ من الخشب تُستخدَم لِحَملِ سقفِ المبنى ودعمه.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "جائِزة"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan longfala pis wud we oli yusum blong holem ruf blong wan bilding.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "bim"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Rafter",
+        "Plank",
+        "Roof Beam"
+      ],
+      "descriptions": [
+        {
+          "article": "realia:Beam",
+          "description": "A long piece of wood used to support the roof of a building.",
+          "gloss": "Beam",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Beam"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "قطعه چوبی بلند که برای نگهداری سقف ساختمان استفاده می‌شود.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "تیر چوبی"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Une longue pièce de bois utilisée pour soutenir le toit d'un bâtiment.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "poutre"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Dogon itace da ake amfani da shi don riƙe ko ɗaukar rufin gini.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Tanka"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "लकड़ी का एक लंबा टुकड़ा जिसका उपयोग किसी भवन की छत को सहारा देने के लिए किया जाता है।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "धरन"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Ogologo osisi e ji akwado elu ụlọ.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ogidi"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Potongan kayu panjang yang digunakan untuk menyangga atap suatu bangunan.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "balok"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "भवन वा घरको छानोलाई अड्याउन प्रयोग गरिने काठको लामो टुक्रा।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "दलिन"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Uma peça longa de madeira usada para sustentar o teto de uma construção.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "viga"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Длинный брус или бревно, используемое для поддержания крыши здания.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "бревно"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Pieza larga de madera que se utiliza para sostener el techo de un edificio.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "viga"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Boriti ndefu ya mbao inayotumika kutegemeza paa la jengo.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Boriti"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Wanpela longpela diwai ol i yusim bilong holim rup bilong haus.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "plang bilong pilo"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Một thanh gỗ dài dùng để đỡ mái của một công trình xây dựng.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "xà nhà"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "用于支撑建筑物屋顶的长木料。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "梁"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "一根用來支撐建築物屋頂的長木材。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "樑木"
+    }
+  },
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "primary_id": "realia:Beam",
+  "pronominal_referents": {},
+  "realia_type": "other",
+  "references": [
+    "11006009",
+    "14003007",
+    "22001017",
+    "35002011",
+    "40007003",
+    "40007004",
+    "40007005",
+    "42006041",
+    "42006042"
+  ],
+  "speeches": {
+    "wlc": [
+      {
+        "quote_type": "Hypothetical",
+        "words": [
+          "o350020140011",
+          "o350020140021",
+          "o350020140031",
+          "o350020140032",
+          "o350020140041",
+          "o350020140042",
+          "o350020140051",
+          "o350020140061",
+          "o350020140071",
+          "o350020140081",
+          "o350020140081ה",
+          "o350020140082",
+          "o350020140091",
+          "o350020140101",
+          "o350020140111",
+          "o350020150011",
+          "o350020150021",
+          "o350020150031",
+          "o350020150032",
+          "o350020150041",
+          "o350020150051",
+          "o350020150052",
+          "o350020150061",
+          "o350020150062",
+          "o350020150071",
+          "o350020150081",
+          "o350020150091",
+          "o350020150101",
+          "o350020150111",
+          "o350020150112",
+          "o350020160011",
+          "o350020160021",
+          "o350020160031",
+          "o350020160032",
+          "o350020160041",
+          "o350020160051",
+          "o350020160061",
+          "o350020160071",
+          "o350020160072",
+          "o350020160081",
+          "o350020160091",
+          "o350020160092",
+          "o350020160101",
+          "o350020160111",
+          "o350020160121",
+          "o350020160131",
+          "o350020160132",
+          "o350020160141",
+          "o350020160151",
+          "o350020160152",
+          "o350020170011",
+          "o350020170021",
+          "o350020170031",
+          "o350020170041",
+          "o350020170042",
+          "o350020170051",
+          "o350020170052",
+          "o350020170061",
+          "o350020170071",
+          "o350020170072",
+          "o350020170081",
+          "o350020170082",
+          "o350020170091",
+          "o350020170101",
+          "o350020170102",
+          "o350020170111",
+          "o350020170121",
+          "o350020170131",
+          "o350020170132",
+          "o350020170141",
+          "o350020170151",
+          "o350020170152",
+          "o350020180011",
+          "o350020180021",
+          "o350020180031",
+          "o350020180041",
+          "o350020180051",
+          "o350020180052",
+          "o350020180061",
+          "o350020180062",
+          "o350020180071",
+          "o350020180081",
+          "o350020180082",
+          "o350020180091",
+          "o350020180101",
+          "o350020180111",
+          "o350020180121",
+          "o350020180131",
+          "o350020180132",
+          "o350020180141",
+          "o350020180142",
+          "o350020180151",
+          "o350020180152",
+          "o350020180161",
+          "o350020180171"
+        ]
+      }
+    ]
+  },
+  "subject_referents": {},
+  "type": "realia",
+  "ubsdbh": [
+    "003398001001000",
+    "006423001002000",
+    "006987001002000"
+  ],
+  "ubsdgnt": [
+    "7.78"
+  ]
+}

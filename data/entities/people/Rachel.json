@@ -1,0 +1,759 @@
+{
+  "alternate_sources": {
+    "aquifer": [
+      "7905|Rachel|TyndaleBibleDictionary",
+      "27007|Rachel|UWTranslationWords",
+      "132222|Rachel|BiblicaStudyNotesKeyTerms"
+    ],
+    "tipnr": [
+      "Rachel@Gen.29.6-Mat"
+    ],
+    "vizbible": [
+      "recT2Tm2K5XORGnbx"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "person:Rachel",
+    "review_status": "source_unreviewed",
+    "source_id": "person:Rachel",
+    "source_primary_id": "person:Rachel",
+    "source_sha256": "5b949363337b0fb811eeb3bc8693be3b088e04cf757fcc3ae96fce39c4bed664"
+  },
+  "explicit_instances": {
+    "SBLGNT": [
+      [
+        "n40002018009"
+      ]
+    ],
+    "wlc": [
+      [
+        "o010290060081"
+      ],
+      [
+        "o010290090042"
+      ],
+      [
+        "o010290100061"
+      ],
+      [
+        "o010290110032"
+      ],
+      [
+        "o010290120032"
+      ],
+      [
+        "o010290160091"
+      ],
+      [
+        "o010290170042"
+      ],
+      [
+        "o010290180041"
+      ],
+      [
+        "o010290180092"
+      ],
+      [
+        "o010290200032"
+      ],
+      [
+        "o010290250142"
+      ],
+      [
+        "o010290280101"
+      ],
+      [
+        "o010290290032"
+      ],
+      [
+        "o010290300041"
+      ],
+      [
+        "o010290300081"
+      ],
+      [
+        "o010290310092"
+      ],
+      [
+        "o010300010021"
+      ],
+      [
+        "o010300010081"
+      ],
+      [
+        "o010300020042"
+      ],
+      [
+        "o010300060021"
+      ],
+      [
+        "o010300070061"
+      ],
+      [
+        "o010300080021"
+      ],
+      [
+        "o010300140151"
+      ],
+      [
+        "o010300150131"
+      ],
+      [
+        "o010300220041"
+      ],
+      [
+        "o010300250041"
+      ],
+      [
+        "o010310040042"
+      ],
+      [
+        "o010310140021"
+      ],
+      [
+        "o010310190071"
+      ],
+      [
+        "o010310320201"
+      ],
+      [
+        "o010310330171"
+      ],
+      [
+        "o010310340012"
+      ],
+      [
+        "o010330010181"
+      ],
+      [
+        "o010330020121"
+      ],
+      [
+        "o010330070092"
+      ],
+      [
+        "o010350160111"
+      ],
+      [
+        "o010350190021"
+      ],
+      [
+        "o010350200091"
+      ],
+      [
+        "o010350240021"
+      ],
+      [
+        "o010350250041"
+      ],
+      [
+        "o010460190021"
+      ],
+      [
+        "o010460220031"
+      ],
+      [
+        "o010460250072"
+      ],
+      [
+        "o010480070061"
+      ],
+      [
+        "o080040110152"
+      ],
+      [
+        "o090100020091"
+      ],
+      [
+        "o240310150101"
+      ]
+    ]
+  },
+  "father": "person:Laban",
+  "gender": "female",
+  "id": "person:Rachel",
+  "key_references": [
+    "01029009",
+    "01029018",
+    "01029025",
+    "01030022",
+    "01035016",
+    "24031015"
+  ],
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "بت لابان، والزوجة التانية والمفضلة لي يعقوب. هي كانت أم يوسف وبنيامين. وجاريتها بلهة كانت أم دان ونفتالي.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "راحيل"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "ابنة لابان، والزوجة الثانية والأحب إلى يعقوب. كانت أمّ يوسف وبنيامين. وكانت جاريتها بلهة أمّ دان ونفتالي.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "رَاحِيل"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Dota blong Laban, mo seken woman blong Jekob we hem i laekem hem tumas. Hem i mama blong Josef mo Benjamin. Slefvuman blong hem Bilha i mama blong Dan mo Naftali.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Rejel"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Rahel",
+        "she"
+      ],
+      "descriptions": [
+        {
+          "article": "person:Rachel",
+          "description": "Daughter of Laban, and the second and favorite wife of Jacob. She was the mother of Joseph and Benjamin. Her slave Bilhah was the mother of Dan and Naphtali.",
+          "gloss": "Rachel",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Rachel"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "دختر لابان، و همسر دوم و محبوب یعقوب. او مادر یوسف و بنیامین بود. کنیز او بلهه مادر دان و نفتالی بود.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "راحیل"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Fille de Laban, seconde épouse et préférée de Jacob. Elle fut la mère de Joseph et Benjamin. Sa servante Bilha fut la mère de Dan et Nephthali.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Rachel"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "’Yar Laban, kuma mata ta biyu kuma wadda Yaƙub ya fi ƙauna. Ita ce mahaifiyar Yusuf da Benyamin. Kuyangarta Bilha ita ce mahaifiyar Dan da Naftali.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Rahila"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "लाबान की बेटी, और याकूब की दूसरी तथा प्रिय पत्नी। वह यूसुफ और बिन्यामीन की माता थी। उसकी दासी बिल्हा दान और नप्ताली की माता थी।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "राहेल"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Nwa nwanyị Leban, na nwunye nke abụọ nke Jekọb kacha hụ nʼanya. Ọ bụ nne Josef na Benjamin. Odibo ya nwaanyị bụ Bilha bụ nne Dan na Naftali.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Rechel"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Putri Laban, serta istri kedua dan yang paling dicintai Yakub. Ia adalah ibu dari Yusuf dan Benyamin. Budak perempuannya, Bilha, adalah ibu dari Dan dan Naftali.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Rahel"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "लाबानकी छोरी, र याकूबकी दोस्रो तथा प्रिय पत्‍नी। उनी योसेफ र बेन्यामिनकी आमा थिइन्। उनकी दासी बिल्‍हा दान र नप्‍तालीकी आमा थिइन्।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "राहेल"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Filha de Labão, e a segunda e favorita esposa de Jacó. Ela foi a mãe de José e Benjamim. Sua serva Bila foi mãe de Dã e Naftali.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Raquel"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Дочь Лавана, а также вторая и любимая жена Иакова. Она была матерью Иосифа и Вениамина. Ее служанка Валла была матерью Дана и Неффалима.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Рахиль"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Hija de Labán, y segunda y predilecta esposa de Jacob. Fue la madre de José y Benjamín. Su sierva Bilha fue la madre de Dan y Neftalí.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Raquel"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Binti wa Labani, na mke wa pili na aliyependwa zaidi na Yakobo. Alikuwa mama wa Yusufu na Benyamini. Mjakazi wake Bilha alikuwa mama wa Dani na Naftali.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Raheli"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Pikinini meri bilong Laban, na namba 2 meri na meri Jekop i laikim tumas. Em i mama bilong Josep na Benjamin. Wokmeri bilong em Bilha em i mama bilong Dan na Naftali.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Resel"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Con gái của La-ban, người vợ thứ hai và được yêu thương nhất của Gia-cốp. Bà là mẹ của Giô-sép và Bê-gia-min. Nữ tì của bà là Bi-la, mẹ của Đan và Nép-ta-li.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Ra-chên"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "拉班的女儿，也是雅各深爱的第二位妻子。她是约瑟和便雅悯的母亲。她的使女辟拉是但和拿弗他利的母亲。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "拉结"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "拉班的女兒，雅各的第二位妻子也是他最心愛的妻子。她是約瑟和便雅憫的母親。她的婢女辟拉是但和拿弗他利的母親。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "拉結"
+    }
+  },
+  "non_biblical": false,
+  "offspring": [
+    "person:Joseph.10",
+    "person:Benjamin"
+  ],
+  "only_mentioned_in_apocrypha": false,
+  "partners": [
+    "person:Israel"
+  ],
+  "primary_id": "person:Rachel",
+  "pronominal_referents": {
+    "SBLGNT": [
+      [
+        "n40002018013"
+      ]
+    ],
+    "wlc": [
+      [
+        "o010290090121"
+      ],
+      [
+        "o010290270081"
+      ],
+      [
+        "o010300010191"
+      ],
+      [
+        "o010300030121"
+      ],
+      [
+        "o010310060012"
+      ]
+    ]
+  },
+  "references": [
+    "01029006",
+    "01029009",
+    "01029010",
+    "01029011",
+    "01029012",
+    "01029016",
+    "01029017",
+    "01029018",
+    "01029020",
+    "01029025",
+    "01029028",
+    "01029029",
+    "01029030",
+    "01029031",
+    "01030001",
+    "01030002",
+    "01030006",
+    "01030007",
+    "01030008",
+    "01030014",
+    "01030015",
+    "01030022",
+    "01030025",
+    "01031004",
+    "01031014",
+    "01031019",
+    "01031032",
+    "01031033",
+    "01031034",
+    "01033001",
+    "01033002",
+    "01033007",
+    "01035016",
+    "01035019",
+    "01035020",
+    "01035024",
+    "01035025",
+    "01046019",
+    "01046022",
+    "01046025",
+    "01048007",
+    "08004011",
+    "09010002",
+    "24031015",
+    "40002018"
+  ],
+  "related_places": {
+    "death_place": [
+      "place:Ephrath"
+    ]
+  },
+  "roles": [
+    "Shepherd",
+    "Matriarch"
+  ],
+  "siblings": [
+    "person:Leah"
+  ],
+  "speeches": {
+    "wlc": [
+      {
+        "quote_type": "Normal",
+        "words": [
+          "o010300010131",
+          "o010300010132",
+          "o010300010141",
+          "o010300010142",
+          "o010300010151",
+          "o010300010161",
+          "o010300010162",
+          "o010300010171",
+          "o010300010181",
+          "o010300010191"
+        ]
+      },
+      {
+        "quote_type": "Normal",
+        "words": [
+          "o010300030021",
+          "o010300030031",
+          "o010300030032",
+          "o010300030041",
+          "o010300030051",
+          "o010300030061",
+          "o010300030062",
+          "o010300030071",
+          "o010300030072",
+          "o010300030081",
+          "o010300030091",
+          "o010300030092",
+          "o010300030101",
+          "o010300030102",
+          "o010300030111",
+          "o010300030121",
+          "o010300030131",
+          "o010300030132"
+        ]
+      },
+      {
+        "quote_type": "Normal",
+        "words": [
+          "o010300060031",
+          "o010300060032",
+          "o010300060041",
+          "o010300060051",
+          "o010300060052",
+          "o010300060061",
+          "o010300060071",
+          "o010300060072",
+          "o010300060073",
+          "o010300060081",
+          "o010300060082",
+          "o010300060091",
+          "o010300060092",
+          "o010300060101"
+        ]
+      },
+      {
+        "quote_type": "Normal",
+        "words": [
+          "o010300080031",
+          "o010300080041",
+          "o010300080051",
+          "o010300080061",
+          "o010300080071",
+          "o010300080072",
+          "o010300080081",
+          "o010300080091"
+        ]
+      },
+      {
+        "quote_type": "Normal",
+        "words": [
+          "o010300140181",
+          "o010300140191",
+          "o010300140201",
+          "o010300140202",
+          "o010300140211",
+          "o010300140212",
+          "o010300140221",
+          "o010300140222"
+        ]
+      },
+      {
+        "quote_type": "Normal",
+        "words": [
+          "o010300150141",
+          "o010300150142",
+          "o010300150151",
+          "o010300150161",
+          "o010300150162",
+          "o010300150171",
+          "o010300150172",
+          "o010300150181",
+          "o010300150191",
+          "o010300150201",
+          "o010300150202"
+        ]
+      },
+      {
+        "quote_type": "Normal",
+        "words": [
+          "o010300230051",
+          "o010300230061",
+          "o010300230071",
+          "o010300230081",
+          "o010300230082"
+        ]
+      },
+      {
+        "quote_type": "Normal",
+        "words": [
+          "o010300240061",
+          "o010300240071",
+          "o010300240081",
+          "o010300240082",
+          "o010300240091",
+          "o010300240101"
+        ]
+      },
+      {
+        "quote_type": "Normal",
+        "words": [
+          "o010310140062",
+          "o010310140071",
+          "o010310140072",
+          "o010310140081",
+          "o010310140091",
+          "o010310140092",
+          "o010310140101",
+          "o010310140102",
+          "o010310140111",
+          "o010310140112",
+          "o010310150011",
+          "o010310150012",
+          "o010310150021",
+          "o010310150031",
+          "o010310150041",
+          "o010310150042",
+          "o010310150051",
+          "o010310150061",
+          "o010310150062",
+          "o010310150071",
+          "o010310150072",
+          "o010310150081",
+          "o010310150091",
+          "o010310150101",
+          "o010310150111",
+          "o010310150112",
+          "o010310160011",
+          "o010310160021",
+          "o010310160031",
+          "o010310160032",
+          "o010310160041",
+          "o010310160051",
+          "o010310160061",
+          "o010310160071",
+          "o010310160072",
+          "o010310160073",
+          "o010310160081",
+          "o010310160082",
+          "o010310160091",
+          "o010310160101",
+          "o010310160102",
+          "o010310160103",
+          "o010310160104",
+          "o010310160111",
+          "o010310160112",
+          "o010310160121",
+          "o010310160131",
+          "o010310160141",
+          "o010310160151",
+          "o010310160161",
+          "o010310160162",
+          "o010310160171"
+        ]
+      },
+      {
+        "quote_type": "Normal",
+        "words": [
+          "o010310350041",
+          "o010310350051",
+          "o010310350061",
+          "o010310350062",
+          "o010310350071",
+          "o010310350072",
+          "o010310350081",
+          "o010310350091",
+          "o010310350101",
+          "o010310350111",
+          "o010310350112",
+          "o010310350121",
+          "o010310350122",
+          "o010310350123",
+          "o010310350131",
+          "o010310350141",
+          "o010310350151",
+          "o010310350161",
+          "o010310350162"
+        ]
+      }
+    ]
+  },
+  "subject_referents": {
+    "SBLGNT": [
+      [
+        "n40002018016",
+        "n40002018017"
+      ]
+    ],
+    "wlc": [
+      [
+        "o010290090111"
+      ],
+      [
+        "o010290120122"
+      ],
+      [
+        "o010290120132"
+      ],
+      [
+        "o010300010051"
+      ],
+      [
+        "o010300010102"
+      ],
+      [
+        "o010300030012"
+      ],
+      [
+        "o010300040012"
+      ],
+      [
+        "o010300060131"
+      ],
+      [
+        "o010300080051"
+      ],
+      [
+        "o010300080091"
+      ],
+      [
+        "o010300080102"
+      ],
+      [
+        "o010300150073"
+      ],
+      [
+        "o010300230012"
+      ],
+      [
+        "o010300230022"
+      ],
+      [
+        "o010300230042"
+      ],
+      [
+        "o010300240012"
+      ],
+      [
+        "o010300240052"
+      ],
+      [
+        "o010310140042"
+      ],
+      [
+        "o010310150031"
+      ],
+      [
+        "o010310340052"
+      ],
+      [
+        "o010310340082"
+      ],
+      [
+        "o010310350012"
+      ],
+      [
+        "o010310350101"
+      ],
+      [
+        "o010310350112"
+      ],
+      [
+        "o010330070102"
+      ],
+      [
+        "o010350190032"
+      ],
+      [
+        "o240310150141"
+      ],
+      [
+        "o240310150152"
+      ],
+      [
+        "o240310160041"
+      ]
+    ]
+  },
+  "tribe": "group:Earlypatriarchs",
+  "type": "person"
+}

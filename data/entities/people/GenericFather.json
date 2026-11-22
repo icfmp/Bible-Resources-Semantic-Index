@@ -1,0 +1,544 @@
+{
+  "bsi": {
+    "canonical_id": "person:GenericFather",
+    "review_status": "source_unreviewed",
+    "source_id": "person:GenericFather",
+    "source_primary_id": "person:GenericFather",
+    "source_sha256": "bce965e831b6e7861e65f4d49f8748d9f3877f0f0e60d3f7e2e89d48fd9ff866"
+  },
+  "explicit_instances": {
+    "SBLGNT": [
+      [
+        "n41009017007"
+      ],
+      [
+        "n41009021013"
+      ],
+      [
+        "n41009024004"
+      ],
+      [
+        "n43009023004"
+      ]
+    ],
+    "wlc": [
+      [
+        "o070190050091"
+      ],
+      [
+        "o070190060071"
+      ],
+      [
+        "o070190080071"
+      ],
+      [
+        "o070190090101"
+      ]
+    ]
+  },
+  "id": "person:GenericFather",
+  "key_references": [],
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "أب ما مسمى مشارك في النص الكتابي.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "أب"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "أب لم يُذكر اسمه يشارك في النص الكتابي.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "أب"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan papa we nem blong hem i no stap we i tekpat long stori ya.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Wan Papa"
+    },
+    "eng": {
+      "descriptions": [
+        {
+          "description": "An unnamed father participating in the passage.",
+          "gloss": "A Father",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "A Father"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "پدری بی‌نام که در یک گذرگاه کتاب‌مقدس حضور دارد.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "پدر"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Un père anonyme intervenant dans le passage.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Un père"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Wani uba wanda ba a ambaci sunansa ba da ke da hannu a nassin.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Uba"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "किसी संदर्भ या घटना में भाग लेने वाला एक अनाम पिता।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "एक पिता"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Nna a na-akpọghị aha na-ekere òkè nʼotu akụkụ Akwụkwọ Nsọ.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Nna"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Seorang ayah tak bernama yang mengambil bagian dalam suatu nas.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Seorang Ayah"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "खण्डमा सहभागी एक अज्ञात बुबा।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "एक बुबा"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Um pai não identificado que participa da passagem.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Um pai"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Безымянный отец, участвующий в отрывке.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Отец"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Un padre anónimo que participa en el pasaje.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "un padre"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Baba asiyetajwa jina anayeshiriki katika kifungu.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Baba"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Wanpela papa i no gat nem i mekim samting long dispela hap bilong Baibel.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Wanpela Papa"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Một người cha không rõ tên xuất hiện trong phân đoạn Kinh Thánh.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Một người cha"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "经文中出现的一位无名父亲。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "一位父亲"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "參與經文事件的一位未具名父親。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "一位父親"
+    }
+  },
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "primary_id": "person:GenericFather",
+  "pronominal_referents": {},
+  "references": [
+    "07019005",
+    "07019006",
+    "07019008",
+    "07019009",
+    "41009017",
+    "41009021",
+    "41009024",
+    "43009023"
+  ],
+  "speeches": {
+    "SBLGNT": [
+      {
+        "delivery": "distraught",
+        "quote_type": "Dialogue",
+        "words": [
+          "n40017015003",
+          "n40017015004",
+          "n40017015005",
+          "n40017015006",
+          "n40017015007",
+          "n40017015008",
+          "n40017015009",
+          "n40017015010",
+          "n40017015011",
+          "n40017015012",
+          "n40017015013",
+          "n40017015014",
+          "n40017015015",
+          "n40017015016",
+          "n40017015017",
+          "n40017015018",
+          "n40017015019",
+          "n40017015020",
+          "n40017015021",
+          "n40017015022",
+          "n40017015023",
+          "n40017016001",
+          "n40017016002",
+          "n40017016003",
+          "n40017016004",
+          "n40017016005",
+          "n40017016006",
+          "n40017016007",
+          "n40017016008",
+          "n40017016009",
+          "n40017016010",
+          "n40017016011"
+        ]
+      },
+      {
+        "quote_type": "Dialogue",
+        "words": [
+          "n41009017008",
+          "n41009017009",
+          "n41009017010",
+          "n41009017011",
+          "n41009017012",
+          "n41009017013",
+          "n41009017014",
+          "n41009017015",
+          "n41009017016",
+          "n41009017017",
+          "n41009018001",
+          "n41009018002",
+          "n41009018003",
+          "n41009018004",
+          "n41009018005",
+          "n41009018006",
+          "n41009018007",
+          "n41009018008",
+          "n41009018009",
+          "n41009018010",
+          "n41009018011",
+          "n41009018012",
+          "n41009018013",
+          "n41009018014",
+          "n41009018015",
+          "n41009018016",
+          "n41009018017",
+          "n41009018018",
+          "n41009018019",
+          "n41009018020",
+          "n41009018021",
+          "n41009018022",
+          "n41009018023",
+          "n41009018024",
+          "n41009018025",
+          "n41009018026"
+        ]
+      },
+      {
+        "delivery": "distraught",
+        "quote_type": "Dialogue",
+        "words": [
+          "n41009021016",
+          "n41009021017",
+          "n41009022001",
+          "n41009022002",
+          "n41009022003",
+          "n41009022004",
+          "n41009022005",
+          "n41009022006",
+          "n41009022007",
+          "n41009022008",
+          "n41009022009",
+          "n41009022010",
+          "n41009022011",
+          "n41009022012",
+          "n41009022013",
+          "n41009022014",
+          "n41009022015",
+          "n41009022016",
+          "n41009022017",
+          "n41009022018",
+          "n41009022019",
+          "n41009022020",
+          "n41009022021",
+          "n41009022022"
+        ]
+      },
+      {
+        "quote_type": "Dialogue",
+        "words": [
+          "n41009024008",
+          "n41009024009",
+          "n41009024010",
+          "n41009024011",
+          "n41009024012"
+        ]
+      },
+      {
+        "delivery": "distraught",
+        "quote_type": "Dialogue",
+        "words": [
+          "n42009038009",
+          "n42009038010",
+          "n42009038011",
+          "n42009038012",
+          "n42009038013",
+          "n42009038014",
+          "n42009038015",
+          "n42009038016",
+          "n42009038017",
+          "n42009038018",
+          "n42009038019",
+          "n42009038020",
+          "n42009039001",
+          "n42009039002",
+          "n42009039003",
+          "n42009039004",
+          "n42009039005",
+          "n42009039006",
+          "n42009039007",
+          "n42009039008",
+          "n42009039009",
+          "n42009039010",
+          "n42009039011",
+          "n42009039012",
+          "n42009039013",
+          "n42009039014",
+          "n42009039015",
+          "n42009039016",
+          "n42009039017",
+          "n42009039018",
+          "n42009039019",
+          "n42009039020",
+          "n42009040001",
+          "n42009040002",
+          "n42009040003",
+          "n42009040004",
+          "n42009040005",
+          "n42009040006",
+          "n42009040007",
+          "n42009040008",
+          "n42009040009",
+          "n42009040010",
+          "n42009040011"
+        ]
+      },
+      {
+        "delivery": "cautious",
+        "quote_type": "Dialogue",
+        "words": [
+          "n43009020008",
+          "n43009020009",
+          "n43009020010",
+          "n43009020011",
+          "n43009020012",
+          "n43009020013",
+          "n43009020014",
+          "n43009020015",
+          "n43009020016",
+          "n43009020017",
+          "n43009020018",
+          "n43009021001",
+          "n43009021002",
+          "n43009021003",
+          "n43009021004",
+          "n43009021005",
+          "n43009021006",
+          "n43009021007",
+          "n43009021008",
+          "n43009021009",
+          "n43009021010",
+          "n43009021011",
+          "n43009021012",
+          "n43009021013",
+          "n43009021014",
+          "n43009021015",
+          "n43009021016",
+          "n43009021017",
+          "n43009021018",
+          "n43009021019",
+          "n43009021020",
+          "n43009021021",
+          "n43009021022",
+          "n43009021023"
+        ]
+      },
+      {
+        "quote_type": "Quotation",
+        "words": [
+          "n43009023008",
+          "n43009023009",
+          "n43009023010",
+          "n43009023011"
+        ]
+      }
+    ],
+    "wlc": [
+      {
+        "quote_type": "Normal",
+        "words": [
+          "o070190050131",
+          "o070190050141",
+          "o070190050142",
+          "o070190050151",
+          "o070190050161",
+          "o070190050171",
+          "o070190050172",
+          "o070190050181"
+        ]
+      },
+      {
+        "quote_type": "Normal",
+        "words": [
+          "o070190060111",
+          "o070190060121",
+          "o070190060131",
+          "o070190060132",
+          "o070190060141",
+          "o070190060142",
+          "o070190060151",
+          "o070190060152"
+        ]
+      },
+      {
+        "quote_type": "Normal",
+        "words": [
+          "o070190080091",
+          "o070190080101",
+          "o070190080111",
+          "o070190080112"
+        ]
+      },
+      {
+        "quote_type": "Normal",
+        "words": [
+          "o070190090121",
+          "o070190090131",
+          "o070190090141",
+          "o070190090151",
+          "o070190090152",
+          "o070190090161",
+          "o070190090162",
+          "o070190090171",
+          "o070190090181",
+          "o070190090191",
+          "o070190090201",
+          "o070190090211",
+          "o070190090212",
+          "o070190090221",
+          "o070190090231",
+          "o070190090241",
+          "o070190090242",
+          "o070190090251",
+          "o070190090252",
+          "o070190090261",
+          "o070190090262",
+          "o070190090271",
+          "o070190090281",
+          "o070190090282",
+          "o070190090283",
+          "o070190090291",
+          "o070190090292",
+          "o070190090301",
+          "o070190090302"
+        ]
+      }
+    ]
+  },
+  "subject_referents": {
+    "SBLGNT": [
+      [
+        "n40017014008"
+      ],
+      [
+        "n40017015002"
+      ],
+      [
+        "n42009038003"
+      ],
+      [
+        "n42009038008"
+      ],
+      [
+        "n43009020004"
+      ],
+      [
+        "n43009020007"
+      ]
+    ]
+  },
+  "type": "person"
+}

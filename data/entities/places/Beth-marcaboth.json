@@ -1,0 +1,267 @@
+{
+  "added_entry": false,
+  "alternate_sources": {
+    "aquifer": [
+      "4189|Beth-Marcaboth|TyndaleBibleDictionary"
+    ],
+    "tipnr": [
+      "Beth-marcaboth|Madmannah@Jos.15.31-1Ch"
+    ],
+    "ubsdbh": [
+      "000950001001000"
+    ],
+    "vizbible": [
+      "recIvd8hPkCOsl51H"
+    ]
+  },
+  "bsi": {
+    "canonical_id": "place:Madmannah",
+    "review_status": "source_unreviewed",
+    "source_id": "place:Beth-marcaboth",
+    "source_primary_id": "place:Madmannah",
+    "source_sha256": "beea6f3f5dad0ea8916acbecfa1220c46bfdae54f84f5da449ac8e8bbf7cffb1"
+  },
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o060190050022",
+        "o060190050031"
+      ],
+      [
+        "o130040310013",
+        "o130040310021"
+      ]
+    ]
+  },
+  "geocoordinates": {
+    "obi": {
+      "lat": "31.391668",
+      "lon": "34.940502"
+    },
+    "vizbible": {
+      "lat": "31.391668",
+      "lon": "34.940502"
+    }
+  },
+  "id": "place:Beth-marcaboth",
+  "is_artifact": false,
+  "is_person": false,
+  "key_references": [
+    "06019005",
+    "13004031"
+  ],
+  "lemmas": {
+    "he": [
+      "בֵּית הַמַּרְכָּבֹות",
+      "בֵּית מַרְכָּבוֹת"
+    ]
+  },
+  "localizations": {
+    "apd": {
+      "descriptions": [
+        {
+          "description": "مدينة في أرض شمعون.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "بيت مركبات"
+    },
+    "arb": {
+      "descriptions": [
+        {
+          "description": "بلدة في أرض شمعون.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "بَيْتِ مَرْكَبُوتَ"
+    },
+    "bis": {
+      "descriptions": [
+        {
+          "description": "Wan taon long graon blong traeb blong Simeon.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Betmakabot"
+    },
+    "eng": {
+      "alternate_labels": [
+        "Beth Markaboth",
+        "Madmannah"
+      ],
+      "descriptions": [
+        {
+          "article": "place:Beth-marcaboth",
+          "description": "A town in the territory of Simeon.",
+          "gloss": "Beth-Marcaboth",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Beth-marcaboth"
+    },
+    "fas": {
+      "descriptions": [
+        {
+          "description": "شهری در قلمرو شمعون.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "بیت‌مرکبوت"
+    },
+    "fra": {
+      "descriptions": [
+        {
+          "description": "Une ville sur le territoire de Siméon.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Beth-Marcaboth"
+    },
+    "hau": {
+      "descriptions": [
+        {
+          "description": "Gari a yankin Simeyon.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Bet-Markabot"
+    },
+    "hin": {
+      "descriptions": [
+        {
+          "description": "शिमोन के क्षेत्र का एक नगर।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "बेत्मर्काबोत"
+    },
+    "ibo": {
+      "descriptions": [
+        {
+          "description": "Otu obodo dị nʼókèala Simiọn.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Bet-Makabọt"
+    },
+    "ind": {
+      "descriptions": [
+        {
+          "description": "Sebuah kota di wilayah suku Simeon.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Bet-Markabot"
+    },
+    "nep": {
+      "descriptions": [
+        {
+          "description": "शिमोनको इलाकाको एउटा सहर।",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "बेथ-मर्काबोथ"
+    },
+    "por": {
+      "descriptions": [
+        {
+          "description": "Uma cidade no território de Simeão.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Bete-Marcabote"
+    },
+    "rus": {
+      "descriptions": [
+        {
+          "description": "Город в уделе Симеона.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Беф-Маркавоф"
+    },
+    "spa": {
+      "descriptions": [
+        {
+          "description": "Poblado en el territorio de Simeón.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Bet Marcabot"
+    },
+    "swh": {
+      "descriptions": [
+        {
+          "description": "Mji katika eneo la Simeoni.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Beth-Markabothi"
+    },
+    "tpi": {
+      "descriptions": [
+        {
+          "description": "Wanpela taun long graun bilong lain Simeon.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Bet Markabot"
+    },
+    "vie": {
+      "descriptions": [
+        {
+          "description": "Một thị trấn trong lãnh thổ Si-mê-ôn.",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "Bết-ma-ca-bốt"
+    },
+    "zhs": {
+      "descriptions": [
+        {
+          "description": "西缅领地内的一座城镇。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "伯·玛加博"
+    },
+    "zht": {
+      "descriptions": [
+        {
+          "description": "西緬領地內的一座城鎮。",
+          "source": "acai"
+        }
+      ],
+      "preferred_label": "伯‧瑪加博"
+    }
+  },
+  "mentioned_in_bible": true,
+  "non_biblical": false,
+  "only_mentioned_in_apocrypha": false,
+  "place_types": {
+    "acai": [
+      "town"
+    ],
+    "obi": [
+      "settlement"
+    ]
+  },
+  "primary_id": "place:Madmannah",
+  "pronominal_referents": {},
+  "references": [
+    "06019005",
+    "13004031"
+  ],
+  "referred_to_as": [
+    "place:Madmannah"
+  ],
+  "subject_referents": {},
+  "subregion_of": [
+    "place:TerritoryOfSimeon"
+  ],
+  "tribal_area": "group:Simeon",
+  "type": "place",
+  "ubsdbh": [
+    "000950001001000"
+  ]
+}
