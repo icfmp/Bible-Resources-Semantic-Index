@@ -128,7 +128,7 @@ def main():
     print(json.dumps({key: result[key] for key in
                       ("records_examined", "structured_relationships", "classifications")},
                      sort_keys=True))
-    if args.fail_on_unresolved and result["classifications"].get("unresolved_identity", 0):
+    print(json.dumps({"review_candidates": result["review_candidates"]},\n                     ensure_ascii=False, sort_keys=True))\n    if args.fail_on_unresolved and result["classifications"].get("unresolved_identity", 0):
         raise SystemExit("Unresolved cross-entity links require explicit review")
 
 
