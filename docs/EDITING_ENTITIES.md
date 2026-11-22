@@ -20,6 +20,15 @@ BSI dataset. They are **not** rebuilt by replaying historical ACAI patches.
 5. If an identity was quarantined, keep its original evidence under
    `data/quarantined/`, with a reason; never silently drop its source record.
 
+## Bible references
+
+Treat `references` and `key_references` as separate inherited ACAI ORG
+BCV8 lists. A key reference does **not** prove there is an explicit matching
+original-language token in that verse, and no source-defined subset rule has
+been established. See [source reference semantics](SOURCE_REFERENCE_SEMANTICS.md).
+Validate original-word anchors against the exact pinned WLC/SBLGNT edition;
+never generate a new biblical reference to make a test pass.
+
 ## Minimal identity identification (not encyclopedic prose)
 
 BRSI is a **source-backed index of identities and links**, not a multilingual
