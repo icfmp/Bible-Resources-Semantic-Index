@@ -62,6 +62,9 @@ class RelationIndexTests(unittest.TestCase):
         self.assertEqual(graph["counts"]["indexed_claims"], 7)
         self.assertEqual(graph["counts"]["withheld_unclassified"], 1)
         self.assertEqual(graph["counts"]["source_unreviewed"], 6)
+        self.assertEqual(graph["counts"]["unclassified_by_field"],
+                         {"unclassified_relation": 1})
+        self.assertEqual(graph["counts"]["by_source_field"]["group_origin"], 2)
         self.assertEqual(len(graph["by_source"]["person:A"]), 7)
         self.assertEqual(len(graph["by_target"]["person:B"]), 3)
         self.assertNotIn("person:A", graph["by_target"])
