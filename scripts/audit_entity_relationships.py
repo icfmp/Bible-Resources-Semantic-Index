@@ -121,14 +121,17 @@ def main():
     parser.add_argument("--fail-on-unresolved", action="store_true")
     args = parser.parse_args()
     result = audit(args.data)
-    output = json.dumps(result, ensure_ascii=False, indent=2, sort_keys=True) + "\n"
+    output = json.dumps(result, ensure_ascii=False, indent=2, sort_keys=True) + "
+"
     if args.report:
         args.report.parent.mkdir(parents=True, exist_ok=True)
         args.report.write_text(output, encoding="utf-8")
     print(json.dumps({key: result[key] for key in
                       ("records_examined", "structured_relationships", "classifications")},
                      sort_keys=True))
-    print(json.dumps({"review_candidates": result["review_candidates"]},\n                     ensure_ascii=False, sort_keys=True))\n    if args.fail_on_unresolved and result["classifications"].get("unresolved_identity", 0):
+    print(json.dumps({"review_candidates": result["review_candidates"]},
+                     ensure_ascii=False, sort_keys=True))
+    if args.fail_on_unresolved and result["classifications"].get("unresolved_identity", 0):
         raise SystemExit("Unresolved cross-entity links require explicit review")
 
 
