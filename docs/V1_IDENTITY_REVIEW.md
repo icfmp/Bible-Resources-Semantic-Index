@@ -87,15 +87,19 @@ can identify the unknown relatives.
 
 ## Scope and release gate
 
-The reopened issue #6 remains under substantive review. PR #99 performs
+The substantive issue #6 was reopened and resolved through actual record corrections in PRs #99–#101. PR #99 performs
 additional source-based data fixes instead of merely hiding warnings:
 quarantine of unsupported husbands; removing the falsely inferred Salome
 mother/daughter relationship in Mark 15:40 and 16:1; removing a demonstrably
 misassigned Ezra 3:9 word from the unrelated Hodiah teacher; correcting
 directly attested place references in Judges 1:35 and Joshua 11:8; removing
 the SBLGNT Matthew 8:28 Gadarenes token from the Gerasa city lookup.
-Other homonym/genealogical uncertainties remain evidence-dependent; no
-unsupported assertion is promoted to editorial approval. Any future work to resolve a particular
+All ten originally listed case candidates now have individually documented,
+source-supported classifications or repairs. The two disputed genealogical
+readings have explicit final editorial *unknown-parent* treatment: they are
+not positive evidence for merging persons, inventing a missing spouse or
+selecting one of the competing maternal/father readings. No unsupported
+assertion is promoted to editorial approval. Any future work to resolve a particular
 unreviewed textual/ethnographic claim requires exact edition witnesses, a scoped
 issue and new editorial evidence. A V1 release remains blocked under [#62](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/62)
 until rights/consumer/owner approval, irrespective of this issue's status.
