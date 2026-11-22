@@ -14,7 +14,40 @@
     "review_status": "source_unreviewed",
     "source_id": "place:Gerasa",
     "source_primary_id": "place:Gerasa",
-    "source_sha256": "30a152fee2abf61ae6b5294746506ace12e35a227d8ceaf5e57ac462b8a7c93a"
+    "source_sha256": "30a152fee2abf61ae6b5294746506ace12e35a227d8ceaf5e57ac462b8a7c93a",
+    "editorial_field_changes": [
+      {
+        "action": "remove_unverified_cross_city_and_editorial_aliases",
+        "removed_localization_values": {
+          "eng": {
+            "alternate_labels": [
+              "Gergesene",
+              "Gadarenes",
+              "Gergesenes",
+              "Var",
+              "Gadarene",
+              "Gadara"
+            ]
+          }
+        },
+        "reason": "Gerasa and Gadara are distinct Decapolis cities. The Gerasa-region names in Mark 5:1 and Luke 8:26 are neither unqualified city synonyms nor proof of the miracle's geographical site. Gergesenes and Gadarenes are attested textual variants, not approved Gerasa aliases.",
+        "evidence": [
+          "Matthew 8:28",
+          "Mark 5:1",
+          "Luke 8:26",
+          "https://classic.net.bible.org/passage.php?passage=Mar+5%3A1-19",
+          "https://classic.net.bible.org/passage.php?passage=Mat+8%3A28-34"
+        ]
+      }
+    ],
+    "inherited_localizations": {
+      "status": "withheld_pending_review",
+      "source": "acai",
+      "reason": "Regional demonyms and textual variants must not be promoted into exact historic city synonyms.",
+      "fields": [
+        "eng.alternate_labels"
+      ]
+    }
   },
   "explicit_instances": {
     "SBLGNT": [
@@ -49,12 +82,7 @@
     "eng": {
       "alternate_labels": [
         "Gerasenes",
-        "Gerasene",
-        "Gergesene",
-        "Gadarenes",
-        "Var",
-        "Gadarene",
-        "Gadara"
+        "Gerasene"
       ],
       "preferred_label": "Gerasa"
     }
