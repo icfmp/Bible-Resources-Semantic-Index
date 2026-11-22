@@ -1,12 +1,15 @@
-# Bible Semantic Index (BSI)
+# Bible Resources Semantic Index (BRSI)
 
 Open-source, offline, source-pinned **biblical entity and lexical indexes**.
+
+**BRSI** is the current project name. Historical `BSI` IDs, release tags,
+source filenames and GitHub URLs remain stable for compatibility.
 This is the authoritative development repository for BSI. Bible-Resources
 retains the three **historically published** BSI ZIP releases until a separate
 delivery/publication migration is approved. BSI is neither the Bible application
 nor a SWORD module.
 
-**Outstanding work and postponed decisions:** [BSI work plan](docs/ROADMAP.md) — also records which UBS research evidence is retained versus reproducibly regenerated.
+**Current milestones and issues:** [BRSI roadmap](docs/ROADMAP.md) — also records which UBS research evidence is retained versus reproducibly regenerated.
 
 ## Current sources of truth
 
