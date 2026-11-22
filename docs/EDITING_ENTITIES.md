@@ -125,6 +125,13 @@ two source records that share one reviewed canonical ID are not necessarily
 two historical people.
 
 A collision is **not** evidence that names refer to the same individual.
+The audit now also labels candidates with a unique existing **key verse**
+or a unique **explicit original-word witness** among canonical namesakes.
+This is a convenient *editorial sorting aid*, **not** approval of an
+identity or proof that two similarly named figures are different.
+If neither anchor distinguishes a name, the case remains openly unresolved.
+All source witness fields stay untouched.
+
 A distinct `bsi.identity_hint` must be justified manually using existing
 biblical references, exact original-word evidence and relevant reviewed
 family/place links. Never automatically derive qualifiers from unreviewed
