@@ -47,7 +47,9 @@ def digest(path: Path, expected: dict):
     if "size" in expected and len(raw) != expected["size"]:
         raise ValueError(f"{path}: input size differs from pinned source")
     sha = hashlib.sha256(raw).hexdigest()
-    if expected.get("sha256") is not None and sha != expected["sha256"]:
+    if not SHA256.fullmatch(expected.get("sha256") or ""):
+        raise ValueError(f"{path}: missing or malformed pinned SHA-256")
+    if sha != expected["sha256"]:
         raise ValueError(f"{path}: SHA-256 differs from pinned source")
     # Git blob SHA-1 protects the pinned original bytes until SHA-256 is recorded.
     git_sha = hashlib.sha1(b"blob " + str(len(raw)).encode() + b"\0" + raw).hexdigest()
@@ -176,6 +178,7 @@ def build(manifest, corrections_doc, upstream_root: Path):
         aligned_target = set()
         overlapping_source = Counter()
         overlapping_target = Counter()
+        problem_by_book = defaultdict(Counter)
         for number, original in enumerate(alignment["records"]):
             if not isinstance(original, dict):
                 raise ValueError(f"{canon}: record {number} not an object")
@@ -226,6 +229,7 @@ def build(manifest, corrections_doc, upstream_root: Path):
             row = {
                 "ordinal": number,
                 "upstream_id": upstream_id,
+                "original_record_meta": original.get("meta", {}),
                 "source_ids_original": raw_source,
                 "target_ids_original": raw_target,
                 "source_ids": record["source"],
@@ -245,6 +249,9 @@ def build(manifest, corrections_doc, upstream_root: Path):
             stats["topology_" + topology] += 1
             for problem in problems:
                 stats["problem_" + problem] += 1
+                anchors = [x for x in src + tgt if x is not None]
+                book = verse_id(anchors[0])[:2] if anchors else "unknown"
+                problem_by_book[problem][book] += 1
         if set(corrections) != used_corrections and canon == manifest["groups"][-1]["canon"]:
             raise ValueError("unused corrections in ledger")
         stats["records"] = len(rows)
@@ -260,12 +267,15 @@ def build(manifest, corrections_doc, upstream_root: Path):
         indexes[canon] = {
             "source_edition": group["source_edition"],
             "target_edition": manifest["target_edition"],
-            "source_id_scheme": "MACULA BCVWP (corpus-qualified)",
+            "source_id_scheme": "MACULA BCVW(P) (corpus-qualified)",
             "target_id_scheme": "BCVW(P) token ordinal; edition-specific",
+            "alignment_type": alignment["type"],
+            "original_group_meta": alignment["meta"],
             "records": rows,
             "by_source": dict(sorted(by_source.items())),
             "by_target": dict(sorted(by_target.items())),
             "coverage": dict(sorted(stats.items())),
+            "problem_counts_by_book": {k: dict(sorted(v.items())) for k, v in sorted(problem_by_book.items())},
             "rights_status": "private_candidate_no_publication",
         }
     if set(corrections) != used_corrections:
