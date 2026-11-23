@@ -147,3 +147,21 @@ An editorial disposition is not a release or publication approval. All original 
 Keep the original source, editorial changes and any unresolved doubts
 traceable; the BRSI release manifest must distinguish inherited evidence
 from reviewed interpretations.
+
+## Second independent 115-case resolution batch
+
+PR #140 adds a separate provenance chain for issue #23. The frozen inventory in data/source-key-unresolved-queue.json preserves the 243 distinct outstanding source identities after PR #139; these are *candidates*, not 243 proven errors. data/source-key-next-115-candidates.json selects 115 disjoint identities from that queue. The selection alone is not a completion claim.
+
+Independent original-language examination was performed against the exact pinned Macula WLC and SBLGNT word editions. scripts/inspect_next_source_key_cases.py is the reusable, read-only contextual probe. data/source-key-next-115-resolved.json records each historical key, its original-language word witness ID, exact source-derived excerpt, original/contextual distinction, and independent editorial disposition.
+
+**115 fully adjudicated additional identities:** eight reversible source-key corrections, 107 cases confirmed contextually correct without altering the inherited record. Five corrections are invalid original-language / cross-edition numbering or unrelated entities: Abishua wrongly linked to Uzzah and Ahio in 2 Samuel 6:3-4; Adoram linked to Solomon's wisdom instead of his labor office at 1 Kings 5:28; Solomon wrongly keyed to nonexistent pinned WLC 1 Kings 4:29 instead of 5:9; Capernaum wrongly keyed to Matthew 1:12; and Sickle wrongly attached to Deuteronomy 23:25's vineyard law instead of Hebrew 23:26. Three further distinct-identity corrections remove Gad's blessing from Dan, Eliphaz's family branch from Reuel and Zelophehad's daughters from Jair.
+
+Every edit includes a specific reason, frozen original-word evidence and an exact reversible before/after source-field receipt. No original Bible text, source SHA-256, language edition or versification has been rewritten.
+
+scripts/validate_source_key_resolution_batches.py is a reusable schema v2 validator for later independently completed batches, not a one-off 115-only matcher. It rejects duplicate or previously resolved identities, unsupported original-word IDs, altered candidate keys, non-final classifications, made-up source excerpts, bad contextual witness claims and fake/irreversible corrections. Under pinned-source CI, it checks *every* quoted target passage and every cited original-word ID against both locked WLC and SBLGNT TSVs. tests/test_source_key_resolution_batches.py includes adversarial regressions and exact real-data identity correction checks.
+
+Run metadata checks: python3 -I scripts/validate_source_key_resolution_batches.py --data data --ledger data/source-key-next-115-resolved.json --selection data/source-key-next-115-candidates.json --previous data/source-key-resolved-115.json --pool data/source-key-unresolved-queue.json
+
+GitHub CI adds --wlc macula-hebrew/WLC/tsv/macula-hebrew.tsv and --sblgnt macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv for independent source-collation.
+
+The two disjoint resolved cohorts now contain **230 cases**. The frozen 243-case outstanding inventory has **128 as-yet-unadjudicated cases** after this batch. These are queue identities, not an error count, and issue #23 remains open for the rest of the audit.
