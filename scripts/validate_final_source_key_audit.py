@@ -64,10 +64,16 @@ def check_receipt(record, row):
 def validate(data:Path, ledger_path:Path,
              wlc:Path|None=None, sblgnt:Path|None=None):
     ledger=load(ledger_path)
-    select=load(data/ledger["frozen_selection"])
-    pool=load(data/ledger["frozen_pool"])
-    a=load(data/ledger["previous_resolved"][0])
-    b=load(data/ledger["previous_resolved"][1])
+    require(ledger["frozen_selection"]=="data/source-key-final-128-candidates.json"
+            and ledger["frozen_pool"]=="data/source-key-unresolved-queue.json"
+            and ledger["previous_resolved"]==[
+               "data/source-key-resolved-115.json",
+               "data/source-key-next-115-resolved.json"],
+            "Frozen ledger provenance paths cannot be redirected")
+    select=load(data/"source-key-final-128-candidates.json")
+    pool=load(data/"source-key-unresolved-queue.json")
+    a=load(data/"source-key-resolved-115.json")
+    b=load(data/"source-key-next-115-resolved.json")
     lock=load(data/"source.lock.json")
     require(ledger.get("schema_version")==1,"Wrong review ledger version")
     require(ledger["source_editions"]=={
