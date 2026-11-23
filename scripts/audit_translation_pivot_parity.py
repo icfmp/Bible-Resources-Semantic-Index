@@ -62,16 +62,17 @@ def collect_source(path, canon, id_field, lemma_field):
     source = {}
     with Path(path).open("r", encoding="utf-8-sig", newline="") as file:
         reader = csv.DictReader(file, delimiter="\t")
-        if not reader.fieldnames or not {id_field, lemma_field}.issubset(reader.fieldnames):
-            raise ValueError(f"{path}: missing pinned token/lemma columns")
+        if not reader.fieldnames or id_field not in reader.fieldnames:
+            raise ValueError(f"{path}: missing pinned token ID column")
+        has_lemma = lemma_field in reader.fieldnames
         for n, row in enumerate(reader, start=2):
             value = row[id_field]
             wid = normalized_id(value, canon)
             if wid in source:
                 raise ValueError(f"{path}:{n}: duplicated ID {wid}")
-            lemma = row[lemma_field]
+            lemma = row[lemma_field] if has_lemma else ""
             if lemma is None:
-                raise ValueError(f"{path}:{n}: malformed lemma column")
+                raise ValueError(f"{path}:{n}: malformed declared lemma column")
             source[wid] = lemma
     if not source:
         raise ValueError(f"{path}: empty original-source corpus")
