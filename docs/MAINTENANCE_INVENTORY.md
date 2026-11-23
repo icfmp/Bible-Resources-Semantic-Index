@@ -60,7 +60,10 @@ and original source annotations remain separately protected.
   authentic bilingual UBS `AlternateLemmas`. Exactly 409 individually
   authorized headword links and 47 explicit abstentions remain in the
   final source-specific ledgers; accent/inflection/Strong resemblance is
-  never sufficient evidence of lexical identity.
+  never sufficient evidence of lexical identity. Five approved-word
+  stages (577/155/138/32/2) share the exact original-word witness and
+  status-only transition guard, but keep their original, distinct
+  editorial and language-specific Strong/grammar decisions.
 - **Greek composite Strong and provisional senses:** the 5-original-word
   compound-Strong source audit, full 137,741-word UBS/MACULA sense
   *candidate* census, and 15,237-word unresolved-source priority
