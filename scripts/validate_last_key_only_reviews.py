@@ -229,6 +229,7 @@ def validate(data:Path,ledger_file:Path,wlc:Path|None=None,sblgnt:Path|None=None
                     else "source_specific_context_not_literal_name"),
                     sid+": contextual semantics mislabeled as a direct original name")
                 require(new is None and false is None
+                        and target.get("restored_exact_word_ids") is None
                         and verse in record["key_references"]
                         and verse not in record["references"],
                         sid+": supposedly unchanged context was silently changed")

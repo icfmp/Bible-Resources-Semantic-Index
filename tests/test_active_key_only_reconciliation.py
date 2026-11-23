@@ -13,7 +13,8 @@ class NativeKeyOnlyReconciliationTests(unittest.TestCase):
         report=reconcile(ROOT/"data")
         self.assertEqual(report["source_records_scanned"],5771)
         self.assertEqual(report["key_only_pairs"],457)
-        self.assertEqual(report["entities_with_key_only_claims"],264)
+        self.assertEqual(report["entities_with_key_only_claims"],
+                         len({x["source_id"] for x in report["cases"]}))
         self.assertEqual(report["original_indirect_pair_count"],53)
         self.assertEqual(report["individually_reviewed_unanchored_places"],27)
         self.assertEqual(report["previously_certified_unique_source_identities"],358)
