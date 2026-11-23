@@ -10,9 +10,38 @@
     "review_status": "source_unreviewed",
     "source_id": "place:Gedor.4",
     "source_primary_id": "place:Gedor.4",
-    "source_sha256": "5074fb794233ad51685b22ea257ab22b7772d70d90b39c84c819160eec73638b"
+    "source_sha256": "5074fb794233ad51685b22ea257ab22b7772d70d90b39c84c819160eec73638b",
+    "editorial_field_changes": [
+      {
+        "action": "restore_direct_original_word_and_verse_witness",
+        "added_reference_values": {
+          "references": [
+            "13012008"
+          ]
+        },
+        "added_original_word_groups": {
+          "wlc": [
+            [
+              "o130120080062"
+            ]
+          ]
+        },
+        "reason": "1 Chronicles 12:8 (ORG) names the Gedor of Benjamin territory; original word is the proper place name.",
+        "evidence": [
+          "ORG BCV8 13012008",
+          "Pinned original corpus: Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c",
+          "Exact original-word ID(s) and English gloss independently extracted from frozen Macula TSV; source IDs and text unchanged"
+        ]
+      }
+    ]
   },
-  "explicit_instances": {},
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o130120080062"
+      ]
+    ]
+  },
   "id": "place:Gedor.4",
   "is_artifact": false,
   "is_person": false,
@@ -37,7 +66,9 @@
   },
   "primary_id": "place:Gedor.4",
   "pronominal_referents": {},
-  "references": [],
+  "references": [
+    "13012008"
+  ],
   "subject_referents": {},
   "subregion_of": [
     "place:TerritoryOfBenjamin"
