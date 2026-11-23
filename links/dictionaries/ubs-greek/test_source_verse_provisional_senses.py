@@ -4,7 +4,9 @@ from __future__ import annotations
 import runpy
 import unittest
 from pathlib import Path
-make=runpy.run_path(str(Path(__file__).with_name("build_source_verse_provisional_senses.py")))["make"]
+MOD=runpy.run_path(str(Path(__file__).with_name("build_source_verse_provisional_senses.py")))
+make=MOD["make"]
+build_from_pinned_sources=MOD["build_from_pinned_sources"]
 SOURCES={"ubs_greek_revision":"pinned","macula_sblgnt_revision":"pinned"}
 
 
@@ -46,6 +48,12 @@ def fixture():
         "previously_staged_source_form_word_ids":223,
         "original_reference_witness_candidate_word_count":258,
         "independently_contextually_validated":0,
+        "corpus_or_ubs_modified":False,
+        "source_specific_dispositions":{
+            "unique_authentic_bilingual_UBS_sense_verse_witness_candidate":258,
+            "other_original_ambiguous_words_unapproved":2470,
+        },
+        "other_original_multi_lexid_words_still_unresolved":2247,
         "published":False,"publication_approved":False,
         "word_id_to_possible_UBS_original_source_reference_sense":proposals,
     }
@@ -87,5 +95,27 @@ class Tests(unittest.TestCase):
         report,unresolved,high,low,form=self.args
         with self.assertRaises(ValueError):make({**report,"independently_contextually_validated":258},
                                                  unresolved,high,low,form)
+
+
+    def test_original_source_verse_audit_is_mandatory_in_builder(self):
+        # No pre-made source-verse report can be passed to the CLI to
+        # avoid full original 137,741-word + bilingual UBS source rechecks.
+        from unittest.mock import patch
+        with patch.dict(build_from_pinned_sources.__globals__["SOURCE"],{
+            "audit":lambda *args: (_ for _ in ()).throw(
+                ValueError("full original source witness audit required"))}):
+            with self.assertRaisesRegex(ValueError,"full original source witness audit required"):
+                build_from_pinned_sources({}, {}, {}, [], [], Path("/missing.tsv"),
+                                          {}, {}, {}, {})
+
+    def test_complete_source_disposition_and_immutability_rejected_on_drift(self):
+        report,unresolved,high,low,form=self.args
+        wrong={**report, "corpus_or_ubs_modified":True}
+        with self.assertRaisesRegex(ValueError,"Source-verse candidate audit drift"):
+            make(wrong,unresolved,high,low,form)
+        wrong={**report,"source_specific_dispositions":{"only_approved":258}}
+        with self.assertRaisesRegex(ValueError,"Source-verse candidate audit drift"):
+            make(wrong,unresolved,high,low,form)
+
 
 if __name__=="__main__":unittest.main()
