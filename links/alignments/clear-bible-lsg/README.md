@@ -24,6 +24,40 @@ python3 -I scripts/build_translation_alignments.py \
 
 The builder checks original file byte size, exact Git blob SHA-1 and optionally pinned SHA-256, rejects duplicate JSON keys, invalid token IDs and duplicate corpus tokens, and preserves **each original alignment row**, its order, original source and target selectors and optionally original source record ID. It also computes exact source/target lookup IDs with explicit prefix normalization while retaining the unchanged original selector for every row. All 1:1, 1:n, n:1, n:m, incomplete and overlapping groups survive without guessed replacements.
 
-Outputs `nt.json`, `ot.json`, `receipt.json` are private candidate artifacts. They include selector-level evidence and deterministic SHA-256, record- and token-level coverage, overlap counts, unattested IDs, mismatched verse labels and unresolved cases. `source_attested` confirms **source and target token membership only**; it is not independent manual translation review. `target_unverified` does not assert that an OT token exists. No source text, translation words or dictionary prose is exported. The empty [corrections ledger](corrections.json) can apply later source-verified changes in a separate overlay; each must carry exact original witness and independently documented evidence. An overlay never modifies the original inputs.
+Outputs `nt.json`, `ot.json`, deterministic `nt.json.gz`/`ot.json.gz`
+and `receipt.json` are **private**, nonpublishing candidate artifacts.
+The [checked-in receipt lock](receipt.lock.json) pins the validated source
+fingerprints, original coverage counts and output byte digests; CI must
+recreate these byte-for-byte or fail closed. They include selector-level evidence and deterministic SHA-256, record- and token-level coverage, overlap counts, unattested IDs, mismatched verse labels and unresolved cases. `source_attested` confirms **source and target token membership only**; it is not independent manual translation review. `target_unverified` does not assert that an OT token exists. No source text, translation words or dictionary prose is exported. The empty [corrections ledger](corrections.json) can apply later source-verified changes in a separate overlay; each must carry exact original witness and independently documented evidence. An overlay never modifies the original inputs.
+
+## First complete pinned-source audit (23 November 2026)
+
+The complete [source-pinned workflow](../../../.github/workflows/pinned-lsg-alignment.yml)
+confirmed 104,807 Greek–French and 203,597 Hebrew–French group records.
+In this particular upstream snapshot, all available group records have 1:1
+selector topology; this empirical fact does **not** narrow the generic
+schema, which retains 1:n, n:1, n:m and unresolved records.
+
+- **NT:** 137,741 original source token IDs, 104,807 with an alignment;
+  210,628 target token IDs, 103,811 aligned tokens attested in the actual
+  target TSV. Exactly **996 alignment targets are absent from that TSV**;
+  they remain unresolved. Unaligned source/target tokens are not inferred
+  to have a missing translation.
+- **OT:** 469,476 source token IDs in Clear.Bible's specific WLCM edition,
+  203,597 aligned; **the French target TSV is empty except for its header**.
+  Of 203,597 original alignment groups, **920** have source/target numeric
+  verse identifiers that differ; these may reflect a genuine versification
+  difference or another data error, and were not corrected by guessing.
+  The other 202,677 groups have structurally consistent references but
+  **cannot be called fully verified target links**.
+- BRSI's independently pinned Hebrew WLC source audit contains a different
+  original-token count (475,911). These Clear.Bible WLCM IDs must not be
+  silently substituted for BRSI's separately pinned WLC IDs. GitHub upstream
+  [issue #5](https://github.com/Clear-Bible/Alignments/issues/5) also
+  tracks historic WLC identifier compatibility. Source-token identity
+  reconciliation remains a hard downstream consumption gate.
+
+**No fabricated alignments, upstream source edits, editorial approvals or
+claims of full-corpus coverage** follow from a clean transformation.
 
 Do not commit generated index files or upload them as public CI artifacts until license, attribution, text-versification and target-edition gates are completed and a **new publication** is explicitly authorized under [#62](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/62). See [integration issue #162](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/162). Future Bible consumers must select an edition-qualified package using a version and checksum, preserve all candidate groups and unresolved states, and independently demonstrate that the tokenization matches their LSG text before showing any alignment.
