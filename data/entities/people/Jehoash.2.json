@@ -18,13 +18,138 @@
     "editorial_evidence": [
       "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c WLC/lowfat/12-2Ki-014-lowfat.xml",
       "Pinned WLC 2 Kings 14:13 first Jehoash o120140130061 is the father of Amaziah; second o120140130101 is the Israelite king",
-      "Frozen ACAI person:Jehoash.2 primary_id=person:Joash.4, originally pointing to first name token"
+      "Frozen ACAI person:Jehoash.2 primary_id=person:Joash.4, originally pointing to first name token",
+      "Pinned Clear-Bible Macula WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c / SBLGNT@8423afe47b9e8f24b7772e808af45c7159a6fe7e, full original-word source audit and exact ID verification in GitHub Actions",
+      "2 Kings 13:9,12,13 name the Israelite Joash (Jehoash), same reviewed canonical king as the already-anchored 2 Kings 13:10 and 14:13; two separate Joash occurrences in 13:13.",
+      "12013009 wlc: o120130090081",
+      "12013012 wlc: o120130120031",
+      "12013013 wlc: o120130130021",
+      "12013013 wlc: o120130130101"
     ],
-    "editorial_reason": "The frozen person:Jehoash.2 is the separate source alias of Joash.4, king of Israel. It incorrectly claims the first Jehoash name in 2 Kings 14:13 (Amaziah's Judahite father); assign its explicit occurrence to the second named Jehoash, the Israelite king who captures Amaziah, without altering valid subject pointers.",
+    "editorial_reason": "The frozen person:Jehoash.2 is the separate source alias of Joash.4, king of Israel. It incorrectly claims the first Jehoash name in 2 Kings 14:13 (Amaziah's Judahite father); assign its explicit occurrence to the second named Jehoash, the Israelite king who captures Amaziah, without altering valid subject pointers. | Restore original-word mentions for the explicitly named person in reviewed source-key verses. The historical source alias/canonical identity is preserved and no similarly named individual is merged.",
     "review_status": "editorially_reviewed",
     "source_id": "person:Jehoash.2",
     "source_primary_id": "person:Joash.4",
-    "source_sha256": "e4209b265a4549a31dfd21754ce57a011a98fec1074cba5688f613710a0649d6"
+    "source_sha256": "e4209b265a4549a31dfd21754ce57a011a98fec1074cba5688f613710a0649d6",
+    "editorial_field_changes": [
+      {
+        "action": "restore_exact_person_name_witnesses_from_original",
+        "reason": "Restore original-word mentions for the explicitly named person in reviewed source-key verses. The historical source alias/canonical identity is preserved and no similarly named individual is merged.",
+        "evidence": [
+          "Pinned Clear-Bible Macula WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c / SBLGNT@8423afe47b9e8f24b7772e808af45c7159a6fe7e, full original-word source audit and exact ID verification in GitHub Actions",
+          "2 Kings 13:9,12,13 name the Israelite Joash (Jehoash), same reviewed canonical king as the already-anchored 2 Kings 13:10 and 14:13; two separate Joash occurrences in 13:13.",
+          "12013009 wlc: o120130090081",
+          "12013012 wlc: o120130120031",
+          "12013013 wlc: o120130130021",
+          "12013013 wlc: o120130130101"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [
+              "12013010",
+              "12013025",
+              "12014008",
+              "12014009",
+              "12014011",
+              "12014013",
+              "12014015",
+              "12014016",
+              "12014017"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o120130100091"
+                ],
+                [
+                  "o120130250021"
+                ],
+                [
+                  "o120140080061"
+                ],
+                [
+                  "o120140090021"
+                ],
+                [
+                  "o120140110051"
+                ],
+                [
+                  "o120140150031"
+                ],
+                [
+                  "o120140160021"
+                ],
+                [
+                  "o120140170091"
+                ],
+                [
+                  "o120140130101"
+                ]
+              ]
+            }
+          },
+          "after": {
+            "references": [
+              "12013009",
+              "12013010",
+              "12013012",
+              "12013013",
+              "12013025",
+              "12014008",
+              "12014009",
+              "12014011",
+              "12014013",
+              "12014015",
+              "12014016",
+              "12014017"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o120130100091"
+                ],
+                [
+                  "o120130250021"
+                ],
+                [
+                  "o120140080061"
+                ],
+                [
+                  "o120140090021"
+                ],
+                [
+                  "o120140110051"
+                ],
+                [
+                  "o120140150031"
+                ],
+                [
+                  "o120140160021"
+                ],
+                [
+                  "o120140170091"
+                ],
+                [
+                  "o120140130101"
+                ],
+                [
+                  "o120130090081"
+                ],
+                [
+                  "o120130120031"
+                ],
+                [
+                  "o120130130021"
+                ],
+                [
+                  "o120130130101"
+                ]
+              ]
+            }
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -54,6 +179,18 @@
       ],
       [
         "o120140130101"
+      ],
+      [
+        "o120130090081"
+      ],
+      [
+        "o120130120031"
+      ],
+      [
+        "o120130130021"
+      ],
+      [
+        "o120130130101"
       ]
     ]
   },
@@ -98,7 +235,10 @@
     ]
   },
   "references": [
+    "12013009",
     "12013010",
+    "12013012",
+    "12013013",
     "12013025",
     "12014008",
     "12014009",
