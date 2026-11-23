@@ -17,10 +17,39 @@
   },
   "bsi": {
     "canonical_id": "person:Solomon",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "person:Solomon",
     "source_primary_id": "person:Solomon",
-    "source_sha256": "b43b43b378e48f5314f7693e6ec5d5ea8917aab3f20408852fda28119ec8fbcd"
+    "source_sha256": "b43b43b378e48f5314f7693e6ec5d5ea8917aab3f20408852fda28119ec8fbcd",
+    "editorial_reason": "The source key 1 Kings 4:29 comes from a different verse-numbering convention and has no WLC words at this verse. The pinned WLC names Solomon's received wisdom in 1 Kings 5:9, with o110050090042 Solomon, already directly attested. Correct the original key to pinned-source versification without inventing a verse.",
+    "editorial_evidence": [
+      "Pinned WLC 1Kgs 4:29 has zero words (not a verse in this source numbering)",
+      "Pinned WLC 1Kgs 5:9 o110050090042 Solomon and o110050090031 wisdom; direct source reference already present"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "adjudicate_source_identity_key_mismatch",
+        "reason": "The source key 1 Kings 4:29 comes from a different verse-numbering convention and has no WLC words at this verse. The pinned WLC names Solomon's received wisdom in 1 Kings 5:9, with o110050090042 Solomon, already directly attested. Correct the original key to pinned-source versification without inventing a verse.",
+        "evidence": [
+          "Pinned WLC 1Kgs 4:29 has zero words (not a verse in this source numbering)",
+          "Pinned WLC 1Kgs 5:9 o110050090042 Solomon and o110050090031 wisdom; direct source reference already present"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "key_references": [
+              "11004029",
+              "40001006"
+            ]
+          },
+          "after": {
+            "key_references": [
+              "40001006",
+              "11005009"
+            ]
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "SBLGNT": [
@@ -944,8 +973,8 @@
   "gender": "male",
   "id": "person:Solomon",
   "key_references": [
-    "11004029",
-    "40001006"
+    "40001006",
+    "11005009"
   ],
   "localizations": {
     "eng": {
