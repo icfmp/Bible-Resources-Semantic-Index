@@ -9,17 +9,26 @@ No source record is altered by this program.
 """
 from __future__ import annotations
 import argparse
+import importlib.util
 import json
 from collections import Counter
 from pathlib import Path
 
-from audit_all_key_reference_original_words import (
-    get_macula_words, inventory, review,
-)
-from audit_source_reference_evidence import audit
-from validate_source_place_attestations import validate as validate_places
-
 ROOT = Path(__file__).resolve().parents[1]
+
+def _load_sibling(filename: str, module_name: str):
+    path = ROOT / "scripts" / filename
+    spec = importlib.util.spec_from_file_location(module_name, path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+_word = _load_sibling("audit_all_key_reference_original_words.py", "brsi_key_word_probe")
+_source = _load_sibling("audit_source_reference_evidence.py", "brsi_source_reference_probe")
+_place = _load_sibling("validate_source_place_attestations.py", "brsi_place_source_validator")
+get_macula_words, inventory, review = _word.get_macula_words, _word.inventory, _word.review
+audit = _source.audit
+validate_places = _place.validate
 REGISTERS = (
     "source-key-resolved-115.json",
     "source-key-next-115-resolved.json",
