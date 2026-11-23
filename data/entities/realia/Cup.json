@@ -15,7 +15,42 @@
     "review_status": "source_unreviewed",
     "source_id": "realia:Cup",
     "source_primary_id": "realia:Cup",
-    "source_sha256": "04cffee6e74d08ad53279a1c54da6969a5d3c56a6e2874fde1e77f536bdb32a4"
+    "source_sha256": "04cffee6e74d08ad53279a1c54da6969a5d3c56a6e2874fde1e77f536bdb32a4",
+    "editorial_field_changes": [
+      {
+        "action": "restore_source_attested_object_word_instances",
+        "added_reference_values": {
+          "references": [
+            "40026027",
+            "46011025",
+            "66017004"
+          ]
+        },
+        "added_original_word_groups": {
+          "SBLGNT": [
+            [
+              "n40026027003"
+            ],
+            [
+              "n46011025004"
+            ],
+            [
+              "n46011025011"
+            ],
+            [
+              "n66017004018"
+            ]
+          ]
+        },
+        "reason": "Exact Greek cup (ποτήριον) is named in Matthew 26:27, 1 Corinthians 11:25 and Revelation 17:4; multiple token positions are separate occurrences.",
+        "evidence": [
+          "ORG BCV8 40026027",
+          "ORG BCV8 46011025",
+          "ORG BCV8 66017004",
+          "Pinned original-word texts/glosses inspected in Clear-Bible/Macula Greek SBLGNT@8423afe47b9e8f24b7772e808af45c7159a6fe7e; token IDs copied verbatim; source metadata and scripture unchanged"
+        ]
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -24,6 +59,20 @@
       ],
       [
         "o070060380132"
+      ]
+    ],
+    "SBLGNT": [
+      [
+        "n40026027003"
+      ],
+      [
+        "n46011025004"
+      ],
+      [
+        "n46011025011"
+      ],
+      [
+        "n66017004018"
       ]
     ]
   },
@@ -53,7 +102,10 @@
   "realia_type": "other",
   "references": [
     "07005025",
-    "07006038"
+    "07006038",
+    "40026027",
+    "46011025",
+    "66017004"
   ],
   "subject_referents": {},
   "type": "realia",
