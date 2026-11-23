@@ -19,7 +19,48 @@
     "review_status": "source_unreviewed",
     "source_id": "realia:Tabernacle",
     "source_primary_id": "realia:Tabernacle",
-    "source_sha256": "f9f2b4624cd2f94d1d7a930df2e39e0ff9ea9bfc974c371f99903695891f5381"
+    "source_sha256": "f9f2b4624cd2f94d1d7a930df2e39e0ff9ea9bfc974c371f99903695891f5381",
+    "editorial_field_changes": [
+      {
+        "action": "restore_source_attested_object_word_instances",
+        "added_reference_values": {
+          "references": [
+            "02025009",
+            "02029042",
+            "04009015"
+          ]
+        },
+        "added_original_word_groups": {
+          "wlc": [
+            [
+              "o020250090082"
+            ],
+            [
+              "o020290420051"
+            ],
+            [
+              "o040090150042"
+            ],
+            [
+              "o040090150082"
+            ],
+            [
+              "o040090150092"
+            ],
+            [
+              "o040090150142"
+            ]
+          ]
+        },
+        "reason": "Exodus 25:9, 29:42 and Numbers 9:15 explicitly name the sanctuary tent/tabernacle.",
+        "evidence": [
+          "ORG BCV8 02025009",
+          "ORG BCV8 02029042",
+          "ORG BCV8 04009015",
+          "Pinned original-word texts/glosses inspected in Clear-Bible/Macula Hebrew WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c; token IDs copied verbatim; source metadata and scripture unchanged"
+        ]
+      }
+    ]
   },
   "explicit_instances": {
     "SBLGNT": [
@@ -82,6 +123,26 @@
       ],
       [
         "n66021003011"
+      ]
+    ],
+    "wlc": [
+      [
+        "o020250090082"
+      ],
+      [
+        "o020290420051"
+      ],
+      [
+        "o040090150042"
+      ],
+      [
+        "o040090150082"
+      ],
+      [
+        "o040090150092"
+      ],
+      [
+        "o040090150142"
       ]
     ]
   },
@@ -166,7 +227,10 @@
     "58013010",
     "66013006",
     "66015005",
-    "66021003"
+    "66021003",
+    "02025009",
+    "02029042",
+    "04009015"
   ],
   "subject_referents": {
     "SBLGNT": [
