@@ -7,7 +7,9 @@ import unittest
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parent
-make=runpy.run_path(str(ROOT/"build_source_position_provisional_senses.py"))["make"]
+MODULE=runpy.run_path(str(ROOT/"build_source_position_provisional_senses.py"))
+make=MODULE["make"]
+full=MODULE["build_from_pinned_sources"]
 prior=runpy.run_path(str(ROOT/"test_source_verse_provisional_senses.py"))
 verse_build=runpy.run_path(str(ROOT/"build_source_verse_provisional_senses.py"))["make"]
 
@@ -51,6 +53,7 @@ def fixture():
         "original_ambiguous_words":2728,
         "new_editorial_source_senses_selected":0,
         "no_automatic_word_position_equivalence_asserted":True,
+        "original_sources_modified":False,
         "published":False,
         "word_id_to_candidate_position_diagnostics":raw}
     return position,unresolved,high,low,form,verse
@@ -90,6 +93,24 @@ class Tests(unittest.TestCase):
         args=list(self.args)
         args[0]={**args[0],"source_editions":{"ubs_greek_revision":"different"}}
         with self.assertRaises(ValueError):make(*args)
+
+
+
+    def test_source_position_recalibration_is_mandatory(self):
+        # The maintained builder must perform the complete 122,504-word
+        # source calibration, never consume a prebuilt runner-local report.
+        from unittest.mock import patch
+        with patch.dict(full.__globals__["SOURCE"], {
+            "audit": lambda *args: (_ for _ in ()).throw(
+                ValueError("pinned source calibration invoked"))}):
+            with self.assertRaisesRegex(ValueError,"pinned source calibration invoked"):
+                full({}, {}, [], [], {}, {}, {}, {})
+
+    def test_original_position_calibration_source_mutation_rejected(self):
+        args=list(self.args)
+        args[0]={**args[0],"original_sources_modified":True}
+        with self.assertRaisesRegex(ValueError,"calibration source/provenance drift"):
+            make(*args)
 
 
 if __name__=="__main__":unittest.main()
