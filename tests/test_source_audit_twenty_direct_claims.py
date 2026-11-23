@@ -222,7 +222,10 @@ class ActualSourceDirectWitnessTests(unittest.TestCase):
                 path = ROOT / "data" / "entities" / category / (name + ".json")
                 record = json.loads(path.read_text(encoding="utf-8"))
                 before = next(change for change in record["bsi"]["editorial_field_changes"]
-                              if change["action"] in {\n                                  "restore_pinned_direct_mention_from_verified_key",\n                                  "restore_exact_person_name_witnesses_from_original",\n                                  "restore_pinned_lexical_object_term_from_key"})
+                              if change["action"] in {
+                                  "restore_pinned_direct_mention_from_verified_key",
+                                  "restore_exact_person_name_witnesses_from_original",
+                                  "restore_pinned_lexical_object_term_from_key"})
                 self.assertTrue(before["reason"])
                 self.assertTrue(before["evidence"])
                 self.assertTrue(set(before["replaced_field_values"]["after"]["references"]).issubset(record["references"]))
