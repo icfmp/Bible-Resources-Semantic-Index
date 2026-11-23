@@ -9,10 +9,39 @@
   },
   "bsi": {
     "canonical_id": "group:Hebron",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "group:Hebron",
     "source_primary_id": "group:Hebron",
-    "source_sha256": "34e567b6753856cfa127b93a5359b60d15d0bc3033eb6ab62485554d86004780"
+    "source_sha256": "34e567b6753856cfa127b93a5359b60d15d0bc3033eb6ab62485554d86004780",
+    "editorial_reason": "Numbers 27:58 is not a valid verse (Numbers 27 has only 23 verses). Pinned WLC Numbers 26:58 explicitly lists the Hebronite clan with o040260580072, already a genuine direct reference in this record. Replace the invalid inherited key with its exact supported verse.",
+    "editorial_evidence": [
+      "Pinned Macula WLC Num 26:58, o040260580072 = Hebronites (חֶבְרֹנִי)",
+      "Pinned WLC source contains no Num 27:58 original tokens; current direct reference is Num 26:58"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "correct_nonexistent_hebron_key_to_pinned_original_verse",
+        "reason": "Numbers 27:58 is not a valid verse (Numbers 27 has only 23 verses). Pinned WLC Numbers 26:58 explicitly lists the Hebronite clan with o040260580072, already a genuine direct reference in this record. Replace the invalid inherited key with its exact supported verse.",
+        "evidence": [
+          "Pinned Macula WLC Num 26:58, o040260580072 = Hebronites (חֶבְרֹנִי)",
+          "Pinned WLC source contains no Num 27:58 original tokens; current direct reference is Num 26:58"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "key_references": [
+              "04003027",
+              "04027058"
+            ]
+          },
+          "after": {
+            "key_references": [
+              "04003027",
+              "04026058"
+            ]
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -41,7 +70,7 @@
   "id": "group:Hebron",
   "key_references": [
     "04003027",
-    "04027058"
+    "04026058"
   ],
   "lemmas": {
     "he": [
