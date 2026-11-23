@@ -299,7 +299,8 @@ def main():
         path = args.output_dir / (canon + ".json")
         path.write_bytes(data)
         outputs[canon] = {"sha256": hashlib.sha256(data).hexdigest(),
-                          "size": len(data), "coverage": index["coverage"]}
+                          "size": len(data), "coverage": index["coverage"],
+                          "problem_counts_by_book": index["problem_counts_by_book"]}
     receipt = {
         "schema_version": 1,
         "upstream_revision": manifest["revision"],
