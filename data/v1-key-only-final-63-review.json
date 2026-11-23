@@ -1,0 +1,1164 @@
+{
+  "schema_version": 1,
+  "selection": "data/v1-key-only-remaining-63-candidates.json",
+  "original_main_commit": "861d92fffa1fc69132daa50b85d47cb5e96b21a7",
+  "verified_previous_cohort_files": [
+    "data/source-key-resolved-115.json",
+    "data/source-key-next-115-resolved.json",
+    "data/source-key-final-128-review.json"
+  ],
+  "source_editions": {
+    "wlc": "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c",
+    "sblgnt": "Clear-Bible/macula-greek@8423afe47b9e8f24b7772e808af45c7159a6fe7e"
+  },
+  "policy": "Sixty-three distinct previously unreviewed key-only source pairs: verified context does not imply the name is directly in the original verse; false attributions removed only with reversible receipts; complete explicit original-word compounds restored only with exact pinned source IDs; prior 399 certified pairs are never recounted.",
+  "cases": [
+    {
+      "source_id": "group:Samaritan",
+      "original_key_verses": [
+        "16004002"
+      ],
+      "original_indirect_verses": [],
+      "editorial_conclusion": "Nehemiah 4:2 records the coalition of regional opponents who conspire against Jerusalem, in the immediately surrounding Sanballat/Tobiah narrative of 4:1–3; using Samaritan as a regional association is contextual, not an attested Hebrew group label in this verse. Preserve the inherited key only with this explicit qualification.",
+      "targets": [
+        {
+          "verse_id": "16004002",
+          "decision": "verified_contextual",
+          "locked_source_excerpt": "and plotted all they together to come to fight against Jerusalem and to cause in it trouble",
+          "word_witnesses": [],
+          "witness_kind": "source_specific_context_not_literal_name"
+        }
+      ]
+    },
+    {
+      "source_id": "group:Sidon",
+      "original_key_verses": [
+        "06010006"
+      ],
+      "original_indirect_verses": [],
+      "editorial_conclusion": "Joshua 10:6 records the Gibeonites asking Joshua for rescue from Amorite kings, without the Sidonian people or any discernible Sidonian antecedent. The named Gibeon/Amorites cannot be assigned to the Sidonians. This is an unrelated inherited key, not a contextual source witness.",
+      "required_receipt_action": "remove_unproven_sidon_joshua_10_6_key",
+      "targets": [
+        {
+          "verse_id": "06010006",
+          "decision": "corrected",
+          "locked_source_excerpt": "then sent men Gibeon to Joshua at the camp the Gilgal at to saying not abandon hand your from servants your come_up to us quickly and save ה to us and help us for gathered against us all kings the Amorites dwell the hill_country",
+          "word_witnesses": [],
+          "witness_kind": "false_unrelated_original_key",
+          "contradicting_original_word_ids": [
+            "o060100060031",
+            "o060100060252"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "person:Abimelech.2",
+      "original_key_verses": [
+        "07009005"
+      ],
+      "original_indirect_verses": [],
+      "editorial_conclusion": "Judges 9:5 describes Abimelech killing his seventy brothers, sons of Jerubbaal; his name is in the immediately adjacent account and Abimelech becomes king in 9:6. The absence of the name in this one verse does not change the narrated perpetrator's identity.",
+      "targets": [
+        {
+          "verse_id": "07009005",
+          "decision": "verified_contextual",
+          "locked_source_excerpt": "and went house father’s his Ophrah at and killed (et) brothers his sons Jerubbaal seventy men on stone one but survived Jotham son Jerubbaal the youngest for hid",
+          "word_witnesses": [
+            "o070090030161",
+            "o070090030201",
+            "o070090040101",
+            "o070090040132",
+            "o070090040142",
+            "o070090060111"
+          ],
+          "witness_kind": "source_specific_context_not_literal_name"
+        }
+      ]
+    },
+    {
+      "source_id": "person:Abraham",
+      "original_key_verses": [
+        "01017002"
+      ],
+      "original_indirect_verses": [],
+      "editorial_conclusion": "Genesis 17:2 is God's first-person covenant promise addressed to Abram in 17:1–4, with his name changed to Abraham at 17:5. The referent is the patriarch before his new name; the key is contextual, not a literal occurrence of Abraham in verse 2.",
+      "targets": [
+        {
+          "verse_id": "01017002",
+          "decision": "verified_contextual",
+          "locked_source_excerpt": "and make covenant my between me and between you and multiply אוֹתְ you with greatly greatly",
+          "word_witnesses": [
+            "o010170010021",
+            "o010170010111",
+            "o010170010171",
+            "o010170010192",
+            "o010170030021",
+            "o010170040052",
+            "o010170050061",
+            "o010170050091"
+          ],
+          "witness_kind": "source_specific_context_not_literal_name"
+        }
+      ]
+    },
+    {
+      "source_id": "person:Abram",
+      "original_key_verses": [
+        "01017002"
+      ],
+      "original_indirect_verses": [],
+      "editorial_conclusion": "Genesis 17:2 is God's addressed promise of multiplication to Abram, who is explicitly named in 17:1 and 17:3 before the covenant name Abraham in 17:5. No literal Abram token occurs in the target verse, but the addressee is unambiguous.",
+      "targets": [
+        {
+          "verse_id": "01017002",
+          "decision": "verified_contextual",
+          "locked_source_excerpt": "and make covenant my between me and between you and multiply אוֹתְ you with greatly greatly",
+          "word_witnesses": [
+            "o010170010021",
+            "o010170010111",
+            "o010170010171",
+            "o010170010192",
+            "o010170030021",
+            "o010170040052",
+            "o010170050061"
+          ],
+          "witness_kind": "source_specific_context_not_literal_name"
+        }
+      ]
+    },
+    {
+      "source_id": "person:Achan",
+      "original_key_verses": [
+        "06007022",
+        "06007023",
+        "06007025",
+        "06007026"
+      ],
+      "original_indirect_verses": [
+        "06007025"
+      ],
+      "editorial_conclusion": "Joshua 7:22–26 narrates the search of Achan's tent, recovery of his stolen objects, communal judgment, and a cairn over him. Achan is named in 7:20 and 7:24, and the adjacent direct or indirect pronoun references belong to the same subject; none requires inventing a repeated proper-name word.",
+      "targets": [
+        {
+          "verse_id": "06007022",
+          "decision": "verified_contextual",
+          "locked_source_excerpt": "so sent Joshua messengers and ran the tent to and there hidden in tent his and the silver underneath it",
+          "word_witnesses": [
+            "o060070200021",
+            "o060070200052",
+            "o060070200071",
+            "o060070200141",
+            "o060070210022",
+            "o060070210172",
+            "o060070210182",
+            "o060070240041",
+            "o060070250041"
+          ],
+          "witness_kind": "source_specific_context_not_literal_name"
+        },
+        {
+          "verse_id": "06007023",
+          "decision": "verified_contextual",
+          "locked_source_excerpt": "and took them from inside the tent and brought them to Joshua and to all sons Israel and spread_~_out them in presence LORD",
+          "word_witnesses": [
+            "o060070210022",
+            "o060070210172",
+            "o060070210182",
+            "o060070240041",
+            "o060070250041"
+          ],
+          "witness_kind": "source_specific_context_not_literal_name"
+        },
+        {
+          "verse_id": "06007025",
+          "decision": "verified_contextual",
+          "locked_source_excerpt": "and said Joshua why bring_trouble_on us bring_~_trouble you LORD on the day the this then stoned אֹת֤ them all Israel stones and burned אֹתָ them with the fire after stoned אֹתָ֖ them with the stones",
+          "word_witnesses": [
+            "o060070240041",
+            "o060070250041"
+          ],
+          "witness_kind": "native_indirect_coreference"
+        },
+        {
+          "verse_id": "06007026",
+          "decision": "verified_contextual",
+          "locked_source_excerpt": "and raised over him pile stones great to the day the this then turned LORD from fierceness anger his for_this thus called name the place the that valley Achor to the day the this",
+          "word_witnesses": [
+            "o060070240041",
+            "o060070250041"
+          ],
+          "witness_kind": "source_specific_context_not_literal_name"
+        }
+      ]
+    },
+    {
+      "source_id": "person:Ahab",
+      "original_key_verses": [
+        "11016032",
+        "11022051"
+      ],
+      "original_indirect_verses": [
+        "11016032"
+      ],
+      "editorial_conclusion": "First Kings 16:32 depicts the Baal altar erected by Ahab, named in 16:30 and 16:33. First Kings 22:51 itself concerns Jehoshaphat's death and succession, but the immediate transition to Ahaziah son of Ahab in 22:52 provides a family/dynastic cross-reference. Neither target verse literally names Ahab.",
+      "targets": [
+        {
+          "verse_id": "11016032",
+          "decision": "verified_contextual",
+          "locked_source_excerpt": "and erected altar for the Baal house the Baal which built in Samaria",
+          "word_witnesses": [
+            "o110160300021",
+            "o110160310082",
+            "o110160310162",
+            "o110160310172",
+            "o110160310202",
+            "o110160320012",
+            "o110160320071",
+            "o110160330021",
+            "o110160330061",
+            "o110160330072",
+            "o110160330082"
+          ],
+          "witness_kind": "native_indirect_coreference"
+        },
+        {
+          "verse_id": "11022051",
+          "decision": "verified_contextual",
+          "locked_source_excerpt": "then slept Jehoshaphat with fathers his and buried with ancestors his in city David father his and became_king Jehoram son his in_~_place his",
+          "word_witnesses": [
+            "o110220500051",
+            "o110220520031"
+          ],
+          "witness_kind": "source_specific_context_not_literal_name"
+        }
+      ]
+    },
+    {
+      "source_id": "person:Ahikam",
+      "original_key_verses": [
+        "12022011"
+      ],
+      "original_indirect_verses": [],
+      "editorial_conclusion": "Second Kings 22:11 records Josiah's distress upon hearing the book of the law; the king sends Ahikam with his envoy in 22:12, and Ahikam speaks to Huldah in 22:14. The key follows the same discovery mission but is not a direct occurrence of Ahikam in verse 11.",
+      "targets": [
+        {
+          "verse_id": "12022011",
+          "decision": "verified_contextual",
+          "locked_source_excerpt": "and he_was when heard the king (et) words book the law then tore (et) clothes his",
+          "word_witnesses": [
+            "o120220120071",
+            "o120220130011",
+            "o120220130021",
+            "o120220140042",
+            "o120220140232"
+          ],
+          "witness_kind": "source_specific_context_not_literal_name"
+        }
+      ]
+    },
+    {
+      "source_id": "person:Balak",
+      "original_key_verses": [
+        "04022001",
+        "04022003",
+        "04022006"
+      ],
+      "original_indirect_verses": [
+        "04022006"
+      ],
+      "editorial_conclusion": "Numbers 22:1–6 sets the scene on Moab's plains, fears of Israel, and Balak's appeal to Balaam. Balak is explicitly named in 22:2 and 22:4, and his words in verse 6 are part of the same quoted message that begins in verse 5; no additional literal name is supplied.",
+      "targets": [
+        {
+          "verse_id": "04022001",
+          "decision": "verified_contextual",
+          "locked_source_excerpt": "then set_out sons Israel and camped in plains Moab along side near Jordan Jericho",
+          "word_witnesses": [
+            "o040220020021",
+            "o040220040172"
+          ],
+          "witness_kind": "source_specific_context_not_literal_name"
+        },
+        {
+          "verse_id": "04022003",
+          "decision": "verified_contextual",
+          "locked_source_excerpt": "and terrified Moab in presence the people great because numerous they and dreaded Moab because presence people Israel",
+          "word_witnesses": [
+            "o040220020021",
+            "o040220040172",
+            "o040220050012",
+            "o040220050142",
+            "o040220050162",
+            "o040220060141",
+            "o040220060151",
+            "o040220060172",
+            "o040220060211"
+          ],
+          "witness_kind": "source_specific_context_not_literal_name"
+        },
+        {
+          "verse_id": "04022006",
+          "decision": "verified_contextual",
+          "locked_source_excerpt": "and now come ה please curse ה for me (et) the people the this because stronger they for me perhaps able defeat against them and drive_~_out them of the land for know (et) those bless blessed and those curse cursed",
+          "word_witnesses": [
+            "o040220040172",
+            "o040220050012",
+            "o040220050142",
+            "o040220050162",
+            "o040220060141",
+            "o040220060151",
+            "o040220060172",
+            "o040220060211",
+            "o040220070141"
+          ],
+          "witness_kind": "native_indirect_coreference"
+        }
+      ]
+    },
+    {
+      "source_id": "person:Barabbas",
+      "original_key_verses": [
+        "41015006"
+      ],
+      "original_indirect_verses": [],
+      "editorial_conclusion": "Mark 15:6 explains Pilate's custom of releasing a festival prisoner, which introduces Barabbas by name in 15:7. The key is a direct narrative setup for his release episode, not a proper-name occurrence in verse 6.",
+      "targets": [
+        {
+          "verse_id": "41015006",
+          "decision": "verified_contextual",
+          "locked_source_excerpt": "at now feast release them one prisoner whom requested",
+          "word_witnesses": [
+            "n41015007005"
+          ],
+          "witness_kind": "source_specific_context_not_literal_name"
+        }
+      ]
+    },
+    {
+      "source_id": "person:Bartholomew",
+      "original_key_verses": [
+        "41003016",
+        "41003017"
+      ],
+      "original_indirect_verses": [],
+      "editorial_conclusion": "Mark 3:16–17 names the earlier disciples within Jesus' Twelve; Bartholomew appears in verse 18. These keys intentionally index the continued apostolic list rather than assert his proper name in verses 16 or 17.",
+      "targets": [
+        {
+          "verse_id": "41003016",
+          "decision": "verified_contextual",
+          "locked_source_excerpt": "and appointed the twelve and gave name the Simon Peter",
+          "word_witnesses": [
+            "n41003018006"
+          ],
+          "witness_kind": "source_specific_context_not_literal_name"
+        },
+        {
+          "verse_id": "41003017",
+          "decision": "verified_contextual",
+          "locked_source_excerpt": "and James the of Zebedee and John the brother - James and gave them name Boanerges that is sons thunder",
+          "word_witnesses": [
+            "n41003018006"
+          ],
+          "witness_kind": "source_specific_context_not_literal_name"
+        }
+      ]
+    },
+    {
+      "source_id": "person:Bezalel",
+      "original_key_verses": [
+        "02031001",
+        "02031003",
+        "02031005",
+        "02031006",
+        "02031007",
+        "02031008",
+        "02031009",
+        "02031010",
+        "02031011"
+      ],
+      "original_indirect_verses": [
+        "02031005"
+      ],
+      "editorial_conclusion": "Exodus 31:1–11 is God's continuous instruction for Bezalel's appointment and work, beginning with his naming in 31:2 and describing skill, tools, furnishings, and craftsmanship. Verse 31:1 is the introduction, while 31:3–11 explain his task and the additional appointment of Oholiab; these are contextual keys without fictional Bezalel name tokens.",
+      "targets": [
+        {
+          "verse_id": "02031001",
+          "decision": "verified_contextual",
+          "locked_source_excerpt": "then spoke LORD to Moses to saying",
+          "word_witnesses": [
+            "o020310020041",
+            "o020310040012",
+            "o020310040032"
+          ],
+          "witness_kind": "source_specific_context_not_literal_name"
+        },
+        {
+          "verse_id": "02031003",
+          "decision": "verified_contextual",
+          "locked_source_excerpt": "and filled אֹת֖ him Spirit God with wisdom and with ability and with knowledge and in every_kind_of craftsmanship",
+          "word_witnesses": [
+            "o020310020041",
+            "o020310040012",
+            "o020310040032",
+            "o020310050032",
+            "o020310050062"
+          ],
+          "witness_kind": "source_specific_context_not_literal_name"
+        },
+        {
+          "verse_id": "02031005",
+          "decision": "verified_contextual",
+          "locked_source_excerpt": "and in cutting stones for setting and in carving wood for work in every_kind_of craftsmanship",
+          "word_witnesses": [
+            "o020310040012",
+            "o020310040032",
+            "o020310050032",
+            "o020310050062"
+          ],
+          "witness_kind": "native_indirect_coreference"
+        },
+        {
+          "verse_id": "02031006",
+          "decision": "verified_contextual",
+          "locked_source_excerpt": "and I behold appointed with him (et) Oholiab son Ahisamach of tribe Dan and in heart all skilled artisan put skill so make (et) all that commanded you",
+          "word_witnesses": [
+            "o020310040012",
+            "o020310040032",
+            "o020310050032",
+            "o020310050062"
+          ],
+          "witness_kind": "source_specific_context_not_literal_name"
+        },
+        {
+          "verse_id": "02031007",
+          "decision": "verified_contextual",
+          "locked_source_excerpt": "(et) tent meeting and (et) the ark of the testimony and (et) the mercy_seat that on it and (et) all furnishings the tent",
+          "word_witnesses": [
+            "o020310050032",
+            "o020310050062"
+          ],
+          "witness_kind": "source_specific_context_not_literal_name"
+        },
+        {
+          "verse_id": "02031008",
+          "decision": "verified_contextual",
+          "locked_source_excerpt": "and (et) the table and (et) utensils its and (et) the lampstand the pure and (et) all utensils its and (et) altar the incense",
+          "word_witnesses": [],
+          "witness_kind": "source_specific_context_not_literal_name"
+        },
+        {
+          "verse_id": "02031009",
+          "decision": "verified_contextual",
+          "locked_source_excerpt": "and (et) altar the burnt_offering and (et) all utensils its and (et) the basin and (et) stand its",
+          "word_witnesses": [],
+          "witness_kind": "source_specific_context_not_literal_name"
+        },
+        {
+          "verse_id": "02031010",
+          "decision": "verified_contextual",
+          "locked_source_excerpt": "and (et) garments the woven and (et) garments the holy for Aaron the priest and (et) garments sons his to serve_as_priests",
+          "word_witnesses": [],
+          "witness_kind": "source_specific_context_not_literal_name"
+        },
+        {
+          "verse_id": "02031011",
+          "decision": "verified_contextual",
+          "locked_source_excerpt": "and (et) oil the anointing and (et) incense the fragrant for the sanctuary according_to all that commanded you make",
+          "word_witnesses": [],
+          "witness_kind": "source_specific_context_not_literal_name"
+        }
+      ]
+    },
+    {
+      "source_id": "person:Elah.2",
+      "original_key_verses": [
+        "11016010",
+        "11016011"
+      ],
+      "original_indirect_verses": [],
+      "editorial_conclusion": "First Kings 16:10 describes Zimri killing Elah and succeeding him; 16:11 describes the destruction of the house of Elah's father Baasha. Elah is named in 16:8–9 and again in 16:13–14. The grammatical pronouns and dynastic succession are contextual identity evidence, not missing names.",
+      "targets": [
+        {
+          "verse_id": "11016010",
+          "decision": "verified_contextual",
+          "locked_source_excerpt": "and came_in Zimri and struck_~_down him and killed him in year twenty and seven of Asa king Judah and became_king in_~_place his",
+          "word_witnesses": [
+            "o110160080091",
+            "o110160090082",
+            "o110160130061",
+            "o110160130091",
+            "o110160130111",
+            "o110160130142"
+          ],
+          "witness_kind": "source_specific_context_not_literal_name"
+        },
+        {
+          "verse_id": "11016011",
+          "decision": "verified_contextual",
+          "locked_source_excerpt": "and happened when became_king he as_soon_as seated he on throne his killed (et) all house Baasha not leave of him one_urinating against wall or kindred his of friends his",
+          "word_witnesses": [
+            "o110160090082",
+            "o110160130061",
+            "o110160130091",
+            "o110160130111",
+            "o110160130142",
+            "o110160140031",
+            "o110160140061"
+          ],
+          "witness_kind": "source_specific_context_not_literal_name"
+        }
+      ]
+    },
+    {
+      "source_id": "person:Eliashib.8",
+      "original_key_verses": [
+        "16013005",
+        "16013006",
+        "16013008",
+        "16013009"
+      ],
+      "original_indirect_verses": [],
+      "editorial_conclusion": "Nehemiah 13:4–9 records the misappropriation and subsequent cleansing of temple chambers arranged by Eliashib, named in 13:4 and 13:7. Nehemiah's temporary absence in 13:6 and his reaction in 13:8–9 belong to the same episode but are not independent appearances of the name Eliashib.",
+      "targets": [
+        {
+          "verse_id": "16013005",
+          "decision": "verified_contextual",
+          "locked_source_excerpt": "and prepared for him room large and where had formerly formerly put (et) the grain_offerings the frankincense and the vessels also tithes the grain the wine and the oil prescribed the Levites and the singers and the gatekeepers an",
+          "word_witnesses": [
+            "o160130040031",
+            "o160130070071"
+          ],
+          "witness_kind": "source_specific_context_not_literal_name"
+        },
+        {
+          "verse_id": "16013006",
+          "decision": "verified_contextual",
+          "locked_source_excerpt": "but while all this not was in Jerusalem for in year thirty and two of Artaxerxes king Babylon went to the king and at end time asked from the king",
+          "word_witnesses": [
+            "o160130040031",
+            "o160130070071"
+          ],
+          "witness_kind": "source_specific_context_not_literal_name"
+        },
+        {
+          "verse_id": "16013008",
+          "decision": "verified_contextual",
+          "locked_source_excerpt": "and displeased for I very and threw threw (et) all goods household Tobiah’s the out of the room",
+          "word_witnesses": [
+            "o160130070071"
+          ],
+          "witness_kind": "source_specific_context_not_literal_name"
+        },
+        {
+          "verse_id": "16013009",
+          "decision": "verified_contextual",
+          "locked_source_excerpt": "and gave_orders said and cleansed the rooms then returned brought.back there vessels house the God with the grain_offering and the frankincense",
+          "word_witnesses": [
+            "o160130070071"
+          ],
+          "witness_kind": "source_specific_context_not_literal_name"
+        }
+      ]
+    },
+    {
+      "source_id": "person:Gehazi",
+      "original_key_verses": [
+        "12005023",
+        "12005024",
+        "12005026",
+        "12005027"
+      ],
+      "original_indirect_verses": [
+        "12005023",
+        "12005024",
+        "12005027"
+      ],
+      "editorial_conclusion": "Second Kings 5:23–27 narrates Naaman's gifts, Gehazi's hiding them, Elisha's interrogation and the leprosy judgment. Gehazi is identified by name at 5:21 and 5:25 and by grammatical context in the remaining verses. Direct identity at every verse is neither claimed nor required.",
+      "targets": [
+        {
+          "verse_id": "12005023",
+          "decision": "verified_contextual",
+          "locked_source_excerpt": "and said Naaman please accept talents and urged with him then tied_up talents silver in two bags and two sets clothing and gave to two servants his and carried in front him",
+          "word_witnesses": [
+            "o120050210021",
+            "o120050210071",
+            "o120050220012",
+            "o120050220052",
+            "o120050230031",
+            "o120050230041",
+            "o120050240012",
+            "o120050240042",
+            "o120050240062",
+            "o120050240082",
+            "o120050250012",
+            "o120050250032",
+            "o120050250111",
+            "o120050250122"
+          ],
+          "witness_kind": "native_indirect_coreference"
+        },
+        {
+          "verse_id": "12005024",
+          "decision": "verified_contextual",
+          "locked_source_excerpt": "when came to the hill then took from hand their and deposited in the house then sent_~_away (et) the men and left",
+          "word_witnesses": [
+            "o120050220012",
+            "o120050220052",
+            "o120050230031",
+            "o120050230041",
+            "o120050240012",
+            "o120050240042",
+            "o120050240062",
+            "o120050240082",
+            "o120050250012",
+            "o120050250032",
+            "o120050250111",
+            "o120050250122",
+            "o120050270072",
+            "o120050270091"
+          ],
+          "witness_kind": "native_indirect_coreference"
+        },
+        {
+          "verse_id": "12005026",
+          "decision": "verified_contextual",
+          "locked_source_excerpt": "but said to him not heart my go as when turned man from on chariot his to meet you ? time to accept (et) the money or to accept clothes or olive_orchards or vineyards or sheep or oxen or male_slaves or female_slaves",
+          "word_witnesses": [
+            "o120050240012",
+            "o120050240042",
+            "o120050240062",
+            "o120050240082",
+            "o120050250012",
+            "o120050250032",
+            "o120050250111",
+            "o120050250122",
+            "o120050270072",
+            "o120050270091"
+          ],
+          "witness_kind": "source_specific_context_not_literal_name"
+        },
+        {
+          "verse_id": "12005027",
+          "decision": "verified_contextual",
+          "locked_source_excerpt": "now leprosy Naaman cling to you and to descendants your for ever then went_out from before presence his leprous as_~_as the snow",
+          "word_witnesses": [
+            "o120050250012",
+            "o120050250032",
+            "o120050250111",
+            "o120050250122",
+            "o120050270072",
+            "o120050270091"
+          ],
+          "witness_kind": "native_indirect_coreference"
+        }
+      ]
+    },
+    {
+      "source_id": "person:Gideon",
+      "original_key_verses": [
+        "07009020"
+      ],
+      "original_indirect_verses": [],
+      "editorial_conclusion": "Judges 9:20 is Jotham's curse on Abimelech and Shechem, continuing a speech that invokes his father Jerubbaal (Gideon) in 9:19 and earlier. Gideon is not a speaker in verse 20 and is not named; the key is a retrospective family-context association.",
+      "targets": [
+        {
+          "verse_id": "07009020",
+          "decision": "verified_contextual",
+          "locked_source_excerpt": "but if not come_out fire from Abimelech and consume (et) lords Shechem and (et) Beth Millo and come_out fire from lords Shechem and from Beth Millo and consume (et) Abimelech",
+          "word_witnesses": [
+            "o070090190061"
+          ],
+          "witness_kind": "source_specific_context_not_literal_name"
+        }
+      ]
+    },
+    {
+      "source_id": "person:Herodias",
+      "original_key_verses": [
+        "40014005",
+        "40014007",
+        "40014008"
+      ],
+      "original_indirect_verses": [],
+      "editorial_conclusion": "Matthew 14:5 records Herod's reluctance to execute John, while 14:7–8 describes Herod's rash oath and the request prompted by Herodias. She is named in 14:3 and 14:6 and described as the prompting mother in 14:8. These are meaningful contextual references, not extra direct Herodias word tokens.",
+      "targets": [
+        {
+          "verse_id": "40014005",
+          "decision": "verified_contextual",
+          "locked_source_excerpt": "and wanted him put_~_todeath feared the crowd because as prophet him regarded",
+          "word_witnesses": [
+            "n40014003014",
+            "n40014004010",
+            "n40014006010"
+          ],
+          "witness_kind": "source_specific_context_not_literal_name"
+        },
+        {
+          "verse_id": "40014007",
+          "decision": "verified_contextual",
+          "locked_source_excerpt": "therefore with oath promised her give whatever * asked",
+          "word_witnesses": [
+            "n40014006010"
+          ],
+          "witness_kind": "source_specific_context_not_literal_name"
+        },
+        {
+          "verse_id": "40014008",
+          "decision": "verified_contextual",
+          "locked_source_excerpt": "she and prompted by the mother her give me said here on platter the head John the baptist",
+          "word_witnesses": [
+            "n40014006010"
+          ],
+          "witness_kind": "source_specific_context_not_literal_name"
+        }
+      ]
+    },
+    {
+      "source_id": "person:Hoshea",
+      "original_key_verses": [
+        "12017005"
+      ],
+      "original_indirect_verses": [],
+      "editorial_conclusion": "Second Kings 17:5 narrates the Assyrian king's invasion and three-year siege of Samaria, following Hoshea's conspiracy and submission in 17:3–4 and culminating in his removal in 17:6. Hoshea's political role is the chapter context; verse 5 does not directly name him.",
+      "targets": [
+        {
+          "verse_id": "12017005",
+          "decision": "verified_contextual",
+          "locked_source_excerpt": "and invaded king Assyria in all the land and went_up Samaria and besieged to it three years",
+          "word_witnesses": [
+            "o120170030081",
+            "o120170030102",
+            "o120170040042",
+            "o120170040071",
+            "o120170040141",
+            "o120170060032"
+          ],
+          "witness_kind": "source_specific_context_not_literal_name"
+        }
+      ]
+    },
+    {
+      "source_id": "person:Ish-bosheth",
+      "original_key_verses": [
+        "10002009",
+        "10002011",
+        "10004006"
+      ],
+      "original_indirect_verses": [],
+      "editorial_conclusion": "Second Samuel 2:9 describes Abner making Saul's son Ish-bosheth king, with his name in 2:8–10; 2:11 contrasts David's reign during the division; 4:6 describes the murder of Ish-bosheth, explicitly named at 4:5–7. The narrative's pronouns/succession mark the same identity, not invented names.",
+      "targets": [
+        {
+          "verse_id": "10002009",
+          "decision": "verified_contextual",
+          "locked_source_excerpt": "and made_~_king him over the Gilead and over the Ashurites and over Jezreel and over Ephraim and over Benjamin and over Israel all it",
+          "word_witnesses": [
+            "o100020080101",
+            "o100020080111",
+            "o100020100041",
+            "o100020100051",
+            "o100020100131",
+            "o100020120061",
+            "o100020120071"
+          ],
+          "witness_kind": "source_specific_context_not_literal_name"
+        },
+        {
+          "verse_id": "10002011",
+          "decision": "verified_contextual",
+          "locked_source_excerpt": "and he_was length the time that was David king in Hebron over house Judah seven years and six months",
+          "word_witnesses": [
+            "o100020100041",
+            "o100020100051",
+            "o100020100131",
+            "o100020120061",
+            "o100020120071"
+          ],
+          "witness_kind": "source_specific_context_not_literal_name"
+        },
+        {
+          "verse_id": "10004006",
+          "decision": "verified_contextual",
+          "locked_source_excerpt": "and to_there came into middle the house get wheat and struck him in the stomach then Rechab and Baanah brother his escaped",
+          "word_witnesses": [
+            "o100040050121",
+            "o100040050131",
+            "o100040050142",
+            "o100040070032",
+            "o100040080041",
+            "o100040080051",
+            "o100040080141",
+            "o100040080151"
+          ],
+          "witness_kind": "source_specific_context_not_literal_name"
+        }
+      ]
+    },
+    {
+      "source_id": "person:Jehoahaz.3",
+      "original_key_verses": [
+        "12023033",
+        "12024018"
+      ],
+      "original_indirect_verses": [
+        "12023033"
+      ],
+      "editorial_conclusion": "Second Kings 23:33 continues Pharaoh Neco's confinement of Jehoahaz and 23:31 names Jehoahaz's mother Hamutal; 24:18 instead names Zedekiah, whose mother is also Hamutal daughter of Jeremiah of Libnah. The latter is only an explicitly qualified maternal/familial cross-reference, NOT a Jehoahaz occurrence or a claim that Zedekiah is Jehoahaz.",
+      "targets": [
+        {
+          "verse_id": "12023033",
+          "decision": "verified_contextual",
+          "locked_source_excerpt": "and confined him Pharaoh Neco at Riblah in land Hamath from reign in Jerusalem and imposed levy on the land a_hundred talents silver and talent gold",
+          "word_witnesses": [
+            "o120230310051",
+            "o120230310091",
+            "o120230320012",
+            "o120230330082",
+            "o120230340161",
+            "o120230340202"
+          ],
+          "witness_kind": "native_indirect_coreference"
+        },
+        {
+          "verse_id": "12024018",
+          "decision": "verified_contextual",
+          "locked_source_excerpt": "son_of twenty and one year Zedekiah when became_king he and one_of ten years reigned in Jerusalem and name mother’s his Hamutal daughter Jeremiah from Libnah",
+          "word_witnesses": [],
+          "witness_kind": "source_specific_context_not_literal_name"
+        }
+      ]
+    },
+    {
+      "source_id": "person:Jehoshaphat.3",
+      "original_key_verses": [
+        "11022044"
+      ],
+      "original_indirect_verses": [],
+      "editorial_conclusion": "First Kings 22:44 reports that high places were not removed during Jehoshaphat's reign; his life and reforms are described immediately at 22:42–46. The omission of his proper name from verse 44 is normal continuity of the historical narrative.",
+      "targets": [
+        {
+          "verse_id": "11022044",
+          "decision": "verified_contextual",
+          "locked_source_excerpt": "however the high_places not taken_away still the people sacrificed and offered_incense on the high_places",
+          "word_witnesses": [
+            "o110220420011",
+            "o110220420101",
+            "o110220430012",
+            "o110220430071",
+            "o110220430092",
+            "o110220450021",
+            "o110220460031",
+            "o110220460061",
+            "o110220460081",
+            "o110220470081"
+          ],
+          "witness_kind": "source_specific_context_not_literal_name"
+        }
+      ]
+    },
+    {
+      "source_id": "person:Jesus.2",
+      "original_key_verses": [
+        "40001019"
+      ],
+      "original_indirect_verses": [],
+      "editorial_conclusion": "Matthew 1:19 describes Joseph deciding not to disgrace or divorce Mary, who is pregnant with Jesus, the central subject named in 1:18 and 1:21. The relation to Jesus is an immediate birth narrative context, not an extra Greek Jesus proper-name word in verse 19.",
+      "targets": [
+        {
+          "verse_id": "40001019",
+          "decision": "verified_contextual",
+          "locked_source_excerpt": "Joseph so the husband her righteous being and not wanting her disgrace planned secretly divorce her",
+          "word_witnesses": [
+            "n40001017027",
+            "n40001018003",
+            "n40001018004",
+            "n40001018012",
+            "n40001021009"
+          ],
+          "witness_kind": "source_specific_context_not_literal_name"
+        }
+      ]
+    },
+    {
+      "source_id": "person:Joshua.2",
+      "original_key_verses": [
+        "06024015"
+      ],
+      "original_indirect_verses": [
+        "06024015"
+      ],
+      "editorial_conclusion": "Joshua 24:15 is Joshua's own first-person challenge to choose whom to serve: 'as for me and my house'. The speech is attributed to Joshua in the chapter's covenant renewal address, although the verse uses first-person forms rather than restating his proper name.",
+      "targets": [
+        {
+          "verse_id": "06024015",
+          "decision": "verified_contextual",
+          "locked_source_excerpt": "but if bad in eyes you to serve (et) LORD choose for yourselves this day (et) whom serve you.serve whether (et) gods that served fathers your which at beyond the river or or (et) gods the Amorites whose you living in land whose bu",
+          "word_witnesses": [
+            "o060240150312"
+          ],
+          "witness_kind": "native_indirect_coreference"
+        }
+      ]
+    },
+    {
+      "source_id": "person:Medan",
+      "original_key_verses": [
+        "01025001"
+      ],
+      "original_indirect_verses": [],
+      "editorial_conclusion": "Genesis 25:1 describes Abraham marrying Keturah, followed immediately by the list of their sons including Medan in 25:2. The verse does not name Medan but correctly introduces his maternal genealogy as a contextual key.",
+      "targets": [
+        {
+          "verse_id": "01025001",
+          "decision": "verified_contextual",
+          "locked_source_excerpt": "and another Abraham and took wife and name whose Keturah",
+          "word_witnesses": [
+            "o010250020081"
+          ],
+          "witness_kind": "source_specific_context_not_literal_name"
+        }
+      ]
+    },
+    {
+      "source_id": "person:Moses",
+      "original_key_verses": [
+        "02002001",
+        "02020001",
+        "40001009"
+      ],
+      "original_indirect_verses": [],
+      "editorial_conclusion": "Exodus 2:1 opens Moses' birth account with an unnamed man and woman from Levi; Exodus 20:1 opens God's law-giving on Sinai in the ongoing narrative mediated by Moses, without naming him in that verse. Matthew 1:9, however, lists Uzziah, Jotham, Ahaz and Hezekiah, with no Moses or meaningful connection; remove that false historical person key.",
+      "required_receipt_action": "remove_moses_from_unrelated_matthew_genealogy",
+      "targets": [
+        {
+          "verse_id": "02002001",
+          "decision": "verified_contextual",
+          "locked_source_excerpt": "now went man from house Levi and married (et) woman Levite",
+          "word_witnesses": [],
+          "witness_kind": "source_specific_context_not_literal_name"
+        },
+        {
+          "verse_id": "02020001",
+          "decision": "verified_contextual",
+          "locked_source_excerpt": "and spoke God (et) all the words the these to saying",
+          "word_witnesses": [],
+          "witness_kind": "source_specific_context_not_literal_name"
+        },
+        {
+          "verse_id": "40001009",
+          "decision": "corrected",
+          "locked_source_excerpt": "Uzziah and fathered - Jotham Jotham and fathered - Ahaz Ahaz and fathered - Hezekiah",
+          "word_witnesses": [],
+          "witness_kind": "false_unrelated_original_key",
+          "contradicting_original_word_ids": [
+            "n40001009001",
+            "n40001009005",
+            "n40001009010",
+            "n40001009015"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "person:Paul",
+      "original_key_verses": [
+        "44009002",
+        "44009005",
+        "44009006",
+        "44009007"
+      ],
+      "original_indirect_verses": [
+        "44009002",
+        "44009005",
+        "44009006",
+        "44009007"
+      ],
+      "editorial_conclusion": "Acts 9:2,5–7 belongs to Saul/Paul's Damascus conversion, naming Saul at 9:1, 9:4 and 9:8, using pronouns and the encounter with Jesus in intervening verses. The accompanying men of 9:7 and the Lord's directions to Saul in 9:5–6 are contextually relevant without recurring Saul/Paul name tokens.",
+      "targets": [
+        {
+          "verse_id": "44009002",
+          "decision": "verified_contextual",
+          "locked_source_excerpt": "asked from him letters at Damascus to the synagogues so_that if any found the way were men whether or women bound bring to Jerusalem",
+          "word_witnesses": [
+            "n44009001003",
+            "n44009001005",
+            "n44009001014",
+            "n44009002001",
+            "n44009002013",
+            "n44009002022",
+            "n44009003004",
+            "n44009003006",
+            "n44009003012",
+            "n44009004002",
+            "n44009004006",
+            "n44009004009",
+            "n44009004010",
+            "n44009004011"
+          ],
+          "witness_kind": "native_indirect_coreference"
+        },
+        {
+          "verse_id": "44009005",
+          "decision": "verified_contextual",
+          "locked_source_excerpt": "said and who are Lord he and I am Jesus whom you persecuting",
+          "word_witnesses": [
+            "n44009003004",
+            "n44009003006",
+            "n44009003012",
+            "n44009004002",
+            "n44009004006",
+            "n44009004009",
+            "n44009004010",
+            "n44009004011",
+            "n44009004014",
+            "n44009005001",
+            "n44009005012",
+            "n44009006002",
+            "n44009006004",
+            "n44009006010"
+          ],
+          "witness_kind": "native_indirect_coreference"
+        },
+        {
+          "verse_id": "44009006",
+          "decision": "verified_contextual",
+          "locked_source_excerpt": "but get_up and go into the city and told you what what you must do",
+          "word_witnesses": [
+            "n44009004002",
+            "n44009004006",
+            "n44009004009",
+            "n44009004010",
+            "n44009004011",
+            "n44009004014",
+            "n44009005001",
+            "n44009005012",
+            "n44009006002",
+            "n44009006004",
+            "n44009006010",
+            "n44009006013",
+            "n44009007006",
+            "n44009008003"
+          ],
+          "witness_kind": "native_indirect_coreference"
+        },
+        {
+          "verse_id": "44009007",
+          "decision": "verified_contextual",
+          "locked_source_excerpt": "the now men - traveling_with him stood speechless hearing indeed the voice no_one but seeing",
+          "word_witnesses": [
+            "n44009005001",
+            "n44009005012",
+            "n44009006002",
+            "n44009006004",
+            "n44009006010",
+            "n44009006013",
+            "n44009007006",
+            "n44009008003",
+            "n44009008011",
+            "n44009008013",
+            "n44009008016",
+            "n44009009002",
+            "n44009009006",
+            "n44009009009"
+          ],
+          "witness_kind": "native_indirect_coreference"
+        }
+      ]
+    },
+    {
+      "source_id": "place:Canaan",
+      "original_key_verses": [
+        "04034001"
+      ],
+      "original_indirect_verses": [],
+      "editorial_conclusion": "Numbers 34:1 is the divine speech introducing the law of Israel's territorial boundaries, immediately followed by the explicit name and limits of Canaan at 34:2. The key is legitimate introduction context, not a literal toponym in 34:1.",
+      "targets": [
+        {
+          "verse_id": "04034001",
+          "decision": "verified_contextual",
+          "locked_source_excerpt": "and spoke LORD to Moses to saying",
+          "word_witnesses": [
+            "o040340020121",
+            "o040340020201"
+          ],
+          "witness_kind": "source_specific_context_not_literal_name"
+        }
+      ]
+    },
+    {
+      "source_id": "place:CityOfDavid",
+      "original_key_verses": [
+        "11002010"
+      ],
+      "original_indirect_verses": [],
+      "editorial_conclusion": "First Kings 2:10 directly names the city of David as David's burial place; the locked WLC has the full noun-city and name-David compound. Add precisely the two Hebrew direct word IDs and the matching general reference, rather than treating this unlinked genuine toponym as a contextual key.",
+      "required_receipt_action": "restore_city_of_david_first_kings_exact_source_word",
+      "targets": [
+        {
+          "verse_id": "11002010",
+          "decision": "corrected",
+          "locked_source_excerpt": "then slept David with fathers his and buried in city David",
+          "word_witnesses": [],
+          "witness_kind": "restored_complete_original_word_group",
+          "restored_exact_word_ids": [
+            "o110020100062",
+            "o110020100071"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "realia:Saw",
+      "original_key_verses": [
+        "58011037"
+      ],
+      "original_indirect_verses": [],
+      "editorial_conclusion": "Hebrews 11:37 contains the actual Greek verbal form of 'they were sawn in two' (ἐπρίσθησαν, πρίζω), not a direct noun for the instrument saw. The inherited object key is therefore an inference from the action, not evidence of a Greek tool-name occurrence.",
+      "targets": [
+        {
+          "verse_id": "58011037",
+          "decision": "verified_contextual",
+          "locked_source_excerpt": "stoned sawn_in_two by murder sword died went_about in sheepskins in goats skins, destitute afflicted mistreated",
+          "word_witnesses": [],
+          "witness_kind": "source_specific_context_not_literal_name"
+        }
+      ]
+    },
+    {
+      "source_id": "realia:TempleOfAnIdol",
+      "original_key_verses": [
+        "12010027",
+        "13010010"
+      ],
+      "original_indirect_verses": [],
+      "editorial_conclusion": "Second Kings 10:27 directly names a temple of Baal, and First Chronicles 10:10 directly refers to Philistine temples of their gods and Dagon. Both verses contain complete Hebrew building/deity word compounds. Restore the exact existing source-word groups and general references while retaining the source's original key references.",
+      "required_receipt_action": "restore_two_named_idol_temple_original_compounds",
+      "targets": [
+        {
+          "verse_id": "12010027",
+          "decision": "corrected",
+          "locked_source_excerpt": "and demolished (et) pillar the Baal and destroyed (et) temple the Baal and made it into latrine to this day",
+          "word_witnesses": [],
+          "witness_kind": "restored_complete_original_word_group",
+          "restored_exact_word_ids": [
+            "o120100270071",
+            "o120100270081",
+            "o120100270082"
+          ]
+        },
+        {
+          "verse_id": "13010010",
+          "decision": "corrected",
+          "locked_source_excerpt": "and put (et) armor his temple gods their and (et) head his fastened temple Dagon",
+          "word_witnesses": [],
+          "witness_kind": "restored_complete_original_word_group",
+          "restored_exact_word_ids": [
+            "o130100100041",
+            "o130100100051",
+            "o130100100091",
+            "o130100100101"
+          ]
+        }
+      ]
+    }
+  ]
+}
