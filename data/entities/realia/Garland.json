@@ -9,7 +9,7 @@
   },
   "bsi": {
     "canonical_id": "realia:Garland",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "realia:Garland",
     "source_primary_id": "realia:Garland",
     "source_sha256": "1bc3e473ff4a5d49e142725aee6bbd4f7b59c11b520d63c82fda8a64d71c2388",
@@ -33,13 +33,73 @@
           "ORG BCV8 20001009",
           "Pinned original-word texts/glosses inspected in Clear-Bible/Macula Hebrew WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c; token IDs copied verbatim; source metadata and scripture unchanged"
         ]
+      },
+      {
+        "action": "restore_pinned_direct_object_name_in_source_key",
+        "reason": "Source-collated full-verse original-language witness directly supports this existing object category; restore only exact named tokens, preserving keys and earlier witnesses.",
+        "evidence": [
+          "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c and Clear-Bible/macula-greek@8423afe47b9e8f24b7772e808af45c7159a6fe7e",
+          "1 Corinthians 9:25 explicitly names the perishable athletic crown/garland (στέφανος), matching the existing semantic alias Wreath.",
+          "46009025 SBLGNT: n46009025012"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [
+              "44014013",
+              "20001009"
+            ],
+            "explicit_instances": {
+              "SBLGNT": [
+                [
+                  "n44014013013"
+                ]
+              ],
+              "wlc": [
+                [
+                  "o200010090021"
+                ]
+              ]
+            }
+          },
+          "after": {
+            "references": [
+              "20001009",
+              "44014013",
+              "46009025"
+            ],
+            "explicit_instances": {
+              "SBLGNT": [
+                [
+                  "n44014013013"
+                ],
+                [
+                  "n46009025012"
+                ]
+              ],
+              "wlc": [
+                [
+                  "o200010090021"
+                ]
+              ]
+            }
+          }
+        }
       }
+    ],
+    "editorial_reason": "Source-collated full-verse original-language witness directly supports this existing object category; restore only exact named tokens, preserving keys and earlier witnesses.",
+    "editorial_evidence": [
+      "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c and Clear-Bible/macula-greek@8423afe47b9e8f24b7772e808af45c7159a6fe7e",
+      "1 Corinthians 9:25 explicitly names the perishable athletic crown/garland (στέφανος), matching the existing semantic alias Wreath.",
+      "46009025 SBLGNT: n46009025012"
     ]
   },
   "explicit_instances": {
     "SBLGNT": [
       [
         "n44014013013"
+      ],
+      [
+        "n46009025012"
       ]
     ],
     "wlc": [
@@ -73,8 +133,9 @@
   "pronominal_referents": {},
   "realia_type": "other",
   "references": [
+    "20001009",
     "44014013",
-    "20001009"
+    "46009025"
   ],
   "subject_referents": {},
   "type": "realia",
