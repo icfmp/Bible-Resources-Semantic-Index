@@ -28,6 +28,9 @@ class DistinctZaccaiAndZalmonTests(unittest.TestCase):
         self.assertNotIn("Zaccai", zabbai["localizations"]["eng"].get("alternate_labels", []))
         self.assertNotIn("referred_to_as", zabbai)
         self.assertNotIn("referred_to_as", zaccai)
+        self.assertNotIn("offspring", zaccai)
+        self.assertEqual(zabbai["offspring"], ["person:Baruch"])
+        self.assertEqual(entity("people", "Baruch")["father"], "person:Zabbai.2")
 
     def test_ebal_exact_words_are_not_zalmon_exact_words(self):
         ebal = entity("places", "EbalMount")
