@@ -12,10 +12,46 @@
   },
   "bsi": {
     "canonical_id": "person:Jair.2",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "person:Jair.2",
     "source_primary_id": "person:Jair.2",
-    "source_sha256": "06d48f037e84f307c368b802aa343521781e74d4f8ef6ef9034218a05db30b4c"
+    "source_sha256": "06d48f037e84f307c368b802aa343521781e74d4f8ef6ef9034218a05db30b4c",
+    "editorial_reason": "Numbers 27:1 concerns the daughters of Zelophehad, descendants of Machir, and their inheritance petition, not the individual Jair, son of Segub, whose personal activity and villages are specifically named in Numbers 32:41 and 1 Chronicles 2:22. A broad Machirite clan relationship is not a personal occurrence of Jair.",
+    "editorial_evidence": [
+      "Pinned WLC Numbers 27:1 names Zelophehad's daughters, Hepher, Gilead, Machir, Manasseh, but not Jair",
+      "Pinned WLC Numbers 32:41 directly attests Jair and 1 Chronicles 2:22 attests Segub's son Jair; both already indexed"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "remove_misattributed_personal_source_key",
+        "reason": "Numbers 27:1 concerns the daughters of Zelophehad, descendants of Machir, and their inheritance petition, not the individual Jair, son of Segub, whose personal activity and villages are specifically named in Numbers 32:41 and 1 Chronicles 2:22. A broad Machirite clan relationship is not a personal occurrence of Jair.",
+        "evidence": [
+          "Pinned WLC Numbers 27:1 names Zelophehad's daughters, Hepher, Gilead, Machir, Manasseh, but not Jair",
+          "Pinned WLC Numbers 32:41 directly attests Jair and 1 Chronicles 2:22 attests Segub's son Jair; both already indexed"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "key_references": [
+              "04027001",
+              "04032041",
+              "05003014",
+              "10020026",
+              "13002021",
+              "13002022"
+            ]
+          },
+          "after": {
+            "key_references": [
+              "04032041",
+              "05003014",
+              "10020026",
+              "13002021",
+              "13002022"
+            ]
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -40,7 +76,6 @@
   "gender": "male",
   "id": "person:Jair.2",
   "key_references": [
-    "04027001",
     "04032041",
     "05003014",
     "10020026",

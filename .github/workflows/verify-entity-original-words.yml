@@ -6,6 +6,12 @@ on:
       - "data/entities/**"
       - "data/source.lock.json"
       - "data/source-key-resolved-115.json"
+      - "data/source-key-next-115-candidates.json"
+      - "data/source-key-unresolved-queue.json"
+      - "data/source-key-next-115-resolved.json"
+      - "scripts/validate_source_key_resolution_batches.py"
+      - "tests/test_source_key_resolution_batches.py"
+      - "scripts/inspect_next_source_key_cases.py"
       - "scripts/validate_resolved_source_keys.py"
       - "tests/test_resolved_source_keys.py"
       - "data/source-key-identity-review-115.json"
@@ -26,6 +32,12 @@ on:
       - "data/entities/**"
       - "data/source.lock.json"
       - "data/source-key-resolved-115.json"
+      - "data/source-key-next-115-candidates.json"
+      - "data/source-key-unresolved-queue.json"
+      - "data/source-key-next-115-resolved.json"
+      - "scripts/validate_source_key_resolution_batches.py"
+      - "tests/test_source_key_resolution_batches.py"
+      - "scripts/inspect_next_source_key_cases.py"
       - "scripts/validate_resolved_source_keys.py"
       - "tests/test_resolved_source_keys.py"
       - "data/source-key-identity-review-115.json"
@@ -215,5 +227,17 @@ jobs:
           python3 -I scripts/validate_resolved_source_keys.py \
             --data data \
             --ledger data/source-key-resolved-115.json \
+            --wlc macula-hebrew/WLC/tsv/macula-hebrew.tsv \
+            --sblgnt macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv
+
+      - name: Certify second 115 genuinely resolved source keys against exact Hebrew and Greek pins
+        run: |
+          python3 -I tests/test_source_key_resolution_batches.py
+          python3 -I scripts/validate_source_key_resolution_batches.py \
+            --data data \
+            --ledger data/source-key-next-115-resolved.json \
+            --selection data/source-key-next-115-candidates.json \
+            --previous data/source-key-resolved-115.json \
+            --pool data/source-key-unresolved-queue.json \
             --wlc macula-hebrew/WLC/tsv/macula-hebrew.tsv \
             --sblgnt macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv

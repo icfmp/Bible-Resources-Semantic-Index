@@ -14,10 +14,45 @@
   },
   "bsi": {
     "canonical_id": "person:Adoram",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "person:Adoram",
     "source_primary_id": "person:Adoram",
-    "source_sha256": "1574d8878413c6804e6186d4560f98de0896ccba68a142273fc5c37ea31130ce"
+    "source_sha256": "1574d8878413c6804e6186d4560f98de0896ccba68a142273fc5c37ea31130ce",
+    "editorial_reason": "Pinned Hebrew 1 Kings 5:14 describes people hearing Solomon's wisdom, not the officer Adoniram/Adoram. The correct first attested labor-levy reference is 1 Kings 5:28, already linked by the source's explicit Adoniram name token; restore its intended key under the edition's own chapter numbering.",
+    "editorial_evidence": [
+      "Pinned WLC 1Kgs 5:14 has o110050140071 Solomon and no Adoniram name",
+      "Pinned WLC 1Kgs 5:28 o110050280132 Adoniram; existing direct witness"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "adjudicate_source_identity_key_mismatch",
+        "reason": "Pinned Hebrew 1 Kings 5:14 describes people hearing Solomon's wisdom, not the officer Adoniram/Adoram. The correct first attested labor-levy reference is 1 Kings 5:28, already linked by the source's explicit Adoniram name token; restore its intended key under the edition's own chapter numbering.",
+        "evidence": [
+          "Pinned WLC 1Kgs 5:14 has o110050140071 Solomon and no Adoniram name",
+          "Pinned WLC 1Kgs 5:28 o110050280132 Adoniram; existing direct witness"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "key_references": [
+              "10020024",
+              "11004006",
+              "11005014",
+              "11012018",
+              "14010018"
+            ]
+          },
+          "after": {
+            "key_references": [
+              "10020024",
+              "11004006",
+              "11012018",
+              "14010018",
+              "11005028"
+            ]
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -44,9 +79,9 @@
   "key_references": [
     "10020024",
     "11004006",
-    "11005014",
     "11012018",
-    "14010018"
+    "14010018",
+    "11005028"
   ],
   "localizations": {
     "eng": {

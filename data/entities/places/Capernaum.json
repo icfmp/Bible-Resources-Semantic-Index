@@ -31,10 +31,46 @@
   },
   "bsi": {
     "canonical_id": "place:Capernaum",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:Capernaum",
     "source_primary_id": "place:Capernaum",
-    "source_sha256": "c60e7b36c7fa98417b4d6ad6c4d9d804b1286b36dc1314b557b26011addd4b63"
+    "source_sha256": "c60e7b36c7fa98417b4d6ad6c4d9d804b1286b36dc1314b557b26011addd4b63",
+    "editorial_reason": "Matthew 1:12 is the ancestry of Jeconiah, Shealtiel, and Zerubbabel after the Babylonian exile; no location Capernaum or legitimate contextual identification occurs in this genealogy. The location is explicitly present in Matthew 4:13 and multiple New Testament sites already in this record.",
+    "editorial_evidence": [
+      "Pinned SBLGNT Matt 1:12 n40001012005 Babylon, n40001012006 Jeconiah, n40001012009 Shealtiel, n40001012014 Zerubbabel; no Capernaum",
+      "Pinned SBLGNT Matt 4:13 n40004013008 Capernaum and n40004013004 Nazareth; existing direct witness"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "adjudicate_source_identity_key_mismatch",
+        "reason": "Matthew 1:12 is the ancestry of Jeconiah, Shealtiel, and Zerubbabel after the Babylonian exile; no location Capernaum or legitimate contextual identification occurs in this genealogy. The location is explicitly present in Matthew 4:13 and multiple New Testament sites already in this record.",
+        "evidence": [
+          "Pinned SBLGNT Matt 1:12 n40001012005 Babylon, n40001012006 Jeconiah, n40001012009 Shealtiel, n40001012014 Zerubbabel; no Capernaum",
+          "Pinned SBLGNT Matt 4:13 n40004013008 Capernaum and n40004013004 Nazareth; existing direct witness"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "key_references": [
+              "41002001",
+              "42004031",
+              "40001012",
+              "41001021",
+              "43006016",
+              "43006059"
+            ]
+          },
+          "after": {
+            "key_references": [
+              "41002001",
+              "42004031",
+              "41001021",
+              "43006016",
+              "43006059"
+            ]
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "SBLGNT": [
@@ -112,7 +148,6 @@
   "key_references": [
     "41002001",
     "42004031",
-    "40001012",
     "41001021",
     "43006016",
     "43006059"

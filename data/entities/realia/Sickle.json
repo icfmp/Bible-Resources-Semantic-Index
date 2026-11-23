@@ -17,10 +17,41 @@
   },
   "bsi": {
     "canonical_id": "realia:Sickle",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "realia:Sickle",
     "source_primary_id": "realia:Sickle",
-    "source_sha256": "c50ac0bb8e0df0f961896944d5694262b05d459a8863306856f3f190189c38e3"
+    "source_sha256": "c50ac0bb8e0df0f961896944d5694262b05d459a8863306856f3f190189c38e3",
+    "editorial_reason": "The pinned Hebrew Deuteronomy 23:25 speaks of grapes in a neighbor's vineyard, not a sickle. The following Hebrew verse 23:26 expressly names a sickle in the neighbor's grainfield, with direct WLC o050230260082 already present. Correct the mismatched English/source versification rather than silently changing the Bible.",
+    "editorial_evidence": [
+      "Pinned WLC Deut 23:25 o050230250061 grapes and o050230250032 vineyard; no sickle",
+      "Pinned WLC Deut 23:26 o050230260082 sickle, already a direct source witness"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "adjudicate_source_identity_key_mismatch",
+        "reason": "The pinned Hebrew Deuteronomy 23:25 speaks of grapes in a neighbor's vineyard, not a sickle. The following Hebrew verse 23:26 expressly names a sickle in the neighbor's grainfield, with direct WLC o050230260082 already present. Correct the mismatched English/source versification rather than silently changing the Bible.",
+        "evidence": [
+          "Pinned WLC Deut 23:25 o050230250061 grapes and o050230250032 vineyard; no sickle",
+          "Pinned WLC Deut 23:26 o050230260082 sickle, already a direct source witness"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "key_references": [
+              "66014014",
+              "05023025",
+              "24050016"
+            ]
+          },
+          "after": {
+            "key_references": [
+              "66014014",
+              "24050016",
+              "05023026"
+            ]
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "SBLGNT": [
@@ -95,8 +126,8 @@
   "id": "realia:Sickle",
   "key_references": [
     "66014014",
-    "05023025",
-    "24050016"
+    "24050016",
+    "05023026"
   ],
   "lemmas": {
     "el": [
