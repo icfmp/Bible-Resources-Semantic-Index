@@ -20,7 +20,32 @@
     "review_status": "source_unreviewed",
     "source_id": "place:AsiaMinor",
     "source_primary_id": "place:AsiaMinor",
-    "source_sha256": "a4e86fcaa6f83409f3d37f21acc4353a88108d8a5479bf98a00ca849b777ddaa"
+    "source_sha256": "a4e86fcaa6f83409f3d37f21acc4353a88108d8a5479bf98a00ca849b777ddaa",
+    "editorial_field_changes": [
+      {
+        "action": "correct_apocryphal_vs_canonical_place_scope",
+        "replaced_field_values": {
+          "mentioned_in_bible": {
+            "from": true,
+            "to": false
+          },
+          "non_biblical": {
+            "from": false,
+            "to": true
+          },
+          "only_mentioned_in_apocrypha": {
+            "from": true,
+            "to": false
+          }
+        },
+        "reason": "The broad modern name 'Asia Minor' is not literally named in Acts 6:9/16:6; those canonical passages refer to the ancient province Asia, geographically within Anatolia, not an apocryphal-only location. Preserve inherited keys as contextual geography but do not assert exact named canonical occurrence or classify this candidate as apocrypha-only.",
+        "evidence": [
+          "Original imported keys 44006009, 44016006",
+          "BRSI source editions pinned to WLC 39 OT + SBLGNT 27 NT books",
+          "Acts 6:9 and 16:6 text says Asia (Roman province), not the geographic term Asia Minor."
+        ]
+      }
+    ]
   },
   "explicit_instances": {},
   "id": "place:AsiaMinor",
@@ -38,15 +63,15 @@
       "preferred_label": "Asia Minor"
     }
   },
-  "mentioned_in_bible": true,
+  "mentioned_in_bible": false,
   "nearby_places": [
     "place:GreatSea",
     "place:AegeanSea",
     "place:Syria",
     "place:Mesopotamia"
   ],
-  "non_biblical": false,
-  "only_mentioned_in_apocrypha": true,
+  "non_biblical": true,
+  "only_mentioned_in_apocrypha": false,
   "place_types": {
     "acai": [
       "region",
