@@ -19,7 +19,23 @@
     "review_status": "source_unreviewed",
     "source_id": "place:Etam",
     "source_primary_id": "place:Etam",
-    "source_sha256": "c104098da5e6666691a0411f628dffd76952a888c50a099f4f831e5e73fb3f2b"
+    "source_sha256": "c104098da5e6666691a0411f628dffd76952a888c50a099f4f831e5e73fb3f2b",
+    "editorial_field_changes": [
+      {
+        "action": "remove_unproven_cross_entity_key_identity",
+        "removed_reference_values": {
+          "key_references": [
+            "14011006"
+          ]
+        },
+        "reason": "Judges 15:8,11 identify Samson's cleft of the rock of Etam, while 2 Chronicles 11:6 names a fortified town built by Rehoboam. Distinct locations are not proved the same by the repeated toponym; the source has no direct 2 Chronicles word linked here. Withhold the source-derived specific identity claim rather than force a geographical merger; retain the full Samson rock evidence and its exact source tokens.",
+        "evidence": [
+          "Judges 15:8,11; 2 Chronicles 11:6",
+          "https://www.studylight.org/dictionaries/eng/hdb/e/etam.html",
+          "https://www.ariel.ac.il/wp/archaeology-and-text/wp-content/uploads/sites/139/2019/03/ArchiTxt_Vol2-2_Chris-McKinny.pdf"
+        ]
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -46,8 +62,7 @@
   "is_person": false,
   "key_references": [
     "07015011",
-    "07015008",
-    "14011006"
+    "07015008"
   ],
   "lemmas": {
     "he": [
