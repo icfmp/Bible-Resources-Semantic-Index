@@ -96,15 +96,6 @@ jobs:
             --french ubs-source/dictionaries/greek/JSON/UBSGreekNTDic-v1.0-fr.JSON \
             --macula macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv \
             --output /tmp/bsi-ubs-greek-original-gap-review.json
-      - name: Audit 1218 non-εἰμί Greek original words without UBS LN corroboration
-        run: |
-          python3 -I links/dictionaries/ubs-greek/audit_remaining_no_ln.py \
-            --report /tmp/bsi-ubs-greek-original-gap-review.json \
-            --index links/dictionaries/ubs-greek/index.json \
-            --english ubs-source/dictionaries/greek/JSON/UBSGreekNTDic-v1.0-en.JSON \
-            --french ubs-source/dictionaries/greek/JSON/UBSGreekNTDic-v1.0-fr.JSON \
-            --macula macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv \
-            --output /tmp/bsi-ubs-greek-no-ln-1218-source-review.json
       - name: Independently verify all 5,938 original Greek lexical source-word entry candidates
         run: |
           python3 -I links/dictionaries/ubs-greek/build_private_word_candidate.py \
@@ -335,7 +326,6 @@ jobs:
             --english ubs-source/dictionaries/greek/JSON/UBSGreekNTDic-v1.0-en.JSON \
             --french ubs-source/dictionaries/greek/JSON/UBSGreekNTDic-v1.0-fr.JSON \
             --macula macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv \
-            --report /tmp/bsi-ubs-greek-no-ln-1218-source-review.json \
             --ledger links/dictionaries/ubs-greek/v1_reviewed_no_ln_families_batch5.json \
             --output /tmp/bsi-ubs-greek-reviewed-no-ln-batch5-private.json
           python3 - <<'PY'

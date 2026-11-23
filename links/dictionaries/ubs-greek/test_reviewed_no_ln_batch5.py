@@ -47,6 +47,30 @@ class GreekNoLnBatch5Tests(unittest.TestCase):
             MOD["review_ledger"](altered, {
                 "source_editions": LEDGER["source_editions"]})
 
+    def test_full_original_no_ln_audit_mandatory_before_any_approval(self):
+        from unittest.mock import patch
+        with patch.dict(MOD["build"].__globals__["AUDIT"],{
+            "audit":lambda *args: (_ for _ in ()).throw(
+                ValueError("full 137741 original Greek word census required"))}):
+            with self.assertRaisesRegex(ValueError,"full 137741 original Greek word census required"):
+                MOD["build"]({}, {}, {}, [], [], Path("/missing.tsv"), LEDGER)
+
+    def test_invalid_source_census_never_approved(self):
+        from unittest.mock import patch
+        bad={
+            "status":"PRIVATE_1218_original_Greek_lemma_only_without_UBS_LN_NOT_APPROVED",
+            "all_original_words_audited":137740,
+            "original_no_ln_words":3249,
+            "previously_reviewed_eimi_entry_only_words":2031,
+            "remaining_unapproved_original_words":1218,
+            "new_contextual_ubs_lexids":0,
+            "publication_approved":False,
+        }
+        with patch.dict(MOD["build"].__globals__["AUDIT"],{
+            "audit":lambda *args:bad}):
+            with self.assertRaisesRegex(ValueError,"source audit contract drift"):
+                MOD["build"]({}, {}, {}, [], [], Path("/missing.tsv"), LEDGER)
+
     def test_no_ln_source_not_claimed_as_lexid(self):
         self.assertTrue(LEDGER["editorial_policy"]["allow_entry_only_without_contextual_ln"])
         self.assertTrue(LEDGER["editorial_policy"]["never_infer_contextual_ubs_lexid"])

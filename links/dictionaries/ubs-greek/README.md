@@ -55,6 +55,11 @@ public BRSI index merely because they are available upstream.
   `v1_reviewed_hopote_temporal_headword.json` editorial ledgers remain
   unchanged, preserving 220 exact-word headword reviews, four abstentions,
   and the original conjunction/adverb annotations.
+- The **1,218** non-εἰμί Greek original-word headwords without corroborating
+  UBS lexical LN codes are independently audited across all 137,741
+  original MACULA words **inside** their reviewed builder, rather than in
+  a one-use temporary report stage. Their eight source-specific family
+  approvals remain entry-only, never contextual sense assignments.
 - The **five composite-Strong original words** are rechecked directly from
   the original exception register by their reviewed builder, without
   splitting the original Strong annotations or inferring a sense.

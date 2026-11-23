@@ -64,6 +64,10 @@ and original source annotations remain separately protected.
   stages (577/155/138/32/2) share the exact original-word witness and
   status-only transition guard, but keep their original, distinct
   editorial and language-specific Strong/grammar decisions.
+- **Greek no-LN headwords:** the complete original 1,218-word/8-family
+  lexical-entry-only audit still reruns against pinned UBS and MACULA
+  originals inside the separate reviewed builder, without a redundant
+  runner-only temporary report.
 - **Greek composite Strong and provisional senses:** the 5-original-word
   compound-Strong source audit, full 137,741-word UBS/MACULA sense
   *candidate* census, and 15,237-word unresolved-source priority
