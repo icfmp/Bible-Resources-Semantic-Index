@@ -9,6 +9,7 @@ on:
       - "scripts/verify_pinned_entity_words.py"
       - "tests/test_verify_pinned_entity_words.py"
       - "scripts/audit_place_source_word_candidates.py"
+      - "scripts/inspect_pinned_original_verse.py"
       - "tests/test_audit_place_source_word_candidates.py"
       - ".github/workflows/verify-entity-original-words.yml"
   push:
@@ -75,6 +76,12 @@ jobs:
             --sblgnt macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv \
             --max-cases 150
           # Candidate source-word hints are for editorial review only.
+      - name: Review exact original words for outstanding source-identity examples
+        run: |
+          python3 -I scripts/inspect_pinned_original_verse.py \
+            --wlc macula-hebrew/WLC/tsv/macula-hebrew.tsv \
+            --sblgnt macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv \
+            --verses 43004006 43004005 01014001 19083008 13002049 27011005 48001017 26038006 04014025 43004025
       - name: Check every active exact original-word claim against pinned source
         run: |
           python3 -I scripts/verify_pinned_entity_words.py             --data data             --wlc macula-hebrew/WLC/tsv/macula-hebrew.tsv             --sblgnt macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv
