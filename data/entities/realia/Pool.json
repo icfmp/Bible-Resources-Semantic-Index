@@ -15,7 +15,34 @@
     "review_status": "source_unreviewed",
     "source_id": "realia:Pool",
     "source_primary_id": "realia:Pool",
-    "source_sha256": "abfdb23e0173bc021c1402fbcd25a8292022eb5a6d94666db9e9e65c4a1a7e44"
+    "source_sha256": "abfdb23e0173bc021c1402fbcd25a8292022eb5a6d94666db9e9e65c4a1a7e44",
+    "editorial_field_changes": [
+      {
+        "action": "restore_source_attested_object_word_instances",
+        "added_reference_values": {
+          "references": [
+            "12020020",
+            "23022009"
+          ]
+        },
+        "added_original_word_groups": {
+          "wlc": [
+            [
+              "o120200200092"
+            ],
+            [
+              "o230220090112"
+            ]
+          ]
+        },
+        "reason": "2 Kings 20:20 and Isaiah 22:9 explicitly name pools.",
+        "evidence": [
+          "ORG BCV8 12020020",
+          "ORG BCV8 23022009",
+          "Pinned original-word texts/glosses inspected in Clear-Bible/Macula Hebrew WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c; token IDs copied verbatim; source metadata and scripture unchanged"
+        ]
+      }
+    ]
   },
   "explicit_instances": {
     "SBLGNT": [
@@ -27,6 +54,14 @@
       ],
       [
         "n43009007008"
+      ]
+    ],
+    "wlc": [
+      [
+        "o120200200092"
+      ],
+      [
+        "o230220090112"
       ]
     ]
   },
@@ -54,7 +89,9 @@
   "references": [
     "43005002",
     "43005007",
-    "43009007"
+    "43009007",
+    "12020020",
+    "23022009"
   ],
   "subject_referents": {
     "SBLGNT": [
