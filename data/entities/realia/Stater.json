@@ -15,7 +15,31 @@
     "review_status": "source_unreviewed",
     "source_id": "realia:Stater",
     "source_primary_id": "realia:Stater",
-    "source_sha256": "dab9cb7ef50f33184de955646059a7b6abb11819e7332ce135fad15ec9416583"
+    "source_sha256": "dab9cb7ef50f33184de955646059a7b6abb11819e7332ce135fad15ec9416583",
+    "editorial_field_changes": [
+      {
+        "action": "remove_proven_false_source_key_identity_claim",
+        "removed_reference_values": {
+          "key_references": [
+            "44017016",
+            "44018001"
+          ]
+        },
+        "reason": "Acts 17:16 and Acts 18:1 mention the city Athens and do not refer to a stater coin. The source's inherited alternate label 'Athens' is a category/name error. Matthew 17:27 independently contains στατήρ (stater) and the correct direct-word claim remains untouched.",
+        "evidence": [
+          "Acts 17:16; Acts 18:1; Matthew 17:27",
+          "https://www.biblegateway.com/passage/?search=Matthew+17%3A27%3BActs+17%3A16%3BActs+18%3A1&version=SBLGNT",
+          "https://www.biblegateway.com/passage/?search=Matthew+17%3A27&version=NET"
+        ],
+        "removed_localization_values": {
+          "eng": {
+            "alternate_labels": [
+              "Athens"
+            ]
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "SBLGNT": [
@@ -26,9 +50,7 @@
   },
   "id": "realia:Stater",
   "key_references": [
-    "40017027",
-    "44017016",
-    "44018001"
+    "40017027"
   ],
   "lemmas": {
     "el": [
@@ -38,8 +60,7 @@
   "localizations": {
     "eng": {
       "alternate_labels": [
-        "Coin",
-        "Athens"
+        "Coin"
       ],
       "preferred_label": "Stater"
     }
