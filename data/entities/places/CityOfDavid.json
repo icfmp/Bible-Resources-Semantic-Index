@@ -11,9 +11,59 @@
     "review_status": "source_unreviewed",
     "source_id": "place:CityOfDavid",
     "source_primary_id": "place:CityOfDavid",
-    "source_sha256": "5f50a0c1ca1c877e1b781e00d9adcc792577dd08ae1a062488a2a3680ac7cc0f"
+    "source_sha256": "5f50a0c1ca1c877e1b781e00d9adcc792577dd08ae1a062488a2a3680ac7cc0f",
+    "editorial_field_changes": [
+      {
+        "action": "restore_explicit_city_of_david_compound_name",
+        "added_reference_values": {
+          "references": [
+            "10006016",
+            "13011007",
+            "13015001"
+          ]
+        },
+        "added_original_word_groups": {
+          "wlc": [
+            [
+              "o100060160051",
+              "o100060160061"
+            ],
+            [
+              "o130110070081",
+              "o130110070091"
+            ],
+            [
+              "o130150010042",
+              "o130150010051"
+            ]
+          ]
+        },
+        "reason": "2 Samuel 6:16, 1 Chronicles 11:7 and 15:1 each explicitly name the city of David (עיר דוד), in two-part original Hebrew form. Exact verse-specific IDs and lexical text were collated directly against the frozen WLC lowfat XML; preserve source 2 Samuel 5:6 as a contextual key because it names Jerusalem before the City-of-David designation, and 1 Kings 2:10 as a source key pending direct original-word validation.",
+        "evidence": [
+          "2 Samuel 6:16; 1 Chronicles 11:7; 1 Chronicles 15:1",
+          "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c WLC/lowfat/10-2Sa-006-lowfat.xml",
+          "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c WLC/lowfat/13-1Ch-011-lowfat.xml",
+          "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c WLC/lowfat/13-1Ch-015-lowfat.xml"
+        ]
+      }
+    ]
   },
-  "explicit_instances": {},
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o100060160051",
+        "o100060160061"
+      ],
+      [
+        "o130110070081",
+        "o130110070091"
+      ],
+      [
+        "o130150010042",
+        "o130150010051"
+      ]
+    ]
+  },
   "id": "place:CityOfDavid",
   "is_artifact": false,
   "is_person": false,
@@ -45,7 +95,11 @@
   ],
   "primary_id": "place:CityOfDavid",
   "pronominal_referents": {},
-  "references": [],
+  "references": [
+    "10006016",
+    "13011007",
+    "13015001"
+  ],
   "subject_referents": {},
   "subregion_of": [
     "place:Jerusalem"
