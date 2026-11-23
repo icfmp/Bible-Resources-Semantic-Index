@@ -2,12 +2,74 @@
   "added_entry": false,
   "bsi": {
     "canonical_id": "place:WildernessOfMaon",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:WildernessOfMaon",
     "source_primary_id": "place:WildernessOfMaon",
-    "source_sha256": "b3438a3df9b8da4239e58f12f6759fe96c9a67ac79c3a530ff01f9efde17d224"
+    "source_sha256": "b3438a3df9b8da4239e58f12f6759fe96c9a67ac79c3a530ff01f9efde17d224",
+    "editorial_reason": "Restore the complete lexical phrase directly attested in the inherited key verse(s), retaining distinct original-word IDs, source identity, and every inherited contextual key.",
+    "editorial_evidence": [
+      "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c WLC/tsv/macula-hebrew.tsv inspected by GitHub Actions pinned original-verse job",
+      "09023024 direct original-name group o090230240082, o090230240091",
+      "09023025 direct original-name group o090230250102, o090230250111",
+      "09023025 direct original-name group o090230250171, o090230250181"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "restore_exact_attested_topographic_original_phrase",
+        "reason": "Restore the complete lexical phrase directly attested in the inherited key verse(s), retaining distinct original-word IDs, source identity, and every inherited contextual key.",
+        "evidence": [
+          "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c WLC/tsv/macula-hebrew.tsv inspected by GitHub Actions pinned original-verse job",
+          "09023024 direct original-name group o090230240082, o090230240091",
+          "09023025 direct original-name group o090230250102, o090230250111",
+          "09023025 direct original-name group o090230250171, o090230250181"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [],
+            "explicit_instances": {}
+          },
+          "after": {
+            "references": [
+              "09023024",
+              "09023025"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o090230240082",
+                  "o090230240091"
+                ],
+                [
+                  "o090230250102",
+                  "o090230250111"
+                ],
+                [
+                  "o090230250171",
+                  "o090230250181"
+                ]
+              ]
+            }
+          }
+        }
+      }
+    ]
   },
-  "explicit_instances": {},
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o090230240082",
+        "o090230240091"
+      ],
+      [
+        "o090230250102",
+        "o090230250111"
+      ],
+      [
+        "o090230250171",
+        "o090230250181"
+      ]
+    ]
+  },
   "id": "place:WildernessOfMaon",
   "is_artifact": false,
   "is_person": false,
@@ -30,7 +92,10 @@
   },
   "primary_id": "place:WildernessOfMaon",
   "pronominal_referents": {},
-  "references": [],
+  "references": [
+    "09023024",
+    "09023025"
+  ],
   "subject_referents": {},
   "subregion_of": [
     "place:TerritoryOfJudah"
