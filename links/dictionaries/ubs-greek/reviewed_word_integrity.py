@@ -29,6 +29,11 @@ def verify_original_word(record, witness, word_id, entry_id, pending_status):
         raise ValueError("Original Greek word-ID missing")
     if not isinstance(record, dict) or not isinstance(witness, dict):
         raise ValueError("Original Greek reviewed word witness missing: " + word_id)
+    if witness.get("word_id") != word_id:
+        raise ValueError("Original Greek reviewed word-ID does not match source: " + word_id)
+    missing = [source for _, source in WITNESS_FIELDS if source not in witness]
+    if missing:
+        raise ValueError("Original Greek word source witness fields missing: " + repr(missing))
     expected = {
         "entry_id": entry_id,
         "match_type": pending_status,
