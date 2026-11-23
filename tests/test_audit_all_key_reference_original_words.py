@@ -55,6 +55,20 @@ class KeyReferenceCandidateTests(unittest.TestCase):
         self.assertEqual(result["cases"][0]["source_word_candidates"][0]
                          ["match_type"],"whole_name_candidate")
 
+    def test_exhaustive_candidate_report_preserves_all_original_words(self):
+        row = {"source_id": "place:Complete", "path": "entities/places/Complete.json",
+               "kind": "place", "verse_id": "01001001", "names": ["complete"],
+               "source_direct_word_claim": False, "source_indirect_word_claim": False}
+        words = {"01001001": [
+            {"word_id": f"o01001001{i:04d}", "corpus": "wlc",
+             "english": "Complete", "gloss": "Complete",
+             "lemma": "x", "text": "x"} for i in range(25)
+        ]}
+        result = mod.review([row], words)
+        candidates = result["cases"][0]["source_word_candidates"]
+        self.assertEqual(len(candidates), 25)
+        self.assertEqual(candidates[-1]["word_id"], "o010010010024")
+
     def test_real_corpus_covers_every_key_outside_general_without_guessing(self):
         rows=mod.inventory(ROOT/"data")
         self.assertGreater(len(rows),400)
