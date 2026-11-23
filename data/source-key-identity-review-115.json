@@ -983,13 +983,23 @@
     },
     {
       "source_id": "place:Gederah.2",
-      "classification": "uncertain_not_promoted",
+      "classification": "wrong_contextual_key_corrected",
       "reviewed_key_verses": [
-        "13012004"
+        "13012004",
+        "13012005"
       ],
-      "rationale": "1 Chronicles 12:4 names a Gibeonite, not Gederah; 12:5 must be inspected for Gederathite before a wrong-number reference may be corrected.",
-      "original_word_evidence": [],
-      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "rationale": "1 Chronicles 12:4 has Ishmaiah the Gibeonite, not Gederah. The adjacent 1 Chronicles 12:5 has Jozabad the Gederathite (WLC o130120050052). Source key was corrected to 12:5 only; a demonym still does not establish a direct Gederah toponym.",
+      "original_word_evidence": [
+        {
+          "verse_id": "13012005",
+          "corpus": "wlc",
+          "word_id": "o130120050052",
+          "lemma": "גְּדֵרָתִי",
+          "english": "Gederathite",
+          "gloss": "Gederathite"
+        }
+      ],
+      "editorial_outcome": "source_record_corrected_in_this_review",
       "original_source_edition": "WLC or SBLGNT as specified by witness",
       "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity"
     },
@@ -1365,11 +1375,11 @@
     },
     {
       "source_id": "place:ZalmonMount",
-      "classification": "direct_witness_restored",
+      "classification": "uncertain_not_promoted",
       "reviewed_key_verses": [
         "19068015"
       ],
-      "rationale": "Psalm 68:15 contains an independently attested Zalmon lexical name for a mountain and is now linked to the exact pinned WLC word.",
+      "rationale": "Judges 9:48 names a woodland Mount Zalmon near Shechem (already direct); Psalm 68:15 separately names a snow-covered Zalmon, whose identity with that Judges mountain is not established. Preserve the earlier source identity split and do not silently equate the sites; a pre-existing negative regression explicitly requires this distinction.",
       "original_word_evidence": [
         {
           "verse_id": "19068015",
@@ -1380,7 +1390,7 @@
           "gloss": "Zalmon"
         }
       ],
-      "editorial_outcome": "source_record_corrected_in_this_review",
+      "editorial_outcome": "no_unverified_direct_word_assignment",
       "original_source_edition": "WLC or SBLGNT as specified by witness",
       "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity"
     },
