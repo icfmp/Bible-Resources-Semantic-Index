@@ -15,10 +15,41 @@
   },
   "bsi": {
     "canonical_id": "realia:Manger",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "realia:Manger",
     "source_primary_id": "realia:Manger",
-    "source_sha256": "bc4ed1966f073f276d1573babeb491cbf20e52bcdc1885c612b66374993ad3ad"
+    "source_sha256": "bc4ed1966f073f276d1573babeb491cbf20e52bcdc1885c612b66374993ad3ad",
+    "editorial_reason": "Job 39:3 describes mountain goats giving birth and does not mention a feed trough. Job 39:9 explicitly names the wild ox's manger (אֵבוּס o180390090071; already a direct WLC original source witness). Correct the inherited key to the attested real place in the chapter.",
+    "editorial_evidence": [
+      "Pinned Macula WLC Job 39:3 words describe giving birth, no manger name",
+      "Pinned Macula WLC Job 39:9 o180390090071 manger + attached suffix o180390090072"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "correct_manger_key_from_animal_birth_to_actual_feed_trough",
+        "reason": "Job 39:3 describes mountain goats giving birth and does not mention a feed trough. Job 39:9 explicitly names the wild ox's manger (אֵבוּס o180390090071; already a direct WLC original source witness). Correct the inherited key to the attested real place in the chapter.",
+        "evidence": [
+          "Pinned Macula WLC Job 39:3 words describe giving birth, no manger name",
+          "Pinned Macula WLC Job 39:9 o180390090071 manger + attached suffix o180390090072"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "key_references": [
+              "42002007",
+              "23001003",
+              "18039003"
+            ]
+          },
+          "after": {
+            "key_references": [
+              "42002007",
+              "23001003",
+              "18039009"
+            ]
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "SBLGNT": [
@@ -49,7 +80,7 @@
   "key_references": [
     "42002007",
     "23001003",
-    "18039003"
+    "18039009"
   ],
   "lemmas": {
     "el": [
