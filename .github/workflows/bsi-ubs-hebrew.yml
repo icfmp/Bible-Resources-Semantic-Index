@@ -160,8 +160,7 @@ jobs:
             --index /tmp/bsi-ubs-hebrew-index.json \
             --macula macula-hebrew/WLC/tsv/macula-hebrew.tsv \
             --output /tmp/bsi-ubs-positive-family-pending-original-words.json
-          if [ -f links/dictionaries/ubs-hebrew/positive_family_pending_original_words.json ]; then
-            python3 -I scripts/verify_generated_json.py \
+          python3 -I scripts/verify_generated_json.py \
             --generated /tmp/bsi-ubs-positive-family-pending-original-words.json \
             --baseline links/dictionaries/ubs-hebrew/positive_family_pending_original_words.json
       - name: Verify 134 additional exact original WLC headwords and one source uncertainty
