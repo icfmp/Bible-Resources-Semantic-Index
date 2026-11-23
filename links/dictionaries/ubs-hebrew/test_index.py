@@ -74,6 +74,21 @@ class UBSHebrewBridgeTest(unittest.TestCase):
         self.assertEqual(missing["entry_ids"],[])
         self.assertEqual(missing["sense_ids"],[])
 
+    def test_cross_edition_numeric_sense_identity_never_crosses_source_language(self):
+        # A source SDBH ID matching a Hebrew UBS sense must not authorize
+        # that Hebrew lexical sense for an original Aramaic word. An
+        # independently attested Aramaic Strong may yield entry-only at most.
+        hebrew=entry("000001000000000",["H0430"],"000001001001000")
+        aramaic=entry("000002000000000",["A0430"],"000002001001000")
+        index=build([hebrew,aramaic],[hebrew,aramaic])
+        wrong=lookup(index,"000001001001000","0430","A")
+        self.assertEqual(wrong["status"],"entry_only")
+        self.assertEqual(wrong["entry_ids"],[aramaic["MainId"]])
+        self.assertEqual(wrong["sense_ids"],[])
+        self.assertEqual(wrong["evidence"],"macula_strong_exact_only")
+        self.assertEqual(lookup(index,"000001001001000","0430","H")["sense_ids"],
+                         ["000001001001000"])
+
     def test_correlated_sdbh_strong_family_allows_original_sense(self):
         only=entry("000001000000000",["H0430a"],"000001001001000")
         ix=build([only],[only])
