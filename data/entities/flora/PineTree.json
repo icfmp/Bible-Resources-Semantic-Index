@@ -9,10 +9,48 @@
   },
   "bsi": {
     "canonical_id": "flora:PineTree",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "flora:PineTree",
     "source_primary_id": "flora:PineTree",
-    "source_sha256": "1c86ad8f76831017b723b7e610ec47fbec9ac23ceef3dda00a82e7e8f308ad74"
+    "source_sha256": "1c86ad8f76831017b723b7e610ec47fbec9ac23ceef3dda00a82e7e8f308ad74",
+    "editorial_reason": "The original Aleppo-pine hypothesis concerns Hebrew 'ets shemen ('oil tree') in 1 Kings 6:23,31-33, Nehemiah 8:15 and Isaiah 41:19; another scholarly identification is wild olive/oleaster. Isaiah 44:14 has the different Hebrew hapax 'oren, whose botanical identification remains disputed (pine, fir, cedar or laurel). It is not source-faithful to treat that verse as an attestation of this particular Aleppo-pine/oil-tree identity. Withdraw only the unrelated key, retaining every old pinned original-word claim and the source edition's own text.",
+    "editorial_evidence": [
+      "Pinned WLC 1Kgs 6:23 o110060230051 wood + o110060230061 olive/oil-tree (עֵץ שֶׁמֶן)",
+      "Pinned WLC Isa 44:14 o230440140121 is אֹרֶן, a different and botanically unresolved name",
+      "UBS translators: https://freely-given.org/OBD/UBS/Flora/1.18.2.htm ; NET Bible uncertainty: https://classic.net.bible.org/verse.php?book=Isa&chapter=44&verse=14"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "resolve_final_twelve_source_identity",
+        "reason": "The original Aleppo-pine hypothesis concerns Hebrew 'ets shemen ('oil tree') in 1 Kings 6:23,31-33, Nehemiah 8:15 and Isaiah 41:19; another scholarly identification is wild olive/oleaster. Isaiah 44:14 has the different Hebrew hapax 'oren, whose botanical identification remains disputed (pine, fir, cedar or laurel). It is not source-faithful to treat that verse as an attestation of this particular Aleppo-pine/oil-tree identity. Withdraw only the unrelated key, retaining every old pinned original-word claim and the source edition's own text.",
+        "evidence": [
+          "Pinned WLC 1Kgs 6:23 o110060230051 wood + o110060230061 olive/oil-tree (עֵץ שֶׁמֶן)",
+          "Pinned WLC Isa 44:14 o230440140121 is אֹרֶן, a different and botanically unresolved name",
+          "UBS translators: https://freely-given.org/OBD/UBS/Flora/1.18.2.htm ; NET Bible uncertainty: https://classic.net.bible.org/verse.php?book=Isa&chapter=44&verse=14"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "key_references": [
+              "23044014",
+              "11006023"
+            ],
+            "preferred_label": "Aleppo Pine",
+            "alternate_labels": [
+              "Cedar"
+            ]
+          },
+          "after": {
+            "key_references": [
+              "11006023"
+            ],
+            "preferred_label": "Aleppo pine (proposed identification)",
+            "alternate_labels": [
+              "Aleppo Pine"
+            ]
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -39,7 +77,6 @@
   "flora_type": "Wild Trees and Shrubs",
   "id": "flora:PineTree",
   "key_references": [
-    "23044014",
     "11006023"
   ],
   "lemmas": {
@@ -50,9 +87,9 @@
   "localizations": {
     "eng": {
       "alternate_labels": [
-        "Cedar"
+        "Aleppo Pine"
       ],
-      "preferred_label": "Aleppo Pine"
+      "preferred_label": "Aleppo pine (proposed identification)"
     }
   },
   "non_biblical": false,

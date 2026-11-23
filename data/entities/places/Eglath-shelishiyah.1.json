@@ -2,10 +2,35 @@
   "added_entry": false,
   "bsi": {
     "canonical_id": "place:Eglath-shelishiyah.1",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:Eglath-shelishiyah.1",
     "source_primary_id": "place:Eglath-shelishiyah.1",
-    "source_sha256": "18828aae30bbae8bebe56b73f0664dba78fc8dc25a8aab91efc76768bcc1321c"
+    "source_sha256": "18828aae30bbae8bebe56b73f0664dba78fc8dc25a8aab91efc76768bcc1321c",
+    "editorial_reason": "The identical two-word Hebrew phrase 'Eglath-shelishiyah' is present in the pinned Isaiah 15:5 and Jeremiah 48:34, both among Moabite place-names. The original lexeme may mean 'the third Eglath' as a proper locality, or 'a three-year-old heifer' in an epithet; significant scholarly editions differ. Preserve the real source phrase and both historical keys but correct the overconfident city-style editorial label so it does not assert an archaeologically proven settlement.",
+    "editorial_evidence": [
+      "WLC Isa 15:5 o230150050071/o230150050081 and Jer 48:34 o240480340121/o240480340131 spell the complete phrase",
+      "Cambridge Bible on toponym reading: https://biblehub.com/commentaries/cambridge/isaiah/15.htm",
+      "Alternative heifer reading documented by Bible dictionaries: https://classic.net.bible.org/dictionary.php?word=Eglath"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "resolve_final_twelve_source_identity",
+        "reason": "The identical two-word Hebrew phrase 'Eglath-shelishiyah' is present in the pinned Isaiah 15:5 and Jeremiah 48:34, both among Moabite place-names. The original lexeme may mean 'the third Eglath' as a proper locality, or 'a three-year-old heifer' in an epithet; significant scholarly editions differ. Preserve the real source phrase and both historical keys but correct the overconfident city-style editorial label so it does not assert an archaeologically proven settlement.",
+        "evidence": [
+          "WLC Isa 15:5 o230150050071/o230150050081 and Jer 48:34 o240480340121/o240480340131 spell the complete phrase",
+          "Cambridge Bible on toponym reading: https://biblehub.com/commentaries/cambridge/isaiah/15.htm",
+          "Alternative heifer reading documented by Bible dictionaries: https://classic.net.bible.org/dictionary.php?word=Eglath"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "preferred_label": "Eglath-shelishiya"
+          },
+          "after": {
+            "preferred_label": "Eglath-shelishiyah (possible Moabite site)"
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {},
   "id": "place:Eglath-shelishiyah.1",
@@ -21,7 +46,7 @@
         "Eglath-shelishiya",
         "Eglath Shelishiya"
       ],
-      "preferred_label": "Eglath-shelishiya"
+      "preferred_label": "Eglath-shelishiyah (possible Moabite site)"
     }
   },
   "mentioned_in_bible": true,
