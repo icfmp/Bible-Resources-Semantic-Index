@@ -9,23 +9,49 @@
     "review_status": "source_unreviewed",
     "source_id": "flora:StarOfBethlehem",
     "source_primary_id": "flora:StarOfBethlehem",
-    "source_sha256": "06c9e0b65a63cec7b05ffd9a7de4f3c336d15ca1224aac2fb1882537bc9813c9"
+    "source_sha256": "06c9e0b65a63cec7b05ffd9a7de4f3c336d15ca1224aac2fb1882537bc9813c9",
+    "editorial_field_changes": [
+      {
+        "action": "remove_unproved_exact_botanical_species_identity",
+        "removed_reference_values": {
+          "key_references": [
+            "12006025"
+          ]
+        },
+        "removed_localization_values": {
+          "eng": {
+            "alternate_labels": [
+              "Dove's Dung"
+            ]
+          }
+        },
+        "replaced_field_values": {
+          "non_biblical": {
+            "from": false,
+            "to": true
+          }
+        },
+        "reason": "2 Kings 6:25 reads a Hebrew expression usually translated 'dove's dung', whose actual food/substance identity is disputed. Specific identification as Ornithogalum (Star of Bethlehem) is one among competing literal, pulse, wild-onion and other botanical proposals, not a securely attested plant species in the pinned Hebrew text. Do not turn a conjectural dictionary cross-reference into a canonical named flora-to-verse mapping. Preserve the historical flora identity as extrabiblical background until independent evidence can substantiate a connection.",
+        "evidence": [
+          "2 Kings 6:25 exact WLC original word is 'dove's dung', not scientific genus Ornithogalum",
+          "https://tips.translation.bible/story/translation-commentary-on-2-kings-625/",
+          "https://cris.haifa.ac.il/en/publications/a-review-of-ethnobotanical-ecological-and-lexical-evidence-to-ide/",
+          "https://freely-given.org/OBD/UBS/Flora/3.5.5.htm"
+        ]
+      }
+    ]
   },
   "explicit_instances": {},
   "flora_type": "Food Plants, Grown and Gathered",
   "id": "flora:StarOfBethlehem",
-  "key_references": [
-    "12006025"
-  ],
+  "key_references": [],
   "localizations": {
     "eng": {
-      "alternate_labels": [
-        "Dove's Dung"
-      ],
+      "alternate_labels": [],
       "preferred_label": "Star of Bethlehem"
     }
   },
-  "non_biblical": false,
+  "non_biblical": true,
   "only_mentioned_in_apocrypha": false,
   "primary_id": "flora:StarOfBethlehem",
   "pronominal_referents": {},
