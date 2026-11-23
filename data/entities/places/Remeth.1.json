@@ -10,9 +10,37 @@
     "review_status": "source_unreviewed",
     "source_id": "place:Remeth.1",
     "source_primary_id": "place:Remeth.1",
-    "source_sha256": "7047c32c79d08010ea2b62acda6e7a0e78f22678b855a2e3a229119ca998e451"
+    "source_sha256": "7047c32c79d08010ea2b62acda6e7a0e78f22678b855a2e3a229119ca998e451",
+    "editorial_field_changes": [
+      {
+        "action": "restore_direct_original_word_and_verse_witness",
+        "added_reference_values": {
+          "references": [
+            "06019021"
+          ]
+        },
+        "added_original_word_groups": {
+          "wlc": [
+            [
+              "o060190210012"
+            ]
+          ]
+        },
+        "reason": "Joshua 19:21 explicitly names Remeth in Issachar's town list.",
+        "evidence": [
+          "ORG BCV8 06019021",
+          "Exact source token(s) independently located in pinned Macula WLC TSV at source.lock.json edition hash; each source English gloss and original lemma confirms the named place; no auto-merged identity"
+        ]
+      }
+    ]
   },
-  "explicit_instances": {},
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o060190210012"
+      ]
+    ]
+  },
   "id": "place:Remeth.1",
   "is_artifact": false,
   "is_person": false,
@@ -34,7 +62,9 @@
   },
   "primary_id": "place:Remeth.1",
   "pronominal_referents": {},
-  "references": [],
+  "references": [
+    "06019021"
+  ],
   "subject_referents": {},
   "subregion_of": [
     "place:TerritoryOfIssachar"
