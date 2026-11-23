@@ -21,7 +21,34 @@
     "review_status": "source_unreviewed",
     "source_id": "realia:Lot",
     "source_primary_id": "realia:Lot",
-    "source_sha256": "23a09277a473347259d8b17b342d9f031f890db02e4c2d085bc62630286d9e40"
+    "source_sha256": "23a09277a473347259d8b17b342d9f031f890db02e4c2d085bc62630286d9e40",
+    "editorial_field_changes": [
+      {
+        "action": "restore_exact_source_term_in_original_witness",
+        "added_reference_values": {
+          "references": [
+            "04026055",
+            "06014002"
+          ]
+        },
+        "added_original_word_groups": {
+          "wlc": [
+            [
+              "o040260550022"
+            ],
+            [
+              "o060140020012"
+            ]
+          ]
+        },
+        "reason": "Numbers 26:55 and Joshua 14:2 directly use the allotted lot/portion terms, not imaginary item tokens.",
+        "evidence": [
+          "ORG BCV8 04026055",
+          "ORG BCV8 06014002",
+          "Pinned Macula original-word TSV evidence Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c"
+        ]
+      }
+    ]
   },
   "explicit_instances": {
     "SBLGNT": [
@@ -65,6 +92,12 @@
       ],
       [
         "o170090260092"
+      ],
+      [
+        "o040260550022"
+      ],
+      [
+        "o060140020012"
       ]
     ]
   },
@@ -117,7 +150,9 @@
     "41015024",
     "42023034",
     "43019024",
-    "44001026"
+    "44001026",
+    "04026055",
+    "06014002"
   ],
   "subject_referents": {},
   "type": "realia",

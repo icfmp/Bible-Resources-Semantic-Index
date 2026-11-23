@@ -22,7 +22,32 @@
     "review_status": "source_unreviewed",
     "source_id": "realia:Rod",
     "source_primary_id": "realia:Rod",
-    "source_sha256": "1ca4d6d7d7c7255135895818beab93aa40151f8ac4536f72187d6de284bdbe54"
+    "source_sha256": "1ca4d6d7d7c7255135895818beab93aa40151f8ac4536f72187d6de284bdbe54",
+    "editorial_field_changes": [
+      {
+        "action": "restore_exact_source_term_in_original_witness",
+        "added_reference_values": {
+          "references": [
+            "19045007"
+          ]
+        },
+        "added_original_word_groups": {
+          "wlc": [
+            [
+              "o190450070051"
+            ],
+            [
+              "o190450070071"
+            ]
+          ]
+        },
+        "reason": "Psalm 45:7 (ORG) uses the source's two explicit scepter tokens; no monarchy/rod figurative sense is automatically accepted as a separate entity.",
+        "evidence": [
+          "ORG BCV8 19045007",
+          "Pinned Macula original-word TSV evidence Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c"
+        ]
+      }
+    ]
   },
   "explicit_instances": {
     "SBLGNT": [
@@ -334,6 +359,12 @@
       [
         "o330070140032",
         "o330070140033"
+      ],
+      [
+        "o190450070051"
+      ],
+      [
+        "o190450070071"
       ]
     ]
   },
@@ -491,7 +522,8 @@
     "58001008",
     "66002027",
     "66012005",
-    "66019015"
+    "66019015",
+    "19045007"
   ],
   "subject_referents": {
     "wlc": [

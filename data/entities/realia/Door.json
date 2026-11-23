@@ -12,7 +12,49 @@
     "review_status": "source_unreviewed",
     "source_id": "realia:Door",
     "source_primary_id": "realia:Door",
-    "source_sha256": "c400a4f77681c29f344ec77933107e54bf7356d1f7743d0948ab1ae42be96b10"
+    "source_sha256": "c400a4f77681c29f344ec77933107e54bf7356d1f7743d0948ab1ae42be96b10",
+    "editorial_field_changes": [
+      {
+        "action": "restore_exact_source_term_in_original_witness",
+        "added_reference_values": {
+          "references": [
+            "01006016"
+          ]
+        },
+        "added_original_word_groups": {
+          "wlc": [
+            [
+              "o010060160082"
+            ]
+          ]
+        },
+        "reason": "Genesis 6:16 explicitly names the ark entrance/door; the source word is exact.",
+        "evidence": [
+          "ORG BCV8 01006016",
+          "Pinned Macula original-word TSV evidence Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c"
+        ]
+      },
+      {
+        "action": "restore_exact_source_term_in_original_witness",
+        "added_reference_values": {
+          "references": [
+            "43010009"
+          ]
+        },
+        "added_original_word_groups": {
+          "SBLGNT": [
+            [
+              "n43010009004"
+            ]
+          ]
+        },
+        "reason": "John 10:9 directly uses the original Greek 'door' term; the context is metaphorical, but the source lexical word is explicit.",
+        "evidence": [
+          "ORG BCV8 43010009",
+          "Pinned Macula original-word TSV evidence Clear-Bible/macula-greek@8423afe47b9e8f24b7772e808af45c7159a6fe7e"
+        ]
+      }
+    ]
   },
   "explicit_instances": {
     "SBLGNT": [
@@ -102,6 +144,14 @@
       ],
       [
         "n66004001006"
+      ],
+      [
+        "n43010009004"
+      ]
+    ],
+    "wlc": [
+      [
+        "o010060160082"
       ]
     ]
   },
@@ -165,7 +215,9 @@
     "59005009",
     "66003008",
     "66003020",
-    "66004001"
+    "66004001",
+    "01006016",
+    "43010009"
   ],
   "subject_referents": {
     "SBLGNT": [

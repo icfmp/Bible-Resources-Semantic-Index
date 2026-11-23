@@ -21,7 +21,29 @@
     "review_status": "source_unreviewed",
     "source_id": "realia:Kiln",
     "source_primary_id": "realia:Kiln",
-    "source_sha256": "b7e86b41e366d00fe4e7154614aceb389ee0575618094898b85c11917ad452f6"
+    "source_sha256": "b7e86b41e366d00fe4e7154614aceb389ee0575618094898b85c11917ad452f6",
+    "editorial_field_changes": [
+      {
+        "action": "restore_exact_source_term_in_original_witness",
+        "added_reference_values": {
+          "references": [
+            "27003006"
+          ]
+        },
+        "added_original_word_groups": {
+          "wlc": [
+            [
+              "o270030060101"
+            ]
+          ]
+        },
+        "reason": "Daniel 3:6 explicitly names the blazing furnace; original term and referent are attested, while object-kind specialization remains source-unreviewed.",
+        "evidence": [
+          "ORG BCV8 27003006",
+          "Pinned Macula original-word TSV evidence Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c"
+        ]
+      }
+    ]
   },
   "explicit_instances": {
     "SBLGNT": [
@@ -86,6 +108,9 @@
       ],
       [
         "o190120070072"
+      ],
+      [
+        "o270030060101"
       ]
     ]
   },
@@ -148,7 +173,8 @@
     "40013042",
     "40013050",
     "66001015",
-    "66009002"
+    "66009002",
+    "27003006"
   ],
   "subject_referents": {},
   "type": "realia",
