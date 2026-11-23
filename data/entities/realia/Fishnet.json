@@ -15,7 +15,29 @@
     "review_status": "source_unreviewed",
     "source_id": "realia:Fishnet",
     "source_primary_id": "realia:Fishnet",
-    "source_sha256": "f9684e475ce44b69a2a9fdd1cd8a6bd67cc8907b2368c7b70252cf900f162d3f"
+    "source_sha256": "f9684e475ce44b69a2a9fdd1cd8a6bd67cc8907b2368c7b70252cf900f162d3f",
+    "editorial_field_changes": [
+      {
+        "action": "restore_exact_source_term_in_original_witness",
+        "added_reference_values": {
+          "references": [
+            "35001015"
+          ]
+        },
+        "added_original_word_groups": {
+          "wlc": [
+            [
+              "o350010150052"
+            ]
+          ]
+        },
+        "reason": "Habakkuk 1:15 directly uses the Hebrew word for net; the following pronominal word is not an independent net occurrence.",
+        "evidence": [
+          "ORG BCV8 35001015",
+          "Pinned Macula original-word TSV evidence Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c"
+        ]
+      }
+    ]
   },
   "explicit_instances": {
     "SBLGNT": [
@@ -77,6 +99,9 @@
       [
         "o260170200052",
         "o260170200053"
+      ],
+      [
+        "o350010150052"
       ]
     ]
   },
@@ -134,7 +159,8 @@
     "42005006",
     "43021006",
     "43021008",
-    "43021011"
+    "43021011",
+    "35001015"
   ],
   "subject_referents": {},
   "type": "realia",
