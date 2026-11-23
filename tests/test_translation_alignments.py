@@ -1,6 +1,7 @@
 """Synthetic, source-independent translation-alignment regression tests."""
 from __future__ import annotations
 
+import gzip
 import hashlib
 import importlib.util
 import json
@@ -118,6 +119,13 @@ class TranslationAlignmentTests(unittest.TestCase):
         self.assertIn("missing_or_invalid_selector", row["problems"])
         self.assertEqual(row["source_ids_original"], ["n01001001001"])
         self.assertEqual(row["source_lookup_ids"], [None])
+
+    def test_gzip_candidate_is_reproducible_and_lossless(self):
+        raw = module.canonical_json(self.build()[0]["nt"])
+        first, second = module.gzip_payload(raw), module.gzip_payload(raw)
+        self.assertEqual(first, second)
+        self.assertEqual(gzip.decompress(first), raw)
+        self.assertEqual(first[4:8], b"\\x00" * 4)
 
     def test_reject_swapped_documents_and_ambiguous_roles(self):
         self.payloads["na"]["documents"][1]["docid"] = "AnotherTranslation"
