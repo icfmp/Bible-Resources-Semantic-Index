@@ -19,16 +19,83 @@
   },
   "bsi": {
     "canonical_id": "place:Aram-naharaim",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:Aram-naharaim",
     "source_primary_id": "place:Aram-naharaim",
-    "source_sha256": "2fb7b1e7a844655580fc7cd709399302613bbeb5cabf02e1e125411fafd0e4b5"
+    "source_sha256": "2fb7b1e7a844655580fc7cd709399302613bbeb5cabf02e1e125411fafd0e4b5",
+    "editorial_reason": "Restore exact original-language direct mention(s) from independently inspected inherited key-verses while distinguishing contextual verse claims and similarly named identities.",
+    "editorial_evidence": [
+      "Exact pinned Macula Hebrew WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c / Greek SBLGNT@8423afe47b9e8f24b7772e808af45c7159a6fe7e, fully inspected in PR #136 original-verse CI",
+      "Judges 3:8 and Genesis 24:10 both contain the two-token proper geographic name Aram-Naharaim (אֲרַם נַהֲרַיִם), not a bare name Naharaim.",
+      "07003008 wlc o070030080101 + o070030080111",
+      "01024010 wlc o010240100151 + o010240100161"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "restore_independently_pinned_exact_direct_mention",
+        "reason": "Restore exact original-language direct mention(s) from independently inspected inherited key-verses while distinguishing contextual verse claims and similarly named identities.",
+        "evidence": [
+          "Exact pinned Macula Hebrew WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c / Greek SBLGNT@8423afe47b9e8f24b7772e808af45c7159a6fe7e, fully inspected in PR #136 original-verse CI",
+          "Judges 3:8 and Genesis 24:10 both contain the two-token proper geographic name Aram-Naharaim (אֲרַם נַהֲרַיִם), not a bare name Naharaim.",
+          "07003008 wlc o070030080101 + o070030080111",
+          "01024010 wlc o010240100151 + o010240100161"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [
+              "19060002",
+              "19060003"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o190600020031",
+                  "o190600020041"
+                ]
+              ]
+            }
+          },
+          "after": {
+            "references": [
+              "01024010",
+              "07003008",
+              "19060002",
+              "19060003"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o190600020031",
+                  "o190600020041"
+                ],
+                [
+                  "o070030080101",
+                  "o070030080111"
+                ],
+                [
+                  "o010240100151",
+                  "o010240100161"
+                ]
+              ]
+            }
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
       [
         "o190600020031",
         "o190600020041"
+      ],
+      [
+        "o070030080101",
+        "o070030080111"
+      ],
+      [
+        "o010240100151",
+        "o010240100161"
       ]
     ]
   },
@@ -70,6 +137,8 @@
   "primary_id": "place:Aram-naharaim",
   "pronominal_referents": {},
   "references": [
+    "01024010",
+    "07003008",
     "19060002",
     "19060003"
   ],
