@@ -110,6 +110,19 @@ class PivotParityAuditTests(unittest.TestCase):
         self.assertEqual(summary["linked_same_id_lemma_nfc_equal"], 0)
         self.assertEqual(summary["linked_same_id_lemma_nfc_different"], 0)
 
+    def test_extended_morphological_hebrew_id_is_distinct_not_stripped(self):
+        extended = "o010010010031ה"
+        self.assertEqual(audit.normalized_id(extended, "ot", allow_wlc_suffix=True), extended)
+        with self.assertRaisesRegex(ValueError, "unsupported original token ID"):
+            audit.normalized_id(extended, "ot")
+        with self.pivot_paths["ot"].open("a", encoding="utf-8") as f:
+            f.write(extended + "\\tadditional\\n")
+        self.pivot_manifest["sources"]["ot"]["sha256"] = lock(self.pivot_paths["ot"])
+        report = self.run_audit()["canon_audits"]["ot"]
+        self.assertEqual(report["brsi_macula_wlc_suffix_tokens"], 1)
+        self.assertEqual(report["brsi_macula_only_original_ids"], 2)
+        self.assertEqual(report["linked_ids_present_in_brsi_macula"], 2)
+
     def test_upstream_byte_tampering_fails_closed(self):
         self.source_paths["ot"].write_text("id\tlemma\n", encoding="utf-8")
         with self.assertRaisesRegex(ValueError, "SHA-256 changed"):
