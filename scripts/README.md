@@ -31,6 +31,11 @@ never changes the application. See [V1 consumer guide](../docs/V1_CONSUMPTION.md
 ## Reusable tools and checks
 
 - `build_native_index.py`: canonical native entity build, independent of the historical ACAI compiler.
+- `build_translation_alignments.py`: generic, original-byte-locked
+  Scripture Burrito translation-selector importer; creates nonpublishing
+  edition-qualified candidate JSON and SHA-256 receipts from exact upstream
+  source/target token corpora. See [Clear.Bible LSG](../links/alignments/clear-bible-lsg/README.md).
+  It does not resolve lexemes or infer missing French words.
 - `tool_registry.py`: read-only caller inventory (`--json`) and offline
   workflow-path validation (`--check-workflows`). It inventories shared and
   source-owned tools without guessing that a missing static caller means a

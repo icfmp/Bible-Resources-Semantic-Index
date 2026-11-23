@@ -87,3 +87,15 @@ explicitly **not** real reviewed editorial associations.
 No data pack, Bible application integration or public release is created
 by running these checks. See [rights and integrity](../docs/RIGHTS_AND_INTEGRITY.md)
 and [release contract](../docs/RELEASE_CONTRACT.md).
+
+## Separate translation-token alignments
+
+Clear.Bible MACULA → LSG manual word/segment alignments live under
+[alignments/clear-bible-lsg/](alignments/clear-bible-lsg/README.md), with their
+own pinned upstream edition, original source/target selectors, per-group
+multiplicity and explicit uncertainty states. This is **not** a
+dictionary/encyclopedia entry crosswalk: never run the external entity-link
+validator on it or turn the links into UBS lexical or contextual senses.
+No translation text is copied into BRSI; generated candidate files are
+nonpublishing until source rights, target-edition identity and owner approval
+are established.
