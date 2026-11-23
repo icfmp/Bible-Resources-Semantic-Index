@@ -7,12 +7,75 @@
   },
   "bsi": {
     "canonical_id": "place:TowerOfShechem",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:TowerOfShechem",
     "source_primary_id": "place:TowerOfShechem",
-    "source_sha256": "db48b104a2d327f371de4e9599face9f75bc0e32f26932b2de2cc4bc4e4b3e8d"
+    "source_sha256": "db48b104a2d327f371de4e9599face9f75bc0e32f26932b2de2cc4bc4e4b3e8d",
+    "editorial_reason": "Restore the complete lexical phrase directly attested in the inherited key verse(s), retaining distinct original-word IDs, source identity, and every inherited contextual key.",
+    "editorial_evidence": [
+      "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c WLC/tsv/macula-hebrew.tsv inspected by GitHub Actions pinned original-verse job",
+      "07009046 direct original-name group o070090460041, o070090460051",
+      "07009047 direct original-name group o070090470071, o070090470081",
+      "07009049 direct original-name group o070090490221, o070090490231"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "restore_exact_attested_topographic_original_phrase",
+        "reason": "Restore the complete lexical phrase directly attested in the inherited key verse(s), retaining distinct original-word IDs, source identity, and every inherited contextual key.",
+        "evidence": [
+          "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c WLC/tsv/macula-hebrew.tsv inspected by GitHub Actions pinned original-verse job",
+          "07009046 direct original-name group o070090460041, o070090460051",
+          "07009047 direct original-name group o070090470071, o070090470081",
+          "07009049 direct original-name group o070090490221, o070090490231"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [],
+            "explicit_instances": {}
+          },
+          "after": {
+            "references": [
+              "07009046",
+              "07009047",
+              "07009049"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o070090460041",
+                  "o070090460051"
+                ],
+                [
+                  "o070090470071",
+                  "o070090470081"
+                ],
+                [
+                  "o070090490221",
+                  "o070090490231"
+                ]
+              ]
+            }
+          }
+        }
+      }
+    ]
   },
-  "explicit_instances": {},
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o070090460041",
+        "o070090460051"
+      ],
+      [
+        "o070090470071",
+        "o070090470081"
+      ],
+      [
+        "o070090490221",
+        "o070090490231"
+      ]
+    ]
+  },
   "id": "place:TowerOfShechem",
   "is_artifact": true,
   "is_person": false,
@@ -36,7 +99,11 @@
   },
   "primary_id": "place:TowerOfShechem",
   "pronominal_referents": {},
-  "references": [],
+  "references": [
+    "07009046",
+    "07009047",
+    "07009049"
+  ],
   "subject_referents": {},
   "subregion_of": [
     "place:Shechem"
