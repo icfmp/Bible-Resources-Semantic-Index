@@ -8,9 +8,41 @@
     "review_status": "source_unreviewed",
     "source_id": "place:JordanValley",
     "source_primary_id": "place:JordanValley",
-    "source_sha256": "dec6f91fd7fb02a89e06a1c39b2bbed40d6a31f654d1582b385bc5f3400867df"
+    "source_sha256": "dec6f91fd7fb02a89e06a1c39b2bbed40d6a31f654d1582b385bc5f3400867df",
+    "editorial_field_changes": [
+      {
+        "action": "restore_exact_heb_source_urban_geography",
+        "added_reference_values": {
+          "references": [
+            "01013010"
+          ]
+        },
+        "added_original_word_groups": {
+          "wlc": [
+            [
+              "o010130100081",
+              "o010130100091",
+              "o010130100092"
+            ]
+          ]
+        },
+        "reason": "Genesis 13:10 explicitly names the Jordan plain/valley as the complete Hebrew phrase kikkar haYarden; Genesis 19:17 names only the plain, which remains contextual rather than an independently named Jordan occurrence.",
+        "evidence": [
+          "ORG BCV8 01013010",
+          "Exact original Hebrew phrase and token IDs visually collated in WLC lowfat XML frozen at Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c"
+        ]
+      }
+    ]
   },
-  "explicit_instances": {},
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o010130100081",
+        "o010130100091",
+        "o010130100092"
+      ]
+    ]
+  },
   "id": "place:JordanValley",
   "is_artifact": false,
   "is_person": false,
@@ -33,7 +65,9 @@
   },
   "primary_id": "place:JordanValley",
   "pronominal_referents": {},
-  "references": [],
+  "references": [
+    "01013010"
+  ],
   "subject_referents": {},
   "type": "place"
 }

@@ -10,9 +10,41 @@
     "review_status": "source_unreviewed",
     "source_id": "place:CityOfPalms.2",
     "source_primary_id": "place:CityOfPalms.2",
-    "source_sha256": "6e02777cbfa50e269a0b7cafb68141f5acb17f3902741b057bd3f864a59094a9"
+    "source_sha256": "6e02777cbfa50e269a0b7cafb68141f5acb17f3902741b057bd3f864a59094a9",
+    "editorial_field_changes": [
+      {
+        "action": "restore_exact_heb_source_urban_geography",
+        "added_reference_values": {
+          "references": [
+            "07001016"
+          ]
+        },
+        "added_original_word_groups": {
+          "wlc": [
+            [
+              "o070010160062",
+              "o070010160071",
+              "o070010160072"
+            ]
+          ]
+        },
+        "reason": "Judges 1:16 explicitly calls the location 'city of palm trees', the full Hebrew phrase. No independent assertion that it is identical to any historically specific Jericho phase.",
+        "evidence": [
+          "ORG BCV8 07001016",
+          "Exact original Hebrew phrase and token IDs visually collated in WLC lowfat XML frozen at Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c"
+        ]
+      }
+    ]
   },
-  "explicit_instances": {},
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o070010160062",
+        "o070010160071",
+        "o070010160072"
+      ]
+    ]
+  },
   "id": "place:CityOfPalms.2",
   "is_artifact": false,
   "is_person": false,
@@ -39,7 +71,9 @@
   },
   "primary_id": "place:CityOfPalms.2",
   "pronominal_referents": {},
-  "references": [],
+  "references": [
+    "07001016"
+  ],
   "referred_to_as": [
     "place:Jericho",
     "place:CityOfPalms"

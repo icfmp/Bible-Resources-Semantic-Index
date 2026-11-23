@@ -10,9 +10,53 @@
     "review_status": "source_unreviewed",
     "source_id": "place:MostHolyPlace.1",
     "source_primary_id": "place:MostHolyPlace.1",
-    "source_sha256": "3e4c107a8b5060f2990b610f036ae0b2753ac00a7d8b6c1d2bf7f71979a82858"
+    "source_sha256": "3e4c107a8b5060f2990b610f036ae0b2753ac00a7d8b6c1d2bf7f71979a82858",
+    "editorial_field_changes": [
+      {
+        "action": "restore_exact_heb_source_urban_geography",
+        "added_reference_values": {
+          "references": [
+            "02026033",
+            "02026034"
+          ]
+        },
+        "added_original_word_groups": {
+          "wlc": [
+            [
+              "o020260330191",
+              "o020260330201",
+              "o020260330202"
+            ],
+            [
+              "o020260340072",
+              "o020260340081",
+              "o020260340082"
+            ]
+          ]
+        },
+        "reason": "Exodus 26:33 and 26:34 explicitly use the holy-of-holies expression; the full exact original Hebrew groups preserve source segmentation and distinguish the inner sanctuary from the general Holy Place.",
+        "evidence": [
+          "ORG BCV8 02026033",
+          "ORG BCV8 02026034",
+          "Exact original Hebrew phrase and token IDs visually collated in WLC lowfat XML frozen at Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c"
+        ]
+      }
+    ]
   },
-  "explicit_instances": {},
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o020260330191",
+        "o020260330201",
+        "o020260330202"
+      ],
+      [
+        "o020260340072",
+        "o020260340081",
+        "o020260340082"
+      ]
+    ]
+  },
   "id": "place:MostHolyPlace.1",
   "is_artifact": true,
   "is_person": false,
@@ -35,7 +79,10 @@
   },
   "primary_id": "place:MostHolyPlace.1",
   "pronominal_referents": {},
-  "references": [],
+  "references": [
+    "02026033",
+    "02026034"
+  ],
   "subject_referents": {},
   "type": "place"
 }
