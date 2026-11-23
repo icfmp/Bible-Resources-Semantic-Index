@@ -1,7 +1,7 @@
 {
-  "schema_version": 1,
-  "meaning": "CANDIDATES ONLY — zero resolved cases until each independent original-language witness and exact entity identity is certified",
-  "source_of_queue": "GitHub pinned main audit PR #139 workflow exact run 45130247853",
+  "schema_version": 2,
+  "policy": "115 selected, still unadjudicated pending case-specific proof. Scored from all 243 unresolved with original-language contextual anchoring; do not treat candidate selection as resolution.",
+  "source_of_queue": "PR #139 pinned original + PR #140 full 243-context check",
   "excludes_existing": "data/source-key-resolved-115.json",
   "cases": [
     {
@@ -66,13 +66,6 @@
       ]
     },
     {
-      "source_id": "person:Ahitub.2",
-      "key_verses": [
-        "13006007",
-        "13006008"
-      ]
-    },
-    {
       "source_id": "person:Ahoah",
       "key_verses": [
         "13007006",
@@ -86,12 +79,6 @@
       "source_id": "person:Ammihud",
       "key_verses": [
         "13007027"
-      ]
-    },
-    {
-      "source_id": "person:Ammishaddai",
-      "key_verses": [
-        "04001004"
       ]
     },
     {
@@ -122,35 +109,9 @@
       ]
     },
     {
-      "source_id": "person:Asaph.2",
-      "key_verses": [
-        "13006031"
-      ]
-    },
-    {
       "source_id": "person:Asher",
       "key_verses": [
         "01030012"
-      ]
-    },
-    {
-      "source_id": "person:Athaliah",
-      "key_verses": [
-        "12008018"
-      ]
-    },
-    {
-      "source_id": "person:Azariah.22",
-      "key_verses": [
-        "13026001",
-        "13026002",
-        "13026003"
-      ]
-    },
-    {
-      "source_id": "person:Baal-hanan",
-      "key_verses": [
-        "01036031"
       ]
     },
     {
@@ -178,18 +139,6 @@
       "key_verses": [
         "01030006",
         "01030008"
-      ]
-    },
-    {
-      "source_id": "person:Bukki.2",
-      "key_verses": [
-        "13006005"
-      ]
-    },
-    {
-      "source_id": "person:Caleb",
-      "key_verses": [
-        "13004001"
       ]
     },
     {
@@ -230,16 +179,6 @@
       "key_verses": [
         "44011029",
         "44011030"
-      ]
-    },
-    {
-      "source_id": "person:Cornelius",
-      "key_verses": [
-        "44010044",
-        "44010045",
-        "44010046",
-        "44010047",
-        "44010048"
       ]
     },
     {
@@ -327,27 +266,6 @@
       ]
     },
     {
-      "source_id": "person:Gershom",
-      "key_verses": [
-        "44007029"
-      ]
-    },
-    {
-      "source_id": "person:Goliath",
-      "key_verses": [
-        "09017048",
-        "09017049",
-        "09017050",
-        "09017051"
-      ]
-    },
-    {
-      "source_id": "person:Hagri",
-      "key_verses": [
-        "13011026"
-      ]
-    },
-    {
       "source_id": "person:Hanun",
       "key_verses": [
         "10010005",
@@ -384,24 +302,6 @@
       ]
     },
     {
-      "source_id": "person:Heth",
-      "key_verses": [
-        "01010006"
-      ]
-    },
-    {
-      "source_id": "person:Hilkiah.2",
-      "key_verses": [
-        "13006013"
-      ]
-    },
-    {
-      "source_id": "person:Hophni",
-      "key_verses": [
-        "09002012"
-      ]
-    },
-    {
       "source_id": "person:Hosea",
       "key_verses": [
         "28001003",
@@ -427,10 +327,10 @@
       ]
     },
     {
-      "source_id": "person:Jacob",
+      "source_id": "person:Jair.2",
       "key_verses": [
-        "01025019",
-        "01027001"
+        "04027001",
+        "13002021"
       ]
     },
     {
@@ -456,13 +356,6 @@
       ]
     },
     {
-      "source_id": "person:Jehozadak",
-      "key_verses": [
-        "13006014",
-        "13006015"
-      ]
-    },
-    {
       "source_id": "person:Jehudi",
       "key_verses": [
         "24036009",
@@ -483,12 +376,6 @@
       ]
     },
     {
-      "source_id": "person:Libni",
-      "key_verses": [
-        "13006020"
-      ]
-    },
-    {
       "source_id": "person:Lot",
       "key_verses": [
         "01019031",
@@ -498,12 +385,6 @@
         "01019035",
         "01019037",
         "01019038"
-      ]
-    },
-    {
-      "source_id": "person:Mahli",
-      "key_verses": [
-        "13006019"
       ]
     },
     {
@@ -547,22 +428,9 @@
       ]
     },
     {
-      "source_id": "person:Mushi",
-      "key_verses": [
-        "13006019"
-      ]
-    },
-    {
       "source_id": "person:Nicodemus",
       "key_verses": [
         "43019038"
-      ]
-    },
-    {
-      "source_id": "person:Pharaohneco",
-      "key_verses": [
-        "24046017",
-        "24046025"
       ]
     },
     {
@@ -620,12 +488,6 @@
       ]
     },
     {
-      "source_id": "person:Sheshan",
-      "key_verses": [
-        "13002003"
-      ]
-    },
-    {
       "source_id": "person:Shethar-bozenai",
       "key_verses": [
         "15006007"
@@ -678,12 +540,6 @@
       ]
     },
     {
-      "source_id": "person:Zerahiah",
-      "key_verses": [
-        "13006006"
-      ]
-    },
-    {
       "source_id": "person:Ziba",
       "key_verses": [
         "10009001"
@@ -711,9 +567,9 @@
       ]
     },
     {
-      "source_id": "place:Babel",
+      "source_id": "place:Amalek",
       "key_verses": [
-        "01011001"
+        "10008011"
       ]
     },
     {
@@ -724,10 +580,22 @@
       ]
     },
     {
+      "source_id": "place:Bethsaida",
+      "key_verses": [
+        "43001043"
+      ]
+    },
+    {
       "source_id": "place:Capernaum",
       "key_verses": [
         "40001012",
         "43006016"
+      ]
+    },
+    {
+      "source_id": "place:Cherith",
+      "key_verses": [
+        "11017002"
       ]
     },
     {
@@ -743,9 +611,9 @@
       ]
     },
     {
-      "source_id": "place:Galilee",
+      "source_id": "place:Galatia",
       "key_verses": [
-        "23009001"
+        "48001001"
       ]
     },
     {
@@ -755,9 +623,27 @@
       ]
     },
     {
+      "source_id": "place:Hamath",
+      "key_verses": [
+        "10008010"
+      ]
+    },
+    {
       "source_id": "place:Iconium",
       "key_verses": [
         "55003010"
+      ]
+    },
+    {
+      "source_id": "place:Idumea",
+      "key_verses": [
+        "41003007"
+      ]
+    },
+    {
+      "source_id": "place:JacobsWell",
+      "key_verses": [
+        "43004005"
       ]
     },
     {
@@ -786,6 +672,25 @@
       ]
     },
     {
+      "source_id": "place:Machpelah",
+      "key_verses": [
+        "01023008",
+        "01049032"
+      ]
+    },
+    {
+      "source_id": "place:Magog",
+      "key_verses": [
+        "66020007"
+      ]
+    },
+    {
+      "source_id": "place:Mahanaim",
+      "key_verses": [
+        "01032002"
+      ]
+    },
+    {
       "source_id": "place:Nazareth",
       "key_verses": [
         "40002021",
@@ -797,6 +702,93 @@
       "key_verses": [
         "32001001",
         "32003001"
+      ]
+    },
+    {
+      "source_id": "place:OlivesMount",
+      "key_verses": [
+        "38014003"
+      ]
+    },
+    {
+      "source_id": "place:Philippi",
+      "key_verses": [
+        "44020005"
+      ]
+    },
+    {
+      "source_id": "place:Pi-hahiroth",
+      "key_verses": [
+        "02014001"
+      ]
+    },
+    {
+      "source_id": "place:Shechem",
+      "key_verses": [
+        "06021020",
+        "44007015"
+      ]
+    },
+    {
+      "source_id": "place:SiddimValley",
+      "key_verses": [
+        "01014001"
+      ]
+    },
+    {
+      "source_id": "place:Sidon",
+      "key_verses": [
+        "26028020"
+      ]
+    },
+    {
+      "source_id": "place:SinaiMount",
+      "key_verses": [
+        "02019016",
+        "02024012"
+      ]
+    },
+    {
+      "source_id": "place:Sodom",
+      "key_verses": [
+        "01010018"
+      ]
+    },
+    {
+      "source_id": "place:Susa",
+      "key_verses": [
+        "27008001"
+      ]
+    },
+    {
+      "source_id": "place:Tyre",
+      "key_verses": [
+        "26026001",
+        "26027001"
+      ]
+    },
+    {
+      "source_id": "place:Zalmon",
+      "key_verses": [
+        "19068014"
+      ]
+    },
+    {
+      "source_id": "place:Zarephath",
+      "key_verses": [
+        "11017008"
+      ]
+    },
+    {
+      "source_id": "place:Zedad",
+      "key_verses": [
+        "04034009"
+      ]
+    },
+    {
+      "source_id": "realia:Sickle",
+      "key_verses": [
+        "05023025"
       ]
     }
   ]
