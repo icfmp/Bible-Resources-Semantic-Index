@@ -91,6 +91,24 @@ class ExactReviewedWordEvidenceTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,"witness missing"):
             GUARD["verify_original_word"](None,witness,wid,"000010000000000",PENDING)
 
+    def test_original_strong_zero_is_literal_not_an_alias(self):
+        # Strong=0 in the original source must remain exactly "0"; this
+        # shared mechanical check never invents a Strong alias.
+        original,witness=fixture()
+        wid=witness["word_id"]
+        witness["original_strong"]="0"
+        original["by_macula_word"][wid]["original_strong"]="0"
+        guard=GUARD["verify_original_word"]
+        guard(original["by_macula_word"][wid],witness,wid,
+              "000010000000000",PENDING)
+        bad=copy.deepcopy(original["by_macula_word"][wid])
+        bad["original_strong"]="3056"
+        with self.assertRaisesRegex(ValueError,"original_strong"):
+            guard(bad,witness,wid,"000010000000000",PENDING)
+        promoted=GUARD["apply_review_status"](original,{wid},PENDING,REVIEWED)
+        self.assertEqual(promoted["by_macula_word"][wid]["original_strong"],"0")
+        self.assertNotIn("sense_id",promoted["by_macula_word"][wid])
+
     def test_wrong_existing_status_missing_or_duplicate_word_rejected(self):
         original,witness=fixture()
         wid=witness["word_id"]
