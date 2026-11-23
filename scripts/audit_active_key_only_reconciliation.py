@@ -40,7 +40,8 @@ def load_existing_reviews(data: Path) -> dict:
             status = item.get("outcome", item.get("decision"))
             if status not in {"corrected", "verified_correct", "secondary_verified"}:
                 raise ValueError("Unresolved case falsely counted as a past independent decision: " + sid)
-            original = item.get("original_key_verses", item.get("key_verses"))
+            original = (item.get("original_key_verses") or item.get("target_key_verses")
+                        or item.get("key_verses_reviewed"))
             if not isinstance(original, list) or not all(isinstance(v, str) for v in original):
                 raise ValueError("Malformed historical source keys: " + sid)
             resolved[sid] = {"keys": set(original), "status": status, "ledger": file}
