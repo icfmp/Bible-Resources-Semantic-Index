@@ -1,27 +1,40 @@
-# BRSI editorial and release documentation
+# BRSI documentation
 
-This directory contains **BRSI-specific** editorial and publication decisions;
-repository-wide formats, production pipelines and generic conventions belong
-in the [project README](../README.md) and [work plan](ROADMAP.md).
+Start with the [repository README](../README.md) for the current native
+entity/lexical index and [roadmap](ROADMAP.md) for open work. This directory
+holds **durable project-wide rules and current workflows**, not chronological
+development logs or a second source of truth.
 
-**Current BRSI guidance:** [how to consume the existing three ZIP releases (without an app integration)](V1_CONSUMPTION.md),
-[phase 1 source-locked release contract](RELEASE_CONTRACT.md),
-[editable entity IDs and field policies](EDITING_ENTITIES.md),
-[source rights and integrity](RIGHTS_AND_INTEGRITY.md), and
-[current roadmap](ROADMAP.md), and
-[maintained tooling map](MAINTENANCE_INVENTORY.md), and
-[unapproved source-backed relation model](RELATION_MODEL.md).
+## Where to go
 
-**Historical BSI v0.1 evidence (preserved, not current commands):**
+| Need | Maintained reference |
+| --- | --- |
+| Edit an entity and preserve source/identity evidence | [Editable native records](EDITING_ENTITIES.md) |
+| Understand origin, excluded third-party fields and permissions | [Rights and integrity](RIGHTS_AND_INTEGRITY.md) and [source provenance](../sources/README.md) |
+| Verify the existing historical public ZIP formats | [V1 consumption and offline inspection](V1_CONSUMPTION.md) |
+| Stage and validate a **nonpublishing** candidate | [Release/consumer integrity contract](RELEASE_CONTRACT.md) |
+| Find active scripts, callers and retirement rules | [Tool maintenance inventory](MAINTENANCE_INVENTORY.md) and [shared scripts](../scripts/README.md) |
+| Understand deferred entity graph research | [V2 relation model](RELATION_MODEL.md) |
+| Check current blockers and priorities | [Roadmap](ROADMAP.md) and GitHub issues |
 
-- [v0.1 source and distribution handoff](V0_1_CANDIDATE_HANDOFF.md)
-- [v0.1 source-word and name pilot](V0_1_NAME_PILOT.md)
-- [v0.1 source-word and topic pilot](V0_1_TOPIC_PILOT.md)
-- [v0.1 rights check](BSI_V0_1_RIGHTS_AUDIT.md)
-- [v0.1 release readiness and publication record](BSI_V0_1_RELEASE_READINESS.md)
+## Source-specific material
 
-These are historical **evidence and editorial decisions**, not alternative
-current build instructions. Use the [BRSI entrypoint](../README.md) for
-current layout and exact published index links. Greek/Hebrew dictionary
-editions document their own rights, scripts and decisions under their
-respective `links/dictionaries/ubs-*/` directories.
+UBS [Greek](../links/dictionaries/ubs-greek/README.md) and
+[Hebrew](../links/dictionaries/ubs-hebrew/README.md) retain their own
+edition pins, original-word decisions, source review ledgers, rights evidence
+and full-source verification workflows. Other independently sourced external
+entries must be verified edition by edition; BRSI does not duplicate their
+article text.
+
+**Current documentation rule:** a reusable policy belongs here once;
+source-specific editorial evidence belongs with the source; issue/PR/Actions
+record dated execution. Completed one-shot scripts and historical progress
+diaries are recoverable by immutable Git revision, not maintained as a second
+pipeline on `main`. Do not delete unique reviewed decisions, abstentions,
+source locks, old published release evidence, or rights records under the
+pretext of removing old experiments.
+
+The old v0.1 handoff, named-entity and topic pilots and first-release
+rights/readiness records still exist as **historical evidence**, not current
+commands. New work must follow the present source-specific guides and
+source/rights/publication gates instead of replaying those historical steps.
