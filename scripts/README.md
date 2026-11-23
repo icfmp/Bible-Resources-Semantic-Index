@@ -35,6 +35,13 @@ never changes the application. See [V1 consumer guide](../docs/V1_CONSUMPTION.md
   workflow-path validation (`--check-workflows`). It inventories shared and
   source-owned tools without guessing that a missing static caller means a
   file is safe to remove. Review dynamic importers and pinned releases too.
+- `verify_generated_json.py`: generic **fail-closed** pinned JSON baseline
+  comparison, used by both Greek and Hebrew full-source CI workflows:
+  `python3 -I scripts/verify_generated_json.py --generated /tmp/created.json
+  --baseline links/dictionaries/<edition>/index.json`. It rejects missing
+  baselines, duplicate object fields, NaN/Infinity, self-comparisons and
+  differences in typed values; it does not replace independent source or
+  editorial checks.
 - `validate_external_crosswalk.py`: nonpublishing, offline V1 **external
   resource entry** crosswalk validator, separate from the deferred V2
   entity-relationship graph. It enforces source edition locks, current entity
