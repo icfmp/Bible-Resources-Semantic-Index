@@ -89,6 +89,11 @@ For all source-level assertions use [the pinned Hebrew workflow](../../../.githu
 not an unpinned dictionary or an old research command. The workflow checks
 source commits and Git blobs, reviewed/disallowed identities, the complete
 private build, historical packaging and the real published ZIP fingerprint.
+It now **requires** the already-committed `index.json` baseline to exist and
+match the complete reconstructed strict JSON value. The previous
+initial-import bypass is retired. The separate dictionary-scope report is
+no longer generated, but its shared source-bound validator continues to run
+inside the reviewed private and final candidate constructors.
 Its result does not authorize a new distribution.
 
 The [historically published Hebrew v1.0.0](https://github.com/icfmp/Bible-Resources/releases/tag/bsi-ubs-hebrew-v1.0.0)
