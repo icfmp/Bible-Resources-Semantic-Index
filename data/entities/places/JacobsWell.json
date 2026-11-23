@@ -5,9 +5,45 @@
     "review_status": "source_unreviewed",
     "source_id": "place:JacobsWell",
     "source_primary_id": "place:JacobsWell",
-    "source_sha256": "3e75cedbe0d1d4a883722000867b1531bfd8f8bc2f929a0749990325da16b376"
+    "source_sha256": "3e75cedbe0d1d4a883722000867b1531bfd8f8bc2f929a0749990325da16b376",
+    "editorial_field_changes": [
+      {
+        "action": "correct_direct_mention_verse_and_restore_original_name_words",
+        "added_reference_values": {
+          "references": [
+            "43004006"
+          ],
+          "key_references": [
+            "43004006"
+          ]
+        },
+        "added_original_word_groups": {
+          "SBLGNT": [
+            [
+              "n43004006004",
+              "n43004006005",
+              "n43004006006"
+            ]
+          ]
+        },
+        "reason": "The inherited key John 4:5 describes Sychar and Jacob's field, but does not name the well. The pinned SBLGNT John 4:6 explicitly reads πηγὴ τοῦ Ἰακώβ (Jacob's Well), indexed as three exact original word IDs. Preserve John 4:5 as historical contextual key verse, and add accurate John 4:6 direct mention; do not invent the source text or imply Sychar itself is the well.",
+        "evidence": [
+          "John 4:5–6 SBLGNT, Greek πηγὴ τοῦ Ἰακώβ",
+          "Clear-Bible/macula-greek@8423afe47b9e8f24b7772e808af45c7159a6fe7e SBLGNT TSV n43004006004, n43004006005, n43004006006",
+          "Original exact source witness and verse extracted in CI PR #108"
+        ]
+      }
+    ]
   },
-  "explicit_instances": {},
+  "explicit_instances": {
+    "SBLGNT": [
+      [
+        "n43004006004",
+        "n43004006005",
+        "n43004006006"
+      ]
+    ]
+  },
   "geocoordinates": {
     "biblica-maps": {
       "lat": "32.21436",
@@ -18,7 +54,8 @@
   "is_artifact": true,
   "is_person": false,
   "key_references": [
-    "43004005"
+    "43004005",
+    "43004006"
   ],
   "localizations": {
     "eng": {
@@ -42,7 +79,9 @@
   },
   "primary_id": "place:JacobsWell",
   "pronominal_referents": {},
-  "references": [],
+  "references": [
+    "43004006"
+  ],
   "subject_referents": {},
   "type": "place"
 }
