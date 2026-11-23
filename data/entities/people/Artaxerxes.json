@@ -14,10 +14,134 @@
   },
   "bsi": {
     "canonical_id": "person:Artaxerxes",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "person:Artaxerxes",
     "source_primary_id": "person:Artaxerxes",
-    "source_sha256": "4b25a6e638dcb1370f34cc15eb8010a4b10bce2f2b73540557da981adda4ef65"
+    "source_sha256": "4b25a6e638dcb1370f34cc15eb8010a4b10bce2f2b73540557da981adda4ef65",
+    "editorial_reason": "Restore each verified direct original-language word witness independently while leaving non-direct contextual key claims distinct.",
+    "editorial_evidence": [
+      "Clear-Bible/mac-ula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c exact WLC original-word source",
+      "Ezra 4:7 explicitly names Artaxerxes twice in the same royal correspondence; both anchored occurrences are the named Persian king.",
+      "BCV8 15004007 exact wlc token(s) o150040070021",
+      "BCV8 15004007 exact wlc token(s) o150040070121"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "restore_verified_direct_original_word_after_identity_corroboration",
+        "reason": "Restore each verified direct original-language word witness independently while leaving non-direct contextual key claims distinct.",
+        "evidence": [
+          "Clear-Bible/mac-ula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c exact WLC original-word source",
+          "Ezra 4:7 explicitly names Artaxerxes twice in the same royal correspondence; both anchored occurrences are the named Persian king.",
+          "BCV8 15004007 exact wlc token(s) o150040070021",
+          "BCV8 15004007 exact wlc token(s) o150040070121"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [
+              "15006014",
+              "15007001",
+              "15007007",
+              "15007011",
+              "15007012",
+              "15007021",
+              "15008001",
+              "16002001",
+              "16005014",
+              "16013006"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o150060140212"
+                ],
+                [
+                  "o150070010051"
+                ],
+                [
+                  "o150070070142"
+                ],
+                [
+                  "o150070110071"
+                ],
+                [
+                  "o150070120011"
+                ],
+                [
+                  "o150070210031"
+                ],
+                [
+                  "o150080010081"
+                ],
+                [
+                  "o160020010062"
+                ],
+                [
+                  "o160050140162"
+                ],
+                [
+                  "o160130060102"
+                ]
+              ]
+            }
+          },
+          "after": {
+            "references": [
+              "15004007",
+              "15006014",
+              "15007001",
+              "15007007",
+              "15007011",
+              "15007012",
+              "15007021",
+              "15008001",
+              "16002001",
+              "16005014",
+              "16013006"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o150060140212"
+                ],
+                [
+                  "o150070010051"
+                ],
+                [
+                  "o150070070142"
+                ],
+                [
+                  "o150070110071"
+                ],
+                [
+                  "o150070120011"
+                ],
+                [
+                  "o150070210031"
+                ],
+                [
+                  "o150080010081"
+                ],
+                [
+                  "o160020010062"
+                ],
+                [
+                  "o160050140162"
+                ],
+                [
+                  "o160130060102"
+                ],
+                [
+                  "o150040070021"
+                ],
+                [
+                  "o150040070121"
+                ]
+              ]
+            }
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -50,6 +174,12 @@
       ],
       [
         "o160130060102"
+      ],
+      [
+        "o150040070021"
+      ],
+      [
+        "o150040070121"
       ]
     ]
   },
@@ -72,6 +202,7 @@
   "primary_id": "person:Artaxerxes",
   "pronominal_referents": {},
   "references": [
+    "15004007",
     "15006014",
     "15007001",
     "15007007",
