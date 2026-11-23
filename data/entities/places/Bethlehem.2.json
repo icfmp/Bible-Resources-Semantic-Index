@@ -22,16 +22,81 @@
   },
   "bsi": {
     "canonical_id": "place:Bethlehem.2",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:Bethlehem.2",
     "source_primary_id": "place:Bethlehem.2",
-    "source_sha256": "3db70a33d9e78ef679acd5cae772228802a94484ce8ba45be9db717916e7d925"
+    "source_sha256": "3db70a33d9e78ef679acd5cae772228802a94484ce8ba45be9db717916e7d925",
+    "editorial_reason": "Restore a direct source-attested lexical occurrence for an independently established reviewed canonical identity, without inventing a different historical bearer.",
+    "editorial_evidence": [
+      "Pinned Macula WLC Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c and SBLGNT Clear-Bible/macula-greek@8423afe47b9e8f24b7772e808af45c7159a6fe7e; exact verses collated in PR #137",
+      "Judges 12:8,10 name Bethlehem twice in connection with the judge Ibzan; source town Bethlehem of Zebulun is distinguished from Bethlehem of Judah.",
+      "07012008 wlc o070120080062 + o070120080071",
+      "07012010 wlc o070120100042 + o070120100051"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "restore_verified_named_alias_original_words",
+        "reason": "Restore a direct source-attested lexical occurrence for an independently established reviewed canonical identity, without inventing a different historical bearer.",
+        "evidence": [
+          "Pinned Macula WLC Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c and SBLGNT Clear-Bible/macula-greek@8423afe47b9e8f24b7772e808af45c7159a6fe7e; exact verses collated in PR #137",
+          "Judges 12:8,10 name Bethlehem twice in connection with the judge Ibzan; source town Bethlehem of Zebulun is distinguished from Bethlehem of Judah.",
+          "07012008 wlc o070120080062 + o070120080071",
+          "07012010 wlc o070120100042 + o070120100051"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [
+              "06019015"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o060190150052",
+                  "o060190150061"
+                ]
+              ]
+            }
+          },
+          "after": {
+            "references": [
+              "06019015",
+              "07012008",
+              "07012010"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o060190150052",
+                  "o060190150061"
+                ],
+                [
+                  "o070120080062",
+                  "o070120080071"
+                ],
+                [
+                  "o070120100042",
+                  "o070120100051"
+                ]
+              ]
+            }
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
       [
         "o060190150052",
         "o060190150061"
+      ],
+      [
+        "o070120080062",
+        "o070120080071"
+      ],
+      [
+        "o070120100042",
+        "o070120100051"
       ]
     ]
   },
@@ -90,7 +155,9 @@
     ]
   },
   "references": [
-    "06019015"
+    "06019015",
+    "07012008",
+    "07012010"
   ],
   "subject_referents": {},
   "subregion_of": [
