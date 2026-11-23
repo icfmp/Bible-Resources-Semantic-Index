@@ -28,6 +28,7 @@ CLASSIFICATIONS = {
     "direct_witness_restored",
     "wrong_identity_keys_removed",
     "wrong_contextual_key_corrected",
+    "constructed_tribal_territory_no_source_key",
 }
 BCV8 = re.compile(r"[0-9]{8}\Z")
 WORDS = {
@@ -54,7 +55,8 @@ def _before_key_receipts(record: dict) -> set[str]:
     return values
 
 
-def _collect_pinned_originals(wanted: dict[str, dict], paths: dict[str, Path]) -> None:
+def _collect_pinned_originals(wanted: dict[str, dict], paths: dict[str, Path],
+                              existing_indirect: dict[str, set[str]]) -> None:
     for corpus, path in paths.items():
         if corpus not in WORDS:
             raise ValueError(f"Unexpected original corpus: {corpus}")
@@ -66,15 +68,18 @@ def _collect_pinned_originals(wanted: dict[str, dict], paths: dict[str, Path]) -
             for row in reader:
                 word_id = row["xml:id"]
                 evidence = wanted.get(word_id)
-                if evidence is None or evidence["corpus"] != corpus:
+                if (evidence is None or evidence["corpus"] != corpus) and (
+                        word_id not in existing_indirect.get(corpus, set())):
                     continue
                 _must(word_id not in found, f"Duplicate pinned original word {word_id}")
                 found.add(word_id)
-                for key in ("lemma", "english", "gloss"):
-                    _must(row[key] == evidence[key],
-                          f"{word_id}: pinned original {key} mismatch")
-        expected = {word_id for word_id, row in wanted.items()
-                    if row["corpus"] == corpus}
+                if evidence is not None and evidence["corpus"] == corpus:
+                    for key in ("lemma", "english", "gloss"):
+                        _must(row[key] == evidence[key],
+                              f"{word_id}: pinned original {key} mismatch")
+        expected = ({word_id for word_id, row in wanted.items()
+                     if row["corpus"] == corpus} |
+                    existing_indirect.get(corpus, set()))
         _must(expected == found, f"Missing pinned original words in {corpus}: "
               f"{sorted(expected - found)}")
 
@@ -93,6 +98,7 @@ def validate(data_dir: Path, review_path: Path,
           "Missing review provenance policy")
     seen: set[str] = set()
     words: dict[str, dict] = {}
+    indirect_words: dict[str, set[str]] = {"wlc": set(), "SBLGNT": set()}
     counter: Counter[str] = Counter()
     modified: list[str] = []
     for case in review["reviews"]:
@@ -117,15 +123,48 @@ def validate(data_dir: Path, review_path: Path,
         _must(isinstance(case.get("rationale"), str) and len(case["rationale"]) > 50,
               f"No substantial source-specific rationale for {source_id}")
         verses = case.get("reviewed_key_verses")
-        _must(isinstance(verses, list) and bool(verses) and len(set(verses)) == len(verses)
+        constructed = status == "constructed_tribal_territory_no_source_key"
+        _must(isinstance(verses, list) and len(set(verses)) == len(verses)
               and all(isinstance(v, str) and BCV8.fullmatch(v) for v in verses),
               f"Invalid review BCV8 verses for {source_id}")
-        _must(set(verses).issubset(_before_key_receipts(record)),
-              f"Review of {source_id} refers to keys without source or correction receipt")
+        if constructed:
+            _must(kind == "place" and not verses
+                  and not record["key_references"] and not record["references"]
+                  and not record["explicit_instances"]
+                  and "place:Israel" in record.get("subregion_of", []),
+                  f"Constructed regional identity has an unsupported lexical claim: {source_id}")
+        else:
+            _must(bool(verses), f"No reviewed key verse for {source_id}")
+            _must(set(verses).issubset(_before_key_receipts(record)),
+                  f"Review of {source_id} refers to keys without source or correction receipt")
         witnesses = case.get("original_word_evidence")
         _must(isinstance(witnesses, list), f"Missing candidate evidence list for {source_id}")
         direct_words = {word for groups in record["explicit_instances"].values()
                         for group in groups for word in group}
+        links = case.get("existing_indirect_word_links", [])
+        _must(isinstance(links, list),
+              f"Malformed existing indirect source-word evidence for {source_id}")
+        if status == "indirect_original_referent":
+            _must(bool(links), f"Missing actual indirect source-word anchor for {source_id}")
+        if constructed:
+            _must(not links and not witnesses,
+                  f"Unattested source geography cannot have lexical witnesses: {source_id}")
+        for link in links:
+            field = link.get("source_field")
+            corpus = link.get("corpus")
+            word_id = link.get("word_id")
+            _must(field in {"subject_referents", "pronominal_referents"}
+                  and corpus in WORDS and isinstance(word_id, str)
+                  and WORDS[corpus].fullmatch(word_id) is not None
+                  and link.get("verse_id") in verses
+                  and word_id[1:9] == link["verse_id"],
+                  f"Invalid existing indirect group witness for {source_id}: {link}")
+            _must(any(word_id in group
+                      for group in record[field].get(corpus, [])),
+                  f"Review invents an indirect link absent from source {source_id}: {word_id}")
+            _must(word_id not in direct_words,
+                  f"Indirect review reuses a direct source token for {source_id}")
+            indirect_words[corpus].add(word_id)
         restored = case.get("editorial_outcome") == "source_record_corrected_in_this_review"
         _must(case.get("editorial_outcome") in {
             "source_record_corrected_in_this_review",
@@ -170,12 +209,13 @@ def validate(data_dir: Path, review_path: Path,
                 words[word_id] = witness
     if pinned is not None:
         _must(set(pinned) == set(WORDS), "Both locked source corpora are required")
-        _collect_pinned_originals(words, pinned)
+        _collect_pinned_originals(words, pinned, indirect_words)
     return {
         "reviewed_distinct_entities": len(seen),
         "source_record_corrections": len(modified),
         "classifications": dict(sorted(counter.items())),
         "exact_original_word_evidence": len(words),
+        "already_indirect_pinned_word_evidence": sum(map(len, indirect_words.values())),
     }
 
 
