@@ -19,12 +19,37 @@
     "review_status": "source_unreviewed",
     "source_id": "place:Naarah",
     "source_primary_id": "place:Naaran",
-    "source_sha256": "c8efbb937f2e23f5d4177ef6b40b5af68e6553eb2c557cbd99b8359193bc8656"
+    "source_sha256": "c8efbb937f2e23f5d4177ef6b40b5af68e6553eb2c557cbd99b8359193bc8656",
+    "editorial_field_changes": [
+      {
+        "action": "restore_exact_source_named_place_occurrence",
+        "added_reference_values": {
+          "references": [
+            "13007028"
+          ]
+        },
+        "added_original_word_groups": {
+          "wlc": [
+            [
+              "o130070280071"
+            ]
+          ]
+        },
+        "reason": "1 Chronicles 7:28 explicitly names Naaran, the alternate biblical form of Naarah/Naarath (Joshua 16:7) in the existing source location identity.",
+        "evidence": [
+          "ORG BCV8 13007028",
+          "Exact original-word IDs and source-language names independently identified in Clear-Bible/macula-hebrew/WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c; no extrapolated lexical sense"
+        ]
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
       [
         "o060160070042"
+      ],
+      [
+        "o130070280071"
       ]
     ]
   },
@@ -77,7 +102,8 @@
   "primary_id": "place:Naaran",
   "pronominal_referents": {},
   "references": [
-    "06016007"
+    "06016007",
+    "13007028"
   ],
   "referred_to_as": [
     "place:Naaran"
