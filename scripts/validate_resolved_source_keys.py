@@ -147,6 +147,9 @@ def validate(data: Path, ledger_path: Path, pinned: dict[str, Path] | None = Non
                   and any(pattern.fullmatch(wid) for pattern in PINNED_ID.values()),
                   f"{source_id}: invalid original-word ID {wid!r}")
             corpus = "wlc" if wid[0] == "o" else "sblgnt"
+            book=int(wid[1:3])
+            check(1 <= book <= 39 if corpus == "wlc" else 40 <= book <= 66,
+                  f"{source_id}: source word outside pinned biblical book canon: {wid}")
             wanted_words[corpus].add(wid)
         targets = item.get("target_key_verses")
         check(isinstance(targets, list) and len(targets) == len(set(targets))
