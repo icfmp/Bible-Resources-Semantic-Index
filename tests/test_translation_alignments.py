@@ -27,6 +27,7 @@ class TranslationAlignmentTests(unittest.TestCase):
         self.root = Path(self.tmp.name)
         self.manifest = {
             "schema_version": 1,
+            "resource_id": "synthetic-alignment",
             "revision": "a" * 40,
             "target_edition": "synthetic LSG not real data",
             "groups": [
@@ -79,6 +80,9 @@ class TranslationAlignmentTests(unittest.TestCase):
     def test_complete_groups_preserve_many_to_many_and_raw_ids(self):
         indexes, receipts = self.build()
         nt, ot = indexes["nt"], indexes["ot"]
+        self.assertEqual(nt["format"], "brsi-translation-alignment-candidate")
+        self.assertEqual(nt["schema_version"], 1)
+        self.assertEqual(nt["upstream_revision"], "a" * 40)
         self.assertEqual(nt["coverage"]["records"], 2)
         self.assertEqual(nt["coverage"]["topology_many_to_many"], 1)
         self.assertEqual(nt["coverage"]["topology_one_to_one"], 1)
