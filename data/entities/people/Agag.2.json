@@ -15,7 +15,65 @@
     "review_status": "source_unreviewed",
     "source_id": "person:Agag.2",
     "source_primary_id": "person:Agag.2",
-    "source_sha256": "828ec8e69b5fcadaf21d53d154cadafa9e18a80d00e3d79cc638e85daeaf6df2"
+    "source_sha256": "828ec8e69b5fcadaf21d53d154cadafa9e18a80d00e3d79cc638e85daeaf6df2",
+    "editorial_field_changes": [
+      {
+        "action": "separate_sauls_agag_from_earlier_or_descendant_agagites",
+        "removed_reference_values": {
+          "references": [
+            "17003001",
+            "17003010",
+            "17008003",
+            "17008005",
+            "17009024"
+          ],
+          "key_references": [
+            "04024007"
+          ]
+        },
+        "removed_original_word_groups": {
+          "wlc": [
+            [
+              "o170030010112"
+            ],
+            [
+              "o170030100112"
+            ],
+            [
+              "o170080030162"
+            ],
+            [
+              "o170080050252"
+            ],
+            [
+              "o170090240052"
+            ]
+          ]
+        },
+        "removed_localization_values": {
+          "eng": {
+            "alternate_labels": [
+              "Agagite"
+            ]
+          }
+        },
+        "replaced_localization_values": {
+          "eng": {
+            "preferred_label": {
+              "from": "Agag",
+              "to": "Agag (king opposed by Saul)"
+            }
+          }
+        },
+        "reason": "Numbers 24:7 names an earlier Agag in Balaam's oracle, not source-proven identical to the Agag who encounters Saul in 1 Samuel 15. Esther 3:1,10; 8:3,5; 9:24 call Haman an Agagite, an ethnic/dynastic descriptor, and do not directly name the ancient king as a participant. The existing person:Agag covers the earlier Balaam witness, and group:Agag retains all Esther's Agagite adjective words. Do not duplicate those words on Saul's Agag individual.",
+        "evidence": [
+          "Numbers 24:7",
+          "1 Samuel 15:8–33",
+          "Esther 3:1,10; 8:3,5; 9:24",
+          "Pinned WLC exact Esther Agagite source words retained on group:Agag"
+        ]
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -39,21 +97,6 @@
       ],
       [
         "o090150330141"
-      ],
-      [
-        "o170030010112"
-      ],
-      [
-        "o170030100112"
-      ],
-      [
-        "o170080030162"
-      ],
-      [
-        "o170080050252"
-      ],
-      [
-        "o170090240052"
       ]
     ]
   },
@@ -62,15 +105,12 @@
   "key_references": [
     "09015008",
     "09015032",
-    "09015033",
-    "04024007"
+    "09015033"
   ],
   "localizations": {
     "eng": {
-      "alternate_labels": [
-        "Agagite"
-      ],
-      "preferred_label": "Agag"
+      "alternate_labels": [],
+      "preferred_label": "Agag (king opposed by Saul)"
     }
   },
   "non_biblical": false,
@@ -82,12 +122,7 @@
     "09015009",
     "09015020",
     "09015032",
-    "09015033",
-    "17003001",
-    "17003010",
-    "17008003",
-    "17008005",
-    "17009024"
+    "09015033"
   ],
   "referred_to_as": [
     "group:Agag"
