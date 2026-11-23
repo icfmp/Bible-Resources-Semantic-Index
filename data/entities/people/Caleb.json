@@ -14,10 +14,47 @@
   },
   "bsi": {
     "canonical_id": "person:Caleb",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "person:Caleb",
     "source_primary_id": "person:Caleb",
-    "source_sha256": "9cbb76fd29a0c5dfd97078626d4f2a7d3c3e09986a1c5e813e2d7ecbfdc46299"
+    "source_sha256": "9cbb76fd29a0c5dfd97078626d4f2a7d3c3e09986a1c5e813e2d7ecbfdc46299",
+    "editorial_reason": "The 1 Chronicles 4:1 record enumerates Judah's descendants Perez, Hezron, Carmi, Hur and Shobal, not Caleb son of Jephunneh. 1 Chronicles 4:15 explicitly names Caleb the son of Jephunneh, matching the source-linked identity and preserving that distinction.",
+    "editorial_evidence": [
+      "Pinned WLC 1Chr 4:1 contains other Judahite genealogical names",
+      "Pinned WLC 1Chr 4:15 o130040150021 names Caleb son of Jephunneh"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "adjudicate_final_source_key_mismatch",
+        "reason": "The 1 Chronicles 4:1 record enumerates Judah's descendants Perez, Hezron, Carmi, Hur and Shobal, not Caleb son of Jephunneh. 1 Chronicles 4:15 explicitly names Caleb the son of Jephunneh, matching the source-linked identity and preserving that distinction.",
+        "evidence": [
+          "Pinned WLC 1Chr 4:1 contains other Judahite genealogical names",
+          "Pinned WLC 1Chr 4:15 o130040150021 names Caleb son of Jephunneh"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "key_references": [
+              "04013006",
+              "04014024",
+              "06014013",
+              "07001020",
+              "13004001",
+              "04013030"
+            ]
+          },
+          "after": {
+            "key_references": [
+              "04013006",
+              "04014024",
+              "06014013",
+              "07001020",
+              "04013030",
+              "13004015"
+            ]
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -118,8 +155,8 @@
     "04014024",
     "06014013",
     "07001020",
-    "13004001",
-    "04013030"
+    "04013030",
+    "13004015"
   ],
   "localizations": {
     "eng": {

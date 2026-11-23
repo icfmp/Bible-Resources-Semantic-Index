@@ -14,10 +14,39 @@
   },
   "bsi": {
     "canonical_id": "person:Libni",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "person:Libni",
     "source_primary_id": "person:Libni",
-    "source_sha256": "7fd763547486d93820ed623bac0c194bb37dc68b79aaaa8a5a46f62793203733"
+    "source_sha256": "7fd763547486d93820ed623bac0c194bb37dc68b79aaaa8a5a46f62793203733",
+    "editorial_reason": "1 Chronicles 6:20 names Zuph, Elkanah, Mahath and Amasai in a separate Levite line, not the Gershomite Libni. The actual Gershomite genealogy naming Libni is 1 Chronicles 6:2, confirmed by an existing pinned source word.",
+    "editorial_evidence": [
+      "Pinned WLC 1Chr 6:20 records Zuph, Elkanah and Amasai rather than Libni",
+      "Pinned WLC 1Chr 6:2 o130060020051 directly names Libni"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "adjudicate_final_source_key_mismatch",
+        "reason": "1 Chronicles 6:20 names Zuph, Elkanah, Mahath and Amasai in a separate Levite line, not the Gershomite Libni. The actual Gershomite genealogy naming Libni is 1 Chronicles 6:2, confirmed by an existing pinned source word.",
+        "evidence": [
+          "Pinned WLC 1Chr 6:20 records Zuph, Elkanah and Amasai rather than Libni",
+          "Pinned WLC 1Chr 6:2 o130060020051 directly names Libni"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "key_references": [
+              "02006017",
+              "13006020"
+            ]
+          },
+          "after": {
+            "key_references": [
+              "02006017",
+              "13006002"
+            ]
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -64,7 +93,7 @@
   "id": "person:Libni",
   "key_references": [
     "02006017",
-    "13006020"
+    "13006002"
   ],
   "localizations": {
     "eng": {

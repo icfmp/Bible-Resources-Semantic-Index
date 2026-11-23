@@ -12,10 +12,39 @@
   },
   "bsi": {
     "canonical_id": "person:Mahli",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "person:Mahli",
     "source_primary_id": "person:Mahli",
-    "source_sha256": "aacf77be11cef46e725f77d7f00e03f45f256b3710add5b7a8050f2703a7f171"
+    "source_sha256": "aacf77be11cef46e725f77d7f00e03f45f256b3710add5b7a8050f2703a7f171",
+    "editorial_reason": "The pinned 1 Chronicles 6:19 is a Kohathite/Elkanah genealogy, not Mahli the Merarite son of Merari. 1 Chronicles 6:4 explicitly lists Mahli and Mushi together with their father, retaining the correct already linked source identity.",
+    "editorial_evidence": [
+      "Pinned WLC 1Chr 6:19 names Elkanah and ancestors, not Mahli",
+      "Pinned WLC 1Chr 6:4 o130060040031 directly names Mahli"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "adjudicate_final_source_key_mismatch",
+        "reason": "The pinned 1 Chronicles 6:19 is a Kohathite/Elkanah genealogy, not Mahli the Merarite son of Merari. 1 Chronicles 6:4 explicitly lists Mahli and Mushi together with their father, retaining the correct already linked source identity.",
+        "evidence": [
+          "Pinned WLC 1Chr 6:19 names Elkanah and ancestors, not Mahli",
+          "Pinned WLC 1Chr 6:4 o130060040031 directly names Mahli"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "key_references": [
+              "02006019",
+              "13006019"
+            ]
+          },
+          "after": {
+            "key_references": [
+              "02006019",
+              "13006004"
+            ]
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -59,7 +88,7 @@
   "id": "person:Mahli",
   "key_references": [
     "02006019",
-    "13006019"
+    "13006004"
   ],
   "localizations": {
     "eng": {

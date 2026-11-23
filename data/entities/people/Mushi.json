@@ -12,10 +12,39 @@
   },
   "bsi": {
     "canonical_id": "person:Mushi",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "person:Mushi",
     "source_primary_id": "person:Mushi",
-    "source_sha256": "48f15785aa73f7fcfee398b8e9a43c005bbae35488d971bd9f4faee2f6a03fa5"
+    "source_sha256": "48f15785aa73f7fcfee398b8e9a43c005bbae35488d971bd9f4faee2f6a03fa5",
+    "editorial_reason": "The original Hebrew 1 Chronicles 6:19 belongs to the line of Elkanah, not Mushi son of Merari. The corresponding accurate Levitical family list in 1 Chronicles 6:4 names Mushi alongside Mahli with a direct pinned word already stored.",
+    "editorial_evidence": [
+      "Pinned WLC 1Chr 6:19 lists the Elkanah genealogy",
+      "Pinned WLC 1Chr 6:4 o130060040042 directly names Mushi"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "adjudicate_final_source_key_mismatch",
+        "reason": "The original Hebrew 1 Chronicles 6:19 belongs to the line of Elkanah, not Mushi son of Merari. The corresponding accurate Levitical family list in 1 Chronicles 6:4 names Mushi alongside Mahli with a direct pinned word already stored.",
+        "evidence": [
+          "Pinned WLC 1Chr 6:19 lists the Elkanah genealogy",
+          "Pinned WLC 1Chr 6:4 o130060040042 directly names Mushi"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "key_references": [
+              "02006019",
+              "13006019"
+            ]
+          },
+          "after": {
+            "key_references": [
+              "02006019",
+              "13006004"
+            ]
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -56,7 +85,7 @@
   "id": "person:Mushi",
   "key_references": [
     "02006019",
-    "13006019"
+    "13006004"
   ],
   "localizations": {
     "eng": {
