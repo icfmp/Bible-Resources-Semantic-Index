@@ -10,6 +10,12 @@ on:
       - "data/source-key-unresolved-queue.json"
       - "data/source-key-next-115-resolved.json"
       - "data/source-key-final-128-review.json"
+      - "scripts/audit_active_key_only_reconciliation.py"
+      - "tests/test_active_key_only_reconciliation.py"
+      - "data/v1-key-only-remaining-63-candidates.json"
+      - "data/v1-key-only-final-63-review.json"
+      - "scripts/validate_last_key_only_reviews.py"
+      - "tests/test_last_key_only_reviews.py"
       - "data/source-place-attestation-review.json"
       - "scripts/validate_source_place_attestations.py"
       - "tests/test_source_place_attestations.py"
@@ -45,6 +51,12 @@ on:
       - "data/source-key-unresolved-queue.json"
       - "data/source-key-next-115-resolved.json"
       - "data/source-key-final-128-review.json"
+      - "scripts/audit_active_key_only_reconciliation.py"
+      - "tests/test_active_key_only_reconciliation.py"
+      - "data/v1-key-only-remaining-63-candidates.json"
+      - "data/v1-key-only-final-63-review.json"
+      - "scripts/validate_last_key_only_reviews.py"
+      - "tests/test_last_key_only_reviews.py"
       - "data/source-place-attestation-review.json"
       - "scripts/validate_source_place_attestations.py"
       - "tests/test_source_place_attestations.py"
@@ -306,3 +318,46 @@ jobs:
             --sblgnt macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv
           # Source words for a tribe, gentilic, direction or literary place are
           # corroborating context, NEVER an invented literal named-place token.
+
+      - name: Reconcile every active key-only source claim against certified historical cases
+        run: |
+          python3 -I tests/test_active_key_only_reconciliation.py
+          python3 -I scripts/audit_active_key_only_reconciliation.py \
+            --data data \
+            --wlc macula-hebrew/WLC/tsv/macula-hebrew.tsv \
+            --sblgnt macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv \
+            --report /tmp/brsi-full-current-key-source-reconciliation.json \
+            --show-pending 0
+          # Read-only: no source-word candidates auto-promoted to direct names.
+          # The report remains runner-local: no Macula redistribution.
+
+      - name: Inspect 63 remaining key-only claims in their exact WLC SBLGNT narrative
+        run: |
+          python3 -I scripts/inspect_next_source_key_cases.py \
+            --data data \
+            --candidates data/v1-key-only-remaining-63-candidates.json \
+            --wlc macula-hebrew/WLC/tsv/macula-hebrew.tsv \
+            --sblgnt macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv \
+            --compact
+          # Distinguish genuine source identities, adjacent narratives,
+          # false inherited associations and absent words without rewriting sources.
+
+      - name: Inspect word-level disputed Sidon Moses city-of-David and idol-temple claims
+        run: |
+          python3 -I scripts/inspect_pinned_original_verse.py \
+            --wlc macula-hebrew/WLC/tsv/macula-hebrew.tsv \
+            --sblgnt macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv \
+            --verses 06010006 40001009 11002010 12010027 13010010 12024018 58011037 16004002 12023031 12023034
+          # No source proof may be borrowed from a neighboring identity.
+
+      - name: Certify all 63 historical last-source-key decisions and original texts
+        run: |
+          python3 -I tests/test_last_key_only_reviews.py
+          python3 -I scripts/validate_last_key_only_reviews.py \
+            --data data \
+            --ledger data/v1-key-only-final-63-review.json \
+            --wlc macula-hebrew/WLC/tsv/macula-hebrew.tsv \
+            --sblgnt macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv
+          # All 399 previously reviewed current cases are disjoint from
+          # this frozen 63-case proof. The five native corrections retain
+          # original source SHA-256 and reversible before/after receipts.

@@ -17,10 +17,46 @@
   },
   "bsi": {
     "canonical_id": "person:Moses",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "person:Moses",
     "source_primary_id": "person:Moses",
-    "source_sha256": "12274e25017f4f0d2cb29d6531ea3f195602e60b9ede11e9ce7712888bbf170a"
+    "source_sha256": "12274e25017f4f0d2cb29d6531ea3f195602e60b9ede11e9ce7712888bbf170a",
+    "editorial_reason": "Matthew 1:9 in the pinned SBLGNT enumerates Uzziah, Jotham, Ahaz and Hezekiah; Moses is not named, addressed, alluded to or historically a participant in this Davidic genealogy verse. The inherited Moses key at Matthew 1:9 is a false person-identity attachment. Retain Exodus 2:1 as the birth narrative and Exodus 20:1 as the Mosaic legal context without fabricating a direct Moses name word there.",
+    "editorial_evidence": [
+      "SBLGNT Matt 1:9 n40001009001 Uzziah, n40001009005/n40001009006 Jotham, n40001009010/n40001009011 Ahaz, n40001009015 Hezekiah; no Moses",
+      "Moses Exodus 2:1 and Exodus 20:1 remain as qualified contextual keys",
+      "https://www.biblegateway.com/passage/?search=Matthew+1%3A9&version=NET"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "remove_moses_from_unrelated_matthew_genealogy",
+        "reason": "Matthew 1:9 in the pinned SBLGNT enumerates Uzziah, Jotham, Ahaz and Hezekiah; Moses is not named, addressed, alluded to or historically a participant in this Davidic genealogy verse. The inherited Moses key at Matthew 1:9 is a false person-identity attachment. Retain Exodus 2:1 as the birth narrative and Exodus 20:1 as the Mosaic legal context without fabricating a direct Moses name word there.",
+        "evidence": [
+          "SBLGNT Matt 1:9 n40001009001 Uzziah, n40001009005/n40001009006 Jotham, n40001009010/n40001009011 Ahaz, n40001009015 Hezekiah; no Moses",
+          "Moses Exodus 2:1 and Exodus 20:1 remain as qualified contextual keys",
+          "https://www.biblegateway.com/passage/?search=Matthew+1%3A9&version=NET"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "key_references": [
+              "02002001",
+              "02003014",
+              "02020001",
+              "02034010",
+              "40001009"
+            ]
+          },
+          "after": {
+            "key_references": [
+              "02002001",
+              "02003014",
+              "02020001",
+              "02034010"
+            ]
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "SBLGNT": [
@@ -2577,8 +2613,7 @@
     "02002001",
     "02003014",
     "02020001",
-    "02034010",
-    "40001009"
+    "02034010"
   ],
   "localizations": {
     "eng": {

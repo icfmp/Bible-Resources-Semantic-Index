@@ -1,0 +1,334 @@
+{
+  "schema_version": 1,
+  "source_main_commit": "861d92fffa1fc69132daa50b85d47cb5e96b21a7",
+  "frozen_selection_policy": "Exactly the key-only verse pairs not already certified as individual source-verses in 115+115+128 historical reviews, recomputed at pre-PR144 state. Independent key and general refs must not be normalized or treated as a subset relation. Do not invent an exact word from an English name match.",
+  "previous_certified_case_pairs": 399,
+  "key_only_pair_count_at_selection": 462,
+  "previous_certified_source_identity_count": 358,
+  "cases": [
+    {
+      "source_id": "group:Samaritan",
+      "key_verses": [
+        "16004002"
+      ],
+      "kind": "group",
+      "path": "entities/groups/Samaritan.json",
+      "indirect_verse_ids": []
+    },
+    {
+      "source_id": "group:Sidon",
+      "key_verses": [
+        "06010006"
+      ],
+      "kind": "group",
+      "path": "entities/groups/Sidon.json",
+      "indirect_verse_ids": []
+    },
+    {
+      "source_id": "person:Abimelech.2",
+      "key_verses": [
+        "07009005"
+      ],
+      "kind": "person",
+      "path": "entities/people/Abimelech.2.json",
+      "indirect_verse_ids": []
+    },
+    {
+      "source_id": "person:Abraham",
+      "key_verses": [
+        "01017002"
+      ],
+      "kind": "person",
+      "path": "entities/people/Abraham.json",
+      "indirect_verse_ids": []
+    },
+    {
+      "source_id": "person:Abram",
+      "key_verses": [
+        "01017002"
+      ],
+      "kind": "person",
+      "path": "entities/people/Abram.json",
+      "indirect_verse_ids": []
+    },
+    {
+      "source_id": "person:Achan",
+      "key_verses": [
+        "06007022",
+        "06007023",
+        "06007025",
+        "06007026"
+      ],
+      "kind": "person",
+      "path": "entities/people/Achan.json",
+      "indirect_verse_ids": [
+        "06007025"
+      ]
+    },
+    {
+      "source_id": "person:Ahab",
+      "key_verses": [
+        "11016032",
+        "11022051"
+      ],
+      "kind": "person",
+      "path": "entities/people/Ahab.json",
+      "indirect_verse_ids": [
+        "11016032"
+      ]
+    },
+    {
+      "source_id": "person:Ahikam",
+      "key_verses": [
+        "12022011"
+      ],
+      "kind": "person",
+      "path": "entities/people/Ahikam.json",
+      "indirect_verse_ids": []
+    },
+    {
+      "source_id": "person:Balak",
+      "key_verses": [
+        "04022001",
+        "04022003",
+        "04022006"
+      ],
+      "kind": "person",
+      "path": "entities/people/Balak.json",
+      "indirect_verse_ids": [
+        "04022006"
+      ]
+    },
+    {
+      "source_id": "person:Barabbas",
+      "key_verses": [
+        "41015006"
+      ],
+      "kind": "person",
+      "path": "entities/people/Barabbas.json",
+      "indirect_verse_ids": []
+    },
+    {
+      "source_id": "person:Bartholomew",
+      "key_verses": [
+        "41003016",
+        "41003017"
+      ],
+      "kind": "person",
+      "path": "entities/people/Bartholomew.json",
+      "indirect_verse_ids": []
+    },
+    {
+      "source_id": "person:Bezalel",
+      "key_verses": [
+        "02031001",
+        "02031003",
+        "02031005",
+        "02031006",
+        "02031007",
+        "02031008",
+        "02031009",
+        "02031010",
+        "02031011"
+      ],
+      "kind": "person",
+      "path": "entities/people/Bezalel.json",
+      "indirect_verse_ids": [
+        "02031005"
+      ]
+    },
+    {
+      "source_id": "person:Elah.2",
+      "key_verses": [
+        "11016010",
+        "11016011"
+      ],
+      "kind": "person",
+      "path": "entities/people/Elah.2.json",
+      "indirect_verse_ids": []
+    },
+    {
+      "source_id": "person:Eliashib.8",
+      "key_verses": [
+        "16013005",
+        "16013006",
+        "16013008",
+        "16013009"
+      ],
+      "kind": "person",
+      "path": "entities/people/Eliashib.8.json",
+      "indirect_verse_ids": []
+    },
+    {
+      "source_id": "person:Gehazi",
+      "key_verses": [
+        "12005023",
+        "12005024",
+        "12005026",
+        "12005027"
+      ],
+      "kind": "person",
+      "path": "entities/people/Gehazi.json",
+      "indirect_verse_ids": [
+        "12005023",
+        "12005024",
+        "12005027"
+      ]
+    },
+    {
+      "source_id": "person:Gideon",
+      "key_verses": [
+        "07009020"
+      ],
+      "kind": "person",
+      "path": "entities/people/Gideon.json",
+      "indirect_verse_ids": []
+    },
+    {
+      "source_id": "person:Herodias",
+      "key_verses": [
+        "40014005",
+        "40014007",
+        "40014008"
+      ],
+      "kind": "person",
+      "path": "entities/people/Herodias.json",
+      "indirect_verse_ids": []
+    },
+    {
+      "source_id": "person:Hoshea",
+      "key_verses": [
+        "12017005"
+      ],
+      "kind": "person",
+      "path": "entities/people/Hoshea.json",
+      "indirect_verse_ids": []
+    },
+    {
+      "source_id": "person:Ish-bosheth",
+      "key_verses": [
+        "10002009",
+        "10002011",
+        "10004006"
+      ],
+      "kind": "person",
+      "path": "entities/people/Ish-bosheth.json",
+      "indirect_verse_ids": []
+    },
+    {
+      "source_id": "person:Jehoahaz.3",
+      "key_verses": [
+        "12023033",
+        "12024018"
+      ],
+      "kind": "person",
+      "path": "entities/people/Jehoahaz.3.json",
+      "indirect_verse_ids": [
+        "12023033"
+      ]
+    },
+    {
+      "source_id": "person:Jehoshaphat.3",
+      "key_verses": [
+        "11022044"
+      ],
+      "kind": "person",
+      "path": "entities/people/Jehoshaphat.3.json",
+      "indirect_verse_ids": []
+    },
+    {
+      "source_id": "person:Jesus.2",
+      "key_verses": [
+        "40001019"
+      ],
+      "kind": "person",
+      "path": "entities/people/Jesus.2.json",
+      "indirect_verse_ids": []
+    },
+    {
+      "source_id": "person:Joshua.2",
+      "key_verses": [
+        "06024015"
+      ],
+      "kind": "person",
+      "path": "entities/people/Joshua.2.json",
+      "indirect_verse_ids": [
+        "06024015"
+      ]
+    },
+    {
+      "source_id": "person:Medan",
+      "key_verses": [
+        "01025001"
+      ],
+      "kind": "person",
+      "path": "entities/people/Medan.json",
+      "indirect_verse_ids": []
+    },
+    {
+      "source_id": "person:Moses",
+      "key_verses": [
+        "02002001",
+        "02020001",
+        "40001009"
+      ],
+      "kind": "person",
+      "path": "entities/people/Moses.json",
+      "indirect_verse_ids": []
+    },
+    {
+      "source_id": "person:Paul",
+      "key_verses": [
+        "44009002",
+        "44009005",
+        "44009006",
+        "44009007"
+      ],
+      "kind": "person",
+      "path": "entities/people/Paul.json",
+      "indirect_verse_ids": [
+        "44009002",
+        "44009005",
+        "44009006",
+        "44009007"
+      ]
+    },
+    {
+      "source_id": "place:Canaan",
+      "key_verses": [
+        "04034001"
+      ],
+      "kind": "place",
+      "path": "entities/places/Canaan.json",
+      "indirect_verse_ids": []
+    },
+    {
+      "source_id": "place:CityOfDavid",
+      "key_verses": [
+        "11002010"
+      ],
+      "kind": "place",
+      "path": "entities/places/CityOfDavid.json",
+      "indirect_verse_ids": []
+    },
+    {
+      "source_id": "realia:Saw",
+      "key_verses": [
+        "58011037"
+      ],
+      "kind": "realia",
+      "path": "entities/realia/Saw.json",
+      "indirect_verse_ids": []
+    },
+    {
+      "source_id": "realia:TempleOfAnIdol",
+      "key_verses": [
+        "12010027",
+        "13010010"
+      ],
+      "kind": "realia",
+      "path": "entities/realia/TempleOfAnIdol.json",
+      "indirect_verse_ids": []
+    }
+  ]
+}

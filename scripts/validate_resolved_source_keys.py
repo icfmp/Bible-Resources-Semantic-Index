@@ -86,7 +86,7 @@ def require_real_receipt(record: dict, action: str, source_id: str) -> None:
         later = [
             z.get("replaced_field_values", {})
             for z in all_receipts[index + 1:]
-            if key in z.get("before", {})
+            if key in z.get("replaced_field_values", {}).get("before", {})
         ]
         check(bool(later), f"{source_id}: receipt field {key} silently diverged")
         first = later[0]["before"][key]
