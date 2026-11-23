@@ -15,10 +15,36 @@
   },
   "bsi": {
     "canonical_id": "group:Carmel",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "group:Carmel",
     "source_primary_id": "group:Carmel",
-    "source_sha256": "fead1202a351b5dab84ac05eb70c6aaf01d5c5e68bbcc0c3bc78a90be0947b60"
+    "source_sha256": "fead1202a351b5dab84ac05eb70c6aaf01d5c5e68bbcc0c3bc78a90be0947b60",
+    "editorial_reason": "Remove an inherited key/alias that incorrectly attributes a distinct generic, geographical or personal lexical reference to this narrowly defined source identity.",
+    "editorial_evidence": [
+      "Clear-Bible Macula WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c and Greek SBLGNT@8423afe47b9e8f24b7772e808af45c7159a6fe7e, complete original-verse inspection in #136 CI",
+      "Amos 9:3 explicitly refers to the summit of Mount Carmel. Isaiah 35:2 names the scenic Carmel alongside Lebanon and Sharon. Neither verse mentions Carmelites as a people group (the present group:Carmel source identity). Preserve its other inherited people-of-Carmel evidence."
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "remove_source_proven_wrong_identity_key",
+        "reason": "Remove an inherited key/alias that incorrectly attributes a distinct generic, geographical or personal lexical reference to this narrowly defined source identity.",
+        "evidence": [
+          "Clear-Bible Macula WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c and Greek SBLGNT@8423afe47b9e8f24b7772e808af45c7159a6fe7e, complete original-verse inspection in #136 CI",
+          "Amos 9:3 explicitly refers to the summit of Mount Carmel. Isaiah 35:2 names the scenic Carmel alongside Lebanon and Sharon. Neither verse mentions Carmelites as a people group (the present group:Carmel source identity). Preserve its other inherited people-of-Carmel evidence."
+        ],
+        "replaced_field_values": {
+          "before": {
+            "key_references": [
+              "30009003",
+              "23035002"
+            ]
+          },
+          "after": {
+            "key_references": []
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -48,10 +74,7 @@
   "group_origin": "place:Carmel",
   "group_type": "residence",
   "id": "group:Carmel",
-  "key_references": [
-    "30009003",
-    "23035002"
-  ],
+  "key_references": [],
   "lemmas": {
     "he": [
       "כַּרְמְלִי",
