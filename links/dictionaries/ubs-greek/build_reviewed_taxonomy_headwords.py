@@ -9,13 +9,14 @@ source labels, Strong and morphology, and never assigns contextual LEXID.
 from __future__ import annotations
 
 import argparse
-import copy
+import runpy
 import hashlib
 import json
 import unicodedata
 from collections import Counter
 from pathlib import Path
 
+INTEGRITY = runpy.run_path(str(Path(__file__).with_name("reviewed_word_integrity.py")))
 PREVIOUS = "nfc_canonically_identical_lemma_and_original_ln_unapproved_word_candidate"
 REVIEWED = "source_reviewed_original_greek_headword_grammatical_taxonomy_only"
 POLICY = {
@@ -101,7 +102,6 @@ def build(candidate, previous_ledger, residual, taxonomy_ledger, english, french
     }
     if set(from_prior) != set(reviewed) | set(deferred) or len(from_prior) != 7:
         raise ValueError("Earlier unreviewed Greek source family dispositions differ")
-    output = copy.deepcopy(candidate)
     selected_ids = set()
     approved_keys = set()
     deferred_keys = set()
@@ -136,38 +136,23 @@ def build(candidate, previous_ledger, residual, taxonomy_ledger, english, french
         for word in family["all_original_word_witnesses"]:
             wid = word["word_id"]
             old = candidate["by_macula_word"].get(wid)
-            if (wid in selected_ids or old is None or old["match_type"] != PREVIOUS
-                or old["entry_id"] != mid
-                or old["original_lemma"] != word["original_lemma"]
-                or old["original_strong"] != word["original_strong"]
-                or old["original_ln"] != word["original_ln"]
-                or old["original_class"] != word["original_class"]
-                or old["original_morph"] != word["original_morph"]
-                or old["original_reference"] != word["reference"]
-                or old["corroborating_ubs_ln_codes"] != word["attested_headword_ln_codes"]):
-                raise ValueError("Unverified Greek original word-ID lexical headword witness: " + wid)
+            if wid in selected_ids:
+                raise ValueError("Duplicate Greek original taxonomy word ID: " + wid)
+            INTEGRITY["verify_original_word"](old, word, wid, mid, PREVIOUS)
             shared = sorted(set(old["original_ln"].split()) & en_ln & fr_ln)
             if not shared or shared != old["corroborating_ubs_ln_codes"]:
                 raise ValueError("Missing independent bilingual Greek Louw–Nida lexical evidence")
             if old["original_strong"] == "0" or not old["original_strong"].isdigit():
                 raise ValueError("Greek original Strong 0 / unsupported annotation not eligible")
-            output["by_macula_word"][wid]["match_type"] = REVIEWED
             selected_ids.add(wid)
     if (approved_keys != set(reviewed) or deferred_keys != set(deferred)
         or len(selected_ids) != 32):
         raise ValueError("Unaccounted original Greek taxonomy family/word evidence")
+    output = INTEGRITY["apply_review_status"](
+        candidate, selected_ids, PREVIOUS, REVIEWED)
     counts = Counter(x["match_type"] for x in output["by_macula_word"].values())
     if counts[REVIEWED] != 32 or counts[PREVIOUS] != 3 or len(output["by_macula_word"]) != 9187:
         raise ValueError("Greek 32 reviewed / 3 deferred original-word partition drift")
-    for wid, item in candidate["by_macula_word"].items():
-        new = output["by_macula_word"][wid]
-        if ({k:v for k,v in item.items() if k != "match_type"} !=
-            {k:v for k,v in new.items() if k != "match_type"}
-            or (wid not in selected_ids and item != new)):
-            raise ValueError("Original Greek Strong/LN/text/morphology/source review was modified")
-    for key in candidate:
-        if key not in ("by_macula_word", "editorial_candidate", "word_aware_coverage") and candidate[key] != output[key]:
-            raise ValueError("Existing Greek baseline Strong bridge/ambiguities modified")
     output["editorial_candidate"] = {
         **candidate["editorial_candidate"],
         "status": "PRIVATE_32_original_Greek_word_headwords_taxonomy_review_NOT_PUBLISHED",
