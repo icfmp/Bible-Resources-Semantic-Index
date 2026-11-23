@@ -9,7 +9,7 @@
   },
   "bsi": {
     "canonical_id": "realia:Saw",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "realia:Saw",
     "source_primary_id": "realia:Saw",
     "source_sha256": "ddd0c87d63654fd020b23fac2b58b9dd0046f03cf4c99d7487b173985d515603",
@@ -33,7 +33,70 @@
           "ORG BCV8 11007009",
           "Pinned original-word texts/glosses inspected in Clear-Bible/Macula Hebrew WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c; token IDs copied verbatim; source metadata and scripture unchanged"
         ]
+      },
+      {
+        "action": "restore_direct_source_object_and_correct_invalid_key_if_present",
+        "reason": "Restore exact pinned original-language object name, distinguishing contextual narrative keys from directly written source words and correcting nonexistent verse when proven.",
+        "evidence": [
+          "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c exact whole-verse Macula WLC",
+          "2 Samuel 20:31 is an impossible verse (chapter 20 ends at verse 26). The actual 2 Samuel 12:31 explicitly names saws (מְגֵרָה o100120310072). Correct the digit-transposed inherited key and restore the source word in the same edit.",
+          "o100120310072"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [
+              "23010015",
+              "11007009"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o230100150082"
+                ],
+                [
+                  "o110070090082"
+                ]
+              ]
+            },
+            "key_references": [
+              "58011037",
+              "10020031",
+              "11007009"
+            ]
+          },
+          "after": {
+            "references": [
+              "10012031",
+              "11007009",
+              "23010015"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o230100150082"
+                ],
+                [
+                  "o110070090082"
+                ],
+                [
+                  "o100120310072"
+                ]
+              ]
+            },
+            "key_references": [
+              "58011037",
+              "10012031",
+              "11007009"
+            ]
+          }
+        }
       }
+    ],
+    "editorial_reason": "Restore exact pinned original-language object name, distinguishing contextual narrative keys from directly written source words and correcting nonexistent verse when proven.",
+    "editorial_evidence": [
+      "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c exact whole-verse Macula WLC",
+      "2 Samuel 20:31 is an impossible verse (chapter 20 ends at verse 26). The actual 2 Samuel 12:31 explicitly names saws (מְגֵרָה o100120310072). Correct the digit-transposed inherited key and restore the source word in the same edit.",
+      "o100120310072"
     ]
   },
   "explicit_instances": {
@@ -43,13 +106,16 @@
       ],
       [
         "o110070090082"
+      ],
+      [
+        "o100120310072"
       ]
     ]
   },
   "id": "realia:Saw",
   "key_references": [
     "58011037",
-    "10020031",
+    "10012031",
     "11007009"
   ],
   "lemmas": {
@@ -74,8 +140,9 @@
   },
   "realia_type": "other",
   "references": [
-    "23010015",
-    "11007009"
+    "10012031",
+    "11007009",
+    "23010015"
   ],
   "subject_referents": {},
   "type": "realia",

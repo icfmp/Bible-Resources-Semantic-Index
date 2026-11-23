@@ -12,10 +12,235 @@
   },
   "bsi": {
     "canonical_id": "realia:SacredPillar",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "realia:SacredPillar",
     "source_primary_id": "realia:SacredPillar",
-    "source_sha256": "6a6ce10cd020043d75f3a663bde38bd2926b320b58e4a0025c632d7b49ac2609"
+    "source_sha256": "6a6ce10cd020043d75f3a663bde38bd2926b320b58e4a0025c632d7b49ac2609",
+    "editorial_reason": "Source-collated full-verse original-language witness directly supports this existing object category; restore only exact named tokens, preserving keys and earlier witnesses.",
+    "editorial_evidence": [
+      "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c and Clear-Bible/macula-greek@8423afe47b9e8f24b7772e808af45c7159a6fe7e",
+      "Genesis 28:18 and 31:45 explicitly call the erected memorial stone a pillar (מַצֵּבָה); direct object name, not a vague stone reference.",
+      "01028018 wlc: o010280180121",
+      "01031045 wlc: o010310450051"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "restore_pinned_direct_object_name_in_source_key",
+        "reason": "Source-collated full-verse original-language witness directly supports this existing object category; restore only exact named tokens, preserving keys and earlier witnesses.",
+        "evidence": [
+          "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c and Clear-Bible/macula-greek@8423afe47b9e8f24b7772e808af45c7159a6fe7e",
+          "Genesis 28:18 and 31:45 explicitly call the erected memorial stone a pillar (מַצֵּבָה); direct object name, not a vague stone reference.",
+          "01028018 wlc: o010280180121",
+          "01031045 wlc: o010310450051"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [
+              "02023024",
+              "02034013",
+              "03026001",
+              "05007005",
+              "05012003",
+              "05016022",
+              "11014023",
+              "12003002",
+              "12010026",
+              "12010027",
+              "12017010",
+              "12018004",
+              "12023014",
+              "14014002",
+              "14031001",
+              "24043013",
+              "26026011",
+              "28003004",
+              "28010001",
+              "28010002",
+              "33005012"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o020230240141",
+                  "o020230240142"
+                ],
+                [
+                  "o020340130061",
+                  "o020340130062"
+                ],
+                [
+                  "o030260010062"
+                ],
+                [
+                  "o050070050082",
+                  "o050070050083"
+                ],
+                [
+                  "o050120030061",
+                  "o050120030062"
+                ],
+                [
+                  "o050160220041"
+                ],
+                [
+                  "o110140230062"
+                ],
+                [
+                  "o120030020111"
+                ],
+                [
+                  "o120100260031"
+                ],
+                [
+                  "o120100270031"
+                ],
+                [
+                  "o120170100031"
+                ],
+                [
+                  "o120180040072"
+                ],
+                [
+                  "o120230140032"
+                ],
+                [
+                  "o140140020082"
+                ],
+                [
+                  "o140310010112"
+                ],
+                [
+                  "o240430130031"
+                ],
+                [
+                  "o260260110102"
+                ],
+                [
+                  "o280030040141"
+                ],
+                [
+                  "o280100010141"
+                ],
+                [
+                  "o280100020091",
+                  "o280100020092"
+                ],
+                [
+                  "o330050120032",
+                  "o330050120033"
+                ]
+              ]
+            }
+          },
+          "after": {
+            "references": [
+              "01028018",
+              "01031045",
+              "02023024",
+              "02034013",
+              "03026001",
+              "05007005",
+              "05012003",
+              "05016022",
+              "11014023",
+              "12003002",
+              "12010026",
+              "12010027",
+              "12017010",
+              "12018004",
+              "12023014",
+              "14014002",
+              "14031001",
+              "24043013",
+              "26026011",
+              "28003004",
+              "28010001",
+              "28010002",
+              "33005012"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o020230240141",
+                  "o020230240142"
+                ],
+                [
+                  "o020340130061",
+                  "o020340130062"
+                ],
+                [
+                  "o030260010062"
+                ],
+                [
+                  "o050070050082",
+                  "o050070050083"
+                ],
+                [
+                  "o050120030061",
+                  "o050120030062"
+                ],
+                [
+                  "o050160220041"
+                ],
+                [
+                  "o110140230062"
+                ],
+                [
+                  "o120030020111"
+                ],
+                [
+                  "o120100260031"
+                ],
+                [
+                  "o120100270031"
+                ],
+                [
+                  "o120170100031"
+                ],
+                [
+                  "o120180040072"
+                ],
+                [
+                  "o120230140032"
+                ],
+                [
+                  "o140140020082"
+                ],
+                [
+                  "o140310010112"
+                ],
+                [
+                  "o240430130031"
+                ],
+                [
+                  "o260260110102"
+                ],
+                [
+                  "o280030040141"
+                ],
+                [
+                  "o280100010141"
+                ],
+                [
+                  "o280100020091",
+                  "o280100020092"
+                ],
+                [
+                  "o330050120032",
+                  "o330050120033"
+                ],
+                [
+                  "o010280180121"
+                ],
+                [
+                  "o010310450051"
+                ]
+              ]
+            }
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -87,6 +312,12 @@
       [
         "o330050120032",
         "o330050120033"
+      ],
+      [
+        "o010280180121"
+      ],
+      [
+        "o010310450051"
       ]
     ]
   },
@@ -125,6 +356,8 @@
   },
   "realia_type": "other",
   "references": [
+    "01028018",
+    "01031045",
     "02023024",
     "02034013",
     "03026001",

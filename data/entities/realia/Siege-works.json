@@ -15,10 +15,143 @@
   },
   "bsi": {
     "canonical_id": "realia:Siege-works",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "realia:Siege-works",
     "source_primary_id": "realia:Siege-works",
-    "source_sha256": "1690d64953ae56f82e7cf12b35106737b130b54fd9b718fd655698ee2c733bdd"
+    "source_sha256": "1690d64953ae56f82e7cf12b35106737b130b54fd9b718fd655698ee2c733bdd",
+    "editorial_reason": "Restore exact original-language source word witness from the existing source-key object reference, without promoting English gloss analogies or unrelated neighboring words.",
+    "editorial_evidence": [
+      "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c / macula-greek@8423afe47b9e8f24b7772e808af45c7159a6fe7e",
+      "Daniel 11:15 explicitly refers to earthworks/siege ramps (סֹלְלָה), the existing siege-works engineering object.",
+      "27011015 wlc = o270110150051"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "restore_pinned_direct_object_name_in_source_key",
+        "reason": "Restore exact original-language source word witness from the existing source-key object reference, without promoting English gloss analogies or unrelated neighboring words.",
+        "evidence": [
+          "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c / macula-greek@8423afe47b9e8f24b7772e808af45c7159a6fe7e",
+          "Daniel 11:15 explicitly refers to earthworks/siege ramps (סֹלְלָה), the existing siege-works engineering object.",
+          "27011015 wlc = o270110150051"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [
+              "05020020",
+              "12025001",
+              "18019006",
+              "21009014",
+              "23029003",
+              "24052004",
+              "26004002",
+              "26017017",
+              "26021027",
+              "26026008",
+              "42019043"
+            ],
+            "explicit_instances": {
+              "SBLGNT": [
+                [
+                  "n42019043011"
+                ]
+              ],
+              "wlc": [
+                [
+                  "o120250010221"
+                ],
+                [
+                  "o240520040221"
+                ],
+                [
+                  "o260040020061"
+                ],
+                [
+                  "o260170170131"
+                ],
+                [
+                  "o260210270201"
+                ],
+                [
+                  "o260260080071"
+                ],
+                [
+                  "o180190060062",
+                  "o180190060063"
+                ],
+                [
+                  "o210090140141"
+                ],
+                [
+                  "o050200200141"
+                ],
+                [
+                  "o230290030091"
+                ]
+              ]
+            }
+          },
+          "after": {
+            "references": [
+              "05020020",
+              "12025001",
+              "18019006",
+              "21009014",
+              "23029003",
+              "24052004",
+              "26004002",
+              "26017017",
+              "26021027",
+              "26026008",
+              "27011015",
+              "42019043"
+            ],
+            "explicit_instances": {
+              "SBLGNT": [
+                [
+                  "n42019043011"
+                ]
+              ],
+              "wlc": [
+                [
+                  "o120250010221"
+                ],
+                [
+                  "o240520040221"
+                ],
+                [
+                  "o260040020061"
+                ],
+                [
+                  "o260170170131"
+                ],
+                [
+                  "o260210270201"
+                ],
+                [
+                  "o260260080071"
+                ],
+                [
+                  "o180190060062",
+                  "o180190060063"
+                ],
+                [
+                  "o210090140141"
+                ],
+                [
+                  "o050200200141"
+                ],
+                [
+                  "o230290030091"
+                ],
+                [
+                  "o270110150051"
+                ]
+              ]
+            }
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "SBLGNT": [
@@ -57,6 +190,9 @@
       ],
       [
         "o230290030091"
+      ],
+      [
+        "o270110150051"
       ]
     ]
   },
@@ -105,6 +241,7 @@
     "26017017",
     "26021027",
     "26026008",
+    "27011015",
     "42019043"
   ],
   "subject_referents": {},

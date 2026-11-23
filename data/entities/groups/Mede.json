@@ -13,10 +13,41 @@
   },
   "bsi": {
     "canonical_id": "group:Mede",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "group:Mede",
     "source_primary_id": "group:Mede",
-    "source_sha256": "70e053c977ffffd6fa271b3baf5ff0202ba1d35c5bfaeeb3635f58095dd6e0af"
+    "source_sha256": "70e053c977ffffd6fa271b3baf5ff0202ba1d35c5bfaeeb3635f58095dd6e0af",
+    "editorial_reason": "The biblical Medes correlate with Madai son of Japheth (Genesis 10:2; 1 Chronicles 1:5), not with unrelated Medan son of Abraham and Keturah (Genesis 25:2; 1 Chronicles 1:32). Correct the inherited genealogical group origin, remove the conflating Medan alternate label, preserve genuine Medes occurrences.",
+    "editorial_evidence": [
+      "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c and macula-greek@8423afe47b9e8f24b7772e808af45c7159a6fe7e",
+      "WLC Genesis 10:2 o010100020052 and 1 Chronicles 1:5 o130010050052 = person:Madai; father Japheth",
+      "WLC Genesis 25:2 and 1 Chronicles 1:32 = unrelated person:Medan; father Abraham mother Keturah",
+      "Pinned SBLGNT Acts 2:9 n44002009003 = Medes, belongs to group:Mede not to person:Medan"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "reassign_medes_origin_to_madai_not_medan",
+        "reason": "The biblical Medes correlate with Madai son of Japheth (Genesis 10:2; 1 Chronicles 1:5), not with unrelated Medan son of Abraham and Keturah (Genesis 25:2; 1 Chronicles 1:32). Correct the inherited genealogical group origin, remove the conflating Medan alternate label, preserve genuine Medes occurrences.",
+        "evidence": [
+          "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c and macula-greek@8423afe47b9e8f24b7772e808af45c7159a6fe7e",
+          "WLC Genesis 10:2 o010100020052 and 1 Chronicles 1:5 o130010050052 = person:Madai; father Japheth",
+          "WLC Genesis 25:2 and 1 Chronicles 1:32 = unrelated person:Medan; father Abraham mother Keturah",
+          "Pinned SBLGNT Acts 2:9 n44002009003 = Medes, belongs to group:Mede not to person:Medan"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "group_origin": "person:Medan",
+            "alternate_labels": [
+              "Medan"
+            ]
+          },
+          "after": {
+            "group_origin": "person:Madai",
+            "alternate_labels": []
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "SBLGNT": [
@@ -66,7 +97,7 @@
       ]
     ]
   },
-  "group_origin": "person:Medan",
+  "group_origin": "person:Madai",
   "group_type": "relation",
   "id": "group:Mede",
   "key_references": [
@@ -80,9 +111,6 @@
   },
   "localizations": {
     "eng": {
-      "alternate_labels": [
-        "Medan"
-      ],
       "preferred_label": "Medes"
     }
   },

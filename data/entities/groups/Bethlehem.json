@@ -9,10 +9,89 @@
   },
   "bsi": {
     "canonical_id": "group:Bethlehem",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "group:Bethlehem",
     "source_primary_id": "group:Bethlehem",
-    "source_sha256": "12c58d62ac6cc5940dec343097d370454f968ce53c1e4389df296b7d921ff922"
+    "source_sha256": "12c58d62ac6cc5940dec343097d370454f968ce53c1e4389df296b7d921ff922",
+    "editorial_reason": "Ezra 2:21 explicitly lists the returning community as the people/sons of Bethlehem (בֵּן בֵּית לֶחֶם), an actual community group, not only an independent town-name token. Preserve the complete three-token original compound.",
+    "editorial_evidence": [
+      "Pinned Macula WLC Ezra 2:21 original word o150020210011 people/sons",
+      "Pinned WLC Ezra 2:21 o150020210021 + o150020210031 name Beth-lehem, one complete two-token toponym"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "restore_direct_complete_bethlehem_returnee_community_phrase",
+        "reason": "Ezra 2:21 explicitly lists the returning community as the people/sons of Bethlehem (בֵּן בֵּית לֶחֶם), an actual community group, not only an independent town-name token. Preserve the complete three-token original compound.",
+        "evidence": [
+          "Pinned Macula WLC Ezra 2:21 original word o150020210011 people/sons",
+          "Pinned WLC Ezra 2:21 o150020210021 + o150020210031 name Beth-lehem, one complete two-token toponym"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [
+              "09016001",
+              "09016018",
+              "09017058",
+              "10021019"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o090160010231",
+                  "o090160010241"
+                ],
+                [
+                  "o090160180091",
+                  "o090160180101"
+                ],
+                [
+                  "o090170580131",
+                  "o090170580141"
+                ],
+                [
+                  "o100210190121",
+                  "o100210190131"
+                ]
+              ]
+            }
+          },
+          "after": {
+            "references": [
+              "09016001",
+              "09016018",
+              "09017058",
+              "10021019",
+              "15002021"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o090160010231",
+                  "o090160010241"
+                ],
+                [
+                  "o090160180091",
+                  "o090160180101"
+                ],
+                [
+                  "o090170580131",
+                  "o090170580141"
+                ],
+                [
+                  "o100210190121",
+                  "o100210190131"
+                ],
+                [
+                  "o150020210011",
+                  "o150020210021",
+                  "o150020210031"
+                ]
+              ]
+            }
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -31,6 +110,11 @@
       [
         "o100210190121",
         "o100210190131"
+      ],
+      [
+        "o150020210011",
+        "o150020210021",
+        "o150020210031"
       ]
     ]
   },
@@ -68,7 +152,8 @@
     "09016001",
     "09016018",
     "09017058",
-    "10021019"
+    "10021019",
+    "15002021"
   ],
   "speeches": {
     "wlc": [

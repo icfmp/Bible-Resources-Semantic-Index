@@ -5,6 +5,9 @@ on:
     paths:
       - "data/entities/**"
       - "data/source.lock.json"
+      - "data/source-key-resolved-115.json"
+      - "scripts/validate_resolved_source_keys.py"
+      - "tests/test_resolved_source_keys.py"
       - "data/source-key-identity-review-115.json"
       - "scripts/validate_source_key_identity_reviews.py"
       - "tests/test_source_key_identity_review_115.py"
@@ -22,6 +25,9 @@ on:
     paths:
       - "data/entities/**"
       - "data/source.lock.json"
+      - "data/source-key-resolved-115.json"
+      - "scripts/validate_resolved_source_keys.py"
+      - "tests/test_resolved_source_keys.py"
       - "data/source-key-identity-review-115.json"
       - "scripts/validate_source_key_identity_reviews.py"
       - "tests/test_source_key_identity_review_115.py"
@@ -150,3 +156,64 @@ jobs:
             --wlc macula-hebrew/WLC/tsv/macula-hebrew.tsv \
             --sblgnt macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv \
             --verses 12001002 12001016 13012018 01014019 01014020 01003001 03011031 02028042 10005023 13001013 23021013 48001017 07003008 06009018
+
+      - name: Audit complete remaining source-reference queue for resolution, read-only
+        run: |
+          python3 -I scripts/audit_source_reference_evidence.py --data data --details
+
+      - name: Collate 38 remaining object and ethnonym verses against pinned originals
+        run: |
+          python3 -I scripts/inspect_pinned_original_verse.py \
+            --wlc macula-hebrew/WLC/tsv/macula-hebrew.tsv \
+            --sblgnt macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv \
+            --verses 04026058 01014005 01014015 01010013 01010014 41012041 41012042 40022020 41012016 66012005 66012009 10012031 09016011 66003014 66003015 06006020 16002017 12004002 02026001 46009025 01024053 02035022 04031050 09013020 66001018 09025018 01028018 01031045 02003005 05023025 26001019 05022012 09005002 40023027 02028042 10005023 03011031 09016013
+
+      - name: Verify thirteen genuine tribal territorial allocations in Joshua WLC
+        run: |
+          python3 -I scripts/inspect_pinned_original_verse.py \
+            --wlc macula-hebrew/WLC/tsv/macula-hebrew.tsv \
+            --sblgnt macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv \
+            --verses 06019024 06018011 06019040 06013029 06016005 06013024 06019017 06015001 06019032 06013015 06019001 06017001 06019010
+
+      - name: Adjudicate siege, covering and biblical coin cases in pinned originals
+        run: |
+          python3 -I scripts/inspect_pinned_original_verse.py \
+            --wlc macula-hebrew/WLC/tsv/macula-hebrew.tsv \
+            --sblgnt macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv \
+            --verses 27011015 26004002 33004014 10020015 01003007 23029003 09010001 04027058 04026058 40017024
+
+      - name: Inspect beam restoration terminology in 2 Chronicles 34:11
+        run: |
+          python3 -I scripts/inspect_pinned_original_verse.py \
+            --wlc macula-hebrew/WLC/tsv/macula-hebrew.tsv \
+            --sblgnt macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv \
+            --verses 14034011
+
+      - name: Collate further tangible and ethnographic source keys for evidence-backed closure
+        run: |
+          python3 -I scripts/inspect_pinned_original_verse.py \
+            --wlc macula-hebrew/WLC/tsv/macula-hebrew.tsv \
+            --sblgnt macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv \
+            --verses 66004005 66008010 18039003 18039009 05006008 05011018 40027026 08003002 15002021 01010006 09001001 13012032 13001032 01010022
+
+      - name: Verify exact original words for eleven new correct/contextual decisions
+        run: |
+          python3 -I scripts/inspect_pinned_original_verse.py \
+            --wlc macula-hebrew/WLC/tsv/macula-hebrew.tsv \
+            --sblgnt macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv \
+            --verses 01002013 11009020 11009021 06009003 06009004 16004002 42009052 42009053 05006008 05011018 01010022 18039003 18039009
+
+      - name: Corroborate immediate narrative referents before declaring correct contextual keys
+        run: |
+          python3 -I scripts/inspect_pinned_original_verse.py \
+            --wlc macula-hebrew/WLC/tsv/macula-hebrew.tsv \
+            --sblgnt macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv \
+            --verses 06009017 10005009 03011030 06024011 11009019 01010014 05023025 13001014
+
+      - name: Certify 115 resolved source identities against both exact pinned corpora
+        run: |
+          python3 -I scripts/validate_resolved_source_keys.py \
+            --data data \
+            --ledger data/source-key-resolved-115.json \
+            --wlc macula-hebrew/WLC/tsv/macula-hebrew.tsv \
+            --sblgnt macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv

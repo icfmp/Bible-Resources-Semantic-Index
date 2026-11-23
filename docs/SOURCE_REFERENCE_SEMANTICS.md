@@ -72,6 +72,55 @@ verse. Some original witnesses may be ambiguous, non-biblical, apocryphal
 or outside the chosen textual edition. Do not manufacture a verse to satisfy
 a subset test.
 
+## Strict resolution milestone: 115 source identities
+
+The old `data/source-key-identity-review-115.json` contains **115 triaged
+cases**, but triaged is **not** resolved. Its 24 unresolved historical/lexical
+identities, 11 unconfirmed geographic equivalences and other insufficiently
+proved claims cannot be counted as completed simply because someone wrote an
+explanation. This distinction is documented in issue #23.
+
+The independently evidence-based
+[`data/source-key-resolved-115.json`](../data/source-key-resolved-115.json)
+is the actual milestone: **115 distinct source identity cases with final
+decisions**, of which **36 have real reversible record corrections** (10 from
+PR #138 plus 26 corrected in PR #139) and **79 have their original source
+claims explicitly verified correct without new data changes**.
+
+Every resolution names its exact original Hebrew or Greek source word IDs.
+For historical or contextual keys, source words can belong to an adjacent
+verse, a named ancestor, or a grammatical referent. The review makes that
+distinction explicit: **never turn contextual testimony into a fabricated
+direct name token**. The original texts, source SHA-256 and source
+versification remain unchanged.
+
+Thirteen derived tribal territories are verified against source-pinned
+Joshua allotment passages and remain **derived geographic entities**, not
+bogus standalone original-language place names. Thirty-two reviewed existing
+indirect referents retain their Macula pronoun/subject-word anchoring. New
+corrections address nonexistent verse numbers, an off-by-one source key,
+a false didrachma-versus-denarius equivalence, directly attested words for
+physical objects, and a serious **Medan (Abraham's son) versus Madai (Japheth's
+son) / Medes** inherited identity conflation.
+
+This invariant is now independently enforced by
+[`scripts/validate_resolved_source_keys.py`](../scripts/validate_resolved_source_keys.py)
+and `tests/test_resolved_source_keys.py`. The validator refuses classified
+but unresolved cases, duplicates, unsupported source IDs, fabricated original
+words, incorrect pins, absent correction receipts, and territorial records
+claiming nonexistent original-word attestations. In CI it scans **both pinned
+original-language TSVs** to validate the exact source word IDs.
+
+Run the metadata and native-data validation:
+
+`python3 -I scripts/validate_resolved_source_keys.py --data data --ledger data/source-key-resolved-115.json`
+
+Add `--wlc path/to/locked-macula-hebrew.tsv --sblgnt
+path/to/locked-macula-greek-SBLGNT.tsv` to independently validate the
+original-word proofs. The GitHub source workflow runs the latter strict
+form. This milestone does not declare issue #23 fully complete or authorize
+a resource release.
+
 ## Curated 115-identity source review milestone (November 2026)
 
 The **115** records in [the identity review ledger](../data/source-key-identity-review-115.json) are **115 distinct additional entity identities examined**, not 115 corrected files or proved errors. This cohort follows 52 previously corrected records in merged PRs #135–#137. The review starts from the final #137 `main` commit and uses exactly the Macula WLC/SBLGNT editions in `data/source.lock.json`.

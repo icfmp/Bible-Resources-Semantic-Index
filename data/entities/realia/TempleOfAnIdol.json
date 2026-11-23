@@ -9,15 +9,71 @@
   },
   "bsi": {
     "canonical_id": "realia:TempleOfAnIdol",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "realia:TempleOfAnIdol",
     "source_primary_id": "realia:TempleOfAnIdol",
-    "source_sha256": "31c8d6ce2d45a131fb9aeb13123c857d00ee62c91c61450eefe8152436bf493b"
+    "source_sha256": "31c8d6ce2d45a131fb9aeb13123c857d00ee62c91c61450eefe8152436bf493b",
+    "editorial_reason": "Restore exact original-language source word witness from the existing source-key object reference, without promoting English gloss analogies or unrelated neighboring words.",
+    "editorial_evidence": [
+      "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c / macula-greek@8423afe47b9e8f24b7772e808af45c7159a6fe7e",
+      "1 Samuel 5:2 explicitly identifies the temple/house of Dagon (בַּיִת דָּגוֹן), an idol sanctuary; full construct phrase is preserved.",
+      "09005002 wlc = o090050020081 + o090050020091"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "restore_pinned_direct_object_name_in_source_key",
+        "reason": "Restore exact original-language source word witness from the existing source-key object reference, without promoting English gloss analogies or unrelated neighboring words.",
+        "evidence": [
+          "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c / macula-greek@8423afe47b9e8f24b7772e808af45c7159a6fe7e",
+          "1 Samuel 5:2 explicitly identifies the temple/house of Dagon (בַּיִת דָּגוֹן), an idol sanctuary; full construct phrase is preserved.",
+          "09005002 wlc = o090050020081 + o090050020091"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [
+              "46008010"
+            ],
+            "explicit_instances": {
+              "SBLGNT": [
+                [
+                  "n46008010010"
+                ]
+              ]
+            }
+          },
+          "after": {
+            "references": [
+              "09005002",
+              "46008010"
+            ],
+            "explicit_instances": {
+              "SBLGNT": [
+                [
+                  "n46008010010"
+                ]
+              ],
+              "wlc": [
+                [
+                  "o090050020081",
+                  "o090050020091"
+                ]
+              ]
+            }
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "SBLGNT": [
       [
         "n46008010010"
+      ]
+    ],
+    "wlc": [
+      [
+        "o090050020081",
+        "o090050020091"
       ]
     ]
   },
@@ -47,6 +103,7 @@
   "pronominal_referents": {},
   "realia_type": "other",
   "references": [
+    "09005002",
     "46008010"
   ],
   "subject_referents": {},

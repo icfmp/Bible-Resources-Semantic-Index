@@ -1,0 +1,1927 @@
+{
+  "schema_version": 1,
+  "policy": "Count only independently source-backed corrected or verified_correct source-identity cases. Never count mere triage, ambiguous lexical/geographic matches, unverified person/place mergers or unspecified cases.",
+  "pin": {
+    "wlc": "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c",
+    "sblgnt": "Clear-Bible/macula-greek@8423afe47b9e8f24b7772e808af45c7159a6fe7e"
+  },
+  "cases": [
+    {
+      "source_id": "deity:Highest",
+      "outcome": "corrected",
+      "proof_kind": "reversible_edit",
+      "evidence_word_ids": [
+        "o010140190052",
+        "o010140190061",
+        "o010140200021",
+        "o010140200031"
+      ],
+      "key_verses_reviewed": [
+        "01014019",
+        "01014020"
+      ],
+      "claim": "Genesis 14:19-20 names El Elyon (God Most High) in full, with the exact two-token pinned Hebrew title groups restored as direct divine-name evidence.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "required_action": "restore_verified_direct_original_word_after_identity_corroboration",
+      "target_key_verses": [
+        "01014019",
+        "01014020"
+      ]
+    },
+    {
+      "source_id": "deity:Satan",
+      "outcome": "verified_correct",
+      "proof_kind": "contextual_comparison",
+      "evidence_word_ids": [
+        "o010030010013",
+        "n66012009016"
+      ],
+      "key_verses_reviewed": [
+        "01003001"
+      ],
+      "claim": "Genesis 3:1 explicitly names the serpent (nachash), not Satan; a later theological identification of the serpent must not become a fabricated Satan lexical witness in the Pentateuch. This is an explicitly reviewed contextual identity/ancestry or narrative evidence claim, not an asserted direct name-word attestation in that key verse.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "target_key_verses": [
+        "01003001"
+      ]
+    },
+    {
+      "source_id": "fauna:Chameleon",
+      "outcome": "verified_correct",
+      "proof_kind": "contextual_comparison",
+      "evidence_word_ids": [
+        "o030110310052"
+      ],
+      "key_verses_reviewed": [
+        "03011031"
+      ],
+      "claim": "Leviticus 11:31 refers collectively to these unclean creeping creatures after the specific species list in 11:30; the word chameleon is not repeated as an individually named species here. This is an explicitly reviewed contextual identity/ancestry or narrative evidence claim, not an asserted direct name-word attestation in that key verse.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "target_key_verses": [
+        "03011031"
+      ]
+    },
+    {
+      "source_id": "flora:Flax",
+      "outcome": "verified_correct",
+      "proof_kind": "contextual_comparison",
+      "evidence_word_ids": [
+        "o020280420041"
+      ],
+      "key_verses_reviewed": [
+        "02028042"
+      ],
+      "claim": "Exodus 28:42 names linen (bad) as an undergarment material, not the botanical flax plant as a species; no botanical direct source word is inserted.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "target_key_verses": [
+        "02028042"
+      ]
+    },
+    {
+      "source_id": "flora:Poplar",
+      "outcome": "corrected",
+      "proof_kind": "reversible_edit",
+      "evidence_word_ids": [
+        "o100050230131"
+      ],
+      "key_verses_reviewed": [
+        "10005023"
+      ],
+      "claim": "2 Samuel 5:23 names the Hebrew baka balsam trees, not white poplar. The misleading poplar key is removed with before/after receipt while original source poplar words remain.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "required_action": "remove_balsam_tree_key_from_poplar_species",
+      "target_key_verses": [
+        "10005023"
+      ]
+    },
+    {
+      "source_id": "group:Agag",
+      "outcome": "verified_correct",
+      "proof_kind": "contextual_comparison",
+      "evidence_word_ids": [
+        "o090150320061",
+        "o090150320111",
+        "o090150320141",
+        "o090150330141"
+      ],
+      "key_verses_reviewed": [
+        "09015032",
+        "09015033"
+      ],
+      "claim": "1 Samuel 15:32-33 names the individual King Agag, not an Agagite population; Esther supplies the group's explicit Agagite witnesses.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "target_key_verses": [
+        "09015032",
+        "09015033"
+      ]
+    },
+    {
+      "source_id": "group:Amalek",
+      "outcome": "verified_correct",
+      "proof_kind": "contextual_comparison",
+      "evidence_word_ids": [
+        "o010360120101"
+      ],
+      "key_verses_reviewed": [
+        "01036012"
+      ],
+      "claim": "Genesis 36:12 lists Amalek as a named genealogical descendant, not a lexical reference to the Amalekite population.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "target_key_verses": [
+        "01036012"
+      ]
+    },
+    {
+      "source_id": "group:Amorites",
+      "outcome": "corrected",
+      "proof_kind": "reversible_edit",
+      "evidence_word_ids": [
+        "o130010140042"
+      ],
+      "key_verses_reviewed": [
+        "13001013"
+      ],
+      "claim": "1 Chronicles 1:13 names Canaan, Sidon, Heth, not Amorites; 1 Chronicles 1:14 contains the directly attested Amorite term already indexed. Remove the adjacent wrong key.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "required_action": "remove_misnumbered_amorite_key_from_prior_genealogy_verse",
+      "target_key_verses": [
+        "13001013"
+      ]
+    },
+    {
+      "source_id": "group:Arabia",
+      "outcome": "verified_correct",
+      "proof_kind": "contextual_comparison",
+      "evidence_word_ids": [
+        "o230210130022",
+        "n48001017013"
+      ],
+      "key_verses_reviewed": [
+        "23021013",
+        "48001017"
+      ],
+      "claim": "Isaiah 21:13 and Galatians 1:17 mention geographical Arabia, not the ethnonym of Arabian people. Retain the group-related historical context without promoting any geographical-name word.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "target_key_verses": [
+        "23021013",
+        "48001017"
+      ]
+    },
+    {
+      "source_id": "group:Aramean",
+      "outcome": "verified_correct",
+      "proof_kind": "contextual_comparison",
+      "evidence_word_ids": [
+        "o070030080101",
+        "o070030080111"
+      ],
+      "key_verses_reviewed": [
+        "07003008"
+      ],
+      "claim": "Judges 3:8 names the country Aram-Naharaim and its king, not the distinct Aramean people-name lexeme; the key is contextual.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "target_key_verses": [
+        "07003008"
+      ]
+    },
+    {
+      "source_id": "group:Bethlehem",
+      "outcome": "corrected",
+      "proof_kind": "reversible_edit",
+      "evidence_word_ids": [
+        "o150020210011",
+        "o150020210021",
+        "o150020210031"
+      ],
+      "key_verses_reviewed": [
+        "15002021"
+      ],
+      "required_action": "restore_direct_complete_bethlehem_returnee_community_phrase",
+      "claim": "The pinned original-language words (o150020210011, o150020210021, o150020210031) support a real source-data correction to group:Bethlehem. The record's restore_direct_complete_bethlehem_returnee_community_phrase receipt preserves all old values, exact replacement values, case-specific original-text evidence and editorial reasoning.",
+      "review_origin": "PR_139_independent_source_corroboration",
+      "target_key_verses": [
+        "15002021"
+      ]
+    },
+    {
+      "source_id": "group:Canaan",
+      "outcome": "verified_correct",
+      "proof_kind": "contextual_comparison",
+      "evidence_word_ids": [
+        "o010100150012"
+      ],
+      "key_verses_reviewed": [
+        "01010015"
+      ],
+      "claim": "Genesis 10:15 identifies the eponymous father Canaan; his later people, Canaanites, are a different type of entity. This is an explicitly reviewed contextual identity/ancestry or narrative evidence claim, not an asserted direct name-word attestation in that key verse.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "target_key_verses": [
+        "01010015"
+      ]
+    },
+    {
+      "source_id": "group:Cush",
+      "outcome": "verified_correct",
+      "proof_kind": "contextual_comparison",
+      "evidence_word_ids": [
+        "o010020130101"
+      ],
+      "key_verses_reviewed": [
+        "01002013"
+      ],
+      "claim": "Genesis 2:13 names the geographic land of Cush, source region of the Cushite people group. Its contextual people key is valid without claiming the individual inhabitants are written by name.",
+      "review_origin": "PR_139_independent_source_corroboration",
+      "target_key_verses": [
+        "01002013"
+      ]
+    },
+    {
+      "source_id": "group:Dan",
+      "outcome": "verified_correct",
+      "proof_kind": "contextual_comparison",
+      "evidence_word_ids": [
+        "o010300060151"
+      ],
+      "key_verses_reviewed": [
+        "01030006"
+      ],
+      "claim": "Genesis 30:6 names Leah/Rachel's family member Dan, not the later Danite tribe. This is an explicitly reviewed contextual identity/ancestry or narrative evidence claim, not an asserted direct name-word attestation in that key verse.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "target_key_verses": [
+        "01030006"
+      ]
+    },
+    {
+      "source_id": "group:Egypt",
+      "outcome": "verified_correct",
+      "proof_kind": "contextual_comparison",
+      "evidence_word_ids": [
+        "o010100060042"
+      ],
+      "key_verses_reviewed": [
+        "01010006"
+      ],
+      "claim": "Genesis 10:6 explicitly names Mizraim, the historical genealogical eponym of Egypt. This supports ancestry context for the Egyptians without falsely asserting the word Egyptian occurs.",
+      "review_origin": "PR_139_independent_source_corroboration",
+      "target_key_verses": [
+        "01010006"
+      ]
+    },
+    {
+      "source_id": "group:Elam",
+      "outcome": "verified_correct",
+      "proof_kind": "contextual_comparison",
+      "evidence_word_ids": [
+        "o010100220031"
+      ],
+      "key_verses_reviewed": [
+        "01010022"
+      ],
+      "claim": "Genesis 10:22 names Elam among Shem's sons, not the later Elamite people group. This is an explicitly reviewed contextual identity/ancestry or narrative evidence claim, not an asserted direct name-word attestation in that key verse.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "target_key_verses": [
+        "01010022"
+      ]
+    },
+    {
+      "source_id": "group:Gershon",
+      "outcome": "verified_correct",
+      "proof_kind": "contextual_comparison",
+      "evidence_word_ids": [
+        "o010460110031"
+      ],
+      "key_verses_reviewed": [
+        "01046011"
+      ],
+      "claim": "Genesis 46:11 refers to Gershon as an individual son of Levi. The Gershonite lineage has separate directly attested group witnesses. This is an explicitly reviewed contextual identity/ancestry or narrative evidence claim, not an asserted direct name-word attestation in that key verse.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "target_key_verses": [
+        "01046011"
+      ]
+    },
+    {
+      "source_id": "group:Gibeon",
+      "outcome": "verified_correct",
+      "proof_kind": "contextual_comparison",
+      "evidence_word_ids": [
+        "o060090030021"
+      ],
+      "key_verses_reviewed": [
+        "06009003"
+      ],
+      "claim": "Joshua 9:3 calls the people inhabitants of Gibeon; verse 9:4 follows immediately with their actions through a pronoun. The verse key is contextual and does not need an invented Gibeon source token.",
+      "review_origin": "PR_139_independent_source_corroboration",
+      "target_key_verses": [
+        "06009004"
+      ]
+    },
+    {
+      "source_id": "group:Gilead",
+      "outcome": "corrected",
+      "proof_kind": "reversible_edit",
+      "evidence_word_ids": [
+        "o070100030042"
+      ],
+      "key_verses_reviewed": [
+        "07010003"
+      ],
+      "required_action": "correct_invalid_or_offset_tribal_key_from_original_words",
+      "claim": "The pinned original-language words (o070100030042) support a real source-data correction to group:Gilead. The record's correct_invalid_or_offset_tribal_key_from_original_words receipt preserves all old values, exact replacement values, case-specific original-text evidence and editorial reasoning.",
+      "review_origin": "PR_139_independent_source_corroboration",
+      "target_key_verses": [
+        "07010003"
+      ]
+    },
+    {
+      "source_id": "group:Hebron",
+      "outcome": "corrected",
+      "proof_kind": "reversible_edit",
+      "evidence_word_ids": [
+        "o040260580072"
+      ],
+      "key_verses_reviewed": [
+        "04026058"
+      ],
+      "required_action": "correct_nonexistent_hebron_key_to_pinned_original_verse",
+      "claim": "The pinned original-language words (o040260580072) support a real source-data correction to group:Hebron. The record's correct_nonexistent_hebron_key_to_pinned_original_verse receipt preserves all old values, exact replacement values, case-specific original-text evidence and editorial reasoning.",
+      "review_origin": "PR_139_independent_source_corroboration",
+      "target_key_verses": [
+        "04026058"
+      ]
+    },
+    {
+      "source_id": "group:Hivites",
+      "outcome": "verified_correct",
+      "proof_kind": "contextual_comparison",
+      "evidence_word_ids": [
+        "o110090200082"
+      ],
+      "key_verses_reviewed": [
+        "11009020"
+      ],
+      "claim": "1 Kings 9:20 lists the Hivites by Hebrew ethnonym, and 9:21 continues with descendants of those named surviving peoples. The latter is an accurate contextual rather than a separately spelled Hivite occurrence.",
+      "review_origin": "PR_139_independent_source_corroboration",
+      "target_key_verses": [
+        "11009021"
+      ]
+    },
+    {
+      "source_id": "group:Issachar",
+      "outcome": "corrected",
+      "proof_kind": "reversible_edit",
+      "evidence_word_ids": [
+        "o130120330021"
+      ],
+      "key_verses_reviewed": [
+        "13012033"
+      ],
+      "required_action": "correct_invalid_or_offset_tribal_key_from_original_words",
+      "claim": "The pinned original-language words (o130120330021) support a real source-data correction to group:Issachar. The record's correct_invalid_or_offset_tribal_key_from_original_words receipt preserves all old values, exact replacement values, case-specific original-text evidence and editorial reasoning.",
+      "review_origin": "PR_139_independent_source_corroboration",
+      "target_key_verses": [
+        "13012033"
+      ]
+    },
+    {
+      "source_id": "group:Kohath",
+      "outcome": "verified_correct",
+      "proof_kind": "contextual_comparison",
+      "evidence_word_ids": [
+        "o010460110041",
+        "o020060180021",
+        "o020060180091"
+      ],
+      "key_verses_reviewed": [
+        "01046011",
+        "02006018"
+      ],
+      "claim": "Genesis 46:11 and Exodus 6:18 name the ancestor Kohath; these verses are genealogical context for Kohathites, not identical collective mentions.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "target_key_verses": [
+        "01046011",
+        "02006018"
+      ]
+    },
+    {
+      "source_id": "group:Korah",
+      "outcome": "verified_correct",
+      "proof_kind": "contextual_comparison",
+      "evidence_word_ids": [
+        "o020060210031"
+      ],
+      "key_verses_reviewed": [
+        "02006021"
+      ],
+      "claim": "Exodus 6:21 names the individual Korah in genealogy, not the Korahite group.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "target_key_verses": [
+        "02006021"
+      ]
+    },
+    {
+      "source_id": "group:Laodicea",
+      "outcome": "verified_correct",
+      "proof_kind": "contextual_comparison",
+      "evidence_word_ids": [
+        "n66003014006"
+      ],
+      "key_verses_reviewed": [
+        "66003014"
+      ],
+      "claim": "Revelation 3:14 names the church in Laodicea; 3:15 immediately continues speaking to that church in the second person. Its key is a source-specified contextual verse, not a missing direct name.",
+      "review_origin": "PR_139_independent_source_corroboration",
+      "target_key_verses": [
+        "66003015"
+      ]
+    },
+    {
+      "source_id": "group:Levi",
+      "outcome": "verified_correct",
+      "proof_kind": "contextual_comparison",
+      "evidence_word_ids": [
+        "o010290340201"
+      ],
+      "key_verses_reviewed": [
+        "01029034"
+      ],
+      "claim": "Genesis 29:34 names the individual Levi, not the later Levitical group. This is an explicitly reviewed contextual identity/ancestry or narrative evidence claim, not an asserted direct name-word attestation in that key verse.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "target_key_verses": [
+        "01029034"
+      ]
+    },
+    {
+      "source_id": "group:Mede",
+      "outcome": "corrected",
+      "proof_kind": "reversible_edit",
+      "evidence_word_ids": [
+        "o010100020052",
+        "n44002009003"
+      ],
+      "key_verses_reviewed": [
+        "01010002",
+        "44002009"
+      ],
+      "required_action": "reassign_medes_origin_to_madai_not_medan",
+      "claim": "The pinned original-language words (o010100020052, n44002009003) support a real source-data correction to group:Mede. The record's reassign_medes_origin_to_madai_not_medan receipt preserves all old values, exact replacement values, case-specific original-text evidence and editorial reasoning.",
+      "review_origin": "PR_139_independent_source_corroboration",
+      "target_key_verses": [
+        "27005031",
+        "12017006"
+      ]
+    },
+    {
+      "source_id": "group:Naphtali",
+      "outcome": "verified_correct",
+      "proof_kind": "contextual_comparison",
+      "evidence_word_ids": [
+        "o010300080121"
+      ],
+      "key_verses_reviewed": [
+        "01030008"
+      ],
+      "claim": "Genesis 30:8 names the child Naphtali, not his later tribal descendants. This is an explicitly reviewed contextual identity/ancestry or narrative evidence claim, not an asserted direct name-word attestation in that key verse.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "target_key_verses": [
+        "01030008"
+      ]
+    },
+    {
+      "source_id": "group:Pharisee",
+      "outcome": "verified_correct",
+      "proof_kind": "pinned_existing_indirect",
+      "evidence_word_ids": [
+        "n41007004006"
+      ],
+      "key_verses_reviewed": [
+        "41007004"
+      ],
+      "claim": "Mark 7:4 continues the discussion of Pharisaic washing practices begun in 7:3. Existing Greek grammatical-subject links are indirect group evidence, not newly named Pharisees.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "target_key_verses": [
+        "41007004"
+      ]
+    },
+    {
+      "source_id": "group:Philistine",
+      "outcome": "verified_correct",
+      "proof_kind": "contextual_comparison",
+      "evidence_word_ids": [
+        "o010100140081"
+      ],
+      "key_verses_reviewed": [
+        "01010014"
+      ],
+      "claim": "Genesis 10:13 gives the Egyptian-descendant genealogy; the next verse 10:14 explicitly says Philistines arose from these peoples. The inherited preceding verse is valid genealogical context, never a direct Philistine name.",
+      "review_origin": "PR_139_independent_source_corroboration",
+      "target_key_verses": [
+        "01010013"
+      ]
+    },
+    {
+      "source_id": "group:Samaritan",
+      "outcome": "verified_correct",
+      "proof_kind": "contextual_comparison",
+      "evidence_word_ids": [
+        "n42009052012"
+      ],
+      "key_verses_reviewed": [
+        "42009052"
+      ],
+      "claim": "Luke 9:52 names a Samaritan village and 9:53 describes the villagers' refusal to receive Jesus. The adjacent-verse original demonym supports the inherited Samaritan group context.",
+      "review_origin": "PR_139_independent_source_corroboration",
+      "target_key_verses": [
+        "42009053"
+      ]
+    },
+    {
+      "source_id": "group:Shuhites",
+      "outcome": "verified_correct",
+      "proof_kind": "contextual_comparison",
+      "evidence_word_ids": [
+        "o130010320122"
+      ],
+      "key_verses_reviewed": [
+        "13001032"
+      ],
+      "claim": "1 Chronicles 1:32 names Shuah son of Abraham and Keturah; the record's Shuhite people trace ancestry to this named figure, with direct gentilic tokens elsewhere in the book of Job. This is an explicitly reviewed contextual identity/ancestry or narrative evidence claim, not an asserted direct name-word attestation in that key verse.",
+      "review_origin": "PR_139_independent_source_corroboration",
+      "target_key_verses": [
+        "13001032"
+      ]
+    },
+    {
+      "source_id": "group:Sidon",
+      "outcome": "verified_correct",
+      "proof_kind": "contextual_comparison",
+      "evidence_word_ids": [
+        "o010100150041",
+        "o010100190042"
+      ],
+      "key_verses_reviewed": [
+        "01010015",
+        "01010019"
+      ],
+      "claim": "Genesis 10:15 has an eponymous son named Sidon, and Genesis 10:19 uses the city as a boundary; neither is by itself an original-word claim for Sidonian people. This is an explicitly reviewed contextual identity/ancestry or narrative evidence claim, not an asserted direct name-word attestation in that key verse.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "target_key_verses": [
+        "01010015",
+        "01010019"
+      ]
+    },
+    {
+      "source_id": "group:Simeon",
+      "outcome": "verified_correct",
+      "proof_kind": "contextual_comparison",
+      "evidence_word_ids": [
+        "o010290330191"
+      ],
+      "key_verses_reviewed": [
+        "01029033"
+      ],
+      "claim": "Genesis 29:33 names the son Simeon, not the Simeonite people group. Genesis 29:33 is therefore contextual ancestry for the later Simeonite people, which are named directly elsewhere in the inherited index.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "target_key_verses": [
+        "01029033"
+      ]
+    },
+    {
+      "source_id": "group:Syria",
+      "outcome": "verified_correct",
+      "proof_kind": "contextual_comparison",
+      "evidence_word_ids": [
+        "o010100220072"
+      ],
+      "key_verses_reviewed": [
+        "01010022"
+      ],
+      "claim": "Genesis 10:22 names Aram son of Shem. This provides genealogical ancestry context for the Arameans/Syrians, not a false direct Syrian ethnicity word in the verse.",
+      "review_origin": "PR_139_independent_source_corroboration",
+      "target_key_verses": [
+        "01010022"
+      ]
+    },
+    {
+      "source_id": "person:Abimelech.2",
+      "outcome": "verified_correct",
+      "proof_kind": "pinned_existing_indirect",
+      "evidence_word_ids": [
+        "o070090020261"
+      ],
+      "key_verses_reviewed": [
+        "07009002"
+      ],
+      "claim": "Judges 9:2 describes Abimelech's appeal to the Shechemites through indirect person-reference grammar; the named man is distinguished from other Abimelechs.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "target_key_verses": [
+        "07009002"
+      ]
+    },
+    {
+      "source_id": "person:Abraham",
+      "outcome": "verified_correct",
+      "proof_kind": "pinned_existing_indirect",
+      "evidence_word_ids": [
+        "o010170040052"
+      ],
+      "key_verses_reviewed": [
+        "01017004"
+      ],
+      "claim": "Genesis 17:4 uses second-person direct address to Abram/Abraham (subject-referent WLC o010170040052) but does not spell the new personal name Abraham until 17:5.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "target_key_verses": [
+        "01017004"
+      ]
+    },
+    {
+      "source_id": "person:Abram",
+      "outcome": "verified_correct",
+      "proof_kind": "pinned_existing_indirect",
+      "evidence_word_ids": [
+        "o010170040052"
+      ],
+      "key_verses_reviewed": [
+        "01017004"
+      ],
+      "claim": "Genesis 17:4 addresses Abram with the divine covenant before his renaming in verse 5; original subject link is context, not a new proper name token.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "target_key_verses": [
+        "01017004"
+      ]
+    },
+    {
+      "source_id": "person:Achan",
+      "outcome": "verified_correct",
+      "proof_kind": "pinned_existing_indirect",
+      "evidence_word_ids": [
+        "o060070210022"
+      ],
+      "key_verses_reviewed": [
+        "06007021"
+      ],
+      "claim": "Joshua 7:21 describes Achan's theft by first-person confession (subject WLC o060070210022); the contextual key is indirect and must not become an invented name token.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "target_key_verses": [
+        "06007021"
+      ]
+    },
+    {
+      "source_id": "person:Ahab",
+      "outcome": "verified_correct",
+      "proof_kind": "pinned_existing_indirect",
+      "evidence_word_ids": [
+        "o110160310082"
+      ],
+      "key_verses_reviewed": [
+        "11016031"
+      ],
+      "claim": "1 Kings 16:31 continues Ahab's reign and marriage narrative using grammatical reference to the preceding named king.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "target_key_verses": [
+        "11016031"
+      ]
+    },
+    {
+      "source_id": "person:Ahaziah.2",
+      "outcome": "verified_correct",
+      "proof_kind": "pinned_existing_indirect",
+      "evidence_word_ids": [
+        "o120080270151"
+      ],
+      "key_verses_reviewed": [
+        "12008027"
+      ],
+      "claim": "2 Kings 8:27 characterizes King Ahaziah through the house of Ahab; the original pronominal source evidence is separate from a name word.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "target_key_verses": [
+        "12008027"
+      ]
+    },
+    {
+      "source_id": "person:Ahikam",
+      "outcome": "verified_correct",
+      "proof_kind": "pinned_existing_indirect",
+      "evidence_word_ids": [
+        "o120220130011"
+      ],
+      "key_verses_reviewed": [
+        "12022013"
+      ],
+      "claim": "2 Kings 22:13 carries the king's charge to the named delegation including Ahikam; grammatical subject evidence is not the same as an explicit Ahikam name.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "target_key_verses": [
+        "12022013"
+      ]
+    },
+    {
+      "source_id": "person:Artaxerxes",
+      "outcome": "corrected",
+      "proof_kind": "reversible_edit",
+      "evidence_word_ids": [
+        "o150040070021",
+        "o150040070121"
+      ],
+      "key_verses_reviewed": [
+        "15004007"
+      ],
+      "claim": "Ezra 4:7 explicitly names the Persian king Artaxerxes twice; exact WLC token IDs were added with a reversible change receipt.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "required_action": "restore_verified_direct_original_word_after_identity_corroboration",
+      "target_key_verses": [
+        "15004007"
+      ]
+    },
+    {
+      "source_id": "person:Asa",
+      "outcome": "verified_correct",
+      "proof_kind": "pinned_existing_indirect",
+      "evidence_word_ids": [
+        "o110150100041"
+      ],
+      "key_verses_reviewed": [
+        "11015010"
+      ],
+      "claim": "1 Kings 15:10 gives Asa's reign duration and maternal lineage without treating this subject link as a newly written name.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "target_key_verses": [
+        "11015010"
+      ]
+    },
+    {
+      "source_id": "person:Balak",
+      "outcome": "verified_correct",
+      "proof_kind": "pinned_existing_indirect",
+      "evidence_word_ids": [
+        "o040220050012"
+      ],
+      "key_verses_reviewed": [
+        "04022005"
+      ],
+      "claim": "Numbers 22:5 narrates Balak sending to Balaam after Balak was identified in the preceding context; retain indirect subject semantics.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "target_key_verses": [
+        "04022005"
+      ]
+    },
+    {
+      "source_id": "person:Barabbas",
+      "outcome": "verified_correct",
+      "proof_kind": "pinned_existing_indirect",
+      "evidence_word_ids": [
+        "n42023019001"
+      ],
+      "key_verses_reviewed": [
+        "42023019"
+      ],
+      "claim": "Luke 23:19 begins with a relative pronoun referring to Barabbas (SBLGNT n42023019001), whose proper name is in verse 18, not an actual Greek name word in 23:19.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "target_key_verses": [
+        "42023019"
+      ]
+    },
+    {
+      "source_id": "person:Bartholomew",
+      "outcome": "verified_correct",
+      "proof_kind": "pinned_existing_indirect",
+      "evidence_word_ids": [
+        "n40010002008"
+      ],
+      "key_verses_reviewed": [
+        "40010002"
+      ],
+      "claim": "Matthew 10:2 begins the roster of twelve; the source's indirect grammatical link for Bartholomew is not a direct name occurrence in verse 2.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "target_key_verses": [
+        "40010002"
+      ]
+    },
+    {
+      "source_id": "person:Bezalel",
+      "outcome": "verified_correct",
+      "proof_kind": "pinned_existing_indirect",
+      "evidence_word_ids": [
+        "o020310040012"
+      ],
+      "key_verses_reviewed": [
+        "02031004"
+      ],
+      "claim": "Exodus 31:4 describes the craftsmanship of Bezalel named in 31:2; the existing subject link is distinct from an explicit personal name.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "target_key_verses": [
+        "02031004"
+      ]
+    },
+    {
+      "source_id": "person:Dishon",
+      "outcome": "corrected",
+      "proof_kind": "reversible_edit",
+      "evidence_word_ids": [
+        "o010360250041",
+        "o130010410031",
+        "o130010410051"
+      ],
+      "key_verses_reviewed": [
+        "01036025",
+        "13001041"
+      ],
+      "claim": "Genesis 36:25 and 1 Chronicles 1:41 refer to the other Dishon, son of Anah, already correctly indexed as person:Dishon.2; the older Dishon, son of Seir, must not inherit those keys.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "required_action": "remove_younger_dishon_keys_from_different_biblical_person",
+      "target_key_verses": [
+        "01036025",
+        "13001041"
+      ]
+    },
+    {
+      "source_id": "person:Elah.2",
+      "outcome": "verified_correct",
+      "proof_kind": "pinned_existing_indirect",
+      "evidence_word_ids": [
+        "o110160090082"
+      ],
+      "key_verses_reviewed": [
+        "11016009"
+      ],
+      "claim": "1 Kings 16:9 describes the assassination of King Elah with pronominal reference; the verse is preserved as indirect rather than a new Elah token.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "target_key_verses": [
+        "11016009"
+      ]
+    },
+    {
+      "source_id": "person:Eliashib.8",
+      "outcome": "corrected",
+      "proof_kind": "reversible_edit",
+      "evidence_word_ids": [
+        "o160130040031",
+        "o160130070071"
+      ],
+      "key_verses_reviewed": [
+        "16013004",
+        "16013007"
+      ],
+      "claim": "Nehemiah 13:4 and 13:7 explicitly name the priest Eliashib with two source original-word IDs, restored to this established priest record.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "required_action": "restore_verified_direct_original_word_after_identity_corroboration",
+      "target_key_verses": [
+        "16013004",
+        "16013007"
+      ]
+    },
+    {
+      "source_id": "person:Ephron.2",
+      "outcome": "verified_correct",
+      "proof_kind": "pinned_existing_indirect",
+      "evidence_word_ids": [
+        "o010230090012"
+      ],
+      "key_verses_reviewed": [
+        "01023009"
+      ],
+      "claim": "Genesis 23:9 carries Abraham's request concerning Ephron's cave, with a grammatical subject/coreference link rather than a newly named Ephron.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "target_key_verses": [
+        "01023009"
+      ]
+    },
+    {
+      "source_id": "person:Esau",
+      "outcome": "verified_correct",
+      "proof_kind": "pinned_existing_indirect",
+      "evidence_word_ids": [
+        "o010250330031"
+      ],
+      "key_verses_reviewed": [
+        "01025033"
+      ],
+      "claim": "Genesis 25:33 continues Esau's oath in the birthright transaction using subjects/verbs; the man named in nearby verses is a separate direct witness.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "target_key_verses": [
+        "01025033"
+      ]
+    },
+    {
+      "source_id": "person:Ethan",
+      "outcome": "verified_correct",
+      "proof_kind": "pinned_existing_indirect",
+      "evidence_word_ids": [
+        "o190890020041"
+      ],
+      "key_verses_reviewed": [
+        "19089002"
+      ],
+      "claim": "Psalm 89:2 continues the hymn associated with Ethan in the superscription; the voice/subject link is indirect and must not force a proper-name occurrence.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "target_key_verses": [
+        "19089002"
+      ]
+    },
+    {
+      "source_id": "person:Gehazi",
+      "outcome": "verified_correct",
+      "proof_kind": "pinned_existing_indirect",
+      "evidence_word_ids": [
+        "o120050220012"
+      ],
+      "key_verses_reviewed": [
+        "12005022"
+      ],
+      "claim": "2 Kings 5:22 continues Gehazi's speech to Naaman after the servant is identified in the context; source subject link is not a name token.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "target_key_verses": [
+        "12005022"
+      ]
+    },
+    {
+      "source_id": "person:Gideon",
+      "outcome": "verified_correct",
+      "proof_kind": "pinned_existing_indirect",
+      "evidence_word_ids": [
+        "o070080310092"
+      ],
+      "key_verses_reviewed": [
+        "07008031"
+      ],
+      "claim": "Judges 8:31 describes Gideon's concubine and Abimelech using source-annotated grammatical reference rather than a written Gideon name.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "target_key_verses": [
+        "07008031"
+      ]
+    },
+    {
+      "source_id": "person:Haman",
+      "outcome": "verified_correct",
+      "proof_kind": "pinned_existing_indirect",
+      "evidence_word_ids": [
+        "o170030090111"
+      ],
+      "key_verses_reviewed": [
+        "17003009"
+      ],
+      "claim": "Esther 3:9 continues Haman's proposal to the king after he was named; grammar marks Haman as actor without re-naming him.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "target_key_verses": [
+        "17003009"
+      ]
+    },
+    {
+      "source_id": "person:Hassenaah",
+      "outcome": "corrected",
+      "proof_kind": "reversible_edit",
+      "evidence_word_ids": [
+        "o130090070102"
+      ],
+      "key_verses_reviewed": [
+        "13009007"
+      ],
+      "claim": "1 Chronicles 9:7 explicitly names Hassenuah in the Benjaminite genealogy; this is an attested alternate name in the existing Hassenaah record.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "required_action": "restore_verified_direct_original_word_after_identity_corroboration",
+      "target_key_verses": [
+        "13009007"
+      ]
+    },
+    {
+      "source_id": "person:Hazael",
+      "outcome": "verified_correct",
+      "proof_kind": "pinned_existing_indirect",
+      "evidence_word_ids": [
+        "o120080140012"
+      ],
+      "key_verses_reviewed": [
+        "12008014"
+      ],
+      "claim": "2 Kings 8:14 continues Hazael's departure and report to Ben-Hadad after the named encounter with Elisha.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "target_key_verses": [
+        "12008014"
+      ]
+    },
+    {
+      "source_id": "person:Heman",
+      "outcome": "verified_correct",
+      "proof_kind": "pinned_existing_indirect",
+      "evidence_word_ids": [
+        "o190880020051"
+      ],
+      "key_verses_reviewed": [
+        "19088002"
+      ],
+      "claim": "Psalm 88:2 continues the lament associated with Heman in its heading; its original subject word is not a Heman name token.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "target_key_verses": [
+        "19088002"
+      ]
+    },
+    {
+      "source_id": "person:Herodias",
+      "outcome": "verified_correct",
+      "proof_kind": "pinned_existing_indirect",
+      "evidence_word_ids": [
+        "n40014004010"
+      ],
+      "key_verses_reviewed": [
+        "40014004"
+      ],
+      "claim": "Matthew 14:4 alludes to Herodias with a pronoun in John's rebuke, following the named Herodias in verse 3.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "target_key_verses": [
+        "40014004"
+      ]
+    },
+    {
+      "source_id": "person:Hoshea",
+      "outcome": "verified_correct",
+      "proof_kind": "pinned_existing_indirect",
+      "evidence_word_ids": [
+        "o120170020012"
+      ],
+      "key_verses_reviewed": [
+        "12017002"
+      ],
+      "claim": "2 Kings 17:2 characterizes Hoshea's reign using subject grammar; the name is established in 17:1.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "target_key_verses": [
+        "12017002"
+      ]
+    },
+    {
+      "source_id": "person:Isaiah",
+      "outcome": "verified_correct",
+      "proof_kind": "pinned_existing_indirect",
+      "evidence_word_ids": [
+        "o230080030012"
+      ],
+      "key_verses_reviewed": [
+        "23008003"
+      ],
+      "claim": "Isaiah 8:3 is narrated by Isaiah in the first person, an existing subject link rather than a written proper name.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "target_key_verses": [
+        "23008003"
+      ]
+    },
+    {
+      "source_id": "person:Ish-bosheth",
+      "outcome": "verified_correct",
+      "proof_kind": "pinned_existing_indirect",
+      "evidence_word_ids": [
+        "o100040070032"
+      ],
+      "key_verses_reviewed": [
+        "10004007"
+      ],
+      "claim": "2 Samuel 4:7 describes Ish-bosheth's murder through pronominal reference, distinct from the explicit royal name elsewhere.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "target_key_verses": [
+        "10004007"
+      ]
+    },
+    {
+      "source_id": "person:Jehoahaz.3",
+      "outcome": "verified_correct",
+      "proof_kind": "pinned_existing_indirect",
+      "evidence_word_ids": [
+        "o120230320012"
+      ],
+      "key_verses_reviewed": [
+        "12023032"
+      ],
+      "claim": "2 Kings 23:32 describes Jehoahaz's evil reign, with the name established in 23:31 and an indirect subject annotation here.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "target_key_verses": [
+        "12023032"
+      ]
+    },
+    {
+      "source_id": "person:Jehoash.2",
+      "outcome": "verified_correct",
+      "proof_kind": "pinned_existing_indirect",
+      "evidence_word_ids": [
+        "o120130110012"
+      ],
+      "key_verses_reviewed": [
+        "12013011"
+      ],
+      "claim": "2 Kings 13:11 reports Joash/Jehoash's conduct through an original grammatical subject after the king is named in 13:10.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "target_key_verses": [
+        "12013011"
+      ]
+    },
+    {
+      "source_id": "person:Jehoshaphat.3",
+      "outcome": "verified_correct",
+      "proof_kind": "pinned_existing_indirect",
+      "evidence_word_ids": [
+        "o110220430012"
+      ],
+      "key_verses_reviewed": [
+        "11022043"
+      ],
+      "claim": "1 Kings 22:43 recounts Jehoshaphat's conduct in the way of his father Asa using a grammatical subject link.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "target_key_verses": [
+        "11022043"
+      ]
+    },
+    {
+      "source_id": "person:Jesus.2",
+      "outcome": "verified_correct",
+      "proof_kind": "contextual_comparison",
+      "evidence_word_ids": [
+        "n40001020007",
+        "n40001022010",
+        "n42001032011"
+      ],
+      "key_verses_reviewed": [
+        "40001020",
+        "40001022",
+        "42001032"
+      ],
+      "claim": "Matthew 1:20,22 and Luke 1:32 use Lord/kyrios for God in nativity announcements; these words must not be presumed direct original-name mentions of Jesus. This is an explicitly reviewed contextual identity/ancestry or narrative evidence claim, not an asserted direct name-word attestation in that key verse.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "target_key_verses": [
+        "40001020",
+        "40001022",
+        "42001032"
+      ]
+    },
+    {
+      "source_id": "person:Joshua.2",
+      "outcome": "verified_correct",
+      "proof_kind": "pinned_existing_indirect",
+      "evidence_word_ids": [
+        "o060010060041"
+      ],
+      "key_verses_reviewed": [
+        "06001006"
+      ],
+      "claim": "Joshua 1:6 commands the already addressed Joshua to be strong and courageous; the source-pronoun anchor is indirect.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "target_key_verses": [
+        "06001006"
+      ]
+    },
+    {
+      "source_id": "person:Medan",
+      "outcome": "corrected",
+      "proof_kind": "reversible_edit",
+      "evidence_word_ids": [
+        "o010250020081",
+        "o130010320092"
+      ],
+      "key_verses_reviewed": [
+        "01025002",
+        "13001032"
+      ],
+      "required_action": "separate_medan_abraham_son_from_medes_people",
+      "claim": "The pinned original-language words (o010250020081, o130010320092) support a real source-data correction to person:Medan. The record's separate_medan_abraham_son_from_medes_people receipt preserves all old values, exact replacement values, case-specific original-text evidence and editorial reasoning.",
+      "review_origin": "PR_139_independent_source_corroboration",
+      "target_key_verses": [
+        "01025002",
+        "13001032"
+      ]
+    },
+    {
+      "source_id": "person:Moses",
+      "outcome": "verified_correct",
+      "proof_kind": "pinned_existing_indirect",
+      "evidence_word_ids": [
+        "o020340100221"
+      ],
+      "key_verses_reviewed": [
+        "02034010"
+      ],
+      "claim": "Exodus 34:10 continues the covenant addressed to Moses without an explicit Moses proper-name token in this verse.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "target_key_verses": [
+        "02034010"
+      ]
+    },
+    {
+      "source_id": "person:Paul",
+      "outcome": "verified_correct",
+      "proof_kind": "pinned_existing_indirect",
+      "evidence_word_ids": [
+        "n44009003006"
+      ],
+      "key_verses_reviewed": [
+        "44009003"
+      ],
+      "claim": "Acts 9:3 uses pronominal reference to the individual later called Paul (SBLGNT n44009003006), while the narrative calls him Saul in adjacent verses.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "target_key_verses": [
+        "44009003"
+      ]
+    },
+    {
+      "source_id": "place:Canaan",
+      "outcome": "verified_correct",
+      "proof_kind": "contextual_comparison",
+      "evidence_word_ids": [
+        "o010100150012"
+      ],
+      "key_verses_reviewed": [
+        "01010015"
+      ],
+      "claim": "Genesis 10:15 speaks of the eponymous ancestor Canaan, distinct from the geographical land directly attested elsewhere. This is an explicitly reviewed contextual identity/ancestry or narrative evidence claim, not an asserted direct name-word attestation in that key verse.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "target_key_verses": [
+        "01010015"
+      ]
+    },
+    {
+      "source_id": "place:CityOfDavid",
+      "outcome": "verified_correct",
+      "proof_kind": "contextual_comparison",
+      "evidence_word_ids": [
+        "o100050060041"
+      ],
+      "key_verses_reviewed": [
+        "10005006"
+      ],
+      "claim": "2 Samuel 5:6 names Jerusalem before the narrative renames David's conquered stronghold; contextual precursor verse is not itself a direct City of David name.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "target_key_verses": [
+        "10005006"
+      ]
+    },
+    {
+      "source_id": "place:Edom",
+      "outcome": "verified_correct",
+      "proof_kind": "contextual_comparison",
+      "evidence_word_ids": [
+        "o010360080021",
+        "o010360080051",
+        "o010360080071"
+      ],
+      "key_verses_reviewed": [
+        "01036008"
+      ],
+      "claim": "Genesis 36:8 names Esau as the individual Edom; the geographical land is a distinct named entity. This is an explicitly reviewed contextual identity/ancestry or narrative evidence claim, not an asserted direct name-word attestation in that key verse.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "target_key_verses": [
+        "01036008"
+      ]
+    },
+    {
+      "source_id": "place:Gederah.2",
+      "outcome": "corrected",
+      "proof_kind": "reversible_edit",
+      "evidence_word_ids": [
+        "o130120050052"
+      ],
+      "key_verses_reviewed": [
+        "13012004",
+        "13012005"
+      ],
+      "claim": "1 Chronicles 12:4 has Ishmaiah the Gibeonite, not Gederah. The adjacent 1 Chronicles 12:5 has Jozabad the Gederathite (WLC o130120050052). Source key was corrected to 12:5 only; a demonym still does not establish a direct Gederah toponym.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "required_action": "correct_gederathite_contextual_key_by_adjacent_original_verse",
+      "target_key_verses": [
+        "13012004",
+        "13012005"
+      ]
+    },
+    {
+      "source_id": "place:Ir-moab",
+      "outcome": "corrected",
+      "proof_kind": "reversible_edit",
+      "evidence_word_ids": [
+        "o040220360091",
+        "o040220360101"
+      ],
+      "key_verses_reviewed": [
+        "04022036"
+      ],
+      "claim": "Numbers 22:36 uses the descriptive geographical expression city of Moab (ir Moab), two original-word tokens restored without inventing a separately named city.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "required_action": "restore_verified_direct_original_word_after_identity_corroboration",
+      "target_key_verses": [
+        "04022036"
+      ]
+    },
+    {
+      "source_id": "place:Media",
+      "outcome": "verified_correct",
+      "proof_kind": "contextual_comparison",
+      "evidence_word_ids": [
+        "o270050280052"
+      ],
+      "key_verses_reviewed": [
+        "27005028"
+      ],
+      "claim": "Daniel 5:28 names the Medes ethnonym in the transfer of kingdoms, not a separate territorial proper name Media. This is an explicitly reviewed contextual identity/ancestry or narrative evidence claim, not an asserted direct name-word attestation in that key verse.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "target_key_verses": [
+        "27005028"
+      ]
+    },
+    {
+      "source_id": "place:TerritoryOfAsher",
+      "outcome": "verified_correct",
+      "proof_kind": "derived_allotment",
+      "evidence_word_ids": [
+        "o060190240061"
+      ],
+      "key_verses_reviewed": [],
+      "claim": "The source-created Territory of Asher is a geographic/index grouping under the inherited place:Israel region, not an independently written single proper toponym in the pinned Hebrew verse corpus. The original ACAI entity has no general verse references, key verses or explicit original-word groups; preserve its structural role without inventing chapter, verse, name token, or polygon evidence. The named tribal allotment is textually supported by Joshua 06019024, but no direct original name of this derived polygon is asserted.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "proof_territory_allotment": "06019024",
+      "target_key_verses": []
+    },
+    {
+      "source_id": "place:TerritoryOfBenjamin",
+      "outcome": "verified_correct",
+      "proof_kind": "derived_allotment",
+      "evidence_word_ids": [
+        "o060180110051"
+      ],
+      "key_verses_reviewed": [],
+      "claim": "The source-created Territory of Benjamin is a geographic/index grouping under the inherited place:Israel region, not an independently written single proper toponym in the pinned Hebrew verse corpus. The original ACAI entity has no general verse references, key verses or explicit original-word groups; preserve its structural role without inventing chapter, verse, name token, or polygon evidence. The named tribal allotment is textually supported by Joshua 06018011, but no direct original name of this derived polygon is asserted.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "proof_territory_allotment": "06018011",
+      "target_key_verses": []
+    },
+    {
+      "source_id": "place:TerritoryOfDan",
+      "outcome": "verified_correct",
+      "proof_kind": "derived_allotment",
+      "evidence_word_ids": [
+        "o060190400031"
+      ],
+      "key_verses_reviewed": [],
+      "claim": "The source-created Territory of Dan is a geographic/index grouping under the inherited place:Israel region, not an independently written single proper toponym in the pinned Hebrew verse corpus. The original ACAI entity has no general verse references, key verses or explicit original-word groups; preserve its structural role without inventing chapter, verse, name token, or polygon evidence. The named tribal allotment is textually supported by Joshua 06019040, but no direct original name of this derived polygon is asserted.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "proof_territory_allotment": "06019040",
+      "target_key_verses": []
+    },
+    {
+      "source_id": "place:TerritoryOfEastManasseh",
+      "outcome": "verified_correct",
+      "proof_kind": "derived_allotment",
+      "evidence_word_ids": [
+        "o060130290051"
+      ],
+      "key_verses_reviewed": [],
+      "claim": "The source-created Territory of eastern half of Manasseh is a geographic/index grouping under the inherited place:Israel region, not an independently written single proper toponym in the pinned Hebrew verse corpus. The original ACAI entity has no general verse references, key verses or explicit original-word groups; preserve its structural role without inventing chapter, verse, name token, or polygon evidence. The named tribal allotment is textually supported by Joshua 06013029, but no direct original name of this derived polygon is asserted.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "proof_territory_allotment": "06013029",
+      "target_key_verses": []
+    },
+    {
+      "source_id": "place:TerritoryOfEphraim",
+      "outcome": "verified_correct",
+      "proof_kind": "derived_allotment",
+      "evidence_word_ids": [
+        "o060160050041"
+      ],
+      "key_verses_reviewed": [],
+      "claim": "The source-created Territory of Ephraim is a geographic/index grouping under the inherited place:Israel region, not an independently written single proper toponym in the pinned Hebrew verse corpus. The original ACAI entity has no general verse references, key verses or explicit original-word groups; preserve its structural role without inventing chapter, verse, name token, or polygon evidence. The named tribal allotment is textually supported by Joshua 06016005, but no direct original name of this derived polygon is asserted.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "proof_territory_allotment": "06016005",
+      "target_key_verses": []
+    },
+    {
+      "source_id": "place:TerritoryOfGad",
+      "outcome": "verified_correct",
+      "proof_kind": "derived_allotment",
+      "evidence_word_ids": [
+        "o060130240041"
+      ],
+      "key_verses_reviewed": [],
+      "claim": "The source-created Territory of Gad is a geographic/index grouping under the inherited place:Israel region, not an independently written single proper toponym in the pinned Hebrew verse corpus. The original ACAI entity has no general verse references, key verses or explicit original-word groups; preserve its structural role without inventing chapter, verse, name token, or polygon evidence. The named tribal allotment is textually supported by Joshua 06013024, but no direct original name of this derived polygon is asserted.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "proof_territory_allotment": "06013024",
+      "target_key_verses": []
+    },
+    {
+      "source_id": "place:TerritoryOfIssachar",
+      "outcome": "verified_correct",
+      "proof_kind": "derived_allotment",
+      "evidence_word_ids": [
+        "o060190170012"
+      ],
+      "key_verses_reviewed": [],
+      "claim": "The source-created Territory of Issachar is a geographic/index grouping under the inherited place:Israel region, not an independently written single proper toponym in the pinned Hebrew verse corpus. The original ACAI entity has no general verse references, key verses or explicit original-word groups; preserve its structural role without inventing chapter, verse, name token, or polygon evidence. The named tribal allotment is textually supported by Joshua 06019017, but no direct original name of this derived polygon is asserted.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "proof_territory_allotment": "06019017",
+      "target_key_verses": []
+    },
+    {
+      "source_id": "place:TerritoryOfJudah",
+      "outcome": "verified_correct",
+      "proof_kind": "derived_allotment",
+      "evidence_word_ids": [
+        "o060150010051"
+      ],
+      "key_verses_reviewed": [],
+      "claim": "The source-created Territory of Judah is a geographic/index grouping under the inherited place:Israel region, not an independently written single proper toponym in the pinned Hebrew verse corpus. The original ACAI entity has no general verse references, key verses or explicit original-word groups; preserve its structural role without inventing chapter, verse, name token, or polygon evidence. The named tribal allotment is textually supported by Joshua 06015001, but no direct original name of this derived polygon is asserted.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "proof_territory_allotment": "06015001",
+      "target_key_verses": []
+    },
+    {
+      "source_id": "place:TerritoryOfNaphtali",
+      "outcome": "verified_correct",
+      "proof_kind": "derived_allotment",
+      "evidence_word_ids": [
+        "o060190320021"
+      ],
+      "key_verses_reviewed": [],
+      "claim": "The source-created Territory of Naphtali is a geographic/index grouping under the inherited place:Israel region, not an independently written single proper toponym in the pinned Hebrew verse corpus. The original ACAI entity has no general verse references, key verses or explicit original-word groups; preserve its structural role without inventing chapter, verse, name token, or polygon evidence. The named tribal allotment is textually supported by Joshua 06019032, but no direct original name of this derived polygon is asserted.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "proof_territory_allotment": "06019032",
+      "target_key_verses": []
+    },
+    {
+      "source_id": "place:TerritoryOfReuben",
+      "outcome": "verified_correct",
+      "proof_kind": "derived_allotment",
+      "evidence_word_ids": [
+        "o060130150051"
+      ],
+      "key_verses_reviewed": [],
+      "claim": "The source-created Territory of Reuben is a geographic/index grouping under the inherited place:Israel region, not an independently written single proper toponym in the pinned Hebrew verse corpus. The original ACAI entity has no general verse references, key verses or explicit original-word groups; preserve its structural role without inventing chapter, verse, name token, or polygon evidence. The named tribal allotment is textually supported by Joshua 06013015, but no direct original name of this derived polygon is asserted.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "proof_territory_allotment": "06013015",
+      "target_key_verses": []
+    },
+    {
+      "source_id": "place:TerritoryOfSimeon",
+      "outcome": "verified_correct",
+      "proof_kind": "derived_allotment",
+      "evidence_word_ids": [
+        "o060190010042"
+      ],
+      "key_verses_reviewed": [],
+      "claim": "The source-created Territory of Simeon is a geographic/index grouping under the inherited place:Israel region, not an independently written single proper toponym in the pinned Hebrew verse corpus. The original ACAI entity has no general verse references, key verses or explicit original-word groups; preserve its structural role without inventing chapter, verse, name token, or polygon evidence. The named tribal allotment is textually supported by Joshua 06019001, but no direct original name of this derived polygon is asserted.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "proof_territory_allotment": "06019001",
+      "target_key_verses": []
+    },
+    {
+      "source_id": "place:TerritoryOfWestManasseh",
+      "outcome": "verified_correct",
+      "proof_kind": "derived_allotment",
+      "evidence_word_ids": [
+        "o060170010041"
+      ],
+      "key_verses_reviewed": [],
+      "claim": "The source-created Territory of western half of Manasseh is a geographic/index grouping under the inherited place:Israel region, not an independently written single proper toponym in the pinned Hebrew verse corpus. The original ACAI entity has no general verse references, key verses or explicit original-word groups; preserve its structural role without inventing chapter, verse, name token, or polygon evidence. The named tribal allotment is textually supported by Joshua 06017001, but no direct original name of this derived polygon is asserted.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "proof_territory_allotment": "06017001",
+      "target_key_verses": []
+    },
+    {
+      "source_id": "place:TerritoryOfZebulun",
+      "outcome": "verified_correct",
+      "proof_kind": "derived_allotment",
+      "evidence_word_ids": [
+        "o060190100051"
+      ],
+      "key_verses_reviewed": [],
+      "claim": "The source-created Territory of Zebulun is a geographic/index grouping under the inherited place:Israel region, not an independently written single proper toponym in the pinned Hebrew verse corpus. The original ACAI entity has no general verse references, key verses or explicit original-word groups; preserve its structural role without inventing chapter, verse, name token, or polygon evidence. The named tribal allotment is textually supported by Joshua 06019010, but no direct original name of this derived polygon is asserted.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "proof_territory_allotment": "06019010",
+      "target_key_verses": []
+    },
+    {
+      "source_id": "realia:AnointingFlask",
+      "outcome": "corrected",
+      "proof_kind": "reversible_edit",
+      "evidence_word_ids": [
+        "o090160130041"
+      ],
+      "key_verses_reviewed": [
+        "09016013"
+      ],
+      "required_action": "restore_direct_source_object_and_correct_invalid_key_if_present",
+      "claim": "The pinned original-language words (o090160130041) support a real source-data correction to realia:AnointingFlask. The record's restore_direct_source_object_and_correct_invalid_key_if_present receipt preserves all old values, exact replacement values, case-specific original-text evidence and editorial reasoning.",
+      "review_origin": "PR_139_independent_source_corroboration",
+      "target_key_verses": [
+        "09016011"
+      ]
+    },
+    {
+      "source_id": "realia:Beam",
+      "outcome": "corrected",
+      "proof_kind": "reversible_edit",
+      "evidence_word_ids": [
+        "o140340110093"
+      ],
+      "key_verses_reviewed": [
+        "14034011"
+      ],
+      "required_action": "restore_direct_source_object_and_correct_invalid_key_if_present",
+      "claim": "The pinned original-language words (o140340110093) support a real source-data correction to realia:Beam. The record's restore_pinned_direct_object_name_in_source_key receipt preserves all old values, exact replacement values, case-specific original-text evidence and editorial reasoning.",
+      "review_origin": "PR_139_independent_source_corroboration",
+      "target_key_verses": [
+        "14034011"
+      ]
+    },
+    {
+      "source_id": "realia:Boat",
+      "outcome": "corrected",
+      "proof_kind": "reversible_edit",
+      "evidence_word_ids": [
+        "o010060140031",
+        "o010060140092",
+        "o010070010092",
+        "o010080040022"
+      ],
+      "key_verses_reviewed": [
+        "01006014",
+        "01007001",
+        "01008004"
+      ],
+      "claim": "Genesis 6:14, 7:1 and 8:4 explicitly name Noah's ark (tebah), which is already included as Ark in the realia Boat scope; four exact source tokens have been added.",
+      "review_origin": "data/source-key-identity-review-115.json",
+      "required_action": "restore_verified_direct_original_word_after_identity_corroboration",
+      "target_key_verses": [
+        "01006014",
+        "01007001",
+        "01008004"
+      ]
+    },
+    {
+      "source_id": "realia:CityWall",
+      "outcome": "corrected",
+      "proof_kind": "reversible_edit",
+      "evidence_word_ids": [
+        "o060060200162",
+        "o160020170181"
+      ],
+      "key_verses_reviewed": [
+        "06006020",
+        "16002017"
+      ],
+      "required_action": "restore_pinned_direct_object_name_in_source_key",
+      "claim": "The pinned original-language words (o060060200162, o160020170181) support a real source-data correction to realia:CityWall. The record's restore_pinned_direct_object_name_in_source_key receipt preserves all old values, exact replacement values, case-specific original-text evidence and editorial reasoning.",
+      "review_origin": "PR_139_independent_source_corroboration",
+      "target_key_verses": [
+        "06006020",
+        "16002017"
+      ]
+    },
+    {
+      "source_id": "realia:Container",
+      "outcome": "corrected",
+      "proof_kind": "reversible_edit",
+      "evidence_word_ids": [
+        "o120040020211"
+      ],
+      "key_verses_reviewed": [
+        "12004002"
+      ],
+      "required_action": "restore_pinned_direct_object_name_in_source_key",
+      "claim": "The pinned original-language words (o120040020211) support a real source-data correction to realia:Container. The record's restore_pinned_direct_object_name_in_source_key receipt preserves all old values, exact replacement values, case-specific original-text evidence and editorial reasoning.",
+      "review_origin": "PR_139_independent_source_corroboration",
+      "target_key_verses": [
+        "12004002"
+      ]
+    },
+    {
+      "source_id": "realia:EmbroideredCloth",
+      "outcome": "corrected",
+      "proof_kind": "reversible_edit",
+      "evidence_word_ids": [
+        "o020260010051",
+        "o020260010141"
+      ],
+      "key_verses_reviewed": [
+        "02026001"
+      ],
+      "required_action": "restore_pinned_direct_object_name_in_source_key",
+      "claim": "The pinned original-language words (o020260010051, o020260010141) support a real source-data correction to realia:EmbroideredCloth. The record's restore_pinned_direct_object_name_in_source_key receipt preserves all old values, exact replacement values, case-specific original-text evidence and editorial reasoning.",
+      "review_origin": "PR_139_independent_source_corroboration",
+      "target_key_verses": [
+        "02026001"
+      ]
+    },
+    {
+      "source_id": "realia:Garland",
+      "outcome": "corrected",
+      "proof_kind": "reversible_edit",
+      "evidence_word_ids": [
+        "n46009025012"
+      ],
+      "key_verses_reviewed": [
+        "46009025"
+      ],
+      "required_action": "restore_pinned_direct_object_name_in_source_key",
+      "claim": "The pinned original-language words (n46009025012) support a real source-data correction to realia:Garland. The record's restore_pinned_direct_object_name_in_source_key receipt preserves all old values, exact replacement values, case-specific original-text evidence and editorial reasoning.",
+      "review_origin": "PR_139_independent_source_corroboration",
+      "target_key_verses": [
+        "46009025"
+      ]
+    },
+    {
+      "source_id": "realia:GoldJewelry",
+      "outcome": "corrected",
+      "proof_kind": "reversible_edit",
+      "evidence_word_ids": [
+        "o010240530031",
+        "o010240530041",
+        "o010240530051",
+        "o010240530061",
+        "o020350220141",
+        "o020350220151",
+        "o040310500081",
+        "o040310500091"
+      ],
+      "key_verses_reviewed": [
+        "01024053",
+        "02035022",
+        "04031050"
+      ],
+      "required_action": "restore_pinned_direct_object_name_in_source_key",
+      "claim": "The pinned original-language words (o010240530031, o010240530041, o010240530051, o010240530061, o020350220141, o020350220151, o040310500081, o040310500091) support a real source-data correction to realia:GoldJewelry. The record's restore_pinned_direct_object_name_in_source_key receipt preserves all old values, exact replacement values, case-specific original-text evidence and editorial reasoning.",
+      "review_origin": "PR_139_independent_source_corroboration",
+      "target_key_verses": [
+        "01024053",
+        "02035022",
+        "04031050"
+      ]
+    },
+    {
+      "source_id": "realia:Hoe",
+      "outcome": "corrected",
+      "proof_kind": "reversible_edit",
+      "evidence_word_ids": [
+        "o090130200101"
+      ],
+      "key_verses_reviewed": [
+        "09013020"
+      ],
+      "required_action": "restore_pinned_direct_object_name_in_source_key",
+      "claim": "The pinned original-language words (o090130200101) support a real source-data correction to realia:Hoe. The record's restore_pinned_direct_object_name_in_source_key receipt preserves all old values, exact replacement values, case-specific original-text evidence and editorial reasoning.",
+      "review_origin": "PR_139_independent_source_corroboration",
+      "target_key_verses": [
+        "09013020"
+      ]
+    },
+    {
+      "source_id": "realia:Key",
+      "outcome": "corrected",
+      "proof_kind": "reversible_edit",
+      "evidence_word_ids": [
+        "n66001018019"
+      ],
+      "key_verses_reviewed": [
+        "66001018"
+      ],
+      "required_action": "restore_pinned_direct_object_name_in_source_key",
+      "claim": "The pinned original-language words (n66001018019) support a real source-data correction to realia:Key. The record's restore_pinned_direct_object_name_in_source_key receipt preserves all old values, exact replacement values, case-specific original-text evidence and editorial reasoning.",
+      "review_origin": "PR_139_independent_source_corroboration",
+      "target_key_verses": [
+        "66001018"
+      ]
+    },
+    {
+      "source_id": "realia:Loincloth",
+      "outcome": "corrected",
+      "proof_kind": "reversible_edit",
+      "evidence_word_ids": [
+        "o010030070131"
+      ],
+      "key_verses_reviewed": [
+        "01003007"
+      ],
+      "required_action": "restore_pinned_direct_object_name_in_source_key",
+      "claim": "The pinned original-language words (o010030070131) support a real source-data correction to realia:Loincloth. The record's restore_pinned_direct_object_name_in_source_key receipt preserves all old values, exact replacement values, case-specific original-text evidence and editorial reasoning.",
+      "review_origin": "PR_139_independent_source_corroboration",
+      "target_key_verses": [
+        "01003007"
+      ]
+    },
+    {
+      "source_id": "realia:Manger",
+      "outcome": "corrected",
+      "proof_kind": "reversible_edit",
+      "evidence_word_ids": [
+        "o180390090071"
+      ],
+      "key_verses_reviewed": [
+        "18039009"
+      ],
+      "required_action": "correct_manger_key_from_animal_birth_to_actual_feed_trough",
+      "claim": "The pinned original-language words (o180390090071) support a real source-data correction to realia:Manger. The record's correct_manger_key_from_animal_birth_to_actual_feed_trough receipt preserves all old values, exact replacement values, case-specific original-text evidence and editorial reasoning.",
+      "review_origin": "PR_139_independent_source_corroboration",
+      "target_key_verses": [
+        "18039009"
+      ]
+    },
+    {
+      "source_id": "realia:Phylactery",
+      "outcome": "verified_correct",
+      "proof_kind": "contextual_comparison",
+      "evidence_word_ids": [
+        "o050060080062",
+        "o050110180152"
+      ],
+      "key_verses_reviewed": [
+        "05006008",
+        "05011018"
+      ],
+      "claim": "Deuteronomy 6:8 and 11:18 command emblems/frontlets between the eyes, the textual antecedent of later phylacteries. The key is accurately ancestral ritual context, not an anachronistic original-word claim of leather boxes.",
+      "review_origin": "PR_139_independent_source_corroboration",
+      "target_key_verses": [
+        "05006008",
+        "05011018"
+      ]
+    },
+    {
+      "source_id": "realia:Plaster",
+      "outcome": "corrected",
+      "proof_kind": "reversible_edit",
+      "evidence_word_ids": [
+        "n40023027010"
+      ],
+      "key_verses_reviewed": [
+        "40023027"
+      ],
+      "required_action": "restore_pinned_direct_object_name_in_source_key",
+      "claim": "The pinned original-language words (n40023027010) support a real source-data correction to realia:Plaster. The record's restore_pinned_direct_object_name_in_source_key receipt preserves all old values, exact replacement values, case-specific original-text evidence and editorial reasoning.",
+      "review_origin": "PR_139_independent_source_corroboration",
+      "target_key_verses": [
+        "40023027"
+      ]
+    },
+    {
+      "source_id": "realia:Quadrans",
+      "outcome": "verified_correct",
+      "proof_kind": "contextual_comparison",
+      "evidence_word_ids": [
+        "n41012042011"
+      ],
+      "key_verses_reviewed": [
+        "41012042"
+      ],
+      "claim": "Mark 12:41 begins the treasury-scene setting; 12:42 explicitly names the widow's two lepta valued as one quadrans. The existing key correctly provides the preceding context.",
+      "review_origin": "PR_139_independent_source_corroboration",
+      "target_key_verses": [
+        "41012041"
+      ]
+    },
+    {
+      "source_id": "realia:SacredPillar",
+      "outcome": "corrected",
+      "proof_kind": "reversible_edit",
+      "evidence_word_ids": [
+        "o010280180121",
+        "o010310450051"
+      ],
+      "key_verses_reviewed": [
+        "01028018",
+        "01031045"
+      ],
+      "required_action": "restore_pinned_direct_object_name_in_source_key",
+      "claim": "The pinned original-language words (o010280180121, o010310450051) support a real source-data correction to realia:SacredPillar. The record's restore_pinned_direct_object_name_in_source_key receipt preserves all old values, exact replacement values, case-specific original-text evidence and editorial reasoning.",
+      "review_origin": "PR_139_independent_source_corroboration",
+      "target_key_verses": [
+        "01028018",
+        "01031045"
+      ]
+    },
+    {
+      "source_id": "realia:Sandal",
+      "outcome": "corrected",
+      "proof_kind": "reversible_edit",
+      "evidence_word_ids": [
+        "o020030050061"
+      ],
+      "key_verses_reviewed": [
+        "02003005"
+      ],
+      "required_action": "restore_pinned_direct_object_name_in_source_key",
+      "claim": "The pinned original-language words (o020030050061) support a real source-data correction to realia:Sandal. The record's restore_pinned_direct_object_name_in_source_key receipt preserves all old values, exact replacement values, case-specific original-text evidence and editorial reasoning.",
+      "review_origin": "PR_139_independent_source_corroboration",
+      "target_key_verses": [
+        "02003005"
+      ]
+    },
+    {
+      "source_id": "realia:Saw",
+      "outcome": "corrected",
+      "proof_kind": "reversible_edit",
+      "evidence_word_ids": [
+        "o100120310072"
+      ],
+      "key_verses_reviewed": [
+        "10012031"
+      ],
+      "required_action": "restore_direct_source_object_and_correct_invalid_key_if_present",
+      "claim": "The pinned original-language words (o100120310072) support a real source-data correction to realia:Saw. The record's restore_direct_source_object_and_correct_invalid_key_if_present receipt preserves all old values, exact replacement values, case-specific original-text evidence and editorial reasoning.",
+      "review_origin": "PR_139_independent_source_corroboration",
+      "target_key_verses": [
+        "10012031"
+      ]
+    },
+    {
+      "source_id": "realia:Siege-works",
+      "outcome": "corrected",
+      "proof_kind": "reversible_edit",
+      "evidence_word_ids": [
+        "o270110150051"
+      ],
+      "key_verses_reviewed": [
+        "27011015"
+      ],
+      "required_action": "restore_pinned_direct_object_name_in_source_key",
+      "claim": "The pinned original-language words (o270110150051) support a real source-data correction to realia:Siege-works. The record's restore_pinned_direct_object_name_in_source_key receipt preserves all old values, exact replacement values, case-specific original-text evidence and editorial reasoning.",
+      "review_origin": "PR_139_independent_source_corroboration",
+      "target_key_verses": [
+        "27011015"
+      ]
+    },
+    {
+      "source_id": "realia:Tassel",
+      "outcome": "corrected",
+      "proof_kind": "reversible_edit",
+      "evidence_word_ids": [
+        "o050220120011"
+      ],
+      "key_verses_reviewed": [
+        "05022012"
+      ],
+      "required_action": "restore_pinned_direct_object_name_in_source_key",
+      "claim": "The pinned original-language words (o050220120011) support a real source-data correction to realia:Tassel. The record's restore_pinned_direct_object_name_in_source_key receipt preserves all old values, exact replacement values, case-specific original-text evidence and editorial reasoning.",
+      "review_origin": "PR_139_independent_source_corroboration",
+      "target_key_verses": [
+        "05022012"
+      ]
+    },
+    {
+      "source_id": "realia:TempleOfAnIdol",
+      "outcome": "corrected",
+      "proof_kind": "reversible_edit",
+      "evidence_word_ids": [
+        "o090050020081",
+        "o090050020091"
+      ],
+      "key_verses_reviewed": [
+        "09005002"
+      ],
+      "required_action": "restore_pinned_direct_object_name_in_source_key",
+      "claim": "The pinned original-language words (o090050020081, o090050020091) support a real source-data correction to realia:TempleOfAnIdol. The record's restore_pinned_direct_object_name_in_source_key receipt preserves all old values, exact replacement values, case-specific original-text evidence and editorial reasoning.",
+      "review_origin": "PR_139_independent_source_corroboration",
+      "target_key_verses": [
+        "09005002"
+      ]
+    },
+    {
+      "source_id": "realia:Two-drachmaPiece",
+      "outcome": "corrected",
+      "proof_kind": "reversible_edit",
+      "evidence_word_ids": [
+        "n40017024009",
+        "n40017024021"
+      ],
+      "key_verses_reviewed": [
+        "40017024"
+      ],
+      "required_action": "remove_denarius_passages_misassigned_to_didrachmon",
+      "claim": "The pinned original-language words (n40017024009, n40017024021) support a real source-data correction to realia:Two-drachmaPiece. The record's remove_denarius_passages_misassigned_to_didrachmon receipt preserves all old values, exact replacement values, case-specific original-text evidence and editorial reasoning.",
+      "review_origin": "PR_139_independent_source_corroboration",
+      "target_key_verses": [
+        "40017024"
+      ]
+    },
+    {
+      "source_id": "realia:Wheel",
+      "outcome": "corrected",
+      "proof_kind": "reversible_edit",
+      "evidence_word_ids": [
+        "o260010190042",
+        "o260010190111"
+      ],
+      "key_verses_reviewed": [
+        "26001019"
+      ],
+      "required_action": "restore_pinned_direct_object_name_in_source_key",
+      "claim": "The pinned original-language words (o260010190042, o260010190111) support a real source-data correction to realia:Wheel. The record's restore_pinned_direct_object_name_in_source_key receipt preserves all old values, exact replacement values, case-specific original-text evidence and editorial reasoning.",
+      "review_origin": "PR_139_independent_source_corroboration",
+      "target_key_verses": [
+        "26001019"
+      ]
+    },
+    {
+      "source_id": "realia:Whip",
+      "outcome": "verified_correct",
+      "proof_kind": "contextual_comparison",
+      "evidence_word_ids": [
+        "n40027026009"
+      ],
+      "key_verses_reviewed": [
+        "40027026"
+      ],
+      "claim": "Matthew 27:26 expressly describes scourging Jesus, the physical act of whipping. The whip entry links this instrument-context; no nonexistent independent Greek whip noun is asserted.",
+      "review_origin": "PR_139_independent_source_corroboration",
+      "target_key_verses": [
+        "40027026"
+      ]
+    }
+  ]
+}

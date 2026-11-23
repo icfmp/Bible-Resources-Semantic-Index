@@ -17,10 +17,141 @@
   },
   "bsi": {
     "canonical_id": "realia:Beam",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "realia:Beam",
     "source_primary_id": "realia:Beam",
-    "source_sha256": "9a6483864840103084b94815e5123cd2922eda9a7a6e261042c937cd330bf7c7"
+    "source_sha256": "9a6483864840103084b94815e5123cd2922eda9a7a6e261042c937cd330bf7c7",
+    "editorial_reason": "Restore exact pinned original-language object name, distinguishing contextual narrative keys from directly written source words and correcting nonexistent verse when proven.",
+    "editorial_evidence": [
+      "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c exact whole-verse Macula WLC",
+      "2 Chronicles 34:11 explicitly names beams (קָרָה) supplied for the repairs of the temple, not merely generic wood/timber; exact source term corroborates the original Beam key verse.",
+      "o140340110093"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "restore_direct_source_object_and_correct_invalid_key_if_present",
+        "reason": "Restore exact pinned original-language object name, distinguishing contextual narrative keys from directly written source words and correcting nonexistent verse when proven.",
+        "evidence": [
+          "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c exact whole-verse Macula WLC",
+          "2 Chronicles 34:11 explicitly names beams (קָרָה) supplied for the repairs of the temple, not merely generic wood/timber; exact source term corroborates the original Beam key verse.",
+          "o140340110093"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [
+              "11006009",
+              "14003007",
+              "22001017",
+              "35002011",
+              "40007003",
+              "40007004",
+              "40007005",
+              "42006041",
+              "42006042"
+            ],
+            "explicit_instances": {
+              "SBLGNT": [
+                [
+                  "n40007003019"
+                ],
+                [
+                  "n40007004018"
+                ],
+                [
+                  "n40007005009"
+                ],
+                [
+                  "n42006041015"
+                ],
+                [
+                  "n42006042023"
+                ],
+                [
+                  "n42006042030"
+                ]
+              ],
+              "wlc": [
+                [
+                  "o350020110052"
+                ],
+                [
+                  "o140030070042"
+                ],
+                [
+                  "o220010170011"
+                ],
+                [
+                  "o110060090092"
+                ]
+              ]
+            },
+            "key_references": [
+              "14034011",
+              "22001017",
+              "40007003"
+            ]
+          },
+          "after": {
+            "references": [
+              "11006009",
+              "14003007",
+              "14034011",
+              "22001017",
+              "35002011",
+              "40007003",
+              "40007004",
+              "40007005",
+              "42006041",
+              "42006042"
+            ],
+            "explicit_instances": {
+              "SBLGNT": [
+                [
+                  "n40007003019"
+                ],
+                [
+                  "n40007004018"
+                ],
+                [
+                  "n40007005009"
+                ],
+                [
+                  "n42006041015"
+                ],
+                [
+                  "n42006042023"
+                ],
+                [
+                  "n42006042030"
+                ]
+              ],
+              "wlc": [
+                [
+                  "o350020110052"
+                ],
+                [
+                  "o140030070042"
+                ],
+                [
+                  "o220010170011"
+                ],
+                [
+                  "o110060090092"
+                ],
+                [
+                  "o140340110093"
+                ]
+              ]
+            },
+            "key_references": [
+              "14034011",
+              "22001017",
+              "40007003"
+            ]
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "SBLGNT": [
@@ -55,6 +186,9 @@
       ],
       [
         "o110060090092"
+      ],
+      [
+        "o140340110093"
       ]
     ]
   },
@@ -92,6 +226,7 @@
   "references": [
     "11006009",
     "14003007",
+    "14034011",
     "22001017",
     "35002011",
     "40007003",

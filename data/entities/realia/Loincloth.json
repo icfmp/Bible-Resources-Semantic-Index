@@ -9,15 +9,65 @@
   },
   "bsi": {
     "canonical_id": "realia:Loincloth",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "realia:Loincloth",
     "source_primary_id": "realia:Loincloth",
-    "source_sha256": "5edde2836b4378e79da73a220b34c785588c64d5c321ae21c910e28b32d6ab07"
+    "source_sha256": "5edde2836b4378e79da73a220b34c785588c64d5c321ae21c910e28b32d6ab07",
+    "editorial_reason": "Restore exact original-language source word witness from the existing source-key object reference, without promoting English gloss analogies or unrelated neighboring words.",
+    "editorial_evidence": [
+      "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c / macula-greek@8423afe47b9e8f24b7772e808af45c7159a6fe7e",
+      "Genesis 3:7 explicitly names fig-leaf loin coverings (חֲגוֹרָה); indexed Loincloth includes waistcloth/girdle, but no later woven fabric is inferred.",
+      "01003007 wlc = o010030070131"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "restore_pinned_direct_object_name_in_source_key",
+        "reason": "Restore exact original-language source word witness from the existing source-key object reference, without promoting English gloss analogies or unrelated neighboring words.",
+        "evidence": [
+          "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c / macula-greek@8423afe47b9e8f24b7772e808af45c7159a6fe7e",
+          "Genesis 3:7 explicitly names fig-leaf loin coverings (חֲגוֹרָה); indexed Loincloth includes waistcloth/girdle, but no later woven fabric is inferred.",
+          "01003007 wlc = o010030070131"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [
+              "18012018"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o180120180051"
+                ]
+              ]
+            }
+          },
+          "after": {
+            "references": [
+              "01003007",
+              "18012018"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o180120180051"
+                ],
+                [
+                  "o010030070131"
+                ]
+              ]
+            }
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
       [
         "o180120180051"
+      ],
+      [
+        "o010030070131"
       ]
     ]
   },
@@ -45,6 +95,7 @@
   "pronominal_referents": {},
   "realia_type": "other",
   "references": [
+    "01003007",
     "18012018"
   ],
   "subject_referents": {},

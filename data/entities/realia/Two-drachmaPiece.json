@@ -9,10 +9,41 @@
   },
   "bsi": {
     "canonical_id": "realia:Two-drachmaPiece",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "realia:Two-drachmaPiece",
     "source_primary_id": "realia:Two-drachmaPiece",
-    "source_sha256": "c35a2b49d17e519c249e99064ec0145e31ae973e160f03ffc9224546118faf5c"
+    "source_sha256": "c35a2b49d17e519c249e99064ec0145e31ae973e160f03ffc9224546118faf5c",
+    "editorial_reason": "Matthew 22:20 and Mark 12:16 mention the inscription and portrait on a denarius supplied in the preceding verses, not the two-drachma temple tax coin. The actual δίδραχμον is directly attested in Matthew 17:24 and already indexed; remove both mixed-denomination contextual keys, preserving all real didrachmon source words.",
+    "editorial_evidence": [
+      "Pinned SBLGNT Matthew 22:20 Greek image/inscription words no δίδραχμον; Matthew 22:19 identifies a δηνάριον (denarius)",
+      "Pinned SBLGNT Mark 12:16 image/inscription of denarius introduced in Mark 12:15",
+      "Pinned SBLGNT Matthew 17:24 n40017024009 and n40017024021 = δίδραχμον, already source-anchored"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "remove_denarius_passages_misassigned_to_didrachmon",
+        "reason": "Matthew 22:20 and Mark 12:16 mention the inscription and portrait on a denarius supplied in the preceding verses, not the two-drachma temple tax coin. The actual δίδραχμον is directly attested in Matthew 17:24 and already indexed; remove both mixed-denomination contextual keys, preserving all real didrachmon source words.",
+        "evidence": [
+          "Pinned SBLGNT Matthew 22:20 Greek image/inscription words no δίδραχμον; Matthew 22:19 identifies a δηνάριον (denarius)",
+          "Pinned SBLGNT Mark 12:16 image/inscription of denarius introduced in Mark 12:15",
+          "Pinned SBLGNT Matthew 17:24 n40017024009 and n40017024021 = δίδραχμον, already source-anchored"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "key_references": [
+              "40017024",
+              "40022020",
+              "41012016"
+            ]
+          },
+          "after": {
+            "key_references": [
+              "40017024"
+            ]
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "SBLGNT": [
@@ -26,9 +57,7 @@
   },
   "id": "realia:Two-drachmaPiece",
   "key_references": [
-    "40017024",
-    "40022020",
-    "41012016"
+    "40017024"
   ],
   "lemmas": {
     "el": [

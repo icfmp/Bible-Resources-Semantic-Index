@@ -9,10 +9,39 @@
   },
   "bsi": {
     "canonical_id": "group:Gilead",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "group:Gilead",
     "source_primary_id": "group:Gilead",
-    "source_sha256": "d4cf963c13881113856234138788cf0d2a5ad2849e77bbcca7a94c096045ea36"
+    "source_sha256": "d4cf963c13881113856234138788cf0d2a5ad2849e77bbcca7a94c096045ea36",
+    "editorial_reason": "Correct a proven invalid or off-by-one inherited source key against an original-word-attested true verse, without changing the original biblical text or edition's own versification.",
+    "editorial_evidence": [
+      "Pinned Macula WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c original-name group already exists at corrected verse",
+      "Judges 10:30 does not exist. The pinned original Judges 10:3 explicitly identifies Jair as the Gileadite (already o070100030042 in the group record), a legitimate contextual identification of people of Gilead."
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "correct_invalid_or_offset_tribal_key_from_original_words",
+        "reason": "Correct a proven invalid or off-by-one inherited source key against an original-word-attested true verse, without changing the original biblical text or edition's own versification.",
+        "evidence": [
+          "Pinned Macula WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c original-name group already exists at corrected verse",
+          "Judges 10:30 does not exist. The pinned original Judges 10:3 explicitly identifies Jair as the Gileadite (already o070100030042 in the group record), a legitimate contextual identification of people of Gilead."
+        ],
+        "replaced_field_values": {
+          "before": {
+            "key_references": [
+              "04026029",
+              "07010030"
+            ]
+          },
+          "after": {
+            "key_references": [
+              "04026029",
+              "07010003"
+            ]
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -56,7 +85,7 @@
   "id": "group:Gilead",
   "key_references": [
     "04026029",
-    "07010030"
+    "07010003"
   ],
   "lemmas": {
     "he": [

@@ -10,62 +10,148 @@
   },
   "bsi": {
     "canonical_id": "person:Medan",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "person:Medan",
     "source_primary_id": "person:Medan",
-    "source_sha256": "4ce01b15a4e4fcc5d3c202e40d0f67492cebf7c7bc83306b0632916fc38e4c12"
+    "source_sha256": "4ce01b15a4e4fcc5d3c202e40d0f67492cebf7c7bc83306b0632916fc38e4c12",
+    "editorial_reason": "Distinguish Abraham and Keturah's son Medan (Genesis 25:2; 1 Chronicles 1:32) from the Medes descended from Madai (Genesis 10:2; 1 Chronicles 1:5). The inherited Medan source record incorrectly absorbed Medes tribal name witnesses from Kings, Esther, Isaiah, Jeremiah, Daniel and Acts; these belong to group:Mede and not an individual Medan. Preserve only genuine Medan words, remove erroneous aliases, keys, and direct verse attestations without erasing group:Mede sources.",
+    "editorial_evidence": [
+      "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c and macula-greek@8423afe47b9e8f24b7772e808af45c7159a6fe7e",
+      "Genesis 25:2 o010250020081 Medan; 1 Chronicles 1:32 o130010320092 Medan",
+      "Genesis 10:2 o010100020052 and 1 Chronicles 1:5 o130010050052 name Madai, son of Japheth",
+      "Acts 2:9 n44002009003 = Medes; Daniel 5:28 o270050280052 = Medes; these are not personal name Medan",
+      "Keep original source SHA and person:Medan source identity"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "separate_medan_abraham_son_from_medes_people",
+        "reason": "Distinguish Abraham and Keturah's son Medan (Genesis 25:2; 1 Chronicles 1:32) from the Medes descended from Madai (Genesis 10:2; 1 Chronicles 1:5). The inherited Medan source record incorrectly absorbed Medes tribal name witnesses from Kings, Esther, Isaiah, Jeremiah, Daniel and Acts; these belong to group:Mede and not an individual Medan. Preserve only genuine Medan words, remove erroneous aliases, keys, and direct verse attestations without erasing group:Mede sources.",
+        "evidence": [
+          "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c and macula-greek@8423afe47b9e8f24b7772e808af45c7159a6fe7e",
+          "Genesis 25:2 o010250020081 Medan; 1 Chronicles 1:32 o130010320092 Medan",
+          "Genesis 10:2 o010100020052 and 1 Chronicles 1:5 o130010050052 name Madai, son of Japheth",
+          "Acts 2:9 n44002009003 = Medes; Daniel 5:28 o270050280052 = Medes; these are not personal name Medan",
+          "Keep original source SHA and person:Medan source identity"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [
+              "01025002",
+              "12017006",
+              "12018011",
+              "13001032",
+              "17001019",
+              "23013017",
+              "24051011",
+              "24051028",
+              "27005028",
+              "27006001",
+              "27006009",
+              "27006013",
+              "27006016",
+              "27009001",
+              "27011001",
+              "44002009"
+            ],
+            "key_references": [
+              "01025001",
+              "01025002",
+              "13001032",
+              "44002009"
+            ],
+            "explicit_instances": {
+              "SBLGNT": [
+                [
+                  "n44002009003"
+                ]
+              ],
+              "wlc": [
+                [
+                  "o010250020081"
+                ],
+                [
+                  "o120170060201"
+                ],
+                [
+                  "o120180110131"
+                ],
+                [
+                  "o130010320092"
+                ],
+                [
+                  "o170010190122"
+                ],
+                [
+                  "o230130170051"
+                ],
+                [
+                  "o240510110101"
+                ],
+                [
+                  "o240510280061"
+                ],
+                [
+                  "o270050280052"
+                ],
+                [
+                  "o270060010021"
+                ],
+                [
+                  "o270060090111"
+                ],
+                [
+                  "o270060130361"
+                ],
+                [
+                  "o270060160132"
+                ],
+                [
+                  "o270090010071"
+                ],
+                [
+                  "o270110010052"
+                ]
+              ]
+            },
+            "alternate_labels": [
+              "Mede",
+              "Median",
+              "Medes"
+            ]
+          },
+          "after": {
+            "references": [
+              "01025002",
+              "13001032"
+            ],
+            "key_references": [
+              "01025001",
+              "01025002",
+              "13001032"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o010250020081"
+                ],
+                [
+                  "o130010320092"
+                ]
+              ]
+            },
+            "alternate_labels": []
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
-    "SBLGNT": [
-      [
-        "n44002009003"
-      ]
-    ],
     "wlc": [
       [
         "o010250020081"
       ],
       [
-        "o120170060201"
-      ],
-      [
-        "o120180110131"
-      ],
-      [
         "o130010320092"
-      ],
-      [
-        "o170010190122"
-      ],
-      [
-        "o230130170051"
-      ],
-      [
-        "o240510110101"
-      ],
-      [
-        "o240510280061"
-      ],
-      [
-        "o270050280052"
-      ],
-      [
-        "o270060010021"
-      ],
-      [
-        "o270060090111"
-      ],
-      [
-        "o270060130361"
-      ],
-      [
-        "o270060160132"
-      ],
-      [
-        "o270090010071"
-      ],
-      [
-        "o270110010052"
       ]
     ]
   },
@@ -75,16 +161,10 @@
   "key_references": [
     "01025001",
     "01025002",
-    "13001032",
-    "44002009"
+    "13001032"
   ],
   "localizations": {
     "eng": {
-      "alternate_labels": [
-        "Mede",
-        "Median",
-        "Medes"
-      ],
       "preferred_label": "Medan"
     }
   },
@@ -101,21 +181,7 @@
   },
   "references": [
     "01025002",
-    "12017006",
-    "12018011",
-    "13001032",
-    "17001019",
-    "23013017",
-    "24051011",
-    "24051028",
-    "27005028",
-    "27006001",
-    "27006009",
-    "27006013",
-    "27006016",
-    "27009001",
-    "27011001",
-    "44002009"
+    "13001032"
   ],
   "referred_to_as": [
     "group:Mede"
