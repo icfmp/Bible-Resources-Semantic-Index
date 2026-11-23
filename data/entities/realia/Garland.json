@@ -12,12 +12,39 @@
     "review_status": "source_unreviewed",
     "source_id": "realia:Garland",
     "source_primary_id": "realia:Garland",
-    "source_sha256": "1bc3e473ff4a5d49e142725aee6bbd4f7b59c11b520d63c82fda8a64d71c2388"
+    "source_sha256": "1bc3e473ff4a5d49e142725aee6bbd4f7b59c11b520d63c82fda8a64d71c2388",
+    "editorial_field_changes": [
+      {
+        "action": "restore_source_attested_object_word_instances",
+        "added_reference_values": {
+          "references": [
+            "20001009"
+          ]
+        },
+        "added_original_word_groups": {
+          "wlc": [
+            [
+              "o200010090021"
+            ]
+          ]
+        },
+        "reason": "Proverbs 1:9 explicitly uses the garland metaphor; original object term preserved without marking as literal garland on the actors.",
+        "evidence": [
+          "ORG BCV8 20001009",
+          "Pinned original-word texts/glosses inspected in Clear-Bible/Macula Hebrew WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c; token IDs copied verbatim; source metadata and scripture unchanged"
+        ]
+      }
+    ]
   },
   "explicit_instances": {
     "SBLGNT": [
       [
         "n44014013013"
+      ]
+    ],
+    "wlc": [
+      [
+        "o200010090021"
       ]
     ]
   },
@@ -46,7 +73,8 @@
   "pronominal_referents": {},
   "realia_type": "other",
   "references": [
-    "44014013"
+    "44014013",
+    "20001009"
   ],
   "subject_referents": {},
   "type": "realia",
