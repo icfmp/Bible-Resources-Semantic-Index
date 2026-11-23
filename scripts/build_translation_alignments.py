@@ -50,7 +50,7 @@ def digest(path: Path, expected: dict):
     if expected.get("sha256") is not None and sha != expected["sha256"]:
         raise ValueError(f"{path}: SHA-256 differs from pinned source")
     # Git blob SHA-1 protects the pinned original bytes until SHA-256 is recorded.
-    git_sha = hashlib.sha1(b"blob " + str(len(raw)).encode() + b"\\0" + raw).hexdigest()
+    git_sha = hashlib.sha1(b"blob " + str(len(raw)).encode() + b"\0" + raw).hexdigest()
     if not SHA1.fullmatch(expected["git_blob_sha"]) or git_sha != expected["git_blob_sha"]:
         raise ValueError(f"{path}: Git blob differs from pinned source")
     return {"sha256": sha, "git_blob_sha": git_sha, "size": len(raw)}
