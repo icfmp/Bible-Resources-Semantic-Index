@@ -26,6 +26,10 @@ class OriginalObjectWordsTest(unittest.TestCase):
                 self.assertTrue(all(w[1:9] in verses for w in words))
                 self.assertTrue(all(x["reason"] and x["evidence"] for x in receipts))
                 self.assertEqual(len(row["bsi"]["source_sha256"]),64)
-                self.assertEqual(row["bsi"]["review_status"],"source_unreviewed")
+                self.assertEqual(row["bsi"]["review_status"],
+                                 "editorially_reviewed" if path == "fauna/Bird" else "source_unreviewed")
+                if path == "fauna/Bird":
+                    self.assertTrue(any(x["action"] == "restore_independently_pinned_exact_direct_mention"
+                                        for x in row["bsi"]["editorial_field_changes"]))
 if __name__=="__main__":
     unittest.main()
