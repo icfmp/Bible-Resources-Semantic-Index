@@ -15,6 +15,8 @@ jobs:
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
+      - name: Verify maintained workflow Python paths
+        run: python3 -I scripts/tool_registry.py --check-workflows
       - name: Entity and workspace regressions
         run: |
           python3 -I -m unittest discover -s tests -p 'test_*.py'
