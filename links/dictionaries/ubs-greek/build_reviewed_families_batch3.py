@@ -7,7 +7,6 @@ meaning. The resulting complete word-ID overlay is a private review artifact.
 from __future__ import annotations
 
 import argparse
-import copy
 import hashlib
 import json
 import runpy
@@ -17,6 +16,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 RESIDUAL = runpy.run_path(str(HERE / "audit_remaining_328.py"))
+INTEGRITY = runpy.run_path(str(HERE / "reviewed_word_integrity.py"))
 OLD = "nfc_canonically_identical_lemma_and_original_ln_unapproved_word_candidate"
 NEW = "source_reviewed_original_greek_headword_batch3_only"
 GRAMMAR = {
@@ -103,24 +103,15 @@ def build(candidate, original_905, batch2, residual, ledger, english, french):
             raise ValueError("Pinned Greek lexical family source POS or headword discrepancy: " + repr(key))
         for word in f["all_original_word_witnesses"]:
             wid = word["word_id"]
-            original = candidate["by_macula_word"].get(wid)
-            if (wid in approved_ids or original is None or original["match_type"] != OLD or
-                original["entry_id"] != mid or
-                original["original_lemma"] != word["original_lemma"] or
-                original["original_strong"] != word["original_strong"] or
-                original["original_ln"] != word["original_ln"] or
-                original["original_reference"] != word["reference"] or
-                original["original_class"] != word["original_class"] or
-                original["original_morph"] != word["original_morph"] or
-                original["corroborating_ubs_ln_codes"] != word["attested_headword_ln_codes"]):
-                raise ValueError("Greek original word-ID source witness drift: " + wid)
+            if wid in approved_ids:
+                raise ValueError("Duplicate original Greek reviewed word ID: " + wid)
+            INTEGRITY["verify_original_word"](
+                candidate["by_macula_word"].get(wid), word, wid, mid, OLD)
             approved_ids.add(wid)
         counts[key[0]] += f["original_word_count"]
     if set(counts) != {x[0] for x in decisions} or len(approved_ids) != 155:
         raise ValueError("Greek batch3 155 original-word source attestations incomplete")
-    out = copy.deepcopy(candidate)
-    for wid in approved_ids:
-        out["by_macula_word"][wid]["match_type"] = NEW
+    out = INTEGRITY["apply_review_status"](candidate, approved_ids, OLD, NEW)
     if Counter(x["match_type"] for x in out["by_macula_word"].values()) != {
         "source_reviewed_original_greek_pronoun_headword_only": 5033,
         "source_reviewed_original_greek_headword_batch2_only": 577,
@@ -128,14 +119,6 @@ def build(candidate, original_905, batch2, residual, ledger, english, french):
         NEW: 155, OLD: 173,
     }:
         raise ValueError("Greek reviewed/unreviewed original-word partition changed")
-    for wid, row in candidate["by_macula_word"].items():
-        old = {k: v for k, v in row.items() if k != "match_type"}
-        new = {k: v for k, v in out["by_macula_word"][wid].items() if k != "match_type"}
-        if old != new or (wid not in approved_ids and row != out["by_macula_word"][wid]):
-            raise ValueError("Greek original lexical annotation or earlier editorial decision mutated")
-    for k in candidate:
-        if k not in ("by_macula_word", "word_aware_coverage", "editorial_candidate") and out[k] != candidate[k]:
-            raise ValueError("Historical UBS Greek bridge mutated: " + k)
     out["editorial_candidate"] = {
         **candidate["editorial_candidate"],
         "status": "PRIVATE_19_Greek_families_headword_review_NOT_PUBLISHED",
