@@ -73,12 +73,20 @@ schema, which retains 1:n, n:1, n:m and unresolved records.
   difference or another data error, and were not corrected by guessing.
   The other 202,677 groups have structurally consistent references but
   **cannot be called fully verified target links**.
-- BRSI's independently pinned Hebrew WLC source audit contains a different
-  original-token count (475,911). These Clear.Bible WLCM IDs must not be
-  silently substituted for BRSI's separately pinned WLC IDs. GitHub upstream
-  [issue #5](https://github.com/Clear-Bible/Alignments/issues/5) also
-  tracks historic WLC identifier compatibility. Source-token identity
-  reconciliation remains a hard downstream consumption gate.
+- **Independent MACULA coordinate audit, verified on pinned sources:** all
+  137,741 Clear.Bible Greek IDs appear exactly in BRSI SBLGNT, with the
+  **104,807 aligned words' Greek lemmas identical after NFC**. All 469,476
+  Clear.Bible WLCM source IDs appear exactly in BRSI WLC, including the
+  **203,597 linked Hebrew IDs**; BRSI WLC additionally includes **6,435
+  suffix-bearing Hebrew IDs**, which remain separately identifiable and are
+  not coerced to numeric originals. Clear.Bible WLCM lacks a lemma column,
+  so its aligned Hebrew original lemmas remain **uncorroborated**.
+  See [independent parity receipts](pivot-audit.lock.json), whose comparison
+  is enforced by pinned CI. ID-coordinate parity does **not** establish
+  identical source texts/editions, guarantee a correct translation or resolve
+  downstream LSG tokenization. GitHub upstream
+  [issue #5](https://github.com/Clear-Bible/Alignments/issues/5) tracks
+  historical WLC source ID compatibility.
 
 **No fabricated alignments, upstream source edits, editorial approvals or
 claims of full-corpus coverage** follow from a clean transformation.
