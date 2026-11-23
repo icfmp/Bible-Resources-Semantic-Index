@@ -15,7 +15,29 @@
     "review_status": "source_unreviewed",
     "source_id": "flora:AppleTree",
     "source_primary_id": "flora:AppleTree",
-    "source_sha256": "9ed042da89465bd3435ac5608e6613ab93cee847a9fc2da33636e0892d6741c9"
+    "source_sha256": "9ed042da89465bd3435ac5608e6613ab93cee847a9fc2da33636e0892d6741c9",
+    "editorial_field_changes": [
+      {
+        "action": "restore_source_attested_apple_tree_word",
+        "added_reference_values": {
+          "references": [
+            "29001012"
+          ]
+        },
+        "added_original_word_groups": {
+          "wlc": [
+            [
+              "o290010120082"
+            ]
+          ]
+        },
+        "reason": "Joel 1:12 explicitly names the fruit tree tappuach in the Hebrew source; this is the exact same source lemma used at other current AppleTree references. Restore its original word and direct reference without assigning an unattested modern species.",
+        "evidence": [
+          "Joel 1:12 WLC o290010120082 'apple tree' lemma תַּפּוּחַ",
+          "Pinned Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c"
+        ]
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -33,6 +55,9 @@
       ],
       [
         "o220080050102"
+      ],
+      [
+        "o290010120082"
       ]
     ]
   },
@@ -65,7 +90,8 @@
     "22002003",
     "22002005",
     "22007009",
-    "22008005"
+    "22008005",
+    "29001012"
   ],
   "subject_referents": {},
   "type": "flora",
