@@ -24,7 +24,29 @@
     "review_status": "source_unreviewed",
     "source_id": "place:Meribah",
     "source_primary_id": "place:Meribah",
-    "source_sha256": "5163dc74a90cb8e246c57c4107a110cd3cfa333d79b6180316e1f6f4ef6cc988"
+    "source_sha256": "5163dc74a90cb8e246c57c4107a110cd3cfa333d79b6180316e1f6f4ef6cc988",
+    "editorial_field_changes": [
+      {
+        "action": "restore_exact_source_named_place_occurrence",
+        "added_reference_values": {
+          "references": [
+            "04020013"
+          ]
+        },
+        "added_original_word_groups": {
+          "wlc": [
+            [
+              "o040200130031"
+            ]
+          ]
+        },
+        "reason": "Numbers 20:13 explicitly names Meribah as the waters-of-contention site; the exact source word is a place name.",
+        "evidence": [
+          "ORG BCV8 04020013",
+          "Exact original-word IDs and source-language names independently identified in Clear-Bible/macula-hebrew/WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c; no extrapolated lexical sense"
+        ]
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -36,6 +58,9 @@
       ],
       [
         "o190950080042"
+      ],
+      [
+        "o040200130031"
       ]
     ]
   },
@@ -88,7 +113,8 @@
   "references": [
     "02017007",
     "05033008",
-    "19095008"
+    "19095008",
+    "04020013"
   ],
   "subject_referents": {},
   "type": "place",
