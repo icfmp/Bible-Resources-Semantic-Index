@@ -13,7 +13,7 @@
   },
   "bsi": {
     "canonical_id": "place:Ramah.4",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:Ramah.4",
     "source_primary_id": "place:Ramah.4",
     "source_sha256": "c444b6f3c53318a688f7846d29e2d7485e7728d9bf19e7d7de6305b15d851980",
@@ -61,7 +61,72 @@
           "Pinned SBLGNT n40002018003",
           "Source key Joshua 18:25 already belongs to Ramah.4"
         ]
+      },
+      {
+        "action": "restore_pinned_direct_mention_from_verified_key",
+        "reason": "Restore direct original-language word mentions explicitly confirmed in the inherited key verses for this distinct source identity. All original keys and other evidence are retained.",
+        "evidence": [
+          "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c and Clear-Bible/macula-greek@8423afe47b9e8f24b7772e808af45c7159a6fe7e pinned TSV, verified against CI source-word candidate inventory in #134",
+          "Judges 4:5 locates Deborah between Ramah and Bethel; the Ramah of Benjamin direct geographic name is attested without claiming another Ramah namesake.",
+          "BCV8 07004005 direct wlc token(s) o070040050072"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [
+              "06018025",
+              "24031015",
+              "40002018"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o060180250023"
+                ],
+                [
+                  "o240310150052"
+                ]
+              ],
+              "SBLGNT": [
+                [
+                  "n40002018003"
+                ]
+              ]
+            }
+          },
+          "after": {
+            "references": [
+              "06018025",
+              "07004005",
+              "24031015",
+              "40002018"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o060180250023"
+                ],
+                [
+                  "o240310150052"
+                ],
+                [
+                  "o070040050072"
+                ]
+              ],
+              "SBLGNT": [
+                [
+                  "n40002018003"
+                ]
+              ]
+            }
+          }
+        }
       }
+    ],
+    "editorial_reason": "Restore direct original-language word mentions explicitly confirmed in the inherited key verses for this distinct source identity. All original keys and other evidence are retained.",
+    "editorial_evidence": [
+      "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c and Clear-Bible/macula-greek@8423afe47b9e8f24b7772e808af45c7159a6fe7e pinned TSV, verified against CI source-word candidate inventory in #134",
+      "Judges 4:5 locates Deborah between Ramah and Bethel; the Ramah of Benjamin direct geographic name is attested without claiming another Ramah namesake.",
+      "BCV8 07004005 direct wlc token(s) o070040050072"
     ]
   },
   "explicit_instances": {
@@ -71,6 +136,9 @@
       ],
       [
         "o240310150052"
+      ],
+      [
+        "o070040050072"
       ]
     ],
     "SBLGNT": [
@@ -126,6 +194,7 @@
   "pronominal_referents": {},
   "references": [
     "06018025",
+    "07004005",
     "24031015",
     "40002018"
   ],
