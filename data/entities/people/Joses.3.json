@@ -15,7 +15,7 @@
   },
   "bsi": {
     "canonical_id": "person:Joseph.5",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "person:Joses.3",
     "source_primary_id": "person:Joseph.5",
     "source_sha256": "b71e760f52dd8a90e09a5b4e6904bfcef348ecffd8b6b5449243c6ccd2d2845b",
@@ -36,13 +36,61 @@
           "Mark 15:40",
           "Mark 16:1"
         ]
+      },
+      {
+        "action": "restore_exact_person_name_witnesses_from_original",
+        "reason": "Restore original-word mentions for the explicitly named person in reviewed source-key verses. The historical source alias/canonical identity is preserved and no similarly named individual is merged.",
+        "evidence": [
+          "Pinned Clear-Bible Macula WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c / SBLGNT@8423afe47b9e8f24b7772e808af45c7159a6fe7e, full original-word source audit and exact ID verification in GitHub Actions",
+          "Matthew 27:56 names Mary the mother of James and Joseph; Mark 15:40 has Mary mother of James and Joses; indexed as the same son by the reviewed canonical person:Joseph.5.",
+          "40027056 SBLGNT: n40027056013"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [
+              "41015040"
+            ],
+            "explicit_instances": {
+              "SBLGNT": [
+                [
+                  "n41015040021"
+                ]
+              ]
+            }
+          },
+          "after": {
+            "references": [
+              "40027056",
+              "41015040"
+            ],
+            "explicit_instances": {
+              "SBLGNT": [
+                [
+                  "n41015040021"
+                ],
+                [
+                  "n40027056013"
+                ]
+              ]
+            }
+          }
+        }
       }
+    ],
+    "editorial_reason": "Restore original-word mentions for the explicitly named person in reviewed source-key verses. The historical source alias/canonical identity is preserved and no similarly named individual is merged.",
+    "editorial_evidence": [
+      "Pinned Clear-Bible Macula WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c / SBLGNT@8423afe47b9e8f24b7772e808af45c7159a6fe7e, full original-word source audit and exact ID verification in GitHub Actions",
+      "Matthew 27:56 names Mary the mother of James and Joseph; Mark 15:40 has Mary mother of James and Joses; indexed as the same son by the reviewed canonical person:Joseph.5.",
+      "40027056 SBLGNT: n40027056013"
     ]
   },
   "explicit_instances": {
     "SBLGNT": [
       [
         "n41015040021"
+      ],
+      [
+        "n40027056013"
       ]
     ]
   },
@@ -73,6 +121,7 @@
   "primary_id": "person:Joseph.5",
   "pronominal_referents": {},
   "references": [
+    "40027056",
     "41015040"
   ],
   "referred_to_as": [

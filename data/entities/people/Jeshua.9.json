@@ -15,10 +15,135 @@
   },
   "bsi": {
     "canonical_id": "person:Joshua.5",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "person:Jeshua.9",
     "source_primary_id": "person:Joshua.5",
-    "source_sha256": "9738fdc2bc34a2e399f9f2847535ff5c1da7a5dbfc4533269724e0a36eac0704"
+    "source_sha256": "9738fdc2bc34a2e399f9f2847535ff5c1da7a5dbfc4533269724e0a36eac0704",
+    "editorial_reason": "Restore original-word mentions for the explicitly named person in reviewed source-key verses. The historical source alias/canonical identity is preserved and no similarly named individual is merged.",
+    "editorial_evidence": [
+      "Pinned Clear-Bible Macula WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c / SBLGNT@8423afe47b9e8f24b7772e808af45c7159a6fe7e, full original-word source audit and exact ID verification in GitHub Actions",
+      "Ezra 10:18 calls him Jeshua son of Jozadak; Haggai 1:1 calls the same high priest Joshua son of Jehozadak; verified same canonical Joshua.5, distinct from unrelated Jeshua namesakes.",
+      "15010018 wlc: o150100180091",
+      "37001001 wlc: o370010010231"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "restore_exact_person_name_witnesses_from_original",
+        "reason": "Restore original-word mentions for the explicitly named person in reviewed source-key verses. The historical source alias/canonical identity is preserved and no similarly named individual is merged.",
+        "evidence": [
+          "Pinned Clear-Bible Macula WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c / SBLGNT@8423afe47b9e8f24b7772e808af45c7159a6fe7e, full original-word source audit and exact ID verification in GitHub Actions",
+          "Ezra 10:18 calls him Jeshua son of Jozadak; Haggai 1:1 calls the same high priest Joshua son of Jehozadak; verified same canonical Joshua.5, distinct from unrelated Jeshua namesakes.",
+          "15010018 wlc: o150100180091",
+          "37001001 wlc: o370010010231"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [
+              "15002002",
+              "15003002",
+              "15003008",
+              "15004003",
+              "15005002",
+              "16007007",
+              "16012001",
+              "16012007",
+              "16012010",
+              "16012026"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o150020020051"
+                ],
+                [
+                  "o150030020021"
+                ],
+                [
+                  "o150030080142"
+                ],
+                [
+                  "o150040030042"
+                ],
+                [
+                  "o150050020062"
+                ],
+                [
+                  "o160070070041"
+                ],
+                [
+                  "o160120010102"
+                ],
+                [
+                  "o160120070101"
+                ],
+                [
+                  "o160120100012"
+                ],
+                [
+                  "o160120260051"
+                ]
+              ]
+            }
+          },
+          "after": {
+            "references": [
+              "15002002",
+              "15003002",
+              "15003008",
+              "15004003",
+              "15005002",
+              "15010018",
+              "16007007",
+              "16012001",
+              "16012007",
+              "16012010",
+              "16012026",
+              "37001001"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o150020020051"
+                ],
+                [
+                  "o150030020021"
+                ],
+                [
+                  "o150030080142"
+                ],
+                [
+                  "o150040030042"
+                ],
+                [
+                  "o150050020062"
+                ],
+                [
+                  "o160070070041"
+                ],
+                [
+                  "o160120010102"
+                ],
+                [
+                  "o160120070101"
+                ],
+                [
+                  "o160120100012"
+                ],
+                [
+                  "o160120260051"
+                ],
+                [
+                  "o150100180091"
+                ],
+                [
+                  "o370010010231"
+                ]
+              ]
+            }
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -51,6 +176,12 @@
       ],
       [
         "o160120260051"
+      ],
+      [
+        "o150100180091"
+      ],
+      [
+        "o370010010231"
       ]
     ]
   },
@@ -98,11 +229,13 @@
     "15003008",
     "15004003",
     "15005002",
+    "15010018",
     "16007007",
     "16012001",
     "16012007",
     "16012010",
-    "16012026"
+    "16012026",
+    "37001001"
   ],
   "referred_to_as": [
     "person:Joshua.5"

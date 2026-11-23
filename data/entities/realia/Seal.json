@@ -20,7 +20,7 @@
   },
   "bsi": {
     "canonical_id": "realia:Seal",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "realia:Seal",
     "source_primary_id": "realia:Seal",
     "source_sha256": "2b3859361448e1ee99ad5a129e868ea8ce1594a6ee9aa440eb3eeb6a81393c7f",
@@ -44,7 +44,216 @@
           "ORG BCV8 01038018",
           "Pinned original-word texts/glosses inspected in Clear-Bible/Macula Hebrew WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c; token IDs copied verbatim; source metadata and scripture unchanged"
         ]
+      },
+      {
+        "action": "restore_pinned_lexical_object_term_from_key",
+        "reason": "Restore a source-locked direct word for the existing semantic object/activity category; exclude unrelated neighboring tokens even when English gloss could match.",
+        "evidence": [
+          "Clear-Bible Macula Hebrew WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c / Greek SBLGNT@8423afe47b9e8f24b7772e808af45c7159a6fe7e, CI source-pinned original-word candidate report",
+          "Esther 8:8 explicitly orders the letter to be sealed (חִתְמ֖וּ) with the king's signet. Only the seal verb token is added, not the adjacent distinct signet-ring noun.",
+          "BCV8 17008008 exact wlc o170080080092"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [
+              "40027066",
+              "42015022",
+              "55002019",
+              "59002002",
+              "66005001",
+              "66005002",
+              "66005005",
+              "66005009",
+              "66006001",
+              "66006003",
+              "66006005",
+              "66006007",
+              "66006009",
+              "66006012",
+              "66007002",
+              "66008001",
+              "66009004",
+              "66010004",
+              "66020003",
+              "66022010",
+              "01038018"
+            ],
+            "explicit_instances": {
+              "SBLGNT": [
+                [
+                  "n42015022019"
+                ],
+                [
+                  "n40027066007"
+                ],
+                [
+                  "n66010004016"
+                ],
+                [
+                  "n66020003010"
+                ],
+                [
+                  "n66022010005"
+                ],
+                [
+                  "n66007002010"
+                ],
+                [
+                  "n66005001017"
+                ],
+                [
+                  "n66005002017"
+                ],
+                [
+                  "n66005005028"
+                ],
+                [
+                  "n66005009014"
+                ],
+                [
+                  "n66006001011"
+                ],
+                [
+                  "n66006003005"
+                ],
+                [
+                  "n66006005005"
+                ],
+                [
+                  "n66006007005"
+                ],
+                [
+                  "n66006009006"
+                ],
+                [
+                  "n66006012006"
+                ],
+                [
+                  "n66008001005"
+                ],
+                [
+                  "n55002019010"
+                ],
+                [
+                  "n66009004025"
+                ],
+                [
+                  "n59002002008"
+                ]
+              ],
+              "wlc": [
+                [
+                  "o010380180081"
+                ]
+              ]
+            }
+          },
+          "after": {
+            "references": [
+              "01038018",
+              "17008008",
+              "40027066",
+              "42015022",
+              "55002019",
+              "59002002",
+              "66005001",
+              "66005002",
+              "66005005",
+              "66005009",
+              "66006001",
+              "66006003",
+              "66006005",
+              "66006007",
+              "66006009",
+              "66006012",
+              "66007002",
+              "66008001",
+              "66009004",
+              "66010004",
+              "66020003",
+              "66022010"
+            ],
+            "explicit_instances": {
+              "SBLGNT": [
+                [
+                  "n42015022019"
+                ],
+                [
+                  "n40027066007"
+                ],
+                [
+                  "n66010004016"
+                ],
+                [
+                  "n66020003010"
+                ],
+                [
+                  "n66022010005"
+                ],
+                [
+                  "n66007002010"
+                ],
+                [
+                  "n66005001017"
+                ],
+                [
+                  "n66005002017"
+                ],
+                [
+                  "n66005005028"
+                ],
+                [
+                  "n66005009014"
+                ],
+                [
+                  "n66006001011"
+                ],
+                [
+                  "n66006003005"
+                ],
+                [
+                  "n66006005005"
+                ],
+                [
+                  "n66006007005"
+                ],
+                [
+                  "n66006009006"
+                ],
+                [
+                  "n66006012006"
+                ],
+                [
+                  "n66008001005"
+                ],
+                [
+                  "n55002019010"
+                ],
+                [
+                  "n66009004025"
+                ],
+                [
+                  "n59002002008"
+                ]
+              ],
+              "wlc": [
+                [
+                  "o010380180081"
+                ],
+                [
+                  "o170080080092"
+                ]
+              ]
+            }
+          }
+        }
       }
+    ],
+    "editorial_reason": "Restore a source-locked direct word for the existing semantic object/activity category; exclude unrelated neighboring tokens even when English gloss could match.",
+    "editorial_evidence": [
+      "Clear-Bible Macula Hebrew WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c / Greek SBLGNT@8423afe47b9e8f24b7772e808af45c7159a6fe7e, CI source-pinned original-word candidate report",
+      "Esther 8:8 explicitly orders the letter to be sealed (חִתְמ֖וּ) with the king's signet. Only the seal verb token is added, not the adjacent distinct signet-ring noun.",
+      "BCV8 17008008 exact wlc o170080080092"
     ]
   },
   "explicit_instances": {
@@ -113,6 +322,9 @@
     "wlc": [
       [
         "o010380180081"
+      ],
+      [
+        "o170080080092"
       ]
     ]
   },
@@ -153,6 +365,8 @@
   "pronominal_referents": {},
   "realia_type": "other",
   "references": [
+    "01038018",
+    "17008008",
     "40027066",
     "42015022",
     "55002019",
@@ -172,8 +386,7 @@
     "66009004",
     "66010004",
     "66020003",
-    "66022010",
-    "01038018"
+    "66022010"
   ],
   "subject_referents": {},
   "type": "realia",

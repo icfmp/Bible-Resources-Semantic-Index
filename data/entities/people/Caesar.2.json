@@ -15,10 +15,129 @@
   },
   "bsi": {
     "canonical_id": "person:Claudius",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "person:Caesar.2",
     "source_primary_id": "person:Claudius",
-    "source_sha256": "caab6e60e7aa5b6d7a61864c219bf48c1618fb00d2a42a4b001ffba081fbc51f"
+    "source_sha256": "caab6e60e7aa5b6d7a61864c219bf48c1618fb00d2a42a4b001ffba081fbc51f",
+    "editorial_reason": "Restore original-word mentions for the explicitly named person in reviewed source-key verses. The historical source alias/canonical identity is preserved and no similarly named individual is merged.",
+    "editorial_evidence": [
+      "Pinned Clear-Bible Macula WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c / SBLGNT@8423afe47b9e8f24b7772e808af45c7159a6fe7e, full original-word source audit and exact ID verification in GitHub Actions",
+      "Acts 18:2 names Claudius, the emperor whose reviewed canonical identity is person:Claudius; this is a proper name, not a generic Caesar title.",
+      "44018002 SBLGNT: n44018002022"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "restore_exact_person_name_witnesses_from_original",
+        "reason": "Restore original-word mentions for the explicitly named person in reviewed source-key verses. The historical source alias/canonical identity is preserved and no similarly named individual is merged.",
+        "evidence": [
+          "Pinned Clear-Bible Macula WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c / SBLGNT@8423afe47b9e8f24b7772e808af45c7159a6fe7e, full original-word source audit and exact ID verification in GitHub Actions",
+          "Acts 18:2 names Claudius, the emperor whose reviewed canonical identity is person:Claudius; this is a proper name, not a generic Caesar title.",
+          "44018002 SBLGNT: n44018002022"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [
+              "44011028",
+              "44017007",
+              "44025008",
+              "44025010",
+              "44025011",
+              "44025012",
+              "44025021",
+              "44026032",
+              "44027024",
+              "44028019"
+            ],
+            "explicit_instances": {
+              "SBLGNT": [
+                [
+                  "n44017007010"
+                ],
+                [
+                  "n44025008017"
+                ],
+                [
+                  "n44025010008"
+                ],
+                [
+                  "n44025011027"
+                ],
+                [
+                  "n44025012009"
+                ],
+                [
+                  "n44025012012"
+                ],
+                [
+                  "n44025021020"
+                ],
+                [
+                  "n44026032014"
+                ],
+                [
+                  "n44027024005"
+                ],
+                [
+                  "n44028019007"
+                ]
+              ]
+            }
+          },
+          "after": {
+            "references": [
+              "44011028",
+              "44017007",
+              "44018002",
+              "44025008",
+              "44025010",
+              "44025011",
+              "44025012",
+              "44025021",
+              "44026032",
+              "44027024",
+              "44028019"
+            ],
+            "explicit_instances": {
+              "SBLGNT": [
+                [
+                  "n44017007010"
+                ],
+                [
+                  "n44025008017"
+                ],
+                [
+                  "n44025010008"
+                ],
+                [
+                  "n44025011027"
+                ],
+                [
+                  "n44025012009"
+                ],
+                [
+                  "n44025012012"
+                ],
+                [
+                  "n44025021020"
+                ],
+                [
+                  "n44026032014"
+                ],
+                [
+                  "n44027024005"
+                ],
+                [
+                  "n44028019007"
+                ],
+                [
+                  "n44018002022"
+                ]
+              ]
+            }
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "SBLGNT": [
@@ -51,6 +170,9 @@
       ],
       [
         "n44028019007"
+      ],
+      [
+        "n44018002022"
       ]
     ]
   },
@@ -82,6 +204,7 @@
   "references": [
     "44011028",
     "44017007",
+    "44018002",
     "44025008",
     "44025010",
     "44025011",

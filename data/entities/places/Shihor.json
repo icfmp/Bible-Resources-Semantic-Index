@@ -19,10 +19,65 @@
   },
   "bsi": {
     "canonical_id": "place:BrookOfEgypt",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:Shihor",
     "source_primary_id": "place:BrookOfEgypt",
-    "source_sha256": "d4953e46891865b5128278d17eafe0f52a86a61a158abeab0f352560988f89ef"
+    "source_sha256": "d4953e46891865b5128278d17eafe0f52a86a61a158abeab0f352560988f89ef",
+    "editorial_reason": "Restore direct original-language word mentions explicitly confirmed in the inherited key verses for this distinct source identity. All original keys and other evidence are retained.",
+    "editorial_evidence": [
+      "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c and Clear-Bible/macula-greek@8423afe47b9e8f24b7772e808af45c7159a6fe7e pinned TSV, verified against CI source-word candidate inventory in #134",
+      "1 Chronicles 13:5 explicitly names Shihor at the boundary with Egypt; the following word Egypt modifies it and is not the Shihor name token.",
+      "BCV8 13013005 direct wlc token(s) o130130050071"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "restore_pinned_direct_mention_from_verified_key",
+        "reason": "Restore direct original-language word mentions explicitly confirmed in the inherited key verses for this distinct source identity. All original keys and other evidence are retained.",
+        "evidence": [
+          "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c and Clear-Bible/macula-greek@8423afe47b9e8f24b7772e808af45c7159a6fe7e pinned TSV, verified against CI source-word candidate inventory in #134",
+          "1 Chronicles 13:5 explicitly names Shihor at the boundary with Egypt; the following word Egypt modifies it and is not the Shihor name token.",
+          "BCV8 13013005 direct wlc token(s) o130130050071"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [
+              "06013003",
+              "23023003"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o060130030022"
+                ],
+                [
+                  "o230230030041"
+                ]
+              ]
+            }
+          },
+          "after": {
+            "references": [
+              "06013003",
+              "13013005",
+              "23023003"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o060130030022"
+                ],
+                [
+                  "o230230030041"
+                ],
+                [
+                  "o130130050071"
+                ]
+              ]
+            }
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -31,6 +86,9 @@
       ],
       [
         "o230230030041"
+      ],
+      [
+        "o130130050071"
       ]
     ]
   },
@@ -91,6 +149,7 @@
   "pronominal_referents": {},
   "references": [
     "06013003",
+    "13013005",
     "23023003"
   ],
   "referred_to_as": [

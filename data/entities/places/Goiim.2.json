@@ -7,12 +7,53 @@
   },
   "bsi": {
     "canonical_id": "place:Goiim.2",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:Goiim.2",
     "source_primary_id": "place:Goiim.2",
-    "source_sha256": "482a1f18381ded17a3e1fd873b0ef7927a50f0678c5e15f858a441d23bd3281b"
+    "source_sha256": "482a1f18381ded17a3e1fd873b0ef7927a50f0678c5e15f858a441d23bd3281b",
+    "editorial_reason": "Restore direct original-language word mentions explicitly confirmed in the inherited key verses for this distinct source identity. All original keys and other evidence are retained.",
+    "editorial_evidence": [
+      "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c and Clear-Bible/macula-greek@8423afe47b9e8f24b7772e808af45c7159a6fe7e pinned TSV, verified against CI source-word candidate inventory in #134",
+      "Joshua 12:23 directly says Goiim in Galilee; distinct original verse and indexed identity from Tidal's Goiim in Genesis 14.",
+      "BCV8 06012023 direct wlc token(s) o060120230071"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "restore_pinned_direct_mention_from_verified_key",
+        "reason": "Restore direct original-language word mentions explicitly confirmed in the inherited key verses for this distinct source identity. All original keys and other evidence are retained.",
+        "evidence": [
+          "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c and Clear-Bible/macula-greek@8423afe47b9e8f24b7772e808af45c7159a6fe7e pinned TSV, verified against CI source-word candidate inventory in #134",
+          "Joshua 12:23 directly says Goiim in Galilee; distinct original verse and indexed identity from Tidal's Goiim in Genesis 14.",
+          "BCV8 06012023 direct wlc token(s) o060120230071"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [],
+            "explicit_instances": {}
+          },
+          "after": {
+            "references": [
+              "06012023"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o060120230071"
+                ]
+              ]
+            }
+          }
+        }
+      }
+    ]
   },
-  "explicit_instances": {},
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o060120230071"
+      ]
+    ]
+  },
   "id": "place:Goiim.2",
   "is_artifact": false,
   "is_person": false,
@@ -34,7 +75,9 @@
   },
   "primary_id": "place:Goiim.2",
   "pronominal_referents": {},
-  "references": [],
+  "references": [
+    "06012023"
+  ],
   "subject_referents": {},
   "type": "place"
 }

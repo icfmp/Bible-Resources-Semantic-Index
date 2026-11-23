@@ -12,10 +12,173 @@
   },
   "bsi": {
     "canonical_id": "place:Sheba.2",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:Sheba.2",
     "source_primary_id": "place:Sheba.2",
-    "source_sha256": "66bd4b2f042d2ffed10215bdead867c5e41524ae612ee1dfcbe8e6f84cd6a0b4"
+    "source_sha256": "66bd4b2f042d2ffed10215bdead867c5e41524ae612ee1dfcbe8e6f84cd6a0b4",
+    "editorial_reason": "Restore direct original-language word mentions explicitly confirmed in the inherited key verses for this distinct source identity. All original keys and other evidence are retained.",
+    "editorial_evidence": [
+      "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c and Clear-Bible/macula-greek@8423afe47b9e8f24b7772e808af45c7159a6fe7e pinned TSV, verified against CI source-word candidate inventory in #134",
+      "1 Kings 10:1 explicitly gives the Queen of Sheba; the geographic name Sheba denotes the queen's country.",
+      "BCV8 11010001 direct wlc token(s) o110100010021"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "restore_pinned_direct_mention_from_verified_key",
+        "reason": "Restore direct original-language word mentions explicitly confirmed in the inherited key verses for this distinct source identity. All original keys and other evidence are retained.",
+        "evidence": [
+          "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c and Clear-Bible/macula-greek@8423afe47b9e8f24b7772e808af45c7159a6fe7e pinned TSV, verified against CI source-word candidate inventory in #134",
+          "1 Kings 10:1 explicitly gives the Queen of Sheba; the geographic name Sheba denotes the queen's country.",
+          "BCV8 11010001 direct wlc token(s) o110100010021"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [
+              "11010010",
+              "11010013",
+              "14009001",
+              "14009003",
+              "14009009",
+              "14009012",
+              "18006019",
+              "19072010",
+              "19072015",
+              "23060006",
+              "24006020",
+              "26027022",
+              "26027023",
+              "26038013",
+              "42011031"
+            ],
+            "explicit_instances": {
+              "SBLGNT": [
+                [
+                  "n42011031002"
+                ]
+              ],
+              "wlc": [
+                [
+                  "o110100100211"
+                ],
+                [
+                  "o110100130051"
+                ],
+                [
+                  "o140090010021"
+                ],
+                [
+                  "o140090030031"
+                ],
+                [
+                  "o140090090191"
+                ],
+                [
+                  "o140090120051"
+                ],
+                [
+                  "o180060190051"
+                ],
+                [
+                  "o190720100071"
+                ],
+                [
+                  "o190720150051"
+                ],
+                [
+                  "o230600060082"
+                ],
+                [
+                  "o240060200052"
+                ],
+                [
+                  "o260270220021"
+                ],
+                [
+                  "o260270230051"
+                ],
+                [
+                  "o260380130011"
+                ]
+              ]
+            }
+          },
+          "after": {
+            "references": [
+              "11010001",
+              "11010010",
+              "11010013",
+              "14009001",
+              "14009003",
+              "14009009",
+              "14009012",
+              "18006019",
+              "19072010",
+              "19072015",
+              "23060006",
+              "24006020",
+              "26027022",
+              "26027023",
+              "26038013",
+              "42011031"
+            ],
+            "explicit_instances": {
+              "SBLGNT": [
+                [
+                  "n42011031002"
+                ]
+              ],
+              "wlc": [
+                [
+                  "o110100100211"
+                ],
+                [
+                  "o110100130051"
+                ],
+                [
+                  "o140090010021"
+                ],
+                [
+                  "o140090030031"
+                ],
+                [
+                  "o140090090191"
+                ],
+                [
+                  "o140090120051"
+                ],
+                [
+                  "o180060190051"
+                ],
+                [
+                  "o190720100071"
+                ],
+                [
+                  "o190720150051"
+                ],
+                [
+                  "o230600060082"
+                ],
+                [
+                  "o240060200052"
+                ],
+                [
+                  "o260270220021"
+                ],
+                [
+                  "o260270230051"
+                ],
+                [
+                  "o260380130011"
+                ],
+                [
+                  "o110100010021"
+                ]
+              ]
+            }
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "SBLGNT": [
@@ -65,6 +228,9 @@
       ],
       [
         "o260380130011"
+      ],
+      [
+        "o110100010021"
       ]
     ]
   },
@@ -114,6 +280,7 @@
   "primary_id": "place:Sheba.2",
   "pronominal_referents": {},
   "references": [
+    "11010001",
     "11010010",
     "11010013",
     "14009001",

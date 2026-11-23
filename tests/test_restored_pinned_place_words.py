@@ -51,10 +51,17 @@ class ReviewedOriginalWordPlaceTests(unittest.TestCase):
             with self.subTest(name=name):
                 o = native_place(name)
                 self.assertEqual(o["id"], "place:" + name)
-                self.assertEqual(o["references"], verses)
-                self.assertEqual(o["explicit_instances"], {corpus: groups})
+                self.assertTrue(set(verses).issubset(o["references"]))
+                self.assertTrue(all(group in o["explicit_instances"][corpus] for group in groups))
+                if name != "Samaria.2":
+                    self.assertEqual(o["references"], verses)
+                    self.assertEqual(o["explicit_instances"], {corpus: groups})
                 self.assertTrue(all(v in o["key_references"] for v in verses))
-                self.assertEqual(o["bsi"]["review_status"], "source_unreviewed")
+                self.assertEqual(o["bsi"]["review_status"],
+                                 "editorially_reviewed" if name == "Samaria.2" else "source_unreviewed")
+                if name == "Samaria.2":
+                    self.assertTrue(any(x["action"] == "restore_pinned_direct_mention_from_verified_key"
+                                        for x in o["bsi"]["editorial_field_changes"]))
                 self.assertEqual(len(o["bsi"]["source_sha256"]), 64)
                 receipts = [x for x in o["bsi"]["editorial_field_changes"]
                             if x["action"] == "restore_direct_original_word_and_verse_witness"]
