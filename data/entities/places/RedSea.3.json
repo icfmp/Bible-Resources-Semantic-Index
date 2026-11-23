@@ -2,10 +2,39 @@
   "added_entry": false,
   "bsi": {
     "canonical_id": "place:RedSea.3",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:RedSea.3",
     "source_primary_id": "place:RedSea.3",
-    "source_sha256": "0eaf2c21fefa1aece5ccbe354b0c20afeb9344f688efd404034cb06599e552f7"
+    "source_sha256": "0eaf2c21fefa1aece5ccbe354b0c20afeb9344f688efd404034cb06599e552f7",
+    "editorial_reason": "Correct a false directly-named canonical place claim: the inherited key verse names a different original-language term or a broader waterbody, not this historically named locality. Historical context keys remain untouched.",
+    "editorial_evidence": [
+      "Pinned exact Macula Hebrew WLC @47db250bd55d0d8577f2a94fba114ef16c35b23c and Greek SBLGNT @8423afe47b9e8f24b7772e808af45c7159a6fe7e, inspected with the original-verse tool",
+      "Exodus 10:19 WLC o020100190111 + o020100190121 and Numbers 33:10-11 o040330100051/o040330100061 and o040330110022/o040330110031 name Yam Suph; neither verse names the modern Gulf of Suez, and the exact geographic identification of the crossing remains separate from text attestation."
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "remove_unattested_modern_or_variant_place_name_scope",
+        "reason": "Correct a false directly-named canonical place claim: the inherited key verse names a different original-language term or a broader waterbody, not this historically named locality. Historical context keys remain untouched.",
+        "evidence": [
+          "Pinned exact Macula Hebrew WLC @47db250bd55d0d8577f2a94fba114ef16c35b23c and Greek SBLGNT @8423afe47b9e8f24b7772e808af45c7159a6fe7e, inspected with the original-verse tool",
+          "Exodus 10:19 WLC o020100190111 + o020100190121 and Numbers 33:10-11 o040330100051/o040330100061 and o040330110022/o040330110031 name Yam Suph; neither verse names the modern Gulf of Suez, and the exact geographic identification of the crossing remains separate from text attestation."
+        ],
+        "replaced_field_values": {
+          "before": {
+            "mentioned_in_bible": true,
+            "non_biblical": false,
+            "alternate_labels": [
+              "Red Sea"
+            ]
+          },
+          "after": {
+            "mentioned_in_bible": false,
+            "non_biblical": true,
+            "alternate_labels": []
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {},
   "id": "place:RedSea.3",
@@ -18,14 +47,11 @@
   ],
   "localizations": {
     "eng": {
-      "alternate_labels": [
-        "Red Sea"
-      ],
       "preferred_label": "Gulf of Suez "
     }
   },
-  "mentioned_in_bible": true,
-  "non_biblical": false,
+  "mentioned_in_bible": false,
+  "non_biblical": true,
   "only_mentioned_in_apocrypha": false,
   "place_types": {
     "acai": [
