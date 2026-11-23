@@ -23,7 +23,29 @@
     "review_status": "source_unreviewed",
     "source_id": "realia:Lyre",
     "source_primary_id": "realia:Lyre",
-    "source_sha256": "76459a506cf17375594d523ca3ecc93c307221ade342eda85788fa4613d89934"
+    "source_sha256": "76459a506cf17375594d523ca3ecc93c307221ade342eda85788fa4613d89934",
+    "editorial_field_changes": [
+      {
+        "action": "restore_source_attested_object_word_instances",
+        "added_reference_values": {
+          "references": [
+            "01004021"
+          ]
+        },
+        "added_original_word_groups": {
+          "wlc": [
+            [
+              "o010040210091"
+            ]
+          ]
+        },
+        "reason": "Genesis 4:21 explicitly names the lyre among musical instruments.",
+        "evidence": [
+          "ORG BCV8 01004021",
+          "Pinned original-word texts/glosses inspected in Clear-Bible/Macula Hebrew WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c; token IDs copied verbatim; source metadata and scripture unchanged"
+        ]
+      }
+    ]
   },
   "explicit_instances": {
     "SBLGNT": [
@@ -159,6 +181,9 @@
       ],
       [
         "o270030150131"
+      ],
+      [
+        "o010040210091"
       ]
     ]
   },
@@ -246,7 +271,8 @@
     "66005008",
     "66014002",
     "66015002",
-    "66018022"
+    "66018022",
+    "01004021"
   ],
   "subject_referents": {
     "wlc": [
