@@ -60,6 +60,27 @@ jobs:
                   assert coverage['target_census_complete']
           assert receipt['publication_approved'] is False
           PY
+      - name: Require exact approved-development baseline and lossless packages
+        run: |
+          set -euo pipefail
+          python3 -I scripts/verify_generated_json.py \
+            --generated /tmp/brsi-clear-bible-candidate/receipt.json \
+            --baseline links/alignments/clear-bible-lsg/receipt.lock.json
+          python3 -I - <<'PY'
+          import gzip
+          import hashlib
+          import json
+          from pathlib import Path
+          root = Path('/tmp/brsi-clear-bible-candidate')
+          receipt = json.loads((root / 'receipt.json').read_text())
+          for canon, metadata in sorted(receipt['candidate_outputs'].items()):
+              data = (root / (canon + '.json')).read_bytes()
+              compressed = (root / (canon + '.json.gz')).read_bytes()
+              assert gzip.decompress(compressed) == data
+              assert hashlib.sha256(data).hexdigest() == metadata['sha256']
+              assert hashlib.sha256(compressed).hexdigest() == metadata['gzip_sha256']
+              assert len(compressed) == metadata['gzip_size']
+          PY
       - name: Explicit nonpublication boundary
         run: |
           echo "Verified candidate only. No artifacts uploaded; no release or Bible app edits."
