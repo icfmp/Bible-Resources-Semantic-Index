@@ -20,7 +20,7 @@ All **868 restricted ACAI Key Terms** remain outside the public entity data.
 The native builder must not rewrite original word IDs, verse references,
 editorial metadata or translation-source choices.
 
-## Shared scripts — 22 Python files
+## Shared scripts — 21 Python files
 
 | Maintained role | Scripts | Current caller or protection |
 | --- | --- | --- |
@@ -30,7 +30,6 @@ editorial metadata or translation-source choices.
 | Read-only identity audits | `audit_entity_relationships.py`, `audit_family_relation_consistency.py`, `audit_identity_surface.py`, `audit_name_ambiguities.py`, `audit_person_overlaps.py`, `audit_reclassified_entity_fields.py` | Native/reclassified/offline workflows for invoked audits; remaining reusable audit covered by standalone tests |
 | Lookup and distribution helpers | `resolve.py`, `distribution_profile.py`, `release_contract.py`, `stage_entity_candidate.py`, `validate_external_crosswalk.py` | Dedicated unit tests; candidate/contract verification in native CI, never direct publication |
 | Integrity and historical-asset checks | `write_integrity_receipt.py`, `verify_historical_asset.py`, `inspect_v1_published_assets.py` | Native build / pinned lexical CI and their tests; read-only V1 public ZIP compatibility inspection |
-| Runner-local evidence packaging | `work_snapshot.py` | Greek/Hebrew CI packs and verifies a **temporary** private research state, without upload or durable-storage claim |
 
 Only current reusable scripts belong in `scripts/`. The historical ACAI
 source-replay compiler is isolated in
@@ -50,6 +49,12 @@ is covered by a maintained test and any non-reproducible editorial decision
 is retained beside its source. See issue [#145](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/145) for the second-pass review; the first example
 retired a terminal 47-word Greek inflection investigation, while retaining
 its independent negative no-guess invariant and the 47-word source report.
+
+The discontinued runner-only `work_snapshot.py` generated temporary archives
+and verified them inside the same CI job but never stored them. It added no
+independent durable evidence beyond the source-pinned checks and the historical
+release parity gates. Its implementation and tests are preserved in Git history;
+no private research corpus was copied, published, or lost from Git.
 
 The Greek and Hebrew workflows first verify exact upstream commits and
 source checksums, then reconstruct source-backed indexes, check reviewed
