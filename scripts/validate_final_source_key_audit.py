@@ -91,11 +91,25 @@ def validate(data:Path, ledger_path:Path,
             "Overlap with already adjudicated cases")
     require(len(pool["cases"])==len(set(pooled)),
             "Duplicate source identity in full pool")
+    last_batch=load(data/"source-key-last-12-candidates.json")
+    require(last_batch.get("schema_version")==1
+            and last_batch.get("from_merged_commit")=="1aad2adfffe0afba0d25d361243429cb4c0d7977"
+            and last_batch.get("parent_register")=="data/source-key-final-128-review.json",
+            "Last-twelve frozen source/commit provenance changed")
+    last_items=last_batch.get("cases")
+    require(isinstance(last_items,list) and len(last_items)==12
+            and len(set(x["source_id"] for x in last_items))==12,
+            "The 12 original editorial holds were silently omitted or duplicated")
+    last_ids={x["source_id"]:x["original_key_verses"] for x in last_items}
+    require(all(k in selected and selected[k]==v for k,v in last_ids.items()),
+            "Final original-key identities no longer match frozen historical selection")
     cases=ledger.get("cases")
     require(isinstance(cases,list) and len(cases)==128,
             "The complete 128-case disposition is missing")
     require(set(x["source_id"] for x in cases)==set(selected),
             "Final decisions do not exactly cover frozen selection")
+    require({x["source_id"] for x in cases if "source_proof" in x}==set(last_ids),
+            "Last twelve decisions lack dedicated evidence or evidence was added to unrelated cases")
     counters=Counter()
     words_wanted=set()
     target_wanted=set()
@@ -135,6 +149,49 @@ def validate(data:Path, ledger_path:Path,
             else:
                 require(context["excerpt"]=="",
                         id+": falsely attributed 1 Maccabees to Macula")
+        proof=row.get("source_proof")
+        if id in last_ids:
+            require(status in {"corrected","verified_correct"},
+                    id+": previously unresolved identity is not independently settled")
+            require(row["original_key_verses"]==last_ids[id],
+                    id+": final hold's exact historical keys drifted")
+            require(isinstance(proof,dict),id+": missing complete final proof")
+            ids=proof.get("pinned_word_ids")
+            require(isinstance(ids,list) and bool(ids) and len(ids)==len(set(ids)),
+                    id+": no unique original-language identity witnesses")
+            for wid in ids:
+                require(isinstance(wid,str) and re.fullmatch(r"(o[0-9]{12}|n[0-9]{11})",wid),
+                        id+": invalid original source word ID "+str(wid))
+                book=int(wid[1:3])
+                require((1<=book<=39 if wid.startswith("o") else 40<=book<=66),
+                        id+": word claimed in wrong corpus")
+                words_wanted.add(wid)
+            urls=proof.get("independent_references")
+            require(isinstance(urls,list) and bool(urls) and
+                    all(isinstance(url,str) and url.startswith("https://")
+                        and " " not in url for url in urls),
+                    id+": independent contextual evidence absent or malformed")
+            require(isinstance(proof.get("interpretation"),str)
+                    and proof["interpretation"]==reason
+                    and len(reason)>=110,
+                    id+": editorial conclusion and original-source evidence disagree")
+            expected=("reversible_correction_with_pinned_source_lexemes"
+                      if status=="corrected" else
+                      "contextual_or_interpretive_no_new_name_word")
+            require(proof.get("claimed_relation")==expected,
+                    id+": unsupported direct versus contextual witness claim")
+            for extra in proof.get("reassigned_to",[]):
+                require(isinstance(extra,str) and extra.count(":")==1,
+                        id+": malformed reassigned historical identity")
+                e_kind,e_name=extra.split(":")
+                require(e_kind in PATHS,id+": reassigned entity category missing")
+                erow=load(data/"entities"/PATHS[e_kind]/(e_name+".json"))
+                require(erow["id"]==extra and erow["bsi"]["source_id"]==extra,
+                        id+": false purported destination identity")
+                targetwords={w for blocks in erow["explicit_instances"].values()
+                             for group in blocks for w in group}
+                require(bool(set(ids)&targetwords),
+                        id+": no genuine reassigned original-language word link")
         anchors=row.get("nearby_existing_word_anchors")
         require(isinstance(anchors,list) and len(anchors)<=14,
                 id+": invalid source neighbor inventory")
@@ -206,7 +263,12 @@ def validate(data:Path, ledger_path:Path,
       "resolved_in_pinned_scope":counters["corrected"]+counters["verified_correct"],
       "documented_external_source":counters["secondary_verified"],
       "remaining_unresolved":counters["unresolved"],
-      "distinct_witness_word_ids":len(words_wanted)}
+      "distinct_witness_word_ids":len(words_wanted),
+      "final_twelve_proven":len(last_ids),
+      "last_twelve_reversible":sum(1 for r in cases
+          if r["source_id"] in last_ids and r["outcome"]=="corrected"),
+      "last_twelve_contextual":sum(1 for r in cases
+          if r["source_id"] in last_ids and r["outcome"]=="verified_correct")}
 
 def main():
     p=argparse.ArgumentParser(description=__doc__)
