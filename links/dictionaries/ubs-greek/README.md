@@ -40,6 +40,14 @@ public BRSI index merely because they are available upstream.
 - `test_*.py` covers the maintained source-specific algorithms and
   negative decisions. [Pinned Greek CI](../../../.github/workflows/bsi-ubs-greek.yml)
   is the authoritative full-source reconstruction and historical-asset check.
+- The **224** original Strong multi-headword source cases and the **ὁπότε**
+  temporal POS-specific decision are still verified by their independent
+  source auditors, called **inside** the reviewed builders. Their redundant
+  preliminary temporary report-file stages have been retired. The
+  `v1_reviewed_ambiguous_headwords.json` and
+  `v1_reviewed_hopote_temporal_headword.json` editorial ledgers remain
+  unchanged, preserving 220 exact-word headword reviews, four abstentions,
+  and the original conjunction/adverb annotations.
 
 The source-local `source/` and `work/` checkouts are temporary and ignored.
 Do not commit unpublished detailed UBS/MACULA original-word research dumps.
