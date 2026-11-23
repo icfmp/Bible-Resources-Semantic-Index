@@ -9,10 +9,104 @@
   },
   "bsi": {
     "canonical_id": "realia:GoldJewelry",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "realia:GoldJewelry",
     "source_primary_id": "realia:GoldJewelry",
-    "source_sha256": "bdc1a6050b8fbb21914bed417418813e10b0e51a0703e1cdbdf6e6fa0749bc26"
+    "source_sha256": "bdc1a6050b8fbb21914bed417418813e10b0e51a0703e1cdbdf6e6fa0749bc26",
+    "editorial_reason": "Source-collated full-verse original-language witness directly supports this existing object category; restore only exact named tokens, preserving keys and earlier witnesses.",
+    "editorial_evidence": [
+      "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c and Clear-Bible/macula-greek@8423afe47b9e8f24b7772e808af45c7159a6fe7e",
+      "Genesis 24:53 names silver and gold jewelry, Exodus 35:22 jewelry of gold, Numbers 31:50 articles of gold; group source tokens within their own verses and preserve existing Greek ornament names.",
+      "01024053 wlc: o010240530031 + o010240530041",
+      "01024053 wlc: o010240530051 + o010240530061",
+      "02035022 wlc: o020350220141 + o020350220151",
+      "04031050 wlc: o040310500081 + o040310500091"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "restore_pinned_direct_object_name_in_source_key",
+        "reason": "Source-collated full-verse original-language witness directly supports this existing object category; restore only exact named tokens, preserving keys and earlier witnesses.",
+        "evidence": [
+          "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c and Clear-Bible/macula-greek@8423afe47b9e8f24b7772e808af45c7159a6fe7e",
+          "Genesis 24:53 names silver and gold jewelry, Exodus 35:22 jewelry of gold, Numbers 31:50 articles of gold; group source tokens within their own verses and preserve existing Greek ornament names.",
+          "01024053 wlc: o010240530031 + o010240530041",
+          "01024053 wlc: o010240530051 + o010240530061",
+          "02035022 wlc: o020350220141 + o020350220151",
+          "04031050 wlc: o040310500081 + o040310500091"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [
+              "54002009",
+              "60003003",
+              "66017004",
+              "66018016"
+            ],
+            "explicit_instances": {
+              "SBLGNT": [
+                [
+                  "n54002009017"
+                ],
+                [
+                  "n60003003010"
+                ],
+                [
+                  "n66017004011"
+                ],
+                [
+                  "n66018016017"
+                ]
+              ]
+            }
+          },
+          "after": {
+            "references": [
+              "01024053",
+              "02035022",
+              "04031050",
+              "54002009",
+              "60003003",
+              "66017004",
+              "66018016"
+            ],
+            "explicit_instances": {
+              "SBLGNT": [
+                [
+                  "n54002009017"
+                ],
+                [
+                  "n60003003010"
+                ],
+                [
+                  "n66017004011"
+                ],
+                [
+                  "n66018016017"
+                ]
+              ],
+              "wlc": [
+                [
+                  "o010240530031",
+                  "o010240530041"
+                ],
+                [
+                  "o010240530051",
+                  "o010240530061"
+                ],
+                [
+                  "o020350220141",
+                  "o020350220151"
+                ],
+                [
+                  "o040310500081",
+                  "o040310500091"
+                ]
+              ]
+            }
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "SBLGNT": [
@@ -27,6 +121,24 @@
       ],
       [
         "n66018016017"
+      ]
+    ],
+    "wlc": [
+      [
+        "o010240530031",
+        "o010240530041"
+      ],
+      [
+        "o010240530051",
+        "o010240530061"
+      ],
+      [
+        "o020350220141",
+        "o020350220151"
+      ],
+      [
+        "o040310500081",
+        "o040310500091"
       ]
     ]
   },
@@ -57,6 +169,9 @@
   "pronominal_referents": {},
   "realia_type": "other",
   "references": [
+    "01024053",
+    "02035022",
+    "04031050",
     "54002009",
     "60003003",
     "66017004",
