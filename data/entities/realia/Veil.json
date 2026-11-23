@@ -21,7 +21,29 @@
     "review_status": "source_unreviewed",
     "source_id": "realia:Veil",
     "source_primary_id": "realia:Veil",
-    "source_sha256": "5efb24ccccd6194bf6e05bdb7f245adf566165494f24c3d13228fdb129d6ffdd"
+    "source_sha256": "5efb24ccccd6194bf6e05bdb7f245adf566165494f24c3d13228fdb129d6ffdd",
+    "editorial_field_changes": [
+      {
+        "action": "restore_source_attested_object_word_instances",
+        "added_reference_values": {
+          "references": [
+            "01024065"
+          ]
+        },
+        "added_original_word_groups": {
+          "wlc": [
+            [
+              "o010240650152"
+            ]
+          ]
+        },
+        "reason": "Genesis 24:65 explicitly names Rebekah's veil.",
+        "evidence": [
+          "ORG BCV8 01024065",
+          "Pinned original-word texts/glosses inspected in Clear-Bible/Macula Hebrew WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c; token IDs copied verbatim; source metadata and scripture unchanged"
+        ]
+      }
+    ]
   },
   "explicit_instances": {
     "SBLGNT": [
@@ -73,6 +95,9 @@
       ],
       [
         "o230030190033"
+      ],
+      [
+        "o010240650152"
       ]
     ]
   },
@@ -130,7 +155,8 @@
     "47003013",
     "47003014",
     "47003015",
-    "47003016"
+    "47003016",
+    "01024065"
   ],
   "subject_referents": {
     "SBLGNT": [

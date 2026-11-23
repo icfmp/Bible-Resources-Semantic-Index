@@ -18,7 +18,39 @@
     "review_status": "source_unreviewed",
     "source_id": "realia:Wheel",
     "source_primary_id": "realia:Wheel",
-    "source_sha256": "c45cf5cba32bc070e326b364f76eb3d1fc8b1352972955d109dac01f01b14515"
+    "source_sha256": "c45cf5cba32bc070e326b364f76eb3d1fc8b1352972955d109dac01f01b14515",
+    "editorial_field_changes": [
+      {
+        "action": "restore_source_attested_object_word_instances",
+        "added_reference_values": {
+          "references": [
+            "02014025",
+            "11007032",
+            "26010013"
+          ]
+        },
+        "added_original_word_groups": {
+          "wlc": [
+            [
+              "o020140250031"
+            ],
+            [
+              "o110070320092"
+            ],
+            [
+              "o260100130042"
+            ]
+          ]
+        },
+        "reason": "Exodus 14:25, 1 Kings 7:32 and Ezekiel 10:13 contain wheel terms.",
+        "evidence": [
+          "ORG BCV8 02014025",
+          "ORG BCV8 11007032",
+          "ORG BCV8 26010013",
+          "Pinned original-word texts/glosses inspected in Clear-Bible/Macula Hebrew WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c; token IDs copied verbatim; source metadata and scripture unchanged"
+        ]
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -44,6 +76,15 @@
       ],
       [
         "o110070300062"
+      ],
+      [
+        "o020140250031"
+      ],
+      [
+        "o110070320092"
+      ],
+      [
+        "o260100130042"
       ]
     ]
   },
@@ -102,7 +143,10 @@
   "references": [
     "11007030",
     "11007033",
-    "26001018"
+    "26001018",
+    "02014025",
+    "11007032",
+    "26010013"
   ],
   "subject_referents": {},
   "type": "realia",

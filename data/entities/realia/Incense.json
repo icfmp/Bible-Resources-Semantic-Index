@@ -18,7 +18,39 @@
     "review_status": "source_unreviewed",
     "source_id": "realia:Incense",
     "source_primary_id": "realia:Incense",
-    "source_sha256": "67ad547dbc48cf948b86477a0f613771652d145ce98f4b02a2e09b0c887d17cd"
+    "source_sha256": "67ad547dbc48cf948b86477a0f613771652d145ce98f4b02a2e09b0c887d17cd",
+    "editorial_field_changes": [
+      {
+        "action": "restore_source_attested_object_word_instances",
+        "added_reference_values": {
+          "references": [
+            "02030007",
+            "04016007",
+            "19141002"
+          ]
+        },
+        "added_original_word_groups": {
+          "wlc": [
+            [
+              "o020300070041"
+            ],
+            [
+              "o040160070061"
+            ],
+            [
+              "o191410020031"
+            ]
+          ]
+        },
+        "reason": "Exodus 30:7, Numbers 16:7, and Psalm 141:2 name incense directly.",
+        "evidence": [
+          "ORG BCV8 02030007",
+          "ORG BCV8 04016007",
+          "ORG BCV8 19141002",
+          "Pinned original-word texts/glosses inspected in Clear-Bible/Macula Hebrew WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c; token IDs copied verbatim; source metadata and scripture unchanged"
+        ]
+      }
+    ]
   },
   "explicit_instances": {
     "SBLGNT": [
@@ -39,6 +71,17 @@
       ],
       [
         "n66018013010"
+      ]
+    ],
+    "wlc": [
+      [
+        "o020300070041"
+      ],
+      [
+        "o040160070061"
+      ],
+      [
+        "o191410020031"
       ]
     ]
   },
@@ -79,7 +122,10 @@
     "66005008",
     "66008003",
     "66008004",
-    "66018013"
+    "66018013",
+    "02030007",
+    "04016007",
+    "19141002"
   ],
   "subject_referents": {},
   "type": "realia",

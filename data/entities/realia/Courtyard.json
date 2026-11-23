@@ -12,7 +12,40 @@
     "review_status": "source_unreviewed",
     "source_id": "realia:Courtyard",
     "source_primary_id": "realia:Courtyard",
-    "source_sha256": "19ec3c5e0d230c9df814e64e42682dac3419fd01a1121d056cb84b55ce0f9288"
+    "source_sha256": "19ec3c5e0d230c9df814e64e42682dac3419fd01a1121d056cb84b55ce0f9288",
+    "editorial_field_changes": [
+      {
+        "action": "restore_source_attested_object_word_instances",
+        "added_reference_values": {
+          "references": [
+            "02027009",
+            "26040017"
+          ]
+        },
+        "added_original_word_groups": {
+          "wlc": [
+            [
+              "o020270090031"
+            ],
+            [
+              "o020270090092"
+            ],
+            [
+              "o260400170032"
+            ],
+            [
+              "o260400170092"
+            ]
+          ]
+        },
+        "reason": "Exodus 27:9 and Ezekiel 40:17 contain courtyard nouns.",
+        "evidence": [
+          "ORG BCV8 02027009",
+          "ORG BCV8 26040017",
+          "Pinned original-word texts/glosses inspected in Clear-Bible/Macula Hebrew WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c; token IDs copied verbatim; source metadata and scripture unchanged"
+        ]
+      }
+    ]
   },
   "explicit_instances": {
     "SBLGNT": [
@@ -45,6 +78,20 @@
       ],
       [
         "n66011002003"
+      ]
+    ],
+    "wlc": [
+      [
+        "o020270090031"
+      ],
+      [
+        "o020270090092"
+      ],
+      [
+        "o260400170032"
+      ],
+      [
+        "o260400170092"
       ]
     ]
   },
@@ -95,7 +142,9 @@
     "42011021",
     "42022055",
     "43018015",
-    "66011002"
+    "66011002",
+    "02027009",
+    "26040017"
   ],
   "subject_referents": {
     "SBLGNT": [

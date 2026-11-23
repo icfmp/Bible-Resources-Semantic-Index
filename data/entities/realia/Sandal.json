@@ -16,7 +16,34 @@
     "review_status": "source_unreviewed",
     "source_id": "realia:Sandal",
     "source_primary_id": "realia:Sandal",
-    "source_sha256": "a6433cd1f07e5f26a7a52cc4d5d33b00baed20e2ffa746872fa13633870d4515"
+    "source_sha256": "a6433cd1f07e5f26a7a52cc4d5d33b00baed20e2ffa746872fa13633870d4515",
+    "editorial_field_changes": [
+      {
+        "action": "restore_source_attested_object_word_instances",
+        "added_reference_values": {
+          "references": [
+            "05025009",
+            "08004008"
+          ]
+        },
+        "added_original_word_groups": {
+          "wlc": [
+            [
+              "o050250090071"
+            ],
+            [
+              "o080040080071"
+            ]
+          ]
+        },
+        "reason": "Deuteronomy 25:9 and Ruth 4:8 directly name sandals.",
+        "evidence": [
+          "ORG BCV8 05025009",
+          "ORG BCV8 08004008",
+          "Pinned original-word texts/glosses inspected in Clear-Bible/Macula Hebrew WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c; token IDs copied verbatim; source metadata and scripture unchanged"
+        ]
+      }
+    ]
   },
   "explicit_instances": {
     "SBLGNT": [
@@ -55,6 +82,14 @@
       ],
       [
         "n44013025025"
+      ]
+    ],
+    "wlc": [
+      [
+        "o050250090071"
+      ],
+      [
+        "o080040080071"
       ]
     ]
   },
@@ -96,7 +131,9 @@
     "43001027",
     "44007033",
     "44012008",
-    "44013025"
+    "44013025",
+    "05025009",
+    "08004008"
   ],
   "subject_referents": {},
   "type": "realia",

@@ -15,7 +15,40 @@
     "review_status": "source_unreviewed",
     "source_id": "realia:Censer",
     "source_primary_id": "realia:Censer",
-    "source_sha256": "e8baa327e16a173cda4b0973eae4243ac6f5f5cd326fbdf4d715db4901cde33e"
+    "source_sha256": "e8baa327e16a173cda4b0973eae4243ac6f5f5cd326fbdf4d715db4901cde33e",
+    "editorial_field_changes": [
+      {
+        "action": "restore_source_attested_object_word_instances",
+        "added_reference_values": {
+          "references": [
+            "03016012",
+            "04016017"
+          ]
+        },
+        "added_original_word_groups": {
+          "wlc": [
+            [
+              "o030160120032"
+            ],
+            [
+              "o040160170031"
+            ],
+            [
+              "o040160170111"
+            ],
+            [
+              "o040160170181"
+            ]
+          ]
+        },
+        "reason": "The original WLC describes explicit censers/firepans in Leviticus 16:12 and Numbers 16:17.",
+        "evidence": [
+          "ORG BCV8 03016012",
+          "ORG BCV8 04016017",
+          "Pinned original-word texts/glosses inspected in Clear-Bible/Macula Hebrew WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c; token IDs copied verbatim; source metadata and scripture unchanged"
+        ]
+      }
+    ]
   },
   "explicit_instances": {
     "SBLGNT": [
@@ -24,6 +57,20 @@
       ],
       [
         "n66008005006"
+      ]
+    ],
+    "wlc": [
+      [
+        "o030160120032"
+      ],
+      [
+        "o040160170031"
+      ],
+      [
+        "o040160170111"
+      ],
+      [
+        "o040160170181"
       ]
     ]
   },
@@ -60,7 +107,9 @@
   "realia_type": "other",
   "references": [
     "66008003",
-    "66008005"
+    "66008005",
+    "03016012",
+    "04016017"
   ],
   "subject_referents": {},
   "type": "realia",
