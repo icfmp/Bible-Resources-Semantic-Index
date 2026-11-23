@@ -788,10 +788,12 @@ The separate [47-original-word source editorial report](remaining_47_source_edit
 enumerates all **26 source lexical families** (47 exact original word
 IDs) left unmatched after direct UBS primary headword, exact
 English/French authentic `AlternateLemmas` and original
-`BaseForms.Inflections` metadata checks. All individual original
-word-ID witnesses, authentic Greek spelling, original Strong, LN,
-morphology and references remain recoverable from the pinned-source
-[read-only audit](audit_last_47_lexical_forms.py).
+`BaseForms.Inflections` metadata checks. The durable individual-family
+source evidence and no-link decisions are in that editorial report.
+The completed standalone inflection diagnostic is available only from
+[the immutable pre-retirement revision](https://github.com/icfmp/Bible-Resources-Semantic-Index/blob/f97f70446f0db0d4574fddcf2f589b74e98f30c2/links/dictionaries/ubs-greek/audit_last_47_lexical_forms.py),
+not as a maintained command. The active source-pinned consolidated build
+continues to enforce 47 unmatched original-word IDs and no invented links.
 
 No original UBS source inflection matched those original MACULA
 lemmas as an exact Greek entry. The original UBS source also has
