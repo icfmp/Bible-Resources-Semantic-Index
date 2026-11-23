@@ -11,9 +11,53 @@
     "review_status": "source_unreviewed",
     "source_id": "place:Gibeah.1",
     "source_primary_id": "place:Gibeah.1",
-    "source_sha256": "8c6a931243532684c8674eb07646e2c36c16ad937b49e0bf101d84f76889e4f5"
+    "source_sha256": "8c6a931243532684c8674eb07646e2c36c16ad937b49e0bf101d84f76889e4f5",
+    "editorial_field_changes": [
+      {
+        "action": "restore_direct_original_word_and_verse_witness",
+        "added_reference_values": {
+          "references": [
+            "09010026",
+            "09011004",
+            "23010029"
+          ]
+        },
+        "added_original_word_groups": {
+          "wlc": [
+            [
+              "o090100260051"
+            ],
+            [
+              "o090110040031"
+            ],
+            [
+              "o230100290081"
+            ]
+          ]
+        },
+        "reason": "1 Samuel 10:26, 11:4 and Isaiah 10:29 name Gibeah in Benjamin; locative ending is not treated as a separate name token.",
+        "evidence": [
+          "ORG BCV8 09010026",
+          "ORG BCV8 09011004",
+          "ORG BCV8 23010029",
+          "Exact source token(s) independently located in pinned Macula WLC TSV at source.lock.json edition hash; each source English gloss and original lemma confirms the named place; no auto-merged identity"
+        ]
+      }
+    ]
   },
-  "explicit_instances": {},
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o090100260051"
+      ],
+      [
+        "o090110040031"
+      ],
+      [
+        "o230100290081"
+      ]
+    ]
+  },
   "id": "place:Gibeah.1",
   "is_artifact": false,
   "is_person": false,
@@ -43,7 +87,11 @@
   ],
   "primary_id": "place:Gibeah.1",
   "pronominal_referents": {},
-  "references": [],
+  "references": [
+    "09010026",
+    "09011004",
+    "23010029"
+  ],
   "subject_referents": {},
   "subregion_of": [
     "place:TerritoryOfBenjamin"
