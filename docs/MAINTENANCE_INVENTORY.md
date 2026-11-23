@@ -20,7 +20,7 @@ All **868 restricted ACAI Key Terms** remain outside the public entity data.
 The native builder must not rewrite original word IDs, verse references,
 editorial metadata or translation-source choices.
 
-## Shared scripts — 22 Python files
+## Shared scripts — 23 Python files
 
 | Maintained role | Scripts | Current caller or protection |
 | --- | --- | --- |
@@ -31,6 +31,7 @@ editorial metadata or translation-source choices.
 | Lookup and distribution helpers | `resolve.py`, `distribution_profile.py`, `release_contract.py`, `stage_entity_candidate.py`, `validate_external_crosswalk.py` | Dedicated unit tests; candidate/contract verification in native CI, never direct publication |
 | Integrity and historical-asset checks | `write_integrity_receipt.py`, `verify_historical_asset.py`, `inspect_v1_published_assets.py` | Native build / pinned lexical CI and their tests; read-only V1 public ZIP compatibility inspection |
 | Caller inventory and workflow integrity | `tool_registry.py` | Read-only inventory of shared/source-owned tools, code/test/workflow/doc references; offline CI refuses nonexistent static Python workflow paths. Never infers deletion eligibility. |
+| Strict regenerated baseline parity | `verify_generated_json.py` | Generic read-only comparison of two **distinct, present** strict JSON files, rejecting duplicate keys, nonstandard numbers and all value/type changes; both pinned UBS source workflows depend on it. Source checks and editorial reviews remain independent. |
 
 Only current reusable scripts belong in `scripts/`. The historical ACAI
 source-replay compiler is isolated in
@@ -68,7 +69,13 @@ identity guard, or published archive verification was removed.
 
 The Greek and Hebrew workflows first verify exact upstream commits and
 source checksums, then reconstruct source-backed indexes, check reviewed
-decisions and compare historical public archives. Every source-local
+decisions and compare historical public archives. **A missing checked-in
+baseline now fails**: the earlier Hebrew initial-import fallback is no longer
+allowed. The shared strict JSON verifier compares source-rebuilt resources
+against the canonical committed baselines, with no edition-specific logic.
+The formerly separate Hebrew headword-scope report step was retired because
+both source-pinned private/final builders already call the maintained
+`audit_dictionary_scope.py` on actual WLC inputs; its tests remain. Every source-local
 `test_*.py` runs individually via a fail-fast glob. Their full research
 chains remain where the source-specific build genuinely depends on them;
 a report-only stage with no downstream use is not a reason to keep an
