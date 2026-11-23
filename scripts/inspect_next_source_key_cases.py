@@ -60,7 +60,14 @@ def summarize(data: Path, candidates: Path, paths: dict[str, Path]) -> list[dict
         key_cases=[]
         for verse in row["key_verses"]:
             if verse not in record["key_references"]:
-                raise ValueError(f"Candidate {source_id}: lost original key {verse}")
+                valid_removals=[
+                    c for c in record["bsi"].get("editorial_field_changes",[])
+                    if verse in c.get("replaced_field_values",{}).get("before",{}).get("key_references",[])
+                    and verse not in c.get("replaced_field_values",{}).get("after",{}).get("key_references",[])
+                    and c.get("reason") and c.get("evidence")
+                ]
+                if not valid_removals:
+                    raise ValueError(f"Candidate {source_id}: key {verse} disappeared without a reversible evidenced correction")
             nearby=[]
             for vv in sorted(verse_neighbors(verse)):
                 seq=words.get(vv,[])
