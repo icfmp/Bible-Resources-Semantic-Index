@@ -101,6 +101,19 @@ alignment. Numeric ordinal proximity **never proves** a replacement word;
 repeated verse shifts **never prove** a legitimate versification conversion.
 The original problem counts must still match the full importer receipt.
 
+The checked-in [target-gap audit lock](target-gap-triage.lock.json) freezes
+the **full pinned source audit**, not a reviewed translation correction:
+all 996 NT missing selectors lie strictly **after** the last attested
+ordinal in their target verse (836 distinct verses; 683 are exactly
+one primary word ordinal higher, 199 two higher, 71 three higher; other
+gaps also exist). The 920 OT cross-verse alignment records resolve to
+**320 distinct source→target BCV pairs**: 820 records have differing
+verses in the same chapter, 100 differ by chapter, and none crosses
+book boundaries. These patterned coordinates help prioritize independent
+edition/versification comparison but certify **zero** changes. The
+workflow checks the generated report against this JSON lock fail-closed.
+
+
 **No fabricated alignments, upstream source edits, editorial approvals or
 claims of full-corpus coverage** follow from a clean transformation.
 
