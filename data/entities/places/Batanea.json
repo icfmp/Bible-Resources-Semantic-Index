@@ -2,10 +2,46 @@
   "added_entry": false,
   "bsi": {
     "canonical_id": "place:Batanea",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:Batanea",
     "source_primary_id": "place:Batanea",
-    "source_sha256": "1effb155f7d8898e6195ee1926fe34ccb413089d26f1abd3ffc60767c37b7c9a"
+    "source_sha256": "1effb155f7d8898e6195ee1926fe34ccb413089d26f1abd3ffc60767c37b7c9a",
+    "editorial_reason": "Correct a false directly-named canonical place claim: the inherited key verse names a different original-language term or a broader waterbody, not this historically named locality. Historical context keys remain untouched.",
+    "editorial_evidence": [
+      "Pinned exact Macula Hebrew WLC @47db250bd55d0d8577f2a94fba114ef16c35b23c and Greek SBLGNT @8423afe47b9e8f24b7772e808af45c7159a6fe7e, inspected with the original-verse tool",
+      "Deuteronomy 32:14 WLC o050320140101 explicitly names Bashan (בָשָׁן), not the later regional name Batanea/Batanaea."
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "remove_unattested_modern_or_variant_place_name_scope",
+        "reason": "Correct a false directly-named canonical place claim: the inherited key verse names a different original-language term or a broader waterbody, not this historically named locality. Historical context keys remain untouched.",
+        "evidence": [
+          "Pinned exact Macula Hebrew WLC @47db250bd55d0d8577f2a94fba114ef16c35b23c and Greek SBLGNT @8423afe47b9e8f24b7772e808af45c7159a6fe7e, inspected with the original-verse tool",
+          "Deuteronomy 32:14 WLC o050320140101 explicitly names Bashan (בָשָׁן), not the later regional name Batanea/Batanaea."
+        ],
+        "replaced_field_values": {
+          "before": {
+            "mentioned_in_bible": true,
+            "non_biblical": false,
+            "alternate_labels": [
+              "Batanaea",
+              "Bashan"
+            ],
+            "referred_to_as": [
+              "place:Bashan"
+            ]
+          },
+          "after": {
+            "mentioned_in_bible": false,
+            "non_biblical": true,
+            "alternate_labels": [
+              "Batanaea"
+            ],
+            "referred_to_as": []
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {},
   "id": "place:Batanea",
@@ -17,14 +53,13 @@
   "localizations": {
     "eng": {
       "alternate_labels": [
-        "Batanaea",
-        "Bashan"
+        "Batanaea"
       ],
       "preferred_label": "Batanea"
     }
   },
-  "mentioned_in_bible": true,
-  "non_biblical": false,
+  "mentioned_in_bible": false,
+  "non_biblical": true,
   "only_mentioned_in_apocrypha": false,
   "place_types": {
     "acai": [
@@ -34,9 +69,6 @@
   "primary_id": "place:Batanea",
   "pronominal_referents": {},
   "references": [],
-  "referred_to_as": [
-    "place:Bashan"
-  ],
   "subject_referents": {},
   "type": "place"
 }
