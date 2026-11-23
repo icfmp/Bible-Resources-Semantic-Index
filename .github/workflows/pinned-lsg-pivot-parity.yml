@@ -1,0 +1,102 @@
+name: Audit MACULA pivot parity for pinned LSG candidate
+
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/pinned-lsg-pivot-parity.yml"
+      - "scripts/audit_translation_pivot_parity.py"
+      - "tests/test_translation_pivot_parity.py"
+      - "links/alignments/clear-bible-lsg/pivot.lock.json"
+      - "links/alignments/clear-bible-lsg/pivot-audit.lock.json"
+      - "links/alignments/clear-bible-lsg/manifest.json"
+      - "links/alignments/clear-bible-lsg/receipt.lock.json"
+      - "scripts/build_translation_alignments.py"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit-parity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - name: Check out current BRSI branch
+        uses: actions/checkout@v4
+      - name: Check out exact independent Greek MACULA source
+        uses: actions/checkout@v4
+        with:
+          repository: Clear-Bible/macula-greek
+          ref: 8423afe47b9e8f24b7772e808af45c7159a6fe7e
+          path: macula-greek
+          sparse-checkout: SBLGNT/tsv
+          lfs: true
+          persist-credentials: false
+      - name: Check out exact independent Hebrew MACULA source
+        uses: actions/checkout@v4
+        with:
+          repository: Clear-Bible/macula-hebrew
+          ref: 47db250bd55d0d8577f2a94fba114ef16c35b23c
+          path: macula-hebrew
+          sparse-checkout: WLC/tsv
+          lfs: true
+          persist-credentials: false
+      - name: Verify original BRSI MACULA revisions
+        run: |
+          set -euo pipefail
+          test "$(git -C macula-greek rev-parse HEAD)" = "8423afe47b9e8f24b7772e808af45c7159a6fe7e"
+          test "$(git -C macula-hebrew rev-parse HEAD)" = "47db250bd55d0d8577f2a94fba114ef16c35b23c"
+      - name: Run isolated synthetic negative and positive regressions
+        run: python3 -I -m unittest discover -s tests -p 'test_translation_pivot_parity.py' -v
+      - name: Download original Clear.Bible snapshot without changing upstream data
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/brsi-lsg-source
+          git -C /tmp/brsi-lsg-source init
+          git -C /tmp/brsi-lsg-source remote add origin https://github.com/Clear-Bible/Alignments.git
+          git -C /tmp/brsi-lsg-source sparse-checkout init --cone
+          git -C /tmp/brsi-lsg-source sparse-checkout set data/sources data/fra/alignments/LSG data/fra/targets/LSG
+          git -C /tmp/brsi-lsg-source -c protocol.version=2 fetch --depth 1 --filter=blob:none origin c99bd0ae6946775f932517656308ca19fc706921
+          git -C /tmp/brsi-lsg-source checkout --detach FETCH_HEAD
+          test "$(git -C /tmp/brsi-lsg-source rev-parse HEAD)" = "c99bd0ae6946775f932517656308ca19fc706921"
+      - name: Build exact immutable LSG candidate for independent pivot comparison
+        run: |
+          set -euo pipefail
+          python3 -I scripts/build_translation_alignments.py \
+            --manifest links/alignments/clear-bible-lsg/manifest.json \
+            --corrections links/alignments/clear-bible-lsg/corrections.json \
+            --upstream-root /tmp/brsi-lsg-source \
+            --output-dir /tmp/brsi-lsg-candidate
+          python3 -I scripts/verify_generated_json.py \
+            --generated /tmp/brsi-lsg-candidate/receipt.json \
+            --baseline links/alignments/clear-bible-lsg/receipt.lock.json
+      - name: Require exact source-pinned MACULA/LSG parity and immutable evidence
+        run: |
+          set -euo pipefail
+          python3 -I scripts/audit_translation_pivot_parity.py \
+            --alignment-manifest links/alignments/clear-bible-lsg/manifest.json \
+            --candidate-receipt links/alignments/clear-bible-lsg/receipt.lock.json \
+            --nt-source /tmp/brsi-lsg-source/data/sources/SBLGNT.tsv \
+            --ot-source /tmp/brsi-lsg-source/data/sources/WLCM.tsv \
+            --nt-candidate /tmp/brsi-lsg-candidate/nt.json \
+            --ot-candidate /tmp/brsi-lsg-candidate/ot.json \
+            --pivot-manifest links/alignments/clear-bible-lsg/pivot.lock.json \
+            --nt-pivot macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv \
+            --ot-pivot macula-hebrew/WLC/tsv/macula-hebrew.tsv \
+            --output /tmp/brsi-lsg-pivot-parity.json
+          python3 -I scripts/verify_generated_json.py \
+            --generated /tmp/brsi-lsg-pivot-parity.json \
+            --baseline links/alignments/clear-bible-lsg/pivot-audit.lock.json
+          python3 -I - <<'PY'
+          import json
+          from pathlib import Path
+          report=json.loads(Path('/tmp/brsi-lsg-pivot-parity.json').read_text())
+          assert not report['publication_authorized']
+          assert sum(r['linked_ids_absent_from_brsi_macula']
+                     for r in report['canon_audits'].values()) == 0
+          assert not any(r['identity_certified'] or r['contextual_senses_certified']
+                         or r['target_lsg_edition_certified']
+                         for r in report['canon_audits'].values())
+          PY
+      - name: No publication
+        run: echo "Private source audit only. No origin text or LSG candidate uploaded."

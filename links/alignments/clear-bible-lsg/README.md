@@ -10,6 +10,29 @@
 - **Upstream OT target TSV contains only its header, 66 bytes**. Consequently no OT French-token membership or omission census can be verified from the published TSV; every structurally otherwise sound OT group remains `target_unverified`, never `source_attested`. This does not imply the alignments are absent or incorrect.
 - Existing BRSI UBS Greek/Hebrew streams use separately pinned editions of MACULA. Matching a Clear.Bible source selector to an internal token is not a proof of whole-edition equivalence. Target LSG equivalence to the app/SWORD edition has **not** been established. Never infer this from the label “1910.”
 
+## Independent source-pivot audit (source compatibility, not a remapping)
+
+The separately maintained [original-word parity auditor](../../../scripts/audit_translation_pivot_parity.py)
+and [source-pinned CI](../../../.github/workflows/pinned-lsg-pivot-parity.yml)
+compare **all** original token IDs in the Clear.Bible SBLGNT/WLCM TSVs
+against the exact independently pinned BRSI MACULA SBLGNT/WLC TSV
+editions used by the UBS bridges. The report partitions original tokens
+present in both editions, source-only and pivot-only, plus the aligned
+source token IDs that can or cannot be looked up through BRSI. It records
+per-book aggregates, full-file SHA-256 and exact revision IDs without
+exporting original text, lemmas or third-party dictionary fields.
+
+For aligned tokens with the *same exact ID*, the auditor separately
+counts **NFC-identical, different and unavailable source lemmas**.
+The WLCM TSV's missing lemma column is an explicit `unavailable`, not
+permission to reconstruct a spelling or claim a confirmed identity.
+The auditor does not silently normalize different token ID systems,
+merge editorial distinctions, certify original readings or choose an
+UBS contextual sense. The source checksums and summary will be frozen
+in the maintained [pivot manifest](pivot.lock.json) and
+[pivot parity evidence](pivot-audit.lock.json) after full independent
+source-driven validation; neither is a public release.
+
 ## Nonpublishing deterministic build
 
 Use a local exact checkout of the upstream commit (the CI job performs a sparse pinned clone), then:
@@ -50,12 +73,20 @@ schema, which retains 1:n, n:1, n:m and unresolved records.
   difference or another data error, and were not corrected by guessing.
   The other 202,677 groups have structurally consistent references but
   **cannot be called fully verified target links**.
-- BRSI's independently pinned Hebrew WLC source audit contains a different
-  original-token count (475,911). These Clear.Bible WLCM IDs must not be
-  silently substituted for BRSI's separately pinned WLC IDs. GitHub upstream
-  [issue #5](https://github.com/Clear-Bible/Alignments/issues/5) also
-  tracks historic WLC identifier compatibility. Source-token identity
-  reconciliation remains a hard downstream consumption gate.
+- **Independent MACULA coordinate audit, verified on pinned sources:** all
+  137,741 Clear.Bible Greek IDs appear exactly in BRSI SBLGNT, with the
+  **104,807 aligned words' Greek lemmas identical after NFC**. All 469,476
+  Clear.Bible WLCM source IDs appear exactly in BRSI WLC, including the
+  **203,597 linked Hebrew IDs**; BRSI WLC additionally includes **6,435
+  suffix-bearing Hebrew IDs**, which remain separately identifiable and are
+  not coerced to numeric originals. Clear.Bible WLCM lacks a lemma column,
+  so its aligned Hebrew original lemmas remain **uncorroborated**.
+  See [independent parity receipts](pivot-audit.lock.json), whose comparison
+  is enforced by pinned CI. ID-coordinate parity does **not** establish
+  identical source texts/editions, guarantee a correct translation or resolve
+  downstream LSG tokenization. GitHub upstream
+  [issue #5](https://github.com/Clear-Bible/Alignments/issues/5) tracks
+  historical WLC source ID compatibility.
 
 **No fabricated alignments, upstream source edits, editorial approvals or
 claims of full-corpus coverage** follow from a clean transformation.

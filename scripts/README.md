@@ -36,6 +36,12 @@ never changes the application. See [V1 consumer guide](../docs/V1_CONSUMPTION.md
   edition-qualified candidate JSON and SHA-256 receipts from exact upstream
   source/target token corpora. See [Clear.Bible LSG](../links/alignments/clear-bible-lsg/README.md).
   It does not resolve lexemes or infer missing French words.
+- `audit_translation_pivot_parity.py`: nonpublishing comparison of
+  Clear.Bible SBLGNT/WLCM original token IDs against exact, independently pinned
+  BRSI MACULA SBLGNT/WLC corpora. Its per-book evidence and SHA-256 digest
+  are locked under [the LSG candidate directory](../links/alignments/clear-bible-lsg/README.md).
+  Missing original lemmas and morphological Hebrew suffix IDs are preserved
+  as explicit limitations; no guessed translation/lexical-sense mapping.
 - `tool_registry.py`: read-only caller inventory (`--json`) and offline
   workflow-path validation (`--check-workflows`). It inventories shared and
   source-owned tools without guessing that a missing static caller means a
