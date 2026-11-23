@@ -13,7 +13,7 @@
   },
   "bsi": {
     "canonical_id": "realia:Sandal",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "realia:Sandal",
     "source_primary_id": "realia:Sandal",
     "source_sha256": "a6433cd1f07e5f26a7a52cc4d5d33b00baed20e2ffa746872fa13633870d4515",
@@ -42,7 +42,160 @@
           "ORG BCV8 08004008",
           "Pinned original-word texts/glosses inspected in Clear-Bible/Macula Hebrew WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c; token IDs copied verbatim; source metadata and scripture unchanged"
         ]
+      },
+      {
+        "action": "restore_pinned_direct_object_name_in_source_key",
+        "reason": "Restore exact original-language source word witness from the existing source-key object reference, without promoting English gloss analogies or unrelated neighboring words.",
+        "evidence": [
+          "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c / macula-greek@8423afe47b9e8f24b7772e808af45c7159a6fe7e",
+          "Exodus 3:5 directly commands removal of sandals (נַעַל) before the holy ground; no conjectural footwear.",
+          "02003005 wlc = o020030050061"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [
+              "40003011",
+              "40010010",
+              "41001007",
+              "41006009",
+              "42003016",
+              "42010004",
+              "42015022",
+              "42022035",
+              "43001027",
+              "44007033",
+              "44012008",
+              "44013025",
+              "05025009",
+              "08004008"
+            ],
+            "explicit_instances": {
+              "SBLGNT": [
+                [
+                  "n41006009003"
+                ],
+                [
+                  "n44012008011"
+                ],
+                [
+                  "n40003011022"
+                ],
+                [
+                  "n40010010009"
+                ],
+                [
+                  "n41001007019"
+                ],
+                [
+                  "n42003016024"
+                ],
+                [
+                  "n42010004007"
+                ],
+                [
+                  "n42015022025"
+                ],
+                [
+                  "n42022035012"
+                ],
+                [
+                  "n43001027015"
+                ],
+                [
+                  "n44007033008"
+                ],
+                [
+                  "n44013025025"
+                ]
+              ],
+              "wlc": [
+                [
+                  "o050250090071"
+                ],
+                [
+                  "o080040080071"
+                ]
+              ]
+            }
+          },
+          "after": {
+            "references": [
+              "02003005",
+              "05025009",
+              "08004008",
+              "40003011",
+              "40010010",
+              "41001007",
+              "41006009",
+              "42003016",
+              "42010004",
+              "42015022",
+              "42022035",
+              "43001027",
+              "44007033",
+              "44012008",
+              "44013025"
+            ],
+            "explicit_instances": {
+              "SBLGNT": [
+                [
+                  "n41006009003"
+                ],
+                [
+                  "n44012008011"
+                ],
+                [
+                  "n40003011022"
+                ],
+                [
+                  "n40010010009"
+                ],
+                [
+                  "n41001007019"
+                ],
+                [
+                  "n42003016024"
+                ],
+                [
+                  "n42010004007"
+                ],
+                [
+                  "n42015022025"
+                ],
+                [
+                  "n42022035012"
+                ],
+                [
+                  "n43001027015"
+                ],
+                [
+                  "n44007033008"
+                ],
+                [
+                  "n44013025025"
+                ]
+              ],
+              "wlc": [
+                [
+                  "o050250090071"
+                ],
+                [
+                  "o080040080071"
+                ],
+                [
+                  "o020030050061"
+                ]
+              ]
+            }
+          }
+        }
       }
+    ],
+    "editorial_reason": "Restore exact original-language source word witness from the existing source-key object reference, without promoting English gloss analogies or unrelated neighboring words.",
+    "editorial_evidence": [
+      "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c / macula-greek@8423afe47b9e8f24b7772e808af45c7159a6fe7e",
+      "Exodus 3:5 directly commands removal of sandals (נַעַל) before the holy ground; no conjectural footwear.",
+      "02003005 wlc = o020030050061"
     ]
   },
   "explicit_instances": {
@@ -90,6 +243,9 @@
       ],
       [
         "o080040080071"
+      ],
+      [
+        "o020030050061"
       ]
     ]
   },
@@ -120,6 +276,9 @@
   "pronominal_referents": {},
   "realia_type": "other",
   "references": [
+    "02003005",
+    "05025009",
+    "08004008",
     "40003011",
     "40010010",
     "41001007",
@@ -131,9 +290,7 @@
     "43001027",
     "44007033",
     "44012008",
-    "44013025",
-    "05025009",
-    "08004008"
+    "44013025"
   ],
   "subject_referents": {},
   "type": "realia",
