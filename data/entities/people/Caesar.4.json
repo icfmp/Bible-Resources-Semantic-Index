@@ -15,10 +15,160 @@
   },
   "bsi": {
     "canonical_id": "person:Tiberius",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "person:Caesar.4",
     "source_primary_id": "person:Tiberius",
-    "source_sha256": "170718abefb9756b18fec1b6ad1c9c8aa08fe11396b829344275681b8895f615"
+    "source_sha256": "170718abefb9756b18fec1b6ad1c9c8aa08fe11396b829344275681b8895f615",
+    "editorial_reason": "Restore original-word mentions for the explicitly named person in reviewed source-key verses. The historical source alias/canonical identity is preserved and no similarly named individual is merged.",
+    "editorial_evidence": [
+      "Pinned Clear-Bible Macula WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c / SBLGNT@8423afe47b9e8f24b7772e808af45c7159a6fe7e, full original-word source audit and exact ID verification in GitHub Actions",
+      "Luke 3:1 explicitly names Tiberius Caesar in two adjacent Greek tokens, the indexed emperor person:Tiberius, not merely an unspecified Caesar.",
+      "42003001 SBLGNT: n42003001007, n42003001008"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "restore_exact_person_name_witnesses_from_original",
+        "reason": "Restore original-word mentions for the explicitly named person in reviewed source-key verses. The historical source alias/canonical identity is preserved and no similarly named individual is merged.",
+        "evidence": [
+          "Pinned Clear-Bible Macula WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c / SBLGNT@8423afe47b9e8f24b7772e808af45c7159a6fe7e, full original-word source audit and exact ID verification in GitHub Actions",
+          "Luke 3:1 explicitly names Tiberius Caesar in two adjacent Greek tokens, the indexed emperor person:Tiberius, not merely an unspecified Caesar.",
+          "42003001 SBLGNT: n42003001007, n42003001008"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [
+              "40022017",
+              "40022021",
+              "41012014",
+              "41012016",
+              "41012017",
+              "42020022",
+              "42020024",
+              "42020025",
+              "42023002",
+              "43019012",
+              "43019015"
+            ],
+            "explicit_instances": {
+              "SBLGNT": [
+                [
+                  "n40022017010"
+                ],
+                [
+                  "n40022021003"
+                ],
+                [
+                  "n40022021010",
+                  "n40022021011"
+                ],
+                [
+                  "n41012014033"
+                ],
+                [
+                  "n41012016018"
+                ],
+                [
+                  "n41012017007"
+                ],
+                [
+                  "n41012017009"
+                ],
+                [
+                  "n42020022003"
+                ],
+                [
+                  "n42020024012"
+                ],
+                [
+                  "n42020025009",
+                  "n42020025010"
+                ],
+                [
+                  "n42023002015"
+                ],
+                [
+                  "n43019012020"
+                ],
+                [
+                  "n43019012028"
+                ],
+                [
+                  "n43019015024"
+                ]
+              ]
+            }
+          },
+          "after": {
+            "references": [
+              "40022017",
+              "40022021",
+              "41012014",
+              "41012016",
+              "41012017",
+              "42003001",
+              "42020022",
+              "42020024",
+              "42020025",
+              "42023002",
+              "43019012",
+              "43019015"
+            ],
+            "explicit_instances": {
+              "SBLGNT": [
+                [
+                  "n40022017010"
+                ],
+                [
+                  "n40022021003"
+                ],
+                [
+                  "n40022021010",
+                  "n40022021011"
+                ],
+                [
+                  "n41012014033"
+                ],
+                [
+                  "n41012016018"
+                ],
+                [
+                  "n41012017007"
+                ],
+                [
+                  "n41012017009"
+                ],
+                [
+                  "n42020022003"
+                ],
+                [
+                  "n42020024012"
+                ],
+                [
+                  "n42020025009",
+                  "n42020025010"
+                ],
+                [
+                  "n42023002015"
+                ],
+                [
+                  "n43019012020"
+                ],
+                [
+                  "n43019012028"
+                ],
+                [
+                  "n43019015024"
+                ],
+                [
+                  "n42003001007",
+                  "n42003001008"
+                ]
+              ]
+            }
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "SBLGNT": [
@@ -65,6 +215,10 @@
       ],
       [
         "n43019015024"
+      ],
+      [
+        "n42003001007",
+        "n42003001008"
       ]
     ]
   },
@@ -100,6 +254,7 @@
     "41012014",
     "41012016",
     "41012017",
+    "42003001",
     "42020022",
     "42020024",
     "42020025",
