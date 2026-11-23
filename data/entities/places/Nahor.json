@@ -8,12 +8,55 @@
   },
   "bsi": {
     "canonical_id": "place:Nahor",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:Nahor",
     "source_primary_id": "place:Nahor",
-    "source_sha256": "631da6608d295684a0920429722668afbd93172064da523b59df2471703f638a"
+    "source_sha256": "631da6608d295684a0920429722668afbd93172064da523b59df2471703f638a",
+    "editorial_reason": "Restore the independently attested complete biblical geographical/sanctuary phrase without merging lexically or geographically distinct places.",
+    "editorial_evidence": [
+      "Exact pinned Macula WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c / SBLGNT@8423afe47b9e8f24b7772e808af45c7159a6fe7e, complete verse inspection in source-audit PR #136",
+      "Genesis 24:10 explicitly names the city of Nahor (עיר נחור); two-term geographic expression, not evidence the city and its named ancestor are the same entity.",
+      "BCV8 01024010 exact wlc compound o010240100181 + o010240100191"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "restore_direct_pinned_named_location_phrase",
+        "reason": "Restore the independently attested complete biblical geographical/sanctuary phrase without merging lexically or geographically distinct places.",
+        "evidence": [
+          "Exact pinned Macula WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c / SBLGNT@8423afe47b9e8f24b7772e808af45c7159a6fe7e, complete verse inspection in source-audit PR #136",
+          "Genesis 24:10 explicitly names the city of Nahor (עיר נחור); two-term geographic expression, not evidence the city and its named ancestor are the same entity.",
+          "BCV8 01024010 exact wlc compound o010240100181 + o010240100191"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [],
+            "explicit_instances": {}
+          },
+          "after": {
+            "references": [
+              "01024010"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o010240100181",
+                  "o010240100191"
+                ]
+              ]
+            }
+          }
+        }
+      }
+    ]
   },
-  "explicit_instances": {},
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o010240100181",
+        "o010240100191"
+      ]
+    ]
+  },
   "id": "place:Nahor",
   "is_artifact": false,
   "is_person": false,
@@ -38,7 +81,9 @@
   },
   "primary_id": "place:Nahor",
   "pronominal_referents": {},
-  "references": [],
+  "references": [
+    "01024010"
+  ],
   "subject_referents": {},
   "subregion_of": [
     "place:Mesopotamia"

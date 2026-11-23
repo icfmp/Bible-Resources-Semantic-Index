@@ -15,12 +15,126 @@
   ],
   "bsi": {
     "canonical_id": "place:Israel",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:Israel",
     "source_primary_id": "place:Israel",
-    "source_sha256": "fc6643d9ea17c2aba698e3380d3b2a5fd9bb84db13f7f374acd0b5af9e69e4f8"
+    "source_sha256": "fc6643d9ea17c2aba698e3380d3b2a5fd9bb84db13f7f374acd0b5af9e69e4f8",
+    "editorial_reason": "Restore exact original-language direct mention(s) from independently inspected inherited key-verses while distinguishing contextual verse claims and similarly named identities. | Remove an inherited key/alias that incorrectly attributes a distinct generic, geographical or personal lexical reference to this narrowly defined source identity.",
+    "editorial_evidence": [
+      "Exact pinned Macula Hebrew WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c / Greek SBLGNT@8423afe47b9e8f24b7772e808af45c7159a6fe7e, fully inspected in PR #136 original-verse CI",
+      "Ezekiel 11:17; 20:38,42; 37:12 each explicitly uses land-of-Israel (אדמת ישראל) as a geographic phrase, unlike a generic reference to the person Jacob or all Israel as a people.",
+      "26011017 wlc o260110170211 + o260110170221",
+      "26020038 wlc o260200380111 + o260200380121",
+      "26020042 wlc o260200420081 + o260200420091",
+      "26037012 wlc o260370120211 + o260370120221",
+      "Clear-Bible Macula WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c and Greek SBLGNT@8423afe47b9e8f24b7772e808af45c7159a6fe7e, complete original-verse inspection in #136 CI",
+      "Matthew 2:19 pinned Greek mentions Egypt, Joseph, Herod and an angel but no Israel or 'land of Israel'; that phrase occurs in Matthew 2:20, a different verse. Do not transfer or fabricate a replacement reference. 'Jacob' identifies an individual ancestor, not a named synonym for the land of Israel."
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "restore_independently_pinned_exact_direct_mention",
+        "reason": "Restore exact original-language direct mention(s) from independently inspected inherited key-verses while distinguishing contextual verse claims and similarly named identities.",
+        "evidence": [
+          "Exact pinned Macula Hebrew WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c / Greek SBLGNT@8423afe47b9e8f24b7772e808af45c7159a6fe7e, fully inspected in PR #136 original-verse CI",
+          "Ezekiel 11:17; 20:38,42; 37:12 each explicitly uses land-of-Israel (אדמת ישראל) as a geographic phrase, unlike a generic reference to the person Jacob or all Israel as a people.",
+          "26011017 wlc o260110170211 + o260110170221",
+          "26020038 wlc o260200380111 + o260200380121",
+          "26020042 wlc o260200420081 + o260200420091",
+          "26037012 wlc o260370120211 + o260370120221"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [],
+            "explicit_instances": {}
+          },
+          "after": {
+            "references": [
+              "26011017",
+              "26020038",
+              "26020042",
+              "26037012"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o260110170211",
+                  "o260110170221"
+                ],
+                [
+                  "o260200380111",
+                  "o260200380121"
+                ],
+                [
+                  "o260200420081",
+                  "o260200420091"
+                ],
+                [
+                  "o260370120211",
+                  "o260370120221"
+                ]
+              ]
+            }
+          }
+        }
+      },
+      {
+        "action": "remove_source_proven_wrong_identity_key",
+        "reason": "Remove an inherited key/alias that incorrectly attributes a distinct generic, geographical or personal lexical reference to this narrowly defined source identity.",
+        "evidence": [
+          "Clear-Bible Macula WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c and Greek SBLGNT@8423afe47b9e8f24b7772e808af45c7159a6fe7e, complete original-verse inspection in #136 CI",
+          "Matthew 2:19 pinned Greek mentions Egypt, Joseph, Herod and an angel but no Israel or 'land of Israel'; that phrase occurs in Matthew 2:20, a different verse. Do not transfer or fabricate a replacement reference. 'Jacob' identifies an individual ancestor, not a named synonym for the land of Israel."
+        ],
+        "replaced_field_values": {
+          "before": {
+            "key_references": [
+              "13013001",
+              "26011017",
+              "26020038",
+              "26020042",
+              "26037012",
+              "40002019"
+            ],
+            "alternate_labels": [
+              "Jacob",
+              "Northern Kingdom"
+            ]
+          },
+          "after": {
+            "key_references": [
+              "13013001",
+              "26011017",
+              "26020038",
+              "26020042",
+              "26037012"
+            ],
+            "alternate_labels": [
+              "Northern Kingdom"
+            ]
+          }
+        }
+      }
+    ]
   },
-  "explicit_instances": {},
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o260110170211",
+        "o260110170221"
+      ],
+      [
+        "o260200380111",
+        "o260200380121"
+      ],
+      [
+        "o260200420081",
+        "o260200420091"
+      ],
+      [
+        "o260370120211",
+        "o260370120221"
+      ]
+    ]
+  },
   "id": "place:Israel",
   "is_artifact": false,
   "is_person": false,
@@ -29,13 +143,11 @@
     "26011017",
     "26020038",
     "26020042",
-    "26037012",
-    "40002019"
+    "26037012"
   ],
   "localizations": {
     "eng": {
       "alternate_labels": [
-        "Jacob",
         "Northern Kingdom"
       ],
       "preferred_label": "Israel"
@@ -51,7 +163,12 @@
   },
   "primary_id": "place:Israel",
   "pronominal_referents": {},
-  "references": [],
+  "references": [
+    "26011017",
+    "26020038",
+    "26020042",
+    "26037012"
+  ],
   "subject_referents": {},
   "type": "place"
 }

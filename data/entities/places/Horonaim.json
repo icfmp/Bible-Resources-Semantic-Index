@@ -13,10 +13,44 @@
   },
   "bsi": {
     "canonical_id": "place:Horonaim",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:Horonaim",
     "source_primary_id": "place:Horonaim",
-    "source_sha256": "e23c905157f279f1b5683701d48cfe4a4267196eace0b5366c22c44a54ce6e23"
+    "source_sha256": "e23c905157f279f1b5683701d48cfe4a4267196eace0b5366c22c44a54ce6e23",
+    "editorial_reason": "2 Samuel 13:34 describes Absalom's flight and people approaching along the mountain, with no Hebrew Horonaim place name. The Moabite Horonaim identity has genuine original-word witnesses in Isaiah 15:5 and Jeremiah 48 and must not claim this unrelated reference.",
+    "editorial_evidence": [
+      "Pinned Macula WLC 2 Samuel 13:34, exact original-word inventory: no חֹרֹנַיִם / Horonaim",
+      "Pinned WLC Isaiah 15:5 o230150050171 and Jeremiah 48:3,5,34 direct Horonaim terms remain unchanged"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "remove_unrelated_absalom_mountain_verse_from_moab_horonaim",
+        "reason": "2 Samuel 13:34 describes Absalom's flight and people approaching along the mountain, with no Hebrew Horonaim place name. The Moabite Horonaim identity has genuine original-word witnesses in Isaiah 15:5 and Jeremiah 48 and must not claim this unrelated reference.",
+        "evidence": [
+          "Pinned Macula WLC 2 Samuel 13:34, exact original-word inventory: no חֹרֹנַיִם / Horonaim",
+          "Pinned WLC Isaiah 15:5 o230150050171 and Jeremiah 48:3,5,34 direct Horonaim terms remain unchanged"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [
+              "10013034",
+              "23015005",
+              "24048003",
+              "24048005",
+              "24048034"
+            ]
+          },
+          "after": {
+            "references": [
+              "23015005",
+              "24048003",
+              "24048005",
+              "24048034"
+            ]
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -78,7 +112,6 @@
   "primary_id": "place:Horonaim",
   "pronominal_referents": {},
   "references": [
-    "10013034",
     "23015005",
     "24048003",
     "24048005",

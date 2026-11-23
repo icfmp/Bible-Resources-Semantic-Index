@@ -8,12 +8,57 @@
   },
   "bsi": {
     "canonical_id": "place:HolyPlace.2",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:HolyPlace.2",
     "source_primary_id": "place:HolyPlace.2",
-    "source_sha256": "5cef29fef5fbcead5c90f7bbb2a6e29cf0f29cd10d88de0b15a88711f710e713"
+    "source_sha256": "5cef29fef5fbcead5c90f7bbb2a6e29cf0f29cd10d88de0b15a88711f710e713",
+    "editorial_reason": "Restore the independently attested complete biblical geographical/sanctuary phrase without merging lexically or geographically distinct places.",
+    "editorial_evidence": [
+      "Exact pinned Macula WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c / SBLGNT@8423afe47b9e8f24b7772e808af45c7159a6fe7e, complete verse inspection in source-audit PR #136",
+      "1 Kings 8:10 explicitly refers to the temple holy place (קֹדֶשׁ); 1 Kings 6:5 separately uses the inner sanctuary (דְּבִיר), not a lexical synonym.",
+      "BCV8 11008010 exact wlc compound o110080100052"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "restore_direct_pinned_named_location_phrase",
+        "reason": "Restore the independently attested complete biblical geographical/sanctuary phrase without merging lexically or geographically distinct places.",
+        "evidence": [
+          "Exact pinned Macula WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c / SBLGNT@8423afe47b9e8f24b7772e808af45c7159a6fe7e, complete verse inspection in source-audit PR #136",
+          "1 Kings 8:10 explicitly refers to the temple holy place (קֹדֶשׁ); 1 Kings 6:5 separately uses the inner sanctuary (דְּבִיר), not a lexical synonym.",
+          "BCV8 11008010 exact wlc compound o110080100052"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [],
+            "explicit_instances": {},
+            "alternate_labels": [
+              "Inner Sanctuary"
+            ]
+          },
+          "after": {
+            "references": [
+              "11008010"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o110080100052"
+                ]
+              ]
+            },
+            "alternate_labels": []
+          }
+        }
+      }
+    ]
   },
-  "explicit_instances": {},
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o110080100052"
+      ]
+    ]
+  },
   "id": "place:HolyPlace.2",
   "is_artifact": true,
   "is_person": false,
@@ -23,9 +68,6 @@
   ],
   "localizations": {
     "eng": {
-      "alternate_labels": [
-        "Inner Sanctuary"
-      ],
       "preferred_label": "Holy Place (of the Temple)"
     }
   },
@@ -39,7 +81,9 @@
   },
   "primary_id": "place:HolyPlace.2",
   "pronominal_referents": {},
-  "references": [],
+  "references": [
+    "11008010"
+  ],
   "subject_referents": {},
   "type": "place"
 }

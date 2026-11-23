@@ -12,12 +12,53 @@
   ],
   "bsi": {
     "canonical_id": "place:Babylon.2",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:Babylon.2",
     "source_primary_id": "place:Babylon.2",
-    "source_sha256": "3515b1958538fb9620a42658a4833ec3a8a3fba71d7d398934990a33e3960b78"
+    "source_sha256": "3515b1958538fb9620a42658a4833ec3a8a3fba71d7d398934990a33e3960b78",
+    "editorial_reason": "Restore exact original-language direct mention(s) from independently inspected inherited key-verses while distinguishing contextual verse claims and similarly named identities.",
+    "editorial_evidence": [
+      "Exact pinned Macula Hebrew WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c / Greek SBLGNT@8423afe47b9e8f24b7772e808af45c7159a6fe7e, fully inspected in PR #136 original-verse CI",
+      "Revelation 17:5 calls the symbolic woman Mystery Babylon the Great (Βαβυλών); direct name is symbolic, not a geographic claim about physical Babylon. 1 Peter 5:13 remains uncertain/contextual.",
+      "66017005 SBLGNT n66017005009"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "restore_independently_pinned_exact_direct_mention",
+        "reason": "Restore exact original-language direct mention(s) from independently inspected inherited key-verses while distinguishing contextual verse claims and similarly named identities.",
+        "evidence": [
+          "Exact pinned Macula Hebrew WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c / Greek SBLGNT@8423afe47b9e8f24b7772e808af45c7159a6fe7e, fully inspected in PR #136 original-verse CI",
+          "Revelation 17:5 calls the symbolic woman Mystery Babylon the Great (Βαβυλών); direct name is symbolic, not a geographic claim about physical Babylon. 1 Peter 5:13 remains uncertain/contextual.",
+          "66017005 SBLGNT n66017005009"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [],
+            "explicit_instances": {}
+          },
+          "after": {
+            "references": [
+              "66017005"
+            ],
+            "explicit_instances": {
+              "SBLGNT": [
+                [
+                  "n66017005009"
+                ]
+              ]
+            }
+          }
+        }
+      }
+    ]
   },
-  "explicit_instances": {},
+  "explicit_instances": {
+    "SBLGNT": [
+      [
+        "n66017005009"
+      ]
+    ]
+  },
   "geocoordinates": {
     "biblica-maps": {
       "lat": "32.53633",
@@ -50,7 +91,9 @@
   ],
   "primary_id": "place:Babylon.2",
   "pronominal_referents": {},
-  "references": [],
+  "references": [
+    "66017005"
+  ],
   "subject_referents": {},
   "type": "place"
 }

@@ -2,12 +2,88 @@
   "added_entry": true,
   "bsi": {
     "canonical_id": "place:BeyondTheJordan",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:BeyondTheJordan",
     "source_primary_id": "place:BeyondTheJordan",
-    "source_sha256": "753b8bf587016ed238594a023ebf120ec0d93c03ce2977e9454f4c42a25db4b3"
+    "source_sha256": "753b8bf587016ed238594a023ebf120ec0d93c03ce2977e9454f4c42a25db4b3",
+    "editorial_reason": "Restore the independently attested complete biblical geographical/sanctuary phrase without merging lexically or geographically distinct places.",
+    "editorial_evidence": [
+      "Exact pinned Macula WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c / SBLGNT@8423afe47b9e8f24b7772e808af45c7159a6fe7e, complete verse inspection in source-audit PR #136",
+      "Matthew 4:25 and 19:1, Mark 10:1, John 1:28 explicitly use πέραν Ἰορδάνου (beyond the Jordan), so the geographic expression is attested in all four inherited keys.",
+      "BCV8 40004025 exact SBLGNT compound n40004025016 + n40004025018",
+      "BCV8 40019001 exact SBLGNT compound n40019001021 + n40019001023",
+      "BCV8 41010001 exact SBLGNT compound n41010001011 + n41010001013",
+      "BCV8 43001028 exact SBLGNT compound n43001028005 + n43001028007"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "restore_direct_pinned_named_location_phrase",
+        "reason": "Restore the independently attested complete biblical geographical/sanctuary phrase without merging lexically or geographically distinct places.",
+        "evidence": [
+          "Exact pinned Macula WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c / SBLGNT@8423afe47b9e8f24b7772e808af45c7159a6fe7e, complete verse inspection in source-audit PR #136",
+          "Matthew 4:25 and 19:1, Mark 10:1, John 1:28 explicitly use πέραν Ἰορδάνου (beyond the Jordan), so the geographic expression is attested in all four inherited keys.",
+          "BCV8 40004025 exact SBLGNT compound n40004025016 + n40004025018",
+          "BCV8 40019001 exact SBLGNT compound n40019001021 + n40019001023",
+          "BCV8 41010001 exact SBLGNT compound n41010001011 + n41010001013",
+          "BCV8 43001028 exact SBLGNT compound n43001028005 + n43001028007"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [],
+            "explicit_instances": {}
+          },
+          "after": {
+            "references": [
+              "40004025",
+              "40019001",
+              "41010001",
+              "43001028"
+            ],
+            "explicit_instances": {
+              "SBLGNT": [
+                [
+                  "n40004025016",
+                  "n40004025018"
+                ],
+                [
+                  "n40019001021",
+                  "n40019001023"
+                ],
+                [
+                  "n41010001011",
+                  "n41010001013"
+                ],
+                [
+                  "n43001028005",
+                  "n43001028007"
+                ]
+              ]
+            }
+          }
+        }
+      }
+    ]
   },
-  "explicit_instances": {},
+  "explicit_instances": {
+    "SBLGNT": [
+      [
+        "n40004025016",
+        "n40004025018"
+      ],
+      [
+        "n40019001021",
+        "n40019001023"
+      ],
+      [
+        "n41010001011",
+        "n41010001013"
+      ],
+      [
+        "n43001028005",
+        "n43001028007"
+      ]
+    ]
+  },
   "id": "place:BeyondTheJordan",
   "is_artifact": false,
   "is_person": false,
@@ -36,7 +112,12 @@
   },
   "primary_id": "place:BeyondTheJordan",
   "pronominal_referents": {},
-  "references": [],
+  "references": [
+    "40004025",
+    "40019001",
+    "41010001",
+    "43001028"
+  ],
   "subject_referents": {},
   "type": "place"
 }

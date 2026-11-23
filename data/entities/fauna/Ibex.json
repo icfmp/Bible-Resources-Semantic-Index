@@ -14,10 +14,81 @@
   },
   "bsi": {
     "canonical_id": "fauna:Ibex",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "fauna:Ibex",
     "source_primary_id": "fauna:Ibex",
-    "source_sha256": "36ed952a64dd34651dd4d2b88e0189c156865874914ac495102e5583de6a93eb"
+    "source_sha256": "36ed952a64dd34651dd4d2b88e0189c156865874914ac495102e5583de6a93eb",
+    "editorial_reason": "Restore exact original-language direct mention(s) from independently inspected inherited key-verses while distinguishing contextual verse claims and similarly named identities.",
+    "editorial_evidence": [
+      "Exact pinned Macula Hebrew WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c / Greek SBLGNT@8423afe47b9e8f24b7772e808af45c7159a6fe7e, fully inspected in PR #136 original-verse CI",
+      "1 Samuel 24:3 explicitly says rocks of the wild goats (יָעֵל), an ibex/wild goat zoological term.",
+      "09024003 wlc o090240030172"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "restore_independently_pinned_exact_direct_mention",
+        "reason": "Restore exact original-language direct mention(s) from independently inspected inherited key-verses while distinguishing contextual verse claims and similarly named identities.",
+        "evidence": [
+          "Exact pinned Macula Hebrew WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c / Greek SBLGNT@8423afe47b9e8f24b7772e808af45c7159a6fe7e, fully inspected in PR #136 original-verse CI",
+          "1 Samuel 24:3 explicitly says rocks of the wild goats (יָעֵל), an ibex/wild goat zoological term.",
+          "09024003 wlc o090240030172"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [
+              "05014005",
+              "18039001",
+              "19104018",
+              "20005019"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o050140050042"
+                ],
+                [
+                  "o180390010041"
+                ],
+                [
+                  "o191040180032"
+                ],
+                [
+                  "o200050190032"
+                ]
+              ]
+            }
+          },
+          "after": {
+            "references": [
+              "05014005",
+              "09024003",
+              "18039001",
+              "19104018",
+              "20005019"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o050140050042"
+                ],
+                [
+                  "o180390010041"
+                ],
+                [
+                  "o191040180032"
+                ],
+                [
+                  "o200050190032"
+                ],
+                [
+                  "o090240030172"
+                ]
+              ]
+            }
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -32,6 +103,9 @@
       ],
       [
         "o200050190032"
+      ],
+      [
+        "o090240030172"
       ]
     ]
   },
@@ -82,6 +156,7 @@
   },
   "references": [
     "05014005",
+    "09024003",
     "18039001",
     "19104018",
     "20005019"
