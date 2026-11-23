@@ -15,10 +15,157 @@
   },
   "bsi": {
     "canonical_id": "fauna:Viper",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "fauna:Viper",
     "source_primary_id": "fauna:Viper",
-    "source_sha256": "0d29f99a9488e614ce7dcfa8159421f4196d1176a59b94b5cb51e5df5a929a72"
+    "source_sha256": "0d29f99a9488e614ce7dcfa8159421f4196d1176a59b94b5cb51e5df5a929a72",
+    "editorial_reason": "Restore exact original-language direct mention(s) from independently inspected inherited key-verses while distinguishing contextual verse claims and similarly named identities.",
+    "editorial_evidence": [
+      "Exact pinned Macula Hebrew WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c / Greek SBLGNT@8423afe47b9e8f24b7772e808af45c7159a6fe7e, fully inspected in PR #136 original-verse CI",
+      "Matthew 3:7 explicitly names vipers (ἔχιδνα) in John the Baptist's metaphor brood of vipers; direct lexical mention does not assert actual snakes were present.",
+      "40003007 SBLGNT n40003007016"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "restore_independently_pinned_exact_direct_mention",
+        "reason": "Restore exact original-language direct mention(s) from independently inspected inherited key-verses while distinguishing contextual verse claims and similarly named identities.",
+        "evidence": [
+          "Exact pinned Macula Hebrew WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c / Greek SBLGNT@8423afe47b9e8f24b7772e808af45c7159a6fe7e, fully inspected in PR #136 original-verse CI",
+          "Matthew 3:7 explicitly names vipers (ἔχιδνα) in John the Baptist's metaphor brood of vipers; direct lexical mention does not assert actual snakes were present.",
+          "40003007 SBLGNT n40003007016"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [
+              "01049017",
+              "04021006",
+              "04021008",
+              "05008015",
+              "18020016",
+              "20023032",
+              "23011008",
+              "23014029",
+              "23030006",
+              "23059005",
+              "24008017"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o180200160061"
+                ],
+                [
+                  "o230300060101"
+                ],
+                [
+                  "o230590050121"
+                ],
+                [
+                  "o200230320043"
+                ],
+                [
+                  "o230110080081"
+                ],
+                [
+                  "o230140290131"
+                ],
+                [
+                  "o230590050021"
+                ],
+                [
+                  "o240080170061"
+                ],
+                [
+                  "o040210060062"
+                ],
+                [
+                  "o040210080071"
+                ],
+                [
+                  "o050080150061"
+                ],
+                [
+                  "o230140290151"
+                ],
+                [
+                  "o230300060112"
+                ],
+                [
+                  "o010490170061"
+                ]
+              ]
+            }
+          },
+          "after": {
+            "references": [
+              "01049017",
+              "04021006",
+              "04021008",
+              "05008015",
+              "18020016",
+              "20023032",
+              "23011008",
+              "23014029",
+              "23030006",
+              "23059005",
+              "24008017",
+              "40003007"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o180200160061"
+                ],
+                [
+                  "o230300060101"
+                ],
+                [
+                  "o230590050121"
+                ],
+                [
+                  "o200230320043"
+                ],
+                [
+                  "o230110080081"
+                ],
+                [
+                  "o230140290131"
+                ],
+                [
+                  "o230590050021"
+                ],
+                [
+                  "o240080170061"
+                ],
+                [
+                  "o040210060062"
+                ],
+                [
+                  "o040210080071"
+                ],
+                [
+                  "o050080150061"
+                ],
+                [
+                  "o230140290151"
+                ],
+                [
+                  "o230300060112"
+                ],
+                [
+                  "o010490170061"
+                ]
+              ],
+              "SBLGNT": [
+                [
+                  "n40003007016"
+                ]
+              ]
+            }
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -63,6 +210,11 @@
       ],
       [
         "o010490170061"
+      ]
+    ],
+    "SBLGNT": [
+      [
+        "n40003007016"
       ]
     ]
   },
@@ -124,7 +276,8 @@
     "23014029",
     "23030006",
     "23059005",
-    "24008017"
+    "24008017",
+    "40003007"
   ],
   "subject_referents": {
     "wlc": [
