@@ -2,10 +2,33 @@
   "added_entry": false,
   "bsi": {
     "canonical_id": "place:SouthGate",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:SouthGate",
     "source_primary_id": "place:SouthGate",
-    "source_sha256": "453c7506bb26d8ff87147007b0d45fa3cd0b9477e2bd6706881539d865405b80"
+    "source_sha256": "453c7506bb26d8ff87147007b0d45fa3cd0b9477e2bd6706881539d865405b80",
+    "editorial_reason": "In 1 Chronicles 26:15 the pinned Hebrew assigns Obed-Edom to the southern side (נֶגֶב, o130260150031). It does not itself contain a proper named South Gate; the northern/southern guard posts are contextual deductions from the surrounding account of the Temple gatekeeper rota in 1 Chronicles 26:13-17. Preserve this inherited source key, but mark the geographical station name as inferred rather than directly attested.",
+    "editorial_evidence": [
+      "WLC 1Chr 26:15 o130260150031 south, no proper gate name in the verse",
+      "WLC 1Chr 26:13-17 guard allotment; https://www.biblegateway.com/passage/?search=1+Chronicles+26&version=NIV"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "qualify_inferred_geographical_identity",
+        "reason": "In 1 Chronicles 26:15 the pinned Hebrew assigns Obed-Edom to the southern side (נֶגֶב, o130260150031). It does not itself contain a proper named South Gate; the northern/southern guard posts are contextual deductions from the surrounding account of the Temple gatekeeper rota in 1 Chronicles 26:13-17. Preserve this inherited source key, but mark the geographical station name as inferred rather than directly attested.",
+        "evidence": [
+          "WLC 1Chr 26:15 o130260150031 south, no proper gate name in the verse",
+          "WLC 1Chr 26:13-17 guard allotment; https://www.biblegateway.com/passage/?search=1+Chronicles+26&version=NIV"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "preferred_label": "South Gate"
+          },
+          "after": {
+            "preferred_label": "South gatekeeper station (inferred)"
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {},
   "id": "place:SouthGate",
@@ -16,7 +39,7 @@
   ],
   "localizations": {
     "eng": {
-      "preferred_label": "South Gate"
+      "preferred_label": "South gatekeeper station (inferred)"
     }
   },
   "mentioned_in_bible": true,

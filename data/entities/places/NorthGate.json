@@ -2,10 +2,33 @@
   "added_entry": false,
   "bsi": {
     "canonical_id": "place:NorthGate",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:NorthGate",
     "source_primary_id": "place:NorthGate",
-    "source_sha256": "d04e55bda464949e407a9c68e660a1e681be97a1dd7129037efa05f20e2fa68f"
+    "source_sha256": "d04e55bda464949e407a9c68e660a1e681be97a1dd7129037efa05f20e2fa68f",
+    "editorial_reason": "In 1 Chronicles 26:14 the pinned Hebrew names a northern direction of Zechariah's guard lot, not a proper-named gate or a separate geographic place: the exact source term is צָפוֹן north (o130260140131). The chapter context of assigning gatekeepers to the various Temple gates makes a northern gate station a useful structural construct. Qualify this as inferred from the context rather than a directly named biblical landmark.",
+    "editorial_evidence": [
+      "WLC 1Chr 26:14 o130260140131 north, no full proper gate name in the verse",
+      "WLC 1Chr 26:13-17 surrounding gatekeeper assignments; https://www.biblegateway.com/passage/?search=1+Chronicles+26&version=NIV"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "qualify_inferred_geographical_identity",
+        "reason": "In 1 Chronicles 26:14 the pinned Hebrew names a northern direction of Zechariah's guard lot, not a proper-named gate or a separate geographic place: the exact source term is צָפוֹן north (o130260140131). The chapter context of assigning gatekeepers to the various Temple gates makes a northern gate station a useful structural construct. Qualify this as inferred from the context rather than a directly named biblical landmark.",
+        "evidence": [
+          "WLC 1Chr 26:14 o130260140131 north, no full proper gate name in the verse",
+          "WLC 1Chr 26:13-17 surrounding gatekeeper assignments; https://www.biblegateway.com/passage/?search=1+Chronicles+26&version=NIV"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "preferred_label": "North Gate"
+          },
+          "after": {
+            "preferred_label": "North gatekeeper station (inferred)"
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {},
   "id": "place:NorthGate",
@@ -16,7 +39,7 @@
   ],
   "localizations": {
     "eng": {
-      "preferred_label": "North Gate"
+      "preferred_label": "North gatekeeper station (inferred)"
     }
   },
   "mentioned_in_bible": true,
