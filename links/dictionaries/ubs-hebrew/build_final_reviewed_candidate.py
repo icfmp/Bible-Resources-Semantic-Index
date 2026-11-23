@@ -205,20 +205,38 @@ def build_final(indexed, reviewed, evidence, english, macula, source_manifest):
     return candidate
 
 
+def build_from_pinned_sources(indexed, original_index, reviewed, sole,
+                              additional, english, french, macula, source_manifest):
+    """Rebuild all 26 original WLC source witnesses before final review.
+
+    The independent lexical-uncertainty audit remains source-specific and
+    read-only. The final two approved IDs and 24 explicit source abstentions
+    still come solely from the immutable human-reviewed ledger.
+    """
+    evidence = AUDIT["run"](sole, additional, english, french,
+                            macula, base=original_index)
+    return build_final(indexed, reviewed, evidence, english, macula, source_manifest)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    for name in ("index", "source_manifest", "decisions", "source_evidence",
-                 "english", "macula", "output"):
+    for name in ("index", "original_index", "source_manifest", "decisions",
+                 "single", "additional", "english", "french", "macula", "output"):
         parser.add_argument("--" + name, required=True, type=Path)
     args = parser.parse_args()
     indexed = json.loads(args.index.read_text(encoding="utf-8"))
     prior = json.loads(args.source_manifest.read_text(encoding="utf-8"))
     if digest(args.index) != prior["candidate_index_sha256"]:
         raise ValueError("Input 273-word index SHA-256 does not match frozen source ledger")
-    reviewed = json.loads(args.decisions.read_text(encoding="utf-8"))
-    witness = json.loads(args.source_evidence.read_text(encoding="utf-8"))
-    english = json.loads(args.english.read_text(encoding="utf-8"))
-    final = build_final(indexed, reviewed, witness, english, args.macula, prior)
+    if digest(args.original_index) != indexed["editorial_candidate"]["original_index_sha256"]:
+        raise ValueError("Original UBS Hebrew index SHA-256 no longer matches candidate")
+    load = lambda path: json.loads(path.read_text(encoding="utf-8-sig"))
+    reviewed = load(args.decisions)
+    english = load(args.english)
+    final = build_from_pinned_sources(
+        indexed, load(args.original_index), reviewed,
+        load(args.single), load(args.additional),
+        english, load(args.french), args.macula, prior)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(final, ensure_ascii=False, sort_keys=True,
                                        separators=(",", ":")) + "\n",
