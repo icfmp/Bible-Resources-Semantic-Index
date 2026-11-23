@@ -40,6 +40,15 @@ BRSI package.
   rebuilds from actual source bytes and compares the immutable
   historical ZIP. No third-party text or rights-restricted witness dump
   is uploaded as a public workflow artifact.
+- Five retained source-evidence snapshots are now checked by the **same strict
+  JSON baseline verifier** as `index.json`: `reconciliation_candidates.json`,
+  `reviewed_word_anchor_preview.json`,
+  `positive_family_pending_original_words.json`,
+  `reviewed_additional_word_anchor_preview.json` and
+  `v1_disposition_coverage.json`. Each is a historical reproducibility
+  witness, not a new editable editorial decision. Missing/mismatched
+  snapshots fail CI; the source-level checks and explicitly reviewed
+  decisions remain distinct.
 
 ### The central lexical-identity guard
 
