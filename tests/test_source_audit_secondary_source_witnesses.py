@@ -90,5 +90,70 @@ class OriginalWitnessBatchTests(unittest.TestCase):
         self.assertIn(["o090240030172"],ibex["explicit_instances"]["wlc"])
         self.assertNotIn("07004005",record("places","Israel")["references"])
 
+
+class GeographicNamesAndWrongHoronaimTests(unittest.TestCase):
+    PHRASES = {
+        "BeyondTheJordan": ("SBLGNT", [
+            ["n40004025016", "n40004025018"],
+            ["n40019001021", "n40019001023"],
+            ["n41010001011", "n41010001013"],
+            ["n43001028005", "n43001028007"]]),
+        "Ir-nahash": ("wlc", [["o130040120111", "o130040120121"]]),
+        "Nahor": ("wlc", [["o010240100181", "o010240100191"]]),
+        "HolyPlace.2": ("wlc", [["o110080100052"]]),
+    }
+
+    def test_four_original_language_location_phrases_attested(self):
+        for name, (corpus, groups) in self.PHRASES.items():
+            with self.subTest(name=name):
+                row = record("places", name)
+                self.assertEqual(row["bsi"]["review_status"], "editorially_reviewed")
+                self.assertEqual(len(row["bsi"]["source_sha256"]), 64)
+                receipts = [receipt for receipt in row["bsi"]["editorial_field_changes"]
+                            if receipt["action"] == "restore_direct_pinned_named_location_phrase"]
+                self.assertEqual(len(receipts), 1)
+                receipt = receipts[0]
+                self.assertTrue(receipt["reason"])
+                self.assertTrue(receipt["evidence"])
+                self.assertEqual(receipt["replaced_field_values"]["after"]["references"],
+                                 row["references"])
+                old = receipt["replaced_field_values"]["before"]
+                self.assertTrue(set(old["references"]).issubset(set(row["references"])))
+                for group in groups:
+                    self.assertIn(group, row["explicit_instances"][corpus])
+                    self.assertNotIn(group, old["explicit_instances"].get(corpus, []))
+                    self.assertEqual(len(set(w[1:9] for w in group)), 1)
+                    self.assertIn(group[0][1:9], row["references"])
+                    self.assertIn(group[0][1:9], row["key_references"])
+
+    def test_holy_place_is_not_automatically_the_inner_sanctuary(self):
+        holy = record("places", "HolyPlace.2")
+        self.assertNotIn("Inner Sanctuary",
+                         holy["localizations"]["eng"].get("alternate_labels", []))
+        self.assertIn("11006005", holy["key_references"])
+        self.assertNotIn("11006005", holy["references"])
+        self.assertIn("11008010", holy["references"])
+
+    def test_absaloms_flight_does_not_invent_another_horonaim(self):
+        moab = record("places", "Horonaim")
+        spurious = record("places", "Horonaim.2")
+        self.assertNotIn("10013034", moab["references"])
+        self.assertNotIn("10013034", spurious["key_references"])
+        self.assertFalse(spurious["mentioned_in_bible"])
+        self.assertTrue(spurious["non_biblical"])
+        self.assertEqual(spurious["references"], [])
+        self.assertEqual(spurious["explicit_instances"], {})
+        self.assertIn("23015005", moab["references"])
+        for row, action in [
+            (moab, "remove_unrelated_absalom_mountain_verse_from_moab_horonaim"),
+            (spurious, "remove_fabricated_horonaim_in_absalom_narrative")
+        ]:
+            receipt = row["bsi"]["editorial_field_changes"][-1]
+            self.assertEqual(receipt["action"], action)
+            self.assertTrue(receipt["reason"])
+            self.assertTrue(receipt["evidence"])
+            self.assertNotEqual(receipt["replaced_field_values"]["before"],
+                                receipt["replaced_field_values"]["after"])
+
 if __name__=="__main__":
     unittest.main()
