@@ -35,4 +35,20 @@ class Tests(unittest.TestCase):
             {"LEXID":"s1","LEXEntryCode":"91.13","LEXReferences":[]}]}]}]
         with self.assertRaises(ValueError):source_refs(src)
 
+
+    def test_calibration_factors_have_identical_in_memory_and_json_schema(self):
+        # Source-audit reports must be structurally identical in memory and
+        # after the historical temporary JSON write/read round-trip.
+        import json
+        convert=m["literal_factor_counts"]
+        x=convert({2:115145, 1:100})
+        self.assertEqual(x,{"1":100,"2":115145})
+        self.assertEqual(json.loads(json.dumps(x)),x)
+        for wrong in ({5:1},{True:1},{"2":1},{2:-1},{2:1.1}):
+            with self.subTest(wrong=wrong),self.assertRaisesRegex(
+                ValueError,"Unexpected Greek source position calibration factor"
+            ):
+                convert(wrong)
+
+
 if __name__=="__main__":unittest.main()

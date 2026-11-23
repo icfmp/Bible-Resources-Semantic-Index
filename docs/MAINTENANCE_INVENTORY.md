@@ -68,7 +68,11 @@ and original source annotations remain separately protected.
   source-specific auditor checks the original data directly, without a
   redundant temporary JSON handoff. All 123,195 provisional source-based
   suggestions remain *unverified contextual meanings*, with 14,546
-  unresolved, and must not be republished or silently promoted.
+  unresolved, and must not be republished or silently promoted. The final
+  40-word provisional source-position tier likewise recalibrates authentic
+  UBS citation locators directly from pinned bilingual sources and its
+  source-unique MACULA candidates. No global source token-number equivalence
+  is assumed.
 - **Hebrew:** v1.0 remains source-pinned, including the original-word
   identity and H/A Strong/SDBH anti-collision rules. The six committed
   JSON baselines (index plus five source-evidence snapshots) are

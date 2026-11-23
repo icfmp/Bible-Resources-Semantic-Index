@@ -56,6 +56,11 @@ public BRSI index merely because they are available upstream.
   their private candidate builders. Their auditors and negative tests
   remain maintained; the earlier temporary-report CLI handoffs were
   duplicative, not durable editorial evidence.
+- The UBS/MACULA **token-position calibration** also executes directly
+  inside the 40-word provisional source-position builder. It checks the
+  authentic bilingual source reference lists and original 122,504-word
+  reference calibration before staging any suggestion; numeric token
+  position factors alone are never proof of word or sense identity.
 
 The source-local `source/` and `work/` checkouts are temporary and ignored.
 Do not commit unpublished detailed UBS/MACULA original-word research dumps.

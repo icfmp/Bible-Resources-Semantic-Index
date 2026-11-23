@@ -26,6 +26,7 @@ def make(position,unresolved,high,low,form,verse):
         or position.get("original_ambiguous_words")!=2728
         or position.get("new_editorial_source_senses_selected")!=0
         or position.get("no_automatic_word_position_equivalence_asserted") is not True
+        or position.get("original_sources_modified") is not False
         or position.get("published") is not False):
         raise ValueError("Original UBS token position calibration source/provenance drift")
     if (unresolved.get("unresolved_original_word_count")!=15237
@@ -111,12 +112,25 @@ def make(position,unresolved,high,low,form,verse):
     }
 
 
+def build_from_pinned_sources(high, batches, en, fr, unresolved, low, form, verse):
+    """Recalibrate original UBS/MACULA token locators before provisional review.
+
+    This preserves the complete independent source/position audit and its
+    non-equivalence policy, without a runner-local intermediate JSON that the
+    next step simply consumed. It never selects a contextual sense by itself.
+    """
+    position=SOURCE["audit"](high,batches,en,fr)
+    return make(position,unresolved,high,low,form,verse)
+
+
 def main():
     p=argparse.ArgumentParser(description=__doc__)
-    for k in ("position","unresolved","high","low","form","verse","output"):
+    for k in ("high","batches","english","french","unresolved","low","form","verse","output"):
         p.add_argument("--"+k,required=True,type=Path)
     a=p.parse_args();load=lambda q:json.loads(q.read_text(encoding="utf-8-sig"))
-    out=make(load(a.position),load(a.unresolved),load(a.high),load(a.low),load(a.form),load(a.verse))
+    out=build_from_pinned_sources(
+        load(a.high),load(a.batches),load(a.english),load(a.french),
+        load(a.unresolved),load(a.low),load(a.form),load(a.verse))
     a.output.write_text(json.dumps(out,ensure_ascii=False,sort_keys=True,separators=(",",":"))+"\n",encoding="utf-8")
     print("GREEK_UBS_40_SOURCE_POSITION_SUPPORTED_PROVISIONAL_SENSE_CHOICES",json.dumps({
         "new":out["new_position_supported_provisional_word_count"],
