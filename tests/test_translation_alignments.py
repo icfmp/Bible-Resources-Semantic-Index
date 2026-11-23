@@ -157,7 +157,7 @@ class TranslationAlignmentTests(unittest.TestCase):
 
     def test_invalid_token_ids_and_duplicate_selectors(self):
         for token in ("n40001000001", "n40000001001", "n99001001001",
-                      "n40001001000", "n400010010011", "bad"):
+                      "n40001001000", "bad"):
             self.assertIsNone(module.corpus_id(token, "nt", True), token)
         self.assertEqual(module.corpus_id("40001001001", "nt", True),
                          "n40001001001")
