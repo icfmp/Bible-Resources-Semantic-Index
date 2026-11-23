@@ -26,7 +26,41 @@
     "review_status": "source_unreviewed",
     "source_id": "place:ZionMount",
     "source_primary_id": "place:Jerusalem",
-    "source_sha256": "67d538ce782bff2478ee452e8db40c6f882b8e72a2df3a43efc65e817bf8c0ce"
+    "source_sha256": "67d538ce782bff2478ee452e8db40c6f882b8e72a2df3a43efc65e817bf8c0ce",
+    "editorial_field_changes": [
+      {
+        "action": "restore_original_named_place_token",
+        "added_reference_values": {
+          "references": [
+            "10005007",
+            "11008001",
+            "14005002",
+            "19002006"
+          ]
+        },
+        "added_original_word_groups": {
+          "wlc": [
+            [
+              "o100050070051"
+            ],
+            [
+              "o110080010271"
+            ],
+            [
+              "o140050020251"
+            ],
+            [
+              "o190020060051"
+            ]
+          ]
+        },
+        "reason": "2 Samuel 5:7, 1 Kings 8:1, 2 Chronicles 5:2 and Psalm 2:6 each explicitly name Zion with the pinned original proper-name word; the context identifies the Jerusalem height/stronghold, not a new entity.",
+        "evidence": [
+          "Pinned original WLC, exact words and verses",
+          "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c locked WLC word/verse attestations"
+        ]
+      }
+    ]
   },
   "explicit_instances": {
     "SBLGNT": [
@@ -94,6 +128,18 @@
       ],
       [
         "o330040070121"
+      ],
+      [
+        "o100050070051"
+      ],
+      [
+        "o110080010271"
+      ],
+      [
+        "o140050020251"
+      ],
+      [
+        "o190020060051"
       ]
     ]
   },
@@ -186,7 +232,11 @@
     "33004001",
     "33004007",
     "58012022",
-    "66014001"
+    "66014001",
+    "10005007",
+    "11008001",
+    "14005002",
+    "19002006"
   ],
   "referred_to_as": [
     "place:Jerusalem"
