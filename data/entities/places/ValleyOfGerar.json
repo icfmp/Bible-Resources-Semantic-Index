@@ -2,12 +2,53 @@
   "added_entry": false,
   "bsi": {
     "canonical_id": "place:ValleyOfGerar",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:ValleyOfGerar",
     "source_primary_id": "place:ValleyOfGerar",
-    "source_sha256": "625a7309afa99b07e5f24ca347bb45e5dc0611a57642f1379e8640290a9cc1a1"
+    "source_sha256": "625a7309afa99b07e5f24ca347bb45e5dc0611a57642f1379e8640290a9cc1a1",
+    "editorial_reason": "Restore the complete lexical phrase directly attested in the inherited key verse(s), retaining distinct original-word IDs, source identity, and every inherited contextual key.",
+    "editorial_evidence": [
+      "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c WLC/tsv/macula-hebrew.tsv inspected by GitHub Actions pinned original-verse job",
+      "01026017 direct original-name group o010260170052, o010260170061"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "restore_exact_attested_topographic_original_phrase",
+        "reason": "Restore the complete lexical phrase directly attested in the inherited key verse(s), retaining distinct original-word IDs, source identity, and every inherited contextual key.",
+        "evidence": [
+          "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c WLC/tsv/macula-hebrew.tsv inspected by GitHub Actions pinned original-verse job",
+          "01026017 direct original-name group o010260170052, o010260170061"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [],
+            "explicit_instances": {}
+          },
+          "after": {
+            "references": [
+              "01026017"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o010260170052",
+                  "o010260170061"
+                ]
+              ]
+            }
+          }
+        }
+      }
+    ]
   },
-  "explicit_instances": {},
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o010260170052",
+        "o010260170061"
+      ]
+    ]
+  },
   "id": "place:ValleyOfGerar",
   "is_artifact": false,
   "is_person": false,
@@ -32,7 +73,9 @@
   },
   "primary_id": "place:ValleyOfGerar",
   "pronominal_referents": {},
-  "references": [],
+  "references": [
+    "01026017"
+  ],
   "subject_referents": {},
   "type": "place"
 }
