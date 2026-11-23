@@ -72,6 +72,24 @@ verse. Some original witnesses may be ambiguous, non-biblical, apocryphal
 or outside the chosen textual edition. Do not manufacture a verse to satisfy
 a subset test.
 
+## Curated 115-identity source review milestone (November 2026)
+
+The **115** records in [the identity review ledger](../data/source-key-identity-review-115.json) are **115 distinct additional entity identities examined**, not 115 corrected files or proved errors. This cohort follows 52 previously corrected records in merged PRs #135–#137. The review starts from the final #137 `main` commit and uses exactly the Macula WLC/SBLGNT editions in `data/source.lock.json`.
+
+For every identity the ledger records inherited key verse(s), source-word or grammatical evidence when available, a case-specific interpretation and a deliberately restricted editorial decision. It distinguishes exact **verified direct original words** from **false source-key assignments**, **indirect source coreference**, **contextual lexical matches**, **historical/editorial uncertainty**, and **source-constructed geography**. Candidate English gloss matches never authorize new biblical name words.
+
+**32 records** already contain indirect source word IDs in `subject_referents` or `pronominal_referents`. Existing words are not manufactured anew or promoted to a proper name. The **13 constructed tribal territories** have no inherited key verses, general verses or explicit source words; their useful geographical role is preserved without inventing original-word anchors or source locations.
+
+**Ten of the 115 reviews produced actual source-record corrections**: full El Elyon title (Gen 14:19–20), Artaxerxes, priest Eliashib, Hassenuah, Noah’s ark, descriptive Ir-Moab, two different Dishon people, Gederathite’s true 1 Chr 12:5 key (not 12:4), and correction of unsupported poplar/balsam and Amorite verse attribution. The existing negative regression on the two potentially different Zalmon mountains is preserved: Psalm 68 is not promoted to the Judges 9 mountain.
+
+The reusable validator [validate_source_key_identity_reviews.py](../scripts/validate_source_key_identity_reviews.py) checks source IDs, immutable ACAI fingerprints, exact original-word groups, evidence and field-change receipts, historic source keys and existing indirect grammar. In CI it also scans **both pinned original-language TSV corpora** and checks each lemma/gloss and indirect word ID against the exact edition. It does not assume matching English spellings imply matching historical identities.
+
+Local metadata audit: `python3 -I scripts/validate_source_key_identity_reviews.py --data data --review data/source-key-identity-review-115.json`.
+
+For independent original-source verification, also pass `--wlc` and `--sblgnt` with the exact pinned Macula TSV files. This stronger check runs in `verify-entity-original-words.yml`.
+
+An editorial disposition is not a release or publication approval. All original source, edition, versification and redistribution controls remain independent.
+
 ## Further editorial review
 
 - Inherited owner/alias relations: [#6](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/6)
