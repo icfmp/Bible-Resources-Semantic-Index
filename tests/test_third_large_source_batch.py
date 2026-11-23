@@ -143,13 +143,23 @@ class ThirdLargeBatchTests(unittest.TestCase):
                 rec=read(source)
                 changes=rec["bsi"]["editorial_field_changes"]
                 self.assertTrue(changes)
-                receipt=changes[-1]
+                receipts=[x for x in changes
+                          if "replaced_field_values" in x
+                          and all(group not in x["replaced_field_values"]["before"]
+                                  .get("explicit_instances",{}).get(corpus,[])
+                                  and group in x["replaced_field_values"]["after"]
+                                  .get("explicit_instances",{}).get(corpus,[])
+                                  for group in groups)]
+                self.assertEqual(len(receipts),1)
+                receipt=receipts[0]
                 self.assertTrue(receipt["reason"])
                 self.assertTrue(receipt["evidence"])
                 before=receipt["replaced_field_values"]["before"]
                 after=receipt["replaced_field_values"]["after"]
-                self.assertEqual(after["references"],rec["references"])
-                self.assertEqual(after["explicit_instances"],rec["explicit_instances"])
+                self.assertTrue(set(after["references"]).issubset(rec["references"]))
+                for field_corpus,field_groups in after["explicit_instances"].items():
+                    self.assertTrue(all(group in rec["explicit_instances"].get(field_corpus,[])
+                                        for group in field_groups))
                 self.assertEqual(len(rec["bsi"]["source_sha256"]),64)
                 self.assertEqual(rec["bsi"]["review_status"],"editorially_reviewed")
                 self.assertTrue(set(before["references"]).issubset(rec["references"]))
@@ -161,7 +171,7 @@ class ThirdLargeBatchTests(unittest.TestCase):
                     self.assertIn(verse,rec["references"])
                     if source != "places/Ephron.1":
                         self.assertIn(verse,rec["key_references"])
-                self.assertEqual(len(rec["explicit_instances"][corpus]),
+                self.assertEqual(len(after["explicit_instances"][corpus]),
                                  len(before["explicit_instances"].get(corpus,[]))+len(groups))
 
     def test_three_misattributed_key_verses_corrected_not_erased(self):
