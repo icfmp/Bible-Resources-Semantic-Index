@@ -687,7 +687,15 @@
       "original_word_evidence": [],
       "editorial_outcome": "no_unverified_direct_word_assignment",
       "original_source_edition": "WLC or SBLGNT as specified by witness",
-      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity"
+      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity",
+      "existing_indirect_word_links": [
+        {
+          "verse_id": "01017004",
+          "source_field": "subject_referents",
+          "corpus": "wlc",
+          "word_id": "o010170040052"
+        }
+      ]
     },
     {
       "source_id": "person:Abram",
@@ -718,7 +726,15 @@
       "original_word_evidence": [],
       "editorial_outcome": "no_unverified_direct_word_assignment",
       "original_source_edition": "WLC or SBLGNT as specified by witness",
-      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity"
+      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity",
+      "existing_indirect_word_links": [
+        {
+          "verse_id": "06007021",
+          "source_field": "subject_referents",
+          "corpus": "wlc",
+          "word_id": "o060070210022"
+        }
+      ]
     },
     {
       "source_id": "person:Adam",
@@ -892,7 +908,15 @@
       "original_word_evidence": [],
       "editorial_outcome": "no_unverified_direct_word_assignment",
       "original_source_edition": "SBLGNT or WLC as specified",
-      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity"
+      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity",
+      "existing_indirect_word_links": [
+        {
+          "verse_id": "42023019",
+          "source_field": "pronominal_referents",
+          "corpus": "SBLGNT",
+          "word_id": "n42023019001"
+        }
+      ]
     },
     {
       "source_id": "person:Bartholomew",
@@ -1433,7 +1457,15 @@
       "original_word_evidence": [],
       "editorial_outcome": "no_unverified_direct_word_assignment",
       "original_source_edition": "SBLGNT or WLC as specified",
-      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity"
+      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity",
+      "existing_indirect_word_links": [
+        {
+          "verse_id": "44009003",
+          "source_field": "pronominal_referents",
+          "corpus": "SBLGNT",
+          "word_id": "n44009003006"
+        }
+      ]
     },
     {
       "source_id": "place:Ashan",
