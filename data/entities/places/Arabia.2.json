@@ -5,16 +5,40 @@
     "review_status": "source_unreviewed",
     "source_id": "place:Arabia.2",
     "source_primary_id": "place:Arabia.2",
-    "source_sha256": "dd485ab6756989264cf7edd7653fd84055345fa92e21faa1c6557869dc869e3c"
+    "source_sha256": "dd485ab6756989264cf7edd7653fd84055345fa92e21faa1c6557869dc869e3c",
+    "editorial_field_changes": [
+      {
+        "action": "remove_inferred_historical_region_as_exact_biblical_place_name",
+        "removed_relation_values": {
+          "key_references": [
+            "48001017",
+            "48004025"
+          ]
+        },
+        "replaced_field_values": {
+          "mentioned_in_bible": {
+            "from": true,
+            "to": false
+          },
+          "non_biblical": {
+            "from": false,
+            "to": true
+          }
+        },
+        "reason": "Galatians 1:17 and 4:25 name Arabia (Ἀραβία), not the independently specified later province/region 'Arabia Petraea'. Both exact Greek word tokens and Bible verses are already correctly owned by place:Arabia. Assigning them to the narrower Arabia Petraea would silently invent a geographical identity. Retain this source historical geography as nonbiblical contextual data with original source provenance.",
+        "evidence": [
+          "Galatians 1:17 / 4:25 SBLGNT Greek Ἀραβία",
+          "Current place:Arabia owns original SBLGNT tokens n48001017013 and n48004025009",
+          "Historically named Provincia Arabia after AD 106 is not uniquely identified by first-century Galatians"
+        ]
+      }
+    ]
   },
   "explicit_instances": {},
   "id": "place:Arabia.2",
   "is_artifact": false,
   "is_person": false,
-  "key_references": [
-    "48001017",
-    "48004025"
-  ],
+  "key_references": [],
   "localizations": {
     "eng": {
       "alternate_labels": [
@@ -24,12 +48,12 @@
       "preferred_label": "Arabia Petraea"
     }
   },
-  "mentioned_in_bible": true,
+  "mentioned_in_bible": false,
   "nearby_places": [
     "place:Egypt",
     "place:Judea"
   ],
-  "non_biblical": false,
+  "non_biblical": true,
   "only_mentioned_in_apocrypha": false,
   "place_types": {
     "acai": [
