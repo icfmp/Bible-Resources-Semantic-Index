@@ -2,12 +2,63 @@
   "added_entry": false,
   "bsi": {
     "canonical_id": "place:Tabbur-erez",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:Tabbur-erez",
     "source_primary_id": "place:Tabbur-erez",
-    "source_sha256": "e36f525482e0d22e70524c51e8f62dc7b77d35c261edfba36716e1fbcaf70345"
+    "source_sha256": "e36f525482e0d22e70524c51e8f62dc7b77d35c261edfba36716e1fbcaf70345",
+    "editorial_reason": "Judges 9:37 explicitly uses the Hebrew 'navel/center of the land'; the text does not name Mount Gerizim. Keep Gerizim's inherited contextual key without treating the locative phrase as a proven named synonym.",
+    "editorial_evidence": [
+      "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c WLC/tsv/macula-hebrew.tsv inspected by GitHub Actions pinned original-verse job",
+      "07009037 direct original-name group o070090370101, o070090370111, o070090370112"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "restore_exact_attested_topographic_original_phrase",
+        "reason": "Judges 9:37 explicitly uses the Hebrew 'navel/center of the land'; the text does not name Mount Gerizim. Keep Gerizim's inherited contextual key without treating the locative phrase as a proven named synonym.",
+        "evidence": [
+          "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c WLC/tsv/macula-hebrew.tsv inspected by GitHub Actions pinned original-verse job",
+          "07009037 direct original-name group o070090370101, o070090370111, o070090370112"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [],
+            "explicit_instances": {},
+            "alternate_labels": [
+              "Mount Gerizim"
+            ],
+            "referred_to_as": [
+              "place:GerizimMount"
+            ]
+          },
+          "after": {
+            "references": [
+              "07009037"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o070090370101",
+                  "o070090370111",
+                  "o070090370112"
+                ]
+              ]
+            },
+            "alternate_labels": [],
+            "referred_to_as": []
+          }
+        }
+      }
+    ]
   },
-  "explicit_instances": {},
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o070090370101",
+        "o070090370111",
+        "o070090370112"
+      ]
+    ]
+  },
   "id": "place:Tabbur-erez",
   "is_artifact": false,
   "is_person": false,
@@ -16,9 +67,6 @@
   ],
   "localizations": {
     "eng": {
-      "alternate_labels": [
-        "Mount Gerizim"
-      ],
       "preferred_label": "Tabbur-erez"
     }
   },
@@ -35,9 +83,8 @@
   },
   "primary_id": "place:Tabbur-erez",
   "pronominal_referents": {},
-  "references": [],
-  "referred_to_as": [
-    "place:GerizimMount"
+  "references": [
+    "07009037"
   ],
   "subject_referents": {},
   "type": "place"
