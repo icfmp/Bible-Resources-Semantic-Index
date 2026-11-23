@@ -10,6 +10,9 @@ on:
       - "data/source-key-unresolved-queue.json"
       - "data/source-key-next-115-resolved.json"
       - "data/source-key-final-128-review.json"
+      - "data/source-place-attestation-review.json"
+      - "scripts/validate_source_place_attestations.py"
+      - "tests/test_source_place_attestations.py"
       - "scripts/validate_final_source_key_audit.py"
       - "tests/test_final_source_key_audit.py"
       - "data/source-key-final-128-candidates.json"
@@ -42,6 +45,9 @@ on:
       - "data/source-key-unresolved-queue.json"
       - "data/source-key-next-115-resolved.json"
       - "data/source-key-final-128-review.json"
+      - "data/source-place-attestation-review.json"
+      - "scripts/validate_source_place_attestations.py"
+      - "tests/test_source_place_attestations.py"
       - "scripts/validate_final_source_key_audit.py"
       - "tests/test_final_source_key_audit.py"
       - "scripts/validate_source_key_resolution_batches.py"
@@ -289,3 +295,14 @@ jobs:
               24048034 12011006 14023005 07009037 26038006 24048001 \
               09022006 06012018 09004001 23041019 01012008
           # The original word-level evidence is inspected, never rewritten.
+
+      - name: Verify all remaining Bible-marked places without direct original-word claim
+        run: |
+          python3 -I tests/test_source_place_attestations.py
+          python3 -I scripts/validate_source_place_attestations.py \
+            --data data \
+            --ledger data/source-place-attestation-review.json \
+            --wlc macula-hebrew/WLC/tsv/macula-hebrew.tsv \
+            --sblgnt macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv
+          # Source words for a tribe, gentilic, direction or literary place are
+          # corroborating context, NEVER an invented literal named-place token.
