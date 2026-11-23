@@ -2,7 +2,7 @@
 
 **Status: PRIVATE SOURCE AUDIT — NOT APPROVED FOR LEXICAL RELEASE.**
 
-Pinned sources: original MACULA SBLGNT revision `8423afe47b9e8f24b7772e808af45c7159a6fe7e`; original UBS Greek NT Dictionary v1.0 EN/FR revision `a15a96cfaa4ca18a6c0339016645ba1e534db3c8`. Every original word ID is in the privately generated [source evidence audit](audit_last_47_lexical_forms.py). No Greek spelling, Strong, morphology, source LN or historical index may be silently modified.
+Pinned sources: original MACULA SBLGNT revision `8423afe47b9e8f24b7772e808af45c7159a6fe7e`; original UBS Greek NT Dictionary v1.0 EN/FR revision `a15a96cfaa4ca18a6c0339016645ba1e534db3c8`. The completed one-shot [original-word evidence audit at its immutable revision](https://github.com/icfmp/Bible-Resources-Semantic-Index/blob/f97f70446f0db0d4574fddcf2f589b74e98f30c2/links/dictionaries/ubs-greek/audit_last_47_lexical_forms.py) is retained in Git history, not as a maintained script. The source-pinned review process retains the 47-word unresolved count. No Greek spelling, Strong, morphology, source LN or historical index may be silently modified.
 
 An explicit second audit of the original lexicon's `Lemma`, bilingual `AlternateLemmas` (which resolved 409 previous word IDs) and `BaseForms.Inflections` leaves **47 source word IDs, across 26 Greek source families**, without a source-approved UBS lexical headword. No family contained a matching exact original Greek inflection metadata string in the tested fields. Sharing a Louw–Nida semantic domain or looking similar to a different lexical lemma is **insufficient** to assert the same lexeme.
 

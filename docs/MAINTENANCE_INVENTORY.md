@@ -42,8 +42,14 @@ source-import path.
 
 | Stream | Python tools and tests | Executable entrypoint | Retained editorial authority |
 | --- | ---: | --- | --- |
-| UBS Greek | 78 total; 36 `test_*.py` modules | [Pinned Greek workflow](../.github/workflows/bsi-ubs-greek.yml) and its source-local builders | Original source locks, reviewed JSON headword/word-ID ledgers, explicit sense abstentions |
+| UBS Greek | 76 total; 35 `test_*.py` modules | [Pinned Greek workflow](../.github/workflows/bsi-ubs-greek.yml) and its source-local builders | Original source locks, reviewed JSON headword/word-ID ledgers, explicit sense abstentions |
 | UBS Hebrew | 43 total; 21 `test_*.py` modules | [Pinned Hebrew workflow](../.github/workflows/bsi-ubs-hebrew.yml) and its source-local builders | Original source locks, reviewed JSON identity/disposition/abstention ledgers, v1 and v1.1 reviews |
+
+Completed report-only probes are retired once their general exclusion rule
+is covered by a maintained test and any non-reproducible editorial decision
+is retained beside its source. See issue [#145](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/145) for the second-pass review; the first example
+retired a terminal 47-word Greek inflection investigation, while retaining
+its independent negative no-guess invariant and the 47-word source report.
 
 The Greek and Hebrew workflows first verify exact upstream commits and
 source checksums, then reconstruct source-backed indexes, check reviewed

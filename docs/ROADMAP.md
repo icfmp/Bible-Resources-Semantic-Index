@@ -1,293 +1,80 @@
-# BRSI — Bible Resources Semantic Index roadmap
+# BRSI roadmap — current work and release gates
 
-**Updated:** 2026-11-22. **Scope:** the independent BRSI repository only.
-This is the **single entry point for unfinished or deferred BRSI work**, not a
-historical diary. GitHub issues remain the place for discussion and execution
-details. When a task is completed, update this page and its linked issue;
-do not maintain a second competing checklist elsewhere.
+This page is the **short operational map**, not a development diary.
+Actual decisions, discussion, complete test evidence and source-specific
+corrections belong in linked GitHub issues/PRs and edition review ledgers.
+Historical states are recoverable by Git revision.
 
-## Current verified baseline
+## Verified current baseline
 
-- **Entity data:** 5,773 editable BSI entities and 3 explicitly quarantined
-  originals, on `main`. All existing reviewed decisions were materialized.
-  The resulting keyterm-free public entity index was verified **byte-for-byte**
-  against the old source-plus-decisions build (PR
-  [#4](https://github.com/icfmp/Bible-Resources-Semantic-Index/pull/4)).
-- **Source accounting:** 6,644 original ACAI identities inventoried.
-  The remaining **868 Key Terms are deliberately absent from the public BSI
-  repository and releases**; this is a hold, not forgotten migration work.
-- **Greek/Hebrew:** original-source-pinned UBS checks and native entity CI
-  passed on the new repository's `main` (PR
-  [#2](https://github.com/icfmp/Bible-Resources-Semantic-Index/pull/2)).
-- **Publication:** the three already issued BSI archives remain published
-  in `icfmp/Bible-Resources`. BSI's new repository does not yet own their
-  distribution; neither the Bible application nor its format is changed here.
+- **Entities:** 5,773 active editable source identities plus three explicitly
+  quarantined records. The 868 permission-restricted ACAI Key Terms remain
+  excluded. Original source locks, exact original-word witnesses, reviewed
+  corrections, abstentions and reversible receipts are versioned.
+- **Native source audit:** [#23](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/23)
+  is **closed**. All 462 originally detected key-reference/general-reference
+  discrepancies were examined: 399 previously certified, 58 further verified
+  contextual references, five corrected discrepancies. Current state has
+  457 legitimate key-only pairs and **zero unaccounted pairs**. A key verse
+  is not required to appear in the general reference list.
+- **Lexical source links:** pinned UBS [Greek](../links/dictionaries/ubs-greek/README.md)
+  and [Hebrew](../links/dictionaries/ubs-hebrew/README.md) datasets, with
+  separate review ledgers and source-specific validation. A dictionary
+  candidate is not an independently certified contextual sense.
+- **Historical assets:** three separately versioned BSI/UBS ZIPs remain
+  published in `icfmp/Bible-Resources`. Reproducible verification is
+  documented; **no new BRSI release has been approved**.
 
-## Audit: should we keep all intermediate UBS research files?
+## Work order
 
-**Decision: no bulk permanent archive of every generated working file.**
-Preserve *editorial knowledge*, source provenance, decisions, abstentions and
-the reproducible process; discard reproducible temporary dumps after checking
-they contain no unique human decisions.
+| Priority | Work | State and required next action |
+| --- | --- | --- |
+| P1 | Native identities, canonical source and original-word validation ([#6](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/6), [#23](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/23)) | **Completed.** Keep regression and source-evidence gates active. Never invent a reference, name, relation or token to reach a metric. |
+| P1 | Standalone migration, nonpublishing producer/consumer integrity contract ([#1](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/1), [#21](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/21)) | **Technical work completed.** Keep historical public asset hashes/source identities immutable. |
+| P1 | New public artifacts and downstream delivery ([#62](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/62)) | **Blocked on explicit owner approval and per-field redistribution rights.** No silent release, app edit or catalogue update. |
+| P2 | Generic tooling and durable documentation ([#22](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/22), [#145](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/145)) | Initial migration cleanup completed; second-pass one-shot retirement and source-guide consolidation in review. Preserve useful tests and unique editorial evidence. |
+| P2 | Edition-specific external article links ([#25](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/25)) | **Scoped only to existing UBS bridges, then ISBE, then a future offline Wikipedia-derived resource.** UBS is the existing lexical source, not an additional dictionary-import task. ISBE's edition/article IDs and rights must be independently approved before mappings; **do not start Wikipedia mapping before ISBE work is completed**. |
+| P3 | Offline pack format and independent Bible consumer contract ([#26](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/26)) | Design/update/rollback/locale/failure cases remain; no Bible app changes without separate authorization. |
 
-| Stream | Durable evidence already in Git | Regenerated rather than archived | Residual uncertainty |
-| --- | --- | --- | --- |
-| UBS Greek | 13 named reviewed JSON decision/headword ledgers, pinned baselines, 78 source-specific Python tools/tests, rights/release reviews | 137,741-word consolidated private candidates, provisional LEXID tiers, token-position audits, context batches and other `/tmp/` results from `bsi-ubs-greek.yml` | Not every generated token-by-token report is retained. Reproducible CI is **not** proof of any unique unrecorded manual notes being preserved. |
-| UBS Hebrew | 14 named review/disposition/approval/abstention JSON files, pinned baseline and 43 source-specific Python tools/tests, v1.0 readiness and v1.1 feasibility/pilot conclusions | 53,981 potential verse-witness semantic candidate report, 72-token detailed pilot witnesses and full candidate index regenerated by `bsi-ubs-hebrew.yml` | The 72-token pilot's **published conclusion and representative exceptions** are in `V11_CONTEXTUAL_PILOT.md`, but the full original-token witness file is generated only on the runner. |
-| Entities | All current reviewed source records, source hashes, original source lock, old decision ledger, quarantine and migration manifest | Older source-plus-overlay comparison output and intermediary distribution JSON | **Zero unresolved, stale or quarantined structured links** after PR #13; inherited multilingual localization review remains unfinished; Dinaite and the Syria/Edom and Gadara/Gerasa alias classifications were corrected in PRs #15–#17, and contradictory inherited fields were flagged in PR #18. |
+### Different data stream: MACULA ↔ Louis Segond alignment
 
-**Evidence checked:** current tracked files and the two independently
-source-pinned workflows, including their explicit regeneration and validation
-steps. Historical benchmark/example and decision files were inspected.
-The workflows no longer upload these large working dumps from the public
-repository. **No complete human-by-human forensic audit of all historic
-runner files was possible**, so do not claim perfect preservation of every
-uncommitted research note.
+The verified word-to-word alignment for the LSG is **not** an external
+dictionary/article crosswalk and is not supplied by UBS lexical IDs.
+[The Bible application issue #282](https://github.com/icfmp/Bible/issues/282)
+already identifies the Clear.Bible alignment candidate and edition mismatch
+risk. BRSI can separately curate a source-pinned alignment **only after**
+the real Hebrew/Greek-to-LSG payloads, licences, corpus editions and token
+correspondences have passed an evidence-based feasibility review. No import,
+publication or correction is authorized by this roadmap note. The requested
+repository cleanup comes first.
 
-**Retention rule going forward:**
+## Explicitly deferred or excluded
 
-1. Keep **source-linked editorial approvals, rejections, abstentions and
-   justifications** in versioned BSI data, where they are directly actionable.
-2. Keep exact upstream source revisions and checksums, generators and
-   representative tests. A green rebuild must still distinguish a *candidate*
-   from a *validated contextual sense*.
-3. Do **not** commit private/full UBS dictionaries, MACULA witness rows or
-   mass provisional sense guesses just to avoid recalculating them.
-4. If a future study produces genuinely new manual reasoning that is
-   **not reconstructible**, record its source-specific conclusions before
-   allowing ephemeral CI output to expire. A small review ledger is preferred
-   to an enormous snapshot.
-5. Reconsider restricted durable storage only when a specific irreproducible
-   research need is demonstrated and rights/storage are explicitly approved.
+- [#24](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/24):
+  semantic entity-to-entity graph is **product V2 only**. Existing private
+  research and regression code do not make it a V1 data or UI requirement.
+- [#27](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/27):
+  original Greek/Hebrew contextual UBS sense research is **deferred**.
+  Hebrew 53,981 source/verse candidates and a 72-word screening pilot do
+  **not** justify automatic sense promotion; Greek provisional candidates
+  remain unreviewed.
+- [#5](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/5):
+  all 868 restricted Key Terms remain excluded until separately permitted.
+- Private research artifacts: preserve **unique** reviewed reasoning and
+  source/word witnesses in the appropriate review ledgers; regenerate
+  reproducible intermediate reports, without a blanket public CI upload
+  or second duplicate archive.
 
-## BRSI roadmap — ordered phases and acceptance gates
+## Maintenance and completion standard
 
-**Name:** Bible Resources Semantic Index (**BRSI**); historical `BSI`
-identifiers, existing repository URLs and released package names stay unchanged.
-This roadmap governs **future work**, not permission to republish older assets.
+Use the [source/tool inventory](MAINTENANCE_INVENTORY.md), [source integrity
+policy](RIGHTS_AND_INTEGRITY.md) and [release contract](RELEASE_CONTRACT.md).
+Current general instructions belong in `docs/` and `scripts/`; pinned
+edition-specific judgments and tests belong beside that edition. Delete
+superseded one-shot command chains only after checking live callers,
+downstream output, source-evidence uniqueness and the appropriate CI.
 
-The order below describes dependencies, **not deadlines**. A phase may be
-developed in parallel where no source/data/publication gate is bypassed.
-
-### Phase 0 — Source integrity and editorial correctness (P1, now)
-
-- [x] **Complete ACAI native-data extraction and historical accounting.**
-  [#3](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/3):
-  5,773 current editable entities + 3 quarantined originals from 5,776
-  permitted original records. The 868 Key Terms remain withheld.
-- [x] **Repair typed inherited links and guard raw source placeholders.**
-  [#6](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/6),
-  PRs #12–#18: 15,541 previously recognized typed links were verified,
-  with no dangling references. PR #53 later resolved a previously missed
-  **untyped TIPNR descendant placeholder** using an already present
-  `group:Ludim` key; native build now rejects untyped `offspring` values.
-  Dinaite, Syria/Edom and Gadara/Gerasa decisions retain source evidence
-  and unresolved interpretation choices.
-- [x] **Retire inherited encyclopedia prose; preserve minimal identity.**
-  [#30](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/30).
-  BRSI is an identity/link index, **not** a multilingual descriptive resource.
-  PR #31 established eight short reviewed source-backed identity qualifiers;
-  PR #32 provided a guarded cleanup tool; PRs #33–#36 removed inherited
-  biographies from all seven permitted source categories in bounded batches.
-  Every transformed batch passed an **identical native build before/after**
-  comparison and independently passed source/relationship regressions.
-  A permanent native build guard and CI now reject any reintroduced
-  `localizations.*.descriptions`. No forced translated descriptions or mass
-  invented identity hints. Pinned ACAI provenance and historic releases stay
-  intact.
-- [x] **Reduce redundant translated display names to one working label.**
-  [#38](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/38).
-  PR #39 added fail-closed, source-safe field-level pruning; PRs #40–#42
-  removed the 18 inherited non-English `preferred_label` translations from
-  all 5,773 current entities in verified category batches. **English source
-  names and 2,898 inherited English alternate-label sets remain**, with
-  their explicit editorial holds and review status; reviewed eight-record
-  identity hints remain independent. Every batch rebuilt the compact native
-  index byte-for-byte unchanged. CI and native builder now prevent accidental
-  reintroduction of redundant names, without barring independently reviewed
-  cross-resource links.
-- [x] **Correct the evidenced source-identity conflicts and adjudicate the
-  remaining textual ambiguities without fabricating identities.**
-  [#6](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/6).
-  PRs #92, #95, #99 and #101 corrected actual data: Lud vs Ludim,
-  invented unanchored husband identities (quarantined rather than merely
-  hidden), false paternal and Mary–Salome maternal claims, duplicate
-  Ezra 3:9 Judah/Hodiah original-word ownership, the Matthew 8:28
-  Gadarenes/Gerasenes city-token collision and confirmed place-verse
-  omissions. All ten originally undistinguished identity candidates
-  now have *individual* evidenced outcomes in
-  [the identity review](V1_IDENTITY_REVIEW.md), including historically
-  distinct nonbiblical places and a genuinely unnamed narrative role.
-  In 1 Chr 2:18 and 6:20/42 the text does not independently establish
-  a single unambiguous mother/father; the definitive editorial decision
-  is to withhold such invented assertions while retaining each exact
-  verse/word witness and reversible source receipts. No fabricated second
-  Zimmah, forced Mary merger or new Gospel city is asserted.
-  Four CI suites passed for each substantive data PR. This closes the
-  identified #6 data contradictions, not a claim that every conceivable
-  historical identity question can be solved from Scripture.
-- [x] **Build a read-only triage for same-name identities.**
-  PRs [#44–#46](https://github.com/icfmp/Bible-Resources-Semantic-Index/pull/46)
-  detected **641 candidate homonym groups / 2,228 source records**.
-  **2,187** have distinctive source key-verse candidates, **31** have a
-  distinctive explicit original-word anchor, while **10** lack either
-  distinguishing anchor and a separately reviewed identity hint.
-  These are *review priorities, not approved identifications*. The exact
-  ten source IDs and evidence pointers are tracked in
-  [#6](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/6).
-- [ ] **Resolve source-integrity audit findings, beyond structural checks.**
-  [#23](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/23)
-  **reopened**: PRs #29, #48, #53, #84, #86, #91, #93, #94 and #96
-  implemented real fail-closed format, provenance, reference and resolver
-  validation. **Still not done:** investigate all 477 source records with
-  key verses outside general references; 118 biblically marked records
-  without general references or explicit word witnesses; edition-specific
-  original-word mappings, source absences and actual reverse-lookup cases.
-  Classify and correct proved errors, test the corrections, document valid
-  source editorial differences and any irresolvable uncertainty. Do not
-  impose fake subset rules, invent verses, or auto-approve senses.
-
-**Phase exit (not yet achieved):** source-identity and source-link anomalies
-are investigated and corrected where evidence supports a correction, genuine
-source ambiguities receive case-specific justified editorial dispositions, and
-all related source-locked CI remains green. Verified input schemas and safe
-output abstentions are necessary safeguards, **not substitutes for resolving
-the underlying issues**. No inherited biography may enter reader-facing packs.
-
-### Phase 1 — Source-pinned builds and a safe versioned distribution contract (P1)
-
-- [x] **Complete standalone BRSI migration acceptance.**
-  [#1](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/1).
-  [PRs #58](https://github.com/icfmp/Bible-Resources-Semantic-Index/pull/58)
-  and [#61](https://github.com/icfmp/Bible-Resources-Semantic-Index/pull/61)
-  reconciled current paths, tested root-level instructions and preserved
-  historical monorepo commands/release URLs as explicitly historical.
-  All source-pinned build workflows and native tests are independently green.
-- [x] **Define, validate and test the BRSI producer/consumer contract.**
-  [#21](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/21).
-  [PR #55](https://github.com/icfmp/Bible-Resources-Semantic-Index/pull/55)
-  added strict v1 manifests, source-edition rights metadata and a fail-closed
-  SHA-256/size/tag/version/producer-commit verifier. [PR #56](https://github.com/icfmp/Bible-Resources-Semantic-Index/pull/56)
-  stages a *nonpublishing* entity ZIP; [PR #60](https://github.com/icfmp/Bible-Resources-Semantic-Index/pull/60)
-  stages it **twice, byte-for-byte identically**, with source-kind guards.
-  Checked-in UBS development indexes receive **local integrity receipts
-  only**, never automatic public ZIPs.
-- [x] **Independently verify the historical public-scope projections.**
-  [PR #57](https://github.com/icfmp/Bible-Resources-Semantic-Index/pull/57)
-  reconstructed both Greek and Hebrew source-pinned public-scope ZIPs;
-  [PR #59](https://github.com/icfmp/Bible-Resources-Semantic-Index/pull/59)
-  requires byte-for-byte agreement with the **original published**
-  GitHub release SHA-256/size locks in `release/historical-assets.lock.json`.
-  The three original Bible-Resources releases and tags remain unchanged.
-- [ ] **Release new BRSI artifacts and implement the consuming repository.**
-  [#62](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/62).
-  **Explicit owner approval and a separate reviewed release are required.**
-  Source-field rights review, source-specific public projection verification,
-  independently pinned consumption in Bible-Resources and any Bible app
-  integration remain **not performed**. Do not activate auto-publication,
-  copy a moving branch or reinterpret historical v0.1/v1.0 approvals.
-
-**Phase 1 technical exit achieved:** independently pinned source builds, a
-verified deterministic **unapproved** entity candidate and a tested
-producer/consumer manifest contract. The actual publish/consume gate
-[#62](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/62)
-remains open by design. **Built ≠ rights-cleared ≠ owner-approved ≠ published.**
-
-### Phase 2 — Maintainable repository (P2)
-
-- [x] **Consolidate scripts, tests, current docs and UBS-specific research.**
-  [#22](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/22).
-  The [maintained tooling map](MAINTENANCE_INVENTORY.md) identifies current
-  generic, native, lexical and historical-test responsibilities. Historical
-  ACAI replay is isolated from the canonical builder, unused migration and
-  research diagnostics were retired with CI verification, and current docs
-  use BRSI while stable IDs, release paths and source locks stay unchanged.
-- [x] **Remove old duplicate BSI workspace and workflows from
-  Bible-Resources.** [Bible-Resources PR #482](https://github.com/icfmp/Bible-Resources/pull/482)
-  removed the historical 212-file working tree and four old workflows after
-  resource CI passed, preserving source history and three published releases.
-
-**Phase exit:** one authoritative source tree, clear contributor entrypoints,
-no obsolete active workflows, source-pinned rebuilds remain reproducible.
-
-### Phase 3 — Grow source-backed semantic capabilities (P2–P3)
-
-- [x] **Permit new independently evidenced BRSI entity records.**
-  PR #11 supports source-provenanced new identities without replaying ACAI
-  patches or losing imported source IDs.
-- [ ] **Add reviewed external dictionary/encyclopedia links (V1).**
-  [#25](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/25).
-  Pin exact source editions and rights, and review entry-level IDs manually.
-  The standalone versioned crosswalk schema and validator preserve explicit
-  abstentions; actual mappings still require source selection, evidence and
-  rights. This is independent of the entity-to-entity graph deferred to V2.
-
-**Phase exit for current V1-related work:** independently documented, tested
-and source-pinned external resource references; no invented person/place
-identities, unlicensed articles or automatically promoted senses.
-The semantic entity-to-entity graph is **not** a Phase 3/V1 exit criterion;
-it is explicitly deferred to product V2.
-
-### Phase 4 — Prepare Bible application consumption (P3, later)
-
-- [ ] **Specify offline semantic packs and application contract.**
-  [#26](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/26).
-  The [V1 consumption guide](V1_CONSUMPTION.md) documents the **three existing
-  separately released ZIPs**, practical source-word keys, uncertainty and
-  edition-specific lexical semantics. A read-only ZIP inspector and
-  synthetic offline failure tests check the pinned byte hashes and public
-  payload shapes without downloading or publishing any assets. These
-  establish technical consumption feasibility, **not application integration**.
-  Remaining: separately approved future pack/update design, locale/source
-  licensing checks and a later explicitly authorized `icfmp/Bible` task.
-
-**Phase exit:** tested consumer fixtures and a compatible approved release
-contract. No implied application release or feature availability.
-
-### Outstanding source work — do not silently defer unresolved V1 issues
-
-Issues [#6](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/6)
-and [#23](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/23)
-were **reopened at the owner's request** because recording uncertainty or
-hiding unsafe fields does not mean the data problem has been resolved.
-Their specific genealogical, identity, source-word and reference audits
-are active tasks above. Earlier PRs #95–#97 preserve useful evidence,
-reversible changes and test protections, but **do not close these tasks**.
-
-Follow-up belongs in a later version only when the underlying case has been
-investigated, any demonstrable error corrected, and a specific source
-limitation or future-dependent feature identified. Such deferrals must be
-explicitly justified by the owner. Otherwise keep the issue open.
-
-### Deferred and explicitly excluded work
-
-- [ ] **V2 ONLY — semantic entity relations and graph.**
-  [#24](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/24).
-  PRs #81–#82 established an **internal, unapproved** proof of concept:
-  reversible inherited source-field links and explicit uncertainty/contradiction
-  holds. This work is **deferred until after V1**. Do not add a relation graph
-  to the V1 package, public API, Bible application UI or release criteria.
-  Only V1 identity, exact source-word/verse links, external resource pointers
-  and their rights/integrity gates are in scope. The internal schema's
-  `schema_version: 1` is a format version, **not** a BRSI product-V1 feature.
-  Revisit graph modeling, individual relation review and licensing for V2
-  under separate authorization.
-
-- [ ] **UBS Greek/Hebrew contextual-sense research:** [#27](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/27).
-  Source-based, small independently verified pilots only. The Hebrew
-  53,981 candidates and the 72-token NO-GO pilot do **not** justify automatic
-  promotion; Greek provisional LEXIDs are not reviewed context assignments.
-- [ ] **868 ACAI Key Terms:** [#5](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/5).
-  **Do not import or publish.** Revisit only with field-by-field redistribution
-  rights and separate owner approval.
-- [ ] **Private intermediate research archives:** no default bulk snapshot
-  or public upload of rights-restricted witnesses. Record actual
-  nonreproducible editorial decisions in maintained review ledgers; reopen
-  storage discussions only for a demonstrated irrecoverable need.
-
-## Completion standard
-
-A task is complete only when its code/data is on the intended repository,
-tests pass, changes are source-justified, any editorial decision is reviewed,
-provenance and rights remain clear, and the issue/roadmap is updated.
-**Implemented ≠ tested ≠ editorially approved ≠ published.**
+**Implemented is not tested, source-certified, legally cleared or published.**
+A task is complete only after the relevant independent verification has
+passed, the change is versioned, and the corresponding issue/PR records
+the result. Publishing always requires explicit owner authorization.

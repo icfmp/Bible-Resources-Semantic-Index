@@ -41,6 +41,18 @@ class OriginalBilingualUBSAlternateLemmas(unittest.TestCase):
         out=MOD["audit"](r,en,fr)
         self.assertEqual(out["source_evidence_counts"],{"not_in_original_ubs_alternate_lemmas":456})
 
+    def test_inflection_metadata_is_not_an_explicit_lexical_identity(self):
+        # A similar inflection and the same LN domain are not source-approved
+        # alternate lemmas. This is a reusable exclusion, not a 47-word probe.
+        r,en,fr=fixture()
+        en[0]["AlternateLemmas"]=fr[0]["AlternateLemmas"]=[]
+        en[0]["BaseForms"][0]["Inflections"]=["Ἰερουσαλήμ"]
+        fr[0]["BaseForms"][0]["Inflections"]=["Ἰερουσαλήμ"]
+        out=MOD["audit"](r,en,fr)
+        self.assertEqual(out["source_evidence_counts"],
+                         {"not_in_original_ubs_alternate_lemmas":456})
+        self.assertEqual(out["new_source_word_lexical_headwords_approved"],0)
+
     def test_bilingual_alternate_drift_rejected(self):
         r,en,fr=fixture()
         fr[0]["AlternateLemmas"]=[]

@@ -549,25 +549,6 @@ jobs:
           assert x['publication_approved'] is False
           print('GREEK_ORIGINAL_UBS_EXPLICIT_ALTERNATE_LEMMA_SOURCE_WITNESSES_UNAPPROVED')
           PY
-      - name: Independently inspect original UBS inflections for the last 47 Greek source words
-        run: |
-          python3 -I links/dictionaries/ubs-greek/audit_last_47_lexical_forms.py \
-            --alternates /tmp/bsi-ubs-greek-456-explicit-original-ubs-alternate-lemmas.json \
-            --english ubs-source/dictionaries/greek/JSON/UBSGreekNTDic-v1.0-en.JSON \
-            --french ubs-source/dictionaries/greek/JSON/UBSGreekNTDic-v1.0-fr.JSON \
-            --output /tmp/bsi-ubs-greek-last-47-source-inflection-evidence.json
-          python3 - <<'PY'
-          import json
-          from pathlib import Path
-          x=json.loads(Path('/tmp/bsi-ubs-greek-last-47-source-inflection-evidence.json').read_text())
-          assert x['remaining_original_word_ids']==47
-          assert sum(x['source_evidence_counts'].values())==47
-          assert x['new_lexical_headwords_approved']==0
-          assert x['contextual_senses_inferred']==0
-          assert x['original_greek_and_strong_modified'] is False
-          assert x['publication_approved'] is False
-          print('GREEK_47_SOURCE_LEXICAL_GAPS_PRESERVED_NO_UNVERIFIED_UBS_MAPPINGS')
-          PY
       - name: Review three authentic Greek Alpha letter-name word headwords without rewriting capitalization
         run: |
           python3 -I links/dictionaries/ubs-greek/build_reviewed_alpha_case_only.py \
