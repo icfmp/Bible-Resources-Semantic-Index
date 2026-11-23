@@ -15,10 +15,89 @@
   },
   "bsi": {
     "canonical_id": "person:Mahalath",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "person:Basemath.3",
     "source_primary_id": "person:Mahalath",
-    "source_sha256": "211c957aca38992640ee37f0cfbcd9fe5ac92acaa28530ebd2562867f578e4f8"
+    "source_sha256": "211c957aca38992640ee37f0cfbcd9fe5ac92acaa28530ebd2562867f578e4f8",
+    "editorial_reason": "Restore a direct source-attested lexical occurrence for an independently established reviewed canonical identity, without inventing a different historical bearer.",
+    "editorial_evidence": [
+      "Pinned Macula WLC Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c and SBLGNT Clear-Bible/macula-greek@8423afe47b9e8f24b7772e808af45c7159a6fe7e; exact verses collated in PR #137",
+      "Genesis 28:9 calls Esau's wife Mahalath the daughter of Ishmael, sister of Nebaioth; Genesis 36:3 calls the same wife Basemath, validating the historically indexed canonical alias.",
+      "01028009 wlc o010280090071"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "restore_verified_named_alias_original_words",
+        "reason": "Restore a direct source-attested lexical occurrence for an independently established reviewed canonical identity, without inventing a different historical bearer.",
+        "evidence": [
+          "Pinned Macula WLC Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c and SBLGNT Clear-Bible/macula-greek@8423afe47b9e8f24b7772e808af45c7159a6fe7e; exact verses collated in PR #137",
+          "Genesis 28:9 calls Esau's wife Mahalath the daughter of Ishmael, sister of Nebaioth; Genesis 36:3 calls the same wife Basemath, validating the historically indexed canonical alias.",
+          "01028009 wlc o010280090071"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [
+              "01036003",
+              "01036004",
+              "01036010",
+              "01036013",
+              "01036017"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o010360030021"
+                ],
+                [
+                  "o010360040062"
+                ],
+                [
+                  "o010360100121"
+                ],
+                [
+                  "o010360130111"
+                ],
+                [
+                  "o010360170211"
+                ]
+              ]
+            }
+          },
+          "after": {
+            "references": [
+              "01028009",
+              "01036003",
+              "01036004",
+              "01036010",
+              "01036013",
+              "01036017"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o010360030021"
+                ],
+                [
+                  "o010360040062"
+                ],
+                [
+                  "o010360100121"
+                ],
+                [
+                  "o010360130111"
+                ],
+                [
+                  "o010360170211"
+                ],
+                [
+                  "o010280090071"
+                ]
+              ]
+            }
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -36,6 +115,9 @@
       ],
       [
         "o010360170211"
+      ],
+      [
+        "o010280090071"
       ]
     ]
   },
@@ -74,6 +156,7 @@
   "primary_id": "person:Mahalath",
   "pronominal_referents": {},
   "references": [
+    "01028009",
     "01036003",
     "01036004",
     "01036010",

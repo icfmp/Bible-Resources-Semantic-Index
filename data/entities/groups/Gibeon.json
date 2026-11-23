@@ -12,10 +12,114 @@
   },
   "bsi": {
     "canonical_id": "group:Gibeon",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "group:Gibeon",
     "source_primary_id": "group:Gibeon",
-    "source_sha256": "257775934de574d344704b9493f08b7bcdc534ce95cf8b47e915663f31b02eff"
+    "source_sha256": "257775934de574d344704b9493f08b7bcdc534ce95cf8b47e915663f31b02eff",
+    "editorial_reason": "Restore exact source-language direct mention in this identity's inherited key verses without conflating ancestor, location and lineage identities.",
+    "editorial_evidence": [
+      "Pinned Macula WLC Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c; SBLGNT Clear-Bible/macula-greek@8423afe47b9e8f24b7772e808af45c7159a6fe7e, verse inspection PR #137",
+      "Joshua 9:3 names the inhabitants of Gibeon, a people group, rather than mere city location.",
+      "06009003 wlc: o060090030012 + o060090030021"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "restore_compound_original_source_mention",
+        "reason": "Restore exact source-language direct mention in this identity's inherited key verses without conflating ancestor, location and lineage identities.",
+        "evidence": [
+          "Pinned Macula WLC Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c; SBLGNT Clear-Bible/macula-greek@8423afe47b9e8f24b7772e808af45c7159a6fe7e, verse inspection PR #137",
+          "Joshua 9:3 names the inhabitants of Gibeon, a people group, rather than mere city location.",
+          "06009003 wlc: o060090030012 + o060090030021"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [
+              "10021001",
+              "10021002",
+              "10021003",
+              "10021004",
+              "10021009",
+              "13012004",
+              "13012005",
+              "16003007"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o100210010262"
+                ],
+                [
+                  "o100210020032"
+                ],
+                [
+                  "o100210020063"
+                ],
+                [
+                  "o100210030042"
+                ],
+                [
+                  "o100210040032"
+                ],
+                [
+                  "o100210090032"
+                ],
+                [
+                  "o130120040022"
+                ],
+                [
+                  "o160030070052"
+                ]
+              ]
+            }
+          },
+          "after": {
+            "references": [
+              "06009003",
+              "10021001",
+              "10021002",
+              "10021003",
+              "10021004",
+              "10021009",
+              "13012004",
+              "13012005",
+              "16003007"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o100210010262"
+                ],
+                [
+                  "o100210020032"
+                ],
+                [
+                  "o100210020063"
+                ],
+                [
+                  "o100210030042"
+                ],
+                [
+                  "o100210040032"
+                ],
+                [
+                  "o100210090032"
+                ],
+                [
+                  "o130120040022"
+                ],
+                [
+                  "o160030070052"
+                ],
+                [
+                  "o060090030012",
+                  "o060090030021"
+                ]
+              ]
+            }
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -42,6 +146,10 @@
       ],
       [
         "o160030070052"
+      ],
+      [
+        "o060090030012",
+        "o060090030021"
       ]
     ]
   },
@@ -80,6 +188,7 @@
     ]
   },
   "references": [
+    "06009003",
     "10021001",
     "10021002",
     "10021003",

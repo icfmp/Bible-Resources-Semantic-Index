@@ -7,12 +7,55 @@
   },
   "bsi": {
     "canonical_id": "place:Ephron.1",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:Ephron.1",
     "source_primary_id": "place:Ephron.1",
-    "source_sha256": "9b1ebd99571165afbc8aef1e075c88b6fe238585bcffff63cbc3dfdbb449c57e"
+    "source_sha256": "9b1ebd99571165afbc8aef1e075c88b6fe238585bcffff63cbc3dfdbb449c57e",
+    "editorial_reason": "Joshua 15:9 directly names Mount Ephron with two pinned Hebrew words (har Ephron). Joshua 18:15 repeats the border route without this proper name. Restore the actual exact word and correct the misleading single-verse label, while keeping 18:15 as a separate contextual key and retaining historical source provenance.",
+    "editorial_evidence": [
+      "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c WLC Joshua 15:9 o060150090121 mount and o060150090131 Ephron",
+      "WLC Joshua 18:15 no Ephron proper-name word; Joshua 18:15 source key remains contextual only"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "restore_true_mount_ephron_verse_instead_of_contextual_border",
+        "reason": "Joshua 15:9 directly names Mount Ephron with two pinned Hebrew words (har Ephron). Joshua 18:15 repeats the border route without this proper name. Restore the actual exact word and correct the misleading single-verse label, while keeping 18:15 as a separate contextual key and retaining historical source provenance.",
+        "evidence": [
+          "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c WLC Joshua 15:9 o060150090121 mount and o060150090131 Ephron",
+          "WLC Joshua 18:15 no Ephron proper-name word; Joshua 18:15 source key remains contextual only"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [],
+            "explicit_instances": {},
+            "preferred_label": "Ephron (Joshua 18:15)"
+          },
+          "after": {
+            "references": [
+              "06015009"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o060150090121",
+                  "o060150090131"
+                ]
+              ]
+            },
+            "preferred_label": "Mount Ephron (Joshua 15:9)"
+          }
+        }
+      }
+    ]
   },
-  "explicit_instances": {},
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o060150090121",
+        "o060150090131"
+      ]
+    ]
+  },
   "id": "place:Ephron.1",
   "is_artifact": false,
   "is_person": false,
@@ -21,7 +64,7 @@
   ],
   "localizations": {
     "eng": {
-      "preferred_label": "Ephron (Joshua 18:15)"
+      "preferred_label": "Mount Ephron (Joshua 15:9)"
     }
   },
   "mentioned_in_bible": true,
@@ -37,7 +80,9 @@
   ],
   "primary_id": "place:Ephron.1",
   "pronominal_referents": {},
-  "references": [],
+  "references": [
+    "06015009"
+  ],
   "subject_referents": {},
   "type": "place"
 }

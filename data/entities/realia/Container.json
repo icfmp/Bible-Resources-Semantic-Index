@@ -10,10 +10,78 @@
   },
   "bsi": {
     "canonical_id": "realia:Container",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "realia:Container",
     "source_primary_id": "realia:Container",
-    "source_sha256": "990ce23f056b326d08ac0e831b20ad74eb900f7334002d9474fd979cfd8211ad"
+    "source_sha256": "990ce23f056b326d08ac0e831b20ad74eb900f7334002d9474fd979cfd8211ad",
+    "editorial_reason": "Restore a direct source-attested lexical occurrence for an independently established reviewed canonical identity, without inventing a different historical bearer.",
+    "editorial_evidence": [
+      "Pinned Macula WLC Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c and SBLGNT Clear-Bible/macula-greek@8423afe47b9e8f24b7772e808af45c7159a6fe7e; exact verses collated in PR #137",
+      "Mark 14:3 names an alabaster jar/flask twice (ἀλάβαστρον); existing Container alias Flask semantically covers the actual container, without assigning ointment inside.",
+      "41014003 SBLGNT n41014003017",
+      "41014003 SBLGNT n41014003024"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "restore_verified_named_alias_original_words",
+        "reason": "Restore a direct source-attested lexical occurrence for an independently established reviewed canonical identity, without inventing a different historical bearer.",
+        "evidence": [
+          "Pinned Macula WLC Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c and SBLGNT Clear-Bible/macula-greek@8423afe47b9e8f24b7772e808af45c7159a6fe7e; exact verses collated in PR #137",
+          "Mark 14:3 names an alabaster jar/flask twice (ἀλάβαστρον); existing Container alias Flask semantically covers the actual container, without assigning ointment inside.",
+          "41014003 SBLGNT n41014003017",
+          "41014003 SBLGNT n41014003024"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [
+              "40013048",
+              "40025004",
+              "43004011"
+            ],
+            "explicit_instances": {
+              "SBLGNT": [
+                [
+                  "n40025004008"
+                ],
+                [
+                  "n40013048014"
+                ],
+                [
+                  "n43004011007"
+                ]
+              ]
+            }
+          },
+          "after": {
+            "references": [
+              "40013048",
+              "40025004",
+              "41014003",
+              "43004011"
+            ],
+            "explicit_instances": {
+              "SBLGNT": [
+                [
+                  "n40025004008"
+                ],
+                [
+                  "n40013048014"
+                ],
+                [
+                  "n43004011007"
+                ],
+                [
+                  "n41014003017"
+                ],
+                [
+                  "n41014003024"
+                ]
+              ]
+            }
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "SBLGNT": [
@@ -25,6 +93,12 @@
       ],
       [
         "n43004011007"
+      ],
+      [
+        "n41014003017"
+      ],
+      [
+        "n41014003024"
       ]
     ]
   },
@@ -58,6 +132,7 @@
   "references": [
     "40013048",
     "40025004",
+    "41014003",
     "43004011"
   ],
   "subject_referents": {},

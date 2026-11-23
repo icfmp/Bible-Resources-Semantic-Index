@@ -12,10 +12,152 @@
   },
   "bsi": {
     "canonical_id": "group:Gershon",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "group:Gershon",
     "source_primary_id": "group:Gershon",
-    "source_sha256": "cf4186b86795ce30289e71d85c507a8eabed158c7d8b5091feb975e45dcbd15c"
+    "source_sha256": "cf4186b86795ce30289e71d85c507a8eabed158c7d8b5091feb975e45dcbd15c",
+    "editorial_reason": "Restore exact source-language direct mention in this identity's inherited key verses without conflating ancestor, location and lineage identities.",
+    "editorial_evidence": [
+      "Pinned Macula WLC Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c; SBLGNT Clear-Bible/macula-greek@8423afe47b9e8f24b7772e808af45c7159a6fe7e, verse inspection PR #137",
+      "Numbers 4:41 counts clans descended from Gershon, expressed as sons of Gershon.",
+      "04004041 wlc: o040040410041 + o040040410051"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "restore_compound_original_source_mention",
+        "reason": "Restore exact source-language direct mention in this identity's inherited key verses without conflating ancestor, location and lineage identities.",
+        "evidence": [
+          "Pinned Macula WLC Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c; SBLGNT Clear-Bible/macula-greek@8423afe47b9e8f24b7772e808af45c7159a6fe7e, verse inspection PR #137",
+          "Numbers 4:41 counts clans descended from Gershon, expressed as sons of Gershon.",
+          "04004041 wlc: o040040410041 + o040040410051"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [
+              "04003021",
+              "04003023",
+              "04003024",
+              "04004024",
+              "04004027",
+              "04004028",
+              "04026057",
+              "06021033",
+              "13023007",
+              "13026021",
+              "13029008",
+              "14029012"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o040030210092"
+                ],
+                [
+                  "o040030230022"
+                ],
+                [
+                  "o040030240042"
+                ],
+                [
+                  "o040040240042"
+                ],
+                [
+                  "o040040270092"
+                ],
+                [
+                  "o040040280052"
+                ],
+                [
+                  "o040260570072"
+                ],
+                [
+                  "o060210330032"
+                ],
+                [
+                  "o130230070012"
+                ],
+                [
+                  "o130260210042"
+                ],
+                [
+                  "o130260210092"
+                ],
+                [
+                  "o130290080112"
+                ],
+                [
+                  "o140290120222"
+                ]
+              ]
+            }
+          },
+          "after": {
+            "references": [
+              "04003021",
+              "04003023",
+              "04003024",
+              "04004024",
+              "04004027",
+              "04004028",
+              "04004041",
+              "04026057",
+              "06021033",
+              "13023007",
+              "13026021",
+              "13029008",
+              "14029012"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o040030210092"
+                ],
+                [
+                  "o040030230022"
+                ],
+                [
+                  "o040030240042"
+                ],
+                [
+                  "o040040240042"
+                ],
+                [
+                  "o040040270092"
+                ],
+                [
+                  "o040040280052"
+                ],
+                [
+                  "o040260570072"
+                ],
+                [
+                  "o060210330032"
+                ],
+                [
+                  "o130230070012"
+                ],
+                [
+                  "o130260210042"
+                ],
+                [
+                  "o130260210092"
+                ],
+                [
+                  "o130290080112"
+                ],
+                [
+                  "o140290120222"
+                ],
+                [
+                  "o040040410041",
+                  "o040040410051"
+                ]
+              ]
+            }
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -57,6 +199,10 @@
       ],
       [
         "o140290120222"
+      ],
+      [
+        "o040040410041",
+        "o040040410051"
       ]
     ]
   },
@@ -94,6 +240,7 @@
     "04004024",
     "04004027",
     "04004028",
+    "04004041",
     "04026057",
     "06021033",
     "13023007",

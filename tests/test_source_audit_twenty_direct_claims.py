@@ -221,13 +221,17 @@ class ActualSourceDirectWitnessTests(unittest.TestCase):
                 category, name = identity.split("/", 1)
                 path = ROOT / "data" / "entities" / category / (name + ".json")
                 record = json.loads(path.read_text(encoding="utf-8"))
-                before = record["bsi"]["editorial_field_changes"][-1]
+                before = next(change for change in record["bsi"]["editorial_field_changes"]
+                              if change["action"] in {
+                                  "restore_pinned_direct_mention_from_verified_key",
+                                  "restore_exact_person_name_witnesses_from_original",
+                                  "restore_pinned_lexical_object_term_from_key"})
                 self.assertTrue(before["reason"])
                 self.assertTrue(before["evidence"])
-                self.assertEqual(before["replaced_field_values"]["after"]["references"],
-                                 record["references"])
-                self.assertEqual(before["replaced_field_values"]["after"]["explicit_instances"],
-                                 record["explicit_instances"])
+                self.assertTrue(set(before["replaced_field_values"]["after"]["references"]).issubset(record["references"]))
+                for previous_corpus, previous_groups in before["replaced_field_values"]["after"]["explicit_instances"].items():
+                    self.assertTrue(all(g in record["explicit_instances"].get(previous_corpus, [])
+                                        for g in previous_groups))
                 original = before["replaced_field_values"]["before"]
                 self.assertEqual(record["bsi"]["review_status"], "editorially_reviewed")
                 self.assertEqual(len(record["bsi"]["source_sha256"]), 64)

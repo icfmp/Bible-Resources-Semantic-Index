@@ -32,6 +32,11 @@ class PeopleOriginalWordReviewTests(unittest.TestCase):
                                  {"wlc":[[w] for v,w in pairs]})
                 self.assertTrue(edits[0]["reason"] and edits[0]["evidence"])
                 self.assertEqual(len(row["bsi"]["source_sha256"]),64)
-                self.assertEqual(row["bsi"]["review_status"],"source_unreviewed")
+                self.assertEqual(row["bsi"]["review_status"],
+                                 "editorially_reviewed" if path == "groups/Midian"
+                                 else "source_unreviewed")
+                if path == "groups/Midian":
+                    self.assertTrue(any(edit["action"] == "restore_compound_original_source_mention"
+                                        for edit in row["bsi"]["editorial_field_changes"]))
 if __name__=="__main__":
     unittest.main()

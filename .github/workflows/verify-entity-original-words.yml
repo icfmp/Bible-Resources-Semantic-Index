@@ -99,6 +99,11 @@ jobs:
             --wlc macula-hebrew/WLC/tsv/macula-hebrew.tsv \
             --sblgnt macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv \
             --verses 40004025 40019001 41010001 43001028 06018015 13004012 13026014 13026015 24048001 09022006 26038006 18026007 19048003 23014013 11006005 11008010 01024010 04022036 23015005 24048034 09030030 10013034 09030005 16003007 13027030
+          # Third case-oriented source audit; these rows are evidence, not automatic links.
+          python3 -I scripts/inspect_pinned_original_verse.py \
+            --wlc macula-hebrew/WLC/tsv/macula-hebrew.tsv \
+            --sblgnt macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv \
+            --verses 58011032 02001009 02019003 01036035 01010015 01010019 02006018 04004041 04007009 01046011 06009003 04021009 03005002 05032024 02028042 10005023 18031004 23044014 40026003 41014003 01006014 01007001 01008004 01028009 16013004 16013007 13009007 15004007 50002005 50002010 28009010 27005028 06015009 06018015 05023003 24029024 10021018 13012004 23035002
       - name: Full key-only reference investigation against pinned WLC and SBLGNT
         run: |
           python3 -I tests/test_audit_all_key_reference_original_words.py

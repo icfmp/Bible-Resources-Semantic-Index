@@ -14,10 +14,41 @@
   },
   "bsi": {
     "canonical_id": "group:Ammon",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "group:Ammon",
     "source_primary_id": "group:Ammon",
-    "source_sha256": "e75c44c1f832bca1b05784477b4386b567d4fed0ff7bff367b20e0888d5fdea8"
+    "source_sha256": "e75c44c1f832bca1b05784477b4386b567d4fed0ff7bff367b20e0888d5fdea8",
+    "editorial_reason": "Correct an inherited key verse with transposed or adjacent verse digits; the original pinned verse does not mention this identity, while the corrected verse is already independently attested.",
+    "editorial_evidence": [
+      "Pinned Clear-Bible WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c exact verse/source-word inspection in PR #137",
+      "Deuteronomy 23:3 concerns illegitimate birth; Deuteronomy 23:4 explicitly names Ammonites and Moabites, already direct in this record via o050230040031."
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "correct_wrong_inherited_key_verse_to_direct_source_attested_verse",
+        "reason": "Correct an inherited key verse with transposed or adjacent verse digits; the original pinned verse does not mention this identity, while the corrected verse is already independently attested.",
+        "evidence": [
+          "Pinned Clear-Bible WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c exact verse/source-word inspection in PR #137",
+          "Deuteronomy 23:3 concerns illegitimate birth; Deuteronomy 23:4 explicitly names Ammonites and Moabites, already direct in this record via o050230040031."
+        ],
+        "replaced_field_values": {
+          "before": {
+            "key_references": [
+              "01019038",
+              "04021024",
+              "05023003"
+            ]
+          },
+          "after": {
+            "key_references": [
+              "01019038",
+              "04021024",
+              "05023004"
+            ]
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -368,7 +399,7 @@
   "key_references": [
     "01019038",
     "04021024",
-    "05023003"
+    "05023004"
   ],
   "lemmas": {
     "he": [
