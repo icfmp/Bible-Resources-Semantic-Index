@@ -48,9 +48,9 @@ class ResolvedSourceKeyMilestoneTests(unittest.TestCase):
     def test_wordless_case_not_certified(self):
         self._invalid(lambda d:d["cases"][0].__setitem__("evidence_word_ids",[]))
 
-    def test_fabricated_source_word_not_certified(self):
+    def test_original_word_in_impossible_source_book_not_certified(self):
         self._invalid(lambda d:d["cases"][0].__setitem__("evidence_word_ids",
-                                                        ["o010010010999"]))
+                                                        ["o990010010999"]))
 
     def test_unknown_source_edition_cannot_pass(self):
         self._invalid(lambda d:d["pin"].__setitem__("wlc","floating@latest"))
