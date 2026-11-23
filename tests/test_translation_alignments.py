@@ -82,11 +82,14 @@ class TranslationAlignmentTests(unittest.TestCase):
         self.assertEqual(nt["records"][1]["source_ids_original"],
                          ["n40001001002", "n40001001001"])
         self.assertEqual(nt["by_source"]["n40001001001"], [0, 1])
+        self.assertEqual(nt["original_group_meta"], {"origin": "manual"})
+        self.assertEqual(nt["records"][0]["original_record_meta"], {"id": "explicit-1"})
         self.assertEqual(nt["coverage"]["target_tokens_unaligned"], 0)
         self.assertEqual(ot["coverage"]["target_unverified"], 1)
         self.assertEqual(ot["coverage"]["unresolved"], 1)
         self.assertIsNone(ot["coverage"]["target_tokens"])
         self.assertIn("target_census_unavailable", ot["records"][0]["problems"])
+        self.assertEqual(ot["problem_counts_by_book"]["target_census_unavailable"], {"01": 2})
         self.assertFalse(ot["records"][0]["independently_reviewed"])
         self.assertNotIn("\u03b1", json.dumps(nt, ensure_ascii=False))
         self.assertNotIn("\u05d0", json.dumps(ot, ensure_ascii=False))
@@ -118,6 +121,11 @@ class TranslationAlignmentTests(unittest.TestCase):
             self.build()
         self.assertRaisesRegex(ValueError, "duplicate JSON key",
                                lambda: module.strict_object([("a", 1), ("a", 2)]))
+
+    def test_require_independent_sha256_pin(self):
+        self.manifest["inputs"][0]["sha256"] = None
+        with self.assertRaisesRegex(ValueError, "missing or malformed pinned SHA-256"):
+            self.build()
 
     def test_reject_duplicate_source_tokens(self):
         self.payloads["ns"] += "n40001001001\tduplicate\n"
