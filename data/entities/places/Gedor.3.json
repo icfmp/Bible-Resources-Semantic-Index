@@ -10,9 +10,37 @@
     "review_status": "source_unreviewed",
     "source_id": "place:Gedor.3",
     "source_primary_id": "place:Gedor.3",
-    "source_sha256": "32154bac31810ab7c788a42a672d1424e4cae4352ce81886abc751c0a2bd28f3"
+    "source_sha256": "32154bac31810ab7c788a42a672d1424e4cae4352ce81886abc751c0a2bd28f3",
+    "editorial_field_changes": [
+      {
+        "action": "restore_original_named_place_token",
+        "added_reference_values": {
+          "references": [
+            "13004018"
+          ]
+        },
+        "added_original_word_groups": {
+          "wlc": [
+            [
+              "o130040180071"
+            ]
+          ]
+        },
+        "reason": "1 Chronicles 4:18 directly refers to Gedor in the genealogical title 'father of Gedor', a toponym explicitly identified in the source original. Preserve the ambiguity about any individual's literal parentage.",
+        "evidence": [
+          "1 Chronicles 4:18",
+          "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c locked WLC word/verse attestations"
+        ]
+      }
+    ]
   },
-  "explicit_instances": {},
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o130040180071"
+      ]
+    ]
+  },
   "id": "place:Gedor.3",
   "is_artifact": false,
   "is_person": false,
@@ -37,7 +65,9 @@
   },
   "primary_id": "place:Gedor.3",
   "pronominal_referents": {},
-  "references": [],
+  "references": [
+    "13004018"
+  ],
   "subject_referents": {},
   "subregion_of": [
     "place:TerritoryOfJudah"
