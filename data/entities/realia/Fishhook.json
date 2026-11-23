@@ -15,7 +15,34 @@
     "review_status": "source_unreviewed",
     "source_id": "realia:Fishhook",
     "source_primary_id": "realia:Fishhook",
-    "source_sha256": "e5dc1f510dcb69c9fa8e8e2cd249ea91170feac1838f5c96d7b2bc97d38c030c"
+    "source_sha256": "e5dc1f510dcb69c9fa8e8e2cd249ea91170feac1838f5c96d7b2bc97d38c030c",
+    "editorial_field_changes": [
+      {
+        "action": "restore_source_attested_object_word_instances",
+        "added_reference_values": {
+          "references": [
+            "23019008",
+            "35001015"
+          ]
+        },
+        "added_original_word_groups": {
+          "wlc": [
+            [
+              "o230190080071"
+            ],
+            [
+              "o350010150022"
+            ]
+          ]
+        },
+        "reason": "WLC has explicit source-hook terms in Isaiah 19:8 and Habakkuk 1:15.",
+        "evidence": [
+          "ORG BCV8 23019008",
+          "ORG BCV8 35001015",
+          "Pinned original-word texts/glosses inspected in Clear-Bible/Macula Hebrew WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c; token IDs copied verbatim; source metadata and scripture unchanged"
+        ]
+      }
+    ]
   },
   "explicit_instances": {
     "SBLGNT": [
@@ -26,6 +53,12 @@
     "wlc": [
       [
         "o300040020142"
+      ],
+      [
+        "o230190080071"
+      ],
+      [
+        "o350010150022"
       ]
     ]
   },
@@ -59,7 +92,9 @@
   "realia_type": "other",
   "references": [
     "30004002",
-    "40017027"
+    "40017027",
+    "23019008",
+    "35001015"
   ],
   "subject_referents": {},
   "type": "realia",
