@@ -53,7 +53,11 @@ class RealWordRealiaSourceTests(unittest.TestCase):
                 self.assertTrue(receipt["evidence"])
                 self.assertTrue(receipt["reason"])
                 self.assertEqual(len(o["bsi"]["source_sha256"]),64)
-                self.assertEqual(o["bsi"]["review_status"],"source_unreviewed")
+                self.assertEqual(o["bsi"]["review_status"],
+                                 "editorially_reviewed" if name == "Seal" else "source_unreviewed")
+                if name == "Seal":
+                    self.assertTrue(any(x["action"] == "restore_pinned_lexical_object_term_from_key"
+                                        for x in o["bsi"]["editorial_field_changes"]))
 
 if __name__=="__main__":
     unittest.main()
