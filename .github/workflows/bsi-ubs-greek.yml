@@ -728,34 +728,15 @@ jobs:
           print('GREEK_223_SOURCE_FORM_SUPPORTED_PROVISIONAL_SENSES_NO_CONTEXT_VERIFICATION')
           PY
 
-      - name: Independently audit UBS LEXID passage witnesses against all original MACULA Greek word IDs
+      - name: Verify and stage 258 uniquely source-verse-supported original Greek UBS provisional sense choices
         run: |
-          python3 -I links/dictionaries/ubs-greek/audit_ubs_source_verse_witnesses.py \
+          python3 -I links/dictionaries/ubs-greek/build_source_verse_provisional_senses.py \
             --index links/dictionaries/ubs-greek/index.json \
             --reviewed /tmp/bsi-ubs-greek-409-explicit-ubs-alternate-headwords-private.json \
             --batches /tmp/bsi-ubs-greek-2728-contextual-review-batches-PRIVATE.json \
             --english ubs-source/dictionaries/greek/JSON/UBSGreekNTDic-v1.0-en.JSON \
             --french ubs-source/dictionaries/greek/JSON/UBSGreekNTDic-v1.0-fr.JSON \
             --macula macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv \
-            --form_defaults /tmp/bsi-ubs-greek-223-source-form-provisional-sense-choices-PRIVATE.json \
-            --output /tmp/bsi-ubs-greek-original-source-verse-lexid-candidates-PRIVATE.json
-          python3 - <<'PY'
-          import json
-          from pathlib import Path
-          x=json.loads(Path('/tmp/bsi-ubs-greek-original-source-verse-lexid-candidates-PRIVATE.json').read_text())
-          assert x['all_initial_original_multi_lexid_words']==2728
-          assert x['previously_staged_source_form_word_ids']==223
-          assert sum(x['source_specific_dispositions'].values())==2728
-          assert x['other_original_multi_lexid_words_still_unresolved']==2505-x['original_reference_witness_candidate_word_count']
-          assert x['independently_contextually_validated']==0
-          assert x['corpus_or_ubs_modified'] is False and x['published'] is False
-          assert x['publication_approved'] is False
-          print('GREEK_UBS_SOURCE_VERSE_WITNESSES_AUDITED_NOT_CONTEXT_VALIDATED')
-          PY
-      - name: Verify and stage 258 uniquely source-verse-supported original Greek UBS provisional sense choices
-        run: |
-          python3 -I links/dictionaries/ubs-greek/build_source_verse_provisional_senses.py \
-            --report /tmp/bsi-ubs-greek-original-source-verse-lexid-candidates-PRIVATE.json \
             --unresolved /tmp/bsi-ubs-greek-15237-unresolved-contextual-LEXID-evidence-PRIVATE.json \
             --high /tmp/bsi-ubs-greek-122504-provisional-UBS-LEXID-source-candidates-PRIVATE.json \
             --low /tmp/bsi-ubs-greek-170-lower-confidence-provisional-UBS-original-sense-defaults.json \
