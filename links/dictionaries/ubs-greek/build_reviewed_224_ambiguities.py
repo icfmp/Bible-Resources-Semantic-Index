@@ -70,10 +70,10 @@ def plan(ledger, report):
     return choices
 
 
-def build(candidate, source, classified, ledger, english, french):
-    independently_checked = AUDIT["classify"](source)
-    if independently_checked != classified:
-        raise ValueError("Original 224 Greek ambiguity evidence register drift")
+def build(candidate, source, ledger, english, french):
+    # Validate the pinned original-word source directly: there is no need
+    # to serialize this exact same classification to a temporary file first.
+    classified = AUDIT["classify"](source)
     if (candidate["editorial_candidate"].get("reviewed_original_headword_words_total") != 9152
         or candidate["editorial_candidate"].get("publication_approved") is not False
         or candidate["editorial_candidate"].get("new_inferred_contextual_lexical_sense_ids") != 0):
@@ -182,12 +182,12 @@ def lookup_reviewed_ambiguity(candidate, wid, reference, lemma, strong, ln, morp
 
 def main():
     p = argparse.ArgumentParser(description=__doc__)
-    for name in ("candidate", "source", "classified", "ledger",
+    for name in ("candidate", "source", "ledger",
                  "english", "french", "output"):
         p.add_argument("--" + name, type=Path, required=True)
     a = p.parse_args()
     read = lambda x: json.loads(x.read_text(encoding="utf-8-sig"))
-    out = build(read(a.candidate), read(a.source), read(a.classified),
+    out = build(read(a.candidate), read(a.source),
                 read(a.ledger), read(a.english), read(a.french))
     a.output.write_bytes(canonical(out))
     print("GREEK_220_ORIGINAL_WORD_LEXICAL_AMBIGUITY_HEADWORDS", json.dumps({

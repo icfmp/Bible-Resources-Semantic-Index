@@ -50,6 +50,16 @@ Completed report-only probes are retired once their general exclusion rule
 is covered by a maintained test and any non-reproducible editorial decision
 is retained beside its source.
 
+Two further Greek report stages were removed because their
+source evidence was **already recomputed** by the very next maintained
+producer: the 224 original Strong multi-headword classification and the
+single Greek temporal ὁπότε grammar/source witness. The source-specific
+`audit_224_ambiguities.py` and `audit_hopote_original_word.py` validators
+are retained and called **directly** by their reviewed builders. Their
+existing approved source-word ledgers, independent bilingual checks and
+negative test coverage remain; transient duplicate reports no longer
+exist as separate workflow inputs. Neither change widens lexical matching.
+
 The Greek 456-word **accentless-variant diagnostic stage** was likewise
 retired after the original 459-word source-evidence audit became the direct
 input to the maintained bilingual UBS `AlternateLemmas` verifier. That

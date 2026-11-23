@@ -63,5 +63,19 @@ class TemporalGreekLexicalHeadwordTests(unittest.TestCase):
                             LEDGER["reviewed_original_word"]["ubs_original_pos_en"][0])
 
 
+
+    def test_temporal_builder_refuses_source_before_ledger_reinterpretation(self):
+        # The builder directly calls the unchanged bilingual source auditor,
+        # never trusting a generated file from an earlier standalone step.
+        candidate={"editorial_candidate":{
+            "reviewed_original_headword_words_total":0,
+            "other_original_words_still_unapproved":1,
+            "publication_approved":False,
+        }}
+        with self.assertRaisesRegex(ValueError,"source-review candidate drift"):
+            MOD["review"](candidate,{"source_editions":LEDGER["source_editions"]},
+                          [],[],LEDGER)
+
+
 if __name__=="__main__":
     unittest.main()

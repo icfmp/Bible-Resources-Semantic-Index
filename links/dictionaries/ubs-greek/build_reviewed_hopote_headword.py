@@ -68,10 +68,10 @@ def ledger_approval(ledger,evidence):
     return decision
 
 
-def review(candidate,residual,english,french,evidence,ledger):
-    verified=SOURCE["audit"](candidate,residual,english,french)
-    if verified!=evidence:
-        raise ValueError("Greek original temporal word source evidence report mutated")
+def review(candidate,residual,english,french,ledger):
+    # Reconstruct the exact bilingual original-word evidence directly.
+    # The former temporary CLI report had no independent owner or witness.
+    evidence=SOURCE["audit"](candidate,residual,english,french)
     if (candidate["editorial_candidate"].get("reviewed_original_headword_words_total")!=9194
         or candidate["editorial_candidate"].get("other_original_words_still_unapproved")!=1
         or candidate["editorial_candidate"].get("publication_approved") is not False
@@ -127,12 +127,12 @@ def review(candidate,residual,english,french,evidence,ledger):
 
 def main():
     p=argparse.ArgumentParser(description=__doc__)
-    for x in ("candidate","residual","english","french","evidence","ledger","output"):
+    for x in ("candidate","residual","english","french","ledger","output"):
         p.add_argument("--"+x,type=Path,required=True)
     a=p.parse_args()
     read=lambda p:json.loads(p.read_text(encoding="utf-8-sig"))
     result=review(read(a.candidate),read(a.residual),read(a.english),
-                  read(a.french),read(a.evidence),read(a.ledger))
+                  read(a.french),read(a.ledger))
     a.output.write_bytes((json.dumps(result,sort_keys=True,ensure_ascii=False,
                           separators=(",",":"))+"\n").encode("utf-8"))
     print("GREEK_TEMPORAL_ORIGINAL_WORD_LEXICAL_HEADWORD_REVIEWED",json.dumps({
