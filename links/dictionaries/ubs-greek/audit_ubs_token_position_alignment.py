@@ -21,6 +21,19 @@ WORD_RE=re.compile(r"^.+!(\d+)$")
 DIGITS=re.compile(r"^\d{14}$")
 FACTORS=(1,2,3,4)
 
+def literal_factor_counts(counts):
+    """Use the same strict JSON field names before and after serialization.
+
+    A separate historical report-file step converted integer dictionary keys
+    to JSON string keys; a direct source audit must preserve that contract.
+    Only the four independently calibrated factors can appear here.
+    """
+    if any((type(factor) is not int or factor not in FACTORS
+            or type(count) is not int or count < 0)
+           for factor,count in counts.items()):
+        raise ValueError("Unexpected Greek source position calibration factor")
+    return {str(factor):count for factor,count in sorted(counts.items())}
+
 
 def locators(original_ref):
     match=WORD_RE.fullmatch(original_ref)
@@ -144,7 +157,7 @@ def audit(high,batches,en,fr):
         "original_source_unique_sense_calibration_words":len(accepted),
         "source_unique_words_with_comparable_reference_metadata":sum(
             v["source_unique_candidate_words"] for v in per_book.values()),
-        "calibration_matches_by_exact_UBS_to_MACULA_position_factor":dict(sorted(matches.items())),
+        "calibration_matches_by_exact_UBS_to_MACULA_position_factor":literal_factor_counts(matches),
         "calibration_source_reference_anomalies":dict(sorted(failures.items())),
         "calibration_by_original_book":{k:dict(v) for k,v in sorted(per_book.items())},
         "original_ambiguous_words":2728,
