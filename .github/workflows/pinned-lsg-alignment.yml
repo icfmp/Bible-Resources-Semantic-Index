@@ -92,6 +92,12 @@ jobs:
             --manifest links/alignments/clear-bible-lsg/manifest.json \
             --upstream-root /tmp/brsi-clear-bible \
             --output /tmp/brsi-clear-bible-candidate/target-gap-triage.json
+      - name: Freeze descriptive audit against pinned source baseline
+        run: |
+          set -euo pipefail
+          python3 -I scripts/verify_generated_json.py \
+            --generated /tmp/brsi-clear-bible-candidate/target-gap-triage.json \
+            --baseline links/alignments/clear-bible-lsg/target-gap-triage.lock.json
       - name: Explicit nonpublication boundary
         run: |
           echo "Verified candidate only. No artifacts uploaded; no release or Bible app edits."
