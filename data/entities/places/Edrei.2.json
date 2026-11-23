@@ -10,9 +10,38 @@
     "review_status": "source_unreviewed",
     "source_id": "place:Edrei.2",
     "source_primary_id": "place:Edrei.2",
-    "source_sha256": "d60fa8d9c9388b98a06c59bb6dace71da8478031b1a7c4d302d83924a84544a8"
+    "source_sha256": "d60fa8d9c9388b98a06c59bb6dace71da8478031b1a7c4d302d83924a84544a8",
+    "editorial_field_changes": [
+      {
+        "action": "restore_direct_original_word_and_verse_witness",
+        "added_reference_values": {
+          "references": [
+            "06019037"
+          ]
+        },
+        "added_original_word_groups": {
+          "wlc": [
+            [
+              "o060190370022"
+            ]
+          ]
+        },
+        "reason": "Joshua 19:37 lists Edrei among Naphtali towns; source original noun Edrei is explicit.",
+        "evidence": [
+          "ORG BCV8 06019037",
+          "Pinned original corpus: Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c",
+          "Exact original-word ID(s) and English gloss independently extracted from frozen Macula TSV; source IDs and text unchanged"
+        ]
+      }
+    ]
   },
-  "explicit_instances": {},
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o060190370022"
+      ]
+    ]
+  },
   "id": "place:Edrei.2",
   "is_artifact": false,
   "is_person": false,
@@ -34,7 +63,9 @@
   },
   "primary_id": "place:Edrei.2",
   "pronominal_referents": {},
-  "references": [],
+  "references": [
+    "06019037"
+  ],
   "subject_referents": {},
   "subregion_of": [
     "place:TerritoryOfNaphtali"
