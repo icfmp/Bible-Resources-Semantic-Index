@@ -44,7 +44,7 @@ source-import path.
 | Stream | Python tools and tests | Executable entrypoint | Retained editorial authority |
 | --- | ---: | --- | --- |
 | UBS Greek | 76 total; 35 `test_*.py` modules | [Pinned Greek workflow](../.github/workflows/bsi-ubs-greek.yml) and its source-local builders | Original source locks, reviewed JSON headword/word-ID ledgers, explicit sense abstentions |
-| UBS Hebrew | 37 total; 18 `test_*.py` modules | [Pinned Hebrew workflow](../.github/workflows/bsi-ubs-hebrew.yml) and its source-local builders | Original source locks, reviewed JSON identity/disposition/abstention ledgers, v1 and v1.1 reviews |
+| UBS Hebrew | 36 total; 18 `test_*.py` modules | [Pinned Hebrew workflow](../.github/workflows/bsi-ubs-hebrew.yml) and its source-local builders | Original source locks, reviewed JSON identity/disposition/abstention ledgers, v1 and v1.1 reviews |
 
 Completed report-only probes are retired once their general exclusion rule
 is covered by a maintained test and any non-reproducible editorial decision
@@ -81,6 +81,15 @@ The Greek and Hebrew workflows also use the shared
 their separate temporary ZIP-fingerprint display steps were redundant with
 that historical release lock and the preceding independently verified
 `.sha256` sidecars, so both were removed.
+
+The old Hebrew numeric-SDBH/UBS cross-edition **diagnostic survey**
+had no persisted report, no downstream builder consumer and no independent
+drift gate. The `build_index.py` lookup already rejects false direct
+sense identity across original Strong numeric families and H/A languages;
+`test_index.py` covers real-pattern and synthetic negative collisions.
+The terminal report-only auditor was retired; its complete historical
+implementation remains at [the prior Git revision](https://github.com/icfmp/Bible-Resources-Semantic-Index/blob/7ea875a5a866d678958264a8f830418ed538a7ce/links/dictionaries/ubs-hebrew/audit_direct_sense_fidelity.py).
+It was never permission to infer a new UBS contextual sense.
 
 Five Hebrew source-evidence outputs now use the **same strict JSON baseline
 guard**: Strong-family reconciliation, the initial reviewed word preview,
