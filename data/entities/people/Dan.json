@@ -15,10 +15,50 @@
   },
   "bsi": {
     "canonical_id": "person:Dan",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "person:Dan",
     "source_primary_id": "person:Dan",
-    "source_sha256": "901c2d11c3112fb2c94fd61b6a2d901c803c8e1f746411ad14f2e63a78a3ff50"
+    "source_sha256": "901c2d11c3112fb2c94fd61b6a2d901c803c8e1f746411ad14f2e63a78a3ff50",
+    "editorial_reason": "Genesis 49:19 is explicitly the blessing of Gad (the Hebrew word Gad), not Dan. The preceding verses 49:16-18 treat Dan and his concluding prayer; extending Dan's key through the next brother's distinct blessing silently misidentifies an individual.",
+    "editorial_evidence": [
+      "Pinned WLC Genesis 49:16-17 contains direct name Dan (דָּן), already linked to person:Dan",
+      "Pinned WLC Genesis 49:19 names Gad (גָּד) and his raiders, not Dan"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "remove_misattributed_personal_source_key",
+        "reason": "Genesis 49:19 is explicitly the blessing of Gad (the Hebrew word Gad), not Dan. The preceding verses 49:16-18 treat Dan and his concluding prayer; extending Dan's key through the next brother's distinct blessing silently misidentifies an individual.",
+        "evidence": [
+          "Pinned WLC Genesis 49:16-17 contains direct name Dan (דָּן), already linked to person:Dan",
+          "Pinned WLC Genesis 49:19 names Gad (גָּד) and his raiders, not Dan"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "key_references": [
+              "01030004",
+              "01030005",
+              "01030006",
+              "01046023",
+              "01049016",
+              "01049017",
+              "01049018",
+              "01049019"
+            ]
+          },
+          "after": {
+            "key_references": [
+              "01030004",
+              "01030005",
+              "01030006",
+              "01046023",
+              "01049016",
+              "01049017",
+              "01049018"
+            ]
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -55,8 +95,7 @@
     "01046023",
     "01049016",
     "01049017",
-    "01049018",
-    "01049019"
+    "01049018"
   ],
   "localizations": {
     "eng": {
