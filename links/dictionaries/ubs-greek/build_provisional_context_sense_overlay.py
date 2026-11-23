@@ -29,6 +29,12 @@ def make(index,reviewed,en,fr,macula):
     audit=AUDIT["audit"](index,reviewed,en,fr,macula)
     if (audit.get("status")!="PRIVATE_SOURCE_UBS_Greek_v1_0_original_word_sense_CANDIDATE_CENSUS_NOT_SEMANTIC_VALIDATION"
         or audit.get("original_word_ids")!=TOTAL
+        or audit.get("source_ubs_entries")!=5507
+        or audit.get("source_ubs_sense_pairs")!=9160
+        or sum(audit.get("original_word_sense_candidate_outcomes",{}).values())!=TOTAL
+        or audit.get("original_word_sense_candidate_outcomes",{}).get("no_ubs_headword")!=47
+        or audit.get("original_word_sense_candidate_outcomes",{}).get("multiple_original_ubs_lexical_headwords")!=4
+        or audit.get("original_index_and_corpus_modified") is not False
         or audit.get("original_word_sense_candidate_outcomes",{}).get(
             "unique_source_attested_ubs_lexid_candidate_NOT_contextually_validated")!=UNIQUE
         or audit.get("lexical_sense_contextually_verified")!=0
