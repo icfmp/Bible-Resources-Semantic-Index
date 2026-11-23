@@ -12,10 +12,52 @@
   },
   "bsi": {
     "canonical_id": "deity:Satan",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "deity:Beelzebub",
     "source_primary_id": "deity:Satan",
-    "source_sha256": "8cccc60a88db5e7c38980001f7b847d2db5b0333a6626d0eed710d27c3d5218b"
+    "source_sha256": "8cccc60a88db5e7c38980001f7b847d2db5b0333a6626d0eed710d27c3d5218b",
+    "editorial_reason": "The pinned WLC calls the Ekron deity Baal-Zebub in 2 Kings 1:2,16; the SBLGNT calls the New Testament ruler of demons Beelzebul (Mark 3:22; Matthew 12:24). The Gospels' Satan context supports the inherited New Testament canonical link but does not prove that Ekron's god is the same ancient entity. Move the Hebrew two-word Baal-Zebub witness and historical keys to the separately indexed Baal family rather than merging pagan worship with the New Testament demon-title.",
+    "editorial_evidence": [
+      "Pinned WLC 2Kgs 1:2 o120010020152 Baal + o120010020161 Zebub; 1:16 o120010160112 Baal + o120010160121 Zebub",
+      "Pinned SBLGNT Mark 3:22 n41003022010 Βεελζεβούλ; Mark 3:23 Jesus names Satan in the subsequent rhetorical reply",
+      "Historical/name-development distinction: https://www.mdpi.com/2077-1444/14/8/1070 and https://www.jewishencyclopedia.com/articles/2732-beelzebub"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "resolve_final_twelve_source_identity",
+        "reason": "The pinned WLC calls the Ekron deity Baal-Zebub in 2 Kings 1:2,16; the SBLGNT calls the New Testament ruler of demons Beelzebul (Mark 3:22; Matthew 12:24). The Gospels' Satan context supports the inherited New Testament canonical link but does not prove that Ekron's god is the same ancient entity. Move the Hebrew two-word Baal-Zebub witness and historical keys to the separately indexed Baal family rather than merging pagan worship with the New Testament demon-title.",
+        "evidence": [
+          "Pinned WLC 2Kgs 1:2 o120010020152 Baal + o120010020161 Zebub; 1:16 o120010160112 Baal + o120010160121 Zebub",
+          "Pinned SBLGNT Mark 3:22 n41003022010 Βεελζεβούλ; Mark 3:23 Jesus names Satan in the subsequent rhetorical reply",
+          "Historical/name-development distinction: https://www.mdpi.com/2077-1444/14/8/1070 and https://www.jewishencyclopedia.com/articles/2732-beelzebub"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "key_references": [
+              "12001002",
+              "12001016",
+              "41003022"
+            ],
+            "preferred_label": "Beelzebub (Satan)",
+            "alternate_labels": [
+              "Satan",
+              "Beelzebul"
+            ]
+          },
+          "after": {
+            "key_references": [
+              "41003022"
+            ],
+            "preferred_label": "Beelzebul (ruler of demons)",
+            "alternate_labels": [
+              "Beelzebub",
+              "Beelzebul",
+              "Satan"
+            ]
+          }
+        }
+      }
+    ]
   },
   "deity_type": "demon",
   "explicit_instances": {
@@ -45,8 +87,6 @@
   },
   "id": "deity:Beelzebub",
   "key_references": [
-    "12001002",
-    "12001016",
     "41003022"
   ],
   "lemmas": {
@@ -57,10 +97,11 @@
   "localizations": {
     "eng": {
       "alternate_labels": [
-        "Satan",
-        "Beelzebul"
+        "Beelzebub",
+        "Beelzebul",
+        "Satan"
       ],
-      "preferred_label": "Beelzebub (Satan)"
+      "preferred_label": "Beelzebul (ruler of demons)"
     }
   },
   "non_biblical": false,

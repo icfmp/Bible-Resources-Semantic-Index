@@ -8,34 +8,67 @@
   },
   "bsi": {
     "canonical_id": "place:Ramah.8",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:Ramah.8",
     "source_primary_id": "place:Ramah.8",
-    "source_sha256": "e1fa64797adb0dc04fa8a2ae3b936c82233a0f612eb32f8139ea05e167caec14"
+    "source_sha256": "e1fa64797adb0dc04fa8a2ae3b936c82233a0f612eb32f8139ea05e167caec14",
+    "editorial_reason": "1 Samuel 22:6 places Saul at Gibeah on a height beneath the tamarisk; the pinned Hebrew rāmah is a common topographical noun, not independent evidence of another named town. The inherited possible identity with Gibeah.2 (Gibeah of Phinehas, Joshua 24:33) is a different homonymous location and cannot be asserted. Preserve the original historic Ramah.8 source record but withdraw its unsupported named-site key and false possible identity.",
+    "editorial_evidence": [
+      "Pinned WLC 1Sam 22:6 o090220060112 Gibeah and o090220060142 height (רָמָה) are distinct word senses in the same passage",
+      "Lexical evidence https://biblehub.com/hebrew/7413.htm identifies a height/high place, not a distinct city at 1Sam 22:6",
+      "Gibeah.2 is the separate Gibeah of Phinehas in Joshua 24:33; no legitimate inherited site-merger evidence"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "resolve_final_twelve_source_identity",
+        "reason": "1 Samuel 22:6 places Saul at Gibeah on a height beneath the tamarisk; the pinned Hebrew rāmah is a common topographical noun, not independent evidence of another named town. The inherited possible identity with Gibeah.2 (Gibeah of Phinehas, Joshua 24:33) is a different homonymous location and cannot be asserted. Preserve the original historic Ramah.8 source record but withdraw its unsupported named-site key and false possible identity.",
+        "evidence": [
+          "Pinned WLC 1Sam 22:6 o090220060112 Gibeah and o090220060142 height (רָמָה) are distinct word senses in the same passage",
+          "Lexical evidence https://biblehub.com/hebrew/7413.htm identifies a height/high place, not a distinct city at 1Sam 22:6",
+          "Gibeah.2 is the separate Gibeah of Phinehas in Joshua 24:33; no legitimate inherited site-merger evidence"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "key_references": [
+              "09022006"
+            ],
+            "mentioned_in_bible": true,
+            "non_biblical": false,
+            "possibly_same_as": [
+              "place:Gibeah.2"
+            ],
+            "preferred_label": "Ramah (Hill)"
+          },
+          "after": {
+            "key_references": [],
+            "mentioned_in_bible": false,
+            "non_biblical": true,
+            "possibly_same_as": [],
+            "preferred_label": "Ramah (unconfirmed separate site)"
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {},
   "id": "place:Ramah.8",
   "is_artifact": false,
   "is_person": false,
-  "key_references": [
-    "09022006"
-  ],
+  "key_references": [],
   "localizations": {
     "eng": {
-      "preferred_label": "Ramah (Hill)"
+      "preferred_label": "Ramah (unconfirmed separate site)"
     }
   },
-  "mentioned_in_bible": true,
-  "non_biblical": false,
+  "mentioned_in_bible": false,
+  "non_biblical": true,
   "only_mentioned_in_apocrypha": false,
   "place_types": {
     "acai": [
       "hill"
     ]
   },
-  "possibly_same_as": [
-    "place:Gibeah.2"
-  ],
+  "possibly_same_as": [],
   "primary_id": "place:Ramah.8",
   "pronominal_referents": {},
   "references": [],

@@ -7,25 +7,56 @@
   },
   "bsi": {
     "canonical_id": "place:Misgab.1",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:Misgab.1",
     "source_primary_id": "place:Misgab.1",
-    "source_sha256": "661d1effaca67af0dc138d0894aa4f968a52c24c9f2986c28ddf6a6ac987ed66"
+    "source_sha256": "661d1effaca67af0dc138d0894aa4f968a52c24c9f2986c28ddf6a6ac987ed66",
+    "editorial_reason": "The pinned Hebrew of Jeremiah 48:1 has a definite article and the common noun miśgāb ('the stronghold'), not an independently verifiable place name. Scholarly translation notes confirm that the proper-name reading is a minority conjecture, with no securely attested distinct locality. Preserve the historical ACAI identity record and its old key in reversible provenance, but remove the assertion of an attested biblical city.",
+    "editorial_evidence": [
+      "Pinned WLC Jer 48:1 o240480010171 article + o240480010172 'fortress' (מִּשְׂגָּב), with no separate place-name lexical attestation",
+      "NET Bible translation note: https://classic.net.bible.org/verse.php?book=Jer&chapter=48&verse=1",
+      "Biblical Hebrew source wording and original imported source SHA preserved"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "resolve_final_twelve_source_identity",
+        "reason": "The pinned Hebrew of Jeremiah 48:1 has a definite article and the common noun miśgāb ('the stronghold'), not an independently verifiable place name. Scholarly translation notes confirm that the proper-name reading is a minority conjecture, with no securely attested distinct locality. Preserve the historical ACAI identity record and its old key in reversible provenance, but remove the assertion of an attested biblical city.",
+        "evidence": [
+          "Pinned WLC Jer 48:1 o240480010171 article + o240480010172 'fortress' (מִּשְׂגָּב), with no separate place-name lexical attestation",
+          "NET Bible translation note: https://classic.net.bible.org/verse.php?book=Jer&chapter=48&verse=1",
+          "Biblical Hebrew source wording and original imported source SHA preserved"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "key_references": [
+              "24048001"
+            ],
+            "mentioned_in_bible": true,
+            "non_biblical": false,
+            "preferred_label": "Misgab"
+          },
+          "after": {
+            "key_references": [],
+            "mentioned_in_bible": false,
+            "non_biblical": true,
+            "preferred_label": "Misgab (unconfirmed site)"
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {},
   "id": "place:Misgab.1",
   "is_artifact": false,
   "is_person": false,
-  "key_references": [
-    "24048001"
-  ],
+  "key_references": [],
   "localizations": {
     "eng": {
-      "preferred_label": "Misgab"
+      "preferred_label": "Misgab (unconfirmed site)"
     }
   },
-  "mentioned_in_bible": true,
-  "non_biblical": false,
+  "mentioned_in_bible": false,
+  "non_biblical": true,
   "only_mentioned_in_apocrypha": false,
   "place_types": {
     "acai": [
