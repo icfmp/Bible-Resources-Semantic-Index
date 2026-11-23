@@ -161,3 +161,10 @@ jobs:
             --wlc macula-hebrew/WLC/tsv/macula-hebrew.tsv \
             --sblgnt macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv \
             --verses 04026058 01014005 01014015 01010013 01010014 41012041 41012042 40022020 41012016 66012005 66012009 10012031 09016011 66003014 66003015 06006020 16002017 12004002 02026001 46009025 01024053 02035022 04031050 09013020 66001018 09025018 01028018 01031045 02003005 05023025 26001019 05022012 09005002 40023027 02028042 10005023 03011031 09016013
+
+      - name: Verify thirteen genuine tribal territorial allocations in Joshua WLC
+        run: |
+          python3 -I scripts/inspect_pinned_original_verse.py \
+            --wlc macula-hebrew/WLC/tsv/macula-hebrew.tsv \
+            --sblgnt macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv \
+            --verses 06019024 06018011 06019040 06013029 06016005 06013024 06019017 06015001 06019032 06013015 06019001 06017001 06019010
