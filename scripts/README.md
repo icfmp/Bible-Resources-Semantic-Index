@@ -31,6 +31,10 @@ never changes the application. See [V1 consumer guide](../docs/V1_CONSUMPTION.md
 ## Reusable tools and checks
 
 - `build_native_index.py`: canonical native entity build, independent of the historical ACAI compiler.
+- `tool_registry.py`: read-only caller inventory (`--json`) and offline
+  workflow-path validation (`--check-workflows`). It inventories shared and
+  source-owned tools without guessing that a missing static caller means a
+  file is safe to remove. Review dynamic importers and pinned releases too.
 - `validate_external_crosswalk.py`: nonpublishing, offline V1 **external
   resource entry** crosswalk validator, separate from the deferred V2
   entity-relationship graph. It enforces source edition locks, current entity
