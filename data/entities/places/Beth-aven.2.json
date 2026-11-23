@@ -10,9 +10,39 @@
     "review_status": "source_unreviewed",
     "source_id": "place:Beth-aven.2",
     "source_primary_id": "place:Beth-aven.2",
-    "source_sha256": "441cb811d4bbc90d9fc987ccc6efaf1855b07798376e58d68bd4acd4b6bdc8c4"
+    "source_sha256": "441cb811d4bbc90d9fc987ccc6efaf1855b07798376e58d68bd4acd4b6bdc8c4",
+    "editorial_field_changes": [
+      {
+        "action": "restore_direct_compound_place_word_witness",
+        "added_reference_values": {
+          "references": [
+            "28010005"
+          ]
+        },
+        "added_original_word_groups": {
+          "wlc": [
+            [
+              "o280100050021",
+              "o280100050031"
+            ]
+          ]
+        },
+        "reason": "Hosea 10:5 explicitly names Beth-Aven as the joined Hebrew expression בֵּית אָוֶן. The locked WLC 28-HOS-010-lowfat.xml assigns both proper-noun pieces the same Beth-Aven strong lemma; context verses Hosea 4:15 and 5:8 are not silently converted into direct mention claims.",
+        "evidence": [
+          "Source word IDs, text, morphological segmentation and lemma inspected in frozen Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c/WLC/lowfat XML",
+          "ORG BCV8 28010005"
+        ]
+      }
+    ]
   },
-  "explicit_instances": {},
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o280100050021",
+        "o280100050031"
+      ]
+    ]
+  },
   "id": "place:Beth-aven.2",
   "is_artifact": false,
   "is_person": false,
@@ -36,7 +66,9 @@
   },
   "primary_id": "place:Beth-aven.2",
   "pronominal_referents": {},
-  "references": [],
+  "references": [
+    "28010005"
+  ],
   "referred_to_as": [
     "place:Aven"
   ],
