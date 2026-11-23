@@ -13,6 +13,8 @@ on:
       - "scripts/validate_final_source_key_audit.py"
       - "tests/test_final_source_key_audit.py"
       - "data/source-key-final-128-candidates.json"
+      - "data/source-key-last-12-candidates.json"
+      - "tests/test_final_twelve_source_integrity.py"
       - "scripts/validate_source_key_resolution_batches.py"
       - "tests/test_source_key_resolution_batches.py"
       - "scripts/inspect_next_source_key_cases.py"
