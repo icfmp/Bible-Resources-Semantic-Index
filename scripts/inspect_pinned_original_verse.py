@@ -13,7 +13,7 @@ import re
 from pathlib import Path
 
 VERSE = re.compile(r"[0-9]{8}\Z")
-COLUMNS = ("xml:id", "text", "lemma", "english", "gloss", "type", "pos")
+COLUMNS = ("xml:id", "text", "lemma", "english", "gloss", "type")
 
 
 def inspect(verses: list[str], corpora: dict[str, Path]) -> list[dict]:
