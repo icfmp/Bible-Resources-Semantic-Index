@@ -7,12 +7,62 @@
   },
   "bsi": {
     "canonical_id": "place:Goiim.1",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:Goiim.1",
     "source_primary_id": "place:Goiim.1",
-    "source_sha256": "10686cb23ec86ed6bb080565a7753ca3cad44c91c7849187e0b97232760cdf09"
+    "source_sha256": "10686cb23ec86ed6bb080565a7753ca3cad44c91c7849187e0b97232760cdf09",
+    "editorial_reason": "Restore direct original-language word mentions explicitly confirmed in the inherited key verses for this distinct source identity. All original keys and other evidence are retained.",
+    "editorial_evidence": [
+      "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c and Clear-Bible/macula-greek@8423afe47b9e8f24b7772e808af45c7159a6fe7e pinned TSV, verified against CI source-word candidate inventory in #134",
+      "Genesis 14:1,9 directly names the polity Goiim/Goyim ruled by Tidal; do not merge with the Joshua 12:23 Goiim.",
+      "BCV8 01014001 direct wlc token(s) o010140010141",
+      "BCV8 01014009 direct wlc token(s) o010140090071"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "restore_pinned_direct_mention_from_verified_key",
+        "reason": "Restore direct original-language word mentions explicitly confirmed in the inherited key verses for this distinct source identity. All original keys and other evidence are retained.",
+        "evidence": [
+          "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c and Clear-Bible/macula-greek@8423afe47b9e8f24b7772e808af45c7159a6fe7e pinned TSV, verified against CI source-word candidate inventory in #134",
+          "Genesis 14:1,9 directly names the polity Goiim/Goyim ruled by Tidal; do not merge with the Joshua 12:23 Goiim.",
+          "BCV8 01014001 direct wlc token(s) o010140010141",
+          "BCV8 01014009 direct wlc token(s) o010140090071"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [],
+            "explicit_instances": {}
+          },
+          "after": {
+            "references": [
+              "01014001",
+              "01014009"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o010140010141"
+                ],
+                [
+                  "o010140090071"
+                ]
+              ]
+            }
+          }
+        }
+      }
+    ]
   },
-  "explicit_instances": {},
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o010140010141"
+      ],
+      [
+        "o010140090071"
+      ]
+    ]
+  },
   "id": "place:Goiim.1",
   "is_artifact": false,
   "is_person": false,
@@ -35,7 +85,10 @@
   },
   "primary_id": "place:Goiim.1",
   "pronominal_referents": {},
-  "references": [],
+  "references": [
+    "01014001",
+    "01014009"
+  ],
   "subject_referents": {},
   "type": "place"
 }
