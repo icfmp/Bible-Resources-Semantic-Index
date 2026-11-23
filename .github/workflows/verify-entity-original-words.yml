@@ -9,6 +9,9 @@ on:
       - "data/source-key-next-115-candidates.json"
       - "data/source-key-unresolved-queue.json"
       - "data/source-key-next-115-resolved.json"
+      - "data/source-key-final-128-review.json"
+      - "scripts/validate_final_source_key_audit.py"
+      - "tests/test_final_source_key_audit.py"
       - "data/source-key-final-128-candidates.json"
       - "scripts/validate_source_key_resolution_batches.py"
       - "tests/test_source_key_resolution_batches.py"
@@ -36,6 +39,9 @@ on:
       - "data/source-key-next-115-candidates.json"
       - "data/source-key-unresolved-queue.json"
       - "data/source-key-next-115-resolved.json"
+      - "data/source-key-final-128-review.json"
+      - "scripts/validate_final_source_key_audit.py"
+      - "tests/test_final_source_key_audit.py"
       - "scripts/validate_source_key_resolution_batches.py"
       - "tests/test_source_key_resolution_batches.py"
       - "scripts/inspect_next_source_key_cases.py"
@@ -260,3 +266,13 @@ jobs:
             --sblgnt macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv \
             --verses 29002028 29003001 01001002 23066019 26027010 24048001 10012031 34003014
           # Source text is inspection-only. No edition or indexed text is rewritten.
+
+      - name: Verify final 128-case review, reversible receipts and pinned original excerpts
+        run: |
+          python3 -I tests/test_final_source_key_audit.py
+          python3 -I scripts/validate_final_source_key_audit.py \
+            --data data \
+            --ledger data/source-key-final-128-review.json \
+            --wlc macula-hebrew/WLC/tsv/macula-hebrew.tsv \
+            --sblgnt macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv
+          # Unresolved editorial identities are explicitly not counted as completed.
