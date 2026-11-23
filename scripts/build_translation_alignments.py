@@ -242,7 +242,7 @@ def build(manifest, corrections_doc, upstream_root: Path):
             }
             rows.append(row)
             stats[status] += 1
-            stats[topology] += 1
+            stats["topology_" + topology] += 1
             for problem in problems:
                 stats["problem_" + problem] += 1
         if set(corrections) != used_corrections and canon == manifest["groups"][-1]["canon"]:
