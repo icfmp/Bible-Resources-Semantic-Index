@@ -11,11 +11,62 @@
     ]
   },
   "bsi": {
-    "canonical_id": "person:Jehoiada.2",
+    "canonical_id": "person:Barachiah",
     "review_status": "source_unreviewed",
     "source_id": "person:Barachiah",
     "source_primary_id": "person:Jehoiada.2",
-    "source_sha256": "416515a3bf9c941df20d3b8c547c9f35e84e86a03d5cd5180fdd872f3cffd6ff"
+    "source_sha256": "416515a3bf9c941df20d3b8c547c9f35e84e86a03d5cd5180fdd872f3cffd6ff",
+    "editorial_field_changes": [
+      {
+        "action": "separate_unproven_berechiah_jehoiada_source_identity",
+        "replaced_field_values": {
+          "primary_id": {
+            "from": "person:Jehoiada.2",
+            "to": "person:Barachiah"
+          },
+          "bsi.canonical_id": {
+            "from": "person:Jehoiada.2",
+            "to": "person:Barachiah"
+          }
+        },
+        "removed_relation_values": {
+          "offspring": [
+            "person:Zechariah.12"
+          ],
+          "partners": [
+            "person:Jehosheba"
+          ],
+          "roles": [
+            "Priest"
+          ],
+          "referred_to_as": [
+            "person:Jehoiada.2"
+          ]
+        },
+        "replaced_localization_values": {
+          "eng": {
+            "preferred_label": {
+              "from": "Barachiah (Jehoiada)",
+              "to": "Barachiah (Matthew 23:35)"
+            }
+          }
+        },
+        "removed_localization_values": {
+          "eng": {
+            "alternate_labels": [
+              "Jehoiada"
+            ]
+          }
+        },
+        "reason": "The pinned Matthew 23:35 explicitly names father Barachiah, not Jehoiada, while 2 Chronicles 24:20 names a father Jehoiada and Zechariah 1:1/7 a Berechiah father of a prophet. Evidence does not establish these men identical or transfer Jehoiada's wife, son, and priestly office to Matthew's Barachiah. Preserve Barachiah as a separately named source identity, with no invented genealogical or historical harmonization.",
+        "evidence": [
+          "Matthew 23:35 Greek Βαραχίου (SBLGNT n40023035023)",
+          "2 Chronicles 24:20–22 Hebrew יהוידע",
+          "Zechariah 1:1,7 Hebrew ברכיה",
+          "https://www.bibliaplus.org/en/commentaries/254/cambridge-bible-for-schools-and-colleges/matthew/23/35"
+        ]
+      }
+    ]
   },
   "explicit_instances": {
     "SBLGNT": [
@@ -38,30 +89,17 @@
     "eng": {
       "alternate_labels": [
         "Barachias",
-        "Berekiah",
-        "Jehoiada"
+        "Berekiah"
       ],
-      "preferred_label": "Barachiah (Jehoiada)"
+      "preferred_label": "Barachiah (Matthew 23:35)"
     }
   },
   "non_biblical": false,
-  "offspring": [
-    "person:Zechariah.12"
-  ],
   "only_mentioned_in_apocrypha": false,
-  "partners": [
-    "person:Jehosheba"
-  ],
-  "primary_id": "person:Jehoiada.2",
+  "primary_id": "person:Barachiah",
   "pronominal_referents": {},
   "references": [
     "40023035"
-  ],
-  "referred_to_as": [
-    "person:Jehoiada.2"
-  ],
-  "roles": [
-    "Priest"
   ],
   "subject_referents": {},
   "type": "person",
