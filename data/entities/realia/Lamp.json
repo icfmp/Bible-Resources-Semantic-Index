@@ -21,7 +21,29 @@
     "review_status": "source_unreviewed",
     "source_id": "realia:Lamp",
     "source_primary_id": "realia:Lamp",
-    "source_sha256": "2c70c9e6ea962426a464f1ee0d44343c8ae725f82f8f99984e142dc7810f7817"
+    "source_sha256": "2c70c9e6ea962426a464f1ee0d44343c8ae725f82f8f99984e142dc7810f7817",
+    "editorial_field_changes": [
+      {
+        "action": "restore_source_attested_object_word_instances",
+        "added_reference_values": {
+          "references": [
+            "40005015"
+          ]
+        },
+        "added_original_word_groups": {
+          "SBLGNT": [
+            [
+              "n40005015003"
+            ]
+          ]
+        },
+        "reason": "Matthew 5:15 names a lamp; comparison use remains a figurative text occurrence.",
+        "evidence": [
+          "ORG BCV8 40005015",
+          "Pinned original-word texts/glosses inspected in Clear-Bible/Macula Greek SBLGNT@8423afe47b9e8f24b7772e808af45c7159a6fe7e; token IDs copied verbatim; source metadata and scripture unchanged"
+        ]
+      }
+    ]
   },
   "explicit_instances": {
     "SBLGNT": [
@@ -45,6 +67,9 @@
       ],
       [
         "n40012020006"
+      ],
+      [
+        "n40005015003"
       ]
     ],
     "wlc": [
@@ -315,7 +340,8 @@
     "40025004",
     "40025007",
     "40025008",
-    "44020008"
+    "44020008",
+    "40005015"
   ],
   "subject_referents": {
     "SBLGNT": [
