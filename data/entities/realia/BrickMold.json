@@ -9,10 +9,43 @@
   },
   "bsi": {
     "canonical_id": "realia:BrickMold",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "realia:BrickMold",
     "source_primary_id": "realia:BrickMold",
-    "source_sha256": "2e8d79ea8bd6e317791bca0dee1bfcecc8f72997473be9a65135ef7082736380"
+    "source_sha256": "2e8d79ea8bd6e317791bca0dee1bfcecc8f72997473be9a65135ef7082736380",
+    "editorial_reason": "Genesis 11:3 narrates brick making, with no word for a brick mold or kiln, while Exodus 5:7 requires straw for bricks, not a mold. These two narrative contextual keys are wrongly attributed to the specific physical implement rather than brick production. Preserve the source-attested brick/brickmold implement at 2 Samuel 12:31 and Nahum 3:14; do not force an original implement where the text only mentions bricks.",
+    "editorial_evidence": [
+      "Pinned WLC Genesis 11:3 describes making and baking bricks without a mold or implement word",
+      "Pinned WLC Exodus 5:7 speaks of supplying straw for brick manufacture, not a brick mold",
+      "Current source original-word groups o100120310151/o100120310152 (2Sam12:31) and o340030140121 (Nahum3:14) are retained exactly"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "adjudicate_final_source_key_mismatch",
+        "reason": "Genesis 11:3 narrates brick making, with no word for a brick mold or kiln, while Exodus 5:7 requires straw for bricks, not a mold. These two narrative contextual keys are wrongly attributed to the specific physical implement rather than brick production. Preserve the source-attested brick/brickmold implement at 2 Samuel 12:31 and Nahum 3:14; do not force an original implement where the text only mentions bricks.",
+        "evidence": [
+          "Pinned WLC Genesis 11:3 describes making and baking bricks without a mold or implement word",
+          "Pinned WLC Exodus 5:7 speaks of supplying straw for brick manufacture, not a brick mold",
+          "Current source original-word groups o100120310151/o100120310152 (2Sam12:31) and o340030140121 (Nahum3:14) are retained exactly"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "key_references": [
+              "01011003",
+              "02005007",
+              "10012031",
+              "34003014"
+            ]
+          },
+          "after": {
+            "key_references": [
+              "10012031",
+              "34003014"
+            ]
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -29,8 +62,6 @@
   },
   "id": "realia:BrickMold",
   "key_references": [
-    "01011003",
-    "02005007",
     "10012031",
     "34003014"
   ],
