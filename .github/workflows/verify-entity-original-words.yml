@@ -240,3 +240,10 @@ jobs:
             --wlc macula-hebrew/WLC/tsv/macula-hebrew.tsv \
             --sblgnt macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv \
             --compact
+
+      - name: Adjudicate demonstrably wrong identity, verse and denotation claims
+        run: |
+          python3 -I scripts/inspect_pinned_original_verse.py \
+            --wlc macula-hebrew/WLC/tsv/macula-hebrew.tsv \
+            --sblgnt macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv \
+            --verses 10006003 10006004 13006035 11005014 11005028 11004029 11005009 40001012 40004013 13007028 13008004 13007006 13007007 11022021 11022024 14018020 14018023 05023025 12018013 12018017 12018018 13024003 13024008
