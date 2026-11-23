@@ -285,6 +285,11 @@ def build(manifest, corrections_doc, upstream_root: Path):
         stats["target_tokens_multiple_groups"] = sum(v > 1 for v in overlapping_target.values())
         stats["target_census_complete"] = target_census_complete
         indexes[canon] = {
+            "format": "brsi-translation-alignment-candidate",
+            "schema_version": 1,
+            "resource_id": manifest["resource_id"],
+            "upstream_revision": manifest["revision"],
+            "canon": canon,
             "source_edition": group["source_edition"],
             "target_edition": manifest["target_edition"],
             "source_id_scheme": "MACULA BCVW(P) (corpus-qualified)",
