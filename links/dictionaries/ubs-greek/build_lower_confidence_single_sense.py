@@ -21,7 +21,11 @@ SOURCE_CATEGORIES={
     "nonblank_MACULA_LN_not_attested_under_UBS_headword__exactly_one_original_UBS_LEXID_without_matching_word_LN_NOT_APPROVED":50,
 }
 
-def build(unresolved,priorities,en,fr):
+def build(unresolved,en,fr):
+    # Re-evaluate all 15,237 original word-specific source categories
+    # directly, rather than trusting a temporary report produced by
+    # a preceding CLI invocation of this same maintained audit.
+    priorities=AUDIT["audit"](unresolved,en,fr)
     if (unresolved.get("status")!="PRIVATE_UNRESOLVED_Greek_contextual_sense_word_IDs_for_editorial_review"
         or len(unresolved.get("word_id_to_unresolved_original_source_evidence",{}))!=15237
         or unresolved.get("published") is not False
@@ -89,10 +93,10 @@ def build(unresolved,priorities,en,fr):
 
 def main():
     p=argparse.ArgumentParser(description=__doc__)
-    for k in ("unresolved","priorities","english","french","output"):
+    for k in ("unresolved","english","french","output"):
         p.add_argument("--"+k,required=True,type=Path)
     a=p.parse_args();load=lambda q:json.loads(q.read_text(encoding="utf-8-sig"))
-    x=build(load(a.unresolved),load(a.priorities),load(a.english),load(a.french))
+    x=build(load(a.unresolved),load(a.english),load(a.french))
     a.output.write_text(json.dumps(x,ensure_ascii=False,sort_keys=True,separators=(",",":"))+"\n",encoding="utf-8")
     print("GREEK_170_LOWER_CONFIDENCE_SOURCE_ONLY_SINGLE_UBS_SENSE_EDITORIAL_DEFAULTS",json.dumps({
         "provisional_words":x["additional_original_word_ids"],
