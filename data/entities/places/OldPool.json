@@ -5,9 +5,41 @@
     "review_status": "source_unreviewed",
     "source_id": "place:OldPool",
     "source_primary_id": "place:OldPool",
-    "source_sha256": "e5fe66cf81b80e6ca1a8f89e2d703b183e7d37ed4c3e70a4c2ca44f976952ccd"
+    "source_sha256": "e5fe66cf81b80e6ca1a8f89e2d703b183e7d37ed4c3e70a4c2ca44f976952ccd",
+    "editorial_field_changes": [
+      {
+        "action": "restore_exact_frozen_wlc_geographic_compound",
+        "added_reference_values": {
+          "references": [
+            "23022011"
+          ]
+        },
+        "added_original_word_groups": {
+          "wlc": [
+            [
+              "o230220110062",
+              "o230220110071",
+              "o230220110072"
+            ]
+          ]
+        },
+        "reason": "Isaiah 22:11 explicitly names the old pool in the Jerusalem waterworks, with an exact Hebrew compound phrase.",
+        "evidence": [
+          "ORG BCV8 23022011",
+          "Collated directly against frozen Hebrew WLC lowfat XML at Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c, including complete original words and prefixes"
+        ]
+      }
+    ]
   },
-  "explicit_instances": {},
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o230220110062",
+        "o230220110071",
+        "o230220110072"
+      ]
+    ]
+  },
   "id": "place:OldPool",
   "is_artifact": true,
   "is_person": false,
@@ -29,7 +61,9 @@
   },
   "primary_id": "place:OldPool",
   "pronominal_referents": {},
-  "references": [],
+  "references": [
+    "23022011"
+  ],
   "subject_referents": {},
   "type": "place"
 }

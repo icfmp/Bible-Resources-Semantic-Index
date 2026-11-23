@@ -10,9 +10,39 @@
     "review_status": "source_unreviewed",
     "source_id": "place:Ramathaim-zophim",
     "source_primary_id": "place:Ramathaim-zophim",
-    "source_sha256": "2fe065550cfcc6483ba35ff150e7bc114f1448b921384d34841b21263ce34f81"
+    "source_sha256": "2fe065550cfcc6483ba35ff150e7bc114f1448b921384d34841b21263ce34f81",
+    "editorial_field_changes": [
+      {
+        "action": "restore_exact_frozen_wlc_geographic_compound",
+        "added_reference_values": {
+          "references": [
+            "09001001"
+          ]
+        },
+        "added_original_word_groups": {
+          "wlc": [
+            [
+              "o090010010052",
+              "o090010010061"
+            ]
+          ]
+        },
+        "reason": "1 Samuel 1:1 explicitly names the compound town designation Ramathaim-Zophim; does not by itself prove a canonical merger with a differently attested Ramah.",
+        "evidence": [
+          "ORG BCV8 09001001",
+          "Collated directly against frozen Hebrew WLC lowfat XML at Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c, including complete original words and prefixes"
+        ]
+      }
+    ]
   },
-  "explicit_instances": {},
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o090010010052",
+        "o090010010061"
+      ]
+    ]
+  },
   "id": "place:Ramathaim-zophim",
   "is_artifact": false,
   "is_person": false,
@@ -37,7 +67,9 @@
   },
   "primary_id": "place:Ramathaim-zophim",
   "pronominal_referents": {},
-  "references": [],
+  "references": [
+    "09001001"
+  ],
   "referred_to_as": [
     "place:Ramah"
   ],

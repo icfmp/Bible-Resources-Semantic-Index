@@ -5,9 +5,39 @@
     "review_status": "source_unreviewed",
     "source_id": "place:Harod.1",
     "source_primary_id": "place:Harod.1",
-    "source_sha256": "a34c08c2e4c0c6fb387eff9c76cd5c44d41558b2e9ebae73ad16b48378d42ed9"
+    "source_sha256": "a34c08c2e4c0c6fb387eff9c76cd5c44d41558b2e9ebae73ad16b48378d42ed9",
+    "editorial_field_changes": [
+      {
+        "action": "restore_exact_frozen_wlc_geographic_compound",
+        "added_reference_values": {
+          "references": [
+            "07007001"
+          ]
+        },
+        "added_original_word_groups": {
+          "wlc": [
+            [
+              "o070070010111",
+              "o070070010121"
+            ]
+          ]
+        },
+        "reason": "Judges 7:1 explicitly names the spring of Harod at Gideon's encampment; both components of the unique proper name are attested.",
+        "evidence": [
+          "ORG BCV8 07007001",
+          "Collated directly against frozen Hebrew WLC lowfat XML at Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c, including complete original words and prefixes"
+        ]
+      }
+    ]
   },
-  "explicit_instances": {},
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o070070010111",
+        "o070070010121"
+      ]
+    ]
+  },
   "id": "place:Harod.1",
   "is_artifact": false,
   "is_person": false,
@@ -34,7 +64,9 @@
   },
   "primary_id": "place:Harod.1",
   "pronominal_referents": {},
-  "references": [],
+  "references": [
+    "07007001"
+  ],
   "subject_referents": {},
   "type": "place"
 }

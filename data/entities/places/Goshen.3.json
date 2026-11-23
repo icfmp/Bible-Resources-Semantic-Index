@@ -5,9 +5,51 @@
     "review_status": "source_unreviewed",
     "source_id": "place:Goshen.3",
     "source_primary_id": "place:Goshen.3",
-    "source_sha256": "b2ab26ea48e31561718ebfaaf882eb50f8177b021c93b12c580e4b014a9a6fff"
+    "source_sha256": "b2ab26ea48e31561718ebfaaf882eb50f8177b021c93b12c580e4b014a9a6fff",
+    "editorial_field_changes": [
+      {
+        "action": "restore_exact_frozen_wlc_geographic_compound",
+        "added_reference_values": {
+          "references": [
+            "06010041",
+            "06011016"
+          ]
+        },
+        "added_original_word_groups": {
+          "wlc": [
+            [
+              "o060100410091",
+              "o060100410101"
+            ],
+            [
+              "o060110160131",
+              "o060110160141",
+              "o060110160142"
+            ]
+          ]
+        },
+        "reason": "Joshua 10:41 and 11:16 explicitly name 'land of Goshen' in Judah using the exact Hebrew compound geographical phrase (not Egyptian Goshen).",
+        "evidence": [
+          "ORG BCV8 06010041",
+          "ORG BCV8 06011016",
+          "Collated directly against frozen Hebrew WLC lowfat XML at Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c, including complete original words and prefixes"
+        ]
+      }
+    ]
   },
-  "explicit_instances": {},
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o060100410091",
+        "o060100410101"
+      ],
+      [
+        "o060110160131",
+        "o060110160141",
+        "o060110160142"
+      ]
+    ]
+  },
   "id": "place:Goshen.3",
   "is_artifact": false,
   "is_person": false,
@@ -30,7 +72,10 @@
   },
   "primary_id": "place:Goshen.3",
   "pronominal_referents": {},
-  "references": [],
+  "references": [
+    "06010041",
+    "06011016"
+  ],
   "subject_referents": {},
   "type": "place"
 }

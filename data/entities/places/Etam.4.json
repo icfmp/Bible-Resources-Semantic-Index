@@ -5,14 +5,69 @@
     "review_status": "source_unreviewed",
     "source_id": "place:Etam.4",
     "source_primary_id": "place:Etam.4",
-    "source_sha256": "956b9d332f0b875a362b7205c060b17e3c506bc2234cedecb5cd8f1cbb3aa609"
+    "source_sha256": "956b9d332f0b875a362b7205c060b17e3c506bc2234cedecb5cd8f1cbb3aa609",
+    "editorial_field_changes": [
+      {
+        "action": "correct_rock_of_etam_to_explicit_samson_site",
+        "removed_reference_values": {
+          "key_references": [
+            "06015052"
+          ]
+        },
+        "added_reference_values": {
+          "references": [
+            "07015008",
+            "07015011"
+          ],
+          "key_references": [
+            "07015008",
+            "07015011"
+          ]
+        },
+        "added_original_word_groups": {
+          "wlc": [
+            [
+              "o070150080102",
+              "o070150080111",
+              "o070150080121"
+            ],
+            [
+              "o070150110071",
+              "o070150110081",
+              "o070150110091"
+            ]
+          ]
+        },
+        "reason": "Joshua 15:52 names Arab, Dumah and Eshan, not any Rock of Etam. Judges 15:8 and 15:11 explicitly identify the cleft of the rock of Etam (סעיף סלע עיטם), not merely a homonymous fortified town. Assign both full frozen Hebrew phrases to the historical rock feature, independently from the general Etam place record, without enforcing an unjustified canonical merger.",
+        "evidence": [
+          "Joshua 15:52 WLC source text contains no Etam",
+          "Judges 15:8 WLC/lowfat/07-Jdg-015-lowfat.xml source original ids o070150080102,111,121",
+          "Judges 15:11 same pinned chapter source ids o070150110071,081,091",
+          "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c"
+        ]
+      }
+    ]
   },
-  "explicit_instances": {},
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o070150080102",
+        "o070150080111",
+        "o070150080121"
+      ],
+      [
+        "o070150110071",
+        "o070150110081",
+        "o070150110091"
+      ]
+    ]
+  },
   "id": "place:Etam.4",
   "is_artifact": false,
   "is_person": false,
   "key_references": [
-    "06015052"
+    "07015008",
+    "07015011"
   ],
   "localizations": {
     "eng": {
@@ -32,7 +87,10 @@
   },
   "primary_id": "place:Etam.4",
   "pronominal_referents": {},
-  "references": [],
+  "references": [
+    "07015008",
+    "07015011"
+  ],
   "subject_referents": {},
   "subregion_of": [
     "place:TerritoryOfJudah"
