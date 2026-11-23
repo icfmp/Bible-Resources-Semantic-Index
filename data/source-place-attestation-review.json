@@ -1,0 +1,633 @@
+{
+  "schema_version": 1,
+  "baseline_commit": "de3c285b3722cad8cf6aa699951648c5e39c1e7d",
+  "source_editions": {
+    "wlc": "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c",
+    "sblgnt": "Clear-Bible/macula-greek@8423afe47b9e8f24b7772e808af45c7159a6fe7e"
+  },
+  "policy": "27 current unanchored biblical place source cases; directly attested ancient people, directions and gentilics do not prove independently named places. Source-key fields remain independent, original, and immutable except for evidenced reversible corrections.",
+  "cases": [
+    {
+      "source_id": "place:Babylonia",
+      "attestation_class": "historical_regional_crossname",
+      "outcome": "contextual_qualified",
+      "original_key_verses": [
+        "15001011",
+        "24051024",
+        "01011002",
+        "15002001",
+        "38005011",
+        "01011031"
+      ],
+      "exact_pinned_word_witnesses": [
+        {
+          "word_id": "o010110020071",
+          "verse_id": "01011002",
+          "english": "Shinar",
+          "gloss": "of.Shinar",
+          "lemma": "שִׁנְעָר"
+        },
+        {
+          "word_id": "o010110310211",
+          "verse_id": "01011031",
+          "english": "Chaldeans",
+          "gloss": "of.[the].Chaldeans",
+          "lemma": "כַּשְׂדִּים"
+        },
+        {
+          "word_id": "o150010110152",
+          "verse_id": "15001011",
+          "english": "Babylon",
+          "gloss": "Babylon",
+          "lemma": "בָּבֶל"
+        },
+        {
+          "word_id": "o240510240022",
+          "verse_id": "24051024",
+          "english": "Babylon",
+          "gloss": "Babylon",
+          "lemma": "בָּבֶל"
+        },
+        {
+          "word_id": "o380050110071",
+          "verse_id": "38005011",
+          "english": "Shinar",
+          "gloss": "of.Shinar",
+          "lemma": "שִׁנְעָר"
+        }
+      ],
+      "qualification": "The original biblical names Shinar, Babylon and Chaldea in Genesis, Ezra, Jeremiah and Zechariah are related historical regional names, not a direct Hebrew expression Babylonia or proof of exact identity of each historic state. This is a qualification of the inherited semantic identity and does not create an independent named source token, a new biblical verse, an archaeological coordinate, or a silently amended source spelling. The historical source keys remain separately traceable.",
+      "independent_source_url": "https://www.biblegateway.com/passage/?search=Genesis+11%3A2&version=NET"
+    },
+    {
+      "source_id": "place:Eglath-shelishiyah.1",
+      "attestation_class": "contested_toponym",
+      "outcome": "contextual_qualified",
+      "original_key_verses": [
+        "23015005",
+        "24048034"
+      ],
+      "exact_pinned_word_witnesses": [
+        {
+          "word_id": "o230150050071",
+          "verse_id": "23015005",
+          "english": "",
+          "gloss": "Eglath",
+          "lemma": "עֶגְלַת שְׁלִשִׁיָּה"
+        },
+        {
+          "word_id": "o230150050081",
+          "verse_id": "23015005",
+          "english": "",
+          "gloss": "Shelishiyah",
+          "lemma": "שְׁלִישִׁי"
+        },
+        {
+          "word_id": "o240480340121",
+          "verse_id": "24048034",
+          "english": "",
+          "gloss": "Eglath",
+          "lemma": "עֶגְלַת שְׁלִשִׁיָּה"
+        },
+        {
+          "word_id": "o240480340131",
+          "verse_id": "24048034",
+          "english": "",
+          "gloss": "Shelishiyah",
+          "lemma": "שְׁלִישִׁי"
+        }
+      ],
+      "qualification": "The two-word Eglath-shelishiyah Hebrew expression appears in both Moab oracles, but the reading as a distinct site competes with a three-year-old heifer interpretation; its precise geography is uncertain. This is a qualification of the inherited semantic identity and does not create an independent named source token, a new biblical verse, an archaeological coordinate, or a silently amended source spelling. The historical source keys remain separately traceable.",
+      "independent_source_url": "https://biblehub.com/commentaries/cambridge/isaiah/15.htm"
+    },
+    {
+      "source_id": "place:Gederah.2",
+      "attestation_class": "demonym_inferred_locality",
+      "outcome": "contextual_qualified",
+      "original_key_verses": [
+        "13012005"
+      ],
+      "exact_pinned_word_witnesses": [
+        {
+          "word_id": "o130120050052",
+          "verse_id": "13012005",
+          "english": "Gederathite",
+          "gloss": "Gederathite",
+          "lemma": "גְּדֵרָתִי"
+        }
+      ],
+      "qualification": "Jozabad in 1 Chronicles 12:5 is explicitly the Gederathite; that adjective can suggest a town of origin, perhaps Joshua's Gederah, but does not itself assert a second town's geographic identity. This is a qualification of the inherited semantic identity and does not create an independent named source token, a new biblical verse, an archaeological coordinate, or a silently amended source spelling. The historical source keys remain separately traceable.",
+      "independent_source_url": "https://www.blueletterbible.org/search/Dictionary/viewTopic.cfm?topic=IT0003712"
+    },
+    {
+      "source_id": "place:Gomer",
+      "attestation_class": "ethnonymic_political_area",
+      "outcome": "contextual_qualified",
+      "original_key_verses": [
+        "26038006"
+      ],
+      "exact_pinned_word_witnesses": [
+        {
+          "word_id": "o260380060011",
+          "verse_id": "26038006",
+          "english": "Gomer",
+          "gloss": "Gomer",
+          "lemma": "גֹּמֶר"
+        }
+      ],
+      "qualification": "Ezekiel 38:6 explicitly names Gomer with military forces, a nation or group of peoples, not a separate location or direct geographic city token; identification with Cimmerians is historically argued. This is a qualification of the inherited semantic identity and does not create an independent named source token, a new biblical verse, an archaeological coordinate, or a silently amended source spelling. The historical source keys remain separately traceable.",
+      "independent_source_url": "https://www.iranicaonline.org/articles/cimmerians-nomads/"
+    },
+    {
+      "source_id": "place:Hushah",
+      "attestation_class": "demonym_inferred_locality",
+      "outcome": "contextual_qualified",
+      "original_key_verses": [
+        "10021018"
+      ],
+      "exact_pinned_word_witnesses": [
+        {
+          "word_id": "o100210180132",
+          "verse_id": "10021018",
+          "english": "Hushathite",
+          "gloss": "Hushathite",
+          "lemma": "חֻשָׁתִי"
+        }
+      ],
+      "qualification": "2 Samuel 21:18 describes Sibbecai the Hushathite. A village Hushah may be inferred as his home, but the source word is the human gentilic adjective and not a written original name for a town. This is a qualification of the inherited semantic identity and does not create an independent named source token, a new biblical verse, an archaeological coordinate, or a silently amended source spelling. The historical source keys remain separately traceable.",
+      "independent_source_url": "https://tips.translation.bible/story/translation-commentary-on-2-samuel-2118/"
+    },
+    {
+      "source_id": "place:Lud.2",
+      "attestation_class": "ethnonymic_political_area",
+      "outcome": "contextual_qualified",
+      "original_key_verses": [
+        "24046009",
+        "26030005"
+      ],
+      "exact_pinned_word_witnesses": [
+        {
+          "word_id": "o240460090112",
+          "verse_id": "24046009",
+          "english": "Lud",
+          "gloss": "Ludites",
+          "lemma": "לוּדִים"
+        },
+        {
+          "word_id": "o260300050032",
+          "verse_id": "26030005",
+          "english": "Lud",
+          "gloss": "Lud",
+          "lemma": "לוּד"
+        }
+      ],
+      "qualification": "Jeremiah 46:9 and Ezekiel 30:5 mention the people Lud/Ludim in association with Cush and Put. No direct geographic town of that name appears, and these people should not be merged with Lud son of Shem. This is a qualification of the inherited semantic identity and does not create an independent named source token, a new biblical verse, an archaeological coordinate, or a silently amended source spelling. The historical source keys remain separately traceable.",
+      "independent_source_url": "https://www.biblegateway.com/resources/encyclopedia-of-the-bible/Lud-Ludim"
+    },
+    {
+      "source_id": "place:Meronoth",
+      "attestation_class": "demonym_inferred_locality",
+      "outcome": "contextual_qualified",
+      "original_key_verses": [
+        "13027030",
+        "16003007"
+      ],
+      "exact_pinned_word_witnesses": [
+        {
+          "word_id": "o130270300082",
+          "verse_id": "13027030",
+          "english": "Meronothite",
+          "gloss": "Meronothite",
+          "lemma": "מֵרֹנֹתִי"
+        },
+        {
+          "word_id": "o160030070072",
+          "verse_id": "16003007",
+          "english": "Meronothite",
+          "gloss": "Meronothite",
+          "lemma": "מֵרֹנֹתִי"
+        }
+      ],
+      "qualification": "First Chronicles 27:30 and Nehemiah 3:7 call two men Meronothites. The name of a source town can be inferred but its actual location is not known, and the town name is not written in either verse. This is a qualification of the inherited semantic identity and does not create an independent named source token, a new biblical verse, an archaeological coordinate, or a silently amended source spelling. The historical source keys remain separately traceable.",
+      "independent_source_url": "https://www.biblegateway.com/resources/encyclopedia-of-the-bible/Meronothite"
+    },
+    {
+      "source_id": "place:Naamah.2",
+      "attestation_class": "demonym_inferred_locality",
+      "outcome": "contextual_qualified",
+      "original_key_verses": [
+        "18002011",
+        "18042009"
+      ],
+      "exact_pinned_word_witnesses": [
+        {
+          "word_id": "o180020110192",
+          "verse_id": "18002011",
+          "english": "Naamathite",
+          "gloss": "Naamathite",
+          "lemma": "נַעֲמָתִי"
+        },
+        {
+          "word_id": "o180420090072",
+          "verse_id": "18042009",
+          "english": "Naamathite",
+          "gloss": "Naamathite",
+          "lemma": "נַעֲמָתִי"
+        }
+      ],
+      "qualification": "The Hebrew calls Zophar the Naamathite, with no directly named town. His possible region should not be collapsed into another Naamah attested in Joshua merely by the similarity of the English name. This is a qualification of the inherited semantic identity and does not create an independent named source token, a new biblical verse, an archaeological coordinate, or a silently amended source spelling. The historical source keys remain separately traceable.",
+      "independent_source_url": "https://www.biblegateway.com/resources/smiths-bible-names-dictionary/Naamathite"
+    },
+    {
+      "source_id": "place:Nehelam",
+      "attestation_class": "ambiguous_gentilic",
+      "outcome": "corrected",
+      "original_key_verses": [
+        "24029024",
+        "24029031",
+        "24029032"
+      ],
+      "exact_pinned_word_witnesses": [
+        {
+          "word_id": "o240290240032",
+          "verse_id": "24029024",
+          "english": "Nehelamite",
+          "gloss": "Nehelamite",
+          "lemma": "נֶחֱלָמִי"
+        },
+        {
+          "word_id": "o240290310112",
+          "verse_id": "24029031",
+          "english": "Nehelamite",
+          "gloss": "Nehelamite",
+          "lemma": "נֶחֱלָמִי"
+        },
+        {
+          "word_id": "o240290320092",
+          "verse_id": "24029032",
+          "english": "Nehelamite",
+          "gloss": "Nehelamite",
+          "lemma": "נֶחֱלָמִי"
+        }
+      ],
+      "qualification": "Shemaiah is a Nehelamite in Jeremiah 29, but no independent place Nehelam is attested. His epithet may be gentilicial, familial or an allusion to the Hebrew root for dreaming; the label now marks uncertainty. This is a qualification of the inherited semantic identity and does not create an independent named source token, a new biblical verse, an archaeological coordinate, or a silently amended source spelling. The historical source keys remain separately traceable.",
+      "independent_source_url": "https://www.biblegateway.com/resources/encyclopedia-of-the-bible/Nehelamite",
+      "required_receipt_action": "qualify_inferred_geographical_identity"
+    },
+    {
+      "source_id": "place:NorthGate",
+      "attestation_class": "directional_gatekeeper_post",
+      "outcome": "corrected",
+      "original_key_verses": [
+        "13026014"
+      ],
+      "exact_pinned_word_witnesses": [
+        {
+          "word_id": "o130260140131",
+          "verse_id": "13026014",
+          "english": "north",
+          "gloss": "northward",
+          "lemma": "צָפוֹן"
+        }
+      ],
+      "qualification": "The original text in 1 Chronicles 26:14 literally assigns the northern lot to a gatekeeper, without naming a separate North Gate. The updated label explicitly identifies the station as inferred context. This is a qualification of the inherited semantic identity and does not create an independent named source token, a new biblical verse, an archaeological coordinate, or a silently amended source spelling. The historical source keys remain separately traceable.",
+      "independent_source_url": "https://www.biblegateway.com/passage/?search=1+Chronicles+26&version=NIV",
+      "required_receipt_action": "qualify_inferred_geographical_identity"
+    },
+    {
+      "source_id": "place:Shaalbon",
+      "attestation_class": "demonym_inferred_locality",
+      "outcome": "contextual_qualified",
+      "original_key_verses": [
+        "10023032",
+        "13011033"
+      ],
+      "exact_pinned_word_witnesses": [
+        {
+          "word_id": "o100230320022",
+          "verse_id": "10023032",
+          "english": "Shaalbonite",
+          "gloss": "Shaalbonite",
+          "lemma": "שַׁעַלְבֹנִי"
+        },
+        {
+          "word_id": "o130110330042",
+          "verse_id": "13011033",
+          "english": "Shaalbonite",
+          "gloss": "Shaalbonite",
+          "lemma": "שַׁעַלְבֹנִי"
+        }
+      ],
+      "qualification": "Eliahba is a Shaalbonite in 2 Samuel 23:32 and 1 Chronicles 11:33, but no proper name Shaalbon is written as a locality. A town may be inferred and tentatively linked with Shaalbim. This is a qualification of the inherited semantic identity and does not create an independent named source token, a new biblical verse, an archaeological coordinate, or a silently amended source spelling. The historical source keys remain separately traceable.",
+      "independent_source_url": "https://search.biblegateway.com/resources/encyclopedia-of-the-bible/Shaalbim"
+    },
+    {
+      "source_id": "place:South.3",
+      "attestation_class": "historical_regnal_area",
+      "outcome": "contextual_qualified",
+      "original_key_verses": [
+        "27011005",
+        "27011011"
+      ],
+      "exact_pinned_word_witnesses": [
+        {
+          "word_id": "o270110050032",
+          "verse_id": "27011005",
+          "english": "south",
+          "gloss": "the.south",
+          "lemma": "נֶגֶב"
+        },
+        {
+          "word_id": "o270110110032",
+          "verse_id": "27011011",
+          "english": "south",
+          "gloss": "the.south",
+          "lemma": "נֶגֶב"
+        }
+      ],
+      "qualification": "Daniel 11 calls a monarch the king of the south; the historical Ptolemaic reference is a political inference rather than a place name South in the Hebrew original, and no extra geography is asserted. This is a qualification of the inherited semantic identity and does not create an independent named source token, a new biblical verse, an archaeological coordinate, or a silently amended source spelling. The historical source keys remain separately traceable.",
+      "independent_source_url": "https://www.biblegateway.com/passage/?search=Daniel+11%3A5&version=NET"
+    },
+    {
+      "source_id": "place:SouthGate",
+      "attestation_class": "directional_gatekeeper_post",
+      "outcome": "corrected",
+      "original_key_verses": [
+        "13026015"
+      ],
+      "exact_pinned_word_witnesses": [
+        {
+          "word_id": "o130260150031",
+          "verse_id": "13026015",
+          "english": "south",
+          "gloss": "south",
+          "lemma": "נֶגֶב"
+        }
+      ],
+      "qualification": "First Chronicles 26:15 assigns the southern guard post to Obed-Edom without uttering the distinct proper name South Gate. The revised label preserves this fact as an inferred station, not an attested name. This is a qualification of the inherited semantic identity and does not create an independent named source token, a new biblical verse, an archaeological coordinate, or a silently amended source spelling. The historical source keys remain separately traceable.",
+      "independent_source_url": "https://www.biblegateway.com/passage/?search=1+Chronicles+26&version=NIV",
+      "required_receipt_action": "qualify_inferred_geographical_identity"
+    },
+    {
+      "source_id": "place:TerritoryOfAsher",
+      "attestation_class": "derived_tribal_allotment",
+      "outcome": "corrected",
+      "original_key_verses": [],
+      "exact_pinned_word_witnesses": [
+        {
+          "word_id": "o060190240061",
+          "verse_id": "06019024",
+          "english": "Asher",
+          "gloss": "of.Asher",
+          "lemma": "אָשֵׁר"
+        }
+      ],
+      "qualification": "Joshua 19:24 expressly relates the land inheritance or lot to Asher. This warrants a constructed tribal territory but not the modern proper name Territory of Asher as an original Hebrew occurrence, nor the imported administrative label province. This is a qualification of the inherited semantic identity and does not create an independent named source token, a new biblical verse, an archaeological coordinate, or a silently amended source spelling. The historical source keys remain separately traceable.",
+      "independent_source_url": "https://www.biblegateway.com/passage/?search=Joshua+19%3A24&version=NET",
+      "required_receipt_action": "classify_biblical_tribal_allotment_not_province"
+    },
+    {
+      "source_id": "place:TerritoryOfBenjamin",
+      "attestation_class": "derived_tribal_allotment",
+      "outcome": "corrected",
+      "original_key_verses": [],
+      "exact_pinned_word_witnesses": [
+        {
+          "word_id": "o060180110051",
+          "verse_id": "06018011",
+          "english": "Benjamin",
+          "gloss": "of.Benjamin",
+          "lemma": "בִּנְיָמִן"
+        }
+      ],
+      "qualification": "Joshua 18:11 expressly relates the land inheritance or lot to Benjamin. This warrants a constructed tribal territory but not the modern proper name Territory of Benjamin as an original Hebrew occurrence, nor the imported administrative label province. This is a qualification of the inherited semantic identity and does not create an independent named source token, a new biblical verse, an archaeological coordinate, or a silently amended source spelling. The historical source keys remain separately traceable.",
+      "independent_source_url": "https://www.biblegateway.com/passage/?search=Joshua+18%3A11&version=NET",
+      "required_receipt_action": "classify_biblical_tribal_allotment_not_province"
+    },
+    {
+      "source_id": "place:TerritoryOfDan",
+      "attestation_class": "derived_tribal_allotment",
+      "outcome": "corrected",
+      "original_key_verses": [],
+      "exact_pinned_word_witnesses": [
+        {
+          "word_id": "o060190400031",
+          "verse_id": "06019040",
+          "english": "Dan",
+          "gloss": "of.Dan",
+          "lemma": "דָּן"
+        }
+      ],
+      "qualification": "Joshua 19:40 expressly relates the land inheritance or lot to Dan. This warrants a constructed tribal territory but not the modern proper name Territory of Dan as an original Hebrew occurrence, nor the imported administrative label province. This is a qualification of the inherited semantic identity and does not create an independent named source token, a new biblical verse, an archaeological coordinate, or a silently amended source spelling. The historical source keys remain separately traceable.",
+      "independent_source_url": "https://www.biblegateway.com/passage/?search=Joshua+19%3A40&version=NET",
+      "required_receipt_action": "classify_biblical_tribal_allotment_not_province"
+    },
+    {
+      "source_id": "place:TerritoryOfEastManasseh",
+      "attestation_class": "derived_tribal_allotment",
+      "outcome": "corrected",
+      "original_key_verses": [],
+      "exact_pinned_word_witnesses": [
+        {
+          "word_id": "o060130290051",
+          "verse_id": "06013029",
+          "english": "Manasseh",
+          "gloss": "of.Manasseh",
+          "lemma": "מְנַשֶּׁה"
+        }
+      ],
+      "qualification": "Joshua 13:29 expressly relates the land inheritance or lot to East Manasseh. This warrants a constructed tribal territory but not the modern proper name Territory of East Manasseh as an original Hebrew occurrence, nor the imported administrative label province. This is a qualification of the inherited semantic identity and does not create an independent named source token, a new biblical verse, an archaeological coordinate, or a silently amended source spelling. The historical source keys remain separately traceable.",
+      "independent_source_url": "https://www.biblegateway.com/passage/?search=Joshua+13%3A29&version=NET",
+      "required_receipt_action": "classify_biblical_tribal_allotment_not_province"
+    },
+    {
+      "source_id": "place:TerritoryOfEphraim",
+      "attestation_class": "derived_tribal_allotment",
+      "outcome": "corrected",
+      "original_key_verses": [],
+      "exact_pinned_word_witnesses": [
+        {
+          "word_id": "o060160050041",
+          "verse_id": "06016005",
+          "english": "Ephraim",
+          "gloss": "of.Ephraim",
+          "lemma": "אֶפְרַיִם"
+        }
+      ],
+      "qualification": "Joshua 16:5 expressly relates the land inheritance or lot to Ephraim. This warrants a constructed tribal territory but not the modern proper name Territory of Ephraim as an original Hebrew occurrence, nor the imported administrative label province. This is a qualification of the inherited semantic identity and does not create an independent named source token, a new biblical verse, an archaeological coordinate, or a silently amended source spelling. The historical source keys remain separately traceable.",
+      "independent_source_url": "https://www.biblegateway.com/passage/?search=Joshua+16%3A5&version=NET",
+      "required_receipt_action": "classify_biblical_tribal_allotment_not_province"
+    },
+    {
+      "source_id": "place:TerritoryOfGad",
+      "attestation_class": "derived_tribal_allotment",
+      "outcome": "corrected",
+      "original_key_verses": [],
+      "exact_pinned_word_witnesses": [
+        {
+          "word_id": "o060130240041",
+          "verse_id": "06013024",
+          "english": "Gad",
+          "gloss": "of.Gad",
+          "lemma": "גָּד"
+        }
+      ],
+      "qualification": "Joshua 13:24 expressly relates the land inheritance or lot to Gad. This warrants a constructed tribal territory but not the modern proper name Territory of Gad as an original Hebrew occurrence, nor the imported administrative label province. This is a qualification of the inherited semantic identity and does not create an independent named source token, a new biblical verse, an archaeological coordinate, or a silently amended source spelling. The historical source keys remain separately traceable.",
+      "independent_source_url": "https://www.biblegateway.com/passage/?search=Joshua+13%3A24&version=NET",
+      "required_receipt_action": "classify_biblical_tribal_allotment_not_province"
+    },
+    {
+      "source_id": "place:TerritoryOfIssachar",
+      "attestation_class": "derived_tribal_allotment",
+      "outcome": "corrected",
+      "original_key_verses": [],
+      "exact_pinned_word_witnesses": [
+        {
+          "word_id": "o060190170061",
+          "verse_id": "06019017",
+          "english": "Issachar",
+          "gloss": "of.Issachar",
+          "lemma": "יִשָּׂשכָר"
+        }
+      ],
+      "qualification": "Joshua 19:17 expressly relates the land inheritance or lot to Issachar. This warrants a constructed tribal territory but not the modern proper name Territory of Issachar as an original Hebrew occurrence, nor the imported administrative label province. This is a qualification of the inherited semantic identity and does not create an independent named source token, a new biblical verse, an archaeological coordinate, or a silently amended source spelling. The historical source keys remain separately traceable.",
+      "independent_source_url": "https://www.biblegateway.com/passage/?search=Joshua+19%3A17&version=NET",
+      "required_receipt_action": "classify_biblical_tribal_allotment_not_province"
+    },
+    {
+      "source_id": "place:TerritoryOfJudah",
+      "attestation_class": "derived_tribal_allotment",
+      "outcome": "corrected",
+      "original_key_verses": [],
+      "exact_pinned_word_witnesses": [
+        {
+          "word_id": "o060150010051",
+          "verse_id": "06015001",
+          "english": "Judah",
+          "gloss": "of.Judah",
+          "lemma": "יְהוּדָה"
+        }
+      ],
+      "qualification": "Joshua 15:1 expressly relates the land inheritance or lot to Judah. This warrants a constructed tribal territory but not the modern proper name Territory of Judah as an original Hebrew occurrence, nor the imported administrative label province. This is a qualification of the inherited semantic identity and does not create an independent named source token, a new biblical verse, an archaeological coordinate, or a silently amended source spelling. The historical source keys remain separately traceable.",
+      "independent_source_url": "https://www.biblegateway.com/passage/?search=Joshua+15%3A1&version=NET",
+      "required_receipt_action": "classify_biblical_tribal_allotment_not_province"
+    },
+    {
+      "source_id": "place:TerritoryOfNaphtali",
+      "attestation_class": "derived_tribal_allotment",
+      "outcome": "corrected",
+      "original_key_verses": [],
+      "exact_pinned_word_witnesses": [
+        {
+          "word_id": "o060190320071",
+          "verse_id": "06019032",
+          "english": "Naphtali",
+          "gloss": "of.Naphtali",
+          "lemma": "נַפְתָּלִי"
+        }
+      ],
+      "qualification": "Joshua 19:32 expressly relates the land inheritance or lot to Naphtali. This warrants a constructed tribal territory but not the modern proper name Territory of Naphtali as an original Hebrew occurrence, nor the imported administrative label province. This is a qualification of the inherited semantic identity and does not create an independent named source token, a new biblical verse, an archaeological coordinate, or a silently amended source spelling. The historical source keys remain separately traceable.",
+      "independent_source_url": "https://www.biblegateway.com/passage/?search=Joshua+19%3A32&version=NET",
+      "required_receipt_action": "classify_biblical_tribal_allotment_not_province"
+    },
+    {
+      "source_id": "place:TerritoryOfReuben",
+      "attestation_class": "derived_tribal_allotment",
+      "outcome": "corrected",
+      "original_key_verses": [],
+      "exact_pinned_word_witnesses": [
+        {
+          "word_id": "o060130150051",
+          "verse_id": "06013015",
+          "english": "Reuben",
+          "gloss": "of.Reuben",
+          "lemma": "רְאוּבֵן"
+        }
+      ],
+      "qualification": "Joshua 13:15 expressly relates the land inheritance or lot to Reuben. This warrants a constructed tribal territory but not the modern proper name Territory of Reuben as an original Hebrew occurrence, nor the imported administrative label province. This is a qualification of the inherited semantic identity and does not create an independent named source token, a new biblical verse, an archaeological coordinate, or a silently amended source spelling. The historical source keys remain separately traceable.",
+      "independent_source_url": "https://www.biblegateway.com/passage/?search=Joshua+13%3A15&version=NET",
+      "required_receipt_action": "classify_biblical_tribal_allotment_not_province"
+    },
+    {
+      "source_id": "place:TerritoryOfSimeon",
+      "attestation_class": "derived_tribal_allotment",
+      "outcome": "corrected",
+      "original_key_verses": [],
+      "exact_pinned_word_witnesses": [
+        {
+          "word_id": "o060190010071",
+          "verse_id": "06019001",
+          "english": "Simeon",
+          "gloss": "of.Simeon",
+          "lemma": "שִׁמְעוֹן"
+        }
+      ],
+      "qualification": "Joshua 19:1 expressly relates the land inheritance or lot to Simeon. This warrants a constructed tribal territory but not the modern proper name Territory of Simeon as an original Hebrew occurrence, nor the imported administrative label province. This is a qualification of the inherited semantic identity and does not create an independent named source token, a new biblical verse, an archaeological coordinate, or a silently amended source spelling. The historical source keys remain separately traceable.",
+      "independent_source_url": "https://www.biblegateway.com/passage/?search=Joshua+19%3A1&version=NET",
+      "required_receipt_action": "classify_biblical_tribal_allotment_not_province"
+    },
+    {
+      "source_id": "place:TerritoryOfWestManasseh",
+      "attestation_class": "derived_tribal_allotment",
+      "outcome": "corrected",
+      "original_key_verses": [],
+      "exact_pinned_word_witnesses": [
+        {
+          "word_id": "o060170010041",
+          "verse_id": "06017001",
+          "english": "Manasseh",
+          "gloss": "of.Manasseh",
+          "lemma": "מְנַשֶּׁה"
+        }
+      ],
+      "qualification": "Joshua 17:1 expressly relates the land inheritance or lot to West Manasseh. This warrants a constructed tribal territory but not the modern proper name Territory of West Manasseh as an original Hebrew occurrence, nor the imported administrative label province. This is a qualification of the inherited semantic identity and does not create an independent named source token, a new biblical verse, an archaeological coordinate, or a silently amended source spelling. The historical source keys remain separately traceable.",
+      "independent_source_url": "https://www.biblegateway.com/passage/?search=Joshua+17%3A1&version=NET",
+      "required_receipt_action": "classify_biblical_tribal_allotment_not_province"
+    },
+    {
+      "source_id": "place:TerritoryOfZebulun",
+      "attestation_class": "derived_tribal_allotment",
+      "outcome": "corrected",
+      "original_key_verses": [],
+      "exact_pinned_word_witnesses": [
+        {
+          "word_id": "o060190100051",
+          "verse_id": "06019010",
+          "english": "Zebulun",
+          "gloss": "of.Zebulun",
+          "lemma": "זְבוּלֻן"
+        }
+      ],
+      "qualification": "Joshua 19:10 expressly relates the land inheritance or lot to Zebulun. This warrants a constructed tribal territory but not the modern proper name Territory of Zebulun as an original Hebrew occurrence, nor the imported administrative label province. This is a qualification of the inherited semantic identity and does not create an independent named source token, a new biblical verse, an archaeological coordinate, or a silently amended source spelling. The historical source keys remain separately traceable.",
+      "independent_source_url": "https://www.biblegateway.com/passage/?search=Joshua+19%3A10&version=NET",
+      "required_receipt_action": "classify_biblical_tribal_allotment_not_province"
+    },
+    {
+      "source_id": "place:Zaphon.2",
+      "attestation_class": "poetic_cosmic_geography",
+      "outcome": "contextual_qualified",
+      "original_key_verses": [
+        "19048003",
+        "23014013"
+      ],
+      "exact_pinned_word_witnesses": [
+        {
+          "word_id": "o190480030091",
+          "verse_id": "19048003",
+          "english": "north",
+          "gloss": "of.Zaphon",
+          "lemma": "צָפוֹן"
+        },
+        {
+          "word_id": "o230140130151",
+          "verse_id": "23014013",
+          "english": "north",
+          "gloss": "of.Zaphon",
+          "lemma": "צָפוֹן"
+        }
+      ],
+      "qualification": "Psalm 48 and Isaiah 14 use northern imagery that may allude to the West Semitic Mount Zaphon motif. This is poetic intertextual geography, not proof of a named mountain's location in the texts. This is a qualification of the inherited semantic identity and does not create an independent named source token, a new biblical verse, an archaeological coordinate, or a silently amended source spelling. The historical source keys remain separately traceable.",
+      "independent_source_url": "https://classic.net.bible.org/verse.php?book=psa&chapter=48&verse=2"
+    }
+  ]
+}

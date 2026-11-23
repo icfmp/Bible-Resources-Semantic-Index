@@ -2,10 +2,35 @@
   "added_entry": false,
   "bsi": {
     "canonical_id": "place:Nehelam",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:Nehelam",
     "source_primary_id": "place:Nehelam",
-    "source_sha256": "049e692f4cbd471c3d8b50710603dc616d55f5863243ab83af7975c189fe51eb"
+    "source_sha256": "049e692f4cbd471c3d8b50710603dc616d55f5863243ab83af7975c189fe51eb",
+    "editorial_reason": "Jeremiah 29:24,31,32 contains the Hebrew gentilicial adjective Nehelamite (נֶחֱלָמִי), not an independently attested proper name for a town. The form may describe a birthplace, family affiliation or a pun on the Hebrew for dreaming; no excavation or other biblical verse proves a locality Nehelam. Retain original source keys as qualified contextual witnesses, while removing the unsupported claim of an established geographic settlement from the public-facing English identity label.",
+    "editorial_evidence": [
+      "WLC Jer 29:24 o240290240032 (Nehelamite), Jer 29:31 o240290310112, Jer 29:32 o240290320092",
+      "Encyclopedia of the Bible https://www.biblegateway.com/resources/encyclopedia-of-the-bible/Nehelamite",
+      "Lexham Bible Dictionary qualified gentilic https://biblia.com/books/lbd/article/NEHELAM%245FPLACE.BIBLICAL%245FRELEVANCE.SIGNIFICANCE"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "qualify_inferred_geographical_identity",
+        "reason": "Jeremiah 29:24,31,32 contains the Hebrew gentilicial adjective Nehelamite (נֶחֱלָמִי), not an independently attested proper name for a town. The form may describe a birthplace, family affiliation or a pun on the Hebrew for dreaming; no excavation or other biblical verse proves a locality Nehelam. Retain original source keys as qualified contextual witnesses, while removing the unsupported claim of an established geographic settlement from the public-facing English identity label.",
+        "evidence": [
+          "WLC Jer 29:24 o240290240032 (Nehelamite), Jer 29:31 o240290310112, Jer 29:32 o240290320092",
+          "Encyclopedia of the Bible https://www.biblegateway.com/resources/encyclopedia-of-the-bible/Nehelamite",
+          "Lexham Bible Dictionary qualified gentilic https://biblia.com/books/lbd/article/NEHELAM%245FPLACE.BIBLICAL%245FRELEVANCE.SIGNIFICANCE"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "preferred_label": "Nehelam"
+          },
+          "after": {
+            "preferred_label": "Nehelam (possible place of origin)"
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {},
   "id": "place:Nehelam",
@@ -18,7 +43,7 @@
   ],
   "localizations": {
     "eng": {
-      "preferred_label": "Nehelam"
+      "preferred_label": "Nehelam (possible place of origin)"
     }
   },
   "mentioned_in_bible": true,

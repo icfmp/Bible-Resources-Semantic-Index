@@ -2,10 +2,41 @@
   "added_entry": true,
   "bsi": {
     "canonical_id": "place:TerritoryOfWestManasseh",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:TerritoryOfWestManasseh",
     "source_primary_id": "place:TerritoryOfWestManasseh",
-    "source_sha256": "24fc8aa87112dd67d4a1175b8ca3b2b27d08ffee5301e1fa5820688966ca351a"
+    "source_sha256": "24fc8aa87112dd67d4a1175b8ca3b2b27d08ffee5301e1fa5820688966ca351a",
+    "editorial_reason": "The territorial inheritance of West Manasseh is described in Joshua 17:1, with the exact original Hebrew tribe reference o060170010041; the source does not use a fixed proper name 'Territory of WestManasseh'. This is a biblically derived land-allotment region, not a historical administrative province or a separately named place in an original-language token. No lexical occurrence or verse reference is manufactured.",
+    "editorial_evidence": [
+      "Pinned Clear-Bible/macula-hebrew WLC 06017001 exact tribe word o060170010041; Joshua's inheritance/lot context",
+      "Imported ACAI record place:TerritoryOfWestManasseh and unchanged source SHA-256 24fc8aa87112dd67d4a1175b8ca3b2b27d08ffee5301e1fa5820688966ca351a"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "classify_biblical_tribal_allotment_not_province",
+        "reason": "The territorial inheritance of West Manasseh is described in Joshua 17:1, with the exact original Hebrew tribe reference o060170010041; the source does not use a fixed proper name 'Territory of WestManasseh'. This is a biblically derived land-allotment region, not a historical administrative province or a separately named place in an original-language token. No lexical occurrence or verse reference is manufactured.",
+        "evidence": [
+          "Pinned Clear-Bible/macula-hebrew WLC 06017001 exact tribe word o060170010041; Joshua's inheritance/lot context",
+          "Imported ACAI record place:TerritoryOfWestManasseh and unchanged source SHA-256 24fc8aa87112dd67d4a1175b8ca3b2b27d08ffee5301e1fa5820688966ca351a"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "place_types": {
+              "acai": [
+                "province"
+              ]
+            }
+          },
+          "after": {
+            "place_types": {
+              "acai": [
+                "tribal territory"
+              ]
+            }
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {},
   "id": "place:TerritoryOfWestManasseh",
@@ -31,7 +62,7 @@
   "only_mentioned_in_apocrypha": false,
   "place_types": {
     "acai": [
-      "province"
+      "tribal territory"
     ]
   },
   "primary_id": "place:TerritoryOfWestManasseh",

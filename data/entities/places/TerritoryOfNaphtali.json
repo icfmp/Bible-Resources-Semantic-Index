@@ -2,10 +2,41 @@
   "added_entry": true,
   "bsi": {
     "canonical_id": "place:TerritoryOfNaphtali",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:TerritoryOfNaphtali",
     "source_primary_id": "place:TerritoryOfNaphtali",
-    "source_sha256": "ad0042f1a87d679449fdb19d7cf5699cd8428518d60ed0401916a54ed96ff690"
+    "source_sha256": "ad0042f1a87d679449fdb19d7cf5699cd8428518d60ed0401916a54ed96ff690",
+    "editorial_reason": "The territorial inheritance of Naphtali is described in Joshua 19:32, with the exact original Hebrew tribe reference o060190320071; the source does not use a fixed proper name 'Territory of Naphtali'. This is a biblically derived land-allotment region, not a historical administrative province or a separately named place in an original-language token. No lexical occurrence or verse reference is manufactured.",
+    "editorial_evidence": [
+      "Pinned Clear-Bible/macula-hebrew WLC 06019032 exact tribe word o060190320071; Joshua's inheritance/lot context",
+      "Imported ACAI record place:TerritoryOfNaphtali and unchanged source SHA-256 ad0042f1a87d679449fdb19d7cf5699cd8428518d60ed0401916a54ed96ff690"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "classify_biblical_tribal_allotment_not_province",
+        "reason": "The territorial inheritance of Naphtali is described in Joshua 19:32, with the exact original Hebrew tribe reference o060190320071; the source does not use a fixed proper name 'Territory of Naphtali'. This is a biblically derived land-allotment region, not a historical administrative province or a separately named place in an original-language token. No lexical occurrence or verse reference is manufactured.",
+        "evidence": [
+          "Pinned Clear-Bible/macula-hebrew WLC 06019032 exact tribe word o060190320071; Joshua's inheritance/lot context",
+          "Imported ACAI record place:TerritoryOfNaphtali and unchanged source SHA-256 ad0042f1a87d679449fdb19d7cf5699cd8428518d60ed0401916a54ed96ff690"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "place_types": {
+              "acai": [
+                "province"
+              ]
+            }
+          },
+          "after": {
+            "place_types": {
+              "acai": [
+                "tribal territory"
+              ]
+            }
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {},
   "id": "place:TerritoryOfNaphtali",
@@ -29,7 +60,7 @@
   "only_mentioned_in_apocrypha": false,
   "place_types": {
     "acai": [
-      "province"
+      "tribal territory"
     ]
   },
   "primary_id": "place:TerritoryOfNaphtali",

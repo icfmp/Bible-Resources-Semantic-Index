@@ -2,10 +2,41 @@
   "added_entry": true,
   "bsi": {
     "canonical_id": "place:TerritoryOfSimeon",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:TerritoryOfSimeon",
     "source_primary_id": "place:TerritoryOfSimeon",
-    "source_sha256": "0290dc9125fda38112650b8397d70c7c003f9bf60fcb44cdb27f5b8cfbcae3c4"
+    "source_sha256": "0290dc9125fda38112650b8397d70c7c003f9bf60fcb44cdb27f5b8cfbcae3c4",
+    "editorial_reason": "The territorial inheritance of Simeon is described in Joshua 19:1, with the exact original Hebrew tribe reference o060190010071; the source does not use a fixed proper name 'Territory of Simeon'. This is a biblically derived land-allotment region, not a historical administrative province or a separately named place in an original-language token. No lexical occurrence or verse reference is manufactured.",
+    "editorial_evidence": [
+      "Pinned Clear-Bible/macula-hebrew WLC 06019001 exact tribe word o060190010071; Joshua's inheritance/lot context",
+      "Imported ACAI record place:TerritoryOfSimeon and unchanged source SHA-256 0290dc9125fda38112650b8397d70c7c003f9bf60fcb44cdb27f5b8cfbcae3c4"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "classify_biblical_tribal_allotment_not_province",
+        "reason": "The territorial inheritance of Simeon is described in Joshua 19:1, with the exact original Hebrew tribe reference o060190010071; the source does not use a fixed proper name 'Territory of Simeon'. This is a biblically derived land-allotment region, not a historical administrative province or a separately named place in an original-language token. No lexical occurrence or verse reference is manufactured.",
+        "evidence": [
+          "Pinned Clear-Bible/macula-hebrew WLC 06019001 exact tribe word o060190010071; Joshua's inheritance/lot context",
+          "Imported ACAI record place:TerritoryOfSimeon and unchanged source SHA-256 0290dc9125fda38112650b8397d70c7c003f9bf60fcb44cdb27f5b8cfbcae3c4"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "place_types": {
+              "acai": [
+                "province"
+              ]
+            }
+          },
+          "after": {
+            "place_types": {
+              "acai": [
+                "tribal territory"
+              ]
+            }
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {},
   "id": "place:TerritoryOfSimeon",
@@ -25,7 +56,7 @@
   "only_mentioned_in_apocrypha": false,
   "place_types": {
     "acai": [
-      "province"
+      "tribal territory"
     ]
   },
   "primary_id": "place:TerritoryOfSimeon",

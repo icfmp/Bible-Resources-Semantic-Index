@@ -2,10 +2,41 @@
   "added_entry": true,
   "bsi": {
     "canonical_id": "place:TerritoryOfGad",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:TerritoryOfGad",
     "source_primary_id": "place:TerritoryOfGad",
-    "source_sha256": "589a261b049742d87b2688c311a52c73c5e0796af25b6a3a0bbdc717d31489b8"
+    "source_sha256": "589a261b049742d87b2688c311a52c73c5e0796af25b6a3a0bbdc717d31489b8",
+    "editorial_reason": "The territorial inheritance of Gad is described in Joshua 13:24, with the exact original Hebrew tribe reference o060130240041; the source does not use a fixed proper name 'Territory of Gad'. This is a biblically derived land-allotment region, not a historical administrative province or a separately named place in an original-language token. No lexical occurrence or verse reference is manufactured.",
+    "editorial_evidence": [
+      "Pinned Clear-Bible/macula-hebrew WLC 06013024 exact tribe word o060130240041; Joshua's inheritance/lot context",
+      "Imported ACAI record place:TerritoryOfGad and unchanged source SHA-256 589a261b049742d87b2688c311a52c73c5e0796af25b6a3a0bbdc717d31489b8"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "classify_biblical_tribal_allotment_not_province",
+        "reason": "The territorial inheritance of Gad is described in Joshua 13:24, with the exact original Hebrew tribe reference o060130240041; the source does not use a fixed proper name 'Territory of Gad'. This is a biblically derived land-allotment region, not a historical administrative province or a separately named place in an original-language token. No lexical occurrence or verse reference is manufactured.",
+        "evidence": [
+          "Pinned Clear-Bible/macula-hebrew WLC 06013024 exact tribe word o060130240041; Joshua's inheritance/lot context",
+          "Imported ACAI record place:TerritoryOfGad and unchanged source SHA-256 589a261b049742d87b2688c311a52c73c5e0796af25b6a3a0bbdc717d31489b8"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "place_types": {
+              "acai": [
+                "province"
+              ]
+            }
+          },
+          "after": {
+            "place_types": {
+              "acai": [
+                "tribal territory"
+              ]
+            }
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {},
   "id": "place:TerritoryOfGad",
@@ -29,7 +60,7 @@
   "only_mentioned_in_apocrypha": false,
   "place_types": {
     "acai": [
-      "province"
+      "tribal territory"
     ]
   },
   "primary_id": "place:TerritoryOfGad",
