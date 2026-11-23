@@ -1514,7 +1514,7 @@
       "key_verses_reviewed": [
         "14034011"
       ],
-      "required_action": "restore_pinned_direct_object_name_in_source_key",
+      "required_action": "restore_direct_source_object_and_correct_invalid_key_if_present",
       "claim": "The pinned original-language words (o140340110093) support a real source-data correction to realia:Beam. The record's restore_pinned_direct_object_name_in_source_key receipt preserves all old values, exact replacement values, case-specific original-text evidence and editorial reasoning.",
       "review_origin": "PR_139_independent_source_corroboration",
       "target_key_verses": [
