@@ -5,7 +5,27 @@
     "review_status": "source_unreviewed",
     "source_id": "place:Raphia",
     "source_primary_id": "place:Raphia",
-    "source_sha256": "5b16b0c95d63f31c2d071721a66db513968ac67e1da716c2055aeacd7f63eef7"
+    "source_sha256": "5b16b0c95d63f31c2d071721a66db513968ac67e1da716c2055aeacd7f63eef7",
+    "editorial_field_changes": [
+      {
+        "action": "correct_no_canonical_bible_attestation_flag",
+        "replaced_field_values": {
+          "mentioned_in_bible": {
+            "from": true,
+            "to": false
+          },
+          "non_biblical": {
+            "from": false,
+            "to": true
+          }
+        },
+        "reason": "The inherited source marks this place as only mentioned in apocryphal material; no verse or original word is attested in the pinned 66-book WLC/SBLGNT corpus. Retain its apocryphal provenance and place identity, but do not claim a direct canonical Bible mention.",
+        "evidence": [
+          "original record has references=[], key_references=[] and explicit_instances={}",
+          "BRSI pinned 66-book WLC/SBLGNT canon; source claim only_mentioned_in_apocrypha=true"
+        ]
+      }
+    ]
   },
   "explicit_instances": {},
   "geocoordinates": {
@@ -27,11 +47,11 @@
       "preferred_label": "Raphia"
     }
   },
-  "mentioned_in_bible": true,
+  "mentioned_in_bible": false,
   "nearby_places": [
     "place:Egypt"
   ],
-  "non_biblical": false,
+  "non_biblical": true,
   "only_mentioned_in_apocrypha": true,
   "place_types": {
     "acai": [

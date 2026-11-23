@@ -5,7 +5,27 @@
     "review_status": "source_unreviewed",
     "source_id": "place:HeracleopolisMagna",
     "source_primary_id": "place:HeracleopolisMagna",
-    "source_sha256": "07b42ef6a544bdacc2960bc9dc0eacdafe6f300f77b9def301c1de547c75e378"
+    "source_sha256": "07b42ef6a544bdacc2960bc9dc0eacdafe6f300f77b9def301c1de547c75e378",
+    "editorial_field_changes": [
+      {
+        "action": "correct_no_canonical_bible_attestation_flag",
+        "replaced_field_values": {
+          "mentioned_in_bible": {
+            "from": true,
+            "to": false
+          },
+          "non_biblical": {
+            "from": false,
+            "to": true
+          }
+        },
+        "reason": "Heracleopolis Magna is a historical Egyptian town not directly attested by name in the 66-book locked canonical WLC/SBLGNT corpus; original record provides no word or verse witness. Preserve geographic background entry, do not call it a biblical named place.",
+        "evidence": [
+          "original record has references=[], key_references=[] and explicit_instances={}",
+          "BRSI pinned 66-book WLC/SBLGNT canon; source claim only_mentioned_in_apocrypha=false"
+        ]
+      }
+    ]
   },
   "explicit_instances": {},
   "geocoordinates": {
@@ -23,8 +43,8 @@
       "preferred_label": "Heracleopolis Magna"
     }
   },
-  "mentioned_in_bible": true,
-  "non_biblical": false,
+  "mentioned_in_bible": false,
+  "non_biblical": true,
   "only_mentioned_in_apocrypha": false,
   "place_types": {
     "acai": [

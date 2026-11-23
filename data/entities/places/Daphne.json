@@ -10,7 +10,27 @@
     "review_status": "source_unreviewed",
     "source_id": "place:Daphne",
     "source_primary_id": "place:Daphne",
-    "source_sha256": "9465db92667deb5ad24a240d6af7ffc44092bcc94d8f71cf813e76827caa38c8"
+    "source_sha256": "9465db92667deb5ad24a240d6af7ffc44092bcc94d8f71cf813e76827caa38c8",
+    "editorial_field_changes": [
+      {
+        "action": "correct_no_canonical_bible_attestation_flag",
+        "replaced_field_values": {
+          "mentioned_in_bible": {
+            "from": true,
+            "to": false
+          },
+          "non_biblical": {
+            "from": false,
+            "to": true
+          }
+        },
+        "reason": "The inherited source marks this place as only mentioned in apocryphal material; no verse or original word is attested in the pinned 66-book WLC/SBLGNT corpus. Retain its apocryphal provenance and place identity, but do not claim a direct canonical Bible mention.",
+        "evidence": [
+          "original record has references=[], key_references=[] and explicit_instances={}",
+          "BRSI pinned 66-book WLC/SBLGNT canon; source claim only_mentioned_in_apocrypha=true"
+        ]
+      }
+    ]
   },
   "explicit_instances": {},
   "geocoordinates": {
@@ -28,8 +48,8 @@
       "preferred_label": "Daphne"
     }
   },
-  "mentioned_in_bible": true,
-  "non_biblical": false,
+  "mentioned_in_bible": false,
+  "non_biblical": true,
   "only_mentioned_in_apocrypha": true,
   "place_types": {
     "acai": [
