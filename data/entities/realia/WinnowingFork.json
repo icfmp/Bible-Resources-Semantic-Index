@@ -13,10 +13,40 @@
   },
   "bsi": {
     "canonical_id": "realia:WinnowingFork",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "realia:WinnowingFork",
     "source_primary_id": "realia:WinnowingFork",
-    "source_sha256": "6fb084db32099e0432de940e6fefa3a0a5dc5ebbf819dd2984b10a3002d4fb5d"
+    "source_sha256": "6fb084db32099e0432de940e6fefa3a0a5dc5ebbf819dd2984b10a3002d4fb5d",
+    "editorial_reason": "Ruth 3:2 states that Boaz is winnowing barley on the threshing floor; it does not mention the implement used. The indexed winnowing fork is directly named by the Greek in Matthew 3:12 and Luke 3:17 and those actual direct keys remain.",
+    "editorial_evidence": [
+      "Pinned WLC Ruth 3:2 names the action of winnowing, not a fork or shovel",
+      "Pinned SBLGNT Matt 3:12 n40003012003 directly attests the winnowing fork"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "adjudicate_final_source_key_mismatch",
+        "reason": "Ruth 3:2 states that Boaz is winnowing barley on the threshing floor; it does not mention the implement used. The indexed winnowing fork is directly named by the Greek in Matthew 3:12 and Luke 3:17 and those actual direct keys remain.",
+        "evidence": [
+          "Pinned WLC Ruth 3:2 names the action of winnowing, not a fork or shovel",
+          "Pinned SBLGNT Matt 3:12 n40003012003 directly attests the winnowing fork"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "key_references": [
+              "40003012",
+              "08003002",
+              "24015007"
+            ]
+          },
+          "after": {
+            "key_references": [
+              "40003012",
+              "24015007"
+            ]
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "SBLGNT": [
@@ -42,7 +72,6 @@
   "id": "realia:WinnowingFork",
   "key_references": [
     "40003012",
-    "08003002",
     "24015007"
   ],
   "lemmas": {

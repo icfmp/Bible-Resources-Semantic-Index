@@ -9,10 +9,39 @@
   },
   "bsi": {
     "canonical_id": "realia:Lantern",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "realia:Lantern",
     "source_primary_id": "realia:Lantern",
-    "source_sha256": "fea965122974def6c40dff172dc887d75389090dab0df32826f11b1bf4bc6190"
+    "source_sha256": "fea965122974def6c40dff172dc887d75389090dab0df32826f11b1bf4bc6190",
+    "editorial_reason": "Revelation 4:5 speaks of seven blazing torches, and Revelation 8:10 compares a falling star to a torch. The Greek source here is not the distinct lantern named in John 18:3, whose direct original-word link remains the correct key.",
+    "editorial_evidence": [
+      "Pinned SBLGNT Rev 4:5 and 8:10 have a flaming torch motif, not the lantern implement",
+      "Pinned SBLGNT John 18:3 n43018003019 directly attests a lantern"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "adjudicate_final_source_key_mismatch",
+        "reason": "Revelation 4:5 speaks of seven blazing torches, and Revelation 8:10 compares a falling star to a torch. The Greek source here is not the distinct lantern named in John 18:3, whose direct original-word link remains the correct key.",
+        "evidence": [
+          "Pinned SBLGNT Rev 4:5 and 8:10 have a flaming torch motif, not the lantern implement",
+          "Pinned SBLGNT John 18:3 n43018003019 directly attests a lantern"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "key_references": [
+              "43018003",
+              "66004005",
+              "66008010"
+            ]
+          },
+          "after": {
+            "key_references": [
+              "43018003"
+            ]
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "SBLGNT": [
@@ -23,9 +52,7 @@
   },
   "id": "realia:Lantern",
   "key_references": [
-    "43018003",
-    "66004005",
-    "66008010"
+    "43018003"
   ],
   "lemmas": {
     "el": [

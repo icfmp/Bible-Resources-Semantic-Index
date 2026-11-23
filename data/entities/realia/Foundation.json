@@ -24,10 +24,42 @@
   },
   "bsi": {
     "canonical_id": "realia:Foundation",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "realia:Foundation",
     "source_primary_id": "realia:Foundation",
-    "source_sha256": "7dd93a430d8f07bd649d3729e4106446cd045a0ce1d982c0db50743155d9bf4f"
+    "source_sha256": "7dd93a430d8f07bd649d3729e4106446cd045a0ce1d982c0db50743155d9bf4f",
+    "editorial_reason": "1 Kings 6:36 describes courses of hewn stones and cedar beams in the inner courtyard, but the text does not name a building foundation. The exact foundation concept is explicitly attested in Matthew 7:25 and other original-language verses already retained by this record.",
+    "editorial_evidence": [
+      "Pinned WLC 1Kgs 6:36 names courtyard masonry rows and cedar beams, not a foundation",
+      "Pinned SBLGNT Matt 7:25 n40007025021 is directly linked foundation terminology"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "adjudicate_final_source_key_mismatch",
+        "reason": "1 Kings 6:36 describes courses of hewn stones and cedar beams in the inner courtyard, but the text does not name a building foundation. The exact foundation concept is explicitly attested in Matthew 7:25 and other original-language verses already retained by this record.",
+        "evidence": [
+          "Pinned WLC 1Kgs 6:36 names courtyard masonry rows and cedar beams, not a foundation",
+          "Pinned SBLGNT Matt 7:25 n40007025021 is directly linked foundation terminology"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "key_references": [
+              "11006036",
+              "23028016",
+              "40007025",
+              "49002020"
+            ]
+          },
+          "after": {
+            "key_references": [
+              "23028016",
+              "40007025",
+              "49002020"
+            ]
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "SBLGNT": [
@@ -201,7 +233,6 @@
   },
   "id": "realia:Foundation",
   "key_references": [
-    "11006036",
     "23028016",
     "40007025",
     "49002020"

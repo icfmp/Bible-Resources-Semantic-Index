@@ -16,10 +16,40 @@
   },
   "bsi": {
     "canonical_id": "place:Bethel",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:Luz",
     "source_primary_id": "place:Bethel",
-    "source_sha256": "fb18bcfe7396defb09101dbf9ac81895b8997deae4860c7a29e01374aaad296d"
+    "source_sha256": "fb18bcfe7396defb09101dbf9ac81895b8997deae4860c7a29e01374aaad296d",
+    "editorial_reason": "Genesis 36:6 describes Esau leaving Canaan with his family to settle away from Jacob; neither Luz nor Bethel is named or geographically involved. Genesis 28:19 directly calls the locality Luz and remains the accurate preserved key.",
+    "editorial_evidence": [
+      "Pinned WLC Gen 36:6 describes Esau leaving Canaan, not Luz or Bethel",
+      "Pinned WLC Gen 28:19 o010280190091 names Luz"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "adjudicate_final_source_key_mismatch",
+        "reason": "Genesis 36:6 describes Esau leaving Canaan with his family to settle away from Jacob; neither Luz nor Bethel is named or geographically involved. Genesis 28:19 directly calls the locality Luz and remains the accurate preserved key.",
+        "evidence": [
+          "Pinned WLC Gen 36:6 describes Esau leaving Canaan, not Luz or Bethel",
+          "Pinned WLC Gen 28:19 o010280190091 names Luz"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "key_references": [
+              "07001023",
+              "01028019",
+              "01036006"
+            ]
+          },
+          "after": {
+            "key_references": [
+              "07001023",
+              "01028019"
+            ]
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -61,8 +91,7 @@
   "is_person": false,
   "key_references": [
     "07001023",
-    "01028019",
-    "01036006"
+    "01028019"
   ],
   "lemmas": {
     "he": [
