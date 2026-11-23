@@ -52,6 +52,17 @@ class ToolInventoryTests(unittest.TestCase):
                           target["references"]["code"])
             self.assertFalse(target["manual_caller_review_required"])
 
+    def test_test_constructing_shared_path_counts_as_caller(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            self.make(root, "scripts/resolve.py", "pass\\n")
+            self.make(root, "tests/test_resolve.py",
+                      'file = root / "scripts" / "resolve.py"\\n')
+            result = mod.inventory(root)
+            row = next(x for x in result["tools"] if x["path"] == "scripts/resolve.py")
+            self.assertEqual(row["references"]["tests"], ["tests/test_resolve.py"])
+            self.assertFalse(row["manual_caller_review_required"])
+
     def test_no_reference_is_only_manual_review(self):
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)
