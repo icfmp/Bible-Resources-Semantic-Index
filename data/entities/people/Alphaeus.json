@@ -18,7 +18,23 @@
     "review_status": "source_unreviewed",
     "source_id": "person:Alphaeus",
     "source_primary_id": "person:Alphaeus",
-    "source_sha256": "f4928873a88acf512204c9ca5210061a8f9162147b5a4ffb49200b1a34303da1"
+    "source_sha256": "f4928873a88acf512204c9ca5210061a8f9162147b5a4ffb49200b1a34303da1",
+    "editorial_field_changes": [
+      {
+        "action": "remove_unproven_cross_entity_key_identity",
+        "removed_reference_values": {
+          "key_references": [
+            "41002014"
+          ]
+        },
+        "reason": "The father of the apostle James named Alphaeus in Matthew 10:3, Mark 3:18, Luke 6:15 and Acts 1:13 cannot be established as the father of Levi in Mark 2:14. A separate live person:Alphaeus.2 holds the exact Mark 2:14 Greek word and reference. The earlier key wrongly promoted an unproved identity merge.",
+        "evidence": [
+          "Matthew 10:3; Mark 3:18; Luke 6:15; Acts 1:13; Mark 2:14",
+          "https://www.biblegateway.com/resources/encyclopedia-of-the-bible/Alphaeus",
+          "Distinct pinned word n41002014007 already linked to person:Alphaeus.2"
+        ]
+      }
+    ]
   },
   "explicit_instances": {
     "SBLGNT": [
@@ -41,8 +57,7 @@
   "key_references": [
     "40010003",
     "41003018",
-    "44001013",
-    "41002014"
+    "44001013"
   ],
   "lemmas": {
     "el": [
