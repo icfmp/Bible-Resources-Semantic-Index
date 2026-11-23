@@ -17,10 +17,195 @@
   },
   "bsi": {
     "canonical_id": "place:SinaiWilderness",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:SinaiWilderness",
     "source_primary_id": "place:SinaiWilderness",
-    "source_sha256": "fa554abc52a9c90bac65f80da47f0f60049851cb63b0d40fb62568e80a1d5aec"
+    "source_sha256": "fa554abc52a9c90bac65f80da47f0f60049851cb63b0d40fb62568e80a1d5aec",
+    "editorial_reason": "Restore exact original-language direct mention(s) from independently inspected inherited key-verses while distinguishing contextual verse claims and similarly named identities.",
+    "editorial_evidence": [
+      "Exact pinned Macula Hebrew WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c / Greek SBLGNT@8423afe47b9e8f24b7772e808af45c7159a6fe7e, fully inspected in PR #136 original-verse CI",
+      "Acts 7:30 Greek explicitly mentions the wilderness of Mount Sinai as an adjacent three-lexeme geographical phrase, separate from a generic mount Sinai only.",
+      "44007030 SBLGNT n44007030009 + n44007030011 + n44007030012"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "restore_independently_pinned_exact_direct_mention",
+        "reason": "Restore exact original-language direct mention(s) from independently inspected inherited key-verses while distinguishing contextual verse claims and similarly named identities.",
+        "evidence": [
+          "Exact pinned Macula Hebrew WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c / Greek SBLGNT@8423afe47b9e8f24b7772e808af45c7159a6fe7e, fully inspected in PR #136 original-verse CI",
+          "Acts 7:30 Greek explicitly mentions the wilderness of Mount Sinai as an adjacent three-lexeme geographical phrase, separate from a generic mount Sinai only.",
+          "44007030 SBLGNT n44007030009 + n44007030011 + n44007030012"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [
+              "02019001",
+              "02019002",
+              "03007038",
+              "04001001",
+              "04001019",
+              "04003004",
+              "04003014",
+              "04009001",
+              "04009005",
+              "04010012",
+              "04026064",
+              "04033015",
+              "04033016"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o020190010111",
+                  "o020190010121"
+                ],
+                [
+                  "o020190020041",
+                  "o020190020051"
+                ],
+                [
+                  "o020190020072"
+                ],
+                [
+                  "o030070380172",
+                  "o030070380181"
+                ],
+                [
+                  "o040010010052",
+                  "o040010010061"
+                ],
+                [
+                  "o040010190072",
+                  "o040010190081"
+                ],
+                [
+                  "o040030040112",
+                  "o040030040121"
+                ],
+                [
+                  "o040030140052",
+                  "o040030140061"
+                ],
+                [
+                  "o040090010052",
+                  "o040090010061"
+                ],
+                [
+                  "o040090050112",
+                  "o040090050121"
+                ],
+                [
+                  "o040100120052",
+                  "o040100120061"
+                ],
+                [
+                  "o040100120092"
+                ],
+                [
+                  "o040260640142",
+                  "o040260640151"
+                ],
+                [
+                  "o040330150042",
+                  "o040330150051"
+                ],
+                [
+                  "o040330160022",
+                  "o040330160031"
+                ]
+              ]
+            }
+          },
+          "after": {
+            "references": [
+              "02019001",
+              "02019002",
+              "03007038",
+              "04001001",
+              "04001019",
+              "04003004",
+              "04003014",
+              "04009001",
+              "04009005",
+              "04010012",
+              "04026064",
+              "04033015",
+              "04033016",
+              "44007030"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o020190010111",
+                  "o020190010121"
+                ],
+                [
+                  "o020190020041",
+                  "o020190020051"
+                ],
+                [
+                  "o020190020072"
+                ],
+                [
+                  "o030070380172",
+                  "o030070380181"
+                ],
+                [
+                  "o040010010052",
+                  "o040010010061"
+                ],
+                [
+                  "o040010190072",
+                  "o040010190081"
+                ],
+                [
+                  "o040030040112",
+                  "o040030040121"
+                ],
+                [
+                  "o040030140052",
+                  "o040030140061"
+                ],
+                [
+                  "o040090010052",
+                  "o040090010061"
+                ],
+                [
+                  "o040090050112",
+                  "o040090050121"
+                ],
+                [
+                  "o040100120052",
+                  "o040100120061"
+                ],
+                [
+                  "o040100120092"
+                ],
+                [
+                  "o040260640142",
+                  "o040260640151"
+                ],
+                [
+                  "o040330150042",
+                  "o040330150051"
+                ],
+                [
+                  "o040330160022",
+                  "o040330160031"
+                ]
+              ],
+              "SBLGNT": [
+                [
+                  "n44007030009",
+                  "n44007030011",
+                  "n44007030012"
+                ]
+              ]
+            }
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -81,6 +266,13 @@
       [
         "o040330160022",
         "o040330160031"
+      ]
+    ],
+    "SBLGNT": [
+      [
+        "n44007030009",
+        "n44007030011",
+        "n44007030012"
       ]
     ]
   },
@@ -154,7 +346,8 @@
     "04010012",
     "04026064",
     "04033015",
-    "04033016"
+    "04033016",
+    "44007030"
   ],
   "subject_referents": {},
   "type": "place",
