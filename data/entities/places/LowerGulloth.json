@@ -5,9 +5,49 @@
     "review_status": "source_unreviewed",
     "source_id": "place:LowerGulloth",
     "source_primary_id": "place:LowerGulloth",
-    "source_sha256": "0ea5391f9ae5fcaa0c94b7efd69655aa43ba918ac8019071a797e1d7c0cc398f"
+    "source_sha256": "0ea5391f9ae5fcaa0c94b7efd69655aa43ba918ac8019071a797e1d7c0cc398f",
+    "editorial_field_changes": [
+      {
+        "action": "restore_exact_frozen_wlc_geographic_compound",
+        "added_reference_values": {
+          "references": [
+            "06015019",
+            "07001015"
+          ]
+        },
+        "added_original_word_groups": {
+          "wlc": [
+            [
+              "o060150190191",
+              "o060150190201"
+            ],
+            [
+              "o070010150211",
+              "o070010150221"
+            ]
+          ]
+        },
+        "reason": "Joshua 15:19 and Judges 1:15 explicitly name the lower springs (גֻּלֹּת תַּחְתִּיּוֹת), a distinct locality from the upper springs.",
+        "evidence": [
+          "ORG BCV8 06015019",
+          "ORG BCV8 07001015",
+          "Collated directly against frozen Hebrew WLC lowfat XML at Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c, including complete original words and prefixes"
+        ]
+      }
+    ]
   },
-  "explicit_instances": {},
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o060150190191",
+        "o060150190201"
+      ],
+      [
+        "o070010150211",
+        "o070010150221"
+      ]
+    ]
+  },
   "id": "place:LowerGulloth",
   "is_artifact": false,
   "is_person": false,
@@ -33,7 +73,10 @@
   },
   "primary_id": "place:LowerGulloth",
   "pronominal_referents": {},
-  "references": [],
+  "references": [
+    "06015019",
+    "07001015"
+  ],
   "subject_referents": {},
   "type": "place"
 }
