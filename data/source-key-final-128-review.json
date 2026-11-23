@@ -1,0 +1,2459 @@
+{
+  "schema_version": 1,
+  "source_editions": {
+    "wlc": "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c",
+    "sblgnt": "Clear-Bible/macula-greek@8423afe47b9e8f24b7772e808af45c7159a6fe7e"
+  },
+  "frozen_selection": "data/source-key-final-128-candidates.json",
+  "frozen_pool": "data/source-key-unresolved-queue.json",
+  "previous_resolved": [
+    "data/source-key-resolved-115.json",
+    "data/source-key-next-115-resolved.json"
+  ],
+  "policy": "All 128 frozen identities appear once. Corrected = a real reversible edit. Verified_correct = independently justified contextual no-change, never fabricated direct original words. Secondary_verified = documented Greek Maccabees outside locked 66-book originals, never counted as Macula-certifiable. Unresolved = not resolved and not eligible for issue closure or release.",
+  "cases": [
+    {
+      "source_id": "deity:Beelzebub",
+      "outcome": "unresolved",
+      "original_key_verses": [
+        "12001002",
+        "12001016"
+      ],
+      "editorial_conclusion": "Baal-zebub of Ekron in 2 Kings 1 and Beelzebul/Satan of the Gospels may be related names, not proven identical ancient entities; canonical conflation awaits independent textual judgment.",
+      "source_context": [
+        {
+          "verse": "12001002",
+          "excerpt": "now fallen Ahaziah through the lattice in upper_chamber his which in Samaria and injured so sent messengers and said to them go inquire of Baal Zebub god Ekron whether recover from injury this"
+        },
+        {
+          "verse": "12001016",
+          "excerpt": "and said to him thus says LORD because that sent messengers to inquire of Baal Zebub god Ekron ? because not there_is_no God in Israel to inquire of word his therefore this the bed which gone_up there not come_down from it but to_"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "deity:Breath",
+      "outcome": "verified_correct",
+      "original_key_verses": [
+        "13012018"
+      ],
+      "editorial_conclusion": "In 1 Chronicles 12:18 David speaks to the warriors; the Spirit then comes upon Amasai in the immediately ensuing verse. The target is narrative context, not a second direct name.",
+      "source_context": [
+        {
+          "verse": "13012018",
+          "excerpt": "and went_out David to meet them and answered and said to them if in peace come to me to help me be of I with you heart as one but if to betray me to adversaries my although no wrong in hands my see God fathers our and judge"
+        }
+      ],
+      "nearby_existing_word_anchors": [
+        {
+          "verse": "13012019",
+          "word_id": "o130120190012",
+          "english": "Spirit"
+        }
+      ]
+    },
+    {
+      "source_id": "deity:HolySpirit",
+      "outcome": "corrected",
+      "original_key_verses": [
+        "01001002",
+        "29002028"
+      ],
+      "editorial_conclusion": "The native record contains an exact independently reasoned and reversible editorial correction receipt for its historical source-key/identity mismatch, to be validated against the frozen original candidate and the pinned corpus.",
+      "source_context": [
+        {
+          "verse": "01001002",
+          "excerpt": "now the earth was formless and empty and darkness over surface deep and Spirit God hovering over surface the waters"
+        },
+        {
+          "verse": "29002028",
+          "excerpt": ""
+        }
+      ],
+      "nearby_existing_word_anchors": [],
+      "required_receipt_action": "repair_hebrew_spirit_source_anchors_and_joel_versification"
+    },
+    {
+      "source_id": "deity:Hosts",
+      "outcome": "verified_correct",
+      "original_key_verses": [
+        "06005014",
+        "19085009"
+      ],
+      "editorial_conclusion": "Joshua 5:14 describes the commander of Yahweh's army; Psalm 85:9 speaks of the same LORD. The keys invoke the divine ruler contextually, without duplicating the full title.",
+      "source_context": [
+        {
+          "verse": "06005014",
+          "excerpt": "and replied neither but I commander army LORD now come then fell Joshua on face his earth to and bowed_down and said to him what lord my say to servant his"
+        },
+        {
+          "verse": "19085009",
+          "excerpt": "hear what say the God LORD for speak peace to people his even to faithful his but not return to folly"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "flora:JuniperTree",
+      "outcome": "unresolved",
+      "original_key_verses": [
+        "03014004",
+        "04019006"
+      ],
+      "editorial_conclusion": "Leviticus 14:4 and Numbers 19:6 say cedar wood; the specific Phoenician juniper botanical taxon is an interpretation not certifiable from the Hebrew word alone.",
+      "source_context": [
+        {
+          "verse": "03014004",
+          "excerpt": "and command the priest and brought for the cleansed two birds live clean and wood cedar and yarn_of scarlet and hyssop"
+        },
+        {
+          "verse": "04019006",
+          "excerpt": "and take the priest wood cedar and hyssop and wool_of of.scarlet.stuff and throw in midst burning the heifer"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "flora:PineTree",
+      "outcome": "unresolved",
+      "original_key_verses": [
+        "23044014"
+      ],
+      "editorial_conclusion": "Isaiah 44:14's ancient tree terms have competing botanical identifications; Aleppo pine cannot be established as a direct Hebrew species attribution.",
+      "source_context": [
+        {
+          "verse": "23044014",
+          "excerpt": "to cuts_down for he cedars or chooses cypress or oak or grow_strong for it among trees forest plants cedar and rain grow"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "group:Beeroth",
+      "outcome": "verified_correct",
+      "original_key_verses": [
+        "06009018"
+      ],
+      "editorial_conclusion": "Joshua 9:18 narrates Israel's sworn alliance with the Gibeonite towns, of which Beeroth was explicitly listed in verse 17. Town-group association is contextual.",
+      "source_context": [
+        {
+          "verse": "06009018",
+          "excerpt": "but not attack them sons Israel because sworn to them leaders the congregation by LORD God Israel and grumbled whole the congregation against the leaders"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "group:Benjamin",
+      "outcome": "corrected",
+      "original_key_verses": [
+        "19007000"
+      ],
+      "editorial_conclusion": "The native record contains an exact independently reasoned and reversible editorial correction receipt for its historical source-key/identity mismatch, to be validated against the frozen original candidate and the pinned corpus.",
+      "source_context": [
+        {
+          "verse": "19007000",
+          "excerpt": ""
+        }
+      ],
+      "nearby_existing_word_anchors": [
+        {
+          "verse": "19007001",
+          "word_id": "o190070010101",
+          "english": "Benjamite"
+        }
+      ],
+      "required_receipt_action": "adjudicate_final_source_key_mismatch"
+    },
+    {
+      "source_id": "group:Ephrathah",
+      "outcome": "corrected",
+      "original_key_verses": [
+        "09001001"
+      ],
+      "editorial_conclusion": "The native record contains an exact independently reasoned and reversible editorial correction receipt for its historical source-key/identity mismatch, to be validated against the frozen original candidate and the pinned corpus.",
+      "source_context": [
+        {
+          "verse": "09001001",
+          "excerpt": "now there_was man certain from the Ramathaim Zuphite from hill_country Ephraim and name whose Elkanah son Jeroham son Elihu son Tohu son Zuph Ephraimite"
+        }
+      ],
+      "nearby_existing_word_anchors": [],
+      "required_receipt_action": "adjudicate_final_source_key_mismatch"
+    },
+    {
+      "source_id": "group:Gentile",
+      "outcome": "verified_correct",
+      "original_key_verses": [
+        "23056007",
+        "36003009",
+        "44017026"
+      ],
+      "editorial_conclusion": "Isaiah 56:7 speaks of all peoples, Zephaniah 3:9 of peoples united in worship and Acts 17:26 of every human nation. The ethnographic index is category-wide.",
+      "source_context": [
+        {
+          "verse": "23056007",
+          "excerpt": "and bring them to mountain holy my and make_~_joyful them in house prayer my burnt_offerings their and sacrifices their for accepted on altar my for house my house prayer called for all the peoples"
+        },
+        {
+          "verse": "36003009",
+          "excerpt": "for then change of peoples speech pure that call all them on name LORD and serve him accord one"
+        },
+        {
+          "verse": "44017026",
+          "excerpt": "made and from one every nation mankind live on all face the earth determined appointed times and the boundaries the where_~_live their"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "group:Izhar",
+      "outcome": "corrected",
+      "original_key_verses": [
+        "13024029"
+      ],
+      "editorial_conclusion": "The native record contains an exact independently reasoned and reversible editorial correction receipt for its historical source-key/identity mismatch, to be validated against the frozen original candidate and the pinned corpus.",
+      "source_context": [
+        {
+          "verse": "13024029",
+          "excerpt": "of Kish sons Kish Jerahmeel"
+        }
+      ],
+      "nearby_existing_word_anchors": [],
+      "required_receipt_action": "adjudicate_final_source_key_mismatch"
+    },
+    {
+      "source_id": "group:Jebusites",
+      "outcome": "verified_correct",
+      "original_key_verses": [
+        "06018028"
+      ],
+      "editorial_conclusion": "Joshua 18:28 names the place Jebus as Jerusalem; the Jebusites are connected by their ancestral toponym, without a separate demonym in this verse.",
+      "source_context": [
+        {
+          "verse": "06018028",
+          "excerpt": "and Zelah Haeleph and the Jebus that_is Jerusalem Gibeah Kiriath cities four ten and villages their this inheritance descendants Benjamin according_to families their"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "group:Rephaim",
+      "outcome": "verified_correct",
+      "original_key_verses": [
+        "01014015"
+      ],
+      "editorial_conclusion": "Genesis 14:15 concludes Abraham's pursuit of kings whose earlier campaign included the Rephaim in verse 5. It is narrative background, not a direct group-name token.",
+      "source_context": [
+        {
+          "verse": "01014015",
+          "excerpt": "and divided against them night he and servants his and defeated them and pursued them as_far_as Hobah which to north of Damascus"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "person:Adam",
+      "outcome": "verified_correct",
+      "original_key_verses": [
+        "01001026",
+        "01002007"
+      ],
+      "editorial_conclusion": "Genesis 1:26 concerns creation of humanity and 2:7 the formation of the first human. Adam's identification arises from the creation account, not a named word in both keys.",
+      "source_context": [
+        {
+          "verse": "01001026",
+          "excerpt": "then said God make man in image our according_to likeness our and rule over fish the sea and over birds the air and over the cattle and over all the earth and over every the creeping_thing the creeps on the earth"
+        },
+        {
+          "verse": "01002007",
+          "excerpt": "and formed LORD God (et) the man dust from the ground and breathed into nostrils his breath life and became the man into being living"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "person:Ahitub.2",
+      "outcome": "corrected",
+      "original_key_verses": [
+        "13006007",
+        "13006008"
+      ],
+      "editorial_conclusion": "The native record contains an exact independently reasoned and reversible editorial correction receipt for its historical source-key/identity mismatch, to be validated against the frozen original candidate and the pinned corpus.",
+      "source_context": [
+        {
+          "verse": "13006007",
+          "excerpt": "sons Kohath Amminadab son his Korah son his Assir son his"
+        },
+        {
+          "verse": "13006008",
+          "excerpt": "Elkanah son his and Ebiasaph son his and Assir son his"
+        }
+      ],
+      "nearby_existing_word_anchors": [],
+      "required_receipt_action": "adjudicate_final_source_key_mismatch"
+    },
+    {
+      "source_id": "person:Ahoah",
+      "outcome": "verified_correct",
+      "original_key_verses": [
+        "13007006",
+        "13007007",
+        "13008001",
+        "13008002",
+        "13008003"
+      ],
+      "editorial_conclusion": "1 Chronicles 7:6-7 and 8:1-3 introduce Benjaminite genealogy; Ahoah is actually named at 8:4. These are broad genealogy keys, not invented Ahoah name words.",
+      "source_context": [
+        {
+          "verse": "13007006",
+          "excerpt": "Benjamin Bela and Becher and Jediael three"
+        },
+        {
+          "verse": "13007007",
+          "excerpt": "and sons Bela Ezbon and Uzzi and Uzziel and Jerimoth and Iri five heads houses ancestral mighty warriors and enrollment_by_genealogies their twenty and two thousand and thirty and four"
+        },
+        {
+          "verse": "13008001",
+          "excerpt": "and Benjamin fathered (et) Bela firstborn his Ashbel the second and Aharah the third"
+        },
+        {
+          "verse": "13008002",
+          "excerpt": "Nohah the fourth and Rapha the fifth"
+        },
+        {
+          "verse": "13008003",
+          "excerpt": "and were sons of Bela Addar and Gera and Abihud"
+        }
+      ],
+      "nearby_existing_word_anchors": [
+        {
+          "verse": "13008004",
+          "word_id": "o130080040032",
+          "english": "Ahoah"
+        },
+        {
+          "verse": "13008004",
+          "word_id": "o130080040032",
+          "english": "Ahoah"
+        },
+        {
+          "verse": "13008004",
+          "word_id": "o130080040032",
+          "english": "Ahoah"
+        }
+      ]
+    },
+    {
+      "source_id": "person:Ammishaddai",
+      "outcome": "verified_correct",
+      "original_key_verses": [
+        "04001004"
+      ],
+      "editorial_conclusion": "Numbers 1:4 introduces tribal leaders, including the family represented by Ammishaddai, explicitly named later in Numbers 1:12. Introductory list reference.",
+      "source_context": [
+        {
+          "verse": "04001004",
+          "excerpt": "and with you be man each from the tribe each_man head of house ancestral his he"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "person:Artaxerxes.2",
+      "outcome": "corrected",
+      "original_key_verses": [
+        "15004006",
+        "17001001",
+        "17001009",
+        "17002017"
+      ],
+      "editorial_conclusion": "The native record contains an exact independently reasoned and reversible editorial correction receipt for its historical source-key/identity mismatch, to be validated against the frozen original candidate and the pinned corpus.",
+      "source_context": [
+        {
+          "verse": "15004006",
+          "excerpt": "and in reign Ahasuerus at beginning reign his wrote accusation against inhabitants Judah and Jerusalem"
+        },
+        {
+          "verse": "17001001",
+          "excerpt": "and happened in days Ahasuerus the_same Ahasuerus the reigned from India even to Cush seven and twenty and one_hundred provinces"
+        },
+        {
+          "verse": "17001009",
+          "excerpt": "also Vashti the queen gave banquet women palace the royal that of the king Ahasuerus"
+        },
+        {
+          "verse": "17002017",
+          "excerpt": "now loved the king (et) Esther more_than all the women and won favor and approval in sight his more_than all the virgins so set crown royal on head her and made_~_queen her instead_of Vashti"
+        }
+      ],
+      "nearby_existing_word_anchors": [
+        {
+          "verse": "15004007",
+          "word_id": "o150040070021",
+          "english": "Artaxerxes"
+        },
+        {
+          "verse": "15004007",
+          "word_id": "o150040070121",
+          "english": "Artaxerxes"
+        },
+        {
+          "verse": "15004008",
+          "word_id": "o150040080112",
+          "english": "Artaxerxes"
+        }
+      ],
+      "required_receipt_action": "adjudicate_final_source_key_mismatch"
+    },
+    {
+      "source_id": "person:Asaph",
+      "outcome": "verified_correct",
+      "original_key_verses": [
+        "12018013",
+        "12018017"
+      ],
+      "editorial_conclusion": "2 Kings 18:13-17 sets the Assyrian invasion and officials; Joah son of Asaph is named at 18:18. It is a family-narrative reference only.",
+      "source_context": [
+        {
+          "verse": "12018013",
+          "excerpt": "and in four_of ten year of the king Hezekiah came_up Sennacherib king Assyria against all cities Judah the fortified and captured them"
+        },
+        {
+          "verse": "12018017",
+          "excerpt": "and sent king Assyria (et) tartan and (et) rab-saris saris and (et) rabshakeh shaqeh from Lachish to the king Hezekiah with army large Jerusalem and went_up and came Jerusalem and went_up and came and stood by aqueduct the pool th"
+        }
+      ],
+      "nearby_existing_word_anchors": [
+        {
+          "verse": "12018018",
+          "word_id": "o120180180161",
+          "english": "Asaph"
+        }
+      ]
+    },
+    {
+      "source_id": "person:Asaph.2",
+      "outcome": "verified_correct",
+      "original_key_verses": [
+        "13006031"
+      ],
+      "editorial_conclusion": "1 Chronicles 6:31 introduces Levitical singers, and Asaph is named subsequently at 6:39 within that roster. The introductory key is contextual.",
+      "source_context": [
+        {
+          "verse": "13006031",
+          "excerpt": "son Amzi son Bani son Shemer"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "person:Azariah.22",
+      "outcome": "corrected",
+      "original_key_verses": [
+        "13026001",
+        "13026002",
+        "13026003"
+      ],
+      "editorial_conclusion": "The native record contains an exact independently reasoned and reversible editorial correction receipt for its historical source-key/identity mismatch, to be validated against the frozen original candidate and the pinned corpus.",
+      "source_context": [
+        {
+          "verse": "13026001",
+          "excerpt": "as_for divisions of gatekeepers of the Korahites Meshelemiah son Kore of sons Asaph"
+        },
+        {
+          "verse": "13026002",
+          "excerpt": "and had Meshelemiah sons Zechariah the firstborn Jediael the second Zebadiah the third Jathniel the fourth"
+        },
+        {
+          "verse": "13026003",
+          "excerpt": "Elam the fifth Jehohanan the sixth Eliehoenai the seventh"
+        }
+      ],
+      "nearby_existing_word_anchors": [],
+      "required_receipt_action": "adjudicate_final_source_key_mismatch"
+    },
+    {
+      "source_id": "person:Baal-hanan",
+      "outcome": "verified_correct",
+      "original_key_verses": [
+        "01036031"
+      ],
+      "editorial_conclusion": "Genesis 36:31 opens the kings of Edom list; Baal-hanan is directly named in its subsequent verses 38-39. Genealogical heading is legitimate.",
+      "source_context": [
+        {
+          "verse": "01036031",
+          "excerpt": "and these the kings who reigned in land Edom before פְנֵ֥י reigned king over sons Israel"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "person:Bukki.2",
+      "outcome": "corrected",
+      "original_key_verses": [
+        "13006005"
+      ],
+      "editorial_conclusion": "The native record contains an exact independently reasoned and reversible editorial correction receipt for its historical source-key/identity mismatch, to be validated against the frozen original candidate and the pinned corpus.",
+      "source_context": [
+        {
+          "verse": "13006005",
+          "excerpt": "of Gershom Libni son his Jahath son his Zimmah son his"
+        }
+      ],
+      "nearby_existing_word_anchors": [],
+      "required_receipt_action": "adjudicate_final_source_key_mismatch"
+    },
+    {
+      "source_id": "person:Caesar.2",
+      "outcome": "verified_correct",
+      "original_key_verses": [
+        "44011029",
+        "44011030"
+      ],
+      "editorial_conclusion": "Acts 11:29-30 discusses famine relief during the reign of Claudius named in verse 28. The emperor is a historical-context referent, not repeated by name.",
+      "source_context": [
+        {
+          "verse": "44011029",
+          "excerpt": "the so disciples according_to ability one determined each his for relief send the living in - Judea brothers"
+        },
+        {
+          "verse": "44011030",
+          "excerpt": "this also did sending to the elders by hand Barnabas and Saul"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "person:Caleb",
+      "outcome": "corrected",
+      "original_key_verses": [
+        "13004001"
+      ],
+      "editorial_conclusion": "The native record contains an exact independently reasoned and reversible editorial correction receipt for its historical source-key/identity mismatch, to be validated against the frozen original candidate and the pinned corpus.",
+      "source_context": [
+        {
+          "verse": "13004001",
+          "excerpt": "sons Judah Perez Hezron and Carmi and Hur and Shobal"
+        }
+      ],
+      "nearby_existing_word_anchors": [],
+      "required_receipt_action": "adjudicate_final_source_key_mismatch"
+    },
+    {
+      "source_id": "person:Chenaanah",
+      "outcome": "verified_correct",
+      "original_key_verses": [
+        "11022021",
+        "11022022",
+        "11022023",
+        "14018020",
+        "14018021",
+        "14018022"
+      ],
+      "editorial_conclusion": "1 Kings 22:21-23 and 2 Chronicles 18:20-22 relate Micaiah's lying-spirit vision; Zedekiah son of Chenaanah is identified immediately afterward.",
+      "source_context": [
+        {
+          "verse": "11022021",
+          "excerpt": "and came_forward a spirit and stood in presence LORD and said I entice him and asked LORD to him by what"
+        },
+        {
+          "verse": "11022022",
+          "excerpt": "and said go_out and be spirit lying in mouth all prophets his and said entice and certainly succeed go and do so"
+        },
+        {
+          "verse": "11022023",
+          "excerpt": "so now see put LORD spirit lying in mouth all prophets your these and LORD decreed for you disaster"
+        },
+        {
+          "verse": "14018020",
+          "excerpt": "and came_forward a spirit and stood before פְנֵ֣י LORD and said I entice him and asked LORD to him by what"
+        },
+        {
+          "verse": "14018021",
+          "excerpt": "and said go and be as spirit lying in mouth all prophets his and said entice and also succeed go and do so"
+        },
+        {
+          "verse": "14018022",
+          "excerpt": "so now behold put LORD spirit lying in mouth prophets your these and LORD decreed against you disaster"
+        }
+      ],
+      "nearby_existing_word_anchors": [
+        {
+          "verse": "11022024",
+          "word_id": "o110220240041",
+          "english": "Chenaanah"
+        },
+        {
+          "verse": "11022024",
+          "word_id": "o110220240041",
+          "english": "Chenaanah"
+        },
+        {
+          "verse": "11022024",
+          "word_id": "o110220240041",
+          "english": "Chenaanah"
+        },
+        {
+          "verse": "14018023",
+          "word_id": "o140180230041",
+          "english": "Chenaanah"
+        },
+        {
+          "verse": "14018023",
+          "word_id": "o140180230041",
+          "english": "Chenaanah"
+        },
+        {
+          "verse": "14018023",
+          "word_id": "o140180230041",
+          "english": "Chenaanah"
+        }
+      ]
+    },
+    {
+      "source_id": "person:Gershom",
+      "outcome": "verified_correct",
+      "original_key_verses": [
+        "44007029"
+      ],
+      "editorial_conclusion": "Acts 7:29 says Moses had two sons in Midian; Exodus 2:22 names Gershom. The Stephen speech alludes to a known family member without repeating the name.",
+      "source_context": [
+        {
+          "verse": "44007029",
+          "excerpt": "fled and Moses at the statement this and became foreigner in land Midian where became_the_father_of sons two"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "person:Hagri",
+      "outcome": "verified_correct",
+      "original_key_verses": [
+        "13011026"
+      ],
+      "editorial_conclusion": "1 Chronicles 11:26 begins the list of David's warriors, including the Hagrite listed later. The opening key denotes that same register context.",
+      "source_context": [
+        {
+          "verse": "13011026",
+          "excerpt": "and mighty the armies [were] Asahel brother Joab Elhanan son Dodo of Bethlehem Bethlehem"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "person:Heth",
+      "outcome": "verified_correct",
+      "original_key_verses": [
+        "01010006"
+      ],
+      "editorial_conclusion": "Genesis 10:6 begins Ham's genealogy, which proceeds through Canaan to Heth in Genesis 10:15. The relation is genealogical and indirect.",
+      "source_context": [
+        {
+          "verse": "01010006",
+          "excerpt": "and sons Ham Cush and Mizraim and Put and Canaan"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "person:Hilkiah.2",
+      "outcome": "corrected",
+      "original_key_verses": [
+        "13006013"
+      ],
+      "editorial_conclusion": "The native record contains an exact independently reasoned and reversible editorial correction receipt for its historical source-key/identity mismatch, to be validated against the frozen original candidate and the pinned corpus.",
+      "source_context": [
+        {
+          "verse": "13006013",
+          "excerpt": "and sons Samuel the firstborn second and Abijah"
+        }
+      ],
+      "nearby_existing_word_anchors": [],
+      "required_receipt_action": "adjudicate_final_source_key_mismatch"
+    },
+    {
+      "source_id": "person:Hophni",
+      "outcome": "verified_correct",
+      "original_key_verses": [
+        "09002012"
+      ],
+      "editorial_conclusion": "1 Samuel 2:12 calls Eli's sons wicked; Hophni was identified among those sons in 1 Samuel 1:3. The target verse refers to them without separate names.",
+      "source_context": [
+        {
+          "verse": "09002012",
+          "excerpt": "now sons Eli men worthless not know (et) LORD"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "person:Jacob",
+      "outcome": "verified_correct",
+      "original_key_verses": [
+        "01025019",
+        "01027001"
+      ],
+      "editorial_conclusion": "Genesis 25:19 starts Isaac's sons account and 27:1 begins the family story of Jacob and Esau. Both references are to the continuous family narrative.",
+      "source_context": [
+        {
+          "verse": "01025019",
+          "excerpt": "and these generations Isaac son Abraham’s Abraham fathered (et) Isaac"
+        },
+        {
+          "verse": "01027001",
+          "excerpt": "and was when old Isaac and dim eyes his so_~_that_~_not see and called (et) Esau son his the older and said to him son my and answered to him here I"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "person:Javan",
+      "outcome": "corrected",
+      "original_key_verses": [
+        "27008021"
+      ],
+      "editorial_conclusion": "The native record contains an exact independently reasoned and reversible editorial correction receipt for its historical source-key/identity mismatch, to be validated against the frozen original candidate and the pinned corpus.",
+      "source_context": [
+        {
+          "verse": "27008021",
+          "excerpt": "and the goat the shaggy king Greece and the horn the large that between eyes his he the king the first"
+        }
+      ],
+      "nearby_existing_word_anchors": [],
+      "required_receipt_action": "separate_javan_ancestor_from_greek_ethnonym"
+    },
+    {
+      "source_id": "person:Jehozadak",
+      "outcome": "corrected",
+      "original_key_verses": [
+        "13006014",
+        "13006015"
+      ],
+      "editorial_conclusion": "The native record contains an exact independently reasoned and reversible editorial correction receipt for its historical source-key/identity mismatch, to be validated against the frozen original candidate and the pinned corpus.",
+      "source_context": [
+        {
+          "verse": "13006014",
+          "excerpt": "sons Merari Mahli Libni son his Shimei son his Uzzah son his"
+        },
+        {
+          "verse": "13006015",
+          "excerpt": "Shimea son his Haggiah son his Asaiah son his"
+        }
+      ],
+      "nearby_existing_word_anchors": [],
+      "required_receipt_action": "adjudicate_final_source_key_mismatch"
+    },
+    {
+      "source_id": "person:Joseph.5",
+      "outcome": "verified_correct",
+      "original_key_verses": [
+        "41016001"
+      ],
+      "editorial_conclusion": "Mark 16:1 names Mary the mother of James; Mark 15:40 also identifies her as Joses's mother. Family identity is contextual, not a name written at 16:1.",
+      "source_context": [
+        {
+          "verse": "41016001",
+          "excerpt": "and over the sabbath Mary - Magdalene and Mary the - James and Salome bought spices so_that go anoint him"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "person:Joses.3",
+      "outcome": "verified_correct",
+      "original_key_verses": [
+        "41016001"
+      ],
+      "editorial_conclusion": "Mark 16:1 refers to Mary mother of James, already named as the mother of Joses in Mark 15:40. The relationship is within the same narrative.",
+      "source_context": [
+        {
+          "verse": "41016001",
+          "excerpt": "and over the sabbath Mary - Magdalene and Mary the - James and Salome bought spices so_that go anoint him"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "person:Libni",
+      "outcome": "corrected",
+      "original_key_verses": [
+        "13006020"
+      ],
+      "editorial_conclusion": "The native record contains an exact independently reasoned and reversible editorial correction receipt for its historical source-key/identity mismatch, to be validated against the frozen original candidate and the pinned corpus.",
+      "source_context": [
+        {
+          "verse": "13006020",
+          "excerpt": "son Zuph son Elkanah son Mahath son Amasai"
+        }
+      ],
+      "nearby_existing_word_anchors": [],
+      "required_receipt_action": "adjudicate_final_source_key_mismatch"
+    },
+    {
+      "source_id": "person:Lord",
+      "outcome": "verified_correct",
+      "original_key_verses": [
+        "50002006",
+        "50002007",
+        "50002008",
+        "50002009"
+      ],
+      "editorial_conclusion": "Philippians 2:6-9 describes the humility and exaltation of Christ, whose title Lord is confessed explicitly at 2:11. The earlier keys are Christological context.",
+      "source_context": [
+        {
+          "verse": "50002006",
+          "excerpt": "who in form God existing not something_to_be_exploited consider - being equal God"
+        },
+        {
+          "verse": "50002007",
+          "excerpt": "but himself emptied form servant taking in likeness men made and appearance found as man"
+        },
+        {
+          "verse": "50002008",
+          "excerpt": "humbled himself becoming obedient to_the_point_of death death even cross"
+        },
+        {
+          "verse": "50002009",
+          "excerpt": "therefore also - God him highly_exalted and gave him the name that above every name"
+        }
+      ],
+      "nearby_existing_word_anchors": [
+        {
+          "verse": "50002005",
+          "word_id": "n50002005009",
+          "english": "Jesus"
+        },
+        {
+          "verse": "50002005",
+          "word_id": "n50002005009",
+          "english": "Jesus"
+        },
+        {
+          "verse": "50002010",
+          "word_id": "n50002010005",
+          "english": "Jesus"
+        },
+        {
+          "verse": "50002010",
+          "word_id": "n50002010005",
+          "english": "Jesus"
+        },
+        {
+          "verse": "50002011",
+          "word_id": "n50002011006",
+          "english": "Lord"
+        },
+        {
+          "verse": "50002010",
+          "word_id": "n50002010005",
+          "english": "Jesus"
+        },
+        {
+          "verse": "50002011",
+          "word_id": "n50002011006",
+          "english": "Lord"
+        }
+      ]
+    },
+    {
+      "source_id": "person:Mahli",
+      "outcome": "corrected",
+      "original_key_verses": [
+        "13006019"
+      ],
+      "editorial_conclusion": "The native record contains an exact independently reasoned and reversible editorial correction receipt for its historical source-key/identity mismatch, to be validated against the frozen original candidate and the pinned corpus.",
+      "source_context": [
+        {
+          "verse": "13006019",
+          "excerpt": "son Elkanah son Jeroham son Eliel son Toah"
+        }
+      ],
+      "nearby_existing_word_anchors": [],
+      "required_receipt_action": "adjudicate_final_source_key_mismatch"
+    },
+    {
+      "source_id": "person:Man",
+      "outcome": "verified_correct",
+      "original_key_verses": [
+        "01001026"
+      ],
+      "editorial_conclusion": "Genesis 1:26 explicitly refers to creating humankind; the inherited Man (Adam) identity is a broader first-human relationship, not a second proper name token.",
+      "source_context": [
+        {
+          "verse": "01001026",
+          "excerpt": "then said God make man in image our according_to likeness our and rule over fish the sea and over birds the air and over the cattle and over all the earth and over every the creeping_thing the creeps on the earth"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "person:Mushi",
+      "outcome": "corrected",
+      "original_key_verses": [
+        "13006019"
+      ],
+      "editorial_conclusion": "The native record contains an exact independently reasoned and reversible editorial correction receipt for its historical source-key/identity mismatch, to be validated against the frozen original candidate and the pinned corpus.",
+      "source_context": [
+        {
+          "verse": "13006019",
+          "excerpt": "son Elkanah son Jeroham son Eliel son Toah"
+        }
+      ],
+      "nearby_existing_word_anchors": [],
+      "required_receipt_action": "adjudicate_final_source_key_mismatch"
+    },
+    {
+      "source_id": "person:Nathanael",
+      "outcome": "corrected",
+      "original_key_verses": [
+        "40010003"
+      ],
+      "editorial_conclusion": "The native record contains an exact independently reasoned and reversible editorial correction receipt for its historical source-key/identity mismatch, to be validated against the frozen original candidate and the pinned corpus.",
+      "source_context": [
+        {
+          "verse": "40010003",
+          "excerpt": "Philip and Bartholomew Thomas and Matthew the tax_collector James the - Alphaeus and Thaddaeus"
+        }
+      ],
+      "nearby_existing_word_anchors": [],
+      "required_receipt_action": "adjudicate_final_source_key_mismatch"
+    },
+    {
+      "source_id": "person:Pharaohneco",
+      "outcome": "verified_correct",
+      "original_key_verses": [
+        "24046017",
+        "24046025"
+      ],
+      "editorial_conclusion": "Jeremiah 46:2 identifies Pharaoh Neco and his campaign; verses 17 and 25 address Pharaoh and Egypt in the same oracle. Historical contextual identity.",
+      "source_context": [
+        {
+          "verse": "24046017",
+          "excerpt": "call there Pharaoh king Egypt braggart missed the opportunity"
+        },
+        {
+          "verse": "24046025",
+          "excerpt": "says LORD hosts God Israel behold I punish upon Amon of Thebes and on Pharaoh and on Egypt and on gods her and on kings her and upon Pharaoh and on those trust in him"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "person:Sheshan",
+      "outcome": "verified_correct",
+      "original_key_verses": [
+        "13002003"
+      ],
+      "editorial_conclusion": "1 Chronicles 2:3 begins Judah's family line including Sheshan later at 2:31-35. It is a broad chapter-genealogy introduction, not direct name presence.",
+      "source_context": [
+        {
+          "verse": "13002003",
+          "excerpt": "sons Judah Er and Onan and Shelah three born to him by בַּת Bathshua the Canaanite and was Er firstborn Judah’s wicked in sight LORD’s so put_~_todeath him"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "person:Zerahiah",
+      "outcome": "corrected",
+      "original_key_verses": [
+        "13006006"
+      ],
+      "editorial_conclusion": "The native record contains an exact independently reasoned and reversible editorial correction receipt for its historical source-key/identity mismatch, to be validated against the frozen original candidate and the pinned corpus.",
+      "source_context": [
+        {
+          "verse": "13006006",
+          "excerpt": "Joah son his Iddo son his Zerah son his Jeatherai son his"
+        }
+      ],
+      "nearby_existing_word_anchors": [],
+      "required_receipt_action": "adjudicate_final_source_key_mismatch"
+    },
+    {
+      "source_id": "place:Adasa",
+      "outcome": "secondary_verified",
+      "original_key_verses": [
+        "78007040"
+      ],
+      "editorial_conclusion": "Greek 1 Maccabees 7:40 names Adasa in Judas's encampment; this is outside Macula's 66-book corpora.",
+      "source_context": [
+        {
+          "verse": "78007040",
+          "excerpt": ""
+        }
+      ],
+      "nearby_existing_word_anchors": [],
+      "secondary_source": {
+        "url": "https://www.biblindex.org/fr/bible/septuaginta/1-m-7%2C40",
+        "word": "Ἀδασά",
+        "reason": "Greek 1 Maccabees 7:40 names Adasa in Judas's encampment; this is outside Macula's 66-book corpora."
+      }
+    },
+    {
+      "source_id": "place:Admah",
+      "outcome": "corrected",
+      "original_key_verses": [
+        "01010010"
+      ],
+      "editorial_conclusion": "The native record contains an exact independently reasoned and reversible editorial correction receipt for its historical source-key/identity mismatch, to be validated against the frozen original candidate and the pinned corpus.",
+      "source_context": [
+        {
+          "verse": "01010010",
+          "excerpt": "and was beginning kingdom his Babel and Erech and Accad and Calneh in land Shinar"
+        }
+      ],
+      "nearby_existing_word_anchors": [],
+      "required_receipt_action": "adjudicate_final_source_key_mismatch"
+    },
+    {
+      "source_id": "place:AegeanSea",
+      "outcome": "verified_correct",
+      "original_key_verses": [
+        "44017014"
+      ],
+      "editorial_conclusion": "Acts 17:14 describes departure toward the sea from the Macedonian coast. Aegean is a modern geographical designation; the record already says nonbiblical.",
+      "source_context": [
+        {
+          "verse": "44017014",
+          "excerpt": "immediately then then - Paul sent_~_away the brothers go as_far_as to the sea remained and - but Silas and - Timothy there"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "place:Ai",
+      "outcome": "unresolved",
+      "original_key_verses": [
+        "06007001",
+        "13007028"
+      ],
+      "editorial_conclusion": "The inherited Ai/Ayyah/Aiath equivalence in 1 Chronicles 7:28 and Nehemiah 11:31 is historically uncertain; the canonical links are not yet independently certified.",
+      "source_context": [
+        {
+          "verse": "06007001",
+          "excerpt": "but broke_faith sons Israel unfaithfulness in_regard_to the devoted_things and took Achan son Carmi son Zabdi son Zerah of tribe Judah some_of the devoted_things so burned anger LORD’s against sons Israel"
+        },
+        {
+          "verse": "13007028",
+          "excerpt": "and possessions their and settlements their [were] Bethel and towns its and to the east Naaran and to the west Gezer and towns its and Shechem and towns its as_far_as Ayyah and towns its"
+        }
+      ],
+      "nearby_existing_word_anchors": [
+        {
+          "verse": "06007002",
+          "word_id": "o060070020052",
+          "english": "Ai"
+        },
+        {
+          "verse": "06007002",
+          "word_id": "o060070020242",
+          "english": "Ai"
+        },
+        {
+          "verse": "06007003",
+          "word_id": "o060070030192",
+          "english": "Ai"
+        },
+        {
+          "verse": "06007003",
+          "word_id": "o060070030281",
+          "english": "they"
+        },
+        {
+          "verse": "06007004",
+          "word_id": "o060070040112",
+          "english": "Ai"
+        }
+      ]
+    },
+    {
+      "source_id": "place:Aiath",
+      "outcome": "unresolved",
+      "original_key_verses": [
+        "13007028",
+        "16011031"
+      ],
+      "editorial_conclusion": "The source's strong Aiath-to-Ai canonical and alternate-label assertion is not established by 1 Chronicles 7:28; more than lexical resemblance is needed.",
+      "source_context": [
+        {
+          "verse": "13007028",
+          "excerpt": "and possessions their and settlements their [were] Bethel and towns its and to the east Naaran and to the west Gezer and towns its and Shechem and towns its as_far_as Ayyah and towns its"
+        },
+        {
+          "verse": "16011031",
+          "excerpt": "and descendants Benjamin from Geba Michmash and Aija and Bethel Bethel and villages its"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "place:Aphek",
+      "outcome": "unresolved",
+      "original_key_verses": [
+        "44023031"
+      ],
+      "editorial_conclusion": "Acts 23:31 names Antipatris, not Aphek; an exact ancient site-identification requires independently supported archaeological evidence.",
+      "source_context": [
+        {
+          "verse": "44023031",
+          "excerpt": "the Indeed so soldiers as the_thing orders their took him Paul brought during night to - Antipatris"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "place:Aram-naharaim",
+      "outcome": "verified_correct",
+      "original_key_verses": [
+        "05023004"
+      ],
+      "editorial_conclusion": "Deuteronomy 23:4 introduces Moabite opposition and the next verse identifies Balaam's Aram-naharaim origin. Nearby regional context, not source toponym in 23:4.",
+      "source_context": [
+        {
+          "verse": "05023004",
+          "excerpt": "no enter Ammonite or Moabite to assembly Lord even generation tenth none enter of them to assembly LORD for ever"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "place:Arbela",
+      "outcome": "secondary_verified",
+      "original_key_verses": [
+        "78009002"
+      ],
+      "editorial_conclusion": "Greek 1 Maccabees 9:2 includes Arbela, while modern route reconstructions remain text-critically uncertain; outside Macula.",
+      "source_context": [
+        {
+          "verse": "78009002",
+          "excerpt": ""
+        }
+      ],
+      "nearby_existing_word_anchors": [],
+      "secondary_source": {
+        "url": "https://bible.usccb.org/bible/1maccabees/9",
+        "word": "Ἀρβήλοις",
+        "reason": "Greek 1 Maccabees 9:2 includes Arbela, while modern route reconstructions remain text-critically uncertain; outside Macula."
+      }
+    },
+    {
+      "source_id": "place:Ashan",
+      "outcome": "verified_correct",
+      "original_key_verses": [
+        "09030030"
+      ],
+      "editorial_conclusion": "1 Samuel 30:30 lists Bor-ashan among David's recipients; it is a compound toponym association with Ashan rather than a new direct word claim.",
+      "source_context": [
+        {
+          "verse": "09030030",
+          "excerpt": "and to those in Hormah and for those in Bor Ashan and for those in Athach"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "place:Ashtaroth",
+      "outcome": "corrected",
+      "original_key_verses": [
+        "13006071"
+      ],
+      "editorial_conclusion": "The native record contains an exact independently reasoned and reversible editorial correction receipt for its historical source-key/identity mismatch, to be validated against the frozen original candidate and the pinned corpus.",
+      "source_context": [
+        {
+          "verse": "13006071",
+          "excerpt": ""
+        }
+      ],
+      "nearby_existing_word_anchors": [],
+      "required_receipt_action": "adjudicate_final_source_key_mismatch"
+    },
+    {
+      "source_id": "place:AsiaMinor",
+      "outcome": "verified_correct",
+      "original_key_verses": [
+        "44006009",
+        "44016006"
+      ],
+      "editorial_conclusion": "Acts 6:9 lists diaspora regions and Acts 16:6 crosses Phrygia and Galatia; Asia Minor is a retrospective supraregional label, not an original Greek proper name.",
+      "source_context": [
+        {
+          "verse": "44006009",
+          "excerpt": "arose then some those from the synagogue the called Freedmen both Cyrenians and Alexandrians and those from Cilicia and Asia argue with stephen"
+        },
+        {
+          "verse": "44016006",
+          "excerpt": "went_through and the Phrygia and galatia region forbidden by the Holy Spirit speak the word in the Asia"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "place:Babel",
+      "outcome": "verified_correct",
+      "original_key_verses": [
+        "01011001"
+      ],
+      "editorial_conclusion": "Genesis 11:1 begins the one-language account of the city and tower of Babel; the name occurs in subsequent narrative verses, not the opening verse.",
+      "source_context": [
+        {
+          "verse": "01011001",
+          "excerpt": "now had whole the earth language one and words same"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "place:Babylon",
+      "outcome": "verified_correct",
+      "original_key_verses": [
+        "12017040"
+      ],
+      "editorial_conclusion": "2 Kings 17:40 concerns foreigners settled in Samaria from Babylon and elsewhere earlier at 17:24; legitimate resettlement context.",
+      "source_context": [
+        {
+          "verse": "12017040",
+          "excerpt": "but not listen but rather according_to custom their the former they did"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "place:Babylon.2",
+      "outcome": "verified_correct",
+      "original_key_verses": [
+        "60005013"
+      ],
+      "editorial_conclusion": "1 Peter 5:13 actually uses the name Babylon; the identification as symbolic Rome is left a possibility, not asserted as a proven geographical equivalence.",
+      "source_context": [
+        {
+          "verse": "60005013",
+          "excerpt": "sends_~_greetings you she in Babylon chosen_together_with and Mark the son my"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "place:Babylonia",
+      "outcome": "verified_correct",
+      "original_key_verses": [
+        "01011002",
+        "01011031",
+        "15001011",
+        "15002001",
+        "24051024",
+        "38005011"
+      ],
+      "editorial_conclusion": "The keys connect Shinar, Babylon/Chaldean exile and the returnees to the wider Babylonian region. This is regional classification, not literal name repetition.",
+      "source_context": [
+        {
+          "verse": "01011002",
+          "excerpt": "and came_about as migrated they from east and found plain in land Shinar and settled there"
+        },
+        {
+          "verse": "01011031",
+          "excerpt": "and took Terah (et) Abram son his and (et) Lot son Haran son_of son_of his and (et) Sarai daughter-in-law his wife Abram’s son his and went_out together them from Ur Chaldeans to go land to Canaan but came to Haran and settled the"
+        },
+        {
+          "verse": "15001011",
+          "excerpt": "all articles of the gold and of the silver five thousand and four hundred the all brought_up Sheshbazzar when brought_up the exiles from Babylon to Jerusalem"
+        },
+        {
+          "verse": "15002001",
+          "excerpt": "now these people the province the came_up from captivity the exiles whom carried_captive Nebuchadnezzar king Babylon to Babylon and returned to Jerusalem and Judah each to town his_own"
+        },
+        {
+          "verse": "24051024",
+          "excerpt": "and repay to Babylon and to all inhabitants Chaldea (et) all evil their that done in Zion before eyes your declares LORD"
+        },
+        {
+          "verse": "38005011",
+          "excerpt": "and said to me to build for it house in land Shinar when prepared then placed there on pedestal its"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "place:Batanea",
+      "outcome": "verified_correct",
+      "original_key_verses": [
+        "05032014"
+      ],
+      "editorial_conclusion": "Deuteronomy 32:14 names Bashan herds; Batanea is a later wider geographical association and the earlier false direct-name attribution was already withdrawn.",
+      "source_context": [
+        {
+          "verse": "05032014",
+          "excerpt": "curds herd and milk flock with fat lambs and rams bulls Bashan and goats with finest grains wheat and blood grapes drank wine"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "place:Beth-aven.2",
+      "outcome": "verified_correct",
+      "original_key_verses": [
+        "28004015",
+        "28005008"
+      ],
+      "editorial_conclusion": "Hosea 4:15 and 5:8 name Beth-aven in prophetic rebuke. The place-name context is actually present even if site identification remains editorial.",
+      "source_context": [
+        {
+          "verse": "28004015",
+          "excerpt": "though play_the_whore you Israel not become_guilty Judah and not go the Gilgal and not go_up Beth Aven and not swear lives LORD"
+        },
+        {
+          "verse": "28005008",
+          "excerpt": "blow horn in the Gibeah trumpet in the Ramah sound_the_alarm Beth Aven behind you Benjamin"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "place:Beth-horonUpper",
+      "outcome": "corrected",
+      "original_key_verses": [
+        "07016005"
+      ],
+      "editorial_conclusion": "The native record contains an exact independently reasoned and reversible editorial correction receipt for its historical source-key/identity mismatch, to be validated against the frozen original candidate and the pinned corpus.",
+      "source_context": [
+        {
+          "verse": "07016005",
+          "excerpt": "and came_up to her lords Philistines and said to her entice אוֹת֗ him and see in what strength his great and by what overpower over him so bind him in_order_to subdue him and us give to you each thousand and hundred pieces_of_silv"
+        }
+      ],
+      "nearby_existing_word_anchors": [],
+      "required_receipt_action": "adjudicate_final_source_key_mismatch"
+    },
+    {
+      "source_id": "place:Beth-lebaoth",
+      "outcome": "verified_correct",
+      "original_key_verses": [
+        "06015032"
+      ],
+      "editorial_conclusion": "Joshua 15:32 has Lebaoth and Joshua 19:6 Beth-lebaoth within Simeon's allotment; this is a historically documented alternate name.",
+      "source_context": [
+        {
+          "verse": "06015032",
+          "excerpt": "and Lebaoth and Shilhim and Ain and Rimmon in_all cities twenty and nine and villages their"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "place:Bethel",
+      "outcome": "verified_correct",
+      "original_key_verses": [
+        "28004015",
+        "28005008",
+        "28010005"
+      ],
+      "editorial_conclusion": "Hosea 4:15,5:8,10:5 refers to the Beth-aven name used for the Bethel cult. The identity link is contextual, not a false direct Bethel-word attribution.",
+      "source_context": [
+        {
+          "verse": "28004015",
+          "excerpt": "though play_the_whore you Israel not become_guilty Judah and not go the Gilgal and not go_up Beth Aven and not swear lives LORD"
+        },
+        {
+          "verse": "28005008",
+          "excerpt": "blow horn in the Gibeah trumpet in the Ramah sound_the_alarm Beth Aven behind you Benjamin"
+        },
+        {
+          "verse": "28010005",
+          "excerpt": "for calf of Beth.Aven tremble inhabitants Samaria indeed mourn for it people its and idolatrous_priests its over it rejoiced over glory its because departed from it"
+        }
+      ],
+      "nearby_existing_word_anchors": [
+        {
+          "verse": "28010008",
+          "word_id": "o280100080031",
+          "english": "aven"
+        }
+      ]
+    },
+    {
+      "source_id": "place:Bethel.2",
+      "outcome": "verified_correct",
+      "original_key_verses": [
+        "06019004",
+        "13004030"
+      ],
+      "editorial_conclusion": "Joshua 19:4 and 1 Chronicles 4:30 include Bethul and Bethuel as variants in Simeon's settlement lists. Association is contextual to the same tribal area.",
+      "source_context": [
+        {
+          "verse": "06019004",
+          "excerpt": "and Eltolad and Bethul and Hormah"
+        },
+        {
+          "verse": "13004030",
+          "excerpt": "and in Bethuel and in Hormah and in Ziklag"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "place:Bostra",
+      "outcome": "secondary_verified",
+      "original_key_verses": [
+        "78005026"
+      ],
+      "editorial_conclusion": "Greek 1 Maccabees 5:26 names Bosorra and separately Bosor; the Bostra/Bosorra association does not merge these places.",
+      "source_context": [
+        {
+          "verse": "78005026",
+          "excerpt": ""
+        }
+      ],
+      "nearby_existing_word_anchors": [],
+      "secondary_source": {
+        "url": "https://www.biblindex.org/fr/bible/septuaginta/1-m-5%2C26",
+        "word": "Βοσορρα",
+        "reason": "Greek 1 Maccabees 5:26 names Bosorra and separately Bosor; the Bostra/Bosorra association does not merge these places."
+      }
+    },
+    {
+      "source_id": "place:Bozkath",
+      "outcome": "corrected",
+      "original_key_verses": [
+        "06015019"
+      ],
+      "editorial_conclusion": "The native record contains an exact independently reasoned and reversible editorial correction receipt for its historical source-key/identity mismatch, to be validated against the frozen original candidate and the pinned corpus.",
+      "source_context": [
+        {
+          "verse": "06015019",
+          "excerpt": "and said give ה to me blessing since land the Negev given me also give to me springs water so gave to her (et) springs upper and (et) springs lower"
+        }
+      ],
+      "nearby_existing_word_anchors": [],
+      "required_receipt_action": "adjudicate_final_source_key_mismatch"
+    },
+    {
+      "source_id": "place:Eglath-shelishiyah.1",
+      "outcome": "unresolved",
+      "original_key_verses": [
+        "23015005",
+        "24048034"
+      ],
+      "editorial_conclusion": "Isaiah 15:5 and Jeremiah 48:34 may use a proper Moabite site or a three-year-old heifer simile; philological identification remains disputed.",
+      "source_context": [
+        {
+          "verse": "23015005",
+          "excerpt": "heart my for Moab cries_out fugitives his as_far_as Zoar Eglath Shelishiyah for ascent the Luhith with weeping go_up on him for road Horonaim cry destruction raise"
+        },
+        {
+          "verse": "24048034",
+          "excerpt": "from cry Heshbon even_to Elealeh as_far_as Jahaz utter voice their from Zoar to Horonaim Eglath Shelishiyah for even waters Nimrim as desolate become"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "place:Engedi",
+      "outcome": "corrected",
+      "original_key_verses": [
+        "09023039"
+      ],
+      "editorial_conclusion": "The native record contains an exact independently reasoned and reversible editorial correction receipt for its historical source-key/identity mismatch, to be validated against the frozen original candidate and the pinned corpus.",
+      "source_context": [
+        {
+          "verse": "09023039",
+          "excerpt": ""
+        }
+      ],
+      "nearby_existing_word_anchors": [],
+      "required_receipt_action": "adjudicate_final_source_key_mismatch"
+    },
+    {
+      "source_id": "place:Ephron.1",
+      "outcome": "verified_correct",
+      "original_key_verses": [
+        "06018015"
+      ],
+      "editorial_conclusion": "Joshua 18:15 follows the border course from Joshua 15:9 where Mount Ephron is named. The mount label is already corrected to the explicit chapter.",
+      "source_context": [
+        {
+          "verse": "06018015",
+          "excerpt": "and side south at at outskirts of Kiriath.Jearim and goes the border west to and went to spring waters Nephtoah"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "place:FoundationGate",
+      "outcome": "unresolved",
+      "original_key_verses": [
+        "12011006"
+      ],
+      "editorial_conclusion": "The equivalence of 2 Kings 11:6 Gate Sur and 2 Chronicles 23:5 Foundation Gate has not been independently proved.",
+      "source_context": [
+        {
+          "verse": "12011006",
+          "excerpt": "and the third at gate Sur and the a_third at the gate behind the guards and guard (et) post the palace take_turns"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "place:GerizimMount",
+      "outcome": "unresolved",
+      "original_key_verses": [
+        "07009037"
+      ],
+      "editorial_conclusion": "Judges 9:37 Tabbur-erez is not directly named Gerizim; previous false aliases were removed but the remaining site assumption needs evidence.",
+      "source_context": [
+        {
+          "verse": "07009037",
+          "excerpt": "but he_repeated again Gaal to spoke and said look people coming_down from in tabbur-erez the land and company one coming from direction oak diviners’"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "place:Geshur",
+      "outcome": "corrected",
+      "original_key_verses": [
+        "10013003"
+      ],
+      "editorial_conclusion": "The native record contains an exact independently reasoned and reversible editorial correction receipt for its historical source-key/identity mismatch, to be validated against the frozen original candidate and the pinned corpus.",
+      "source_context": [
+        {
+          "verse": "10013003",
+          "excerpt": "now had Amnon friend and name whose Jonadab son Shimeah brother David’s now Jonadab man shrewd very"
+        }
+      ],
+      "nearby_existing_word_anchors": [],
+      "required_receipt_action": "adjudicate_final_source_key_mismatch"
+    },
+    {
+      "source_id": "place:GilboaMount",
+      "outcome": "corrected",
+      "original_key_verses": [
+        "10010001"
+      ],
+      "editorial_conclusion": "The native record contains an exact independently reasoned and reversible editorial correction receipt for its historical source-key/identity mismatch, to be validated against the frozen original candidate and the pinned corpus.",
+      "source_context": [
+        {
+          "verse": "10010001",
+          "excerpt": "and happened after this then died king sons_of Ammon and became_king Hanun son his in_~_place his"
+        }
+      ],
+      "nearby_existing_word_anchors": [],
+      "required_receipt_action": "adjudicate_final_source_key_mismatch"
+    },
+    {
+      "source_id": "place:Gilgal.3",
+      "outcome": "verified_correct",
+      "original_key_verses": [
+        "09007017"
+      ],
+      "editorial_conclusion": "1 Samuel 7:17 narrates Samuel returning to Ramah after his circuit of towns; Gilgal appears in the immediately prior verse 16. Circuit context.",
+      "source_context": [
+        {
+          "verse": "09007017",
+          "excerpt": "but return he the Ramah to for there home his and there judged (et) Israel and built there altar to LORD"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "place:Gomer",
+      "outcome": "unresolved",
+      "original_key_verses": [
+        "26038006"
+      ],
+      "editorial_conclusion": "Ezekiel 38:6 explicitly names a people Gomer, not a standalone written region; the record's place-versus-people semantics need review.",
+      "source_context": [
+        {
+          "verse": "26038006",
+          "excerpt": "Gomer with all troops its Beth Togarmah remotest_parts north with (et) all troops its peoples many with you"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "place:HinnomValley",
+      "outcome": "corrected",
+      "original_key_verses": [
+        "12028003"
+      ],
+      "editorial_conclusion": "The native record contains an exact independently reasoned and reversible editorial correction receipt for its historical source-key/identity mismatch, to be validated against the frozen original candidate and the pinned corpus.",
+      "source_context": [
+        {
+          "verse": "12028003",
+          "excerpt": ""
+        }
+      ],
+      "nearby_existing_word_anchors": [],
+      "required_receipt_action": "adjudicate_final_source_key_mismatch"
+    },
+    {
+      "source_id": "place:Holon",
+      "outcome": "corrected",
+      "original_key_verses": [
+        "13006058"
+      ],
+      "editorial_conclusion": "The native record contains an exact independently reasoned and reversible editorial correction receipt for its historical source-key/identity mismatch, to be validated against the frozen original candidate and the pinned corpus.",
+      "source_context": [
+        {
+          "verse": "13006058",
+          "excerpt": "and (et) Ramoth and (et) pasturelands its and (et) Anem and (et) pasturelands its"
+        }
+      ],
+      "nearby_existing_word_anchors": [],
+      "required_receipt_action": "adjudicate_final_source_key_mismatch"
+    },
+    {
+      "source_id": "place:HolyPlace",
+      "outcome": "corrected",
+      "original_key_verses": [
+        "03002023"
+      ],
+      "editorial_conclusion": "The native record contains an exact independently reasoned and reversible editorial correction receipt for its historical source-key/identity mismatch, to be validated against the frozen original candidate and the pinned corpus.",
+      "source_context": [
+        {
+          "verse": "03002023",
+          "excerpt": ""
+        }
+      ],
+      "nearby_existing_word_anchors": [],
+      "required_receipt_action": "adjudicate_final_source_key_mismatch"
+    },
+    {
+      "source_id": "place:HolyPlace.2",
+      "outcome": "verified_correct",
+      "original_key_verses": [
+        "11006005"
+      ],
+      "editorial_conclusion": "1 Kings 6:5 describes the temple around the sanctuary and 8:10 refers to the priests leaving the holy place. Proper sanctuary context, no invented word.",
+      "source_context": [
+        {
+          "verse": "11006005",
+          "excerpt": "and built against wall the house structure around (et) walls the house around for the nave and for the inner_sanctuary and made side_chambers all_around"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "place:Hushah",
+      "outcome": "verified_correct",
+      "original_key_verses": [
+        "10021018"
+      ],
+      "editorial_conclusion": "2 Samuel 21:18 names a Hushathite, so locality Hushah is inferred from a demonym. No direct written independent place-name token is asserted.",
+      "source_context": [
+        {
+          "verse": "10021018",
+          "excerpt": "and happened after this then there_was again the battle at Gob with Philistines then killed Sibbecai the Hushathite (et) Saph who of descendants the giant"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "place:Israel",
+      "outcome": "verified_correct",
+      "original_key_verses": [
+        "13013001"
+      ],
+      "editorial_conclusion": "1 Chronicles 13:1 describes David consulting the chiefs of Israel, with the whole Israel assembly made explicit next verse. Identical narrative context.",
+      "source_context": [
+        {
+          "verse": "13013001",
+          "excerpt": "and consulted David with commanders the thousands and the hundreds with every leader"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "place:Jokneam",
+      "outcome": "corrected",
+      "original_key_verses": [
+        "06021024"
+      ],
+      "editorial_conclusion": "The native record contains an exact independently reasoned and reversible editorial correction receipt for its historical source-key/identity mismatch, to be validated against the frozen original candidate and the pinned corpus.",
+      "source_context": [
+        {
+          "verse": "06021024",
+          "excerpt": "(et) Aijalon and (et) pasturelands its (et) Gath Rimmon and (et) pasturelands its cities four"
+        }
+      ],
+      "nearby_existing_word_anchors": [],
+      "required_receipt_action": "adjudicate_final_source_key_mismatch"
+    },
+    {
+      "source_id": "place:JordanValley",
+      "outcome": "verified_correct",
+      "original_key_verses": [
+        "01019017"
+      ],
+      "editorial_conclusion": "Genesis 19:17 is Lot fleeing the cities of the plain; the earlier Jordan-basin account locates his family there. Broader historical topography, not direct name.",
+      "source_context": [
+        {
+          "verse": "01019017",
+          "excerpt": "and he_was as_soon_as brought_~_out they אֹתָ֜ them the outside to that said flee for life your not look back you and don’t stop in anywhere the plain the mountains to flee or swept_away"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "place:Judea",
+      "outcome": "verified_correct",
+      "original_key_verses": [
+        "15005008"
+      ],
+      "editorial_conclusion": "Ezra 5:8 explicitly describes the province of Judah in Aramaic. Judea is the later geographical designation for that region, not an invented ancient Greek form.",
+      "source_context": [
+        {
+          "verse": "15005008",
+          "excerpt": "known be to king the that went to Judah province the to house god the great the and it built stones huge and timber laid in walls the and work the this diligently done and succeeding in hands their"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "place:Judea.2",
+      "outcome": "verified_correct",
+      "original_key_verses": [
+        "15009009"
+      ],
+      "editorial_conclusion": "Ezra 9:9 refers to Judah and Jerusalem being rebuilt; Judea is a retrospective regional title for the source place.",
+      "source_context": [
+        {
+          "verse": "15009009",
+          "excerpt": "for slaves we yet in bondage our not forsaken us God our and extended to us steadfast_love in presence kings Persia to give to us new_life to set_up (et) house God our and to repair (et) ruins its and to give to us wall in Judah a"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "place:Kidron",
+      "outcome": "corrected",
+      "original_key_verses": [
+        "43008001"
+      ],
+      "editorial_conclusion": "The native record contains an exact independently reasoned and reversible editorial correction receipt for its historical source-key/identity mismatch, to be validated against the frozen original candidate and the pinned corpus.",
+      "source_context": [
+        {
+          "verse": "43008001",
+          "excerpt": "Jesus but went to the mount - olives"
+        }
+      ],
+      "nearby_existing_word_anchors": [],
+      "required_receipt_action": "adjudicate_final_source_key_mismatch"
+    },
+    {
+      "source_id": "place:Lod",
+      "outcome": "verified_correct",
+      "original_key_verses": [
+        "16011031"
+      ],
+      "editorial_conclusion": "Nehemiah 11:31 opens Benjaminite town settlement records, with Lod named in the same list at verse 35. Introductory contextual key.",
+      "source_context": [
+        {
+          "verse": "16011031",
+          "excerpt": "and descendants Benjamin from Geba Michmash and Aija and Bethel Bethel and villages its"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "place:Lud.2",
+      "outcome": "verified_correct",
+      "original_key_verses": [
+        "24046009",
+        "26030005"
+      ],
+      "editorial_conclusion": "Jeremiah 46:9 and Ezekiel 30:5 use the ethnonym Lud. The location is derived from a people name rather than a separately written proper toponym.",
+      "source_context": [
+        {
+          "verse": "24046009",
+          "excerpt": "go_up O horses and drive_madly the chariots and go_forth the warriors Cush and Put handle shield and Lud handle bend bow"
+        },
+        {
+          "verse": "26030005",
+          "excerpt": "Cush and Put and Lud and all the arabia and Libya and people land the covenant with them by the sword fall"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "place:Luz",
+      "outcome": "corrected",
+      "original_key_verses": [
+        "01036006"
+      ],
+      "editorial_conclusion": "The native record contains an exact independently reasoned and reversible editorial correction receipt for its historical source-key/identity mismatch, to be validated against the frozen original candidate and the pinned corpus.",
+      "source_context": [
+        {
+          "verse": "01036006",
+          "excerpt": "and took Esau (et) wives his and (et) sons his and (et) daughters his and (et) all members household his and (et) livestock his and (et) all livestock his and (et) all goods his that acquired in land Canaan and went to land from f"
+        }
+      ],
+      "nearby_existing_word_anchors": [],
+      "required_receipt_action": "adjudicate_final_source_key_mismatch"
+    },
+    {
+      "source_id": "place:Magdala",
+      "outcome": "verified_correct",
+      "original_key_verses": [
+        "40015039"
+      ],
+      "editorial_conclusion": "Matthew 15:39 reads Magadan in pinned Greek, not Magdala; prior correction removed the false direct identity, while the record already marks Magdala nonbiblical with possible, not certain, Magadan correspondence.",
+      "source_context": [
+        {
+          "verse": "40015039",
+          "excerpt": "and sending_away the crowds got into the boat and went to the region Magadan"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "place:Meronoth",
+      "outcome": "verified_correct",
+      "original_key_verses": [
+        "13027030",
+        "16003007"
+      ],
+      "editorial_conclusion": "1 Chronicles 27:30 and Nehemiah 3:7 call people Meronothites; the inferred settlement follows a demonym and has no fabricated direct location word.",
+      "source_context": [
+        {
+          "verse": "13027030",
+          "excerpt": "and over the camels Obil the Ishmaelite and over the donkeys Jehdeiah the Meronothite"
+        },
+        {
+          "verse": "16003007",
+          "excerpt": "and at side_of them repairs_~_made Melatiah the Gibeonite and Jadon the Meronothite men Gibeon and the Mizpah under authority governor beyond the river"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "place:Mesopotamia",
+      "outcome": "verified_correct",
+      "original_key_verses": [
+        "01002010"
+      ],
+      "editorial_conclusion": "Genesis 2:10 introduces the rivers of Eden, later naming Tigris and Euphrates. This is wider river-basin context, not a claim to know Eden's location.",
+      "source_context": [
+        {
+          "verse": "01002010",
+          "excerpt": "and river flowed from Eden to water (et) the garden and from there divided and became into four branches"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "place:Misgab.1",
+      "outcome": "unresolved",
+      "original_key_verses": [
+        "24048001"
+      ],
+      "editorial_conclusion": "Jeremiah 48:1 Hebrew means stronghold but can be construed as the place Misgab; the proper-noun reading remains uncertain.",
+      "source_context": [
+        {
+          "verse": "24048001",
+          "excerpt": "concerning Moab thus says LORD hosts God Israel woe to Nebo for destroyed put_to_shame captured Kiriathaim put_to_shame the fortress and shattered"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "place:MoabPlains",
+      "outcome": "verified_correct",
+      "original_key_verses": [
+        "05001001"
+      ],
+      "editorial_conclusion": "Deuteronomy 1:1 places Moses across the Jordan and verse 5 says he spoke in Moab; the regional plain designation is contextual, not a repeated place name.",
+      "source_context": [
+        {
+          "verse": "05001001",
+          "excerpt": "these the words that spoke Moses to all Israel on east the Jordan in the wilderness in the arabah opposite Suph between Paran and between Tophel and Laban and Hazeroth and Di Zahab"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "place:Naamah.2",
+      "outcome": "verified_correct",
+      "original_key_verses": [
+        "18002011",
+        "18042009"
+      ],
+      "editorial_conclusion": "Job 2:11 and 42:9 call Zophar a Naamathite, providing a demonym; the town is inferred and no direct original town-name is invented.",
+      "source_context": [
+        {
+          "verse": "18002011",
+          "excerpt": "when heard_of three friends Job’s (et) all the troubles the this which come upon him then set_out each from place his Eliphaz the Temanite and Bildad the Shuhite and Zophar the Naamathite and met together to go to console with him"
+        },
+        {
+          "verse": "18042009",
+          "excerpt": "so went Eliphaz the Temanite and Bildad the Shuhite Zophar the Naamathite and did as what told to them LORD and he_accepted LORD (et) faces_of Job’s"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "place:Nehelam",
+      "outcome": "verified_correct",
+      "original_key_verses": [
+        "24029024",
+        "24029031",
+        "24029032"
+      ],
+      "editorial_conclusion": "Jeremiah 29:24,31,32 names Shemaiah the Nehelamite; geographic Nehelam is derived from that epithet, not a separately written town token.",
+      "source_context": [
+        {
+          "verse": "24029024",
+          "excerpt": "and to Shemaiah the Nehelamite say to saying"
+        },
+        {
+          "verse": "24029031",
+          "excerpt": "send to all the exiles to saying thus says LORD concerning Shemaiah the Nehelamite because that prophesied to you Shemaiah though I not send him and trust אֶתְ you in lie"
+        },
+        {
+          "verse": "24029032",
+          "excerpt": "therefore כֵ֞ן thus says LORD behold I punish to Shemaiah the Nehelamite and to descendants his not be for he anyone living in midst the people the this or not see to the good that I do to people my declares LORD for rebellion pre"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "place:NorthGate",
+      "outcome": "verified_correct",
+      "original_key_verses": [
+        "13026014"
+      ],
+      "editorial_conclusion": "1 Chronicles 26:14 assigns the northern gate to Zechariah; the directional location is explicitly described even without a unique proper-name word.",
+      "source_context": [
+        {
+          "verse": "13026014",
+          "excerpt": "and fell the lot east to to Shelemiah then Zechariah son his counselor with wise cast lots and came_out lot his north for"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "place:Paddan-aram",
+      "outcome": "verified_correct",
+      "original_key_verses": [
+        "01024010",
+        "05023004",
+        "07003008"
+      ],
+      "editorial_conclusion": "Genesis 24:10 and Judges 3:8 speak of Aram-naharaim; Deuteronomy 23:4 is followed by Balaam's origin in the region. Context does not assert exact territorial equivalence.",
+      "source_context": [
+        {
+          "verse": "01024010",
+          "excerpt": "then took the servant ten camels of camels master’s his and departed with all_kinds good_things master’s his in hand his and arose and went to Aram Naharaim to city Nahor"
+        },
+        {
+          "verse": "05023004",
+          "excerpt": "no enter Ammonite or Moabite to assembly Lord even generation tenth none enter of them to assembly LORD for ever"
+        },
+        {
+          "verse": "07003008",
+          "excerpt": "and kindled anger LORD against Israel so sold them into hand of Cushan-Rishathaim king of Aram.Naharaim and served sons Israel (et) Cushan-Rishathaim Cushan-Rishathaim eight years"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "place:Peor",
+      "outcome": "verified_correct",
+      "original_key_verses": [
+        "28009010"
+      ],
+      "editorial_conclusion": "Hosea 9:10 describes Israel's Baal-peor worship, providing a cultic association to Peor. It is not a direct standalone mountain name.",
+      "source_context": [
+        {
+          "verse": "28009010",
+          "excerpt": "like grapes in the wilderness found Israel like first_fruit on fig_tree in first_season its saw fathers your they came Baal Peor and consecrated to that shame and became detestable like loved they"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "place:Pul",
+      "outcome": "corrected",
+      "original_key_verses": [
+        "26027010"
+      ],
+      "editorial_conclusion": "The native record contains an exact independently reasoned and reversible editorial correction receipt for its historical source-key/identity mismatch, to be validated against the frozen original candidate and the pinned corpus.",
+      "source_context": [
+        {
+          "verse": "26027010",
+          "excerpt": "Persia and Lud and Put were in army your men war your shield and helmet hung in you they gave splendor you"
+        }
+      ],
+      "nearby_existing_word_anchors": [],
+      "required_receipt_action": "disambiguate_pul_from_lud_source_label"
+    },
+    {
+      "source_id": "place:Ramah.4",
+      "outcome": "verified_correct",
+      "original_key_verses": [
+        "07004005"
+      ],
+      "editorial_conclusion": "Judges 4:5 actually names Ramah near Bethel where Deborah judged; the inherited Benjaminite location is geographical context, not a second unrelated source word.",
+      "source_context": [
+        {
+          "verse": "07004005",
+          "excerpt": "and she sit under palm_tree Deborah between the Ramah and between Bethel Bethel in hill_country Ephraim and came_up to her sons Israel for the judgment"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "place:Ramah.8",
+      "outcome": "unresolved",
+      "original_key_verses": [
+        "09022006"
+      ],
+      "editorial_conclusion": "1 Samuel 22:6 has Saul on a height at Gibeah, not a clearly separate proper-named Ramah settlement; exact identity unproved.",
+      "source_context": [
+        {
+          "verse": "09022006",
+          "excerpt": "now heard Saul that discovered David and men who with him and Saul sitting at the Gibeah under the tamarisk_tree on the height and spear his in hand his and all servants his standing around him"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "place:RedSea.2",
+      "outcome": "verified_correct",
+      "original_key_verses": [
+        "11009026"
+      ],
+      "editorial_conclusion": "1 Kings 9:26 names Ezion-geber near Eloth on the sea, associated with the Gulf of Aqaba; previous correction removed a false direct Yam Suph name claim.",
+      "source_context": [
+        {
+          "verse": "11009026",
+          "excerpt": "and fleet_of_ships built the king Solomon at Ezion Geber which near Eloth on shore sea red in land Edom"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "place:RedSea.3",
+      "outcome": "verified_correct",
+      "original_key_verses": [
+        "02010019",
+        "04033010",
+        "04033011"
+      ],
+      "editorial_conclusion": "Exodus 10:19 and Numbers 33:10-11 name Yam Suph. Gulf of Suez is a geographic hypothesis, and the record is already nonbiblical without a direct original place-name claim.",
+      "source_context": [
+        {
+          "verse": "02010019",
+          "excerpt": "and changed LORD wind west strong very and lifted (et) the locusts and drove them sea into red not left locust single in all territory Egypt"
+        },
+        {
+          "verse": "04033010",
+          "excerpt": "and set_out from Elim and camped by sea red"
+        },
+        {
+          "verse": "04033011",
+          "excerpt": "and set_out from Sea_of Reed and camped in wilderness Sin"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "place:RephaimValley",
+      "outcome": "corrected",
+      "original_key_verses": [
+        "10015017"
+      ],
+      "editorial_conclusion": "The native record contains an exact independently reasoned and reversible editorial correction receipt for its historical source-key/identity mismatch, to be validated against the frozen original candidate and the pinned corpus.",
+      "source_context": [
+        {
+          "verse": "10015017",
+          "excerpt": "so went_out the king and all the people at feet_of him and stopped house the distance"
+        }
+      ],
+      "nearby_existing_word_anchors": [],
+      "required_receipt_action": "adjudicate_final_source_key_mismatch"
+    },
+    {
+      "source_id": "place:Rimmon.2",
+      "outcome": "verified_correct",
+      "original_key_verses": [
+        "13006062"
+      ],
+      "editorial_conclusion": "1 Chronicles 6:62 has the written town-form Rimmono in the Levitical town list; the correspondence is a legitimate variant.",
+      "source_context": [
+        {
+          "verse": "13006062",
+          "excerpt": "to sons Merari the rest from tribe Zebulun (et) Rimmono and (et) pasturelands its (et) Tabor and (et) pasturelands its"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "place:Shaalbon",
+      "outcome": "verified_correct",
+      "original_key_verses": [
+        "10023032",
+        "13011033"
+      ],
+      "editorial_conclusion": "2 Samuel 23:32 and 1 Chronicles 11:33 identify Eliahba the Shaalbonite; this supports an inferred locality rather than direct Shaalbon toponym.",
+      "source_context": [
+        {
+          "verse": "10023032",
+          "excerpt": "Eliahba the Shaalbonite sons Jashen Jonathan"
+        },
+        {
+          "verse": "13011033",
+          "excerpt": "Azmaveth the Baharumite Eliahba the Shaalbonite"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "place:South.3",
+      "outcome": "verified_correct",
+      "original_key_verses": [
+        "27011005",
+        "27011011"
+      ],
+      "editorial_conclusion": "Daniel 11:5 and 11:11 name the king of the south, historically the Ptolemaic power. An editorial polity label rather than directly named country.",
+      "source_context": [
+        {
+          "verse": "27011005",
+          "excerpt": "and grow_strong king the south but one_of commanders his and grow_stronger than he and rule dominion greater realm his"
+        },
+        {
+          "verse": "27011011",
+          "excerpt": "then moved_with_rage king the south and march_out and fight against him against king the north and raise multitude great but given the multitude into hand his"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "place:SouthGate",
+      "outcome": "verified_correct",
+      "original_key_verses": [
+        "13026015"
+      ],
+      "editorial_conclusion": "1 Chronicles 26:15 assigns the southern gate to Obed-edom; directional gate location clearly follows the text.",
+      "source_context": [
+        {
+          "verse": "13026015",
+          "excerpt": "to Obed-Edom Obed-Edom south for and to sons his house_of the stores"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "place:Ur",
+      "outcome": "corrected",
+      "original_key_verses": [
+        "01015078"
+      ],
+      "editorial_conclusion": "The native record contains an exact independently reasoned and reversible editorial correction receipt for its historical source-key/identity mismatch, to be validated against the frozen original candidate and the pinned corpus.",
+      "source_context": [
+        {
+          "verse": "01015078",
+          "excerpt": ""
+        }
+      ],
+      "nearby_existing_word_anchors": [],
+      "required_receipt_action": "adjudicate_final_source_key_mismatch"
+    },
+    {
+      "source_id": "place:ZalmonMount",
+      "outcome": "verified_correct",
+      "original_key_verses": [
+        "19068015"
+      ],
+      "editorial_conclusion": "Psalm 68:15 explicitly names Zalmon. The record does not merge it with the separate Zalmon of Judges 9, a previously protected distinction.",
+      "source_context": [
+        {
+          "verse": "19068015",
+          "excerpt": "when scattered Almighty kings in it snowed on Zalmon"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "place:Zaphon.2",
+      "outcome": "corrected",
+      "original_key_verses": [
+        "18026007",
+        "19048003",
+        "23014013"
+      ],
+      "editorial_conclusion": "The native record contains an exact independently reasoned and reversible editorial correction receipt for its historical source-key/identity mismatch, to be validated against the frozen original candidate and the pinned corpus.",
+      "source_context": [
+        {
+          "verse": "18026007",
+          "excerpt": "stretches_out north over empty_space hangs earth on not what"
+        },
+        {
+          "verse": "19048003",
+          "excerpt": "beautiful elevation joy whole the earth mount Zion far north city king great"
+        },
+        {
+          "verse": "23014013",
+          "excerpt": "and you said in heart your the heaven ascend at above to stars God raise throne my and sit on mount assembly on heights north"
+        }
+      ],
+      "nearby_existing_word_anchors": [],
+      "required_receipt_action": "adjudicate_final_source_key_mismatch"
+    },
+    {
+      "source_id": "place:ZionMount",
+      "outcome": "verified_correct",
+      "original_key_verses": [
+        "13011006"
+      ],
+      "editorial_conclusion": "1 Chronicles 11:6 describes David taking the Jebusite citadel, identified as Zion in verse 5. Legitimate adjacent-verse context.",
+      "source_context": [
+        {
+          "verse": "13011006",
+          "excerpt": "and said David whoever strikes Jebusites at the first be as commander and as chief and went_up at the first Joab son Zeruiah so became as chief"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "realia:Apron",
+      "outcome": "corrected",
+      "original_key_verses": [
+        "26023015",
+        "40003004"
+      ],
+      "editorial_conclusion": "The native record contains an exact independently reasoned and reversible editorial correction receipt for its historical source-key/identity mismatch, to be validated against the frozen original candidate and the pinned corpus.",
+      "source_context": [
+        {
+          "verse": "26023015",
+          "excerpt": "wearing belts on waists their flowing turbans on heads their looked officers all them like men_of Babylon Chaldea land native their"
+        },
+        {
+          "verse": "40003004",
+          "excerpt": "himself now - John had the garment his of hair camel’s and belt leather around the waist his and_~_the and food was his locusts and honey wild"
+        }
+      ],
+      "nearby_existing_word_anchors": [],
+      "required_receipt_action": "adjudicate_final_source_key_mismatch"
+    },
+    {
+      "source_id": "realia:Battering-ram",
+      "outcome": "corrected",
+      "original_key_verses": [
+        "23029003"
+      ],
+      "editorial_conclusion": "The native record contains an exact independently reasoned and reversible editorial correction receipt for its historical source-key/identity mismatch, to be validated against the frozen original candidate and the pinned corpus.",
+      "source_context": [
+        {
+          "verse": "23029003",
+          "excerpt": "and encamp in the circle against you and besiege to you towers and set_up against you siegeworks"
+        }
+      ],
+      "nearby_existing_word_anchors": [],
+      "required_receipt_action": "adjudicate_final_source_key_mismatch"
+    },
+    {
+      "source_id": "realia:BrickMold",
+      "outcome": "corrected",
+      "original_key_verses": [
+        "01011003",
+        "02005007"
+      ],
+      "editorial_conclusion": "The native record contains an exact independently reasoned and reversible editorial correction receipt for its historical source-key/identity mismatch, to be validated against the frozen original candidate and the pinned corpus.",
+      "source_context": [
+        {
+          "verse": "01011003",
+          "excerpt": "and said one to another him come ה let_us_make bricks and let_us_bake with fire and she_was to they the brick for stone and the tar he_was to they for (the) mortar"
+        },
+        {
+          "verse": "02005007",
+          "excerpt": "don’t continue will.repeat to give straw to the people to making the bricks as yesterday before they go and gather for themselves straw"
+        }
+      ],
+      "nearby_existing_word_anchors": [],
+      "required_receipt_action": "adjudicate_final_source_key_mismatch"
+    },
+    {
+      "source_id": "realia:Foundation",
+      "outcome": "corrected",
+      "original_key_verses": [
+        "11006036"
+      ],
+      "editorial_conclusion": "The native record contains an exact independently reasoned and reversible editorial correction receipt for its historical source-key/identity mismatch, to be validated against the frozen original candidate and the pinned corpus.",
+      "source_context": [
+        {
+          "verse": "11006036",
+          "excerpt": "and built (et) the courtyard the inner three rows dressed_stone and row beams cedar"
+        }
+      ],
+      "nearby_existing_word_anchors": [],
+      "required_receipt_action": "adjudicate_final_source_key_mismatch"
+    },
+    {
+      "source_id": "realia:Jug",
+      "outcome": "corrected",
+      "original_key_verses": [
+        "02029040",
+        "04015005",
+        "04028007"
+      ],
+      "editorial_conclusion": "The native record contains an exact independently reasoned and reversible editorial correction receipt for its historical source-key/identity mismatch, to be validated against the frozen original candidate and the pinned corpus.",
+      "source_context": [
+        {
+          "verse": "02029040",
+          "excerpt": "and tenth fine_flour mixed with oil beaten fourth a hin and drink_offering fourth a hin wine with the lamb the first"
+        },
+        {
+          "verse": "04015005",
+          "excerpt": "and wine as the drink_offering a_quarter a hin prepare with the burnt_offering or for the sacrifice for the lamb the each"
+        },
+        {
+          "verse": "04028007",
+          "excerpt": "and drink_offering its a_quarter a hin for the lamb the each in the sanctuary pour_out drink_offering strong_drink to LORD"
+        }
+      ],
+      "nearby_existing_word_anchors": [],
+      "required_receipt_action": "adjudicate_final_source_key_mismatch"
+    },
+    {
+      "source_id": "realia:Lantern",
+      "outcome": "corrected",
+      "original_key_verses": [
+        "66004005",
+        "66008010"
+      ],
+      "editorial_conclusion": "The native record contains an exact independently reasoned and reversible editorial correction receipt for its historical source-key/identity mismatch, to be validated against the frozen original candidate and the pinned corpus.",
+      "source_context": [
+        {
+          "verse": "66004005",
+          "excerpt": "and from the throne came flashes_of_lightning and rumblings and peals_of_thunder and seven torches fire burning before the throne which are the seven spirits - God"
+        },
+        {
+          "verse": "66008010",
+          "excerpt": "and the third angel blew_~_trumpet and fell from the heaven star great blazing like torch and fell on the third the rivers and on the springs of water"
+        }
+      ],
+      "nearby_existing_word_anchors": [],
+      "required_receipt_action": "adjudicate_final_source_key_mismatch"
+    },
+    {
+      "source_id": "realia:Lute",
+      "outcome": "verified_correct",
+      "original_key_verses": [
+        "66014002"
+      ],
+      "editorial_conclusion": "Revelation 14:2 describes harp/lyre players and instruments; lute is an editorial stringed-instrument category rather than a verbatim ancient Greek proper name.",
+      "source_context": [
+        {
+          "verse": "66014002",
+          "excerpt": "and heard voice from of heaven like sound waters many and like sound thunder loud and the sound that heard like harpists playing on the harps their"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "realia:Palace",
+      "outcome": "verified_correct",
+      "original_key_verses": [
+        "40026003"
+      ],
+      "editorial_conclusion": "Matthew 26:3 identifies the chief priest's court and the assembly at Caiaphas's residence, matching the palace/courtyard context.",
+      "source_context": [
+        {
+          "verse": "40026003",
+          "excerpt": "then assembled the chief_priests and the elders the people in the palace the high_priest the_one named Caiaphas"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "realia:RaisinCake",
+      "outcome": "corrected",
+      "original_key_verses": [
+        "09025018"
+      ],
+      "editorial_conclusion": "The native record contains an exact independently reasoned and reversible editorial correction receipt for its historical source-key/identity mismatch, to be validated against the frozen original candidate and the pinned corpus.",
+      "source_context": [
+        {
+          "verse": "09025018",
+          "excerpt": "and hurried Abigail and took two_hundred loaves_of_bread and two skins wine and five sheep prepared and five seahs roasted_grain and a_hundred clusters_of_raisins and two_hundred cakes_of_figs and loaded on the donkeys"
+        }
+      ],
+      "nearby_existing_word_anchors": [],
+      "required_receipt_action": "adjudicate_final_source_key_mismatch"
+    },
+    {
+      "source_id": "realia:Rod",
+      "outcome": "corrected",
+      "original_key_verses": [
+        "66012009"
+      ],
+      "editorial_conclusion": "The native record contains an exact independently reasoned and reversible editorial correction receipt for its historical source-key/identity mismatch, to be validated against the frozen original candidate and the pinned corpus.",
+      "source_context": [
+        {
+          "verse": "66012009",
+          "excerpt": "and thrown_down the dragon - great that serpent - ancient the called devil and - Satan the deceives the world whole thrown_down to the earth and the angels his with him thrown_down"
+        }
+      ],
+      "nearby_existing_word_anchors": [],
+      "required_receipt_action": "adjudicate_final_source_key_mismatch"
+    },
+    {
+      "source_id": "realia:Rug",
+      "outcome": "verified_correct",
+      "original_key_verses": [
+        "26027024"
+      ],
+      "editorial_conclusion": "Ezekiel 27:24 lists woven and colored carpets or coverings traded by Tyre. The material object is contextually present.",
+      "source_context": [
+        {
+          "verse": "26027024",
+          "excerpt": "they traded you in choice_garments in clothes blue and embroidered_work and in carpets colored_material with cords bound and made_secure in merchandise your"
+        }
+      ],
+      "nearby_existing_word_anchors": []
+    },
+    {
+      "source_id": "realia:SiegeTower",
+      "outcome": "corrected",
+      "original_key_verses": [
+        "10020015",
+        "26004002",
+        "33004014"
+      ],
+      "editorial_conclusion": "The native record contains an exact independently reasoned and reversible editorial correction receipt for its historical source-key/identity mismatch, to be validated against the frozen original candidate and the pinned corpus.",
+      "source_context": [
+        {
+          "verse": "10020015",
+          "excerpt": "and came and besieged against him in Abel Beth Maacah הַֽמַּעֲכָ֔ה and threw_up siege_ramp against the city and stood against the rampart and all the troops who with Joab battering to break_~_down the wall"
+        },
+        {
+          "verse": "26004002",
+          "excerpt": "then lay against it siege and build against it siege_wall and cast_up against it ramp and set_up against it camps and put against it battering_rams all_around"
+        },
+        {
+          "verse": "33004014",
+          "excerpt": "now walled_around daughter troops siege laid against us with rod rod strike on the cheek (et) ruler Israel"
+        }
+      ],
+      "nearby_existing_word_anchors": [],
+      "required_receipt_action": "adjudicate_final_source_key_mismatch"
+    },
+    {
+      "source_id": "realia:WinnowingFork",
+      "outcome": "corrected",
+      "original_key_verses": [
+        "08003002"
+      ],
+      "editorial_conclusion": "The native record contains an exact independently reasoned and reversible editorial correction receipt for its historical source-key/identity mismatch, to be validated against the frozen original candidate and the pinned corpus.",
+      "source_context": [
+        {
+          "verse": "08003002",
+          "excerpt": "and now ? not Boaz kinsman our whose were with young_women whose see he winnowing (et) threshing_floor the barley this evening"
+        }
+      ],
+      "nearby_existing_word_anchors": [],
+      "required_receipt_action": "adjudicate_final_source_key_mismatch"
+    }
+  ]
+}
