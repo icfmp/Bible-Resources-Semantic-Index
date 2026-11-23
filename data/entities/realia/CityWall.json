@@ -9,10 +9,129 @@
   },
   "bsi": {
     "canonical_id": "realia:CityWall",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "realia:CityWall",
     "source_primary_id": "realia:CityWall",
-    "source_sha256": "eadb299f6984b48c170eb55550e23c0bd67001044917ac22f30f215b656ea333"
+    "source_sha256": "eadb299f6984b48c170eb55550e23c0bd67001044917ac22f30f215b656ea333",
+    "editorial_reason": "Source-collated full-verse original-language witness directly supports this existing object category; restore only exact named tokens, preserving keys and earlier witnesses.",
+    "editorial_evidence": [
+      "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c and Clear-Bible/macula-greek@8423afe47b9e8f24b7772e808af45c7159a6fe7e",
+      "Joshua 6:20 names the city wall that fell; Nehemiah 2:17 names the wall of Jerusalem to rebuild. These are direct Hebrew wall tokens, not vague city references.",
+      "06006020 wlc: o060060200162",
+      "16002017 wlc: o160020170181"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "restore_pinned_direct_object_name_in_source_key",
+        "reason": "Source-collated full-verse original-language witness directly supports this existing object category; restore only exact named tokens, preserving keys and earlier witnesses.",
+        "evidence": [
+          "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c and Clear-Bible/macula-greek@8423afe47b9e8f24b7772e808af45c7159a6fe7e",
+          "Joshua 6:20 names the city wall that fell; Nehemiah 2:17 names the wall of Jerusalem to rebuild. These are direct Hebrew wall tokens, not vague city references.",
+          "06006020 wlc: o060060200162",
+          "16002017 wlc: o160020170181"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [
+              "44009025",
+              "47011033",
+              "58011030",
+              "66021012",
+              "66021014",
+              "66021015",
+              "66021017",
+              "66021018",
+              "66021019"
+            ],
+            "explicit_instances": {
+              "SBLGNT": [
+                [
+                  "n44009025009"
+                ],
+                [
+                  "n47011033009"
+                ],
+                [
+                  "n58011030003"
+                ],
+                [
+                  "n66021012002"
+                ],
+                [
+                  "n66021014003"
+                ],
+                [
+                  "n66021015020"
+                ],
+                [
+                  "n66021017004"
+                ],
+                [
+                  "n66021018005"
+                ],
+                [
+                  "n66021019004"
+                ]
+              ]
+            }
+          },
+          "after": {
+            "references": [
+              "06006020",
+              "16002017",
+              "44009025",
+              "47011033",
+              "58011030",
+              "66021012",
+              "66021014",
+              "66021015",
+              "66021017",
+              "66021018",
+              "66021019"
+            ],
+            "explicit_instances": {
+              "SBLGNT": [
+                [
+                  "n44009025009"
+                ],
+                [
+                  "n47011033009"
+                ],
+                [
+                  "n58011030003"
+                ],
+                [
+                  "n66021012002"
+                ],
+                [
+                  "n66021014003"
+                ],
+                [
+                  "n66021015020"
+                ],
+                [
+                  "n66021017004"
+                ],
+                [
+                  "n66021018005"
+                ],
+                [
+                  "n66021019004"
+                ]
+              ],
+              "wlc": [
+                [
+                  "o060060200162"
+                ],
+                [
+                  "o160020170181"
+                ]
+              ]
+            }
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "SBLGNT": [
@@ -43,6 +162,14 @@
       [
         "n66021019004"
       ]
+    ],
+    "wlc": [
+      [
+        "o060060200162"
+      ],
+      [
+        "o160020170181"
+      ]
     ]
   },
   "id": "realia:CityWall",
@@ -67,6 +194,8 @@
   "pronominal_referents": {},
   "realia_type": "other",
   "references": [
+    "06006020",
+    "16002017",
     "44009025",
     "47011033",
     "58011030",
