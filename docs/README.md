@@ -34,7 +34,4 @@ pipeline on `main`. Do not delete unique reviewed decisions, abstentions,
 source locks, old published release evidence, or rights records under the
 pretext of removing old experiments.
 
-The old v0.1 handoff, named-entity and topic pilots and first-release
-rights/readiness records still exist as **historical evidence**, not current
-commands. New work must follow the present source-specific guides and
-source/rights/publication gates instead of replaying those historical steps.
+The completed v0.1 [handoff](https://github.com/icfmp/Bible-Resources-Semantic-Index/blob/f97f70446f0db0d4574fddcf2f589b74e98f30c2/docs/V0_1_CANDIDATE_HANDOFF.md), [named-entity pilot](https://github.com/icfmp/Bible-Resources-Semantic-Index/blob/f97f70446f0db0d4574fddcf2f589b74e98f30c2/docs/V0_1_NAME_PILOT.md) and [topic pilot](https://github.com/icfmp/Bible-Resources-Semantic-Index/blob/f97f70446f0db0d4574fddcf2f589b74e98f30c2/docs/V0_1_TOPIC_PILOT.md) are retained as **immutable Git history**, not current guides or active scripts. The distinct first-release rights/readiness audits remain as legal/release provenance, not new approval. Follow the current source guides and rights/publication gates.
