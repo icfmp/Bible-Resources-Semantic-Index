@@ -91,6 +91,9 @@ class TranslationGapAuditTests(unittest.TestCase):
             "gap_within_target_verse_span": 1, "target_verse_absent": 1,
         })
         self.assertEqual(nt["unattested_target_by_book"], {"40": 4})
+        self.assertEqual(nt["unattested_target_distinct_verses"], 2)
+        self.assertEqual(nt["unattested_targets_per_verse"], {"1": 1, "3": 1})
+        self.assertEqual(nt["above_target_span_ordinal_gaps"], {"word_ordinal_+1": 1})
         ot = report["groups"]["ot"]
         self.assertFalse(ot["target_inventory_present"])
         self.assertEqual(ot["cross_verse_classes"], {
@@ -102,6 +105,13 @@ class TranslationGapAuditTests(unittest.TestCase):
         self.assertFalse(report["publication_approved"])
         self.assertFalse(report["edition_or_word_identity_certified"])
         self.assertNotIn("one", json.dumps(report))
+
+    def test_subword_part_is_not_mistaken_for_a_word_ordinal(self):
+        self.docs["nt"]["records"][1]["target_lookup_ids"] = ["400010010051"]
+        self.write_candidate("nt")
+        self.write_receipt()
+        result = self.run_audit()["groups"]["nt"]
+        self.assertEqual(result["above_target_span_ordinal_gaps"], {"subword_part_+1": 1})
 
     def test_reject_altered_original_witness(self):
         (self.root / "nt.tsv").write_text("id\n", encoding="utf-8")
