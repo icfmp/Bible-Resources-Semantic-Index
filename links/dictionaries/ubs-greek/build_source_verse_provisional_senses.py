@@ -6,9 +6,11 @@ independently verified contextual semantics. Earlier overlays and originals
 remain unchanged.
 """
 from __future__ import annotations
-import argparse,json
+import argparse,json,runpy
 from pathlib import Path
 
+HERE=Path(__file__).resolve().parent
+SOURCE=runpy.run_path(str(HERE/"audit_ubs_source_verse_witnesses.py"))
 EXPECTED=258
 TOTAL=137741
 
@@ -18,6 +20,10 @@ def make(report,unresolved,high,low,form):
         or report.get("previously_staged_source_form_word_ids")!=223
         or report.get("original_reference_witness_candidate_word_count")!=EXPECTED
         or report.get("independently_contextually_validated")!=0
+        or report.get("corpus_or_ubs_modified") is not False
+        or sum(report.get("source_specific_dispositions",{}).values())!=2728
+        or report.get("other_original_multi_lexid_words_still_unresolved")!=
+           2505-report.get("original_reference_witness_candidate_word_count",0)
         or report.get("published") is not False or report.get("publication_approved") is not False):
         raise ValueError("Source-verse candidate audit drift")
     if (unresolved.get("unresolved_original_word_count")!=15237
@@ -97,13 +103,28 @@ def make(report,unresolved,high,low,form):
     }
 
 
+def build_from_pinned_sources(index,reviewed,batches,en,fr,macula,form,unresolved,high,low):
+    """Rebuild all UBS/Greek verse witnesses, then stage exact private source choices.
+
+    The maintained source audit checks *all* 137,741 original MACULA words
+    and the complete UBS bilingual reference lists. A report file generated
+    only for the next step is not a durable editorial witness.
+    """
+    report=SOURCE["audit"](index,reviewed,batches,en,fr,macula,form)
+    return make(report,unresolved,high,low,form)
+
+
 def main():
     p=argparse.ArgumentParser(description=__doc__)
-    for k in ("report","unresolved","high","low","form","output"):
+    for k in ("index","reviewed","batches","english","french","macula",
+              "unresolved","high","low","form","output"):
         p.add_argument("--"+k,required=True,type=Path)
     a=p.parse_args()
     load=lambda f:json.loads(f.read_text(encoding="utf-8-sig"))
-    r=make(load(a.report),load(a.unresolved),load(a.high),load(a.low),load(a.form))
+    r=build_from_pinned_sources(
+        load(a.index),load(a.reviewed),load(a.batches),
+        load(a.english),load(a.french),a.macula,load(a.form),
+        load(a.unresolved),load(a.high),load(a.low))
     a.output.write_text(json.dumps(r,ensure_ascii=False,sort_keys=True,separators=(",",":"))+"\n",encoding="utf-8")
     print("GREEK_UBS_SOURCE_VERSE_PROVISIONAL_EDITORIAL_WORD_SENSES",json.dumps({
         "new_source_verse_provisional":r["new_source_verse_supported_provisional_word_count"],

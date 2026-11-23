@@ -68,6 +68,11 @@ public BRSI index merely because they are available upstream.
   authentic bilingual source reference lists and original 122,504-word
   reference calibration before staging any suggestion; numeric token
   position factors alone are never proof of word or sense identity.
+- The **258** source-verse-citation provisional candidates likewise
+  come from the complete pinned UBS English/French lexical reference
+  and original MACULA verse audit, now called directly inside the
+  258-word source-verse builder rather than through a one-use report.
+  A source citation is not a contextually verified lexical sense.
 
 The source-local `source/` and `work/` checkouts are temporary and ignored.
 Do not commit unpublished detailed UBS/MACULA original-word research dumps.
