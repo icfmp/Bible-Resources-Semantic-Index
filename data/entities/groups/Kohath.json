@@ -12,10 +12,170 @@
   },
   "bsi": {
     "canonical_id": "group:Kohath",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "group:Kohath",
     "source_primary_id": "group:Kohath",
-    "source_sha256": "ec321cc3fe4cb7e991d651d67ba39e9e7d21f97590744ee356173605366b2e59"
+    "source_sha256": "ec321cc3fe4cb7e991d651d67ba39e9e7d21f97590744ee356173605366b2e59",
+    "editorial_reason": "Restore exact source-language direct mention in this identity's inherited key verses without conflating ancestor, location and lineage identities.",
+    "editorial_evidence": [
+      "Pinned Macula WLC Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c; SBLGNT Clear-Bible/macula-greek@8423afe47b9e8f24b7772e808af45c7159a6fe7e, verse inspection PR #137",
+      "Numbers 7:9 explicitly names the sons of Kohath as the Levitical group receiving no carts.",
+      "04007009 wlc: o040070090013 + o040070090021"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "restore_compound_original_source_mention",
+        "reason": "Restore exact source-language direct mention in this identity's inherited key verses without conflating ancestor, location and lineage identities.",
+        "evidence": [
+          "Pinned Macula WLC Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c; SBLGNT Clear-Bible/macula-greek@8423afe47b9e8f24b7772e808af45c7159a6fe7e, verse inspection PR #137",
+          "Numbers 7:9 explicitly names the sons of Kohath as the Levitical group receiving no carts.",
+          "04007009 wlc: o040070090013 + o040070090021"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [
+              "04003027",
+              "04003030",
+              "04004018",
+              "04004034",
+              "04004037",
+              "04010021",
+              "04026057",
+              "06021004",
+              "06021010",
+              "13006018",
+              "13006039",
+              "13009032",
+              "14020019",
+              "14029012",
+              "14034012"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o040030270132"
+                ],
+                [
+                  "o040030300052"
+                ],
+                [
+                  "o040040180062"
+                ],
+                [
+                  "o040040340082"
+                ],
+                [
+                  "o040040370042"
+                ],
+                [
+                  "o040100210022"
+                ],
+                [
+                  "o040260570102"
+                ],
+                [
+                  "o060210040042"
+                ],
+                [
+                  "o060210100052"
+                ],
+                [
+                  "o130060180052"
+                ],
+                [
+                  "o130060390082"
+                ],
+                [
+                  "o130090320032"
+                ],
+                [
+                  "o140200190052"
+                ],
+                [
+                  "o140290120112"
+                ],
+                [
+                  "o140340120172"
+                ]
+              ]
+            }
+          },
+          "after": {
+            "references": [
+              "04003027",
+              "04003030",
+              "04004018",
+              "04004034",
+              "04004037",
+              "04007009",
+              "04010021",
+              "04026057",
+              "06021004",
+              "06021010",
+              "13006018",
+              "13006039",
+              "13009032",
+              "14020019",
+              "14029012",
+              "14034012"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o040030270132"
+                ],
+                [
+                  "o040030300052"
+                ],
+                [
+                  "o040040180062"
+                ],
+                [
+                  "o040040340082"
+                ],
+                [
+                  "o040040370042"
+                ],
+                [
+                  "o040100210022"
+                ],
+                [
+                  "o040260570102"
+                ],
+                [
+                  "o060210040042"
+                ],
+                [
+                  "o060210100052"
+                ],
+                [
+                  "o130060180052"
+                ],
+                [
+                  "o130060390082"
+                ],
+                [
+                  "o130090320032"
+                ],
+                [
+                  "o140200190052"
+                ],
+                [
+                  "o140290120112"
+                ],
+                [
+                  "o140340120172"
+                ],
+                [
+                  "o040070090013",
+                  "o040070090021"
+                ]
+              ]
+            }
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -63,6 +223,10 @@
       ],
       [
         "o140340120172"
+      ],
+      [
+        "o040070090013",
+        "o040070090021"
       ]
     ]
   },
@@ -93,6 +257,7 @@
     "04004018",
     "04004034",
     "04004037",
+    "04007009",
     "04010021",
     "04026057",
     "06021004",
