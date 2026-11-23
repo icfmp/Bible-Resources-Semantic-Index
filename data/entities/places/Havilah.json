@@ -16,15 +16,74 @@
   },
   "bsi": {
     "canonical_id": "place:Havilah",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:Havilah",
     "source_primary_id": "place:Havilah",
-    "source_sha256": "139f958a5b1abef877aabfdcfb230002c6e00f87e56edbc463e84bda19391360"
+    "source_sha256": "139f958a5b1abef877aabfdcfb230002c6e00f87e56edbc463e84bda19391360",
+    "editorial_reason": "Restore direct original-language word mentions explicitly confirmed in the inherited key verses for this distinct source identity. All original keys and other evidence are retained.",
+    "editorial_evidence": [
+      "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c and Clear-Bible/macula-greek@8423afe47b9e8f24b7772e808af45c7159a6fe7e pinned TSV, verified against CI source-word candidate inventory in #134",
+      "Genesis 25:18 and 1 Samuel 15:7 explicitly use the Havilah place name for geographic extent, unlike Genesis 10 name genealogy.",
+      "BCV8 01025018 direct wlc token(s) o010250180022",
+      "BCV8 09015007 direct wlc token(s) o090150070052"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "restore_pinned_direct_mention_from_verified_key",
+        "reason": "Restore direct original-language word mentions explicitly confirmed in the inherited key verses for this distinct source identity. All original keys and other evidence are retained.",
+        "evidence": [
+          "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c and Clear-Bible/macula-greek@8423afe47b9e8f24b7772e808af45c7159a6fe7e pinned TSV, verified against CI source-word candidate inventory in #134",
+          "Genesis 25:18 and 1 Samuel 15:7 explicitly use the Havilah place name for geographic extent, unlike Genesis 10 name genealogy.",
+          "BCV8 01025018 direct wlc token(s) o010250180022",
+          "BCV8 09015007 direct wlc token(s) o090150070052"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [
+              "01002011"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o010020110092"
+                ]
+              ]
+            }
+          },
+          "after": {
+            "references": [
+              "01002011",
+              "01025018",
+              "09015007"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o010020110092"
+                ],
+                [
+                  "o010250180022"
+                ],
+                [
+                  "o090150070052"
+                ]
+              ]
+            }
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
       [
         "o010020110092"
+      ],
+      [
+        "o010250180022"
+      ],
+      [
+        "o090150070052"
       ]
     ]
   },
@@ -66,7 +125,9 @@
   "primary_id": "place:Havilah",
   "pronominal_referents": {},
   "references": [
-    "01002011"
+    "01002011",
+    "01025018",
+    "09015007"
   ],
   "subject_referents": {},
   "tribal_area": "group:Arabia",
