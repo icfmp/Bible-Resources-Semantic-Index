@@ -14,7 +14,29 @@
     "review_status": "source_unreviewed",
     "source_id": "group:Jews",
     "source_primary_id": "group:Jews",
-    "source_sha256": "be7d8a4c63d132a4c5eb4b053d94ebb8374d4f55e5452b7484f5b11f41b76a76"
+    "source_sha256": "be7d8a4c63d132a4c5eb4b053d94ebb8374d4f55e5452b7484f5b11f41b76a76",
+    "editorial_field_changes": [
+      {
+        "action": "restore_original_explicit_ethnonym_or_deity_name",
+        "added_reference_values": {
+          "references": [
+            "12016006"
+          ]
+        },
+        "added_original_word_groups": {
+          "wlc": [
+            [
+              "o120160060122"
+            ]
+          ]
+        },
+        "reason": "2 Kings 16:6 directly names the Judeans/men of Judah as a named people, not merely a geographical Judah site.",
+        "evidence": [
+          "ORG BCV8 12016006",
+          "Pinned Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c exact WLC word and lemma"
+        ]
+      }
+    ]
   },
   "explicit_instances": {
     "SBLGNT": [
@@ -832,6 +854,9 @@
       ],
       [
         "o380080230171"
+      ],
+      [
+        "o120160060122"
       ]
     ]
   },
@@ -1763,7 +1788,8 @@
     "52002014",
     "56001014",
     "66002009",
-    "66003009"
+    "66003009",
+    "12016006"
   ],
   "referred_to_as": [
     "group:Judah"
