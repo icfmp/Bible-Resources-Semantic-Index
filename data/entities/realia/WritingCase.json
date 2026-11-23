@@ -13,7 +13,31 @@
     "review_status": "source_unreviewed",
     "source_id": "realia:WritingCase",
     "source_primary_id": "realia:WritingCase",
-    "source_sha256": "ccf7c48a16c6832db70b740946261a5cf80d26c22474e76fff4b4823bb97a943"
+    "source_sha256": "ccf7c48a16c6832db70b740946261a5cf80d26c22474e76fff4b4823bb97a943",
+    "editorial_field_changes": [
+      {
+        "action": "remove_false_object_equivalence_reference",
+        "removed_reference_values": {
+          "key_references": [
+            "64001013"
+          ]
+        },
+        "reason": "3 John 13 names ink (μέλαν) and reed pen (κάλαμος), not a writing case/inkhorn. Those are different object types; the source had treated ink and pen as alternate *names* for the writing case and asserted a wrong container key. Keep the actual ink-horn/writing-case references in Jeremiah 36 and Ezekiel 9 unchanged.",
+        "evidence": [
+          "3 John 13; Jeremiah 36:18; Ezekiel 9:2–11",
+          "Pinned Macula SBLGNT n64001013009 ink and n64001013011 pen",
+          "https://www.biblegateway.com/passage/?search=3+John+1%3A13&version=SBLGNT"
+        ],
+        "removed_localization_values": {
+          "eng": {
+            "alternate_labels": [
+              "Ink",
+              "Pen"
+            ]
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -34,8 +58,7 @@
   "id": "realia:WritingCase",
   "key_references": [
     "24036018",
-    "26009002",
-    "64001013"
+    "26009002"
   ],
   "lemmas": {
     "he": [
@@ -45,10 +68,7 @@
   },
   "localizations": {
     "eng": {
-      "alternate_labels": [
-        "Ink",
-        "Pen"
-      ],
+      "alternate_labels": [],
       "preferred_label": "Writing Case"
     }
   },
