@@ -16,10 +16,41 @@
   },
   "bsi": {
     "canonical_id": "place:Holon",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:Holon",
     "source_primary_id": "place:Holon",
-    "source_sha256": "de7d4c43e3a6ef040a8736c8119a146125355f1d41159263bff0a55af0d702a3"
+    "source_sha256": "de7d4c43e3a6ef040a8736c8119a146125355f1d41159263bff0a55af0d702a3",
+    "editorial_reason": "The pinned Hebrew of 1 Chronicles 6:58 names Ramoth and Anem, not Holon. The same inherited Holon/Hilen identity has its direct original Hebrew witness in 1 Chronicles 6:43, so only the unsupported key is corrected.",
+    "editorial_evidence": [
+      "Pinned WLC 1Chr 6:58 names Ramoth and Anem",
+      "Pinned WLC 1Chr 6:43 o130060430021 is this record's original Holon/Hilen witness"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "adjudicate_final_source_key_mismatch",
+        "reason": "The pinned Hebrew of 1 Chronicles 6:58 names Ramoth and Anem, not Holon. The same inherited Holon/Hilen identity has its direct original Hebrew witness in 1 Chronicles 6:43, so only the unsupported key is corrected.",
+        "evidence": [
+          "Pinned WLC 1Chr 6:58 names Ramoth and Anem",
+          "Pinned WLC 1Chr 6:43 o130060430021 is this record's original Holon/Hilen witness"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "key_references": [
+              "13006058",
+              "06015051",
+              "06021015"
+            ]
+          },
+          "after": {
+            "key_references": [
+              "13006043",
+              "06015051",
+              "06021015"
+            ]
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -52,7 +83,7 @@
   "is_artifact": false,
   "is_person": false,
   "key_references": [
-    "13006058",
+    "13006043",
     "06015051",
     "06021015"
   ],

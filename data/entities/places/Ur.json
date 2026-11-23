@@ -20,10 +20,41 @@
   },
   "bsi": {
     "canonical_id": "place:Ur",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:Ur",
     "source_primary_id": "place:Ur",
-    "source_sha256": "3f0a49f02dc9dd13e265da315968858d62aea6ce12df8ed58bbf89172d2bc5a8"
+    "source_sha256": "3f0a49f02dc9dd13e265da315968858d62aea6ce12df8ed58bbf89172d2bc5a8",
+    "editorial_reason": "Genesis 15:78 is not a verse in the pinned Hebrew edition. Genesis 15:7 explicitly names Ur of the Chaldeans and is already attested by this record's original-word link; restore that exact source verse.",
+    "editorial_evidence": [
+      "Original key 01015078 is out of Genesis 15 verse range",
+      "Pinned WLC Gen 15:7 o010150070072 explicitly refers to Ur"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "adjudicate_final_source_key_mismatch",
+        "reason": "Genesis 15:78 is not a verse in the pinned Hebrew edition. Genesis 15:7 explicitly names Ur of the Chaldeans and is already attested by this record's original-word link; restore that exact source verse.",
+        "evidence": [
+          "Original key 01015078 is out of Genesis 15 verse range",
+          "Pinned WLC Gen 15:7 o010150070072 explicitly refers to Ur"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "key_references": [
+              "01011031",
+              "01011028",
+              "01015078"
+            ]
+          },
+          "after": {
+            "key_references": [
+              "01011031",
+              "01011028",
+              "01015007"
+            ]
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -61,7 +92,7 @@
   "key_references": [
     "01011031",
     "01011028",
-    "01015078"
+    "01015007"
   ],
   "lemmas": {
     "he": [
