@@ -16,11 +16,14 @@
     "source_id": "person:Jerubbaal",
     "source_primary_id": "person:Gideon",
     "source_sha256": "cc75bd9151ae6b7cbd0c0142d84ff02e2d4466114251e1c34b1b239899e1701f",
-    "editorial_reason": "Restore original-word mentions for the explicitly named person in reviewed source-key verses. The historical source alias/canonical identity is preserved and no similarly named individual is merged.",
+    "editorial_reason": "Restore original-word mentions for the explicitly named person in reviewed source-key verses. The historical source alias/canonical identity is preserved and no similarly named individual is merged. | Restore a direct source-attested lexical occurrence for an independently established reviewed canonical identity, without inventing a different historical bearer.",
     "editorial_evidence": [
       "Pinned Clear-Bible Macula WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c / SBLGNT@8423afe47b9e8f24b7772e808af45c7159a6fe7e, full original-word source audit and exact ID verification in GitHub Actions",
       "Judges 6:11 names Gideon, subsequently explicitly renamed Jerubbaal in Judges 6:32; direct mention belongs to the reviewed canonical identity person:Gideon.",
-      "07006011 wlc: o070060110132"
+      "07006011 wlc: o070060110132",
+      "Pinned Macula WLC Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c and SBLGNT Clear-Bible/macula-greek@8423afe47b9e8f24b7772e808af45c7159a6fe7e; exact verses collated in PR #137",
+      "Hebrews 11:32 directly names Gideon (Γεδεών), the explicitly identified Jerubbaal of Judges 6:32; source canonical person:Gideon.",
+      "58011032 SBLGNT n58011032012"
     ],
     "editorial_field_changes": [
       {
@@ -163,6 +166,157 @@
             }
           }
         }
+      },
+      {
+        "action": "restore_verified_named_alias_original_words",
+        "reason": "Restore a direct source-attested lexical occurrence for an independently established reviewed canonical identity, without inventing a different historical bearer.",
+        "evidence": [
+          "Pinned Macula WLC Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c and SBLGNT Clear-Bible/macula-greek@8423afe47b9e8f24b7772e808af45c7159a6fe7e; exact verses collated in PR #137",
+          "Hebrews 11:32 directly names Gideon (Γεδεών), the explicitly identified Jerubbaal of Judges 6:32; source canonical person:Gideon.",
+          "58011032 SBLGNT n58011032012"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [
+              "07006011",
+              "07006032",
+              "07007001",
+              "07008029",
+              "07008035",
+              "07009001",
+              "07009002",
+              "07009005",
+              "07009016",
+              "07009019",
+              "07009024",
+              "07009028",
+              "07009057",
+              "09012011"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o070060320051"
+                ],
+                [
+                  "o070070010021"
+                ],
+                [
+                  "o070080290021"
+                ],
+                [
+                  "o070080350061"
+                ],
+                [
+                  "o070090010041"
+                ],
+                [
+                  "o070090020161"
+                ],
+                [
+                  "o070090050091"
+                ],
+                [
+                  "o070090050181"
+                ],
+                [
+                  "o070090160131"
+                ],
+                [
+                  "o070090190061"
+                ],
+                [
+                  "o070090240051"
+                ],
+                [
+                  "o070090280131"
+                ],
+                [
+                  "o070090570141"
+                ],
+                [
+                  "o090120110041"
+                ],
+                [
+                  "o070060110132"
+                ]
+              ]
+            }
+          },
+          "after": {
+            "references": [
+              "07006011",
+              "07006032",
+              "07007001",
+              "07008029",
+              "07008035",
+              "07009001",
+              "07009002",
+              "07009005",
+              "07009016",
+              "07009019",
+              "07009024",
+              "07009028",
+              "07009057",
+              "09012011",
+              "58011032"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o070060320051"
+                ],
+                [
+                  "o070070010021"
+                ],
+                [
+                  "o070080290021"
+                ],
+                [
+                  "o070080350061"
+                ],
+                [
+                  "o070090010041"
+                ],
+                [
+                  "o070090020161"
+                ],
+                [
+                  "o070090050091"
+                ],
+                [
+                  "o070090050181"
+                ],
+                [
+                  "o070090160131"
+                ],
+                [
+                  "o070090190061"
+                ],
+                [
+                  "o070090240051"
+                ],
+                [
+                  "o070090280131"
+                ],
+                [
+                  "o070090570141"
+                ],
+                [
+                  "o090120110041"
+                ],
+                [
+                  "o070060110132"
+                ]
+              ],
+              "SBLGNT": [
+                [
+                  "n58011032012"
+                ]
+              ]
+            }
+          }
+        }
       }
     ]
   },
@@ -212,6 +366,11 @@
       ],
       [
         "o070060110132"
+      ]
+    ],
+    "SBLGNT": [
+      [
+        "n58011032012"
       ]
     ]
   },
@@ -269,7 +428,8 @@
     "07009024",
     "07009028",
     "07009057",
-    "09012011"
+    "09012011",
+    "58011032"
   ],
   "referred_to_as": [
     "person:Gideon"
