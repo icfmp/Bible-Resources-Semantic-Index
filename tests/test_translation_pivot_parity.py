@@ -101,7 +101,7 @@ class PivotParityAuditTests(unittest.TestCase):
     def test_source_without_lemma_column_abstains_instead_of_inventing(self):
         path = self.source_paths["ot"]
         path.write_text(
-            "id\\n" + "o01001001001\\n" + "o01001001002\\n",
+            "id\n" + "o01001001001\n" + "o01001001002\n",
             encoding="utf-8",
         )
         self.manifest["inputs"][1]["sha256"] = lock(path)
