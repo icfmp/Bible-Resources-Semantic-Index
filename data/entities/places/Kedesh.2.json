@@ -12,28 +12,86 @@
     ]
   },
   "bsi": {
-    "canonical_id": "place:Kishion",
+    "canonical_id": "place:Kedesh.2",
     "review_status": "source_unreviewed",
     "source_id": "place:Kedesh.2",
     "source_primary_id": "place:Kishion",
-    "source_sha256": "3d546e699eb800fb8393f5f80d89a407ddef5f835c33dc8d8181ca8b11243b98"
+    "source_sha256": "3d546e699eb800fb8393f5f80d89a407ddef5f835c33dc8d8181ca8b11243b98",
+    "editorial_field_changes": [
+      {
+        "action": "split_false_kedesh_judah_kishion_issachar_identification",
+        "replaced_field_values": {
+          "primary_id": {
+            "from": "place:Kishion",
+            "to": "place:Kedesh.2"
+          },
+          "bsi.canonical_id": {
+            "from": "place:Kishion",
+            "to": "place:Kedesh.2"
+          },
+          "references": {
+            "from": [
+              "13006057"
+            ],
+            "to": [
+              "06015023"
+            ]
+          },
+          "explicit_instances": {
+            "from": {
+              "wlc": [
+                [
+                  "o130060570041"
+                ]
+              ]
+            },
+            "to": {
+              "wlc": [
+                [
+                  "o060150230012"
+                ]
+              ]
+            }
+          }
+        },
+        "removed_localization_values": {
+          "eng": {
+            "alternate_labels": [
+              "Kishion"
+            ]
+          }
+        },
+        "removed_relation_values": {
+          "referred_to_as": [
+            "place:Kadesh-barnea",
+            "place:Kishion"
+          ]
+        },
+        "removed_source_geocoordinates": {
+          "obi": {
+            "lat": "32.559061",
+            "lon": "35.246206"
+          },
+          "vizbible": {
+            "lat": "32.559061",
+            "lon": "35.246206"
+          }
+        },
+        "reason": "Joshua 15:23 explicitly names Kedesh among towns of Judah (pinned WLC o060150230012), whereas the inherited record was assigned the actual Issachar Kishion coordinates (32.559061, 35.246206) and original name from 1 Chronicles 6:57, which already belong to place:Kishion/place:Kedesh.3 (Issachar). Remove the demonstrably false cross-tribe alias, coordinate and typed canonical mapping. Preserve historic source_primary_id and SHA256, and keep both source records intact.",
+        "evidence": [
+          "Joshua 15:23 Hebrew קֶדֶשׁ o060150230012, frozen WLC/lowfat/06-Jos-015-lowfat.xml",
+          "Joshua 19:20, 21:28; 1 Chronicles 6:57 refer to Issachar/Kishion, not Judah",
+          "Original 32.559061 N / 35.246206 E coordinates belong in northern Issachar, not southern Judah"
+        ]
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
       [
-        "o130060570041"
+        "o060150230012"
       ]
     ]
-  },
-  "geocoordinates": {
-    "obi": {
-      "lat": "32.559061",
-      "lon": "35.246206"
-    },
-    "vizbible": {
-      "lat": "32.559061",
-      "lon": "35.246206"
-    }
   },
   "id": "place:Kedesh.2",
   "is_artifact": false,
@@ -44,7 +102,6 @@
   "localizations": {
     "eng": {
       "alternate_labels": [
-        "Kishion",
         "Kedesh"
       ],
       "preferred_label": "Kedesh (of Judah)"
@@ -67,14 +124,10 @@
       "City"
     ]
   },
-  "primary_id": "place:Kishion",
+  "primary_id": "place:Kedesh.2",
   "pronominal_referents": {},
   "references": [
-    "13006057"
-  ],
-  "referred_to_as": [
-    "place:Kadesh-barnea",
-    "place:Kishion"
+    "06015023"
   ],
   "subject_referents": {},
   "subregion_of": [
