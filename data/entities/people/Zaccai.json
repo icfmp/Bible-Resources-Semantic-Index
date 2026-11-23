@@ -19,10 +19,11 @@
     "source_id": "person:Zaccai",
     "source_primary_id": "person:Zabbai.2",
     "source_sha256": "71d6e90a18b7227e7e0ad8f502e5380ccaf4e2c54d3e5b09162a9df9ab00daca",
-    "editorial_reason": "Do not equate the Zaccai listed among returnees in Ezra 2:9 and Nehemiah 7:14 with Zabbai, father of Baruch in Nehemiah 3:20. Correct the inherited false canonical alias, reference and original-word assignment; retain historical ACAI source primary ID.",
+    "editorial_reason": "Do not equate the Zaccai listed among returnees in Ezra 2:9 and Nehemiah 7:14 with Zabbai, father of Baruch in Nehemiah 3:20. Correct the inherited false canonical alias, reference and original-word assignment; retain historical ACAI source primary ID. | Remove the inherited false offspring link to Baruch, which belonged only to the wrongly merged Zabbai identity.",
     "editorial_evidence": [
       "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c (WLC, exact original-word IDs)",
-      "Ezra 2:9 WLC o150020090021 Zaccai; Nehemiah 7:14 WLC o160070140021 Zaccai; Nehemiah 3:20 WLC o160030200071 Zabbai, Baruch's father; no direct source identification of the two named men"
+      "Ezra 2:9 WLC o150020090021 Zaccai; Nehemiah 7:14 WLC o160070140021 Zaccai; Nehemiah 3:20 WLC o160030200071 Zabbai, Baruch's father; no direct source identification of the two named men",
+      "Nehemiah 3:20 identifies Baruch's father as Zabbai o160030200071; the distinct Zaccai of Ezra 2:9 and Nehemiah 7:14 is not named as his father"
     ],
     "editorial_field_changes": [
       {
@@ -47,6 +48,9 @@
             ],
             "referred_to_as": [
               "person:Zabbai.2"
+            ],
+            "offspring": [
+              "person:Baruch"
             ]
           },
           "after": {
@@ -65,13 +69,15 @@
                   "o160070140021"
                 ]
               ]
-            }
+            },
+            "offspring": []
           }
         },
         "evidence": [
-          "Ezra 2:9 WLC o150020090021 Zaccai; Nehemiah 7:14 WLC o160070140021 Zaccai; Nehemiah 3:20 WLC o160030200071 Zabbai, Baruch's father; no direct source identification of the two named men"
+          "Ezra 2:9 WLC o150020090021 Zaccai; Nehemiah 7:14 WLC o160070140021 Zaccai; Nehemiah 3:20 WLC o160030200071 Zabbai, Baruch's father; no direct source identification of the two named men",
+          "Nehemiah 3:20 identifies Baruch's father as Zabbai o160030200071; the distinct Zaccai of Ezra 2:9 and Nehemiah 7:14 is not named as his father"
         ],
-        "reason": "Do not equate the Zaccai listed among returnees in Ezra 2:9 and Nehemiah 7:14 with Zabbai, father of Baruch in Nehemiah 3:20. Correct the inherited false canonical alias, reference and original-word assignment; retain historical ACAI source primary ID."
+        "reason": "Do not equate the Zaccai listed among returnees in Ezra 2:9 and Nehemiah 7:14 with Zabbai, father of Baruch in Nehemiah 3:20. Correct the inherited false canonical alias, reference and original-word assignment; retain historical ACAI source primary ID. | Remove the inherited false offspring link to Baruch, which belonged only to the wrongly merged Zabbai identity."
       }
     ]
   },
@@ -102,9 +108,6 @@
     }
   },
   "non_biblical": false,
-  "offspring": [
-    "person:Baruch"
-  ],
   "only_mentioned_in_apocrypha": false,
   "primary_id": "person:Zaccai",
   "pronominal_referents": {},
