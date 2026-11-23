@@ -22,9 +22,19 @@ TOTAL=137741
 UNIQUE=122504
 UNRESOLVED=TOTAL-UNIQUE
 
-def make(index,reviewed,en,fr,macula,audit):
+def make(index,reviewed,en,fr,macula):
+    # Recreate the full independent 137,741-word source census inside the
+    # maintained builder, rather than reading an ephemeral report generated
+    # by a preceding step. The strict checks below remain unchanged.
+    audit=AUDIT["audit"](index,reviewed,en,fr,macula)
     if (audit.get("status")!="PRIVATE_SOURCE_UBS_Greek_v1_0_original_word_sense_CANDIDATE_CENSUS_NOT_SEMANTIC_VALIDATION"
         or audit.get("original_word_ids")!=TOTAL
+        or audit.get("source_ubs_entries")!=5507
+        or audit.get("source_ubs_sense_pairs")!=9160
+        or sum(audit.get("original_word_sense_candidate_outcomes",{}).values())!=TOTAL
+        or audit.get("original_word_sense_candidate_outcomes",{}).get("no_ubs_headword")!=47
+        or audit.get("original_word_sense_candidate_outcomes",{}).get("multiple_original_ubs_lexical_headwords")!=4
+        or audit.get("original_index_and_corpus_modified") is not False
         or audit.get("original_word_sense_candidate_outcomes",{}).get(
             "unique_source_attested_ubs_lexid_candidate_NOT_contextually_validated")!=UNIQUE
         or audit.get("lexical_sense_contextually_verified")!=0
@@ -122,11 +132,11 @@ def make(index,reviewed,en,fr,macula,audit):
 
 def main():
     p=argparse.ArgumentParser(description=__doc__)
-    for key in ("index","reviewed","english","french","macula","audit","accepted","unresolved"):
+    for key in ("index","reviewed","english","french","macula","accepted","unresolved"):
         p.add_argument("--"+key,required=True,type=Path)
     a=p.parse_args()
     load=lambda q:json.loads(q.read_text(encoding="utf-8-sig"))
-    good,unresolved=make(load(a.index),load(a.reviewed),load(a.english),load(a.french),a.macula,load(a.audit))
+    good,unresolved=make(load(a.index),load(a.reviewed),load(a.english),load(a.french),a.macula)
     for path,record in ((a.accepted,good),(a.unresolved,unresolved)):
         path.write_text(json.dumps(record,ensure_ascii=False,sort_keys=True,separators=(",",":"))+"\n",encoding="utf-8")
     print("GREEK_UBS_PRIVATE_PROVISIONAL_CONTEXTUAL_CANDIDATES",json.dumps({

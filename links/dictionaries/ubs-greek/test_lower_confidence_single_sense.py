@@ -17,4 +17,16 @@ class GreekLowerConfidenceEditorialTests(unittest.TestCase):
     def test_all_source_lexid_authorizations_are_explicit(self):
         self.assertEqual(M["SOURCE_CATEGORIES"]["blank_MACULA_original_LN__exactly_one_original_UBS_LEXID_without_matching_word_LN_NOT_APPROVED"],120)
         self.assertEqual(M["SOURCE_CATEGORIES"]["nonblank_MACULA_LN_not_attested_under_UBS_headword__exactly_one_original_UBS_LEXID_without_matching_word_LN_NOT_APPROVED"],50)
+
+    def test_full_unresolved_source_partition_runs_inside_builder(self):
+        # A separate intermediate priorities JSON is not an independent
+        # review: the source-specific classification is now mandatory here.
+        from unittest.mock import patch
+        with patch.dict(M["build"].__globals__["AUDIT"], {
+            "audit": lambda *args: (_ for _ in ()).throw(
+                ValueError("source priority census invoked"))}):
+            with self.assertRaisesRegex(ValueError,"source priority census invoked"):
+                M["build"]({}, [], [])
+
+
 if __name__=="__main__":unittest.main()

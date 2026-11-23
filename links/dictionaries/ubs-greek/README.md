@@ -48,6 +48,14 @@ public BRSI index merely because they are available upstream.
   `v1_reviewed_hopote_temporal_headword.json` editorial ledgers remain
   unchanged, preserving 220 exact-word headword reviews, four abstentions,
   and the original conjunction/adverb annotations.
+- The **five composite-Strong original words** are rechecked directly from
+  the original exception register by their reviewed builder, without
+  splitting the original Strong annotations or inferring a sense.
+- The independent complete **137,741-word provisional-sense census** and
+  **15,237-word unresolved-source analysis** are executed directly inside
+  their private candidate builders. Their auditors and negative tests
+  remain maintained; the earlier temporary-report CLI handoffs were
+  duplicative, not durable editorial evidence.
 
 The source-local `source/` and `work/` checkouts are temporary and ignored.
 Do not commit unpublished detailed UBS/MACULA original-word research dumps.

@@ -54,5 +54,15 @@ class ReviewedGreekCompositeSourceTests(unittest.TestCase):
                 MOD["review_ledger"](wrong,{"source_editions":LEDGER["source_editions"]})
 
 
+
+    def test_source_composite_audit_is_mandatory_inside_review_builder(self):
+        # A reviewed ledger cannot bypass the original pinned-source five-word
+        # witness audit now that its standalone temporary file is gone.
+        untrusted={"status":"UNPINNED", "original_exception_counts":{
+            "unsupported_original_compound_strong":5}, "publication_approved":False}
+        with self.assertRaisesRegex(ValueError,"composite Strong source-provenance drift"):
+            MOD["review"]({},untrusted,LEDGER,[],[])
+
+
 if __name__=="__main__":
     unittest.main()
