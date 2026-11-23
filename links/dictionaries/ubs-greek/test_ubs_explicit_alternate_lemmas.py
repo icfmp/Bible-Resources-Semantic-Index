@@ -143,7 +143,7 @@ class OriginalBilingualUBSAlternateLemmas(unittest.TestCase):
                 MOD["project_unapproved_source_words"](item)
         bad=copy.deepcopy(original)
         bad["source_word_families"][1]["ubs_case_only_spelling_main_ids"]=[]
-        with self.assertRaisesRegex(ValueError,"no approved Greek Strong or spelling"):
+        with self.assertRaisesRegex(ValueError,"No approved Greek Strong or spelling"):
             MOD["project_unapproved_source_words"](bad)
         bad=copy.deepcopy(original)
         bad["source_word_families"][1]["source_original_word_witnesses"][0]["original_word_id"]="n00000000000"
