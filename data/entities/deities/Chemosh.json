@@ -15,10 +15,39 @@
   },
   "bsi": {
     "canonical_id": "deity:Chemosh",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "deity:Chemosh",
     "source_primary_id": "deity:Chemosh",
-    "source_sha256": "2d3c8c61fbe63e4caec7594e8774c91d94977ce3c1d643c6e208ad57399f2fab"
+    "source_sha256": "2d3c8c61fbe63e4caec7594e8774c91d94977ce3c1d643c6e208ad57399f2fab",
+    "editorial_reason": "Correct an inherited key verse with transposed or adjacent verse digits; the original pinned verse does not mention this identity, while the corrected verse is already independently attested.",
+    "editorial_evidence": [
+      "Pinned Clear-Bible WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c exact verse/source-word inspection in PR #137",
+      "Numbers 21:9 is Moses bronze serpent (no Chemosh); Numbers 21:29 names Chemosh and already has exact pinned WLC word o040210290061."
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "correct_wrong_inherited_key_verse_to_direct_source_attested_verse",
+        "reason": "Correct an inherited key verse with transposed or adjacent verse digits; the original pinned verse does not mention this identity, while the corrected verse is already independently attested.",
+        "evidence": [
+          "Pinned Clear-Bible WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c exact verse/source-word inspection in PR #137",
+          "Numbers 21:9 is Moses bronze serpent (no Chemosh); Numbers 21:29 names Chemosh and already has exact pinned WLC word o040210290061."
+        ],
+        "replaced_field_values": {
+          "before": {
+            "key_references": [
+              "04021009",
+              "24048046"
+            ]
+          },
+          "after": {
+            "key_references": [
+              "04021029",
+              "24048046"
+            ]
+          }
+        }
+      }
+    ]
   },
   "deity_type": "deity",
   "explicit_instances": {
@@ -51,7 +80,7 @@
   },
   "id": "deity:Chemosh",
   "key_references": [
-    "04021009",
+    "04021029",
     "24048046"
   ],
   "lemmas": {
