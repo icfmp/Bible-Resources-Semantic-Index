@@ -39,6 +39,13 @@ def digest(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def verify_frozen_original_index(indexed, original_path):
+    """Require exact original pre-review source-index bytes, not the private overlay."""
+    expected=indexed["editorial_candidate"].get("original_index_sha256")
+    if not isinstance(expected,str) or digest(original_path)!=expected:
+        raise ValueError("Original UBS Hebrew index SHA-256 no longer matches candidate")
+
+
 def verify_decisions(review, evidence, indexed, english):
     if (review.get("schema_version") != 1
             or review.get("status") !=
@@ -228,8 +235,7 @@ def main():
     prior = json.loads(args.source_manifest.read_text(encoding="utf-8"))
     if digest(args.index) != prior["candidate_index_sha256"]:
         raise ValueError("Input 273-word index SHA-256 does not match frozen source ledger")
-    if digest(args.original_index) != indexed["editorial_candidate"]["original_index_sha256"]:
-        raise ValueError("Original UBS Hebrew index SHA-256 no longer matches candidate")
+    verify_frozen_original_index(indexed, args.original_index)
     load = lambda path: json.loads(path.read_text(encoding="utf-8-sig"))
     reviewed = load(args.decisions)
     english = load(args.english)
