@@ -10,7 +10,28 @@
     "review_status": "source_unreviewed",
     "source_id": "place:Arbela",
     "source_primary_id": "place:Arbela",
-    "source_sha256": "16cce51383dd34a380b138373a1ac52566692609c1957b3ca3258a5d0871188c"
+    "source_sha256": "16cce51383dd34a380b138373a1ac52566692609c1957b3ca3258a5d0871188c",
+    "editorial_field_changes": [
+      {
+        "action": "correct_apocryphal_vs_canonical_place_scope",
+        "replaced_field_values": {
+          "mentioned_in_bible": {
+            "from": true,
+            "to": false
+          },
+          "non_biblical": {
+            "from": false,
+            "to": true
+          }
+        },
+        "reason": "The only source keys for this location are from original BCV8 book 78 (1 Maccabees), outside the pinned 66-book WLC/SBLGNT canon. Retain the inherited apocryphal verse keys/provenance for future edition-specific work, but do not advertise a direct canonical Bible mention or invent an original-language word.",
+        "evidence": [
+          "Original imported keys 78009002",
+          "BRSI source editions pinned to WLC 39 OT + SBLGNT 27 NT books",
+          "Original only_mentioned_in_apocrypha=true"
+        ]
+      }
+    ]
   },
   "explicit_instances": {},
   "id": "place:Arbela",
@@ -24,8 +45,8 @@
       "preferred_label": "Arbela"
     }
   },
-  "mentioned_in_bible": true,
-  "non_biblical": false,
+  "mentioned_in_bible": false,
+  "non_biblical": true,
   "only_mentioned_in_apocrypha": true,
   "primary_id": "place:Arbela",
   "pronominal_referents": {},
