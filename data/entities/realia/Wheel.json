@@ -15,7 +15,7 @@
   },
   "bsi": {
     "canonical_id": "realia:Wheel",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "realia:Wheel",
     "source_primary_id": "realia:Wheel",
     "source_sha256": "c45cf5cba32bc070e326b364f76eb3d1fc8b1352972955d109dac01f01b14515",
@@ -49,7 +49,125 @@
           "ORG BCV8 26010013",
           "Pinned original-word texts/glosses inspected in Clear-Bible/Macula Hebrew WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c; token IDs copied verbatim; source metadata and scripture unchanged"
         ]
+      },
+      {
+        "action": "restore_pinned_direct_object_name_in_source_key",
+        "reason": "Restore exact original-language source word witness from the existing source-key object reference, without promoting English gloss analogies or unrelated neighboring words.",
+        "evidence": [
+          "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c / macula-greek@8423afe47b9e8f24b7772e808af45c7159a6fe7e",
+          "Ezekiel 1:19 explicitly names wheels (אוֹפָן) twice when describing their movement alongside the living beings.",
+          "26001019 wlc = o260010190042",
+          "26001019 wlc = o260010190111"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [
+              "11007030",
+              "11007033",
+              "26001018",
+              "02014025",
+              "11007032",
+              "26010013"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o110070330072",
+                  "o110070330073"
+                ],
+                [
+                  "o260010180012",
+                  "o260010180013"
+                ],
+                [
+                  "o260010180062",
+                  "o260010180063"
+                ],
+                [
+                  "o110070330082",
+                  "o110070330083"
+                ],
+                [
+                  "o110070330092",
+                  "o110070330093"
+                ],
+                [
+                  "o110070300062"
+                ],
+                [
+                  "o020140250031"
+                ],
+                [
+                  "o110070320092"
+                ],
+                [
+                  "o260100130042"
+                ]
+              ]
+            }
+          },
+          "after": {
+            "references": [
+              "02014025",
+              "11007030",
+              "11007032",
+              "11007033",
+              "26001018",
+              "26001019",
+              "26010013"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o110070330072",
+                  "o110070330073"
+                ],
+                [
+                  "o260010180012",
+                  "o260010180013"
+                ],
+                [
+                  "o260010180062",
+                  "o260010180063"
+                ],
+                [
+                  "o110070330082",
+                  "o110070330083"
+                ],
+                [
+                  "o110070330092",
+                  "o110070330093"
+                ],
+                [
+                  "o110070300062"
+                ],
+                [
+                  "o020140250031"
+                ],
+                [
+                  "o110070320092"
+                ],
+                [
+                  "o260100130042"
+                ],
+                [
+                  "o260010190042"
+                ],
+                [
+                  "o260010190111"
+                ]
+              ]
+            }
+          }
+        }
       }
+    ],
+    "editorial_reason": "Restore exact original-language source word witness from the existing source-key object reference, without promoting English gloss analogies or unrelated neighboring words.",
+    "editorial_evidence": [
+      "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c / macula-greek@8423afe47b9e8f24b7772e808af45c7159a6fe7e",
+      "Ezekiel 1:19 explicitly names wheels (אוֹפָן) twice when describing their movement alongside the living beings.",
+      "26001019 wlc = o260010190042",
+      "26001019 wlc = o260010190111"
     ]
   },
   "explicit_instances": {
@@ -85,6 +203,12 @@
       ],
       [
         "o260100130042"
+      ],
+      [
+        "o260010190042"
+      ],
+      [
+        "o260010190111"
       ]
     ]
   },
@@ -141,11 +265,12 @@
   },
   "realia_type": "other",
   "references": [
+    "02014025",
     "11007030",
+    "11007032",
     "11007033",
     "26001018",
-    "02014025",
-    "11007032",
+    "26001019",
     "26010013"
   ],
   "subject_referents": {},
