@@ -13,10 +13,141 @@
   },
   "bsi": {
     "canonical_id": "realia:Plaster",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "realia:Plaster",
     "source_primary_id": "realia:Plaster",
-    "source_sha256": "2f5960b0d99ffa63f1db0b7489606b597cf27b02944beda1220b93424c4e50d1"
+    "source_sha256": "2f5960b0d99ffa63f1db0b7489606b597cf27b02944beda1220b93424c4e50d1",
+    "editorial_reason": "Restore a source-locked direct word for the existing semantic object/activity category; exclude unrelated neighboring tokens even when English gloss could match.",
+    "editorial_evidence": [
+      "Clear-Bible Macula Hebrew WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c / Greek SBLGNT@8423afe47b9e8f24b7772e808af45c7159a6fe7e, CI source-pinned original-word candidate report",
+      "Leviticus 14:42 uses טָח, a form of the plaster/whitewash verb. Do not mis-assign the separate dust עָפָר token in the same verse.",
+      "BCV8 03014042 exact wlc o030140420112"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "restore_pinned_lexical_object_term_from_key",
+        "reason": "Restore a source-locked direct word for the existing semantic object/activity category; exclude unrelated neighboring tokens even when English gloss could match.",
+        "evidence": [
+          "Clear-Bible Macula Hebrew WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c / Greek SBLGNT@8423afe47b9e8f24b7772e808af45c7159a6fe7e, CI source-pinned original-word candidate report",
+          "Leviticus 14:42 uses טָח, a form of the plaster/whitewash verb. Do not mis-assign the separate dust עָפָר token in the same verse.",
+          "BCV8 03014042 exact wlc o030140420112"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [
+              "05027002",
+              "05027004",
+              "18013004",
+              "19119069",
+              "26013010",
+              "26013011",
+              "26013012",
+              "26013014",
+              "26013015",
+              "26022028"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o260130120082"
+                ],
+                [
+                  "o180130040031"
+                ],
+                [
+                  "o191190690011"
+                ],
+                [
+                  "o050270020182"
+                ],
+                [
+                  "o050270040162"
+                ],
+                [
+                  "o050270020202"
+                ],
+                [
+                  "o050270040182"
+                ],
+                [
+                  "o260130100161"
+                ],
+                [
+                  "o260130110041"
+                ],
+                [
+                  "o260130140061"
+                ],
+                [
+                  "o260130150071"
+                ],
+                [
+                  "o260220280041"
+                ]
+              ]
+            }
+          },
+          "after": {
+            "references": [
+              "03014042",
+              "05027002",
+              "05027004",
+              "18013004",
+              "19119069",
+              "26013010",
+              "26013011",
+              "26013012",
+              "26013014",
+              "26013015",
+              "26022028"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o260130120082"
+                ],
+                [
+                  "o180130040031"
+                ],
+                [
+                  "o191190690011"
+                ],
+                [
+                  "o050270020182"
+                ],
+                [
+                  "o050270040162"
+                ],
+                [
+                  "o050270020202"
+                ],
+                [
+                  "o050270040182"
+                ],
+                [
+                  "o260130100161"
+                ],
+                [
+                  "o260130110041"
+                ],
+                [
+                  "o260130140061"
+                ],
+                [
+                  "o260130150071"
+                ],
+                [
+                  "o260220280041"
+                ],
+                [
+                  "o030140420112"
+                ]
+              ]
+            }
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -55,6 +186,9 @@
       ],
       [
         "o260220280041"
+      ],
+      [
+        "o030140420112"
       ]
     ]
   },
@@ -92,6 +226,7 @@
   "pronominal_referents": {},
   "realia_type": "other",
   "references": [
+    "03014042",
     "05027002",
     "05027004",
     "18013004",
