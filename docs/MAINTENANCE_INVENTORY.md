@@ -43,7 +43,7 @@ source-import path.
 | Stream | Python tools and tests | Executable entrypoint | Retained editorial authority |
 | --- | ---: | --- | --- |
 | UBS Greek | 76 total; 35 `test_*.py` modules | [Pinned Greek workflow](../.github/workflows/bsi-ubs-greek.yml) and its source-local builders | Original source locks, reviewed JSON headword/word-ID ledgers, explicit sense abstentions |
-| UBS Hebrew | 43 total; 21 `test_*.py` modules | [Pinned Hebrew workflow](../.github/workflows/bsi-ubs-hebrew.yml) and its source-local builders | Original source locks, reviewed JSON identity/disposition/abstention ledgers, v1 and v1.1 reviews |
+| UBS Hebrew | 37 total; 18 `test_*.py` modules | [Pinned Hebrew workflow](../.github/workflows/bsi-ubs-hebrew.yml) and its source-local builders | Original source locks, reviewed JSON identity/disposition/abstention ledgers, v1 and v1.1 reviews |
 
 Completed report-only probes are retired once their general exclusion rule
 is covered by a maintained test and any non-reproducible editorial decision
@@ -56,6 +56,15 @@ and verified them inside the same CI job but never stored them. It added no
 independent durable evidence beyond the source-pinned checks and the historical
 release parity gates. Its implementation and tests are preserved in Git history;
 no private research corpus was copied, published, or lost from Git.
+
+The completed Hebrew v1.1 semantic-feasibility and 72-word pilot
+was **one-shot research**, not an active v1.0 release dependency. Three
+nonpublishing pilot scripts and their three dedicated tests were retired
+from `main` under [#145](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/145);
+the two historical reports and original six source-specific editorial
+cautions remain beside UBS Hebrew. Immutable Git revisions preserve the
+reproduction commands. No v1.0 source-locked builder, negative headword
+identity guard, or published archive verification was removed.
 
 The Greek and Hebrew workflows first verify exact upstream commits and
 source checksums, then reconstruct source-backed indexes, check reviewed

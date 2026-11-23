@@ -68,10 +68,12 @@ The **2,374** are not all errors: the reviewed partition includes
 nonidentities, multiple-headword ambiguities, grammatical fragments,
 single-candidate abstentions and composite annotations. The **53,981**
 contextual candidates are evidence to study, not approved semantic choices.
-The independently screened **72-token pilot concluded NO-GO** for bulk
+The independently screened **72-token historical pilot concluded NO-GO** for bulk
 promotion; see [v1.1 feasibility](V11_SEMANTIC_FEASIBILITY.md) and
-[context pilot](V11_CONTEXTUAL_PILOT.md). An absent word override is
-not proof of a negative lexical identity.
+[context pilot](V11_CONTEXTUAL_PILOT.md). These finished, nonpublishing
+experiments are preserved as source-bound editorial records and immutable
+Git revisions, **not re-executed by the current v1.0 verification workflow**.
+An absent word override is not proof of a negative lexical identity.
 
 ## Contributor verification
 

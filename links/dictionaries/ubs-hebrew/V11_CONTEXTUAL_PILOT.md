@@ -17,8 +17,8 @@ headword families**, deterministically distributed as:
 | Rare (1–3 citation candidates) | 12 | 12 |
 | **Total** | **36** | **72** |
 
-For every selected original token, the source-pinned [private witness
-generator](build_v11_context_pilot.py) captures the unmodified WLC word
+For every selected original token, the [historical source-pinned
+private witness generator](https://github.com/icfmp/Bible-Resources-Semantic-Index/blob/6352363ac9eb2935061c3d6b421be45de202ffb5/links/dictionaries/ubs-hebrew/build_v11_context_pilot.py) captured the unmodified WLC word
 ID, biblical reference, Hebrew lemma, source English, grammatical POS and
 morphology, original Strong and SDBH, up to seven neighboring WLC tokens
 on each side, the exact UBS candidate LEXID, the other authentic UBS
@@ -28,11 +28,13 @@ glosses**. The historical v1.0.0 source revisions are unchanged.
 The 72-item *original source excerpt screen* is recorded separately in
 [v11_contextual_pilot_screening.json](
 v11_contextual_pilot_screening.json) and checked against the *original
-word-specific source witness* by
-[verify_v11_context_pilot_screening.py](
-verify_v11_context_pilot_screening.py). The source snippets are only
-uploaded as a temporary **PRIVATE 14-day GitHub Actions artifact**.
-They are not republished in the repository.
+word-specific source witness* by the
+[historical screening verifier](https://github.com/icfmp/Bible-Resources-Semantic-Index/blob/6352363ac9eb2935061c3d6b421be45de202ffb5/links/dictionaries/ubs-hebrew/verify_v11_context_pilot_screening.py).
+The original private source snippets were **runner-local**, and no
+verified durable 72-word witness archive is retained. The six explicitly
+reviewed negative/uncertain source judgments **are** preserved in the
+versioned screening JSON and this editorial report. Full reproduction
+requires the pinned original sources and historical scripts.
 
 This sample is **stratified, not a uniformly random representative
 sample**: it deliberately overweights frequent and low-frequency lexical
@@ -101,13 +103,20 @@ application are all **unchanged**.
 
 ## Technical verification boundary
 
-The [GitHub Actions UBS Hebrew workflow](
+The [maintained GitHub Actions UBS Hebrew workflow](
 ../../../../.github/workflows/bsi-ubs-hebrew.yml) rebuilds the
-complete original WLC v1 lexical candidate, regenerates the 53,981
-original-verse witness audit, creates exactly 72 original word context
-samples, and verifies the six original-word/sense-specific cautions,
-with exact identity and original revision checks. Both sample and
-screening checks preserve **0 approved contextual semantics**.
+complete source-pinned **v1.0 lexical candidate**, validates the
+original source editions and editorial/abstention ledgers, and compares
+the exact historical public ZIP. It **does not rerun** the completed
+v1.1 53,981-word feasibility experiment or its 72-word exploratory
+sample: they never contributed to the published v1.0.0 resource.
+The original v1.1 reproducer remains available through immutable
+Git links above and in the [feasibility report](V11_SEMANTIC_FEASIBILITY.md).
+
+The retained screening JSON has **zero approved contextual senses**.
+This is historical, source-specific evidence requiring renewed
+independent examination if v1.1 work resumes; it is not an active
+v1.0 CI gate.
 
 **Technical CI green is not editorial acceptance or publication**. The
 human screen above is explicitly limited to the available UBS sense
