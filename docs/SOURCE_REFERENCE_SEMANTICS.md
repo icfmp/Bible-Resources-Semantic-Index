@@ -166,7 +166,7 @@ GitHub CI adds --wlc macula-hebrew/WLC/tsv/macula-hebrew.tsv and --sblgnt macula
 
 The two disjoint resolved cohorts now contain **230 cases**. The frozen 243-case outstanding inventory has **128 as-yet-unadjudicated cases** after this batch. These are queue identities, not an error count, and issue #23 remains open for the rest of the audit.
 
-## Final frozen 128-case disposition docket (PR #141)
+## Final frozen 128-case disposition docket (PR #141, historical snapshot)
 
 The 243-case queue following PR #139 is exactly partitioned into PR #140's 115
 resolved identities and the separately frozen 128-case set at
@@ -225,3 +225,108 @@ identities remain genuinely unresolved out of the 358-case history. Issue #23
 remains open. No source Bible text, original SHA-256, release artifact or Bible
 application was altered by this docket.
 
+
+## Final twelve source-identity decisions (PR #142)
+
+PR #142 **supersedes the 12-hold conclusion above**, without modifying the
+original 243-case queue or either 115-case certified cohort. The prior 12-case
+snapshot is frozen in
+[data/source-key-last-12-candidates.json](../data/source-key-last-12-candidates.json).
+The maintained 128-case
+[review register](../data/source-key-final-128-review.json)
+now records all of their final dispositions, independent original word IDs,
+cross-source scholarly support and the distinction between an attested *word*
+and a conjectured *species, site or historical equivalence*.
+
+| Decision | Final 12 | Basis |
+| --- | ---: | --- |
+| Source-backed, reversible correction | 8 | A historical field or overconfident claim was amended, with original values retained |
+| Contextual identity verified correct without new direct-name claims | 4 | Independent original-language and external scholarly evidence |
+| Unresolved identity *key* cases remaining in the frozen cohort | **0** | No speculative botanical or geographic identification was converted into certainty |
+
+**The eight corrected source identities** are:
+
+- `deity:Beelzebub`: the WLC two-token Ekron **Baal-Zebub** in
+  2 Kings 1:2,16 belongs to the separately indexed pagan Baal family, not
+  automatically to the New Testament demon-title **Beelzebul**.
+  The historical two-key confusion is corrected in both `deity:Beelzebub`
+  and `deity:Baal` with complete original-word groups. New Testament
+  Beelzebul retains the inherited contextual Satan canonical relationship
+  of Mark 3:22–23, without making the two ancient referents identical.
+- `flora:JuniperTree`: Phoenician juniper as a candidate for Hebrew
+  `erez` in ritual cedarwood texts is **proposed**, not an exact botanical
+  identification. The differing original `ar'ar` bush words in Jeremiah
+  remain untouched. See the UBS translation guidance at
+  https://tips.translation.bible/story/phoenician-juniper-coastal-juniper/.
+- `flora:PineTree`: Aleppo pine as a candidate for `'ets shemen`
+  ('oil tree') is **proposed**. Isaiah 44:14's distinct and botanically
+  unresolved `'oren` word no longer appears as a species-specific
+  Aleppo-pine key. Compare UBS Flora:
+  https://freely-given.org/OBD/UBS/Flora/1.18.2.htm.
+- `place:Ai` and `place:Aiath`: the frozen WLC has **Ayyah**
+  in 1 Chronicles 7:28 (`o130070280141`), **Aija** in Nehemiah 11:31
+  (`o160110310052`), and **Aiath** in Isaiah 10:28
+  (`o230100280031`). Their exact original-word links are now
+  recorded, without claiming to have resolved the archaeology of the city.
+  Compare BDB's Hebrew lexicon H5857.
+- `place:Eglath-shelishiyah.1`: both Hebrew prophetic passages contain
+  the phrase; a proposed *place name* and a 'three-year-old heifer'
+  interpretation compete. The revised label explicitly states
+  **possible Moabite site**, not a known archaeological city.
+- `place:Misgab.1`: Jeremiah 48:1's definite-article Hebrew
+  `ha-misgab` means 'the stronghold'. A distinct named site is
+  unproven; the historical source record remains but no longer asserts
+  an attested biblical town.
+- `place:Ramah.8`: 1 Samuel 22:6 distinguishes **Gibeah**
+  (`o090220060112`) from a **height** (`o090220060142`).
+  That common noun does not establish another Ramah town, and the
+  spurious homonym link to Gibeah of Phinehas is withdrawn.
+
+**Four context keys retained as independently warranted:**
+
+- `place:Aphek` / Antipatris: Acts 23:31 says Antipatris, not Aphek;
+  Tel Afek's accepted later Antipatris identification justifies the
+  historical place cross-reference without inventing a Greek Aphek word
+  (https://biblical-archaeology.org/en/locations/aphek/).
+- `place:FoundationGate`: 2 Kings 11:6 calls the parallel
+  Jehoiada guard station Gate Sur; 2 Chronicles 23:5 calls it
+  Foundation Gate. Both distinct Hebrew spellings are preserved and
+  the context remains verified, not rewritten
+  (https://tips.translation.bible/story/translation-commentary-on-2-kings-116-2/).
+- `place:GerizimMount`: Judges 9:7 explicitly names Gerizim in the
+  same Shechem narrative; 9:37 speaks of the center/navel of the land
+  without naming Gerizim. The earlier forbidden equation with
+  Tabbur-erez **remains removed**. The inherited key is a broader
+  story-setting cross-reference, not a direct original-name link.
+- `place:Gomer`: Ezekiel 38:6 names the nation/people Gomer, which
+  contextualizes the existing *nation* category. It does not name
+  a specific geographic settlement or justify fabricated coordinates.
+
+**Important limits:** A biblical phrase can be securely attested even when
+its botanical species, exact archaeological site, or ancient referent is
+not knowable. The source-key audit is resolved by **making the index
+accurate about the scope of its claims**, not by manufacturing historical
+certainty. The three independently documented 1 Maccabees locations remain
+**outside** the 66-book WLC/SBLGNT pinned original-word corpora, exactly
+as in PR #141; none is silently declared Macula-certified.
+
+The generic validator
+[`scripts/validate_final_source_key_audit.py`](../scripts/validate_final_source_key_audit.py)
+now cross-checks the frozen last-twelve selection, all 128 decisions,
+all 358 unique original cohort cases, original target excerpts and all
+last-twelve cited original word IDs against the exact pinned WLC/SBLGNT
+source editions. It rejects forged or missing lexemes, undocumented
+source changes, duplicate cases, weak unsupported contextual proofs and
+the loss of original editorial receipts. Additional positive and
+adversarial regression tests are in
+[`tests/test_final_twelve_source_integrity.py`](../tests/test_final_twelve_source_integrity.py)
+and the extended final audit suite.
+
+**Final frozen-cohort accounting:** 230 prior + 52 corrected + 73 verified
+contextual + 3 separately Greek/1 Maccabees corroborated = **358/358
+historical identities given a source-qualified disposition**.
+This closes *this specific frozen identity-keys backlog* but **does
+not automatically close the broader issue #23**, validate every
+remaining lexical/place source field outside this selection or authorize
+a release. The underlying original Bible text, immutable ACAI source
+fingerprints, original word editions and Bible application remain unchanged.
