@@ -75,7 +75,10 @@ and original source annotations remain separately protected.
   40-word provisional source-position tier likewise recalibrates authentic
   UBS citation locators directly from pinned bilingual sources and its
   source-unique MACULA candidates. No global source token-number equivalence
-  is assumed.
+  is assumed. The 258-word source-verse provisional tier also
+  reruns the full bilingual UBS LEXReferences and original MACULA
+  137,741-word census inside its builder; a source-verse citation is
+  not independent contextual semantic approval.
 - **Hebrew:** v1.0 remains source-pinned, including the original-word
   identity and H/A Strong/SDBH anti-collision rules. The six committed
   JSON baselines (index plus five source-evidence snapshots) are
