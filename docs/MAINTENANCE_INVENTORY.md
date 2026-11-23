@@ -75,7 +75,20 @@ allowed. The shared strict JSON verifier compares source-rebuilt resources
 against the canonical committed baselines, with no edition-specific logic.
 The formerly separate Hebrew headword-scope report step was retired because
 both source-pinned private/final builders already call the maintained
-`audit_dictionary_scope.py` on actual WLC inputs; its tests remain. Every source-local
+`audit_dictionary_scope.py` on actual WLC inputs; its tests remain.
+The Greek and Hebrew workflows also use the shared
+`verify_historical_asset.py` to enforce **exact released archive bytes**;
+their separate temporary ZIP-fingerprint display steps were redundant with
+that historical release lock and the preceding independently verified
+`.sha256` sidecars, so both were removed.
+
+Five Hebrew source-evidence outputs now use the **same strict JSON baseline
+guard**: Strong-family reconciliation, the initial reviewed word preview,
+the remaining-family witness census, the subsequent word-specific approvals,
+and the v1 editorial-disposition coverage report. These five checked-in
+evidence JSON files are **mandatory** and unchanged. The former optional
+"pending initial pin" bypasses have been retired; source-side validators,
+word-ID checks and dedicated unit tests remain in place. Every source-local
 `test_*.py` runs individually via a fail-fast glob. Their full research
 chains remain where the source-specific build genuinely depends on them;
 a report-only stage with no downstream use is not a reason to keep an
