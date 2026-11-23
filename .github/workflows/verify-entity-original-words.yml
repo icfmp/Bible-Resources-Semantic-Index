@@ -6,6 +6,8 @@ on:
       - "data/entities/**"
       - "data/source.lock.json"
       - "data/source-key-resolved-115.json"
+      - "data/source-key-next-115-candidates.json"
+      - "scripts/inspect_next_source_key_cases.py"
       - "scripts/validate_resolved_source_keys.py"
       - "tests/test_resolved_source_keys.py"
       - "data/source-key-identity-review-115.json"
@@ -26,6 +28,8 @@ on:
       - "data/entities/**"
       - "data/source.lock.json"
       - "data/source-key-resolved-115.json"
+      - "data/source-key-next-115-candidates.json"
+      - "scripts/inspect_next_source_key_cases.py"
       - "scripts/validate_resolved_source_keys.py"
       - "tests/test_resolved_source_keys.py"
       - "data/source-key-identity-review-115.json"
@@ -215,5 +219,13 @@ jobs:
           python3 -I scripts/validate_resolved_source_keys.py \
             --data data \
             --ledger data/source-key-resolved-115.json \
+            --wlc macula-hebrew/WLC/tsv/macula-hebrew.tsv \
+            --sblgnt macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv
+
+      - name: Inspect 115 next unresolved source identities without prematurely certifying
+        run: |
+          python3 -I scripts/inspect_next_source_key_cases.py \
+            --data data \
+            --candidates data/source-key-next-115-candidates.json \
             --wlc macula-hebrew/WLC/tsv/macula-hebrew.tsv \
             --sblgnt macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv
