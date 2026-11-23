@@ -33,6 +33,26 @@
           "ORG BCV8 01006016",
           "Pinned Macula original-word TSV evidence Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c"
         ]
+      },
+      {
+        "action": "restore_exact_source_term_in_original_witness",
+        "added_reference_values": {
+          "references": [
+            "43010009"
+          ]
+        },
+        "added_original_word_groups": {
+          "SBLGNT": [
+            [
+              "n43010009004"
+            ]
+          ]
+        },
+        "reason": "John 10:9 directly uses the original Greek 'door' term; the context is metaphorical, but the source lexical word is explicit.",
+        "evidence": [
+          "ORG BCV8 43010009",
+          "Pinned Macula original-word TSV evidence Clear-Bible/macula-greek@8423afe47b9e8f24b7772e808af45c7159a6fe7e"
+        ]
       }
     ]
   },
@@ -124,6 +144,9 @@
       ],
       [
         "n66004001006"
+      ],
+      [
+        "n43010009004"
       ]
     ],
     "wlc": [
@@ -193,7 +216,8 @@
     "66003008",
     "66003020",
     "66004001",
-    "01006016"
+    "01006016",
+    "43010009"
   ],
   "subject_referents": {
     "SBLGNT": [
