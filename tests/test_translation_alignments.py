@@ -30,9 +30,9 @@ class TranslationAlignmentTests(unittest.TestCase):
             "target_edition": "synthetic LSG not real data",
             "groups": [
                 {"canon": "nt", "source": "ns", "target": "nt", "alignment": "na",
-                 "source_edition": "synthetic Greek"},
+                 "source_edition": "synthetic Greek", "source_docid": "SBLGNT", "target_docid": "LSG"},
                 {"canon": "ot", "source": "os", "target": "ot", "alignment": "oa",
-                 "source_edition": "synthetic Hebrew"},
+                 "source_edition": "synthetic Hebrew", "source_docid": "WLCM", "target_docid": "LSG"},
             ],
             "inputs": [],
         }
@@ -43,6 +43,8 @@ class TranslationAlignmentTests(unittest.TestCase):
             "ot": "id\ttext\n",
             "na": {
                 "meta": {"origin": "manual"}, "type": "translation",
+                "documents": [{"docid": "SBLGNT"}, {"docid": "LSG"}],
+                "roles": ["source", "target"],
                 "records": [
                     {"meta": {"id": "explicit-1"}, "source": ["n40001001001"],
                      "target": ["40001001001"]},
@@ -52,6 +54,8 @@ class TranslationAlignmentTests(unittest.TestCase):
             },
             "oa": {
                 "meta": {"origin": "manual"}, "type": "translation",
+                "documents": [{"docid": "WLCM"}, {"docid": "LSG"}],
+                "roles": ["source", "target"],
                 "records": [
                     {"source": ["o010010010011"], "target": ["01001001001"]},
                     {"source": [], "target": ["01001001002"]},
@@ -114,6 +118,19 @@ class TranslationAlignmentTests(unittest.TestCase):
         self.assertIn("missing_or_invalid_selector", row["problems"])
         self.assertEqual(row["source_ids_original"], ["n01001001001"])
         self.assertEqual(row["source_lookup_ids"], [None])
+
+    def test_reject_swapped_documents_and_ambiguous_roles(self):
+        self.payloads["na"]["documents"][1]["docid"] = "AnotherTranslation"
+        (self.root / "na").write_text(json.dumps(self.payloads["na"]), encoding="utf-8")
+        self.relock("na")
+        with self.assertRaisesRegex(ValueError, "document editions disagree"):
+            self.build()
+        self.payloads["na"]["documents"][1]["docid"] = "LSG"
+        self.payloads["na"]["roles"] = ["target", "source"]
+        (self.root / "na").write_text(json.dumps(self.payloads["na"]), encoding="utf-8")
+        self.relock("na")
+        with self.assertRaisesRegex(ValueError, "roles absent, reversed"):
+            self.build()
 
     def test_reject_source_tamper_and_duplicate_json_fields(self):
         (self.root / "ns").write_text("id\n", encoding="utf-8")
