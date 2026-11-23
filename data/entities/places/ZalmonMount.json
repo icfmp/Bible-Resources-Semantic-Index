@@ -15,11 +15,59 @@
     "place:TowerOfShechem"
   ],
   "bsi": {
-    "canonical_id": "place:EbalMount",
-    "review_status": "source_unreviewed",
+    "canonical_id": "place:ZalmonMount",
+    "review_status": "editorially_reviewed",
     "source_id": "place:ZalmonMount",
     "source_primary_id": "place:EbalMount",
-    "source_sha256": "4185ab004195c4e2baad8f4c65ca6c2f68d85aa7ed3eabe439389c8b4840fc72"
+    "source_sha256": "4185ab004195c4e2baad8f4c65ca6c2f68d85aa7ed3eabe439389c8b4840fc72",
+    "editorial_reason": "Judges' Mount Zalmon is an attested mountain name, not a source-proven alias of Mount Ebal; preserve historical source-primary fingerprint and uncertain cross-identity links.",
+    "editorial_evidence": [
+      "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c (WLC, exact original-word IDs)",
+      "Judges 9:48 WLC o070090480041 explicitly says Mount Zalmon; the Judges narrative locates the action near Shechem but never gives Ebal as an equivalent named mountain",
+      "Keep Psalm 68:15 as inherited key-only contextual possibility and keep the uncertain same-as hypothesis to the separately indexed Psalm Zalmon"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "separate_judges_zalmon_from_unproved_ebal_identity",
+        "replaced_field_values": {
+          "before": {
+            "canonical_id": "place:EbalMount",
+            "primary_id": "place:EbalMount",
+            "geocoordinates": {
+              "obi": {
+                "lat": "32.23293814",
+                "lon": "35.2730418"
+              },
+              "vizbible": {
+                "lat": "32.23293814",
+                "lon": "35.2730418"
+              }
+            },
+            "alternate_labels": [
+              "Mount Ebal",
+              "Zalmon",
+              "Zalmon Mount"
+            ],
+            "referred_to_as": [
+              "place:EbalMount"
+            ]
+          },
+          "after": {
+            "canonical_id": "place:ZalmonMount",
+            "primary_id": "place:ZalmonMount",
+            "geocoordinates": null,
+            "alternate_labels": [
+              "Zalmon",
+              "Zalmon Mount"
+            ]
+          }
+        },
+        "evidence": [
+          "Judges 9:48 WLC o070090480041 explicitly says Mount Zalmon; the Judges narrative locates the action near Shechem but never gives Ebal as an equivalent named mountain",
+          "Keep Psalm 68:15 as inherited key-only contextual possibility and keep the uncertain same-as hypothesis to the separately indexed Psalm Zalmon"
+        ]
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -27,16 +75,6 @@
         "o070090480041"
       ]
     ]
-  },
-  "geocoordinates": {
-    "obi": {
-      "lat": "32.23293814",
-      "lon": "35.2730418"
-    },
-    "vizbible": {
-      "lat": "32.23293814",
-      "lon": "35.2730418"
-    }
   },
   "id": "place:ZalmonMount",
   "is_artifact": false,
@@ -48,7 +86,6 @@
   "localizations": {
     "eng": {
       "alternate_labels": [
-        "Mount Ebal",
         "Zalmon",
         "Zalmon Mount"
       ],
@@ -75,13 +112,10 @@
   "possibly_same_as": [
     "place:Zalmon"
   ],
-  "primary_id": "place:EbalMount",
+  "primary_id": "place:ZalmonMount",
   "pronominal_referents": {},
   "references": [
     "07009048"
-  ],
-  "referred_to_as": [
-    "place:EbalMount"
   ],
   "subject_referents": {},
   "type": "place",
