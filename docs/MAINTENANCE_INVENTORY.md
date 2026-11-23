@@ -30,7 +30,7 @@ editorial metadata or translation-source choices.
 | Read-only identity audits | `audit_entity_relationships.py`, `audit_family_relation_consistency.py`, `audit_identity_surface.py`, `audit_name_ambiguities.py`, `audit_person_overlaps.py`, `audit_reclassified_entity_fields.py` | Native/reclassified/offline workflows for invoked audits; remaining reusable audit covered by standalone tests |
 | Lookup and distribution helpers | `resolve.py`, `distribution_profile.py`, `release_contract.py`, `stage_entity_candidate.py`, `validate_external_crosswalk.py` | Dedicated unit tests; candidate/contract verification in native CI, never direct publication |
 | Integrity and historical-asset checks | `write_integrity_receipt.py`, `verify_historical_asset.py`, `inspect_v1_published_assets.py` | Native build / pinned lexical CI and their tests; read-only V1 public ZIP compatibility inspection |
-| Caller inventory and workflow integrity | `tool_registry.py` | Read-only inventory of shared/source-owned tools, code/test/workflow/doc references; offline CI refuses nonexistent static Python workflow paths. Never infers deletion eligibility. |
+| Caller inventory and workflow integrity | `tool_registry.py`, `check_repository_hygiene.py` | Read-only inventory of shared/source-owned tools, source-level tests and code/workflow references; CI rejects missing workflow Python paths, transient tracked files, broken local Markdown destinations and new untested Python tools on PRs. Never infers deletion eligibility or checks semantic identity. |
 | Strict regenerated baseline parity | `verify_generated_json.py` | Generic read-only comparison of two **distinct, present** strict JSON files, rejecting duplicate keys, nonstandard numbers and all value/type changes; both pinned UBS source workflows depend on it. Source checks and editorial reviews remain independent. |
 
 Only current reusable scripts belong in `scripts/`. The historical ACAI
@@ -125,6 +125,17 @@ missing local Python script. Static references are **hints**: a missing caller
 is not proof of obsolete code, and dynamic imports or historical release
 checkouts require separate review. The inventory is generated when needed,
 not checked in as a second stale registry.
+
+## Future-proof maintenance gates
+
+The [maintenance policy](MAINTENANCE_POLICY.md) defines the required lifetime
+of shared tools, source-owned audits, frozen editorial evidence and temporary
+runner output. The [contributor guide](../CONTRIBUTING.md) and
+[PR checklist](../.github/PULL_REQUEST_TEMPLATE.md) apply it to new work.
+The offline hygiene gate rejects deterministic file/link/test-reference
+mistakes, while source-specific pinned CI remains the authority for script
+behavior, original-word fidelity and exact historical archive bytes. New
+alignment resources must respect these rules from their first PR.
 
 ## Rules for further retirement
 
