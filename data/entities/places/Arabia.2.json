@@ -5,16 +5,40 @@
     "review_status": "source_unreviewed",
     "source_id": "place:Arabia.2",
     "source_primary_id": "place:Arabia.2",
-    "source_sha256": "dd485ab6756989264cf7edd7653fd84055345fa92e21faa1c6557869dc869e3c"
+    "source_sha256": "dd485ab6756989264cf7edd7653fd84055345fa92e21faa1c6557869dc869e3c",
+    "editorial_field_changes": [
+      {
+        "action": "remove_proven_false_source_key_identity_claim",
+        "removed_reference_values": {
+          "key_references": [
+            "48001017",
+            "48004025"
+          ]
+        },
+        "reason": "The source identity 'Arabia Petraea' refers to the Roman province created by Trajan in AD 106, while Galatians 1:17 and 4:25 only say 'Arabia' during Paul's earlier first-century context. Those Greek tokens correctly belong to broader place:Arabia. They cannot prove a reference to a Roman province which did not yet exist. Retain the historic geographic identity as post-biblical context.",
+        "evidence": [
+          "Galatians 1:17; Galatians 4:25",
+          "https://scholarworks.brandeis.edu/esploro/outputs/graduate/Beyond-Romanization-Reevaluating-the-annexation-of/9924152066501921",
+          "https://www.bibliaplus.org/en/commentaries/236/cambridge-greek-testament-for-schools-and-colleges-commentary/galatians/0"
+        ],
+        "replaced_field_values": {
+          "mentioned_in_bible": {
+            "from": true,
+            "to": false
+          },
+          "non_biblical": {
+            "from": false,
+            "to": true
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {},
   "id": "place:Arabia.2",
   "is_artifact": false,
   "is_person": false,
-  "key_references": [
-    "48001017",
-    "48004025"
-  ],
+  "key_references": [],
   "localizations": {
     "eng": {
       "alternate_labels": [
@@ -24,12 +48,12 @@
       "preferred_label": "Arabia Petraea"
     }
   },
-  "mentioned_in_bible": true,
+  "mentioned_in_bible": false,
   "nearby_places": [
     "place:Egypt",
     "place:Judea"
   ],
-  "non_biblical": false,
+  "non_biblical": true,
   "only_mentioned_in_apocrypha": false,
   "place_types": {
     "acai": [
