@@ -10,9 +10,39 @@
     "review_status": "source_unreviewed",
     "source_id": "place:Ir-shemesh",
     "source_primary_id": "place:Ir-shemesh",
-    "source_sha256": "ba17563d2a03fe4d5c14075e61fbfda5bb21402a18cc36a936aa6bd4cb21bc21"
+    "source_sha256": "ba17563d2a03fe4d5c14075e61fbfda5bb21402a18cc36a936aa6bd4cb21bc21",
+    "editorial_field_changes": [
+      {
+        "action": "restore_direct_compound_place_word_witness",
+        "added_reference_values": {
+          "references": [
+            "06019041"
+          ]
+        },
+        "added_original_word_groups": {
+          "wlc": [
+            [
+              "o060190410062",
+              "o060190410071"
+            ]
+          ]
+        },
+        "reason": "Joshua 19:41 explicitly names Ir-Shemesh (City of the Sun), a two-token Hebrew toponym in the pinned WLC 06-Jos-019-lowfat.xml. Both parts are required to represent the complete proper-name phrase.",
+        "evidence": [
+          "Source word IDs, text, morphological segmentation and lemma inspected in frozen Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c/WLC/lowfat XML",
+          "ORG BCV8 06019041"
+        ]
+      }
+    ]
   },
-  "explicit_instances": {},
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o060190410062",
+        "o060190410071"
+      ]
+    ]
+  },
   "id": "place:Ir-shemesh",
   "is_artifact": false,
   "is_person": false,
@@ -38,7 +68,9 @@
   },
   "primary_id": "place:Ir-shemesh",
   "pronominal_referents": {},
-  "references": [],
+  "references": [
+    "06019041"
+  ],
   "subject_referents": {},
   "subregion_of": [
     "place:TerritoryOfDan"
