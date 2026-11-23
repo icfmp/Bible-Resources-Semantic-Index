@@ -12,12 +12,16 @@ class NativeKeyOnlyReconciliationTests(unittest.TestCase):
     def test_complete_current_census_is_disjoint_and_independently_accounted(self):
         report=reconcile(ROOT/"data")
         self.assertEqual(report["source_records_scanned"],5771)
-        self.assertEqual(report["key_only_pairs"],462)
+        self.assertEqual(report["key_only_pairs"],457)
         self.assertEqual(report["entities_with_key_only_claims"],264)
         self.assertEqual(report["original_indirect_pair_count"],53)
         self.assertEqual(report["individually_reviewed_unanchored_places"],27)
         self.assertEqual(report["previously_certified_unique_source_identities"],358)
         self.assertEqual(report["counts"]["previously_certified"],399)
+        self.assertEqual(report["counts"]["newly_independently_certified_context"],58)
+        self.assertEqual(report["newly_certified_original_pairs_including_native_corrections"],63)
+        self.assertEqual(report["real_native_corrections_newly_proven"],5)
+        self.assertEqual(report["unresolved_current_key_only_pairs"],0)
         self.assertEqual(sum(report["counts"].values()),report["key_only_pairs"])
         self.assertEqual(len({(c["source_id"],c["verse_id"]) for c in report["cases"]}),
                          report["key_only_pairs"])
@@ -44,7 +48,11 @@ class NativeKeyOnlyReconciliationTests(unittest.TestCase):
         self.assertEqual(cases[("place:SouthGate","13026015")]["status"],
                          "previously_certified")
         self.assertEqual(cases[("person:Paul","44009002")]["status"],
-                         "indirect_original_word_requires_coreference")
+                         "newly_independently_certified_context")
+        self.assertNotIn(("person:Moses","40001009"),cases)
+        self.assertNotIn(("group:Sidon","06010006"),cases)
+        self.assertNotIn(("place:CityOfDavid","11002010"),cases)
+        self.assertNotIn(("realia:TempleOfAnIdol","12010027"),cases)
 
 if __name__=="__main__":
     unittest.main()
