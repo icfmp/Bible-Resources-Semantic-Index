@@ -2,12 +2,75 @@
   "added_entry": false,
   "bsi": {
     "canonical_id": "place:UpperPool",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:UpperPool",
     "source_primary_id": "place:UpperPool",
-    "source_sha256": "70ea76da16272f84c332f91495ca4f4e4e7dab74aedf97ff86beb6e0c07bfd4c"
+    "source_sha256": "70ea76da16272f84c332f91495ca4f4e4e7dab74aedf97ff86beb6e0c07bfd4c",
+    "editorial_reason": "Restore the complete lexical phrase directly attested in the inherited key verse(s), retaining distinct original-word IDs, source identity, and every inherited contextual key.",
+    "editorial_evidence": [
+      "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c WLC/tsv/macula-hebrew.tsv inspected by GitHub Actions pinned original-verse job",
+      "12018017 direct original-name group o120180170272, o120180170282",
+      "23007003 direct original-name group o230070030162, o230070030172",
+      "23036002 direct original-name group o230360020162, o230360020172"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "restore_exact_attested_topographic_original_phrase",
+        "reason": "Restore the complete lexical phrase directly attested in the inherited key verse(s), retaining distinct original-word IDs, source identity, and every inherited contextual key.",
+        "evidence": [
+          "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c WLC/tsv/macula-hebrew.tsv inspected by GitHub Actions pinned original-verse job",
+          "12018017 direct original-name group o120180170272, o120180170282",
+          "23007003 direct original-name group o230070030162, o230070030172",
+          "23036002 direct original-name group o230360020162, o230360020172"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [],
+            "explicit_instances": {}
+          },
+          "after": {
+            "references": [
+              "12018017",
+              "23007003",
+              "23036002"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o120180170272",
+                  "o120180170282"
+                ],
+                [
+                  "o230070030162",
+                  "o230070030172"
+                ],
+                [
+                  "o230360020162",
+                  "o230360020172"
+                ]
+              ]
+            }
+          }
+        }
+      }
+    ]
   },
-  "explicit_instances": {},
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o120180170272",
+        "o120180170282"
+      ],
+      [
+        "o230070030162",
+        "o230070030172"
+      ],
+      [
+        "o230360020162",
+        "o230360020172"
+      ]
+    ]
+  },
   "id": "place:UpperPool",
   "is_artifact": true,
   "is_person": false,
@@ -31,7 +94,11 @@
   },
   "primary_id": "place:UpperPool",
   "pronominal_referents": {},
-  "references": [],
+  "references": [
+    "12018017",
+    "23007003",
+    "23036002"
+  ],
   "subject_referents": {},
   "subregion_of": [
     "place:Jerusalem"

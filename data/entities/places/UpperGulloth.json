@@ -2,12 +2,64 @@
   "added_entry": false,
   "bsi": {
     "canonical_id": "place:UpperGulloth",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:UpperGulloth",
     "source_primary_id": "place:UpperGulloth",
-    "source_sha256": "f328eacb8cc68cccd9bd8ae5723a1230a081bc01bc2388472e75e529d758eae2"
+    "source_sha256": "f328eacb8cc68cccd9bd8ae5723a1230a081bc01bc2388472e75e529d758eae2",
+    "editorial_reason": "Restore the complete lexical phrase directly attested in the inherited key verse(s), retaining distinct original-word IDs, source identity, and every inherited contextual key.",
+    "editorial_evidence": [
+      "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c WLC/tsv/macula-hebrew.tsv inspected by GitHub Actions pinned original-verse job",
+      "06015019 direct original-name group o060150190161, o060150190171",
+      "07001015 direct original-name group o070010150181, o070010150191"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "restore_exact_attested_topographic_original_phrase",
+        "reason": "Restore the complete lexical phrase directly attested in the inherited key verse(s), retaining distinct original-word IDs, source identity, and every inherited contextual key.",
+        "evidence": [
+          "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c WLC/tsv/macula-hebrew.tsv inspected by GitHub Actions pinned original-verse job",
+          "06015019 direct original-name group o060150190161, o060150190171",
+          "07001015 direct original-name group o070010150181, o070010150191"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [],
+            "explicit_instances": {}
+          },
+          "after": {
+            "references": [
+              "06015019",
+              "07001015"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o060150190161",
+                  "o060150190171"
+                ],
+                [
+                  "o070010150181",
+                  "o070010150191"
+                ]
+              ]
+            }
+          }
+        }
+      }
+    ]
   },
-  "explicit_instances": {},
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o060150190161",
+        "o060150190171"
+      ],
+      [
+        "o070010150181",
+        "o070010150191"
+      ]
+    ]
+  },
   "id": "place:UpperGulloth",
   "is_artifact": false,
   "is_person": false,
@@ -33,7 +85,10 @@
   },
   "primary_id": "place:UpperGulloth",
   "pronominal_referents": {},
-  "references": [],
+  "references": [
+    "06015019",
+    "07001015"
+  ],
   "subject_referents": {},
   "type": "place"
 }

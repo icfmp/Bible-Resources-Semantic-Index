@@ -2,10 +2,39 @@
   "added_entry": false,
   "bsi": {
     "canonical_id": "place:RedSea.2",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:RedSea.2",
     "source_primary_id": "place:RedSea.2",
-    "source_sha256": "a4bed5a3aba600aaa8ba15f14a530a2145f7e1b2a3eac06d50c46376c148b46f"
+    "source_sha256": "a4bed5a3aba600aaa8ba15f14a530a2145f7e1b2a3eac06d50c46376c148b46f",
+    "editorial_reason": "Correct a false directly-named canonical place claim: the inherited key verse names a different original-language term or a broader waterbody, not this historically named locality. Historical context keys remain untouched.",
+    "editorial_evidence": [
+      "Pinned exact Macula Hebrew WLC @47db250bd55d0d8577f2a94fba114ef16c35b23c and Greek SBLGNT @8423afe47b9e8f24b7772e808af45c7159a6fe7e, inspected with the original-verse tool",
+      "1 Kings 9:26 WLC o110090260121 + o110090260131 names Yam Suph (Sea of Reeds/Red Sea) by Ezion-Geber; the modern sub-basin proper name Gulf of Aqaba is not present in Hebrew."
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "remove_unattested_modern_or_variant_place_name_scope",
+        "reason": "Correct a false directly-named canonical place claim: the inherited key verse names a different original-language term or a broader waterbody, not this historically named locality. Historical context keys remain untouched.",
+        "evidence": [
+          "Pinned exact Macula Hebrew WLC @47db250bd55d0d8577f2a94fba114ef16c35b23c and Greek SBLGNT @8423afe47b9e8f24b7772e808af45c7159a6fe7e, inspected with the original-verse tool",
+          "1 Kings 9:26 WLC o110090260121 + o110090260131 names Yam Suph (Sea of Reeds/Red Sea) by Ezion-Geber; the modern sub-basin proper name Gulf of Aqaba is not present in Hebrew."
+        ],
+        "replaced_field_values": {
+          "before": {
+            "mentioned_in_bible": true,
+            "non_biblical": false,
+            "alternate_labels": [
+              "Red Sea"
+            ]
+          },
+          "after": {
+            "mentioned_in_bible": false,
+            "non_biblical": true,
+            "alternate_labels": []
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {},
   "id": "place:RedSea.2",
@@ -16,14 +45,11 @@
   ],
   "localizations": {
     "eng": {
-      "alternate_labels": [
-        "Red Sea"
-      ],
       "preferred_label": "Gulf of Aqaba"
     }
   },
-  "mentioned_in_bible": true,
-  "non_biblical": false,
+  "mentioned_in_bible": false,
+  "non_biblical": true,
   "only_mentioned_in_apocrypha": false,
   "place_types": {
     "acai": [

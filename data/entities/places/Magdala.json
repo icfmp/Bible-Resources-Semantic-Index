@@ -7,10 +7,43 @@
   },
   "bsi": {
     "canonical_id": "place:Magdala",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:Magdala",
     "source_primary_id": "place:Magdala",
-    "source_sha256": "52cb101f219a8790a8f0a225e7016e401bebe7c298f60cb50a5bd819e8e9e2a0"
+    "source_sha256": "52cb101f219a8790a8f0a225e7016e401bebe7c298f60cb50a5bd819e8e9e2a0",
+    "editorial_reason": "Correct a false directly-named canonical place claim: the inherited key verse names a different original-language term or a broader waterbody, not this historically named locality. Historical context keys remain untouched.",
+    "editorial_evidence": [
+      "Pinned exact Macula Hebrew WLC @47db250bd55d0d8577f2a94fba114ef16c35b23c and Greek SBLGNT @8423afe47b9e8f24b7772e808af45c7159a6fe7e, inspected with the original-verse tool",
+      "Matthew 15:39 pinned SBLGNT n400150399014 names Μαγαδάν (Magadan), not Magdala. Later textual variants/translations must not override this pinned reading."
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "remove_unattested_modern_or_variant_place_name_scope",
+        "reason": "Correct a false directly-named canonical place claim: the inherited key verse names a different original-language term or a broader waterbody, not this historically named locality. Historical context keys remain untouched.",
+        "evidence": [
+          "Pinned exact Macula Hebrew WLC @47db250bd55d0d8577f2a94fba114ef16c35b23c and Greek SBLGNT @8423afe47b9e8f24b7772e808af45c7159a6fe7e, inspected with the original-verse tool",
+          "Matthew 15:39 pinned SBLGNT n400150399014 names Μαγαδάν (Magadan), not Magdala. Later textual variants/translations must not override this pinned reading."
+        ],
+        "replaced_field_values": {
+          "before": {
+            "mentioned_in_bible": true,
+            "non_biblical": false,
+            "alternate_labels": [
+              "Tarichaea",
+              "Taricheai"
+            ]
+          },
+          "after": {
+            "mentioned_in_bible": false,
+            "non_biblical": true,
+            "alternate_labels": [
+              "Tarichaea",
+              "Taricheai"
+            ]
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {},
   "geocoordinates": {
@@ -34,11 +67,11 @@
       "preferred_label": "Magdala"
     }
   },
-  "mentioned_in_bible": true,
+  "mentioned_in_bible": false,
   "nearby_places": [
     "place:GalileeSea"
   ],
-  "non_biblical": false,
+  "non_biblical": true,
   "only_mentioned_in_apocrypha": false,
   "place_types": {
     "acai": [

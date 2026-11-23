@@ -2,12 +2,53 @@
   "added_entry": false,
   "bsi": {
     "canonical_id": "place:TheLordWillProvide",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:TheLordWillProvide",
     "source_primary_id": "place:TheLordWillProvide",
-    "source_sha256": "43a4643c3140ba98f044aed3bada8b0d769797ba723b17d83f8ce7ebdffa3ff2"
+    "source_sha256": "43a4643c3140ba98f044aed3bada8b0d769797ba723b17d83f8ce7ebdffa3ff2",
+    "editorial_reason": "Genesis 22:14 explicitly names Abraham's place YHWH-yireh. Attach the exact LORD and provide components, not the subsequent generic mountain language.",
+    "editorial_evidence": [
+      "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c WLC/tsv/macula-hebrew.tsv",
+      "Genesis 22:14 ORG 01022014 WLC o010220140061 (יהוה) and o010220140071 (יִרְאֶה)"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "restore_exact_attested_topographic_original_phrase",
+        "reason": "Genesis 22:14 explicitly names Abraham's place YHWH-yireh. Attach the exact LORD and provide components, not the subsequent generic mountain language.",
+        "evidence": [
+          "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c WLC/tsv/macula-hebrew.tsv",
+          "Genesis 22:14 ORG 01022014 WLC o010220140061 (יהוה) and o010220140071 (יִרְאֶה)"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [],
+            "explicit_instances": {}
+          },
+          "after": {
+            "references": [
+              "01022014"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o010220140061",
+                  "o010220140071"
+                ]
+              ]
+            }
+          }
+        }
+      }
+    ]
   },
-  "explicit_instances": {},
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o010220140061",
+        "o010220140071"
+      ]
+    ]
+  },
   "id": "place:TheLordWillProvide",
   "is_artifact": false,
   "is_person": false,
@@ -35,7 +76,9 @@
   ],
   "primary_id": "place:TheLordWillProvide",
   "pronominal_referents": {},
-  "references": [],
+  "references": [
+    "01022014"
+  ],
   "subject_referents": {},
   "type": "place"
 }

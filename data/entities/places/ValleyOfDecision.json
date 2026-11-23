@@ -7,12 +7,63 @@
   },
   "bsi": {
     "canonical_id": "place:ValleyOfDecision",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:ValleyOfDecision",
     "source_primary_id": "place:ValleyOfDecision",
-    "source_sha256": "6f7126ec79423f5d8271dd4ce5291027100979af7e53f9d972dfd4941ff9f610"
+    "source_sha256": "6f7126ec79423f5d8271dd4ce5291027100979af7e53f9d972dfd4941ff9f610",
+    "editorial_reason": "Joel 4:14 (ORG) contains the full valley-of-decision phrase twice; preserve both exact verse-internal witnesses and avoid equating a lexical mention with a known geographical coordinate.",
+    "editorial_evidence": [
+      "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c WLC/tsv/macula-hebrew.tsv inspected by GitHub Actions pinned original-verse job",
+      "29004014 direct original-name group o290040140032, o290040140042",
+      "29004014 direct original-name group o290040140092, o290040140102"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "restore_exact_attested_topographic_original_phrase",
+        "reason": "Joel 4:14 (ORG) contains the full valley-of-decision phrase twice; preserve both exact verse-internal witnesses and avoid equating a lexical mention with a known geographical coordinate.",
+        "evidence": [
+          "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c WLC/tsv/macula-hebrew.tsv inspected by GitHub Actions pinned original-verse job",
+          "29004014 direct original-name group o290040140032, o290040140042",
+          "29004014 direct original-name group o290040140092, o290040140102"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [],
+            "explicit_instances": {}
+          },
+          "after": {
+            "references": [
+              "29004014"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o290040140032",
+                  "o290040140042"
+                ],
+                [
+                  "o290040140092",
+                  "o290040140102"
+                ]
+              ]
+            }
+          }
+        }
+      }
+    ]
   },
-  "explicit_instances": {},
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o290040140032",
+        "o290040140042"
+      ],
+      [
+        "o290040140092",
+        "o290040140102"
+      ]
+    ]
+  },
   "id": "place:ValleyOfDecision",
   "is_artifact": false,
   "is_person": false,
@@ -37,7 +88,9 @@
   },
   "primary_id": "place:ValleyOfDecision",
   "pronominal_referents": {},
-  "references": [],
+  "references": [
+    "29004014"
+  ],
   "referred_to_as": [
     "place:ValleyOfJehoshaphat"
   ],

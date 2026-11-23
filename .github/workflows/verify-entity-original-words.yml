@@ -84,6 +84,11 @@ jobs:
             --wlc macula-hebrew/WLC/tsv/macula-hebrew.tsv \
             --sblgnt macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv \
             --verses 43004006 43004005 01014001 19083008 13002049 27011005 48001017 26038006 04014025 43004025
+          # Independent complete original-word witnesses for unanchored geographic phrases.
+          python3 -I scripts/inspect_pinned_original_verse.py \
+            --wlc macula-hebrew/WLC/tsv/macula-hebrew.tsv \
+            --sblgnt macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv \
+            --verses 07009037 07009046 07009047 07009049 12018017 23007003 23036002 29004014 01026017 06016001 09023024 09023025 01021021 04013026 09025001 04014025 05001040 06015019 07001015 01022014 11006005 11008010 04022036 23015005 24048034 40015039 05032014 11009026 02010019 04033010 04033011 27011005 27011011
       - name: Full key-only reference investigation against pinned WLC and SBLGNT
         run: |
           python3 -I tests/test_audit_all_key_reference_original_words.py
