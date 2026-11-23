@@ -15,10 +15,129 @@
   },
   "bsi": {
     "canonical_id": "person:Esau",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "person:Edom",
     "source_primary_id": "person:Esau",
-    "source_sha256": "5354fe16c4aacc1065f37e3d60b8210e03220c02bef099ade9abb7ac248e7629"
+    "source_sha256": "5354fe16c4aacc1065f37e3d60b8210e03220c02bef099ade9abb7ac248e7629",
+    "editorial_reason": "Restore original-word mentions for the explicitly named person in reviewed source-key verses. The historical source alias/canonical identity is preserved and no similarly named individual is merged.",
+    "editorial_evidence": [
+      "Pinned Clear-Bible Macula WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c / SBLGNT@8423afe47b9e8f24b7772e808af45c7159a6fe7e, full original-word source audit and exact ID verification in GitHub Actions",
+      "Genesis 25:25-29 explicitly names Esau, the same Edom/Esau man renamed Edom in Genesis 25:30; attach to person Esau, not to geographic Edom.",
+      "01025025 wlc: o010250250091",
+      "01025026 wlc: o010250260081",
+      "01025027 wlc: o010250270041",
+      "01025028 wlc: o010250280041",
+      "01025029 wlc: o010250290051"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "restore_exact_person_name_witnesses_from_original",
+        "reason": "Restore original-word mentions for the explicitly named person in reviewed source-key verses. The historical source alias/canonical identity is preserved and no similarly named individual is merged.",
+        "evidence": [
+          "Pinned Clear-Bible Macula WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c / SBLGNT@8423afe47b9e8f24b7772e808af45c7159a6fe7e, full original-word source audit and exact ID verification in GitHub Actions",
+          "Genesis 25:25-29 explicitly names Esau, the same Edom/Esau man renamed Edom in Genesis 25:30; attach to person Esau, not to geographic Edom.",
+          "01025025 wlc: o010250250091",
+          "01025026 wlc: o010250260081",
+          "01025027 wlc: o010250270041",
+          "01025028 wlc: o010250280041",
+          "01025029 wlc: o010250290051"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [
+              "01025030",
+              "01036001",
+              "01036008",
+              "01036019",
+              "01036021",
+              "13001051",
+              "13001054"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o010250300181"
+                ],
+                [
+                  "o010360010051"
+                ],
+                [
+                  "o010360080071"
+                ],
+                [
+                  "o010360190071"
+                ],
+                [
+                  "o010360210101"
+                ],
+                [
+                  "o130010510051"
+                ],
+                [
+                  "o130010540071"
+                ]
+              ]
+            }
+          },
+          "after": {
+            "references": [
+              "01025025",
+              "01025026",
+              "01025027",
+              "01025028",
+              "01025029",
+              "01025030",
+              "01036001",
+              "01036008",
+              "01036019",
+              "01036021",
+              "13001051",
+              "13001054"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o010250300181"
+                ],
+                [
+                  "o010360010051"
+                ],
+                [
+                  "o010360080071"
+                ],
+                [
+                  "o010360190071"
+                ],
+                [
+                  "o010360210101"
+                ],
+                [
+                  "o130010510051"
+                ],
+                [
+                  "o130010540071"
+                ],
+                [
+                  "o010250250091"
+                ],
+                [
+                  "o010250260081"
+                ],
+                [
+                  "o010250270041"
+                ],
+                [
+                  "o010250280041"
+                ],
+                [
+                  "o010250290051"
+                ]
+              ]
+            }
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -42,6 +161,21 @@
       ],
       [
         "o130010540071"
+      ],
+      [
+        "o010250250091"
+      ],
+      [
+        "o010250260081"
+      ],
+      [
+        "o010250270041"
+      ],
+      [
+        "o010250280041"
+      ],
+      [
+        "o010250290051"
       ]
     ]
   },
@@ -93,6 +227,11 @@
   "primary_id": "person:Esau",
   "pronominal_referents": {},
   "references": [
+    "01025025",
+    "01025026",
+    "01025027",
+    "01025028",
+    "01025029",
     "01025030",
     "01036001",
     "01036008",
