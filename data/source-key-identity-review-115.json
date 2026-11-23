@@ -1,0 +1,2381 @@
+{
+  "schema_version": 1,
+  "policy": "Curated source identity review; original Macula gloss/name matches are hypotheses until corroborated by biblical identity and context. No automatic direct-word promotion, no implicit historical place name, no source-content rewriting.",
+  "original_sources": {
+    "wlc": "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c",
+    "sblgnt": "Clear-Bible/macula-greek@8423afe47b9e8f24b7772e808af45c7159a6fe7e"
+  },
+  "audit_scope": "115 distinct additional native source entities reviewed after previously merged 52 corrected source records. Each review disposition is not a correction; historical original identities remain separate from contextual keys and geographic constructs.",
+  "reviews": [
+    {
+      "source_id": "deity:Beelzebub",
+      "classification": "uncertain_not_promoted",
+      "reviewed_key_verses": [
+        "12001002",
+        "12001016"
+      ],
+      "rationale": "2 Kings 1:2,16 explicitly names Baal-zebub of Ekron, a Philistine deity; the later New Testament Beelzebul title for Satan must not be equated directly with this historical Baal-zebub name solely through similar spelling.",
+      "original_word_evidence": [],
+      "existing_indirect_word_links": [],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "review_scope": "original_lemma_and_contextual_identity_collation"
+    },
+    {
+      "source_id": "deity:Breath",
+      "classification": "uncertain_not_promoted",
+      "reviewed_key_verses": [
+        "13012018"
+      ],
+      "rationale": "1 Chronicles 12:18 places divine spirit upon Amasai; using the Hebrew ruach expression as an independently named Breath/Holy Spirit personal identity remains theological identification, not a literal distinct proper name.",
+      "original_word_evidence": [],
+      "existing_indirect_word_links": [],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "review_scope": "original_lemma_and_contextual_identity_collation"
+    },
+    {
+      "source_id": "deity:Highest",
+      "classification": "direct_witness_restored",
+      "reviewed_key_verses": [
+        "01014019",
+        "01014020"
+      ],
+      "rationale": "Genesis 14:19-20 names El Elyon (God Most High) in full, with the exact two-token pinned Hebrew title groups restored as direct divine-name evidence.",
+      "original_word_evidence": [
+        {
+          "verse_id": "01014019",
+          "corpus": "wlc",
+          "word_id": "o010140190052",
+          "lemma": "אֵל",
+          "english": "God",
+          "gloss": "God"
+        },
+        {
+          "verse_id": "01014019",
+          "corpus": "wlc",
+          "word_id": "o010140190061",
+          "lemma": "עֶלְיוֹן",
+          "english": "most high",
+          "gloss": "Most.High"
+        },
+        {
+          "verse_id": "01014020",
+          "corpus": "wlc",
+          "word_id": "o010140200021",
+          "lemma": "אֵל",
+          "english": "God",
+          "gloss": "God"
+        },
+        {
+          "verse_id": "01014020",
+          "corpus": "wlc",
+          "word_id": "o010140200031",
+          "lemma": "עֶלְיוֹן",
+          "english": "most high",
+          "gloss": "Most.High"
+        }
+      ],
+      "existing_indirect_word_links": [],
+      "editorial_outcome": "source_record_corrected_in_this_review",
+      "review_scope": "original_lemma_and_contextual_identity_collation"
+    },
+    {
+      "source_id": "deity:HolySpirit",
+      "classification": "uncertain_not_promoted",
+      "reviewed_key_verses": [
+        "01001002"
+      ],
+      "rationale": "Genesis 1:2 says ruach Elohim (Spirit of God); direct identification with the later indexed Holy Spirit persona is a theological interpretation, not an independently anchored original-name identity.",
+      "original_word_evidence": [
+        {
+          "verse_id": "01001002",
+          "corpus": "wlc",
+          "word_id": "o010010020092",
+          "lemma": "רוּחַ",
+          "english": "Spirit",
+          "gloss": "the.spirit"
+        }
+      ],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "original_source_edition": "WLC or SBLGNT as specified by witness",
+      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity"
+    },
+    {
+      "source_id": "deity:Hosts",
+      "classification": "false_original_name_match",
+      "reviewed_key_verses": [
+        "06005014",
+        "19085009"
+      ],
+      "rationale": "Joshua 5:14 names the captain of the Lord's army; Psalm 85:9 names YHWH, but neither proposed LORD/lord token is the distinct title 'Lord of Hosts' by itself.",
+      "original_word_evidence": [
+        {
+          "verse_id": "06005014",
+          "corpus": "wlc",
+          "word_id": "o060050140071",
+          "lemma": "יהוה",
+          "english": "LORD",
+          "gloss": "of.Yahweh"
+        },
+        {
+          "verse_id": "06005014",
+          "corpus": "wlc",
+          "word_id": "o060050140191",
+          "lemma": "אָדֹון",
+          "english": "lord",
+          "gloss": "lord"
+        },
+        {
+          "verse_id": "19085009",
+          "corpus": "wlc",
+          "word_id": "o190850090051",
+          "lemma": "יהוה",
+          "english": "LORD",
+          "gloss": "Yahweh"
+        }
+      ],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "original_source_edition": "WLC or SBLGNT as specified by witness",
+      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity"
+    },
+    {
+      "source_id": "deity:Satan",
+      "classification": "contextual_not_direct",
+      "reviewed_key_verses": [
+        "01003001"
+      ],
+      "rationale": "Genesis 3:1 explicitly names the serpent (nachash), not Satan; a later theological identification of the serpent must not become a fabricated Satan lexical witness in the Pentateuch.",
+      "original_word_evidence": [],
+      "existing_indirect_word_links": [],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "review_scope": "original_lemma_and_contextual_identity_collation"
+    },
+    {
+      "source_id": "fauna:Chameleon",
+      "classification": "contextual_not_direct",
+      "reviewed_key_verses": [
+        "03011031"
+      ],
+      "rationale": "Leviticus 11:31 refers collectively to these unclean creeping creatures after the specific species list in 11:30; the word chameleon is not repeated as an individually named species here.",
+      "original_word_evidence": [],
+      "existing_indirect_word_links": [],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "review_scope": "original_lemma_and_contextual_identity_collation"
+    },
+    {
+      "source_id": "flora:Flax",
+      "classification": "contextual_not_direct",
+      "reviewed_key_verses": [
+        "02028042"
+      ],
+      "rationale": "Exodus 28:42 names linen (bad) as an undergarment material, not the botanical flax plant as a species; no botanical direct source word is inserted.",
+      "original_word_evidence": [],
+      "existing_indirect_word_links": [],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "review_scope": "original_lemma_and_contextual_identity_collation"
+    },
+    {
+      "source_id": "flora:JuniperTree",
+      "classification": "uncertain_not_promoted",
+      "reviewed_key_verses": [
+        "03014004",
+        "04019006"
+      ],
+      "rationale": "Leviticus 14:4 and Numbers 19:6 say erez (cedar); equating that ancient botanical term with a particular modern Phoenician juniper species exceeds this source witness.",
+      "original_word_evidence": [
+        {
+          "verse_id": "03014004",
+          "corpus": "wlc",
+          "word_id": "o030140040101",
+          "lemma": "אֶרֶז",
+          "english": "cedar",
+          "gloss": "of.cedar"
+        },
+        {
+          "verse_id": "04019006",
+          "corpus": "wlc",
+          "word_id": "o040190060041",
+          "lemma": "אֶרֶז",
+          "english": "cedar",
+          "gloss": "of.cedar"
+        }
+      ],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "original_source_edition": "WLC or SBLGNT as specified by witness",
+      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity"
+    },
+    {
+      "source_id": "flora:PineTree",
+      "classification": "uncertain_not_promoted",
+      "reviewed_key_verses": [
+        "23044014"
+      ],
+      "rationale": "Isaiah 44:14 has the disputed tree lexeme oren; the source's English cedar gloss is not sufficient for a modern pine taxonomic claim.",
+      "original_word_evidence": [
+        {
+          "verse_id": "23044014",
+          "corpus": "wlc",
+          "word_id": "o230440140121",
+          "lemma": "אֹרֶן",
+          "english": "cedar",
+          "gloss": "laurel"
+        }
+      ],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "original_source_edition": "WLC or SBLGNT as specified by witness",
+      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity"
+    },
+    {
+      "source_id": "flora:Poplar",
+      "classification": "wrong_identity_keys_removed",
+      "reviewed_key_verses": [
+        "10005023"
+      ],
+      "rationale": "2 Samuel 5:23 names the Hebrew baka balsam trees, not white poplar. The misleading poplar key is removed with before/after receipt while original source poplar words remain.",
+      "original_word_evidence": [],
+      "existing_indirect_word_links": [],
+      "editorial_outcome": "source_record_corrected_in_this_review",
+      "review_scope": "original_lemma_and_contextual_identity_collation"
+    },
+    {
+      "source_id": "group:Agag",
+      "classification": "contextual_not_direct",
+      "reviewed_key_verses": [
+        "09015032",
+        "09015033"
+      ],
+      "rationale": "1 Samuel 15:32-33 names the individual King Agag, not an Agagite population; Esther supplies the group's explicit Agagite witnesses.",
+      "original_word_evidence": [
+        {
+          "verse_id": "09015032",
+          "corpus": "wlc",
+          "word_id": "o090150320061",
+          "lemma": "אֲגָג",
+          "english": "Agag",
+          "gloss": "Agag"
+        },
+        {
+          "verse_id": "09015032",
+          "corpus": "wlc",
+          "word_id": "o090150320111",
+          "lemma": "אֲגָג",
+          "english": "Agag",
+          "gloss": "Agag"
+        },
+        {
+          "verse_id": "09015032",
+          "corpus": "wlc",
+          "word_id": "o090150320141",
+          "lemma": "אֲגָג",
+          "english": "Agag",
+          "gloss": "Agag"
+        },
+        {
+          "verse_id": "09015033",
+          "corpus": "wlc",
+          "word_id": "o090150330141",
+          "lemma": "אֲגָג",
+          "english": "Agag",
+          "gloss": "Agag"
+        }
+      ],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "original_source_edition": "WLC or SBLGNT as specified by witness",
+      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity"
+    },
+    {
+      "source_id": "group:Amalek",
+      "classification": "contextual_not_direct",
+      "reviewed_key_verses": [
+        "01036012"
+      ],
+      "rationale": "Genesis 36:12 lists Amalek as a named genealogical descendant, not a lexical reference to the Amalekite population.",
+      "original_word_evidence": [
+        {
+          "verse_id": "01036012",
+          "corpus": "wlc",
+          "word_id": "o010360120101",
+          "lemma": "עֲמָלֵק",
+          "english": "Amalek",
+          "gloss": "Amalek"
+        }
+      ],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "original_source_edition": "WLC or SBLGNT as specified by witness",
+      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity"
+    },
+    {
+      "source_id": "group:Amorites",
+      "classification": "wrong_identity_keys_removed",
+      "reviewed_key_verses": [
+        "13001013"
+      ],
+      "rationale": "1 Chronicles 1:13 names Canaan, Sidon, Heth, not Amorites; 1 Chronicles 1:14 contains the directly attested Amorite term already indexed. Remove the adjacent wrong key.",
+      "original_word_evidence": [],
+      "existing_indirect_word_links": [],
+      "editorial_outcome": "source_record_corrected_in_this_review",
+      "review_scope": "original_lemma_and_contextual_identity_collation"
+    },
+    {
+      "source_id": "group:Arabia",
+      "classification": "contextual_not_direct",
+      "reviewed_key_verses": [
+        "23021013",
+        "48001017"
+      ],
+      "rationale": "Isaiah 21:13 and Galatians 1:17 mention geographical Arabia, not the ethnonym of Arabian people. Retain the group-related historical context without promoting any geographical-name word.",
+      "original_word_evidence": [],
+      "existing_indirect_word_links": [],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "review_scope": "original_lemma_and_contextual_identity_collation"
+    },
+    {
+      "source_id": "group:Aramean",
+      "classification": "contextual_not_direct",
+      "reviewed_key_verses": [
+        "07003008"
+      ],
+      "rationale": "Judges 3:8 names the country Aram-Naharaim and its king, not the distinct Aramean people-name lexeme; the key is contextual.",
+      "original_word_evidence": [],
+      "existing_indirect_word_links": [],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "review_scope": "original_lemma_and_contextual_identity_collation"
+    },
+    {
+      "source_id": "group:Beeroth",
+      "classification": "contextual_not_direct",
+      "reviewed_key_verses": [
+        "06009018"
+      ],
+      "rationale": "Joshua 9:18 describes Israelites not striking the Gibeonite residents and their sworn protection; Beeroth as a Gibeonite town is named nearby in 9:17 but not directly in verse 18.",
+      "original_word_evidence": [],
+      "existing_indirect_word_links": [],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "review_scope": "original_lemma_and_contextual_identity_collation"
+    },
+    {
+      "source_id": "group:Canaan",
+      "classification": "contextual_not_direct",
+      "reviewed_key_verses": [
+        "01010015"
+      ],
+      "rationale": "Genesis 10:15 identifies the eponymous father Canaan; his later people, Canaanites, are a different type of entity.",
+      "original_word_evidence": [
+        {
+          "verse_id": "01010015",
+          "corpus": "wlc",
+          "word_id": "o010100150012",
+          "lemma": "כְּנַעַן",
+          "english": "Canaan",
+          "gloss": "Canaan"
+        }
+      ],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "original_source_edition": "WLC or SBLGNT as specified by witness",
+      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity"
+    },
+    {
+      "source_id": "group:Dan",
+      "classification": "contextual_not_direct",
+      "reviewed_key_verses": [
+        "01030006"
+      ],
+      "rationale": "Genesis 30:6 names Leah/Rachel's family member Dan, not the later Danite tribe.",
+      "original_word_evidence": [
+        {
+          "verse_id": "01030006",
+          "corpus": "wlc",
+          "word_id": "o010300060151",
+          "lemma": "דָּן",
+          "english": "Dan",
+          "gloss": "Dan"
+        }
+      ],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "original_source_edition": "WLC or SBLGNT as specified by witness",
+      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity"
+    },
+    {
+      "source_id": "group:Elam",
+      "classification": "contextual_not_direct",
+      "reviewed_key_verses": [
+        "01010022"
+      ],
+      "rationale": "Genesis 10:22 names Elam among Shem's sons, not the later Elamite people group.",
+      "original_word_evidence": [
+        {
+          "verse_id": "01010022",
+          "corpus": "wlc",
+          "word_id": "o010100220031",
+          "lemma": "עֵילָם",
+          "english": "Elam",
+          "gloss": "[were].Elam"
+        }
+      ],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "original_source_edition": "WLC or SBLGNT as specified by witness",
+      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity"
+    },
+    {
+      "source_id": "group:Gentile",
+      "classification": "uncertain_not_promoted",
+      "reviewed_key_verses": [
+        "23056007",
+        "36003009"
+      ],
+      "rationale": "Isaiah 56:7 and Zephaniah 3:9 have the generic plural peoples/amim, not an explicit lexical category limited to non-Israelite Gentiles.",
+      "original_word_evidence": [
+        {
+          "verse_id": "23056007",
+          "corpus": "wlc",
+          "word_id": "o230560070192",
+          "lemma": "עַם",
+          "english": "peoples",
+          "gloss": "peoples"
+        },
+        {
+          "verse_id": "36003009",
+          "corpus": "wlc",
+          "word_id": "o360030090051",
+          "lemma": "עַם",
+          "english": "peoples",
+          "gloss": "peoples"
+        }
+      ],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "original_source_edition": "WLC or SBLGNT as specified by witness",
+      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity"
+    },
+    {
+      "source_id": "group:Gershon",
+      "classification": "contextual_not_direct",
+      "reviewed_key_verses": [
+        "01046011"
+      ],
+      "rationale": "Genesis 46:11 refers to Gershon as an individual son of Levi. The Gershonite lineage has separate directly attested group witnesses.",
+      "original_word_evidence": [
+        {
+          "verse_id": "01046011",
+          "corpus": "wlc",
+          "word_id": "o010460110031",
+          "lemma": "גֵּרְשׁוֹן",
+          "english": "Gershon",
+          "gloss": "Gershon"
+        }
+      ],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "original_source_edition": "WLC or SBLGNT as specified by witness",
+      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity"
+    },
+    {
+      "source_id": "group:Jebusites",
+      "classification": "uncertain_not_promoted",
+      "reviewed_key_verses": [
+        "06018028"
+      ],
+      "rationale": "Joshua 18:28 has the Hebrew Jebusite term while naming Jebus as a locality; whether this word denotes the people directly or qualifies the city needs independent geographical/ethnonym disambiguation.",
+      "original_word_evidence": [
+        {
+          "verse_id": "06018028",
+          "corpus": "wlc",
+          "word_id": "o060180280033",
+          "lemma": "יְבוּסִי",
+          "english": "Jebus",
+          "gloss": "Jebusite"
+        }
+      ],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "original_source_edition": "WLC or SBLGNT as specified by witness",
+      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity"
+    },
+    {
+      "source_id": "group:Kohath",
+      "classification": "contextual_not_direct",
+      "reviewed_key_verses": [
+        "01046011",
+        "02006018"
+      ],
+      "rationale": "Genesis 46:11 and Exodus 6:18 name the ancestor Kohath; these verses are genealogical context for Kohathites, not identical collective mentions.",
+      "original_word_evidence": [
+        {
+          "verse_id": "01046011",
+          "corpus": "wlc",
+          "word_id": "o010460110041",
+          "lemma": "קְהָת",
+          "english": "Kohath",
+          "gloss": "Kohath"
+        },
+        {
+          "verse_id": "02006018",
+          "corpus": "wlc",
+          "word_id": "o020060180021",
+          "lemma": "קְהָת",
+          "english": "Kohath",
+          "gloss": "of.Kohath"
+        },
+        {
+          "verse_id": "02006018",
+          "corpus": "wlc",
+          "word_id": "o020060180091",
+          "lemma": "קְהָת",
+          "english": "Kohath",
+          "gloss": "of.Kohath"
+        }
+      ],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "original_source_edition": "WLC or SBLGNT as specified by witness",
+      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity"
+    },
+    {
+      "source_id": "group:Korah",
+      "classification": "contextual_not_direct",
+      "reviewed_key_verses": [
+        "02006021"
+      ],
+      "rationale": "Exodus 6:21 names the individual Korah in genealogy, not the Korahite group.",
+      "original_word_evidence": [
+        {
+          "verse_id": "02006021",
+          "corpus": "wlc",
+          "word_id": "o020060210031",
+          "lemma": "קֹרַח",
+          "english": "Korah",
+          "gloss": "[were].Korah"
+        }
+      ],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "original_source_edition": "WLC or SBLGNT as specified by witness",
+      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity"
+    },
+    {
+      "source_id": "group:Levi",
+      "classification": "contextual_not_direct",
+      "reviewed_key_verses": [
+        "01029034"
+      ],
+      "rationale": "Genesis 29:34 names the individual Levi, not the later Levitical group.",
+      "original_word_evidence": [
+        {
+          "verse_id": "01029034",
+          "corpus": "wlc",
+          "word_id": "o010290340201",
+          "lemma": "לֵוִי",
+          "english": "Levi",
+          "gloss": "Levi"
+        }
+      ],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "original_source_edition": "WLC or SBLGNT as specified by witness",
+      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity"
+    },
+    {
+      "source_id": "group:Naphtali",
+      "classification": "contextual_not_direct",
+      "reviewed_key_verses": [
+        "01030008"
+      ],
+      "rationale": "Genesis 30:8 names the child Naphtali, not his later tribal descendants.",
+      "original_word_evidence": [
+        {
+          "verse_id": "01030008",
+          "corpus": "wlc",
+          "word_id": "o010300080121",
+          "lemma": "נַפְתָּלִי",
+          "english": "Naphtali",
+          "gloss": "Naphtali"
+        }
+      ],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "original_source_edition": "WLC or SBLGNT as specified by witness",
+      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity"
+    },
+    {
+      "source_id": "group:Pharisee",
+      "classification": "indirect_original_referent",
+      "reviewed_key_verses": [
+        "41007004"
+      ],
+      "rationale": "Mark 7:4 continues the discussion of Pharisaic washing practices begun in 7:3. Existing Greek grammatical-subject links are indirect group evidence, not newly named Pharisees.",
+      "original_word_evidence": [],
+      "existing_indirect_word_links": [
+        {
+          "verse_id": "41007004",
+          "source_field": "subject_referents",
+          "corpus": "SBLGNT",
+          "word_id": "n41007004006"
+        }
+      ],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "review_scope": "already_pinned_indirect_word_semantics_not_new_name"
+    },
+    {
+      "source_id": "group:Sidon",
+      "classification": "contextual_not_direct",
+      "reviewed_key_verses": [
+        "01010015",
+        "01010019"
+      ],
+      "rationale": "Genesis 10:15 has an eponymous son named Sidon, and Genesis 10:19 uses the city as a boundary; neither is by itself an original-word claim for Sidonian people.",
+      "original_word_evidence": [
+        {
+          "verse_id": "01010015",
+          "corpus": "wlc",
+          "word_id": "o010100150041",
+          "lemma": "צִידוֹן",
+          "english": "Sidon",
+          "gloss": "Sidon"
+        },
+        {
+          "verse_id": "01010019",
+          "corpus": "wlc",
+          "word_id": "o010100190042",
+          "lemma": "צִידוֹן",
+          "english": "Sidon",
+          "gloss": "Sidon"
+        }
+      ],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "original_source_edition": "WLC or SBLGNT as specified by witness",
+      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity"
+    },
+    {
+      "source_id": "group:Simeon",
+      "classification": "contextual_not_direct",
+      "reviewed_key_verses": [
+        "01029033"
+      ],
+      "rationale": "Genesis 29:33 names the son Simeon, not the Simeonite people group.",
+      "original_word_evidence": [
+        {
+          "verse_id": "01029033",
+          "corpus": "wlc",
+          "word_id": "o010290330191",
+          "lemma": "שִׁמְעוֹן",
+          "english": "Simeon",
+          "gloss": "Simeon"
+        }
+      ],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "original_source_edition": "WLC or SBLGNT as specified by witness",
+      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity"
+    },
+    {
+      "source_id": "person:Abimelech.2",
+      "classification": "indirect_original_referent",
+      "reviewed_key_verses": [
+        "07009002"
+      ],
+      "rationale": "Judges 9:2 describes Abimelech's appeal to the Shechemites through indirect person-reference grammar; the named man is distinguished from other Abimelechs.",
+      "original_word_evidence": [],
+      "existing_indirect_word_links": [
+        {
+          "verse_id": "07009002",
+          "source_field": "pronominal_referents",
+          "corpus": "wlc",
+          "word_id": "o070090020261"
+        }
+      ],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "review_scope": "already_pinned_indirect_word_semantics_not_new_name"
+    },
+    {
+      "source_id": "person:Abraham",
+      "classification": "indirect_original_referent",
+      "reviewed_key_verses": [
+        "01017004"
+      ],
+      "rationale": "Genesis 17:4 uses second-person direct address to Abram/Abraham (subject-referent WLC o010170040052) but does not spell the new personal name Abraham until 17:5.",
+      "original_word_evidence": [],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "original_source_edition": "WLC or SBLGNT as specified by witness",
+      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity",
+      "existing_indirect_word_links": [
+        {
+          "verse_id": "01017004",
+          "source_field": "subject_referents",
+          "corpus": "wlc",
+          "word_id": "o010170040052"
+        }
+      ]
+    },
+    {
+      "source_id": "person:Abram",
+      "classification": "indirect_original_referent",
+      "reviewed_key_verses": [
+        "01017004"
+      ],
+      "rationale": "Genesis 17:4 addresses Abram with the divine covenant before his renaming in verse 5; original subject link is context, not a new proper name token.",
+      "original_word_evidence": [],
+      "existing_indirect_word_links": [
+        {
+          "verse_id": "01017004",
+          "source_field": "subject_referents",
+          "corpus": "wlc",
+          "word_id": "o010170040052"
+        }
+      ],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "review_scope": "already_pinned_indirect_word_semantics_not_new_name"
+    },
+    {
+      "source_id": "person:Achan",
+      "classification": "indirect_original_referent",
+      "reviewed_key_verses": [
+        "06007021"
+      ],
+      "rationale": "Joshua 7:21 describes Achan's theft by first-person confession (subject WLC o060070210022); the contextual key is indirect and must not become an invented name token.",
+      "original_word_evidence": [],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "original_source_edition": "WLC or SBLGNT as specified by witness",
+      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity",
+      "existing_indirect_word_links": [
+        {
+          "verse_id": "06007021",
+          "source_field": "subject_referents",
+          "corpus": "wlc",
+          "word_id": "o060070210022"
+        }
+      ]
+    },
+    {
+      "source_id": "person:Adam",
+      "classification": "uncertain_not_promoted",
+      "reviewed_key_verses": [
+        "01001026",
+        "01002007"
+      ],
+      "rationale": "Genesis 1:26 uses adam as humanity collectively; Genesis 2:7 calls the first man adam as a common noun. Specific personal-name identity requires distinguishing lexical reference from an explicit proper name.",
+      "original_word_evidence": [
+        {
+          "verse_id": "01001026",
+          "corpus": "wlc",
+          "word_id": "o010010260041",
+          "lemma": "אָדָם",
+          "english": "man",
+          "gloss": "humankind"
+        },
+        {
+          "verse_id": "01002007",
+          "corpus": "wlc",
+          "word_id": "o010020070052",
+          "lemma": "אָדָם",
+          "english": "man",
+          "gloss": "man"
+        },
+        {
+          "verse_id": "01002007",
+          "corpus": "wlc",
+          "word_id": "o010020070142",
+          "lemma": "אָדָם",
+          "english": "man",
+          "gloss": "man"
+        }
+      ],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "original_source_edition": "WLC or SBLGNT as specified by witness",
+      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity"
+    },
+    {
+      "source_id": "person:Ahab",
+      "classification": "indirect_original_referent",
+      "reviewed_key_verses": [
+        "11016031"
+      ],
+      "rationale": "1 Kings 16:31 continues Ahab's reign and marriage narrative using grammatical reference to the preceding named king.",
+      "original_word_evidence": [],
+      "existing_indirect_word_links": [
+        {
+          "verse_id": "11016031",
+          "source_field": "subject_referents",
+          "corpus": "wlc",
+          "word_id": "o110160310082"
+        }
+      ],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "review_scope": "already_pinned_indirect_word_semantics_not_new_name"
+    },
+    {
+      "source_id": "person:Ahaziah.2",
+      "classification": "indirect_original_referent",
+      "reviewed_key_verses": [
+        "12008027"
+      ],
+      "rationale": "2 Kings 8:27 characterizes King Ahaziah through the house of Ahab; the original pronominal source evidence is separate from a name word.",
+      "original_word_evidence": [],
+      "existing_indirect_word_links": [
+        {
+          "verse_id": "12008027",
+          "source_field": "pronominal_referents",
+          "corpus": "wlc",
+          "word_id": "o120080270151"
+        }
+      ],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "review_scope": "already_pinned_indirect_word_semantics_not_new_name"
+    },
+    {
+      "source_id": "person:Ahikam",
+      "classification": "indirect_original_referent",
+      "reviewed_key_verses": [
+        "12022013"
+      ],
+      "rationale": "2 Kings 22:13 carries the king's charge to the named delegation including Ahikam; grammatical subject evidence is not the same as an explicit Ahikam name.",
+      "original_word_evidence": [],
+      "existing_indirect_word_links": [
+        {
+          "verse_id": "12022013",
+          "source_field": "subject_referents",
+          "corpus": "wlc",
+          "word_id": "o120220130011"
+        }
+      ],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "review_scope": "already_pinned_indirect_word_semantics_not_new_name"
+    },
+    {
+      "source_id": "person:Artaxerxes",
+      "classification": "direct_witness_restored",
+      "reviewed_key_verses": [
+        "15004007"
+      ],
+      "rationale": "Ezra 4:7 explicitly names the Persian king Artaxerxes twice; exact WLC token IDs were added with a reversible change receipt.",
+      "original_word_evidence": [
+        {
+          "verse_id": "15004007",
+          "corpus": "wlc",
+          "word_id": "o150040070021",
+          "lemma": "אַרְתַּחְשַׁשְׂתָּא",
+          "english": "Artaxerxes",
+          "gloss": "of.Artaxerxes"
+        },
+        {
+          "verse_id": "15004007",
+          "corpus": "wlc",
+          "word_id": "o150040070121",
+          "lemma": "אַרְתַּחְשַׁשְׂתָּא",
+          "english": "Artaxerxes",
+          "gloss": "Artaxerxes"
+        }
+      ],
+      "editorial_outcome": "source_record_corrected_in_this_review",
+      "original_source_edition": "WLC or SBLGNT as specified by witness",
+      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity"
+    },
+    {
+      "source_id": "person:Asa",
+      "classification": "indirect_original_referent",
+      "reviewed_key_verses": [
+        "11015010"
+      ],
+      "rationale": "1 Kings 15:10 gives Asa's reign duration and maternal lineage without treating this subject link as a newly written name.",
+      "original_word_evidence": [],
+      "existing_indirect_word_links": [
+        {
+          "verse_id": "11015010",
+          "source_field": "subject_referents",
+          "corpus": "wlc",
+          "word_id": "o110150100041"
+        }
+      ],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "review_scope": "already_pinned_indirect_word_semantics_not_new_name"
+    },
+    {
+      "source_id": "person:Balak",
+      "classification": "indirect_original_referent",
+      "reviewed_key_verses": [
+        "04022005"
+      ],
+      "rationale": "Numbers 22:5 narrates Balak sending to Balaam after Balak was identified in the preceding context; retain indirect subject semantics.",
+      "original_word_evidence": [],
+      "existing_indirect_word_links": [
+        {
+          "verse_id": "04022005",
+          "source_field": "subject_referents",
+          "corpus": "wlc",
+          "word_id": "o040220050012"
+        }
+      ],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "review_scope": "already_pinned_indirect_word_semantics_not_new_name"
+    },
+    {
+      "source_id": "person:Barabbas",
+      "classification": "indirect_original_referent",
+      "reviewed_key_verses": [
+        "42023019"
+      ],
+      "rationale": "Luke 23:19 begins with a relative pronoun referring to Barabbas (SBLGNT n42023019001), whose proper name is in verse 18, not an actual Greek name word in 23:19.",
+      "original_word_evidence": [],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "original_source_edition": "SBLGNT or WLC as specified",
+      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity",
+      "existing_indirect_word_links": [
+        {
+          "verse_id": "42023019",
+          "source_field": "pronominal_referents",
+          "corpus": "SBLGNT",
+          "word_id": "n42023019001"
+        }
+      ]
+    },
+    {
+      "source_id": "person:Bartholomew",
+      "classification": "indirect_original_referent",
+      "reviewed_key_verses": [
+        "40010002"
+      ],
+      "rationale": "Matthew 10:2 begins the roster of twelve; the source's indirect grammatical link for Bartholomew is not a direct name occurrence in verse 2.",
+      "original_word_evidence": [],
+      "existing_indirect_word_links": [
+        {
+          "verse_id": "40010002",
+          "source_field": "pronominal_referents",
+          "corpus": "SBLGNT",
+          "word_id": "n40010002008"
+        }
+      ],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "review_scope": "already_pinned_indirect_word_semantics_not_new_name"
+    },
+    {
+      "source_id": "person:Bezalel",
+      "classification": "indirect_original_referent",
+      "reviewed_key_verses": [
+        "02031004"
+      ],
+      "rationale": "Exodus 31:4 describes the craftsmanship of Bezalel named in 31:2; the existing subject link is distinct from an explicit personal name.",
+      "original_word_evidence": [],
+      "existing_indirect_word_links": [
+        {
+          "verse_id": "02031004",
+          "source_field": "subject_referents",
+          "corpus": "wlc",
+          "word_id": "o020310040012"
+        }
+      ],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "review_scope": "already_pinned_indirect_word_semantics_not_new_name"
+    },
+    {
+      "source_id": "person:Dishon",
+      "classification": "wrong_identity_keys_removed",
+      "reviewed_key_verses": [
+        "01036025",
+        "13001041"
+      ],
+      "rationale": "Genesis 36:25 and 1 Chronicles 1:41 refer to the other Dishon, son of Anah, already correctly indexed as person:Dishon.2; the older Dishon, son of Seir, must not inherit those keys.",
+      "original_word_evidence": [
+        {
+          "verse_id": "01036025",
+          "corpus": "wlc",
+          "word_id": "o010360250041",
+          "lemma": "דִּישֹׁון",
+          "english": "Dishon",
+          "gloss": "Dishon"
+        },
+        {
+          "verse_id": "13001041",
+          "corpus": "wlc",
+          "word_id": "o130010410031",
+          "lemma": "דִּישֹׁון",
+          "english": "Dishon",
+          "gloss": "[were].Dishon"
+        },
+        {
+          "verse_id": "13001041",
+          "corpus": "wlc",
+          "word_id": "o130010410051",
+          "lemma": "דִּישֹׁון",
+          "english": "Dishon",
+          "gloss": "of.Dishon"
+        }
+      ],
+      "editorial_outcome": "source_record_corrected_in_this_review",
+      "original_source_edition": "WLC or SBLGNT as specified by witness",
+      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity"
+    },
+    {
+      "source_id": "person:Elah.2",
+      "classification": "indirect_original_referent",
+      "reviewed_key_verses": [
+        "11016009"
+      ],
+      "rationale": "1 Kings 16:9 describes the assassination of King Elah with pronominal reference; the verse is preserved as indirect rather than a new Elah token.",
+      "original_word_evidence": [],
+      "existing_indirect_word_links": [
+        {
+          "verse_id": "11016009",
+          "source_field": "pronominal_referents",
+          "corpus": "wlc",
+          "word_id": "o110160090082"
+        }
+      ],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "review_scope": "already_pinned_indirect_word_semantics_not_new_name"
+    },
+    {
+      "source_id": "person:Eliashib.8",
+      "classification": "direct_witness_restored",
+      "reviewed_key_verses": [
+        "16013004",
+        "16013007"
+      ],
+      "rationale": "Nehemiah 13:4 and 13:7 explicitly name the priest Eliashib with two source original-word IDs, restored to this established priest record.",
+      "original_word_evidence": [
+        {
+          "verse_id": "16013004",
+          "corpus": "wlc",
+          "word_id": "o160130040031",
+          "lemma": "אֶלְיָשִׁיב",
+          "english": "Eliashib",
+          "gloss": "Eliashib"
+        },
+        {
+          "verse_id": "16013007",
+          "corpus": "wlc",
+          "word_id": "o160130070071",
+          "lemma": "אֶלְיָשִׁיב",
+          "english": "Eliashib",
+          "gloss": "Eliashib"
+        }
+      ],
+      "editorial_outcome": "source_record_corrected_in_this_review",
+      "original_source_edition": "WLC or SBLGNT as specified by witness",
+      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity"
+    },
+    {
+      "source_id": "person:Ephron.2",
+      "classification": "indirect_original_referent",
+      "reviewed_key_verses": [
+        "01023009"
+      ],
+      "rationale": "Genesis 23:9 carries Abraham's request concerning Ephron's cave, with a grammatical subject/coreference link rather than a newly named Ephron.",
+      "original_word_evidence": [],
+      "existing_indirect_word_links": [
+        {
+          "verse_id": "01023009",
+          "source_field": "subject_referents",
+          "corpus": "wlc",
+          "word_id": "o010230090012"
+        }
+      ],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "review_scope": "already_pinned_indirect_word_semantics_not_new_name"
+    },
+    {
+      "source_id": "person:Esau",
+      "classification": "indirect_original_referent",
+      "reviewed_key_verses": [
+        "01025033"
+      ],
+      "rationale": "Genesis 25:33 continues Esau's oath in the birthright transaction using subjects/verbs; the man named in nearby verses is a separate direct witness.",
+      "original_word_evidence": [],
+      "existing_indirect_word_links": [
+        {
+          "verse_id": "01025033",
+          "source_field": "subject_referents",
+          "corpus": "wlc",
+          "word_id": "o010250330031"
+        }
+      ],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "review_scope": "already_pinned_indirect_word_semantics_not_new_name"
+    },
+    {
+      "source_id": "person:Ethan",
+      "classification": "indirect_original_referent",
+      "reviewed_key_verses": [
+        "19089002"
+      ],
+      "rationale": "Psalm 89:2 continues the hymn associated with Ethan in the superscription; the voice/subject link is indirect and must not force a proper-name occurrence.",
+      "original_word_evidence": [],
+      "existing_indirect_word_links": [
+        {
+          "verse_id": "19089002",
+          "source_field": "subject_referents",
+          "corpus": "wlc",
+          "word_id": "o190890020041"
+        }
+      ],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "review_scope": "already_pinned_indirect_word_semantics_not_new_name"
+    },
+    {
+      "source_id": "person:Gehazi",
+      "classification": "indirect_original_referent",
+      "reviewed_key_verses": [
+        "12005022"
+      ],
+      "rationale": "2 Kings 5:22 continues Gehazi's speech to Naaman after the servant is identified in the context; source subject link is not a name token.",
+      "original_word_evidence": [],
+      "existing_indirect_word_links": [
+        {
+          "verse_id": "12005022",
+          "source_field": "subject_referents",
+          "corpus": "wlc",
+          "word_id": "o120050220012"
+        }
+      ],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "review_scope": "already_pinned_indirect_word_semantics_not_new_name"
+    },
+    {
+      "source_id": "person:Gideon",
+      "classification": "indirect_original_referent",
+      "reviewed_key_verses": [
+        "07008031"
+      ],
+      "rationale": "Judges 8:31 describes Gideon's concubine and Abimelech using source-annotated grammatical reference rather than a written Gideon name.",
+      "original_word_evidence": [],
+      "existing_indirect_word_links": [
+        {
+          "verse_id": "07008031",
+          "source_field": "subject_referents",
+          "corpus": "wlc",
+          "word_id": "o070080310092"
+        }
+      ],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "review_scope": "already_pinned_indirect_word_semantics_not_new_name"
+    },
+    {
+      "source_id": "person:Haman",
+      "classification": "indirect_original_referent",
+      "reviewed_key_verses": [
+        "17003009"
+      ],
+      "rationale": "Esther 3:9 continues Haman's proposal to the king after he was named; grammar marks Haman as actor without re-naming him.",
+      "original_word_evidence": [],
+      "existing_indirect_word_links": [
+        {
+          "verse_id": "17003009",
+          "source_field": "subject_referents",
+          "corpus": "wlc",
+          "word_id": "o170030090111"
+        }
+      ],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "review_scope": "already_pinned_indirect_word_semantics_not_new_name"
+    },
+    {
+      "source_id": "person:Hassenaah",
+      "classification": "direct_witness_restored",
+      "reviewed_key_verses": [
+        "13009007"
+      ],
+      "rationale": "1 Chronicles 9:7 explicitly names Hassenuah in the Benjaminite genealogy; this is an attested alternate name in the existing Hassenaah record.",
+      "original_word_evidence": [
+        {
+          "verse_id": "13009007",
+          "corpus": "wlc",
+          "word_id": "o130090070102",
+          "lemma": "סְנוּאָה",
+          "english": "Hassenuah",
+          "gloss": "Hassenuah"
+        }
+      ],
+      "editorial_outcome": "source_record_corrected_in_this_review",
+      "original_source_edition": "WLC or SBLGNT as specified by witness",
+      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity"
+    },
+    {
+      "source_id": "person:Hazael",
+      "classification": "indirect_original_referent",
+      "reviewed_key_verses": [
+        "12008014"
+      ],
+      "rationale": "2 Kings 8:14 continues Hazael's departure and report to Ben-Hadad after the named encounter with Elisha.",
+      "original_word_evidence": [],
+      "existing_indirect_word_links": [
+        {
+          "verse_id": "12008014",
+          "source_field": "subject_referents",
+          "corpus": "wlc",
+          "word_id": "o120080140012"
+        }
+      ],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "review_scope": "already_pinned_indirect_word_semantics_not_new_name"
+    },
+    {
+      "source_id": "person:Heman",
+      "classification": "indirect_original_referent",
+      "reviewed_key_verses": [
+        "19088002"
+      ],
+      "rationale": "Psalm 88:2 continues the lament associated with Heman in its heading; its original subject word is not a Heman name token.",
+      "original_word_evidence": [],
+      "existing_indirect_word_links": [
+        {
+          "verse_id": "19088002",
+          "source_field": "subject_referents",
+          "corpus": "wlc",
+          "word_id": "o190880020051"
+        }
+      ],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "review_scope": "already_pinned_indirect_word_semantics_not_new_name"
+    },
+    {
+      "source_id": "person:Herodias",
+      "classification": "indirect_original_referent",
+      "reviewed_key_verses": [
+        "40014004"
+      ],
+      "rationale": "Matthew 14:4 alludes to Herodias with a pronoun in John's rebuke, following the named Herodias in verse 3.",
+      "original_word_evidence": [],
+      "existing_indirect_word_links": [
+        {
+          "verse_id": "40014004",
+          "source_field": "pronominal_referents",
+          "corpus": "SBLGNT",
+          "word_id": "n40014004010"
+        }
+      ],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "review_scope": "already_pinned_indirect_word_semantics_not_new_name"
+    },
+    {
+      "source_id": "person:Hoshea",
+      "classification": "indirect_original_referent",
+      "reviewed_key_verses": [
+        "12017002"
+      ],
+      "rationale": "2 Kings 17:2 characterizes Hoshea's reign using subject grammar; the name is established in 17:1.",
+      "original_word_evidence": [],
+      "existing_indirect_word_links": [
+        {
+          "verse_id": "12017002",
+          "source_field": "subject_referents",
+          "corpus": "wlc",
+          "word_id": "o120170020012"
+        }
+      ],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "review_scope": "already_pinned_indirect_word_semantics_not_new_name"
+    },
+    {
+      "source_id": "person:Isaiah",
+      "classification": "indirect_original_referent",
+      "reviewed_key_verses": [
+        "23008003"
+      ],
+      "rationale": "Isaiah 8:3 is narrated by Isaiah in the first person, an existing subject link rather than a written proper name.",
+      "original_word_evidence": [],
+      "existing_indirect_word_links": [
+        {
+          "verse_id": "23008003",
+          "source_field": "subject_referents",
+          "corpus": "wlc",
+          "word_id": "o230080030012"
+        }
+      ],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "review_scope": "already_pinned_indirect_word_semantics_not_new_name"
+    },
+    {
+      "source_id": "person:Ish-bosheth",
+      "classification": "indirect_original_referent",
+      "reviewed_key_verses": [
+        "10004007"
+      ],
+      "rationale": "2 Samuel 4:7 describes Ish-bosheth's murder through pronominal reference, distinct from the explicit royal name elsewhere.",
+      "original_word_evidence": [],
+      "existing_indirect_word_links": [
+        {
+          "verse_id": "10004007",
+          "source_field": "pronominal_referents",
+          "corpus": "wlc",
+          "word_id": "o100040070032"
+        }
+      ],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "review_scope": "already_pinned_indirect_word_semantics_not_new_name"
+    },
+    {
+      "source_id": "person:Jehoahaz.3",
+      "classification": "indirect_original_referent",
+      "reviewed_key_verses": [
+        "12023032"
+      ],
+      "rationale": "2 Kings 23:32 describes Jehoahaz's evil reign, with the name established in 23:31 and an indirect subject annotation here.",
+      "original_word_evidence": [],
+      "existing_indirect_word_links": [
+        {
+          "verse_id": "12023032",
+          "source_field": "subject_referents",
+          "corpus": "wlc",
+          "word_id": "o120230320012"
+        }
+      ],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "review_scope": "already_pinned_indirect_word_semantics_not_new_name"
+    },
+    {
+      "source_id": "person:Jehoash.2",
+      "classification": "indirect_original_referent",
+      "reviewed_key_verses": [
+        "12013011"
+      ],
+      "rationale": "2 Kings 13:11 reports Joash/Jehoash's conduct through an original grammatical subject after the king is named in 13:10.",
+      "original_word_evidence": [],
+      "existing_indirect_word_links": [
+        {
+          "verse_id": "12013011",
+          "source_field": "subject_referents",
+          "corpus": "wlc",
+          "word_id": "o120130110012"
+        }
+      ],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "review_scope": "already_pinned_indirect_word_semantics_not_new_name"
+    },
+    {
+      "source_id": "person:Jehoshaphat.3",
+      "classification": "indirect_original_referent",
+      "reviewed_key_verses": [
+        "11022043"
+      ],
+      "rationale": "1 Kings 22:43 recounts Jehoshaphat's conduct in the way of his father Asa using a grammatical subject link.",
+      "original_word_evidence": [],
+      "existing_indirect_word_links": [
+        {
+          "verse_id": "11022043",
+          "source_field": "subject_referents",
+          "corpus": "wlc",
+          "word_id": "o110220430012"
+        }
+      ],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "review_scope": "already_pinned_indirect_word_semantics_not_new_name"
+    },
+    {
+      "source_id": "person:Jesus.2",
+      "classification": "false_original_name_match",
+      "reviewed_key_verses": [
+        "40001020",
+        "40001022",
+        "42001032"
+      ],
+      "rationale": "Matthew 1:20,22 and Luke 1:32 use Lord/kyrios for God in nativity announcements; these words must not be presumed direct original-name mentions of Jesus.",
+      "original_word_evidence": [
+        {
+          "verse_id": "40001020",
+          "corpus": "SBLGNT",
+          "word_id": "n40001020007",
+          "lemma": "κύριος",
+          "english": "Lord",
+          "gloss": "of [the] Lord"
+        },
+        {
+          "verse_id": "40001022",
+          "corpus": "SBLGNT",
+          "word_id": "n40001022010",
+          "lemma": "κύριος",
+          "english": "Lord",
+          "gloss": "the Lord"
+        },
+        {
+          "verse_id": "42001032",
+          "corpus": "SBLGNT",
+          "word_id": "n42001032011",
+          "lemma": "κύριος",
+          "english": "Lord",
+          "gloss": "[the] Lord"
+        }
+      ],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "original_source_edition": "WLC or SBLGNT as specified by witness",
+      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity"
+    },
+    {
+      "source_id": "person:Joshua.2",
+      "classification": "indirect_original_referent",
+      "reviewed_key_verses": [
+        "06001006"
+      ],
+      "rationale": "Joshua 1:6 commands the already addressed Joshua to be strong and courageous; the source-pronoun anchor is indirect.",
+      "original_word_evidence": [],
+      "existing_indirect_word_links": [
+        {
+          "verse_id": "06001006",
+          "source_field": "pronominal_referents",
+          "corpus": "wlc",
+          "word_id": "o060010060041"
+        }
+      ],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "review_scope": "already_pinned_indirect_word_semantics_not_new_name"
+    },
+    {
+      "source_id": "person:Man",
+      "classification": "contextual_not_direct",
+      "reviewed_key_verses": [
+        "01001026"
+      ],
+      "rationale": "Genesis 1:26 names humankind as a collective category, not an individually named person.",
+      "original_word_evidence": [
+        {
+          "verse_id": "01001026",
+          "corpus": "wlc",
+          "word_id": "o010010260041",
+          "lemma": "אָדָם",
+          "english": "man",
+          "gloss": "humankind"
+        }
+      ],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "original_source_edition": "WLC or SBLGNT as specified by witness",
+      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity"
+    },
+    {
+      "source_id": "person:Moses",
+      "classification": "indirect_original_referent",
+      "reviewed_key_verses": [
+        "02034010"
+      ],
+      "rationale": "Exodus 34:10 continues the covenant addressed to Moses without an explicit Moses proper-name token in this verse.",
+      "original_word_evidence": [],
+      "existing_indirect_word_links": [
+        {
+          "verse_id": "02034010",
+          "source_field": "pronominal_referents",
+          "corpus": "wlc",
+          "word_id": "o020340100221"
+        }
+      ],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "review_scope": "already_pinned_indirect_word_semantics_not_new_name"
+    },
+    {
+      "source_id": "person:Paul",
+      "classification": "indirect_original_referent",
+      "reviewed_key_verses": [
+        "44009003"
+      ],
+      "rationale": "Acts 9:3 uses pronominal reference to the individual later called Paul (SBLGNT n44009003006), while the narrative calls him Saul in adjacent verses.",
+      "original_word_evidence": [],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "original_source_edition": "SBLGNT or WLC as specified",
+      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity",
+      "existing_indirect_word_links": [
+        {
+          "verse_id": "44009003",
+          "source_field": "pronominal_referents",
+          "corpus": "SBLGNT",
+          "word_id": "n44009003006"
+        }
+      ]
+    },
+    {
+      "source_id": "place:Ashan",
+      "classification": "uncertain_not_promoted",
+      "reviewed_key_verses": [
+        "09030030"
+      ],
+      "rationale": "1 Samuel 30:30 names Bor-Ashan, a compound toponym; identity with separately indexed Ashan is not proved solely from sharing the Ashan element.",
+      "original_word_evidence": [
+        {
+          "verse_id": "09030030",
+          "corpus": "wlc",
+          "word_id": "o090300300051",
+          "lemma": "בּוֹר עָשָׁן",
+          "english": "",
+          "gloss": "Ashan"
+        }
+      ],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "original_source_edition": "WLC or SBLGNT as specified by witness",
+      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity"
+    },
+    {
+      "source_id": "place:Babylon.2",
+      "classification": "uncertain_not_promoted",
+      "reviewed_key_verses": [
+        "60005013"
+      ],
+      "rationale": "Revelation 17:5 is directly symbolic Babylon and already anchored; 1 Peter 5:13 names Babylon but whether this is the same symbolic referent or a physical location is contested.",
+      "original_word_evidence": [
+        {
+          "verse_id": "60005013",
+          "corpus": "SBLGNT",
+          "word_id": "n60005013005",
+          "lemma": "Βαβυλών",
+          "english": "Babylon",
+          "gloss": "Babylon"
+        }
+      ],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "original_source_edition": "WLC or SBLGNT as specified by witness",
+      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity"
+    },
+    {
+      "source_id": "place:Babylonia",
+      "classification": "geographical_inference_not_direct",
+      "reviewed_key_verses": [
+        "01011002",
+        "15001011",
+        "15002001",
+        "24051024",
+        "38005011"
+      ],
+      "rationale": "The source keys use Shinar, Babylon or Chaldea; geographical equivalence with the broader reconstructed region 'Babylonia' is contextual rather than an original proper-name word.",
+      "original_word_evidence": [
+        {
+          "verse_id": "01011002",
+          "corpus": "wlc",
+          "word_id": "o010110020071",
+          "lemma": "שִׁנְעָר",
+          "english": "Shinar",
+          "gloss": "of.Shinar"
+        },
+        {
+          "verse_id": "15001011",
+          "corpus": "wlc",
+          "word_id": "o150010110152",
+          "lemma": "בָּבֶל",
+          "english": "Babylon",
+          "gloss": "Babylon"
+        },
+        {
+          "verse_id": "15002001",
+          "corpus": "wlc",
+          "word_id": "o150020010121",
+          "lemma": "בָּבֶל",
+          "english": "Babylon",
+          "gloss": "of.Babylon"
+        },
+        {
+          "verse_id": "15002001",
+          "corpus": "wlc",
+          "word_id": "o150020010132",
+          "lemma": "בָּבֶל",
+          "english": "Babylon",
+          "gloss": "Babylon"
+        },
+        {
+          "verse_id": "24051024",
+          "corpus": "wlc",
+          "word_id": "o240510240022",
+          "lemma": "בָּבֶל",
+          "english": "Babylon",
+          "gloss": "Babylon"
+        },
+        {
+          "verse_id": "24051024",
+          "corpus": "wlc",
+          "word_id": "o240510240051",
+          "lemma": "כַּשְׂדִּים",
+          "english": "Chaldea",
+          "gloss": "of.Chaldea"
+        },
+        {
+          "verse_id": "38005011",
+          "corpus": "wlc",
+          "word_id": "o380050110071",
+          "lemma": "שִׁנְעָר",
+          "english": "Shinar",
+          "gloss": "of.Shinar"
+        }
+      ],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "original_source_edition": "WLC or SBLGNT as specified by witness",
+      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity"
+    },
+    {
+      "source_id": "place:Bethel",
+      "classification": "uncertain_not_promoted",
+      "reviewed_key_verses": [
+        "28004015",
+        "28005008",
+        "28010005"
+      ],
+      "rationale": "Hosea uses Beth-Aven/Aven as polemical toponym near or for Bethel; a similar gloss does not justify assigning the exact Hebrew Bethel name token.",
+      "original_word_evidence": [
+        {
+          "verse_id": "28004015",
+          "corpus": "wlc",
+          "word_id": "o280040150141",
+          "lemma": "בֵּית אָוֶן",
+          "english": "",
+          "gloss": "Aven"
+        },
+        {
+          "verse_id": "28005008",
+          "corpus": "wlc",
+          "word_id": "o280050080081",
+          "lemma": "בֵּית אָוֶן",
+          "english": "",
+          "gloss": "Aven"
+        },
+        {
+          "verse_id": "28010005",
+          "corpus": "wlc",
+          "word_id": "o280100050031",
+          "lemma": "בֵּית אָוֶן",
+          "english": "",
+          "gloss": "Beth.Aven"
+        }
+      ],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "original_source_edition": "WLC or SBLGNT as specified by witness",
+      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity"
+    },
+    {
+      "source_id": "place:Canaan",
+      "classification": "contextual_not_direct",
+      "reviewed_key_verses": [
+        "01010015"
+      ],
+      "rationale": "Genesis 10:15 speaks of the eponymous ancestor Canaan, distinct from the geographical land directly attested elsewhere.",
+      "original_word_evidence": [
+        {
+          "verse_id": "01010015",
+          "corpus": "wlc",
+          "word_id": "o010100150012",
+          "lemma": "כְּנַעַן",
+          "english": "Canaan",
+          "gloss": "Canaan"
+        }
+      ],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "original_source_edition": "WLC or SBLGNT as specified by witness",
+      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity"
+    },
+    {
+      "source_id": "place:CityOfDavid",
+      "classification": "contextual_not_direct",
+      "reviewed_key_verses": [
+        "10005006"
+      ],
+      "rationale": "2 Samuel 5:6 names Jerusalem before the narrative renames David's conquered stronghold; contextual precursor verse is not itself a direct City of David name.",
+      "original_word_evidence": [
+        {
+          "verse_id": "10005006",
+          "corpus": "wlc",
+          "word_id": "o100050060041",
+          "lemma": "יְרוּשָׁלִַ͏ם",
+          "english": "Jerusalem",
+          "gloss": "Jerusalem"
+        }
+      ],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "original_source_edition": "WLC or SBLGNT as specified by witness",
+      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity"
+    },
+    {
+      "source_id": "place:Edom",
+      "classification": "contextual_not_direct",
+      "reviewed_key_verses": [
+        "01036008"
+      ],
+      "rationale": "Genesis 36:8 names Esau as the individual Edom; the geographical land is a distinct named entity.",
+      "original_word_evidence": [
+        {
+          "verse_id": "01036008",
+          "corpus": "wlc",
+          "word_id": "o010360080021",
+          "lemma": "עֵשָׂו",
+          "english": "Esau",
+          "gloss": "Esau"
+        },
+        {
+          "verse_id": "01036008",
+          "corpus": "wlc",
+          "word_id": "o010360080051",
+          "lemma": "עֵשָׂו",
+          "english": "Esau",
+          "gloss": "Esau"
+        },
+        {
+          "verse_id": "01036008",
+          "corpus": "wlc",
+          "word_id": "o010360080071",
+          "lemma": "אֱדוֹם",
+          "english": "Edom",
+          "gloss": "[is].Edom"
+        }
+      ],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "original_source_edition": "WLC or SBLGNT as specified by witness",
+      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity"
+    },
+    {
+      "source_id": "place:Eglath-shelishiyah.1",
+      "classification": "uncertain_not_promoted",
+      "reviewed_key_verses": [
+        "23015005",
+        "24048034"
+      ],
+      "rationale": "Isaiah 15:5 and Jeremiah 48:34 use Eglath-shelishiyah, also parsable as a three-year-old heifer metaphor; geographical proper-name status is contested and no definitive site-specific anchor is inserted.",
+      "original_word_evidence": [],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "original_source_edition": "WLC or SBLGNT as specified by witness",
+      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity"
+    },
+    {
+      "source_id": "place:Gederah.2",
+      "classification": "wrong_contextual_key_corrected",
+      "reviewed_key_verses": [
+        "13012004",
+        "13012005"
+      ],
+      "rationale": "1 Chronicles 12:4 has Ishmaiah the Gibeonite, not Gederah. The adjacent 1 Chronicles 12:5 has Jozabad the Gederathite (WLC o130120050052). Source key was corrected to 12:5 only; a demonym still does not establish a direct Gederah toponym.",
+      "original_word_evidence": [
+        {
+          "verse_id": "13012005",
+          "corpus": "wlc",
+          "word_id": "o130120050052",
+          "lemma": "גְּדֵרָתִי",
+          "english": "Gederathite",
+          "gloss": "Gederathite"
+        }
+      ],
+      "editorial_outcome": "source_record_corrected_in_this_review",
+      "original_source_edition": "WLC or SBLGNT as specified by witness",
+      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity"
+    },
+    {
+      "source_id": "place:Gomer",
+      "classification": "geographical_inference_not_direct",
+      "reviewed_key_verses": [
+        "26038006"
+      ],
+      "rationale": "Ezekiel 38:6 names the Gomer people, not a separately named region or city of Gomer.",
+      "original_word_evidence": [
+        {
+          "verse_id": "26038006",
+          "corpus": "wlc",
+          "word_id": "o260380060011",
+          "lemma": "גֹּמֶר",
+          "english": "Gomer",
+          "gloss": "Gomer"
+        }
+      ],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "original_source_edition": "WLC or SBLGNT as specified by witness",
+      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity"
+    },
+    {
+      "source_id": "place:Hushah",
+      "classification": "geographical_inference_not_direct",
+      "reviewed_key_verses": [
+        "10021018"
+      ],
+      "rationale": "2 Samuel 21:18 names a Hushathite warrior, not the toponym Hushah itself.",
+      "original_word_evidence": [],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "original_source_edition": "WLC or SBLGNT as specified by witness",
+      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity"
+    },
+    {
+      "source_id": "place:Ir-moab",
+      "classification": "direct_witness_restored",
+      "reviewed_key_verses": [
+        "04022036"
+      ],
+      "rationale": "Numbers 22:36 uses the descriptive geographical expression city of Moab (ir Moab), two original-word tokens restored without inventing a separately named city.",
+      "original_word_evidence": [
+        {
+          "verse_id": "04022036",
+          "corpus": "wlc",
+          "word_id": "o040220360091",
+          "lemma": "עִיר",
+          "english": "city",
+          "gloss": "the.city"
+        },
+        {
+          "verse_id": "04022036",
+          "corpus": "wlc",
+          "word_id": "o040220360101",
+          "lemma": "מוֹאָב",
+          "english": "Moab",
+          "gloss": "of.Moab"
+        }
+      ],
+      "editorial_outcome": "source_record_corrected_in_this_review",
+      "original_source_edition": "WLC or SBLGNT as specified by witness",
+      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity"
+    },
+    {
+      "source_id": "place:Judea",
+      "classification": "uncertain_not_promoted",
+      "reviewed_key_verses": [
+        "15005008"
+      ],
+      "rationale": "Ezra 5:8 names the Persian province Yehud; distinction between historical Judea and separate indexed Persian-period Judah remains editorially qualified.",
+      "original_word_evidence": [
+        {
+          "verse_id": "15005008",
+          "corpus": "wlc",
+          "word_id": "o150050080062",
+          "lemma": "יְהוּד",
+          "english": "Judah",
+          "gloss": "Judea"
+        }
+      ],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "original_source_edition": "WLC or SBLGNT as specified by witness",
+      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity"
+    },
+    {
+      "source_id": "place:Judea.2",
+      "classification": "uncertain_not_promoted",
+      "reviewed_key_verses": [
+        "15009009"
+      ],
+      "rationale": "Ezra 9:9 names Judah; the narrower Persian-period Yehud province must not automatically inherit any Judah lexical token from another historical jurisdiction.",
+      "original_word_evidence": [
+        {
+          "verse_id": "15009009",
+          "corpus": "wlc",
+          "word_id": "o150090090272",
+          "lemma": "יְהוּדָה",
+          "english": "Judah",
+          "gloss": "Judah"
+        }
+      ],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "original_source_edition": "WLC or SBLGNT as specified by witness",
+      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity"
+    },
+    {
+      "source_id": "place:Lud.2",
+      "classification": "geographical_inference_not_direct",
+      "reviewed_key_verses": [
+        "24046009",
+        "26030005"
+      ],
+      "rationale": "Jeremiah 46:9 and Ezekiel 30:5 use Lud/Ludim to refer to warriors or people, not an independently named city Lud.",
+      "original_word_evidence": [],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "original_source_edition": "WLC or SBLGNT as specified by witness",
+      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity"
+    },
+    {
+      "source_id": "place:Media",
+      "classification": "contextual_not_direct",
+      "reviewed_key_verses": [
+        "27005028"
+      ],
+      "rationale": "Daniel 5:28 names the Medes ethnonym in the transfer of kingdoms, not a separate territorial proper name Media.",
+      "original_word_evidence": [
+        {
+          "verse_id": "27005028",
+          "corpus": "wlc",
+          "word_id": "o270050280052",
+          "lemma": "מָדַי",
+          "english": "medes",
+          "gloss": "Medes"
+        }
+      ],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "original_source_edition": "WLC or SBLGNT as specified by witness",
+      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity"
+    },
+    {
+      "source_id": "place:Meronoth",
+      "classification": "geographical_inference_not_direct",
+      "reviewed_key_verses": [
+        "13027030",
+        "16003007"
+      ],
+      "rationale": "1 Chronicles 27:30 and Nehemiah 3:7 identify a Meronothite, not the full toponym Meronoth.",
+      "original_word_evidence": [],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "original_source_edition": "WLC or SBLGNT as specified by witness",
+      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity"
+    },
+    {
+      "source_id": "place:Misgab.1",
+      "classification": "uncertain_not_promoted",
+      "reviewed_key_verses": [
+        "24048001"
+      ],
+      "rationale": "Jeremiah 48:1 has misgab, literally high place/fortress; treating it as a separate proper place name remains a disputed interpretation.",
+      "original_word_evidence": [],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "original_source_edition": "WLC or SBLGNT as specified by witness",
+      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity"
+    },
+    {
+      "source_id": "place:Naamah.2",
+      "classification": "geographical_inference_not_direct",
+      "reviewed_key_verses": [
+        "18002011",
+        "18042009"
+      ],
+      "rationale": "Job 2:11 and 42:9 say Naamathite, the demonym of Zophar, not the proper name of a directly attested specific site.",
+      "original_word_evidence": [
+        {
+          "verse_id": "18002011",
+          "corpus": "wlc",
+          "word_id": "o180020110192",
+          "lemma": "נַעֲמָתִי",
+          "english": "Naamathite",
+          "gloss": "Naamathite"
+        },
+        {
+          "verse_id": "18042009",
+          "corpus": "wlc",
+          "word_id": "o180420090072",
+          "lemma": "נַעֲמָתִי",
+          "english": "Naamathite",
+          "gloss": "Naamathite"
+        }
+      ],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "original_source_edition": "WLC or SBLGNT as specified by witness",
+      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity"
+    },
+    {
+      "source_id": "place:Nehelam",
+      "classification": "geographical_inference_not_direct",
+      "reviewed_key_verses": [
+        "24029024",
+        "24029031",
+        "24029032"
+      ],
+      "rationale": "Jeremiah 29:24,31,32 says Nehelamite as Shemaiah's epithet, not an independently named locality Nehelam.",
+      "original_word_evidence": [],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "original_source_edition": "WLC or SBLGNT as specified by witness",
+      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity"
+    },
+    {
+      "source_id": "place:NorthGate",
+      "classification": "geographical_inference_not_direct",
+      "reviewed_key_verses": [
+        "13026014"
+      ],
+      "rationale": "1 Chronicles 26:14 assigns a northern lot in the temple gate roster but does not give a proper-name location North Gate in that verse.",
+      "original_word_evidence": [],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "original_source_edition": "WLC or SBLGNT as specified by witness",
+      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity"
+    },
+    {
+      "source_id": "place:Paddan-aram",
+      "classification": "uncertain_not_promoted",
+      "reviewed_key_verses": [
+        "01024010",
+        "07003008"
+      ],
+      "rationale": "Genesis 24:10 and Judges 3:8 name Aram-Naharaim, a related region but not the separate textual name Paddan-Aram.",
+      "original_word_evidence": [
+        {
+          "verse_id": "01024010",
+          "corpus": "wlc",
+          "word_id": "o010240100151",
+          "lemma": "אֲרַם נַהֲרַיִם",
+          "english": "",
+          "gloss": "Aram"
+        },
+        {
+          "verse_id": "07003008",
+          "corpus": "wlc",
+          "word_id": "o070030080111",
+          "lemma": "אֲרַם נַהֲרַיִם",
+          "english": "",
+          "gloss": "Aram.Naharaim"
+        }
+      ],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "original_source_edition": "WLC or SBLGNT as specified by witness",
+      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity"
+    },
+    {
+      "source_id": "place:Peor",
+      "classification": "uncertain_not_promoted",
+      "reviewed_key_verses": [
+        "28009010"
+      ],
+      "rationale": "Hosea 9:10 explicitly says Baal-Peor, a cultic name; Peor mountain/locality must not be equated to the god's name token.",
+      "original_word_evidence": [
+        {
+          "verse_id": "28009010",
+          "corpus": "wlc",
+          "word_id": "o280090100131",
+          "lemma": "בַּעַל פְּעוֹר",
+          "english": "",
+          "gloss": "Peor"
+        }
+      ],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "original_source_edition": "WLC or SBLGNT as specified by witness",
+      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity"
+    },
+    {
+      "source_id": "place:Pul",
+      "classification": "uncertain_not_promoted",
+      "reviewed_key_verses": [
+        "26027010"
+      ],
+      "rationale": "Ezekiel 27:10 lists Lud and Put in the pinned Hebrew, not a secure independent original place-name Pul; labels and the variant Isaiah 66:19 remain edition-qualified.",
+      "original_word_evidence": [
+        {
+          "verse_id": "26027010",
+          "corpus": "wlc",
+          "word_id": "o260270100022",
+          "lemma": "לוּד",
+          "english": "Lud",
+          "gloss": "Lud"
+        },
+        {
+          "verse_id": "26027010",
+          "corpus": "wlc",
+          "word_id": "o260270100032",
+          "lemma": "פּוּט",
+          "english": "Put",
+          "gloss": "Put"
+        }
+      ],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "original_source_edition": "WLC or SBLGNT as specified by witness",
+      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity"
+    },
+    {
+      "source_id": "place:Ramah.4",
+      "classification": "uncertain_not_promoted",
+      "reviewed_key_verses": [
+        "07004005"
+      ],
+      "rationale": "Judges 4:5 names Ramah near Bethel, but multiple Ramah identities exist; existing tribal-identity regression deliberately forbids promoting this ambiguous name.",
+      "original_word_evidence": [
+        {
+          "verse_id": "07004005",
+          "corpus": "wlc",
+          "word_id": "o070040050072",
+          "lemma": "רָמָה",
+          "english": "Ramah",
+          "gloss": "Ramah"
+        }
+      ],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "original_source_edition": "WLC or SBLGNT as specified by witness",
+      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity"
+    },
+    {
+      "source_id": "place:Ramah.8",
+      "classification": "uncertain_not_promoted",
+      "reviewed_key_verses": [
+        "09022006"
+      ],
+      "rationale": "1 Samuel 22:6 has generic Hebrew height (ramah) at Gibeah; original text does not establish a second named Ramah town.",
+      "original_word_evidence": [],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "original_source_edition": "WLC or SBLGNT as specified by witness",
+      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity"
+    },
+    {
+      "source_id": "place:Shaalbon",
+      "classification": "geographical_inference_not_direct",
+      "reviewed_key_verses": [
+        "10023032",
+        "13011033"
+      ],
+      "rationale": "2 Samuel 23:32 and 1 Chronicles 11:33 say Shaalbonite for a warrior, without naming the geographical site directly.",
+      "original_word_evidence": [],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "original_source_edition": "WLC or SBLGNT as specified by witness",
+      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity"
+    },
+    {
+      "source_id": "place:South.3",
+      "classification": "geographical_inference_not_direct",
+      "reviewed_key_verses": [
+        "27011005",
+        "27011011"
+      ],
+      "rationale": "Daniel 11:5,11 speaks of the king of the south with common directional negev, not a separately named place South.",
+      "original_word_evidence": [
+        {
+          "verse_id": "27011005",
+          "corpus": "wlc",
+          "word_id": "o270110050032",
+          "lemma": "נֶגֶב",
+          "english": "south",
+          "gloss": "the.south"
+        },
+        {
+          "verse_id": "27011011",
+          "corpus": "wlc",
+          "word_id": "o270110110032",
+          "lemma": "נֶגֶב",
+          "english": "south",
+          "gloss": "the.south"
+        }
+      ],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "original_source_edition": "WLC or SBLGNT as specified by witness",
+      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity"
+    },
+    {
+      "source_id": "place:SouthGate",
+      "classification": "geographical_inference_not_direct",
+      "reviewed_key_verses": [
+        "13026015"
+      ],
+      "rationale": "1 Chronicles 26:15 assigns a southern gatekeeping lot and storehouses; south is a directional label, not the direct proper name South Gate.",
+      "original_word_evidence": [],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "original_source_edition": "WLC or SBLGNT as specified by witness",
+      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity"
+    },
+    {
+      "source_id": "place:TerritoryOfAsher",
+      "classification": "constructed_tribal_territory_no_source_key",
+      "reviewed_key_verses": [],
+      "rationale": "The source-created Territory of Asher is a geographic/index grouping under the inherited place:Israel region, not an independently written single proper toponym in the pinned Hebrew verse corpus. The original ACAI entity has no general verse references, key verses or explicit original-word groups; preserve its structural role without inventing chapter, verse, name token, or polygon evidence.",
+      "original_word_evidence": [],
+      "existing_indirect_word_links": [],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "review_scope": "source_created_tribal_geographical_construct"
+    },
+    {
+      "source_id": "place:TerritoryOfBenjamin",
+      "classification": "constructed_tribal_territory_no_source_key",
+      "reviewed_key_verses": [],
+      "rationale": "The source-created Territory of Benjamin is a geographic/index grouping under the inherited place:Israel region, not an independently written single proper toponym in the pinned Hebrew verse corpus. The original ACAI entity has no general verse references, key verses or explicit original-word groups; preserve its structural role without inventing chapter, verse, name token, or polygon evidence.",
+      "original_word_evidence": [],
+      "existing_indirect_word_links": [],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "review_scope": "source_created_tribal_geographical_construct"
+    },
+    {
+      "source_id": "place:TerritoryOfDan",
+      "classification": "constructed_tribal_territory_no_source_key",
+      "reviewed_key_verses": [],
+      "rationale": "The source-created Territory of Dan is a geographic/index grouping under the inherited place:Israel region, not an independently written single proper toponym in the pinned Hebrew verse corpus. The original ACAI entity has no general verse references, key verses or explicit original-word groups; preserve its structural role without inventing chapter, verse, name token, or polygon evidence.",
+      "original_word_evidence": [],
+      "existing_indirect_word_links": [],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "review_scope": "source_created_tribal_geographical_construct"
+    },
+    {
+      "source_id": "place:TerritoryOfEastManasseh",
+      "classification": "constructed_tribal_territory_no_source_key",
+      "reviewed_key_verses": [],
+      "rationale": "The source-created Territory of eastern half of Manasseh is a geographic/index grouping under the inherited place:Israel region, not an independently written single proper toponym in the pinned Hebrew verse corpus. The original ACAI entity has no general verse references, key verses or explicit original-word groups; preserve its structural role without inventing chapter, verse, name token, or polygon evidence.",
+      "original_word_evidence": [],
+      "existing_indirect_word_links": [],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "review_scope": "source_created_tribal_geographical_construct"
+    },
+    {
+      "source_id": "place:TerritoryOfEphraim",
+      "classification": "constructed_tribal_territory_no_source_key",
+      "reviewed_key_verses": [],
+      "rationale": "The source-created Territory of Ephraim is a geographic/index grouping under the inherited place:Israel region, not an independently written single proper toponym in the pinned Hebrew verse corpus. The original ACAI entity has no general verse references, key verses or explicit original-word groups; preserve its structural role without inventing chapter, verse, name token, or polygon evidence.",
+      "original_word_evidence": [],
+      "existing_indirect_word_links": [],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "review_scope": "source_created_tribal_geographical_construct"
+    },
+    {
+      "source_id": "place:TerritoryOfGad",
+      "classification": "constructed_tribal_territory_no_source_key",
+      "reviewed_key_verses": [],
+      "rationale": "The source-created Territory of Gad is a geographic/index grouping under the inherited place:Israel region, not an independently written single proper toponym in the pinned Hebrew verse corpus. The original ACAI entity has no general verse references, key verses or explicit original-word groups; preserve its structural role without inventing chapter, verse, name token, or polygon evidence.",
+      "original_word_evidence": [],
+      "existing_indirect_word_links": [],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "review_scope": "source_created_tribal_geographical_construct"
+    },
+    {
+      "source_id": "place:TerritoryOfIssachar",
+      "classification": "constructed_tribal_territory_no_source_key",
+      "reviewed_key_verses": [],
+      "rationale": "The source-created Territory of Issachar is a geographic/index grouping under the inherited place:Israel region, not an independently written single proper toponym in the pinned Hebrew verse corpus. The original ACAI entity has no general verse references, key verses or explicit original-word groups; preserve its structural role without inventing chapter, verse, name token, or polygon evidence.",
+      "original_word_evidence": [],
+      "existing_indirect_word_links": [],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "review_scope": "source_created_tribal_geographical_construct"
+    },
+    {
+      "source_id": "place:TerritoryOfJudah",
+      "classification": "constructed_tribal_territory_no_source_key",
+      "reviewed_key_verses": [],
+      "rationale": "The source-created Territory of Judah is a geographic/index grouping under the inherited place:Israel region, not an independently written single proper toponym in the pinned Hebrew verse corpus. The original ACAI entity has no general verse references, key verses or explicit original-word groups; preserve its structural role without inventing chapter, verse, name token, or polygon evidence.",
+      "original_word_evidence": [],
+      "existing_indirect_word_links": [],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "review_scope": "source_created_tribal_geographical_construct"
+    },
+    {
+      "source_id": "place:TerritoryOfNaphtali",
+      "classification": "constructed_tribal_territory_no_source_key",
+      "reviewed_key_verses": [],
+      "rationale": "The source-created Territory of Naphtali is a geographic/index grouping under the inherited place:Israel region, not an independently written single proper toponym in the pinned Hebrew verse corpus. The original ACAI entity has no general verse references, key verses or explicit original-word groups; preserve its structural role without inventing chapter, verse, name token, or polygon evidence.",
+      "original_word_evidence": [],
+      "existing_indirect_word_links": [],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "review_scope": "source_created_tribal_geographical_construct"
+    },
+    {
+      "source_id": "place:TerritoryOfReuben",
+      "classification": "constructed_tribal_territory_no_source_key",
+      "reviewed_key_verses": [],
+      "rationale": "The source-created Territory of Reuben is a geographic/index grouping under the inherited place:Israel region, not an independently written single proper toponym in the pinned Hebrew verse corpus. The original ACAI entity has no general verse references, key verses or explicit original-word groups; preserve its structural role without inventing chapter, verse, name token, or polygon evidence.",
+      "original_word_evidence": [],
+      "existing_indirect_word_links": [],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "review_scope": "source_created_tribal_geographical_construct"
+    },
+    {
+      "source_id": "place:TerritoryOfSimeon",
+      "classification": "constructed_tribal_territory_no_source_key",
+      "reviewed_key_verses": [],
+      "rationale": "The source-created Territory of Simeon is a geographic/index grouping under the inherited place:Israel region, not an independently written single proper toponym in the pinned Hebrew verse corpus. The original ACAI entity has no general verse references, key verses or explicit original-word groups; preserve its structural role without inventing chapter, verse, name token, or polygon evidence.",
+      "original_word_evidence": [],
+      "existing_indirect_word_links": [],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "review_scope": "source_created_tribal_geographical_construct"
+    },
+    {
+      "source_id": "place:TerritoryOfWestManasseh",
+      "classification": "constructed_tribal_territory_no_source_key",
+      "reviewed_key_verses": [],
+      "rationale": "The source-created Territory of western half of Manasseh is a geographic/index grouping under the inherited place:Israel region, not an independently written single proper toponym in the pinned Hebrew verse corpus. The original ACAI entity has no general verse references, key verses or explicit original-word groups; preserve its structural role without inventing chapter, verse, name token, or polygon evidence.",
+      "original_word_evidence": [],
+      "existing_indirect_word_links": [],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "review_scope": "source_created_tribal_geographical_construct"
+    },
+    {
+      "source_id": "place:TerritoryOfZebulun",
+      "classification": "constructed_tribal_territory_no_source_key",
+      "reviewed_key_verses": [],
+      "rationale": "The source-created Territory of Zebulun is a geographic/index grouping under the inherited place:Israel region, not an independently written single proper toponym in the pinned Hebrew verse corpus. The original ACAI entity has no general verse references, key verses or explicit original-word groups; preserve its structural role without inventing chapter, verse, name token, or polygon evidence.",
+      "original_word_evidence": [],
+      "existing_indirect_word_links": [],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "review_scope": "source_created_tribal_geographical_construct"
+    },
+    {
+      "source_id": "place:ZalmonMount",
+      "classification": "uncertain_not_promoted",
+      "reviewed_key_verses": [
+        "19068015"
+      ],
+      "rationale": "Judges 9:48 names a woodland Mount Zalmon near Shechem (already direct); Psalm 68:15 separately names a snow-covered Zalmon, whose identity with that Judges mountain is not established. Preserve the earlier source identity split and do not silently equate the sites; a pre-existing negative regression explicitly requires this distinction.",
+      "original_word_evidence": [
+        {
+          "verse_id": "19068015",
+          "corpus": "wlc",
+          "word_id": "o190680150062",
+          "lemma": "צַלְמוֹן",
+          "english": "Zalmon",
+          "gloss": "Zalmon"
+        }
+      ],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "original_source_edition": "WLC or SBLGNT as specified by witness",
+      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity"
+    },
+    {
+      "source_id": "place:Zaphon.2",
+      "classification": "uncertain_not_promoted",
+      "reviewed_key_verses": [
+        "18026007",
+        "19048003",
+        "23014013"
+      ],
+      "rationale": "Job 26:7 and Psalm 48:3 use north, while Isaiah 14:13 mentions the mythic mount of assembly in the far north; identifying a precise Mount Zaphon is interpretive, not an original toponym.",
+      "original_word_evidence": [],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "original_source_edition": "WLC or SBLGNT as specified by witness",
+      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity"
+    },
+    {
+      "source_id": "realia:Boat",
+      "classification": "direct_witness_restored",
+      "reviewed_key_verses": [
+        "01006014",
+        "01007001",
+        "01008004"
+      ],
+      "rationale": "Genesis 6:14, 7:1 and 8:4 explicitly name Noah's ark (tebah), which is already included as Ark in the realia Boat scope; four exact source tokens have been added.",
+      "original_word_evidence": [
+        {
+          "verse_id": "01006014",
+          "corpus": "wlc",
+          "word_id": "o010060140031",
+          "lemma": "תֵּבָה",
+          "english": "ark",
+          "gloss": "an.ark"
+        },
+        {
+          "verse_id": "01006014",
+          "corpus": "wlc",
+          "word_id": "o010060140092",
+          "lemma": "תֵּבָה",
+          "english": "ark",
+          "gloss": "ark"
+        },
+        {
+          "verse_id": "01007001",
+          "corpus": "wlc",
+          "word_id": "o010070010092",
+          "lemma": "תֵּבָה",
+          "english": "ark",
+          "gloss": "ark"
+        },
+        {
+          "verse_id": "01008004",
+          "corpus": "wlc",
+          "word_id": "o010080040022",
+          "lemma": "תֵּבָה",
+          "english": "ark",
+          "gloss": "ark"
+        }
+      ],
+      "editorial_outcome": "source_record_corrected_in_this_review",
+      "original_source_edition": "WLC or SBLGNT as specified by witness",
+      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity"
+    },
+    {
+      "source_id": "realia:Palace",
+      "classification": "uncertain_not_promoted",
+      "reviewed_key_verses": [
+        "40026003"
+      ],
+      "rationale": "Matthew 26:3 uses Greek aule, directly a courtyard, possibly describing the high priest's palace; the English palace gloss alone cannot establish structural identity.",
+      "original_word_evidence": [
+        {
+          "verse_id": "40026003",
+          "corpus": "SBLGNT",
+          "word_id": "n40026003012",
+          "lemma": "αὐλή",
+          "english": "palace",
+          "gloss": "courtyard"
+        }
+      ],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "original_source_edition": "WLC or SBLGNT as specified by witness",
+      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity"
+    },
+    {
+      "source_id": "realia:Rug",
+      "classification": "uncertain_not_promoted",
+      "reviewed_key_verses": [
+        "26027024"
+      ],
+      "rationale": "Ezekiel 27:24 uses a term for variegated woven material; no unique rug/carpet object is established by that isolated lexical gloss.",
+      "original_word_evidence": [
+        {
+          "verse_id": "26027024",
+          "corpus": "wlc",
+          "word_id": "o260270240081",
+          "lemma": "בְּרֹמִים",
+          "english": "colored material",
+          "gloss": "of.variegated.cloth"
+        }
+      ],
+      "editorial_outcome": "no_unverified_direct_word_assignment",
+      "original_source_edition": "WLC or SBLGNT as specified by witness",
+      "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity"
+    }
+  ],
+  "evidence_review_base_commit": "d6ea1dbc32813ca9a61442c8bebdd5c74990f830"
+}

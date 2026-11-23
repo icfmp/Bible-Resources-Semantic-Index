@@ -12,10 +12,38 @@
   },
   "bsi": {
     "canonical_id": "flora:Poplar",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "flora:Poplar",
     "source_primary_id": "flora:Poplar",
-    "source_sha256": "25fb5ff876a680f4e0a70a76c486983b8c6bec70d371853e1851a34996773c86"
+    "source_sha256": "25fb5ff876a680f4e0a70a76c486983b8c6bec70d371853e1851a34996773c86",
+    "editorial_reason": "2 Samuel 5:23 in pinned WLC speaks of balsam/baka trees (בָּכָא; o100050230131), not poplar (לִבְנֶה) or white poplar. The inherited poplar-specific key had conflated two different botanical names. Remove only the false key, keeping Genesis 30:37 and all true poplar original-word evidence intact.",
+    "editorial_evidence": [
+      "WLC 2 Samuel 5:23 o100050230131, lemma בָּכָא, English balsam trees",
+      "Existing source record flora:Poplar has distinct pinned explicit poplar terms; no source-word ID at 2 Sam 5:23"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "remove_balsam_tree_key_from_poplar_species",
+        "reason": "2 Samuel 5:23 in pinned WLC speaks of balsam/baka trees (בָּכָא; o100050230131), not poplar (לִבְנֶה) or white poplar. The inherited poplar-specific key had conflated two different botanical names. Remove only the false key, keeping Genesis 30:37 and all true poplar original-word evidence intact.",
+        "evidence": [
+          "WLC 2 Samuel 5:23 o100050230131, lemma בָּכָא, English balsam trees",
+          "Existing source record flora:Poplar has distinct pinned explicit poplar terms; no source-word ID at 2 Sam 5:23"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "key_references": [
+              "10005023",
+              "03023040"
+            ]
+          },
+          "after": {
+            "key_references": [
+              "03023040"
+            ]
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -45,7 +73,6 @@
   "flora_type": "Wild Trees and Shrubs",
   "id": "flora:Poplar",
   "key_references": [
-    "10005023",
     "03023040"
   ],
   "lemmas": {

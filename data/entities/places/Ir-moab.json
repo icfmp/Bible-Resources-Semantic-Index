@@ -2,12 +2,55 @@
   "added_entry": false,
   "bsi": {
     "canonical_id": "place:Ir-moab",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:Ir-moab",
     "source_primary_id": "place:Ir-moab",
-    "source_sha256": "56f64cf845e0dab389a3fea3d72985982731e5e1a937e2a63356eafcead8b9de"
+    "source_sha256": "56f64cf845e0dab389a3fea3d72985982731e5e1a937e2a63356eafcead8b9de",
+    "editorial_reason": "Restore each verified direct original-language word witness independently while leaving non-direct contextual key claims distinct.",
+    "editorial_evidence": [
+      "Clear-Bible/mac-ula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c exact WLC original-word source",
+      "Numbers 22:36 uses the literal geographical phrase city of Moab (עִיר מוֹאָב), at the Arnon boundary. Treat as the source's descriptive geographic label, not evidence of a distinct formally named town.",
+      "BCV8 04022036 exact wlc token(s) o040220360091 + o040220360101"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "restore_verified_direct_original_word_after_identity_corroboration",
+        "reason": "Restore each verified direct original-language word witness independently while leaving non-direct contextual key claims distinct.",
+        "evidence": [
+          "Clear-Bible/mac-ula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c exact WLC original-word source",
+          "Numbers 22:36 uses the literal geographical phrase city of Moab (עִיר מוֹאָב), at the Arnon boundary. Treat as the source's descriptive geographic label, not evidence of a distinct formally named town.",
+          "BCV8 04022036 exact wlc token(s) o040220360091 + o040220360101"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [],
+            "explicit_instances": {}
+          },
+          "after": {
+            "references": [
+              "04022036"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o040220360091",
+                  "o040220360101"
+                ]
+              ]
+            }
+          }
+        }
+      }
+    ]
   },
-  "explicit_instances": {},
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o040220360091",
+        "o040220360101"
+      ]
+    ]
+  },
   "id": "place:Ir-moab",
   "is_artifact": false,
   "is_person": false,
@@ -34,7 +77,9 @@
   },
   "primary_id": "place:Ir-moab",
   "pronominal_referents": {},
-  "references": [],
+  "references": [
+    "04022036"
+  ],
   "subject_referents": {},
   "subregion_of": [
     "place:Moab"

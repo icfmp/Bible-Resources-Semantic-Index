@@ -5,6 +5,9 @@ on:
     paths:
       - "data/entities/**"
       - "data/source.lock.json"
+      - "data/source-key-identity-review-115.json"
+      - "scripts/validate_source_key_identity_reviews.py"
+      - "tests/test_source_key_identity_review_115.py"
       - "data/source-unattested-words.json"
       - "scripts/verify_pinned_entity_words.py"
       - "tests/test_verify_pinned_entity_words.py"
@@ -19,6 +22,9 @@ on:
     paths:
       - "data/entities/**"
       - "data/source.lock.json"
+      - "data/source-key-identity-review-115.json"
+      - "scripts/validate_source_key_identity_reviews.py"
+      - "tests/test_source_key_identity_review_115.py"
       - "data/source-unattested-words.json"
       - "scripts/verify_pinned_entity_words.py"
       - "tests/test_verify_pinned_entity_words.py"
@@ -118,3 +124,29 @@ jobs:
         run: |
           python3 -I scripts/verify_pinned_entity_words.py             --data data             --wlc macula-hebrew/WLC/tsv/macula-hebrew.tsv             --sblgnt macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv
           # Read-only source verification. No copy/publish of source inventories.
+
+      - name: Inspect remaining source ambiguities for 115-case milestone
+        run: |
+          python3 -I scripts/inspect_pinned_original_verse.py \
+            --wlc macula-hebrew/WLC/tsv/macula-hebrew.tsv \
+            --sblgnt macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv \
+            --verses 01011002 01011031 15001011 15002001 24051024 38005011 23015005 24048034 13012004 13012005 26038006 10021018 04022036 24046009 26030005 13027030 16003007 24048001 18002011 18042009 24029024 24029031 24029032 13026014 09022006 10023032 13011033 27011005
+          python3 -I scripts/inspect_pinned_original_verse.py \
+            --wlc macula-hebrew/WLC/tsv/macula-hebrew.tsv \
+            --sblgnt macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv \
+            --verses 27011011 13026015 18026007 19048003 23014013 01017004 44009002 44009003 44009005 07009002 40010002 06007021 06007025 01030006 01029034 01029033 01010022 01010015 06018028
+
+      - name: Validate reviewed key identities against exact pinned originals
+        run: |
+          python3 -I scripts/validate_source_key_identity_reviews.py \
+            --data data \
+            --review data/source-key-identity-review-115.json \
+            --wlc macula-hebrew/WLC/tsv/macula-hebrew.tsv \
+            --sblgnt macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv
+
+      - name: Inspect additional eleven role and ethnic-source cases
+        run: |
+          python3 -I scripts/inspect_pinned_original_verse.py \
+            --wlc macula-hebrew/WLC/tsv/macula-hebrew.tsv \
+            --sblgnt macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv \
+            --verses 12001002 12001016 13012018 01014019 01014020 01003001 03011031 02028042 10005023 13001013 23021013 48001017 07003008 06009018

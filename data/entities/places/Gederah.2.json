@@ -7,17 +7,46 @@
   },
   "bsi": {
     "canonical_id": "place:Gederah.2",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:Gederah.2",
     "source_primary_id": "place:Gederah.2",
-    "source_sha256": "2a754157c71f80e8a70b74ec7f8d314a4d6c3fe2726f5b70f6328a09617bad9a"
+    "source_sha256": "2a754157c71f80e8a70b74ec7f8d314a4d6c3fe2726f5b70f6328a09617bad9a",
+    "editorial_reason": "1 Chronicles 12:4 (WLC) names Ishmaiah the Gibeonite, not Gederah or a Gederathite. The immediately following 12:5 explicitly identifies Jozabad as Gederathite (o130120050052), the only supported contextual geographical evidence here. Correct the inherited source key to 12:5; do not invent a direct proper-name Gederah word or identify a city from this gentilic form.",
+    "editorial_evidence": [
+      "Pinned WLC 1 Chronicles 12:4 o130120040022 Gibeonite, not Gederathite",
+      "Pinned WLC 1 Chronicles 12:5 o130120050052 גְּדֵרָתִי Gederathite; evidence of demonym only",
+      "BCV8 and exact source edition in data/source.lock.json"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "correct_gederathite_contextual_key_by_adjacent_original_verse",
+        "reason": "1 Chronicles 12:4 (WLC) names Ishmaiah the Gibeonite, not Gederah or a Gederathite. The immediately following 12:5 explicitly identifies Jozabad as Gederathite (o130120050052), the only supported contextual geographical evidence here. Correct the inherited source key to 12:5; do not invent a direct proper-name Gederah word or identify a city from this gentilic form.",
+        "evidence": [
+          "Pinned WLC 1 Chronicles 12:4 o130120040022 Gibeonite, not Gederathite",
+          "Pinned WLC 1 Chronicles 12:5 o130120050052 גְּדֵרָתִי Gederathite; evidence of demonym only",
+          "BCV8 and exact source edition in data/source.lock.json"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "key_references": [
+              "13012004"
+            ]
+          },
+          "after": {
+            "key_references": [
+              "13012005"
+            ]
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {},
   "id": "place:Gederah.2",
   "is_artifact": false,
   "is_person": false,
   "key_references": [
-    "13012004"
+    "13012005"
   ],
   "localizations": {
     "eng": {

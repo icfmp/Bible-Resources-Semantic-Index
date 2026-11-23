@@ -15,15 +15,65 @@
   },
   "bsi": {
     "canonical_id": "person:Hassenuah",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "person:Hassenaah",
     "source_primary_id": "person:Hassenuah",
-    "source_sha256": "d02495e870c7ea353e72b614e02545852216d8e1d8bc425660bdef2428580196"
+    "source_sha256": "d02495e870c7ea353e72b614e02545852216d8e1d8bc425660bdef2428580196",
+    "editorial_reason": "Restore each verified direct original-language word witness independently while leaving non-direct contextual key claims distinct.",
+    "editorial_evidence": [
+      "Clear-Bible/mac-ula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c exact WLC original-word source",
+      "1 Chronicles 9:7 names Hassenuah in the genealogy of Sallu, independently corresponding to inherited Hassenaah/Hassenuah canonical identity.",
+      "BCV8 13009007 exact wlc token(s) o130090070102"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "restore_verified_direct_original_word_after_identity_corroboration",
+        "reason": "Restore each verified direct original-language word witness independently while leaving non-direct contextual key claims distinct.",
+        "evidence": [
+          "Clear-Bible/mac-ula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c exact WLC original-word source",
+          "1 Chronicles 9:7 names Hassenuah in the genealogy of Sallu, independently corresponding to inherited Hassenaah/Hassenuah canonical identity.",
+          "BCV8 13009007 exact wlc token(s) o130090070102"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [
+              "16003003"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o160030030062"
+                ]
+              ]
+            }
+          },
+          "after": {
+            "references": [
+              "13009007",
+              "16003003"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o160030030062"
+                ],
+                [
+                  "o130090070102"
+                ]
+              ]
+            }
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
       [
         "o160030030062"
+      ],
+      [
+        "o130090070102"
       ]
     ]
   },
@@ -57,6 +107,7 @@
   "primary_id": "person:Hassenuah",
   "pronominal_referents": {},
   "references": [
+    "13009007",
     "16003003"
   ],
   "referred_to_as": [

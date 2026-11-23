@@ -13,10 +13,100 @@
   },
   "bsi": {
     "canonical_id": "realia:Boat",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "realia:Boat",
     "source_primary_id": "realia:Boat",
-    "source_sha256": "d1e4e8dbf32eaea5d587b86becf6525ec8a28b2348be6af39f6758d405c7daed"
+    "source_sha256": "d1e4e8dbf32eaea5d587b86becf6525ec8a28b2348be6af39f6758d405c7daed",
+    "editorial_reason": "Restore each verified direct original-language word witness independently while leaving non-direct contextual key claims distinct.",
+    "editorial_evidence": [
+      "Clear-Bible/mac-ula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c exact WLC original-word source",
+      "Genesis 6:14 (two occurrences), 7:1 and 8:4 directly name Noah's floating ark (תֵבָה); the existing realia:Boat includes Ark and explicitly indexes the same structure in Matthew 24:38, Luke 17:27, Hebrews 11:7 and 1 Peter 3:20.",
+      "BCV8 01006014 exact wlc token(s) o010060140031",
+      "BCV8 01006014 exact wlc token(s) o010060140092",
+      "BCV8 01007001 exact wlc token(s) o010070010092",
+      "BCV8 01008004 exact wlc token(s) o010080040022"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "restore_verified_direct_original_word_after_identity_corroboration",
+        "reason": "Restore each verified direct original-language word witness independently while leaving non-direct contextual key claims distinct.",
+        "evidence": [
+          "Clear-Bible/mac-ula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c exact WLC original-word source",
+          "Genesis 6:14 (two occurrences), 7:1 and 8:4 directly name Noah's floating ark (תֵבָה); the existing realia:Boat includes Ark and explicitly indexes the same structure in Matthew 24:38, Luke 17:27, Hebrews 11:7 and 1 Peter 3:20.",
+          "BCV8 01006014 exact wlc token(s) o010060140031",
+          "BCV8 01006014 exact wlc token(s) o010060140092",
+          "BCV8 01007001 exact wlc token(s) o010070010092",
+          "BCV8 01008004 exact wlc token(s) o010080040022"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [
+              "40024038",
+              "42017027",
+              "58011007",
+              "60003020"
+            ],
+            "explicit_instances": {
+              "SBLGNT": [
+                [
+                  "n40024038024"
+                ],
+                [
+                  "n42017027012"
+                ],
+                [
+                  "n58011007010"
+                ],
+                [
+                  "n60003020013"
+                ]
+              ]
+            }
+          },
+          "after": {
+            "references": [
+              "01006014",
+              "01007001",
+              "01008004",
+              "40024038",
+              "42017027",
+              "58011007",
+              "60003020"
+            ],
+            "explicit_instances": {
+              "SBLGNT": [
+                [
+                  "n40024038024"
+                ],
+                [
+                  "n42017027012"
+                ],
+                [
+                  "n58011007010"
+                ],
+                [
+                  "n60003020013"
+                ]
+              ],
+              "wlc": [
+                [
+                  "o010060140031"
+                ],
+                [
+                  "o010060140092"
+                ],
+                [
+                  "o010070010092"
+                ],
+                [
+                  "o010080040022"
+                ]
+              ]
+            }
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "SBLGNT": [
@@ -31,6 +121,20 @@
       ],
       [
         "n60003020013"
+      ]
+    ],
+    "wlc": [
+      [
+        "o010060140031"
+      ],
+      [
+        "o010060140092"
+      ],
+      [
+        "o010070010092"
+      ],
+      [
+        "o010080040022"
       ]
     ]
   },
@@ -68,6 +172,9 @@
   },
   "realia_type": "other",
   "references": [
+    "01006014",
+    "01007001",
+    "01008004",
     "40024038",
     "42017027",
     "58011007",

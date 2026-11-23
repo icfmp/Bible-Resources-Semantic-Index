@@ -9,10 +9,127 @@
   },
   "bsi": {
     "canonical_id": "deity:Lord",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "deity:Highest",
     "source_primary_id": "deity:Lord",
-    "source_sha256": "fcdc22da218b436fb3c5bfc235a415a4d882afc68c5729c62f3b64b23feb85d1"
+    "source_sha256": "fcdc22da218b436fb3c5bfc235a415a4d882afc68c5729c62f3b64b23feb85d1",
+    "editorial_reason": "Genesis 14:19-20 explicitly names God Most High (El Elyon, אֵל עֶלְיוֹן) as a complete two-word original divine title, rather than inferring 'Highest' from a generic noun. The source deity:Highest already has canonical Highest (LORD) and the inherited two keys; preserve all existing Greek attestation and distinguish this name from unrelated high places.",
+    "editorial_evidence": [
+      "Pinned WLC Genesis 14:19 o010140190052 God (אֵל) + o010140190061 Most High (עֶלְיוֹן)",
+      "Pinned WLC Genesis 14:20 o010140200021 God (אֵל) + o010140200031 Most High (עֶלְיוֹן)"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "restore_verified_direct_original_word_after_identity_corroboration",
+        "reason": "Genesis 14:19-20 explicitly names God Most High (El Elyon, אֵל עֶלְיוֹן) as a complete two-word original divine title, rather than inferring 'Highest' from a generic noun. The source deity:Highest already has canonical Highest (LORD) and the inherited two keys; preserve all existing Greek attestation and distinguish this name from unrelated high places.",
+        "evidence": [
+          "Pinned WLC Genesis 14:19 o010140190052 God (אֵל) + o010140190061 Most High (עֶלְיוֹן)",
+          "Pinned WLC Genesis 14:20 o010140200021 God (אֵל) + o010140200031 Most High (עֶלְיוֹן)"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [
+              "41005007",
+              "42001032",
+              "42001035",
+              "42001076",
+              "42006035",
+              "42008028",
+              "44007048",
+              "44016017",
+              "58007001"
+            ],
+            "explicit_instances": {
+              "SBLGNT": [
+                [
+                  "n41005007015"
+                ],
+                [
+                  "n42001032006"
+                ],
+                [
+                  "n42001035014"
+                ],
+                [
+                  "n42001076006"
+                ],
+                [
+                  "n42006035021"
+                ],
+                [
+                  "n42008028021"
+                ],
+                [
+                  "n44007048004"
+                ],
+                [
+                  "n44016017016"
+                ],
+                [
+                  "n58007001011"
+                ]
+              ]
+            }
+          },
+          "after": {
+            "references": [
+              "01014019",
+              "01014020",
+              "41005007",
+              "42001032",
+              "42001035",
+              "42001076",
+              "42006035",
+              "42008028",
+              "44007048",
+              "44016017",
+              "58007001"
+            ],
+            "explicit_instances": {
+              "SBLGNT": [
+                [
+                  "n41005007015"
+                ],
+                [
+                  "n42001032006"
+                ],
+                [
+                  "n42001035014"
+                ],
+                [
+                  "n42001076006"
+                ],
+                [
+                  "n42006035021"
+                ],
+                [
+                  "n42008028021"
+                ],
+                [
+                  "n44007048004"
+                ],
+                [
+                  "n44016017016"
+                ],
+                [
+                  "n58007001011"
+                ]
+              ],
+              "wlc": [
+                [
+                  "o010140190052",
+                  "o010140190061"
+                ],
+                [
+                  "o010140200021",
+                  "o010140200031"
+                ]
+              ]
+            }
+          }
+        }
+      }
+    ]
   },
   "deity_type": "deity",
   "explicit_instances": {
@@ -43,6 +160,16 @@
       ],
       [
         "n58007001011"
+      ]
+    ],
+    "wlc": [
+      [
+        "o010140190052",
+        "o010140190061"
+      ],
+      [
+        "o010140200021",
+        "o010140200031"
       ]
     ]
   },
@@ -76,6 +203,8 @@
     ]
   },
   "references": [
+    "01014019",
+    "01014020",
     "41005007",
     "42001032",
     "42001035",
