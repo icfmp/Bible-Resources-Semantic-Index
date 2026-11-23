@@ -70,33 +70,9 @@ jobs:
           python3 -I scripts/verify_generated_json.py \
             --generated /tmp/brsi-lsg-candidate/receipt.json \
             --baseline links/alignments/clear-bible-lsg/receipt.lock.json
-      - name: Compute original independent MACULA SHA-256 and perform first parity discovery
+      - name: Require exact source-pinned MACULA/LSG parity and immutable evidence
         run: |
           set -euo pipefail
-          python3 -I - <<'PY'
-          import hashlib
-          import json
-          from pathlib import Path
-          manifest = json.loads(Path('links/alignments/clear-bible-lsg/pivot.lock.json').read_text())
-          for canon, filename in (
-              ('nt', 'macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv'),
-              ('ot', 'macula-hebrew/WLC/tsv/macula-hebrew.tsv'),
-          ):
-              p=Path(filename)
-              h=hashlib.sha256()
-              with p.open('rb') as stream:
-                  for chunk in iter(lambda: stream.read(1048576), b''):
-                      h.update(chunk)
-              digest=h.hexdigest()
-              print('PINNED_MACULA_'+canon.upper()+'_SHA256='+digest)
-              original=manifest['sources'][canon]['sha256']
-              if original is not None and original != digest:
-                  raise ValueError('Original BRSI MACULA source checksum mismatch: '+canon)
-              if original is None:
-                  manifest['sources'][canon]['sha256']=digest # discovery only, do not commit this path
-          Path('/tmp/brsi-lsg-discovery-pivot-lock.json').write_text(
-              json.dumps(manifest, sort_keys=True), encoding='utf-8')
-          PY
           python3 -I scripts/audit_translation_pivot_parity.py \
             --alignment-manifest links/alignments/clear-bible-lsg/manifest.json \
             --candidate-receipt links/alignments/clear-bible-lsg/receipt.lock.json \
@@ -104,9 +80,23 @@ jobs:
             --ot-source /tmp/brsi-lsg-source/data/sources/WLCM.tsv \
             --nt-candidate /tmp/brsi-lsg-candidate/nt.json \
             --ot-candidate /tmp/brsi-lsg-candidate/ot.json \
-            --pivot-manifest /tmp/brsi-lsg-discovery-pivot-lock.json \
+            --pivot-manifest links/alignments/clear-bible-lsg/pivot.lock.json \
             --nt-pivot macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv \
             --ot-pivot macula-hebrew/WLC/tsv/macula-hebrew.tsv \
             --output /tmp/brsi-lsg-pivot-parity.json
+          python3 -I scripts/verify_generated_json.py \
+            --generated /tmp/brsi-lsg-pivot-parity.json \
+            --baseline links/alignments/clear-bible-lsg/pivot-audit.lock.json
+          python3 -I - <<'PY'
+          import json
+          from pathlib import Path
+          report=json.loads(Path('/tmp/brsi-lsg-pivot-parity.json').read_text())
+          assert not report['publication_authorized']
+          assert sum(r['linked_ids_absent_from_brsi_macula']
+                     for r in report['canon_audits'].values()) == 0
+          assert not any(r['identity_certified'] or r['contextual_senses_certified']
+                         or r['target_lsg_edition_certified']
+                         for r in report['canon_audits'].values())
+          PY
       - name: No publication
         run: echo "Private source audit only. No origin text or LSG candidate uploaded."
