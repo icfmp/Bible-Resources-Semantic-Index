@@ -43,7 +43,7 @@ source-import path.
 
 | Stream | Python tools and tests | Executable entrypoint | Retained editorial authority |
 | --- | ---: | --- | --- |
-| UBS Greek | 74 total; 34 `test_*.py` modules | [Pinned Greek workflow](../.github/workflows/bsi-ubs-greek.yml) and its source-local builders | Original source locks, reviewed JSON headword/word-ID ledgers, explicit sense abstentions |
+| UBS Greek | 76 total; 35 `test_*.py` modules | [Pinned Greek workflow](../.github/workflows/bsi-ubs-greek.yml) and its source-local builders | Original source locks, reviewed JSON headword/word-ID ledgers, explicit sense abstentions |
 | UBS Hebrew | 36 total; 18 `test_*.py` modules | [Pinned Hebrew workflow](../.github/workflows/bsi-ubs-hebrew.yml) and its source-local builders | Original source locks, reviewed JSON identity/disposition/abstention ledgers, v1 and v1.1 reviews |
 
 Active source-pinned UBS workflows reconstruct source material from exact
