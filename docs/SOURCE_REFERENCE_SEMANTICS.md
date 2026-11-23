@@ -165,3 +165,63 @@ Run metadata checks: python3 -I scripts/validate_source_key_resolution_batches.p
 GitHub CI adds --wlc macula-hebrew/WLC/tsv/macula-hebrew.tsv and --sblgnt macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv for independent source-collation.
 
 The two disjoint resolved cohorts now contain **230 cases**. The frozen 243-case outstanding inventory has **128 as-yet-unadjudicated cases** after this batch. These are queue identities, not an error count, and issue #23 remains open for the rest of the audit.
+
+## Final frozen 128-case disposition docket (PR #141)
+
+The 243-case queue following PR #139 is exactly partitioned into PR #140's 115
+resolved identities and the separately frozen 128-case set at
+[data/source-key-final-128-candidates.json](../data/source-key-final-128-candidates.json).
+The initial selection and original-language contextual probe **do not themselves
+certify any identity**.
+
+The independent [final review dossier](../data/source-key-final-128-review.json)
+records one precise verdict for **all 128** identities and all of their inherited
+keys, with source excerpts, available neighboring word IDs, and explicit policy:
+
+| Editorial outcome | Distinct identities | Status |
+| --- | ---: | --- |
+| Reversible native-record correction | 44 | Adjudicated; exact before/after receipts |
+| Verified contextual or indirect key, no edit | 69 | Adjudicated; never asserted to be a direct name |
+| Independently consulted Greek 1 Maccabees (Adasa, Arbela, Bostra) | 3 | External corroboration; **not** Macula-certified |
+| Genuine identity/philology/geography uncertainty | 12 | **Unresolved, excluded from completion** |
+
+The 44 changes include correcting impossible or mis-numbered WLC source keys;
+disentangling unrelated genealogies and geographic entities; repairing the
+pinned Hebrew Joel 3:1 Spirit token and Genesis 1:2 Spirit word without altering
+any Bible text; correcting the source identity Pul mislabeled Lud; and separating
+Javan the ancestor from the separate Greek ethnographic source index.
+
+The source witness is the pair of locked WLC/SBLGNT Macula TSV editions in
+[data/source.lock.json](../data/source.lock.json). In CI,
+[scripts/validate_final_source_key_audit.py](../scripts/validate_final_source_key_audit.py)
+reconstructs **every** cited 66-book target excerpt and cited word ID from the
+pinned originals. It also checks exact candidate provenance, disjoint previous
+cohorts, native correction receipts, immutable source fingerprints, and rejects
+mislabeling a simply examined case as corrected or verified.
+
+For local metadata-only checks:
+
+```sh
+python3 -I scripts/validate_final_source_key_audit.py --data data \
+  --ledger data/source-key-final-128-review.json
+```
+
+For the strict source collation, provide both checked-out WLC and SBLGNT TSV
+paths with `--wlc` and `--sblgnt` (the GitHub CI workflow does this).
+Secondary 1 Maccabees evidence is explicitly outside those pinned 66-book
+word inventories and is separately cited, rather than invented as a Macula ID.
+
+**Remaining work before closing the identity audit:** Beelzebub, Phoenician
+juniper, Aleppo pine, Ai, Aiath, Aphek, Eglath-shelishiyah, Foundation Gate,
+Gerizim, geographical Gomer, Misgab, and Ramah (Hill). Several concern
+uncertain historical identity or proposed botanical species, not malformed XML
+or a demonstrably corrupted Bible verse. They require defensible editorial
+judgment or better source evidence; do not auto-promote to `verified_correct`.
+
+Cumulative bookkeeping: prior 230 + these 44 corrections + 69 pinned-source
+no-change decisions = **343** internally adjudicated cases; 3 additional
+externally corroborated Greek Apocrypha keys are tracked separately; **12**
+identities remain genuinely unresolved out of the 358-case history. Issue #23
+remains open. No source Bible text, original SHA-256, release artifact or Bible
+application was altered by this docket.
+
