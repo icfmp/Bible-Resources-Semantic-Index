@@ -168,8 +168,17 @@ def build(manifest, corrections_doc, upstream_root: Path):
         alignment = read_json(upstream_root / alignment_file["path"])
         if not isinstance(alignment, dict) or not isinstance(alignment.get("records"), list):
             raise ValueError("not a Scripture Burrito alignment-group document")
-        if not isinstance(alignment.get("meta"), dict) or not isinstance(alignment.get("type"), str):
-            raise ValueError("alignment missing group metadata or type")
+        if not isinstance(alignment.get("meta"), dict) or alignment.get("type") != "translation":
+            raise ValueError("alignment missing group metadata or translation type")
+        documents = alignment.get("documents")
+        if (not isinstance(documents, list) or len(documents) != 2
+                or not all(isinstance(doc, dict) and isinstance(doc.get("docid"), str)
+                           for doc in documents)):
+            raise ValueError("alignment missing source/target document declarations")
+        if [doc["docid"] for doc in documents] != [group["source_docid"], group["target_docid"]]:
+            raise ValueError("alignment document editions disagree with manifest")
+        if alignment.get("roles") != ["source", "target"]:
+            raise ValueError("alignment source/target roles absent, reversed or ambiguous")
         stats = Counter()
         by_source = defaultdict(list)
         by_target = defaultdict(list)
@@ -270,6 +279,8 @@ def build(manifest, corrections_doc, upstream_root: Path):
             "source_id_scheme": "MACULA BCVW(P) (corpus-qualified)",
             "target_id_scheme": "BCVW(P) token ordinal; edition-specific",
             "alignment_type": alignment["type"],
+            "original_documents": alignment["documents"],
+            "original_roles": alignment["roles"],
             "original_group_meta": alignment["meta"],
             "records": rows,
             "by_source": dict(sorted(by_source.items())),
