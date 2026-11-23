@@ -10,9 +10,37 @@
     "review_status": "source_unreviewed",
     "source_id": "place:Gebal.2",
     "source_primary_id": "place:Gebal.2",
-    "source_sha256": "b69f7552148d308d4d9f76874ddce6ecd05842424b69a867e026329e66cfefe7"
+    "source_sha256": "b69f7552148d308d4d9f76874ddce6ecd05842424b69a867e026329e66cfefe7",
+    "editorial_field_changes": [
+      {
+        "action": "restore_direct_primary_hebrew_place_name",
+        "added_reference_values": {
+          "references": [
+            "19083008"
+          ]
+        },
+        "added_original_word_groups": {
+          "wlc": [
+            [
+              "o190830080011"
+            ]
+          ]
+        },
+        "reason": "Psalm 83:8 (ORG verse) explicitly names Gebal alongside Ammon and Amalek among hostile peoples. The original-place index names this polity/nation, not an unidentified or inferred person.",
+        "evidence": [
+          "Frozen WLC lowfat exact verse text and word IDs manually compared at Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c",
+          "ORG BCV8 19083008"
+        ]
+      }
+    ]
   },
-  "explicit_instances": {},
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o190830080011"
+      ]
+    ]
+  },
   "id": "place:Gebal.2",
   "is_artifact": false,
   "is_person": false,
@@ -34,7 +62,9 @@
   },
   "primary_id": "place:Gebal.2",
   "pronominal_referents": {},
-  "references": [],
+  "references": [
+    "19083008"
+  ],
   "subject_referents": {},
   "type": "place"
 }
