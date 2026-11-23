@@ -93,6 +93,14 @@ def review(candidate, raw_source, ledger, english, french):
     # Recompute the independent source audit directly: the historical
     # temporary report was immediately recomputed and compared here.
     report=SOURCE["audit"](raw_source,english,french)
+    if (report.get("original_word_count")!=5
+        or report.get("original_family_count")!=3
+        or sum(report.get("source_evidence_disposition_counts",{}).values())!=5
+        or report.get("original_strong_components_preserved") is not True
+        or report.get("new_source_headword_links_approved")!=0
+        or report.get("new_contextual_semantic_senses")!=0
+        or report.get("publication_approved") is not False):
+        raise ValueError("Greek original composite Strong source-audit contract drift")
     if (candidate["editorial_candidate"].get("reviewed_original_headword_words_total")!=9189
         or candidate["editorial_candidate"].get("other_original_words_still_unapproved")!=1
         or candidate["editorial_candidate"].get("publication_approved") is not False
