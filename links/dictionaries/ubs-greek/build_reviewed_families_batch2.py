@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import argparse
-import copy
 import hashlib
 import json
 import unicodedata
@@ -14,6 +13,7 @@ import runpy
 
 HERE = Path(__file__).resolve().parent
 EVIDENCE = runpy.run_path(str(HERE / "audit_remaining_headwords.py"))
+INTEGRITY = runpy.run_path(str(HERE / "reviewed_word_integrity.py"))
 PREVIOUS = "source_reviewed_original_greek_pronoun_headword_only"
 PENDING = EVIDENCE["UNAPPROVED"]
 NEW = "source_reviewed_original_greek_headword_batch2_only"
@@ -87,24 +87,16 @@ def review(candidate, source_families, english, french, ledger):
                 raise ValueError("Duplicate approved original Greek word ID")
             if not word["attested_headword_ln_codes"]:
                 raise ValueError("Original UBS LN witness absent")
+            INTEGRITY["verify_original_word"](
+                candidate["by_macula_word"].get(wid), word, wid, key[1], PENDING)
             approved_ids[wid] = key
         count[key] = len(family["all_original_word_witnesses"])
     if len(approved_ids) != 577:
         raise ValueError("Reviewed original word-ID inventory drift")
-    output = copy.deepcopy(candidate)
-    for wid, source in output["by_macula_word"].items():
-        if wid in approved_ids:
-            if source["match_type"] != PENDING or (unicodedata.normalize("NFC", source["original_lemma"]), source["entry_id"]) != approved_ids[wid]:
-                raise ValueError("Greek unapproved source original word identity mutated")
-            source["match_type"] = NEW
+    output = INTEGRITY["apply_review_status"](candidate, approved_ids, PENDING, NEW)
     kinds = Counter(v["match_type"] for v in output["by_macula_word"].values())
     if kinds != {PREVIOUS: 5033, NEW: 577, PENDING: 328}:
         raise ValueError("Greek individual original-word review count drift")
-    for wid, old in candidate["by_macula_word"].items():
-        new = output["by_macula_word"][wid]
-        if {k: v for k, v in old.items() if k != "match_type"} != {
-                k: v for k, v in new.items() if k != "match_type"}:
-            raise ValueError("Original Greek lexical annotation mutated: " + wid)
     output["editorial_candidate"] = {
         **candidate["editorial_candidate"],
         "status": "private_source_reviewed_greek_lexical_headwords_batch2_NOT_PUBLISHED",
@@ -124,10 +116,6 @@ def review(candidate, source_families, english, french, ledger):
         "other_unapproved_word_headword_candidates": 328,
         "new_inferred_contextual_lexical_sense_ids": 0,
     }
-    for key in ("by_strong", "by_ln", "coverage", "statistics", "languages",
-                "license", "format", "schema_version", "dictionary", "macula"):
-        if output[key] != candidate[key]:
-            raise ValueError("Original UBS Strong/LN bridge or source changed")
     return output
 
 
