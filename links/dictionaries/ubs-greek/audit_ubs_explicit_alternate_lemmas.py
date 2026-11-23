@@ -23,6 +23,68 @@ def source_pos(entry):
     return sorted({str(p) for b in entry.get("BaseForms") or []
                    for p in b.get("PartsOfSpeech") or []})
 
+
+def project_unapproved_source_words(missing):
+    """Preserve the source-reviewed 456 residual witnesses without a variant probe.
+
+    The other three original words have a case-only UBS primary-lemma
+    witness and are reviewed separately. Similar accents, transliteration,
+    source LN or Strong codes never create an alternate lexical identity.
+    This projection does not infer or approve any new source mapping.
+    """
+    if (missing.get("status") !=
+            "PRIVATE_459_UBS_Greek_v1_0_missing_exact_headword_source_evidence_ONLY"
+        or missing.get("original_words") != 459
+        or missing.get("automatic_lemma_mappings_approved") != 0
+        or missing.get("publication_approved") is not False
+        or missing.get("inferred_contextual_senses") != 0
+        or missing.get("modified_original_greek_or_strong") is not False
+        or missing.get("historical_index_modified") is not False):
+        raise ValueError("Original Greek 459-word source report drift")
+    seen=set()
+    skipped=0
+    residual=[]
+    for family in missing["source_word_families"]:
+        source_words=family["source_original_word_witnesses"]
+        lemma=family["original_greek_lemma_nfc_for_comparison"]
+        strong=family["original_source_strong"]
+        ids=[w["original_word_id"] for w in source_words]
+        if (not ids or len(ids)!=family["original_word_count"]
+            or len(set(ids))!=len(ids)
+            or set(ids)&seen
+            or nfc(lemma)!=lemma
+            or any(nfc(w["original_lemma"])!=lemma or
+                   w["original_strong"]!=strong for w in source_words)):
+            raise ValueError("Duplicate or altered Greek original word witnesses")
+        seen.update(ids)
+        if family["ubs_case_only_spelling_main_ids"]:
+            if family["classification"]!="case_insensitive_Ubs_spelling_present_NOT_APPROVED":
+                raise ValueError("Unreviewed Greek case-only family classification")
+            skipped+=len(ids)
+            continue
+        if family["classification"]!="no_lexeme_spelling_or_strong_equivalence_in_pinned_UBS":
+            raise ValueError("No approved Greek Strong or spelling equivalence for residual")
+        residual.append({
+            "original_lemma":lemma,
+            "original_strong":strong,
+            "original_words":len(ids),
+            "original_word_ids":ids,
+            "original_word_witnesses":source_words,
+            "original_ln_counts":family["original_ln_code_counts"],
+            "original_class_counts":family["original_source_classes"],
+        })
+    if len(seen)!=459 or skipped!=3 or sum(x["original_words"] for x in residual)!=456:
+        raise ValueError("Greek 459-to-456 original source-word partition drift")
+    residual.sort(key=lambda x:(-x["original_words"],x["original_lemma"],x["original_strong"]))
+    return {
+        "status":"PRIVATE_Greek_456_original_word_ubs_v1_variants_READ_ONLY_NOT_APPROVED",
+        "source_editions":missing["source_editions"],
+        "original_word_count":456,
+        "families":residual,
+        "new_source_lexical_headword_links":0,
+        "publication_approved":False,
+    }
+
 def audit(report,english,french):
     if (report.get("status")!="PRIVATE_Greek_456_original_word_ubs_v1_variants_READ_ONLY_NOT_APPROVED"
         or report.get("original_word_count")!=456
@@ -117,11 +179,12 @@ def audit(report,english,french):
 
 def main():
     p=argparse.ArgumentParser(description=__doc__)
-    for x in ("report","english","french","output"):
+    for x in ("missing","english","french","output"):
         p.add_argument("--"+x,required=True,type=Path)
     a=p.parse_args()
     read=lambda x:json.loads(x.read_text(encoding="utf-8-sig"))
-    result=audit(read(a.report),read(a.english),read(a.french))
+    result=audit(project_unapproved_source_words(read(a.missing)),
+                 read(a.english),read(a.french))
     a.output.write_text(json.dumps(result,ensure_ascii=False,sort_keys=True,indent=2)+"\n",encoding="utf-8")
     print("GREEK_EXACT_UBS_ALTERNATE_LEMMAS_ORIGINAL_WORDS",json.dumps({
         "counts":result["source_evidence_counts"],

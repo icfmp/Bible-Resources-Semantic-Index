@@ -43,12 +43,26 @@ source-import path.
 
 | Stream | Python tools and tests | Executable entrypoint | Retained editorial authority |
 | --- | ---: | --- | --- |
-| UBS Greek | 76 total; 35 `test_*.py` modules | [Pinned Greek workflow](../.github/workflows/bsi-ubs-greek.yml) and its source-local builders | Original source locks, reviewed JSON headword/word-ID ledgers, explicit sense abstentions |
+| UBS Greek | 74 total; 34 `test_*.py` modules | [Pinned Greek workflow](../.github/workflows/bsi-ubs-greek.yml) and its source-local builders | Original source locks, reviewed JSON headword/word-ID ledgers, explicit sense abstentions |
 | UBS Hebrew | 36 total; 18 `test_*.py` modules | [Pinned Hebrew workflow](../.github/workflows/bsi-ubs-hebrew.yml) and its source-local builders | Original source locks, reviewed JSON identity/disposition/abstention ledgers, v1 and v1.1 reviews |
 
 Completed report-only probes are retired once their general exclusion rule
 is covered by a maintained test and any non-reproducible editorial decision
-is retained beside its source. See issue [#145](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/145) for the second-pass review; the first example
+is retained beside its source.
+
+The Greek 456-word **accentless-variant diagnostic stage** was likewise
+retired after the original 459-word source-evidence audit became the direct
+input to the maintained bilingual UBS `AlternateLemmas` verifier. That
+verifier projects the exact 456 residual word-ID witnesses while excluding
+the three source-case-only occurrences handled by their separate reviewed
+ledger. It does **not** use accent stripping, shared Strong/LN domains or
+inflection similarity as lexical identity. A generic negative regression
+for this exact-source distinction replaces the completed diagnostic test.
+The unused optional `runpy` import in the downstream 409-word builder was
+also removed; its own original-source and editorial checks remain active.
+Historical implementations remain at
+[the immutable pre-cleanup revision](https://github.com/icfmp/Bible-Resources-Semantic-Index/blob/c5025d4580973d6ea3588069f00550e4705cd8b9/links/dictionaries/ubs-greek/audit_456_lexical_variants.py).
+ See issue [#145](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/145) for the second-pass review; the first example
 retired a terminal 47-word Greek inflection investigation, while retaining
 its independent negative no-guess invariant and the 47-word source report.
 

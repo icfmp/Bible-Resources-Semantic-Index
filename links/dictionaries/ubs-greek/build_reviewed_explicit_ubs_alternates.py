@@ -13,13 +13,10 @@ import argparse
 import copy
 import hashlib
 import json
-import runpy
 import unicodedata
 from collections import Counter
 from pathlib import Path
 
-HERE=Path(__file__).resolve().parent
-AUDIT=runpy.run_path(str(HERE/"audit_ubs_explicit_alternate_lemmas.py"))
 STATUS="source_reviewed_explicit_bilingual_ubs_alternate_lemma_original_word_headword_only"
 POLICY={
     "source_word_ids_are_exact":True,
@@ -70,7 +67,6 @@ def check_ledger(ledger,report):
     return selected
 
 def build(candidate,report,ledger,english,french):
-    verified=AUDIT["audit_from_report"](report,english,french) if "audit_from_report" in AUDIT else None
     # The report is checked exhaustively below using both pinned sources
     # and original individual-word witnesses, not the mere group counts.
     if (report.get("status")!="PRIVATE_Greek_original_UBS_explicit_alternate_lemmas_source_evidence_UNAPPROVED"

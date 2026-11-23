@@ -58,6 +58,18 @@ Do not commit unpublished detailed UBS/MACULA original-word research dumps.
 
 The **47 original-word exclusions** and the 26 affected Greek families remain
 documented in the [editorial disposition](remaining_47_source_editorial_report.md).
+
+The source-pinned Greek workflow now uses the **459-word original-source
+missing-headword report** directly for the maintained bilingual UBS
+`AlternateLemmas` audit. The audit conservatively partitions it into
+**three case-only word witnesses** (reviewed by a separate exact-word
+ledger) and **456 still-unlinked original word witnesses**, without an
+accentless-spelling research intermediary. The final unique bilingual
+AlternateLemma + original individual-word LN checks authorize **409
+specific lexical headword reviews**, leaving the **47** unapproved words
+unchanged. The removed exploratory accentless-matching script remains in
+[immutable Git history](https://github.com/icfmp/Bible-Resources-Semantic-Index/blob/c5025d4580973d6ea3588069f00550e4705cd8b9/links/dictionaries/ubs-greek/audit_456_lexical_variants.py).
+
 Do not turn inflection resemblance, accent stripping, the same Strong code,
 the same Louw–Nida domain or a verse co-occurrence into an exact lexical
 headword link. The maintained [explicit alternate-lemma tests](test_ubs_explicit_alternate_lemmas.py)
