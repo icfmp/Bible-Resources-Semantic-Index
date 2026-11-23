@@ -401,3 +401,86 @@ errors. The full-field audit still needs separate disposition for the
 cases not previously certified, so issue #23 must remain open until
 those findings are resolved. Publication and release rights remain
 independently blocked by #62.
+
+## V1 final cross-cohort key-reference reconciliation (PR #144)
+
+The full native source-key reconciliation now covers all currently active
+`key_references - references` pairs, with **no automatic normalization** of
+either of those independent ACAI source fields. The frozen pre-correction
+snapshot was 462 pairs across 264 identities; the four native source records
+with justified corrections remove two false source keys and add three real
+original-language source phrases to the general references (five pairs no
+longer key-only). The current post-correction census is **457 pairs across
+263 entities**. This reduction is evidence-driven, **not** a target for a
+normalizer or a reason to erase contextual source keys.
+
+The complete original 462-case snapshot has a disjoint editorial accounting:
+
+| Status | Source-key pairs | Meaning |
+| --- | ---: | --- |
+| Already independently verified in the original three frozen cohorts | 399 | Per-verse source proof inherited from PRs #139–#142 |
+| Newly verified contextual or indirect, no data rewrite | 58 | Source passages and identity relationship independently examined |
+| Reversible native-record corrections | 5 | Two unsupported verse identities withdrawn; three direct name compounds restored |
+| Remaining unexamined in this **bounded** source-key census | **0** | No selection or status was silently dropped |
+
+The 63 newly examined pairs belong to 30 imported source identities,
+frozen in
+[`data/v1-key-only-remaining-63-candidates.json`](../data/v1-key-only-remaining-63-candidates.json).
+Their verse-specific original-source excerpts, proof classes and decisions
+are in [`data/v1-key-only-final-63-review.json`](../data/v1-key-only-final-63-review.json).
+The genuine corrections concern `group:Sidon` (Joshua 10:6 wrongly
+assigned), `person:Moses` (Matthew 1:9 wrongly assigned),
+`place:CityOfDavid` (direct city-of-David compound in 1 Kings 2:10),
+and `realia:TempleOfAnIdol` (three complete original-language
+temple/deity phrases in 2 Kings 10:27 and 1 Chronicles 10:10).
+Each historical `source_id`, original SHA-256 and earlier
+correction receipt is retained.
+
+The generic
+[`scripts/validate_last_key_only_reviews.py`](../scripts/validate_last_key_only_reviews.py)
+requires every frozen key and referenced original word, rejects case overlap
+with the 358 certified historical identities, independently collates all
+63 target excerpts and **178 distinct** word ID witnesses against the two
+immutable WLC/SBLGNT TSV editions in CI, and checks real reversible field
+receipts. A previously certified record with a subsequent correction can
+have a newer actual field value, but the validator requires the earlier
+`after` value to match the next correction's `before`, rather than
+weakening the historical evidence or insisting that every old receipt
+be the latest one.
+
+The read-only
+[`scripts/audit_all_key_reference_original_words.py`](../scripts/audit_all_key_reference_original_words.py)
+cross-checks the **current** 457 pairs against the pinned originals and can
+write a local JSON investigation report. Its broad lexical probe classifies:
+
+- **53** pairs with existing indirect (pronominal/subject) word associations;
+- **57** pairs with potentially matching English/gloss word candidates, not
+  independently proven new *direct* words;
+- **344** other contextual or manual-source interpretation candidates;
+- **3** apocryphal locations outside the pinned 66-book text.
+
+These are **diagnostic categories**, not another 457 unresolved editorial
+cases and not proof of 57 missing word links. The complete reconciliation
+[`scripts/audit_active_key_only_reconciliation.py`](../scripts/audit_active_key_only_reconciliation.py)
+instead connects each actual current pair to its applicable individually
+certified editorial decision, preserving the distinction between the
+**399 prior** and **58 newly verified** source-key contexts.
+
+Use the following commands to reproduce the proof:
+
+```sh
+python3 -I scripts/validate_last_key_only_reviews.py \
+  --data data --ledger data/v1-key-only-final-63-review.json
+python3 -I scripts/audit_active_key_only_reconciliation.py --data data
+```
+
+Pass the pinned WLC and SBLGNT TSV paths to the first validator for the
+stronger immutable-source proof, as done by GitHub CI. The diagnostic
+word-candidate report also needs those TSVs; it never changes the records.
+
+**V1 acceptance boundary:** all **462 frozen** source-key pairs and the
+27 source-word-unattested biblical place records now have versioned,
+source-qualified editorial dispositions. It is still not a guarantee that
+every lexical gloss suggestion is an exact name, nor a license to publish
+unapproved external dictionary content or the restricted 868 Key Terms.
+Publication and rights remain independently gated by #5 and #62.
