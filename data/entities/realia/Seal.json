@@ -23,7 +23,29 @@
     "review_status": "source_unreviewed",
     "source_id": "realia:Seal",
     "source_primary_id": "realia:Seal",
-    "source_sha256": "2b3859361448e1ee99ad5a129e868ea8ce1594a6ee9aa440eb3eeb6a81393c7f"
+    "source_sha256": "2b3859361448e1ee99ad5a129e868ea8ce1594a6ee9aa440eb3eeb6a81393c7f",
+    "editorial_field_changes": [
+      {
+        "action": "restore_source_attested_object_word_instances",
+        "added_reference_values": {
+          "references": [
+            "01038018"
+          ]
+        },
+        "added_original_word_groups": {
+          "wlc": [
+            [
+              "o010380180081"
+            ]
+          ]
+        },
+        "reason": "Genesis 38:18 directly names Judah's seal.",
+        "evidence": [
+          "ORG BCV8 01038018",
+          "Pinned original-word texts/glosses inspected in Clear-Bible/Macula Hebrew WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c; token IDs copied verbatim; source metadata and scripture unchanged"
+        ]
+      }
+    ]
   },
   "explicit_instances": {
     "SBLGNT": [
@@ -87,6 +109,11 @@
       [
         "n59002002008"
       ]
+    ],
+    "wlc": [
+      [
+        "o010380180081"
+      ]
     ]
   },
   "id": "realia:Seal",
@@ -145,7 +172,8 @@
     "66009004",
     "66010004",
     "66020003",
-    "66022010"
+    "66022010",
+    "01038018"
   ],
   "subject_referents": {},
   "type": "realia",
