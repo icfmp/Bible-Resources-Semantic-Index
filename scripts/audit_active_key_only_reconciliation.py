@@ -26,6 +26,7 @@ def _load_sibling(filename: str, module_name: str):
 _word = _load_sibling("audit_all_key_reference_original_words.py", "brsi_key_word_probe")
 _source = _load_sibling("audit_source_reference_evidence.py", "brsi_source_reference_probe")
 _place = _load_sibling("validate_source_place_attestations.py", "brsi_place_source_validator")
+_last = _load_sibling("validate_last_key_only_reviews.py", "brsi_last_key_only_source_validator")
 get_macula_words, inventory, review = _word.get_macula_words, _word.inventory, _word.review
 audit = _source.audit
 validate_places = _place.validate
@@ -74,6 +75,13 @@ def reconcile(data: Path, pinned: dict[str, Path] | None = None) -> dict:
     prior = load_existing_reviews(data)
     place_data = read(data / "source-place-attestation-review.json")
     validate_places(data, data / "source-place-attestation-review.json")
+    final_audit = _last.validate(data, data / "v1-key-only-final-63-review.json")
+    final_pairs = {(c["source_id"], t["verse_id"]): t["decision"]
+                   for c in read(data / "v1-key-only-final-63-review.json")["cases"]
+                   for t in c["targets"]}
+    require_coverage = final_audit["total"] == 63 and len(final_pairs) == 63
+    if not require_coverage:
+        raise ValueError("Final 63 source decisions do not fully cover frozen key-only pairs")
     place = {c["source_id"]: set(c["original_key_verses"]) for c in place_data["cases"]}
     reviewed_places = set()
     source_words = {} if pinned is None else get_macula_words(
@@ -97,6 +105,9 @@ def reconcile(data: Path, pinned: dict[str, Path] | None = None) -> dict:
         if prior_entry and verse in prior_entry["keys"]:
             status = "previously_certified"
             provenance = prior_entry["ledger"]
+        elif final_pairs.get((sid, verse)) == "verified_contextual":
+            status = "newly_independently_certified_context"
+            provenance = "v1-key-only-final-63-review.json"
         elif place_entry:
             status = "place_context_individually_qualified"
             provenance = "source-place-attestation-review.json"
@@ -127,6 +138,13 @@ def reconcile(data: Path, pinned: dict[str, Path] | None = None) -> dict:
                 x["word_id"] for x in src["source_word_candidates"]
             ] if pinned is not None else [],
         })
+    if sum(counts.values())!=len(decisions):
+        raise ValueError("Key-only classification silently lost an indexed source pair")
+    # Historical records that have been evidentially corrected no longer appear
+    # in the live key-only index: never count them as unresolved or 'missing'.
+    for (sid,verse),classification in final_pairs.items():
+        if classification=="corrected" and (sid,verse) in rows:
+            raise ValueError("Repaired erroneous/now-direct key still appears as unlinked")
     return {
         "schema_version": 1,
         "scope": "read_only_current_native_key_only_source_census",
@@ -135,6 +153,14 @@ def reconcile(data: Path, pinned: dict[str, Path] | None = None) -> dict:
         "key_only_pairs": len(decisions),
         "original_indirect_pair_count": sum(x["source_indirect_word_claim"] for x in live),
         "previously_certified_unique_source_identities": len(prior),
+        "newly_certified_original_pairs_including_native_corrections": final_audit["total"],
+        "real_native_corrections_newly_proven": final_audit["corrected_pairs"],
+        "unresolved_current_key_only_pairs": sum(
+            counts[s] for s in ("indirect_original_word_requires_coreference",
+                                "lexical_candidate_requires_identity_review",
+                                "contextual_claim_requires_manual_review",
+                                "out_of_pinned_66_book_scope")),
+        "frozen_original_key_only_pairs": 462,
         "individually_reviewed_unanchored_places": len(place_data["cases"]),
         "counts": dict(sorted(counts.items())),
         "cases": decisions,
