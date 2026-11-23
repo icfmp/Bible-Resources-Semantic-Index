@@ -53,10 +53,19 @@ class RealWordRealiaSourceTests(unittest.TestCase):
                 self.assertTrue(receipt["evidence"])
                 self.assertTrue(receipt["reason"])
                 self.assertEqual(len(o["bsi"]["source_sha256"]),64)
+                new_review_actions = {
+                    "Seal":"restore_pinned_lexical_object_term_from_key",
+                    "Garland":"restore_pinned_direct_object_name_in_source_key",
+                    "Sandal":"restore_pinned_direct_object_name_in_source_key",
+                    "Saw":"restore_direct_source_object_and_correct_invalid_key_if_present",
+                    "Wheel":"restore_pinned_direct_object_name_in_source_key",
+                }
                 self.assertEqual(o["bsi"]["review_status"],
-                                 "editorially_reviewed" if name == "Seal" else "source_unreviewed")
-                if name == "Seal":
-                    self.assertTrue(any(x["action"] == "restore_pinned_lexical_object_term_from_key"
+                                 "editorially_reviewed" if name in new_review_actions else "source_unreviewed")
+                if name in new_review_actions:
+                    self.assertTrue(any(x["action"] == new_review_actions[name]
+                                        and x["reason"] and x["evidence"]
+                                        and x["replaced_field_values"]["before"] != x["replaced_field_values"]["after"]
                                         for x in o["bsi"]["editorial_field_changes"]))
 
 if __name__=="__main__":
