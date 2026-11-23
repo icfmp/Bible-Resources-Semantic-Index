@@ -12,9 +12,38 @@
     "review_status": "source_unreviewed",
     "source_id": "place:Gilgal.4",
     "source_primary_id": "place:Gilgal.4",
-    "source_sha256": "4d242b6289cba7289c150e8d263eccb7c5149700ae27e7872c1f7e5b7a959e2d"
+    "source_sha256": "4d242b6289cba7289c150e8d263eccb7c5149700ae27e7872c1f7e5b7a959e2d",
+    "editorial_field_changes": [
+      {
+        "action": "restore_direct_original_word_and_verse_witness",
+        "added_reference_values": {
+          "references": [
+            "06015007"
+          ]
+        },
+        "added_original_word_groups": {
+          "wlc": [
+            [
+              "o060150070092"
+            ]
+          ]
+        },
+        "reason": "Joshua 15:7 names Gilgal/Geliloth along Judah's boundary as an explicit place, not another Gilgal.",
+        "evidence": [
+          "ORG BCV8 06015007",
+          "Pinned original corpus: Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c",
+          "Exact original-word ID(s) and English gloss independently extracted from frozen Macula TSV; source IDs and text unchanged"
+        ]
+      }
+    ]
   },
-  "explicit_instances": {},
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o060150070092"
+      ]
+    ]
+  },
   "id": "place:Gilgal.4",
   "is_artifact": false,
   "is_person": false,
@@ -43,7 +72,9 @@
   ],
   "primary_id": "place:Gilgal.4",
   "pronominal_referents": {},
-  "references": [],
+  "references": [
+    "06015007"
+  ],
   "subject_referents": {},
   "subregion_of": [
     "place:TerritoryOfJudah"
