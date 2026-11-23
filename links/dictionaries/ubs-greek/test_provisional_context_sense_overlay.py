@@ -23,4 +23,16 @@ class SourceProvisionalGreekTests(unittest.TestCase):
         self.assertNotIn("DefinitionShort",source)
         self.assertNotIn("DefinitionLong",source)
         self.assertIn("meaning_edits_or_textual_translations",source)
+
+    def test_full_source_census_is_mandatory_in_provisional_builder(self):
+        # The 137,741-word source/lexicon census must be recomputed by
+        # the builder itself; no previous runner-local JSON can be trusted.
+        from unittest.mock import patch
+        with patch.dict(MOD["make"].__globals__["AUDIT"], {
+            "audit": lambda *args: (_ for _ in ()).throw(
+                ValueError("strict source census invoked"))}):
+            with self.assertRaisesRegex(ValueError,"strict source census invoked"):
+                MOD["make"]({}, {}, [], [], Path("/not/a/source.tsv"))
+
+
 if __name__=="__main__":unittest.main()
