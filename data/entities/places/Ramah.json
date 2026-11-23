@@ -20,7 +20,23 @@
     "review_status": "source_unreviewed",
     "source_id": "place:Ramah",
     "source_primary_id": "place:Ramah",
-    "source_sha256": "f1da4a78b7e41795ccba08632d7a56b0348561fc711c39ad82351c1030864e44"
+    "source_sha256": "f1da4a78b7e41795ccba08632d7a56b0348561fc711c39ad82351c1030864e44",
+    "editorial_field_changes": [
+      {
+        "action": "resolve_cross_tribal_ramah_source_token_misassignment",
+        "removed_reference_values": {
+          "key_references": [
+            "24031015",
+            "40002018"
+          ]
+        },
+        "reason": "Ramah of Ephraim in Samuel's narratives is not source-proven identical to the Benjamin Ramah explicitly named in Jeremiah 31:15 and quoted in Matthew 2:18; both verses are instead attached to the independently identified Benjamin-place record. Remove inherited cross-tribe keys without deleting Samuel's complete original witnesses.",
+        "evidence": [
+          "1 Samuel 1:1,19; Jeremiah 31:15; Matthew 2:18",
+          "Two distinct current native place records: Ramah / Ramah.4"
+        ]
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -92,10 +108,8 @@
   "is_artifact": false,
   "is_person": false,
   "key_references": [
-    "24031015",
     "09001019",
-    "09001001",
-    "40002018"
+    "09001001"
   ],
   "localizations": {
     "eng": {

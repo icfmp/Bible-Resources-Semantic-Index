@@ -16,12 +16,47 @@
     "review_status": "source_unreviewed",
     "source_id": "place:Ramah.3",
     "source_primary_id": "place:Ramah.3",
-    "source_sha256": "d5c00abcadf8bcf569aacacfef1710a1242dbe1d7dc705968908712cdbf8fd90"
+    "source_sha256": "d5c00abcadf8bcf569aacacfef1710a1242dbe1d7dc705968908712cdbf8fd90",
+    "editorial_field_changes": [
+      {
+        "action": "resolve_cross_tribal_ramah_source_token_misassignment",
+        "removed_reference_values": {
+          "references": [
+            "06019029"
+          ]
+        },
+        "removed_original_word_groups": {
+          "wlc": [
+            [
+              "o060190290032"
+            ]
+          ]
+        },
+        "added_reference_values": {
+          "references": [
+            "06019036"
+          ]
+        },
+        "added_original_word_groups": {
+          "wlc": [
+            [
+              "o060190360023"
+            ]
+          ]
+        },
+        "reason": "Joshua 19:29 Ramah belongs to Asher and is already correctly anchored to place:Ramah.6; the source's Ramah.3 is explicitly 'of Naphtali' and its original key Joshua 19:36 names the different Naphtali town. Replace the cross-tribe wrong direct verse/token with the exact attested Naphtali token; do not merge towns.",
+        "evidence": [
+          "Joshua 19:29; Joshua 19:36",
+          "Pinned WLC o060190290032 / o060190360023",
+          "Distinct place:Ramah.6 reference from source-backed PR #106"
+        ]
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
       [
-        "o060190290032"
+        "o060190360023"
       ]
     ]
   },
@@ -66,7 +101,7 @@
   "primary_id": "place:Ramah.3",
   "pronominal_referents": {},
   "references": [
-    "06019029"
+    "06019036"
   ],
   "subject_referents": {},
   "subregion_of": [

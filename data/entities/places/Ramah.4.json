@@ -16,12 +16,66 @@
     "review_status": "source_unreviewed",
     "source_id": "place:Ramah.4",
     "source_primary_id": "place:Ramah.4",
-    "source_sha256": "c444b6f3c53318a688f7846d29e2d7485e7728d9bf19e7d7de6305b15d851980"
+    "source_sha256": "c444b6f3c53318a688f7846d29e2d7485e7728d9bf19e7d7de6305b15d851980",
+    "editorial_field_changes": [
+      {
+        "action": "resolve_cross_tribal_ramah_source_token_misassignment",
+        "removed_reference_values": {
+          "references": [
+            "06019036"
+          ]
+        },
+        "removed_original_word_groups": {
+          "wlc": [
+            [
+              "o060190360023"
+            ]
+          ]
+        },
+        "added_reference_values": {
+          "references": [
+            "06018025",
+            "24031015",
+            "40002018"
+          ]
+        },
+        "added_original_word_groups": {
+          "wlc": [
+            [
+              "o060180250023"
+            ],
+            [
+              "o240310150052"
+            ]
+          ],
+          "SBLGNT": [
+            [
+              "n40002018003"
+            ]
+          ]
+        },
+        "reason": "The current Ramah.4 label is 'Ramah (of Benjamin)', but its inherited direct Joshua 19:36 word belongs to Naphtali (now Ramah.3). Restore the Benjamin town explicitly named in Joshua 18:25, Jeremiah 31:15 and Matthew 2:18, where the latter quotes Jeremiah. Keep Judges 4:5 as a contextual key only pending exact geographic identity review; no word is promoted from that verse.",
+        "evidence": [
+          "Joshua 18:25; Jeremiah 31:15; Matthew 2:18",
+          "Pinned WLC o060180250023 / o240310150052",
+          "Pinned SBLGNT n40002018003",
+          "Source key Joshua 18:25 already belongs to Ramah.4"
+        ]
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
       [
-        "o060190360023"
+        "o060180250023"
+      ],
+      [
+        "o240310150052"
+      ]
+    ],
+    "SBLGNT": [
+      [
+        "n40002018003"
       ]
     ]
   },
@@ -71,7 +125,9 @@
   "primary_id": "place:Ramah.4",
   "pronominal_referents": {},
   "references": [
-    "06019036"
+    "06018025",
+    "24031015",
+    "40002018"
   ],
   "subject_referents": {},
   "subregion_of": [
