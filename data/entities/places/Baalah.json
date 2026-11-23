@@ -19,7 +19,21 @@
     "review_status": "source_unreviewed",
     "source_id": "place:Baalah",
     "source_primary_id": "place:Baalah",
-    "source_sha256": "3aeea7ef9ca5de13353ea5fac2a67b7cc0549bbf69655b573daa2828d0ebbff2"
+    "source_sha256": "3aeea7ef9ca5de13353ea5fac2a67b7cc0549bbf69655b573daa2828d0ebbff2",
+    "editorial_field_changes": [
+      {
+        "action": "withhold_cross_site_geographical_key",
+        "removed_reference_values": {
+          "key_references": [
+            "06015011"
+          ]
+        },
+        "reason": "Joshua 15:29's Baalah of the southern Negev is a different place from the Baalah on Judah's northern boundary near Ekron in Joshua 15:11. The same spelling alone does not establish identity; the source record specifies the Negev town, so remove the wrong northern-boundary key without inventing a new site.",
+        "evidence": [
+          "Joshua 15:11; Joshua 15:29"
+        ]
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -42,8 +56,7 @@
   "is_artifact": false,
   "is_person": false,
   "key_references": [
-    "06015029",
-    "06015011"
+    "06015029"
   ],
   "lemmas": {
     "he": [
