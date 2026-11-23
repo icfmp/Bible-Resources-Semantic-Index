@@ -12,6 +12,7 @@ on:
       - "data/source-key-final-128-review.json"
       - "scripts/audit_active_key_only_reconciliation.py"
       - "tests/test_active_key_only_reconciliation.py"
+      - "data/v1-key-only-remaining-63-candidates.json"
       - "data/source-place-attestation-review.json"
       - "scripts/validate_source_place_attestations.py"
       - "tests/test_source_place_attestations.py"
@@ -49,6 +50,7 @@ on:
       - "data/source-key-final-128-review.json"
       - "scripts/audit_active_key_only_reconciliation.py"
       - "tests/test_active_key_only_reconciliation.py"
+      - "data/v1-key-only-remaining-63-candidates.json"
       - "data/source-place-attestation-review.json"
       - "scripts/validate_source_place_attestations.py"
       - "tests/test_source_place_attestations.py"
@@ -322,3 +324,14 @@ jobs:
             --show-pending 0
           # Read-only: no source-word candidates auto-promoted to direct names.
           # The report remains runner-local: no Macula redistribution.
+
+      - name: Inspect 63 remaining key-only claims in their exact WLC SBLGNT narrative
+        run: |
+          python3 -I scripts/inspect_next_source_key_cases.py \
+            --data data \
+            --candidates data/v1-key-only-remaining-63-candidates.json \
+            --wlc macula-hebrew/WLC/tsv/macula-hebrew.tsv \
+            --sblgnt macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv \
+            --compact
+          # Distinguish genuine source identities, adjacent narratives,
+          # false inherited associations and absent words without rewriting sources.
