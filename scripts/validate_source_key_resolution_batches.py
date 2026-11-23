@@ -15,7 +15,18 @@ import re
 from collections import Counter, defaultdict
 from pathlib import Path
 
-from validate_resolved_source_keys import require_real_receipt, source_history
+# Load audited sibling helper by absolute repository path even under Python -I.
+# This reuses the existing reversible-edit and key-history invariants.
+import importlib.util
+
+_validator_path = Path(__file__).resolve().with_name("validate_resolved_source_keys.py")
+_spec = importlib.util.spec_from_file_location("brsi_earlier_source_validator", _validator_path)
+if _spec is None or _spec.loader is None:
+    raise RuntimeError("Pinned source-key validator helper unavailable")
+_legacy = importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(_legacy)
+require_real_receipt = _legacy.require_real_receipt
+source_history = _legacy.source_history
 
 KIND_DIR = {
     "deity": "deities", "fauna": "fauna", "flora": "flora",
