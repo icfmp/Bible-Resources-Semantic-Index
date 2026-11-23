@@ -22,7 +22,11 @@ TOTAL=137741
 UNIQUE=122504
 UNRESOLVED=TOTAL-UNIQUE
 
-def make(index,reviewed,en,fr,macula,audit):
+def make(index,reviewed,en,fr,macula):
+    # Recreate the full independent 137,741-word source census inside the
+    # maintained builder, rather than reading an ephemeral report generated
+    # by a preceding step. The strict checks below remain unchanged.
+    audit=AUDIT["audit"](index,reviewed,en,fr,macula)
     if (audit.get("status")!="PRIVATE_SOURCE_UBS_Greek_v1_0_original_word_sense_CANDIDATE_CENSUS_NOT_SEMANTIC_VALIDATION"
         or audit.get("original_word_ids")!=TOTAL
         or audit.get("original_word_sense_candidate_outcomes",{}).get(
@@ -122,11 +126,11 @@ def make(index,reviewed,en,fr,macula,audit):
 
 def main():
     p=argparse.ArgumentParser(description=__doc__)
-    for key in ("index","reviewed","english","french","macula","audit","accepted","unresolved"):
+    for key in ("index","reviewed","english","french","macula","accepted","unresolved"):
         p.add_argument("--"+key,required=True,type=Path)
     a=p.parse_args()
     load=lambda q:json.loads(q.read_text(encoding="utf-8-sig"))
-    good,unresolved=make(load(a.index),load(a.reviewed),load(a.english),load(a.french),a.macula,load(a.audit))
+    good,unresolved=make(load(a.index),load(a.reviewed),load(a.english),load(a.french),a.macula)
     for path,record in ((a.accepted,good),(a.unresolved,unresolved)):
         path.write_text(json.dumps(record,ensure_ascii=False,sort_keys=True,separators=(",",":"))+"\n",encoding="utf-8")
     print("GREEK_UBS_PRIVATE_PROVISIONAL_CONTEXTUAL_CANDIDATES",json.dumps({
