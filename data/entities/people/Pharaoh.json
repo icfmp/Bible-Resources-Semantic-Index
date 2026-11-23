@@ -17,10 +17,192 @@
   },
   "bsi": {
     "canonical_id": "person:Hophra",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "person:Pharaoh",
     "source_primary_id": "person:Hophra",
-    "source_sha256": "29cf141ed7d691198bb1f9c673b561ec9cbe72d61343e18f4e5097b66916993b"
+    "source_sha256": "29cf141ed7d691198bb1f9c673b561ec9cbe72d61343e18f4e5097b66916993b",
+    "editorial_reason": "Restore original-word mentions for the explicitly named person in reviewed source-key verses. The historical source alias/canonical identity is preserved and no similarly named individual is merged.",
+    "editorial_evidence": [
+      "Pinned Clear-Bible Macula WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c / SBLGNT@8423afe47b9e8f24b7772e808af45c7159a6fe7e, full original-word source audit and exact ID verification in GitHub Actions",
+      "Jeremiah 44:30 explicitly names Pharaoh Hophra in adjacent Hebrew tokens; same reviewed canonical person:Hophra, no generic Egyptian king conjecture.",
+      "24044030 wlc: o240440300071, o240440300081"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "restore_exact_person_name_witnesses_from_original",
+        "reason": "Restore original-word mentions for the explicitly named person in reviewed source-key verses. The historical source alias/canonical identity is preserved and no similarly named individual is merged.",
+        "evidence": [
+          "Pinned Clear-Bible Macula WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c / SBLGNT@8423afe47b9e8f24b7772e808af45c7159a6fe7e, full original-word source audit and exact ID verification in GitHub Actions",
+          "Jeremiah 44:30 explicitly names Pharaoh Hophra in adjacent Hebrew tokens; same reviewed canonical person:Hophra, no generic Egyptian king conjecture.",
+          "24044030 wlc: o240440300071, o240440300081"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [
+              "24037005",
+              "24037007",
+              "24037011",
+              "24043009",
+              "24047001",
+              "26017017",
+              "26029002",
+              "26029003",
+              "26030021",
+              "26030022",
+              "26030024",
+              "26030025",
+              "26031002",
+              "26031018",
+              "26032002",
+              "26032031",
+              "26032032"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o240370050021"
+                ],
+                [
+                  "o240370070171"
+                ],
+                [
+                  "o240370110091"
+                ],
+                [
+                  "o240430090111"
+                ],
+                [
+                  "o240470010121"
+                ],
+                [
+                  "o260170170081"
+                ],
+                [
+                  "o260290020061"
+                ],
+                [
+                  "o260290030091"
+                ],
+                [
+                  "o260300210051"
+                ],
+                [
+                  "o260300220081"
+                ],
+                [
+                  "o260300240131"
+                ],
+                [
+                  "o260300250071"
+                ],
+                [
+                  "o260310020051"
+                ],
+                [
+                  "o260310180231"
+                ],
+                [
+                  "o260320020061"
+                ],
+                [
+                  "o260320310031"
+                ],
+                [
+                  "o260320310111"
+                ],
+                [
+                  "o260320320141"
+                ]
+              ]
+            }
+          },
+          "after": {
+            "references": [
+              "24037005",
+              "24037007",
+              "24037011",
+              "24043009",
+              "24044030",
+              "24047001",
+              "26017017",
+              "26029002",
+              "26029003",
+              "26030021",
+              "26030022",
+              "26030024",
+              "26030025",
+              "26031002",
+              "26031018",
+              "26032002",
+              "26032031",
+              "26032032"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o240370050021"
+                ],
+                [
+                  "o240370070171"
+                ],
+                [
+                  "o240370110091"
+                ],
+                [
+                  "o240430090111"
+                ],
+                [
+                  "o240470010121"
+                ],
+                [
+                  "o260170170081"
+                ],
+                [
+                  "o260290020061"
+                ],
+                [
+                  "o260290030091"
+                ],
+                [
+                  "o260300210051"
+                ],
+                [
+                  "o260300220081"
+                ],
+                [
+                  "o260300240131"
+                ],
+                [
+                  "o260300250071"
+                ],
+                [
+                  "o260310020051"
+                ],
+                [
+                  "o260310180231"
+                ],
+                [
+                  "o260320020061"
+                ],
+                [
+                  "o260320310031"
+                ],
+                [
+                  "o260320310111"
+                ],
+                [
+                  "o260320320141"
+                ],
+                [
+                  "o240440300071",
+                  "o240440300081"
+                ]
+              ]
+            }
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -77,6 +259,10 @@
       ],
       [
         "o260320320141"
+      ],
+      [
+        "o240440300071",
+        "o240440300081"
       ]
     ]
   },
@@ -121,6 +307,7 @@
     "24037007",
     "24037011",
     "24043009",
+    "24044030",
     "24047001",
     "26017017",
     "26029002",
