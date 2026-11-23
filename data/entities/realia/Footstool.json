@@ -16,7 +16,34 @@
     "review_status": "source_unreviewed",
     "source_id": "realia:Footstool",
     "source_primary_id": "realia:Footstool",
-    "source_sha256": "a9bc315c984ac81bdb1aeac3ae49e1255760ce457b269efa7b275cd0bacacb50"
+    "source_sha256": "a9bc315c984ac81bdb1aeac3ae49e1255760ce457b269efa7b275cd0bacacb50",
+    "editorial_field_changes": [
+      {
+        "action": "restore_source_attested_object_word_instances",
+        "added_reference_values": {
+          "references": [
+            "13028002",
+            "23066001"
+          ]
+        },
+        "added_original_word_groups": {
+          "wlc": [
+            [
+              "o130280020193"
+            ],
+            [
+              "o230660010071"
+            ]
+          ]
+        },
+        "reason": "1 Chronicles 28:2 and Isaiah 66:1 have direct Hebrew footstool expression.",
+        "evidence": [
+          "ORG BCV8 13028002",
+          "ORG BCV8 23066001",
+          "Pinned original-word texts/glosses inspected in Clear-Bible/Macula Hebrew WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c; token IDs copied verbatim; source metadata and scripture unchanged"
+        ]
+      }
+    ]
   },
   "explicit_instances": {
     "SBLGNT": [
@@ -40,6 +67,14 @@
       ],
       [
         "n59002003027"
+      ]
+    ],
+    "wlc": [
+      [
+        "o130280020193"
+      ],
+      [
+        "o230660010071"
       ]
     ]
   },
@@ -71,7 +106,9 @@
     "44007049",
     "58001013",
     "58010013",
-    "59002003"
+    "59002003",
+    "13028002",
+    "23066001"
   ],
   "subject_referents": {},
   "type": "realia",
