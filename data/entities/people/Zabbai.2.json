@@ -13,10 +13,38 @@
   },
   "bsi": {
     "canonical_id": "person:Zabbai.2",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "person:Zabbai.2",
     "source_primary_id": "person:Zabbai.2",
-    "source_sha256": "93360db541412ecc42e0bd4da354a06c3d14927446b5886c9ce351bf293a3c8d"
+    "source_sha256": "93360db541412ecc42e0bd4da354a06c3d14927446b5886c9ce351bf293a3c8d",
+    "editorial_reason": "Remove the unproved equation of Zabbai, father of Baruch, with Zaccai of Ezra 2:9 / Nehemiah 7:14.",
+    "editorial_evidence": [
+      "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c (WLC, exact original-word IDs)",
+      "Nehemiah 3:20 WLC o160030200071 reads Zabbai; Ezra 2:9 and Nehemiah 7:14 read Zaccai, a separate returnee listing"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "drop_unproven_zaccai_zabbai_equivalence",
+        "replaced_field_values": {
+          "before": {
+            "alternate_labels": [
+              "Zaccai"
+            ],
+            "referred_to_as": [
+              "person:Zaccai"
+            ]
+          },
+          "after": {
+            "alternate_labels": [],
+            "referred_to_as": []
+          }
+        },
+        "evidence": [
+          "Nehemiah 3:20 WLC o160030200071 reads Zabbai; Ezra 2:9 and Nehemiah 7:14 read Zaccai, a separate returnee listing"
+        ],
+        "reason": "Remove the unproved equation of Zabbai, father of Baruch, with Zaccai of Ezra 2:9 / Nehemiah 7:14."
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -32,9 +60,6 @@
   ],
   "localizations": {
     "eng": {
-      "alternate_labels": [
-        "Zaccai"
-      ],
       "preferred_label": "Zabbai (Nehemiah 3:20)"
     }
   },
@@ -47,9 +72,6 @@
   "pronominal_referents": {},
   "references": [
     "16003020"
-  ],
-  "referred_to_as": [
-    "person:Zaccai"
   ],
   "subject_referents": {},
   "type": "person"

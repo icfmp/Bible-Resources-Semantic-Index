@@ -70,7 +70,8 @@ class FamilyInverseTests(unittest.TestCase):
         # Source-inferred maternal, unnamed-father and combined Zimmah
         # identity links are withheld individually with editorial receipts.
         self.assertEqual(result["counts"].get(
-            "different_named_parent_in_inverse_claim", 0), 0)
+            "different_named_parent_in_inverse_claim", 0), 0,
+                         result["conflicting_inverse_claim_examples"])
         self.assertEqual(result["conflicting_inverse_claim_examples"], [])
         self.assertIn("review candidate", result["warning"])
 

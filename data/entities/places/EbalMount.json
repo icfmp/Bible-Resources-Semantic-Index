@@ -25,10 +25,100 @@
   ],
   "bsi": {
     "canonical_id": "place:EbalMount",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:EbalMount",
     "source_primary_id": "place:EbalMount",
-    "source_sha256": "cc8acab534634a2fb07e6905b04a748d9ddd62f5f3843f3f72f15ab33aea2183"
+    "source_sha256": "cc8acab534634a2fb07e6905b04a748d9ddd62f5f3843f3f72f15ab33aea2183",
+    "editorial_reason": "A distinct biblical name Zalmon cannot automatically inherit the geographical identity, exact coordinates, or reverse word lookup of Mount Ebal. Remove the two falsely assigned word/references but do not assert that the actual locations are definitively different.",
+    "editorial_evidence": [
+      "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c (WLC, exact original-word IDs)",
+      "Judges 9:48 WLC o070090480041 says Zalmon, not Ebal; Psalm 68:15 (ORG BCV8 19068015) WLC o190680150062 says Zalmon, not Ebal; the name equivalence has no independent textual proof",
+      "Ebal's separately attested WLC proper-name tokens and Deut/Josh source references are preserved"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "remove_false_ebal_zalmon_named_word_claims",
+        "replaced_field_values": {
+          "before": {
+            "references": [
+              "05011029",
+              "05027004",
+              "05027013",
+              "06008030",
+              "06008033",
+              "07009048",
+              "19068015"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o050110290231"
+                ],
+                [
+                  "o050270040151"
+                ],
+                [
+                  "o050270130061"
+                ],
+                [
+                  "o060080300091"
+                ],
+                [
+                  "o060080330281"
+                ]
+              ]
+            },
+            "alternate_labels": [
+              "Mount Zalmon",
+              "Zalmon",
+              "Mount Ephraim",
+              "Ebal"
+            ],
+            "referred_to_as": [
+              "place:ZalmonMount",
+              "place:Zalmon"
+            ]
+          },
+          "after": {
+            "references": [
+              "05011029",
+              "05027004",
+              "05027013",
+              "06008030",
+              "06008033"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o050110290231"
+                ],
+                [
+                  "o050270040151"
+                ],
+                [
+                  "o050270130061"
+                ],
+                [
+                  "o060080300091"
+                ],
+                [
+                  "o060080330281"
+                ]
+              ]
+            },
+            "alternate_labels": [
+              "Mount Ephraim",
+              "Ebal"
+            ]
+          }
+        },
+        "evidence": [
+          "Judges 9:48 WLC o070090480041 says Zalmon, not Ebal; Psalm 68:15 (ORG BCV8 19068015) WLC o190680150062 says Zalmon, not Ebal; the name equivalence has no independent textual proof",
+          "Ebal's separately attested WLC proper-name tokens and Deut/Josh source references are preserved"
+        ],
+        "reason": "A distinct biblical name Zalmon cannot automatically inherit the geographical identity, exact coordinates, or reverse word lookup of Mount Ebal. Remove the two falsely assigned word/references but do not assert that the actual locations are definitively different."
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -46,12 +136,6 @@
       ],
       [
         "o060080330281"
-      ],
-      [
-        "o070090480041"
-      ],
-      [
-        "o190680150062"
       ]
     ]
   },
@@ -76,8 +160,6 @@
   "localizations": {
     "eng": {
       "alternate_labels": [
-        "Mount Zalmon",
-        "Zalmon",
         "Mount Ephraim",
         "Ebal"
       ],
@@ -108,13 +190,7 @@
     "05027004",
     "05027013",
     "06008030",
-    "06008033",
-    "07009048",
-    "19068015"
-  ],
-  "referred_to_as": [
-    "place:ZalmonMount",
-    "place:Zalmon"
+    "06008033"
   ],
   "subject_referents": {},
   "type": "place"

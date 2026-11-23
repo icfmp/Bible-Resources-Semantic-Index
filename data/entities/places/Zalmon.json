@@ -15,11 +15,60 @@
     ]
   },
   "bsi": {
-    "canonical_id": "place:EbalMount",
-    "review_status": "source_unreviewed",
+    "canonical_id": "place:Zalmon",
+    "review_status": "editorially_reviewed",
     "source_id": "place:Zalmon",
     "source_primary_id": "place:EbalMount",
-    "source_sha256": "f40da926da0226c95eb685b699f6c1dcd002e59625f364bc52c53ec5186d8d36"
+    "source_sha256": "f40da926da0226c95eb685b699f6c1dcd002e59625f364bc52c53ec5186d8d36",
+    "editorial_reason": "Zalmon in Psalm 68 must keep its independently named original-word witness, not Ebal's canonical ID or coordinates; physical identification remains uncertain.",
+    "editorial_evidence": [
+      "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c (WLC, exact original-word IDs)",
+      "Psalm 68:15 ORG BCV8 19068015 WLC o190680150062 is Zalmon; source does not name Mount Ebal or identify a modern coordinate",
+      "The uncertain possibly_same_as links to Mount Zalmon and Mount Hermon are retained as explicitly unapproved hypotheses"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "separate_zalmon_psalm_from_unproved_ebal_identity",
+        "replaced_field_values": {
+          "before": {
+            "canonical_id": "place:EbalMount",
+            "primary_id": "place:EbalMount",
+            "geocoordinates": {
+              "obi": {
+                "lat": "32.23293814",
+                "lon": "35.2730418"
+              },
+              "vizbible": {
+                "lat": "32.23293814",
+                "lon": "35.2730418"
+              }
+            },
+            "alternate_labels": [
+              "Mount Zalmon",
+              "Mount Ebal",
+              "Salmon"
+            ],
+            "referred_to_as": [
+              "place:EbalMount"
+            ]
+          },
+          "after": {
+            "canonical_id": "place:Zalmon",
+            "primary_id": "place:Zalmon",
+            "geocoordinates": null,
+            "alternate_labels": [
+              "Mount Zalmon",
+              "Salmon"
+            ]
+          }
+        },
+        "evidence": [
+          "Psalm 68:15 ORG BCV8 19068015 WLC o190680150062 is Zalmon; source does not name Mount Ebal or identify a modern coordinate",
+          "The uncertain possibly_same_as links to Mount Zalmon and Mount Hermon are retained as explicitly unapproved hypotheses"
+        ],
+        "reason": "Zalmon in Psalm 68 must keep its independently named original-word witness, not Ebal's canonical ID or coordinates; physical identification remains uncertain."
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -27,16 +76,6 @@
         "o190680150062"
       ]
     ]
-  },
-  "geocoordinates": {
-    "obi": {
-      "lat": "32.23293814",
-      "lon": "35.2730418"
-    },
-    "vizbible": {
-      "lat": "32.23293814",
-      "lon": "35.2730418"
-    }
   },
   "id": "place:Zalmon",
   "is_artifact": false,
@@ -48,7 +87,6 @@
     "eng": {
       "alternate_labels": [
         "Mount Zalmon",
-        "Mount Ebal",
         "Salmon"
       ],
       "preferred_label": "Zalmon"
@@ -69,13 +107,10 @@
     "place:ZalmonMount",
     "place:HermonMount"
   ],
-  "primary_id": "place:EbalMount",
+  "primary_id": "place:Zalmon",
   "pronominal_referents": {},
   "references": [
     "19068015"
-  ],
-  "referred_to_as": [
-    "place:EbalMount"
   ],
   "subject_referents": {},
   "type": "place",
