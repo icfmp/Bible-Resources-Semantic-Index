@@ -10,9 +10,37 @@
     "review_status": "source_unreviewed",
     "source_id": "place:Machbenah",
     "source_primary_id": "place:Machbenah",
-    "source_sha256": "8e42a7807490fd1130e82ed9ae42b8d7689b7dcd6f62554d664cce8f51ea24fc"
+    "source_sha256": "8e42a7807490fd1130e82ed9ae42b8d7689b7dcd6f62554d664cce8f51ea24fc",
+    "editorial_field_changes": [
+      {
+        "action": "restore_source-attested_direct_place_phrase",
+        "added_reference_values": {
+          "references": [
+            "13002049"
+          ]
+        },
+        "added_original_word_groups": {
+          "wlc": [
+            [
+              "o130020490081"
+            ]
+          ]
+        },
+        "reason": "1 Chronicles 2:49 explicitly names Machbenah with the noun 'father/founder of', independently of identification of the founder. The preserved exact WLC original-word token is a geographical name, not a guessed owner or genealogy.",
+        "evidence": [
+          "1 Chronicles 2:49",
+          "WLC/Macula Hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c original word o130020490081; exact source text and lemma inspected"
+        ]
+      }
+    ]
   },
-  "explicit_instances": {},
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o130020490081"
+      ]
+    ]
+  },
   "id": "place:Machbenah",
   "is_artifact": false,
   "is_person": false,
@@ -34,7 +62,9 @@
   },
   "primary_id": "place:Machbenah",
   "pronominal_referents": {},
-  "references": [],
+  "references": [
+    "13002049"
+  ],
   "subject_referents": {},
   "subregion_of": [
     "place:TerritoryOfJudah"
