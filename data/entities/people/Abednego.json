@@ -13,10 +13,203 @@
   },
   "bsi": {
     "canonical_id": "person:Azariah.20",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "person:Abednego",
     "source_primary_id": "person:Azariah.20",
-    "source_sha256": "65548d9ab4c96adcc40a94e03502f08f50a0a4d4279d4e04fdab8787c1df9c8c"
+    "source_sha256": "65548d9ab4c96adcc40a94e03502f08f50a0a4d4279d4e04fdab8787c1df9c8c",
+    "editorial_reason": "Restore exact original-language direct mention(s) from independently inspected inherited key-verses while distinguishing contextual verse claims and similarly named identities.",
+    "editorial_evidence": [
+      "Exact pinned Macula Hebrew WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c / Greek SBLGNT@8423afe47b9e8f24b7772e808af45c7159a6fe7e, fully inspected in PR #136 original-verse CI",
+      "Daniel 1:6,19 names Azariah, explicitly renamed Abednego in Daniel 1:7; one person with two names, not a different Azariah.",
+      "27001006 wlc o270010060082",
+      "27001019 wlc o270010190102"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "restore_independently_pinned_exact_direct_mention",
+        "reason": "Restore exact original-language direct mention(s) from independently inspected inherited key-verses while distinguishing contextual verse claims and similarly named identities.",
+        "evidence": [
+          "Exact pinned Macula Hebrew WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c / Greek SBLGNT@8423afe47b9e8f24b7772e808af45c7159a6fe7e, fully inspected in PR #136 original-verse CI",
+          "Daniel 1:6,19 names Azariah, explicitly renamed Abednego in Daniel 1:7; one person with two names, not a different Azariah.",
+          "27001006 wlc o270010060082",
+          "27001019 wlc o270010190102"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [
+              "27001007",
+              "27002049",
+              "27003012",
+              "27003013",
+              "27003014",
+              "27003016",
+              "27003019",
+              "27003020",
+              "27003022",
+              "27003023",
+              "27003026",
+              "27003028",
+              "27003029",
+              "27003030"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o270010070141",
+                  "o270010070151"
+                ],
+                [
+                  "o270020490132",
+                  "o270020490141"
+                ],
+                [
+                  "o270030120132",
+                  "o270030120141"
+                ],
+                [
+                  "o270030130092",
+                  "o270030130101"
+                ],
+                [
+                  "o270030140082",
+                  "o270030140091"
+                ],
+                [
+                  "o270030160042",
+                  "o270030160051"
+                ],
+                [
+                  "o270030190122",
+                  "o270030190131"
+                ],
+                [
+                  "o270030200102",
+                  "o270030200111"
+                ],
+                [
+                  "o270030220182",
+                  "o270030220191"
+                ],
+                [
+                  "o270030230062",
+                  "o270030230071"
+                ],
+                [
+                  "o270030260122",
+                  "o270030260131"
+                ],
+                [
+                  "o270030260252",
+                  "o270030260261"
+                ],
+                [
+                  "o270030280092",
+                  "o270030280101"
+                ],
+                [
+                  "o270030290182",
+                  "o270030290191"
+                ],
+                [
+                  "o270030300062",
+                  "o270030300071"
+                ]
+              ]
+            }
+          },
+          "after": {
+            "references": [
+              "27001006",
+              "27001007",
+              "27001019",
+              "27002049",
+              "27003012",
+              "27003013",
+              "27003014",
+              "27003016",
+              "27003019",
+              "27003020",
+              "27003022",
+              "27003023",
+              "27003026",
+              "27003028",
+              "27003029",
+              "27003030"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o270010070141",
+                  "o270010070151"
+                ],
+                [
+                  "o270020490132",
+                  "o270020490141"
+                ],
+                [
+                  "o270030120132",
+                  "o270030120141"
+                ],
+                [
+                  "o270030130092",
+                  "o270030130101"
+                ],
+                [
+                  "o270030140082",
+                  "o270030140091"
+                ],
+                [
+                  "o270030160042",
+                  "o270030160051"
+                ],
+                [
+                  "o270030190122",
+                  "o270030190131"
+                ],
+                [
+                  "o270030200102",
+                  "o270030200111"
+                ],
+                [
+                  "o270030220182",
+                  "o270030220191"
+                ],
+                [
+                  "o270030230062",
+                  "o270030230071"
+                ],
+                [
+                  "o270030260122",
+                  "o270030260131"
+                ],
+                [
+                  "o270030260252",
+                  "o270030260261"
+                ],
+                [
+                  "o270030280092",
+                  "o270030280101"
+                ],
+                [
+                  "o270030290182",
+                  "o270030290191"
+                ],
+                [
+                  "o270030300062",
+                  "o270030300071"
+                ],
+                [
+                  "o270010060082"
+                ],
+                [
+                  "o270010190102"
+                ]
+              ]
+            }
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -79,6 +272,12 @@
       [
         "o270030300062",
         "o270030300071"
+      ],
+      [
+        "o270010060082"
+      ],
+      [
+        "o270010190102"
       ]
     ]
   },
@@ -127,7 +326,9 @@
     ]
   },
   "references": [
+    "27001006",
     "27001007",
+    "27001019",
     "27002049",
     "27003012",
     "27003013",
