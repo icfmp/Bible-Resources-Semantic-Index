@@ -9,6 +9,8 @@ on:
       - "docs/V1_CONSUMPTION.md"
       - "scripts/inspect_v1_published_assets.py"
       - "tests/test_v1_published_consumer.py"
+      - "scripts/verify_generated_json.py"
+      - "tests/test_verify_generated_json.py"
       - "scripts/verify_historical_asset.py"
   push:
     branches: [main]
@@ -19,6 +21,8 @@ on:
       - "docs/V1_CONSUMPTION.md"
       - "scripts/inspect_v1_published_assets.py"
       - "tests/test_v1_published_consumer.py"
+      - "scripts/verify_generated_json.py"
+      - "tests/test_verify_generated_json.py"
   workflow_dispatch:
 
 permissions:
@@ -106,13 +110,6 @@ jobs:
             --english ubs/dictionaries/hebrew/JSON/UBSHebrewDic-v0.9.4-en.JSON \
             --macula macula-hebrew/WLC/tsv/macula-hebrew.tsv \
             --output /tmp/bsi-ubs-hebrew-sdbh-id-integrity.json
-      - name: Audit full UBS dictionary headword scope for remaining lexical words
-        run: |
-          python3 -I links/dictionaries/ubs-hebrew/audit_dictionary_scope.py \
-            --index /tmp/bsi-ubs-hebrew-index.json \
-            --english ubs/dictionaries/hebrew/JSON/UBSHebrewDic-v0.9.4-en.JSON \
-            --macula macula-hebrew/WLC/tsv/macula-hebrew.tsv \
-            --output /tmp/bsi-ubs-hebrew-scope.json
       - name: Build complete source-traceable v1 unresolved lexical family register
         run: |
           python3 -I links/dictionaries/ubs-hebrew/build_family_register.py \
@@ -278,13 +275,12 @@ jobs:
           assert actual["policy"]["publication_approved"] is False
           print("UBS_V1_DISPOSITION_PARTITION_REPRODUCIBLE", counts)
           PY
-      - name: Compare pinned generated index or prepare initial reproducible snapshot
+      - name: Verify committed pinned source index and exact lexical constraints
         run: |
           python3 - <<'PY'
           import json
           from pathlib import Path
           generated=Path("/tmp/bsi-ubs-hebrew-index.json")
-          target=Path("links/dictionaries/ubs-hebrew/index.json")
           actual=json.loads(generated.read_text(encoding="utf-8"))
           assert actual["format"]=="bsi-ubs-hebrew-lexical-crosswalk"
           assert actual["languages"]==["en","fr"]
@@ -330,12 +326,11 @@ jobs:
           fallback=lookup(actual,"001156001002000","1254","H")
           assert fallback["sense_ids"]==[] and fallback["status"]=="entry_only"
 
-          if target.is_file():
-              assert json.loads(target.read_text(encoding="utf-8")) == actual, "Committed index differs from regenerated data"
-              print("BSI_UBS_HEBREW_COMMITTED_INDEX_VERIFIED")
-          else:
-              print("BSI_UBS_HEBREW_INITIAL_INDEX_PENDING_COMMIT")
+          print("BSI_UBS_HEBREW_PINNED_SOURCE_CONSTRAINTS_VERIFIED")
           PY
+          python3 -I scripts/verify_generated_json.py \
+            --generated /tmp/bsi-ubs-hebrew-index.json \
+            --baseline links/dictionaries/ubs-hebrew/index.json
       - name: Audit all 26 final lexically uncertain source words, read-only
         run: |
           python3 -I links/dictionaries/ubs-hebrew/audit_final_lexical_uncertainties.py \
