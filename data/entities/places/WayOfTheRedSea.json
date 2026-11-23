@@ -2,12 +2,68 @@
   "added_entry": false,
   "bsi": {
     "canonical_id": "place:WayOfTheRedSea",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:WayOfTheRedSea",
     "source_primary_id": "place:WayOfTheRedSea",
-    "source_sha256": "0583bab6c392c1a6d49f189d5ed33cd0d2c0bfa18c090cf7b30212beacacf008"
+    "source_sha256": "0583bab6c392c1a6d49f189d5ed33cd0d2c0bfa18c090cf7b30212beacacf008",
+    "editorial_reason": "Restore the complete lexical phrase directly attested in the inherited key verse(s), retaining distinct original-word IDs, source identity, and every inherited contextual key.",
+    "editorial_evidence": [
+      "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c WLC/tsv/macula-hebrew.tsv inspected by GitHub Actions pinned original-verse job",
+      "04014025 direct original-name group o040140250101, o040140250111, o040140250121",
+      "05001040 direct original-name group o050010400061, o050010400071, o050010400081"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "restore_exact_attested_topographic_original_phrase",
+        "reason": "Restore the complete lexical phrase directly attested in the inherited key verse(s), retaining distinct original-word IDs, source identity, and every inherited contextual key.",
+        "evidence": [
+          "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c WLC/tsv/macula-hebrew.tsv inspected by GitHub Actions pinned original-verse job",
+          "04014025 direct original-name group o040140250101, o040140250111, o040140250121",
+          "05001040 direct original-name group o050010400061, o050010400071, o050010400081"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [],
+            "explicit_instances": {}
+          },
+          "after": {
+            "references": [
+              "04014025",
+              "05001040"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o040140250101",
+                  "o040140250111",
+                  "o040140250121"
+                ],
+                [
+                  "o050010400061",
+                  "o050010400071",
+                  "o050010400081"
+                ]
+              ]
+            }
+          }
+        }
+      }
+    ]
   },
-  "explicit_instances": {},
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o040140250101",
+        "o040140250111",
+        "o040140250121"
+      ],
+      [
+        "o050010400061",
+        "o050010400071",
+        "o050010400081"
+      ]
+    ]
+  },
   "id": "place:WayOfTheRedSea",
   "is_artifact": false,
   "is_person": false,
@@ -30,7 +86,10 @@
   },
   "primary_id": "place:WayOfTheRedSea",
   "pronominal_referents": {},
-  "references": [],
+  "references": [
+    "04014025",
+    "05001040"
+  ],
   "subject_referents": {},
   "type": "place"
 }
