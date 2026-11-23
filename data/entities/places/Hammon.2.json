@@ -10,9 +10,38 @@
     "review_status": "source_unreviewed",
     "source_id": "place:Hammon.2",
     "source_primary_id": "place:Hammon.2",
-    "source_sha256": "43e49288920edee5273db722253b221412b16988e996853270fca17efd6d164a"
+    "source_sha256": "43e49288920edee5273db722253b221412b16988e996853270fca17efd6d164a",
+    "editorial_field_changes": [
+      {
+        "action": "restore_direct_original_word_and_verse_witness",
+        "added_reference_values": {
+          "references": [
+            "13006061"
+          ]
+        },
+        "added_original_word_groups": {
+          "wlc": [
+            [
+              "o130060610091"
+            ]
+          ]
+        },
+        "reason": "1 Chronicles 6:61 (ORG) explicitly names Naphtali's Hammon among Levitical cities.",
+        "evidence": [
+          "ORG BCV8 13006061",
+          "Pinned original corpus: Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c",
+          "Exact original-word ID(s) and English gloss independently extracted from frozen Macula TSV; source IDs and text unchanged"
+        ]
+      }
+    ]
   },
-  "explicit_instances": {},
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o130060610091"
+      ]
+    ]
+  },
   "id": "place:Hammon.2",
   "is_artifact": false,
   "is_person": false,
@@ -34,7 +63,9 @@
   },
   "primary_id": "place:Hammon.2",
   "pronominal_referents": {},
-  "references": [],
+  "references": [
+    "13006061"
+  ],
   "subject_referents": {},
   "subregion_of": [
     "place:TerritoryOfNaphtali"
