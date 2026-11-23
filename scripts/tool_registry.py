@@ -110,6 +110,8 @@ def main() -> int:
                         help="fail on workflow references to missing Python files")
     parser.add_argument("--json", action="store_true",
                         help="print full source/caller inventory")
+    parser.add_argument("--review-candidates", action="store_true",
+                        help="print tools lacking static code/test/workflow references")
     args = parser.parse_args()
     report = inventory(args.root.resolve())
     if args.json:
@@ -122,6 +124,10 @@ def main() -> int:
               sum(x["manual_caller_review_required"] for x in report["tools"]))
         for row in report["missing_workflow_python_paths"]:
             print("MISSING_WORKFLOW_SCRIPT", row["workflow"], row["path"])
+        if args.review_candidates:
+            for row in report["tools"]:
+                if row["manual_caller_review_required"]:
+                    print("REVIEW_STATIC_UNREFERENCED", row["path"])
     return int(args.check_workflows and bool(report["missing_workflow_python_paths"]))
 
 
