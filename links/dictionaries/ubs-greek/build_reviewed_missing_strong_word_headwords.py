@@ -9,13 +9,14 @@ contextual sense/LEXID is inferred and no global alias is generated.
 from __future__ import annotations
 
 import argparse
-import copy
+import runpy
 import hashlib
 import json
 import unicodedata
 from collections import Counter
 from pathlib import Path
 
+INTEGRITY = runpy.run_path(str(Path(__file__).with_name("reviewed_word_integrity.py")))
 OLD = "nfc_canonically_identical_lemma_and_original_ln_unapproved_word_candidate"
 NEW = "source_reviewed_original_greek_word_without_strong_lemma_ln_headword_only"
 POLICY = {
@@ -87,7 +88,7 @@ def build(candidate, ledger, residual, english, french):
     if len(en) != len(english) or len(fr) != len(french) or set(en) != set(fr):
         raise ValueError("Greek UBS original English/French lexical inventory changed")
     chosen, declined = set(), set()
-    output = copy.deepcopy(candidate)
+    selected_ids = set()
     for family in residual["families"]:
         key = (family["lemma_nfc"], family["ubs_main_id"])
         if key not in selected and key not in deferred:
@@ -116,34 +117,22 @@ def build(candidate, ledger, residual, english, french):
         witness = family["all_original_word_witnesses"][0]
         wid = witness["word_id"]
         old = candidate["by_macula_word"].get(wid)
-        if (not old or old["match_type"] != OLD or old["entry_id"] != mid
-            or old["original_strong"] != "0"
-            or old["original_lemma"] != witness["original_lemma"]
-            or old["original_ln"] != witness["original_ln"]
-            or old["original_morph"] != witness["original_morph"]
-            or old["original_reference"] != witness["reference"]
-            or old["original_class"] != "noun"
-            or old["corroborating_ubs_ln_codes"] != witness["attested_headword_ln_codes"]):
-            raise ValueError("Original Greek Strong=0 word ID or source annotation drift: " + wid)
+        if wid in selected_ids:
+            raise ValueError("Duplicate Greek source word ID with Strong=0: " + wid)
+        INTEGRITY["verify_original_word"](old, witness, wid, mid, OLD)
+        if old["original_strong"] != "0" or old["original_class"] != "noun":
+            raise ValueError("Original Greek Strong=0 and noun-class source evidence drift")
         if (sorted(set(old["original_ln"].split()) & en_ln & fr_ln)
             != old["corroborating_ubs_ln_codes"]):
             raise ValueError("Original Greek Strong=0 independent lexical LN corroboration missing")
-        output["by_macula_word"][wid]["match_type"] = NEW
+        selected_ids.add(wid)
         chosen.add(key)
     if chosen != set(selected) or declined != set(deferred):
         raise ValueError("Original Greek Strong=0 review did not exhaust explicit ledger")
+    output = INTEGRITY["apply_review_status"](candidate, selected_ids, OLD, NEW)
     parts = Counter(x["match_type"] for x in output["by_macula_word"].values())
     if len(output["by_macula_word"]) != 9187 or parts[NEW] != 2 or parts[OLD] != 1:
         raise ValueError("Greek original source-reviewed headwords / pending cohort drift")
-    for wid, row in candidate["by_macula_word"].items():
-        new = output["by_macula_word"][wid]
-        if ({k:v for k,v in row.items() if k != "match_type"} !=
-            {k:v for k,v in new.items() if k != "match_type"}
-            or (row["match_type"] != OLD and new != row)):
-            raise ValueError("Historical source Strong, LN, Greek, morphology or earlier review mutated")
-    for k in candidate:
-        if k not in ("by_macula_word", "editorial_candidate", "word_aware_coverage") and output[k] != candidate[k]:
-            raise ValueError("Historical Greek lexical Strong maps/ambiguous words modified")
     output["editorial_candidate"] = {
         **candidate["editorial_candidate"],
         "status": "PRIVATE_original_Greek_two_missing_Strong_lexical_headwords_NOT_PUBLISHED",
