@@ -14,7 +14,8 @@ from collections import defaultdict
 from pathlib import Path
 
 
-PATHS = {"person": "people", "place": "places"}
+PATHS = {"person": "people", "place": "places", "group": "groups",
+         "deity": "deities", "fauna": "fauna", "flora": "flora", "realia": "realia"}
 
 
 def verse_neighbors(verse: str) -> set[str]:
@@ -92,8 +93,23 @@ def main():
     parser.add_argument("--candidates",type=Path,required=True)
     parser.add_argument("--wlc",type=Path,required=True)
     parser.add_argument("--sblgnt",type=Path,required=True)
+    parser.add_argument("--compact",action="store_true")
     args=parser.parse_args()
     for row in summarize(args.data,args.candidates,{"wlc":args.wlc,"sblgnt":args.sblgnt}):
+        if args.compact:
+            compact=[]
+            for case in row["nearby"]:
+                target=case["verse"]
+                source=case["neighboring_source_verses"]
+                direct=[{"verse":v["verse_id"],"ids":[w["id"] for w in v["word_anchors"]],
+                         "words":[w["english"] for w in v["word_anchors"]]}
+                        for v in source if v["word_anchors"]]
+                text=next((v["text"] for v in source if v["verse_id"]==target),"")
+                compact.append({"target":target,"text":text[:230],"nearby_links":direct})
+            row={"source_id":row["source_id"],"keys":row["keys"],
+                 "direct_verse_count":row["active_direct_verse_count"],
+                 "indirect_verse_count":row["active_indirect_verse_count"],
+                 "cases":compact}
         print("NEXT_SOURCE_KEY_CASE "+json.dumps(row,ensure_ascii=False,separators=(",",":")))
 
 
