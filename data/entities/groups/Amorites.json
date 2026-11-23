@@ -12,10 +12,40 @@
   },
   "bsi": {
     "canonical_id": "group:Amorites",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "group:Amorites",
     "source_primary_id": "group:Amorites",
-    "source_sha256": "ceee57fd89289da672621fcfbf8b1f7a039cc7da56610d09c7b33fc0b03a3a6a"
+    "source_sha256": "ceee57fd89289da672621fcfbf8b1f7a039cc7da56610d09c7b33fc0b03a3a6a",
+    "editorial_reason": "1 Chronicles 1:13 names Canaan, Sidon and Heth but not the Amorites. The following verse 1 Chronicles 1:14 explicitly names the Amorites (pinned WLC o130010140042), and is already in both the key and direct source fields. Remove only the wrong adjacent-verse inherited key.",
+    "editorial_evidence": [
+      "Pinned WLC 1 Chronicles 1:13 has Canaan, Sidon and Heth; no Amorite lexical name",
+      "Pinned WLC 1 Chronicles 1:14 o130010140042 is already an explicit group:Amorites original-word witness"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "remove_misnumbered_amorite_key_from_prior_genealogy_verse",
+        "reason": "1 Chronicles 1:13 names Canaan, Sidon and Heth but not the Amorites. The following verse 1 Chronicles 1:14 explicitly names the Amorites (pinned WLC o130010140042), and is already in both the key and direct source fields. Remove only the wrong adjacent-verse inherited key.",
+        "evidence": [
+          "Pinned WLC 1 Chronicles 1:13 has Canaan, Sidon and Heth; no Amorite lexical name",
+          "Pinned WLC 1 Chronicles 1:14 o130010140042 is already an explicit group:Amorites original-word witness"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "key_references": [
+              "01010016",
+              "13001013",
+              "13001014"
+            ]
+          },
+          "after": {
+            "key_references": [
+              "01010016",
+              "13001014"
+            ]
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -286,7 +316,6 @@
   "id": "group:Amorites",
   "key_references": [
     "01010016",
-    "13001013",
     "13001014"
   ],
   "localizations": {
