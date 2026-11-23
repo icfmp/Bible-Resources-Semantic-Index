@@ -5,9 +5,41 @@
     "review_status": "source_unreviewed",
     "source_id": "place:MiddleGate",
     "source_primary_id": "place:MiddleGate",
-    "source_sha256": "8917fb0dd2d283025d4c8dfaa292235c888206381857a55ef12090ae2ccab801"
+    "source_sha256": "8917fb0dd2d283025d4c8dfaa292235c888206381857a55ef12090ae2ccab801",
+    "editorial_field_changes": [
+      {
+        "action": "restore_exact_frozen_wlc_geographic_compound",
+        "added_reference_values": {
+          "references": [
+            "24039003"
+          ]
+        },
+        "added_original_word_groups": {
+          "wlc": [
+            [
+              "o240390030072",
+              "o240390030081",
+              "o240390030082"
+            ]
+          ]
+        },
+        "reason": "Jeremiah 39:3 explicitly names the middle gate where Babylonian officials sat, expressed as gate-of-the-middle in Hebrew.",
+        "evidence": [
+          "ORG BCV8 24039003",
+          "Collated directly against frozen Hebrew WLC lowfat XML at Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c, including complete original words and prefixes"
+        ]
+      }
+    ]
   },
-  "explicit_instances": {},
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o240390030072",
+        "o240390030081",
+        "o240390030082"
+      ]
+    ]
+  },
   "id": "place:MiddleGate",
   "is_artifact": true,
   "is_person": false,
@@ -29,7 +61,9 @@
   },
   "primary_id": "place:MiddleGate",
   "pronominal_referents": {},
-  "references": [],
+  "references": [
+    "24039003"
+  ],
   "subject_referents": {},
   "subregion_of": [
     "place:Jerusalem"
