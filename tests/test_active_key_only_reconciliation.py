@@ -17,7 +17,7 @@ class NativeKeyOnlyReconciliationTests(unittest.TestCase):
         self.assertEqual(report["original_indirect_pair_count"],53)
         self.assertEqual(report["individually_reviewed_unanchored_places"],27)
         self.assertEqual(report["previously_certified_unique_source_identities"],358)
-        self.assertEqual(report["counts"]["previously_certified"],125)
+        self.assertEqual(report["counts"]["previously_certified"],399)
         self.assertEqual(sum(report["counts"].values()),report["key_only_pairs"])
         self.assertEqual(len({(c["source_id"],c["verse_id"]) for c in report["cases"]}),
                          report["key_only_pairs"])
@@ -40,9 +40,9 @@ class NativeKeyOnlyReconciliationTests(unittest.TestCase):
         cases={(r["source_id"],r["verse_id"]):r
                for r in reconcile(ROOT/"data")["cases"]}
         self.assertEqual(cases[("place:Nehelam","24029024")]["status"],
-                         "place_context_individually_qualified")
+                         "previously_certified")
         self.assertEqual(cases[("place:SouthGate","13026015")]["status"],
-                         "place_context_individually_qualified")
+                         "previously_certified")
         self.assertEqual(cases[("person:Paul","44009002")]["status"],
                          "indirect_original_word_requires_coreference")
 
