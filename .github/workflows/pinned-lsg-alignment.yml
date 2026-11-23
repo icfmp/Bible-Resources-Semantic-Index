@@ -1,0 +1,65 @@
+name: Verify pinned Clear.Bible LSG alignments (no publication)
+
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/pinned-lsg-alignment.yml"
+      - "scripts/build_translation_alignments.py"
+      - "tests/test_translation_alignments.py"
+      - "links/alignments/clear-bible-lsg/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-pinned-lsg:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Check out BRSI
+        uses: actions/checkout@v4
+      - name: Run independent offline regressions
+        run: python3 -I -m unittest discover -s tests -p 'test_translation_alignments.py' -v
+      - name: Retrieve precisely pinned upstream source data (no files committed)
+        shell: bash
+        run: |
+          set -euo pipefail
+          revision=c99bd0ae6946775f932517656308ca19fc706921
+          mkdir -p /tmp/brsi-clear-bible
+          git -C /tmp/brsi-clear-bible init
+          git -C /tmp/brsi-clear-bible remote add origin https://github.com/Clear-Bible/Alignments.git
+          git -C /tmp/brsi-clear-bible sparse-checkout init --cone
+          git -C /tmp/brsi-clear-bible sparse-checkout set data/sources data/fra/alignments/LSG data/fra/targets/LSG
+          git -C /tmp/brsi-clear-bible -c protocol.version=2 fetch --depth 1 --filter=blob:none origin "$revision"
+          git -C /tmp/brsi-clear-bible checkout --detach FETCH_HEAD
+          test "$(git -C /tmp/brsi-clear-bible rev-parse HEAD)" = "$revision"
+      - name: Rebuild and audit complete unmodified alignment inputs
+        run: |
+          set -euo pipefail
+          python3 -I scripts/build_translation_alignments.py \
+            --manifest links/alignments/clear-bible-lsg/manifest.json \
+            --corrections links/alignments/clear-bible-lsg/corrections.json \
+            --upstream-root /tmp/brsi-clear-bible \
+            --output-dir /tmp/brsi-clear-bible-candidate
+          python3 -I - <<'PY'
+          import json
+          from pathlib import Path
+          receipt = json.loads(Path('/tmp/brsi-clear-bible-candidate/receipt.json').read_text())
+          for canon, row in sorted(receipt['candidate_outputs'].items()):
+              coverage = row['coverage']
+              assert coverage['records'] > 1000, (canon, coverage)
+              assert coverage['source_tokens_aligned'] > 1000
+              assert coverage['records'] == (coverage.get('source_attested', 0)
+                                           + coverage.get('target_unverified', 0)
+                                           + coverage.get('unresolved', 0))
+              if canon == 'ot':
+                  assert not coverage['target_census_complete']
+                  assert coverage.get('source_attested', 0) == 0
+              else:
+                  assert coverage['target_census_complete']
+          assert receipt['publication_approved'] is False
+          PY
+      - name: Explicit nonpublication boundary
+        run: |
+          echo "Verified candidate only. No artifacts uploaded; no release or Bible app edits."
