@@ -75,8 +75,8 @@ class TranslationAlignmentTests(unittest.TestCase):
         indexes, receipts = self.build()
         nt, ot = indexes["nt"], indexes["ot"]
         self.assertEqual(nt["coverage"]["records"], 2)
-        self.assertEqual(nt["coverage"]["many_to_many"], 1)
-        self.assertEqual(nt["coverage"]["one_to_one"], 1)
+        self.assertEqual(nt["coverage"]["topology_many_to_many"], 1)
+        self.assertEqual(nt["coverage"]["topology_one_to_one"], 1)
         self.assertEqual(nt["coverage"]["source_attested"], 2)
         self.assertEqual(nt["coverage"]["source_tokens_multiple_groups"], 1)
         self.assertEqual(nt["records"][1]["source_ids_original"],
