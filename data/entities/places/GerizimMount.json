@@ -29,10 +29,35 @@
   ],
   "bsi": {
     "canonical_id": "place:GerizimMount",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:GerizimMount",
     "source_primary_id": "place:GerizimMount",
-    "source_sha256": "09d8d0430ec241bf8a406cf3d5cd97c80da06d0a6556fd54b834518318ff9f88"
+    "source_sha256": "09d8d0430ec241bf8a406cf3d5cd97c80da06d0a6556fd54b834518318ff9f88",
+    "editorial_reason": "Judges 9:37 names the center/navel of the land, not Mount Gerizim; the geographical equation is unproved. Retain the contextual key but remove asserted identity.",
+    "editorial_evidence": [
+      "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c WLC/tsv/macula-hebrew.tsv",
+      "Judges 9:37 WLC o070090370101 (טַבּוּר) + o070090370111 (הַ) + o070090370112 (אֶרֶץ), no Gerizim proper name"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "remove_unproven_gerizim_tabbur_equivalence",
+        "reason": "Judges 9:37 names the center/navel of the land, not Mount Gerizim; the geographical equation is unproved. Retain the contextual key but remove asserted identity.",
+        "evidence": [
+          "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c WLC/tsv/macula-hebrew.tsv",
+          "Judges 9:37 WLC o070090370101 (טַבּוּר) + o070090370111 (הַ) + o070090370112 (אֶרֶץ), no Gerizim proper name"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "referred_to_as": [
+              "place:Tabbur-erez"
+            ]
+          },
+          "after": {
+            "referred_to_as": []
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -116,9 +141,6 @@
     "06008033",
     "07009007",
     "43004020"
-  ],
-  "referred_to_as": [
-    "place:Tabbur-erez"
   ],
   "subject_referents": {},
   "type": "place",
