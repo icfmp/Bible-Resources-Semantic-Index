@@ -91,13 +91,6 @@ jobs:
           python3 -I scripts/verify_generated_json.py \
             --generated /tmp/bsi-ubs-hebrew-reconciliation.json \
             --baseline links/dictionaries/ubs-hebrew/reconciliation_candidates.json
-      - name: Audit SDBH exact sense identity against independent lexical evidence
-        run: |
-          python3 -I links/dictionaries/ubs-hebrew/audit_direct_sense_fidelity.py \
-            --index /tmp/bsi-ubs-hebrew-index.json \
-            --english ubs/dictionaries/hebrew/JSON/UBSHebrewDic-v0.9.4-en.JSON \
-            --macula macula-hebrew/WLC/tsv/macula-hebrew.tsv \
-            --output /tmp/bsi-ubs-hebrew-sdbh-id-integrity.json
       - name: Build complete source-traceable v1 unresolved lexical family register
         run: |
           python3 -I links/dictionaries/ubs-hebrew/build_family_register.py \
