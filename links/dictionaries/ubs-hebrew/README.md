@@ -54,7 +54,12 @@ BRSI package.
 
 Identical **MACULA `sdbh`** and **UBS `LEXID`** values can refer to
 *different lexemes across editions*. Numeric equality is **not**
-proof of an original-word-to-UBS sense identity. The source-aware
+proof of an original-word-to-UBS sense identity. The original terminal
+[numeric-ID collision survey](https://github.com/icfmp/Bible-Resources-Semantic-Index/blob/7ea875a5a866d678958264a8f830418ed538a7ce/links/dictionaries/ubs-hebrew/audit_direct_sense_fidelity.py)
+was one-time research: its generated report was never an independent
+released-data gate. The maintained `build_index.py` lookup and
+`test_index.py` negative tests reject cross-lexeme and Hebrew/Aramaic
+sense-ID collisions without making a contextual approval claim. The source-aware
 lookup checks the actual Hebrew/Aramaic language, precise original
 word ID, Strong numeric family and corresponding UBS source headword.
 A unique exact-source headword can support an **entry-only** link;
