@@ -15,7 +15,29 @@
     "review_status": "source_unreviewed",
     "source_id": "deity:Ashtaroth",
     "source_primary_id": "deity:Ashtoreth",
-    "source_sha256": "0655ee160cbbc5047d3eb2e9eda508e2e5c0f412386a686a816c0d7d4e6f3e50"
+    "source_sha256": "0655ee160cbbc5047d3eb2e9eda508e2e5c0f412386a686a816c0d7d4e6f3e50",
+    "editorial_field_changes": [
+      {
+        "action": "restore_original_explicit_ethnonym_or_deity_name",
+        "added_reference_values": {
+          "references": [
+            "11011005"
+          ]
+        },
+        "added_original_word_groups": {
+          "wlc": [
+            [
+              "o110110050041"
+            ]
+          ]
+        },
+        "reason": "1 Kings 11:5 explicitly names the goddess Ashtoreth (Astarte), an attested English variant of the source entity Ashtaroth.",
+        "evidence": [
+          "ORG BCV8 11011005",
+          "Pinned Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c exact WLC word and lemma"
+        ]
+      }
+    ]
   },
   "deity_type": "deity",
   "explicit_instances": {
@@ -37,6 +59,9 @@
       ],
       [
         "o090310100051"
+      ],
+      [
+        "o110110050041"
       ]
     ]
   },
@@ -68,7 +93,8 @@
     "09007003",
     "09007004",
     "09012010",
-    "09031010"
+    "09031010",
+    "11011005"
   ],
   "referred_to_as": [
     "deity:Ashtoreth"

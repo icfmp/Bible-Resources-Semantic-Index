@@ -15,7 +15,29 @@
     "review_status": "source_unreviewed",
     "source_id": "group:Midian",
     "source_primary_id": "group:Midian",
-    "source_sha256": "e3cd26b38a1e5af1e3d395ea978cf7631614d7f9f35fdb8a776c7f3f26656094"
+    "source_sha256": "e3cd26b38a1e5af1e3d395ea978cf7631614d7f9f35fdb8a776c7f3f26656094",
+    "editorial_field_changes": [
+      {
+        "action": "restore_original_explicit_ethnonym_or_deity_name",
+        "added_reference_values": {
+          "references": [
+            "07007025"
+          ]
+        },
+        "added_original_word_groups": {
+          "wlc": [
+            [
+              "o070070250211"
+            ]
+          ]
+        },
+        "reason": "Judges 7:25 names Midianites among the captured enemy tribe, distinctly from person Midian as eponymous ancestor.",
+        "evidence": [
+          "ORG BCV8 07007025",
+          "Pinned Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c exact WLC word and lemma"
+        ]
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -42,6 +64,9 @@
       ],
       [
         "o040310020062"
+      ],
+      [
+        "o070070250211"
       ]
     ]
   },
@@ -84,7 +109,8 @@
     "04025014",
     "04025015",
     "04025017",
-    "04031002"
+    "04031002",
+    "07007025"
   ],
   "subject_referents": {
     "wlc": [

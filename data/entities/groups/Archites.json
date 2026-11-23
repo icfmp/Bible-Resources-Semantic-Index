@@ -9,7 +9,34 @@
     "review_status": "source_unreviewed",
     "source_id": "group:Archites",
     "source_primary_id": "group:Archites",
-    "source_sha256": "5b3a726ef45fae768c4a215db1a1953e8b5a208eecc865a8060cd7c99923384a"
+    "source_sha256": "5b3a726ef45fae768c4a215db1a1953e8b5a208eecc865a8060cd7c99923384a",
+    "editorial_field_changes": [
+      {
+        "action": "restore_original_explicit_ethnonym_or_deity_name",
+        "added_reference_values": {
+          "references": [
+            "01010017",
+            "13001015"
+          ]
+        },
+        "added_original_word_groups": {
+          "wlc": [
+            [
+              "o010100170042"
+            ],
+            [
+              "o130010150042"
+            ]
+          ]
+        },
+        "reason": "Genesis 10:17 and 1 Chronicles 1:15 directly use the Arkite/Archite ethnonym in lists of Canaanite peoples.",
+        "evidence": [
+          "ORG BCV8 01010017",
+          "ORG BCV8 13001015",
+          "Pinned Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c exact WLC word and lemma"
+        ]
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -30,6 +57,12 @@
       ],
       [
         "o130270330052"
+      ],
+      [
+        "o010100170042"
+      ],
+      [
+        "o130010150042"
       ]
     ]
   },
@@ -59,7 +92,9 @@
     "10016016",
     "10017005",
     "10017014",
-    "13027033"
+    "13027033",
+    "01010017",
+    "13001015"
   ],
   "subject_referents": {},
   "type": "group"
