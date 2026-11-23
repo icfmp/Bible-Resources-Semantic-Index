@@ -10,9 +10,39 @@
     "review_status": "source_unreviewed",
     "source_id": "place:Ebenezer.2",
     "source_primary_id": "place:Ebenezer.2",
-    "source_sha256": "6932207ec7b08003f5a787340fe37851f175ed05e7a08fa4a99f5bad9866cb39"
+    "source_sha256": "6932207ec7b08003f5a787340fe37851f175ed05e7a08fa4a99f5bad9866cb39",
+    "editorial_field_changes": [
+      {
+        "action": "restore_direct_original_word_and_verse_witness",
+        "added_reference_values": {
+          "references": [
+            "09007012"
+          ]
+        },
+        "added_original_word_groups": {
+          "wlc": [
+            [
+              "o090070120131",
+              "o090070120141"
+            ]
+          ]
+        },
+        "reason": "1 Samuel 7:12 names the memorial stone Ebenezer as the single compound Hebrew expression אֶבֶן הָעֵזֶר; preserve both original-word parts in one group.",
+        "evidence": [
+          "ORG BCV8 09007012",
+          "Exact source token(s) independently located in pinned Macula WLC TSV at source.lock.json edition hash; each source English gloss and original lemma confirms the named place; no auto-merged identity"
+        ]
+      }
+    ]
   },
-  "explicit_instances": {},
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o090070120131",
+        "o090070120141"
+      ]
+    ]
+  },
   "id": "place:Ebenezer.2",
   "is_artifact": true,
   "is_person": false,
@@ -45,7 +75,9 @@
   ],
   "primary_id": "place:Ebenezer.2",
   "pronominal_referents": {},
-  "references": [],
+  "references": [
+    "09007012"
+  ],
   "subject_referents": {},
   "type": "place"
 }
