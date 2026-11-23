@@ -3,7 +3,7 @@
   "policy": "Curated source identity review; original Macula gloss/name matches are hypotheses until corroborated by biblical identity and context. No automatic direct-word promotion, no implicit historical place name, no source-content rewriting.",
   "original_sources": {
     "wlc": "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c",
-    "SBLGNT": "Clear-Bible/macula-greek@8423afe47b9e8f24b7772e808af45c7159a6fe7e"
+    "sblgnt": "Clear-Bible/macula-greek@8423afe47b9e8f24b7772e808af45c7159a6fe7e"
   },
   "audit_scope": "Additional 63 distinct source identities after 52 independently corrected records in merged PRs #135-137; audited is not synonymous with modified.",
   "reviews": [
@@ -1043,7 +1043,24 @@
         "04022036"
       ],
       "rationale": "Numbers 22:36 uses the descriptive geographical expression city of Moab (ir Moab), two original-word tokens restored without inventing a separately named city.",
-      "original_word_evidence": [],
+      "original_word_evidence": [
+        {
+          "verse_id": "04022036",
+          "corpus": "wlc",
+          "word_id": "o040220360091",
+          "lemma": "עִיר",
+          "english": "city",
+          "gloss": "city"
+        },
+        {
+          "verse_id": "04022036",
+          "corpus": "wlc",
+          "word_id": "o040220360101",
+          "lemma": "מוֹאָב",
+          "english": "Moab",
+          "gloss": "Moab"
+        }
+      ],
       "editorial_outcome": "source_record_corrected_in_this_review",
       "original_source_edition": "WLC or SBLGNT as specified by witness",
       "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity"
@@ -1497,5 +1514,6 @@
       "original_source_edition": "WLC or SBLGNT as specified by witness",
       "review_scope": "key-verse-to-direct-word-identity_not_biblical_historicity"
     }
-  ]
+  ],
+  "evidence_review_base_commit": "d6ea1dbc32813ca9a61442c8bebdd5c74990f830"
 }
