@@ -125,7 +125,7 @@ class TranslationAlignmentTests(unittest.TestCase):
         first, second = module.gzip_payload(raw), module.gzip_payload(raw)
         self.assertEqual(first, second)
         self.assertEqual(gzip.decompress(first), raw)
-        self.assertEqual(first[4:8], b"\\x00" * 4)
+        self.assertEqual(first[4:8], b"\x00" * 4)
 
     def test_reject_swapped_documents_and_ambiguous_roles(self):
         self.payloads["na"]["documents"][1]["docid"] = "AnotherTranslation"
