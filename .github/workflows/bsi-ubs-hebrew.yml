@@ -269,16 +269,6 @@ jobs:
           python3 -I scripts/verify_generated_json.py \
             --generated /tmp/bsi-ubs-hebrew-index.json \
             --baseline links/dictionaries/ubs-hebrew/index.json
-      - name: Audit all 26 final lexically uncertain source words, read-only
-        run: |
-          python3 -I links/dictionaries/ubs-hebrew/audit_final_lexical_uncertainties.py \
-            --single links/dictionaries/ubs-hebrew/v1_single_candidate_abstentions.json \
-            --additional links/dictionaries/ubs-hebrew/v1_additional_word_headword_dispositions.json \
-            --english ubs/dictionaries/hebrew/JSON/UBSHebrewDic-v0.9.4-en.JSON \
-            --french ubs/dictionaries/hebrew/JSON/UBSHebrewDic-v0.9.4-fr.JSON \
-            --macula macula-hebrew/WLC/tsv/macula-hebrew.tsv \
-            --index /tmp/bsi-ubs-hebrew-index.json \
-            --output /tmp/bsi-ubs-last-26-original-wlc-evidence.json
       - name: Rebuild private source-word-verified v1 candidate without touching original index
         run: |
           python3 -I links/dictionaries/ubs-hebrew/build_private_reviewed_candidate.py \
@@ -322,7 +312,10 @@ jobs:
             --index /tmp/bsi-ubs-v1-private-reviewed-candidate.json \
             --source_manifest links/dictionaries/ubs-hebrew/v1_private_candidate_manifest.json \
             --decisions links/dictionaries/ubs-hebrew/v1_final_word_specific_approvals.json \
-            --source_evidence /tmp/bsi-ubs-last-26-original-wlc-evidence.json \
+            --original_index /tmp/bsi-ubs-hebrew-index.json \
+            --single links/dictionaries/ubs-hebrew/v1_single_candidate_abstentions.json \
+            --additional links/dictionaries/ubs-hebrew/v1_additional_word_headword_dispositions.json \
+            --french ubs/dictionaries/hebrew/JSON/UBSHebrewDic-v0.9.4-fr.JSON \
             --english ubs/dictionaries/hebrew/JSON/UBSHebrewDic-v0.9.4-en.JSON \
             --macula macula-hebrew/WLC/tsv/macula-hebrew.tsv \
             --output /tmp/bsi-ubs-v1-final-275-word-candidate.json
