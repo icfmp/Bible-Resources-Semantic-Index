@@ -12,12 +12,37 @@
     "review_status": "source_unreviewed",
     "source_id": "realia:Saw",
     "source_primary_id": "realia:Saw",
-    "source_sha256": "ddd0c87d63654fd020b23fac2b58b9dd0046f03cf4c99d7487b173985d515603"
+    "source_sha256": "ddd0c87d63654fd020b23fac2b58b9dd0046f03cf4c99d7487b173985d515603",
+    "editorial_field_changes": [
+      {
+        "action": "restore_source_attested_object_word_instances",
+        "added_reference_values": {
+          "references": [
+            "11007009"
+          ]
+        },
+        "added_original_word_groups": {
+          "wlc": [
+            [
+              "o110070090082"
+            ]
+          ]
+        },
+        "reason": "1 Kings 7:9 directly names saws for stonework.",
+        "evidence": [
+          "ORG BCV8 11007009",
+          "Pinned original-word texts/glosses inspected in Clear-Bible/Macula Hebrew WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c; token IDs copied verbatim; source metadata and scripture unchanged"
+        ]
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
       [
         "o230100150082"
+      ],
+      [
+        "o110070090082"
       ]
     ]
   },
@@ -49,7 +74,8 @@
   },
   "realia_type": "other",
   "references": [
-    "23010015"
+    "23010015",
+    "11007009"
   ],
   "subject_referents": {},
   "type": "realia",
