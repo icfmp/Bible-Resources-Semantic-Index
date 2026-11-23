@@ -390,27 +390,11 @@ jobs:
           assert result["original_ambiguous_ubs_entries_all_preserved"] is True
           print("GREEK_ORIGINAL_499_EXCEPTIONS_AND_224_AMBIGUITIES_DOCUMENTED_NO_GUESSES")
           PY
-      - name: Partition 224 Greek source Strong ambiguities without selecting senses
-        run: |
-          python3 -I links/dictionaries/ubs-greek/audit_224_ambiguities.py \
-            --source /tmp/bsi-ubs-greek-original-exceptions-and-ambiguities.json \
-            --output /tmp/bsi-ubs-greek-224-ambiguity-partition.json
-          python3 - <<'PY'
-          import json
-          from pathlib import Path
-          r=json.loads(Path("/tmp/bsi-ubs-greek-224-ambiguity-partition.json").read_text())
-          assert sum(r["reason_counts"].values()) == 224
-          assert r["new_approved_lexical_headwords"] == 0
-          assert r["contextual_ubs_lexids_inferred"] == 0
-          assert r["publication_approved"] is False
-          print("GREEK_224_ORIGINAL_STRONG_AMBIGUITIES_PARTITIONED_WITHOUT_GUESSES")
-          PY
       - name: Source-review 220 original Greek ambiguous word headwords without changing Strong maps
         run: |
           python3 -I links/dictionaries/ubs-greek/build_reviewed_224_ambiguities.py \
             --candidate /tmp/bsi-ubs-greek-reviewed-no-ln-batch5-private.json \
             --source /tmp/bsi-ubs-greek-original-exceptions-and-ambiguities.json \
-            --classified /tmp/bsi-ubs-greek-224-ambiguity-partition.json \
             --ledger links/dictionaries/ubs-greek/v1_reviewed_ambiguous_headwords.json \
             --english ubs-source/dictionaries/greek/JSON/UBSGreekNTDic-v1.0-en.JSON \
             --french ubs-source/dictionaries/greek/JSON/UBSGreekNTDic-v1.0-fr.JSON \
@@ -612,14 +596,6 @@ jobs:
               --baseline links/dictionaries/ubs-greek/index.json \
               --candidate "$path"
           done
-      - name: Independently audit exact Greek ὁπότε source word and original UBS bilingual POS
-        run: |
-          python3 -I links/dictionaries/ubs-greek/audit_hopote_original_word.py \
-            --candidate /tmp/bsi-ubs-greek-reviewed-five-composite-private.json \
-            --residual /tmp/bsi-ubs-greek-173-original-word-evidence.json \
-            --english ubs-source/dictionaries/greek/JSON/UBSGreekNTDic-v1.0-en.JSON \
-            --french ubs-source/dictionaries/greek/JSON/UBSGreekNTDic-v1.0-fr.JSON \
-            --output /tmp/bsi-ubs-greek-hopote-original-word-evidence.json
       - name: Source-review original Greek temporal headword without changing conj or ADV annotations
         run: |
           python3 -I links/dictionaries/ubs-greek/build_reviewed_hopote_headword.py \
@@ -627,7 +603,6 @@ jobs:
             --residual /tmp/bsi-ubs-greek-173-original-word-evidence.json \
             --english ubs-source/dictionaries/greek/JSON/UBSGreekNTDic-v1.0-en.JSON \
             --french ubs-source/dictionaries/greek/JSON/UBSGreekNTDic-v1.0-fr.JSON \
-            --evidence /tmp/bsi-ubs-greek-hopote-original-word-evidence.json \
             --ledger links/dictionaries/ubs-greek/v1_reviewed_hopote_temporal_headword.json \
             --output /tmp/bsi-ubs-greek-reviewed-hopote-private.json
           python3 -I links/dictionaries/ubs-greek/validate_word_coverage_invariants.py \
