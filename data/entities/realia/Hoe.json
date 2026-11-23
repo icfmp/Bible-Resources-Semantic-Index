@@ -9,15 +9,65 @@
   },
   "bsi": {
     "canonical_id": "realia:Hoe",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "realia:Hoe",
     "source_primary_id": "realia:Hoe",
-    "source_sha256": "b1e79ddccd8788f097ee6f812529e08cd04dca9d5028b945eb085f83e1b5e0a4"
+    "source_sha256": "b1e79ddccd8788f097ee6f812529e08cd04dca9d5028b945eb085f83e1b5e0a4",
+    "editorial_reason": "Source-collated full-verse original-language witness directly supports this existing object category; restore only exact named tokens, preserving keys and earlier witnesses.",
+    "editorial_evidence": [
+      "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c and Clear-Bible/macula-greek@8423afe47b9e8f24b7772e808af45c7159a6fe7e",
+      "1 Samuel 13:20 directly names agricultural mattocks (אֵת) among the implements Israelite farmers took to Philistine smiths; maps to the indexed hoe category.",
+      "09013020 wlc: o090130200101"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "restore_pinned_direct_object_name_in_source_key",
+        "reason": "Source-collated full-verse original-language witness directly supports this existing object category; restore only exact named tokens, preserving keys and earlier witnesses.",
+        "evidence": [
+          "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c and Clear-Bible/macula-greek@8423afe47b9e8f24b7772e808af45c7159a6fe7e",
+          "1 Samuel 13:20 directly names agricultural mattocks (אֵת) among the implements Israelite farmers took to Philistine smiths; maps to the indexed hoe category.",
+          "09013020 wlc: o090130200101"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [
+              "23007025"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o230070250042"
+                ]
+              ]
+            }
+          },
+          "after": {
+            "references": [
+              "09013020",
+              "23007025"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o230070250042"
+                ],
+                [
+                  "o090130200101"
+                ]
+              ]
+            }
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
       [
         "o230070250042"
+      ],
+      [
+        "o090130200101"
       ]
     ]
   },
@@ -42,6 +92,7 @@
   "pronominal_referents": {},
   "realia_type": "other",
   "references": [
+    "09013020",
     "23007025"
   ],
   "subject_referents": {},
