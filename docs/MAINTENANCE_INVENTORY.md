@@ -20,7 +20,7 @@ All **868 restricted ACAI Key Terms** remain outside the public entity data.
 The native builder must not rewrite original word IDs, verse references,
 editorial metadata or translation-source choices.
 
-## Shared scripts — 21 Python files
+## Shared scripts — 22 Python files
 
 | Maintained role | Scripts | Current caller or protection |
 | --- | --- | --- |
@@ -30,6 +30,7 @@ editorial metadata or translation-source choices.
 | Read-only identity audits | `audit_entity_relationships.py`, `audit_family_relation_consistency.py`, `audit_identity_surface.py`, `audit_name_ambiguities.py`, `audit_person_overlaps.py`, `audit_reclassified_entity_fields.py` | Native/reclassified/offline workflows for invoked audits; remaining reusable audit covered by standalone tests |
 | Lookup and distribution helpers | `resolve.py`, `distribution_profile.py`, `release_contract.py`, `stage_entity_candidate.py`, `validate_external_crosswalk.py` | Dedicated unit tests; candidate/contract verification in native CI, never direct publication |
 | Integrity and historical-asset checks | `write_integrity_receipt.py`, `verify_historical_asset.py`, `inspect_v1_published_assets.py` | Native build / pinned lexical CI and their tests; read-only V1 public ZIP compatibility inspection |
+| Caller inventory and workflow integrity | `tool_registry.py` | Read-only inventory of shared/source-owned tools, code/test/workflow/doc references; offline CI refuses nonexistent static Python workflow paths. Never infers deletion eligibility. |
 
 Only current reusable scripts belong in `scripts/`. The historical ACAI
 source-replay compiler is isolated in
@@ -79,6 +80,16 @@ inside the application.
 - `bsi-ubs-greek.yml` and `bsi-ubs-hebrew.yml`: full pinned-source
   lexical reproducibility and historical-archive verification. Runner
   evidence remains local; no source-derived restricted data upload.
+
+## Audit current callers before a removal
+
+Run `python3 -I scripts/tool_registry.py --json` to generate a **read-only**
+per-tool reference inventory, or `python3 -I scripts/tool_registry.py
+--check-workflows` to fail when an active GitHub Actions workflow cites a
+missing local Python script. Static references are **hints**: a missing caller
+is not proof of obsolete code, and dynamic imports or historical release
+checkouts require separate review. The inventory is generated when needed,
+not checked in as a second stale registry.
 
 ## Rules for further retirement
 
