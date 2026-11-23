@@ -10,10 +10,196 @@
   },
   "bsi": {
     "canonical_id": "realia:EmbroideredCloth",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "realia:EmbroideredCloth",
     "source_primary_id": "realia:EmbroideredCloth",
-    "source_sha256": "839c319054cd41a326e13ef8bf0aab1292c088b15347507f1921068c6a4fa9c6"
+    "source_sha256": "839c319054cd41a326e13ef8bf0aab1292c088b15347507f1921068c6a4fa9c6",
+    "editorial_reason": "Source-collated full-verse original-language witness directly supports this existing object category; restore only exact named tokens, preserving keys and earlier witnesses.",
+    "editorial_evidence": [
+      "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c and Clear-Bible/macula-greek@8423afe47b9e8f24b7772e808af45c7159a6fe7e",
+      "Exodus 26:1 describes richly patterned/tabernacle curtains made as the work of a skilled artisan; use curtain and skilled-work terms as one composite source witness, not a spurious word for modern embroidery.",
+      "02026001 wlc: o020260010051 + o020260010141"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "restore_pinned_direct_object_name_in_source_key",
+        "reason": "Source-collated full-verse original-language witness directly supports this existing object category; restore only exact named tokens, preserving keys and earlier witnesses.",
+        "evidence": [
+          "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c and Clear-Bible/macula-greek@8423afe47b9e8f24b7772e808af45c7159a6fe7e",
+          "Exodus 26:1 describes richly patterned/tabernacle curtains made as the work of a skilled artisan; use curtain and skilled-work terms as one composite source witness, not a spurious word for modern embroidery.",
+          "02026001 wlc: o020260010051 + o020260010141"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [
+              "02026036",
+              "02027016",
+              "02028039",
+              "02035035",
+              "02036037",
+              "02038018",
+              "02038023",
+              "02039029",
+              "07005030",
+              "19045015",
+              "26016010",
+              "26016013",
+              "26016018",
+              "26026016",
+              "26027007",
+              "26027016",
+              "26027024"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o020260360121"
+                ],
+                [
+                  "o020270160131"
+                ],
+                [
+                  "o020280390101"
+                ],
+                [
+                  "o020350350102"
+                ],
+                [
+                  "o020360370121"
+                ],
+                [
+                  "o020380180051"
+                ],
+                [
+                  "o020380230092"
+                ],
+                [
+                  "o020390290101"
+                ],
+                [
+                  "o070050300141"
+                ],
+                [
+                  "o070050300161"
+                ],
+                [
+                  "o190450150012"
+                ],
+                [
+                  "o260160100021"
+                ],
+                [
+                  "o260160130082"
+                ],
+                [
+                  "o260160180041",
+                  "o260160180042"
+                ],
+                [
+                  "o260260160121",
+                  "o260260160122"
+                ],
+                [
+                  "o260270070022"
+                ],
+                [
+                  "o260270160072"
+                ],
+                [
+                  "o260270240062"
+                ]
+              ]
+            }
+          },
+          "after": {
+            "references": [
+              "02026001",
+              "02026036",
+              "02027016",
+              "02028039",
+              "02035035",
+              "02036037",
+              "02038018",
+              "02038023",
+              "02039029",
+              "07005030",
+              "19045015",
+              "26016010",
+              "26016013",
+              "26016018",
+              "26026016",
+              "26027007",
+              "26027016",
+              "26027024"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o020260360121"
+                ],
+                [
+                  "o020270160131"
+                ],
+                [
+                  "o020280390101"
+                ],
+                [
+                  "o020350350102"
+                ],
+                [
+                  "o020360370121"
+                ],
+                [
+                  "o020380180051"
+                ],
+                [
+                  "o020380230092"
+                ],
+                [
+                  "o020390290101"
+                ],
+                [
+                  "o070050300141"
+                ],
+                [
+                  "o070050300161"
+                ],
+                [
+                  "o190450150012"
+                ],
+                [
+                  "o260160100021"
+                ],
+                [
+                  "o260160130082"
+                ],
+                [
+                  "o260160180041",
+                  "o260160180042"
+                ],
+                [
+                  "o260260160121",
+                  "o260260160122"
+                ],
+                [
+                  "o260270070022"
+                ],
+                [
+                  "o260270160072"
+                ],
+                [
+                  "o260270240062"
+                ],
+                [
+                  "o020260010051",
+                  "o020260010141"
+                ]
+              ]
+            }
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -72,6 +258,10 @@
       ],
       [
         "o260270240062"
+      ],
+      [
+        "o020260010051",
+        "o020260010141"
       ]
     ]
   },
@@ -103,6 +293,7 @@
   "pronominal_referents": {},
   "realia_type": "other",
   "references": [
+    "02026001",
     "02026036",
     "02027016",
     "02028039",
