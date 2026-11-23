@@ -51,16 +51,16 @@ never changes the application. See [V1 consumer guide](../docs/V1_CONSUMPTION.md
   in `build_native_index.py` and covered by native/index-only tests. The old
   one-time ACAI prose/label pruning programs are preserved only in Git history.
 
-## Historical test support and restricted research packaging
+## Historical test support and research retention
 
 - The historical ACAI compiler was moved to
   [test support](../tests/support/legacy_acai_compiler.py), separate from
   production scripts. Original v0.1 label/ZIP preparers remain only in Git
   history. The current native index does not import or replay ACAI sources.
-- `work_snapshot.py`: active runner-local packing and integrity verification
-  of temporary source-pinned research states; this does **not** publish, upload,
-  or provide a durable private backup. The retired private uploader was never
-  an active storage destination. See [working-state limits](../work/README.md).
+- The former runner-only `work_snapshot.py` archive tool was retired: its
+  output was not retained, distributed, or used as a verified recovery copy.
+  Source-pinned rebuilds and historical archive integrity tests remain active.
+  See [working-state limits](../work/README.md).
 
 The UBS Greek and Hebrew lexical workflows, their tests and reviewed
 source-specific decisions live under
