@@ -16,7 +16,23 @@
     "review_status": "source_unreviewed",
     "source_id": "realia:CoatOfMail",
     "source_primary_id": "realia:CoatOfMail",
-    "source_sha256": "dca88b6ecb665ed51f84260e38708e9069198e3145faea1c3674cfa37a2cb380"
+    "source_sha256": "dca88b6ecb665ed51f84260e38708e9069198e3145faea1c3674cfa37a2cb380",
+    "editorial_field_changes": [
+      {
+        "action": "remove_false_object_equivalence_reference",
+        "removed_reference_values": {
+          "key_references": [
+            "49006011"
+          ]
+        },
+        "reason": "Ephesians 6:11 names πανοπλία, the whole armor of God, not the specific mail coat (שִׁרְיוֹן) worn by Goliath and Saul in 1 Samuel 17:5/38. The inherited key was a false direct garment identity claim; keep the actual mail-coat WLC originals and their verses.",
+        "evidence": [
+          "Ephesians 6:11 (πανοπλία); 1 Samuel 17:5,38",
+          "https://www.biblegateway.com/passage/?search=Ephesians+6%3A11&version=SBLGNT",
+          "Pinned Macula Greek n49006011003 original gloss 'whole armor'"
+        ]
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -37,8 +53,7 @@
   "id": "realia:CoatOfMail",
   "key_references": [
     "09017005",
-    "09017038",
-    "49006011"
+    "09017038"
   ],
   "lemmas": {
     "he": [
