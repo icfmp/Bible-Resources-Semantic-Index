@@ -13,10 +13,123 @@
   },
   "bsi": {
     "canonical_id": "realia:Tassel",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "realia:Tassel",
     "source_primary_id": "realia:Tassel",
-    "source_sha256": "ffc589331ce44bbc087720e842f8984c02d2e0cf1da97a039a69352421e6a91f"
+    "source_sha256": "ffc589331ce44bbc087720e842f8984c02d2e0cf1da97a039a69352421e6a91f",
+    "editorial_reason": "Restore exact original-language source word witness from the existing source-key object reference, without promoting English gloss analogies or unrelated neighboring words.",
+    "editorial_evidence": [
+      "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c / macula-greek@8423afe47b9e8f24b7772e808af45c7159a6fe7e",
+      "Deuteronomy 22:12 opens with the direct noun tassels/fringes (גָּדִל), commanded on the cloak corners.",
+      "05022012 wlc = o050220120011"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "restore_pinned_direct_object_name_in_source_key",
+        "reason": "Restore exact original-language source word witness from the existing source-key object reference, without promoting English gloss analogies or unrelated neighboring words.",
+        "evidence": [
+          "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c / macula-greek@8423afe47b9e8f24b7772e808af45c7159a6fe7e",
+          "Deuteronomy 22:12 opens with the direct noun tassels/fringes (גָּדִל), commanded on the cloak corners.",
+          "05022012 wlc = o050220120011"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [
+              "04015038",
+              "04015039",
+              "26008003",
+              "40009020",
+              "40014036",
+              "40023005",
+              "41006056",
+              "42008044"
+            ],
+            "explicit_instances": {
+              "SBLGNT": [
+                [
+                  "n40009020011"
+                ],
+                [
+                  "n40014036008"
+                ],
+                [
+                  "n41006056025"
+                ],
+                [
+                  "n42008044005"
+                ],
+                [
+                  "n40023005020"
+                ]
+              ],
+              "wlc": [
+                [
+                  "o040150380091"
+                ],
+                [
+                  "o040150380161"
+                ],
+                [
+                  "o040150390032"
+                ],
+                [
+                  "o260080030052"
+                ]
+              ]
+            }
+          },
+          "after": {
+            "references": [
+              "04015038",
+              "04015039",
+              "05022012",
+              "26008003",
+              "40009020",
+              "40014036",
+              "40023005",
+              "41006056",
+              "42008044"
+            ],
+            "explicit_instances": {
+              "SBLGNT": [
+                [
+                  "n40009020011"
+                ],
+                [
+                  "n40014036008"
+                ],
+                [
+                  "n41006056025"
+                ],
+                [
+                  "n42008044005"
+                ],
+                [
+                  "n40023005020"
+                ]
+              ],
+              "wlc": [
+                [
+                  "o040150380091"
+                ],
+                [
+                  "o040150380161"
+                ],
+                [
+                  "o040150390032"
+                ],
+                [
+                  "o260080030052"
+                ],
+                [
+                  "o050220120011"
+                ]
+              ]
+            }
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "SBLGNT": [
@@ -48,6 +161,9 @@
       ],
       [
         "o260080030052"
+      ],
+      [
+        "o050220120011"
       ]
     ]
   },
@@ -90,6 +206,7 @@
   "references": [
     "04015038",
     "04015039",
+    "05022012",
     "26008003",
     "40009020",
     "40014036",
