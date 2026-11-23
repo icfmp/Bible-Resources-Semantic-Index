@@ -10,22 +10,46 @@
     "review_status": "source_unreviewed",
     "source_id": "place:Lydia",
     "source_primary_id": "place:Lydia",
-    "source_sha256": "3e62a048eac64d0526379c8799eb3e7428e0f9e1877b64b05761ccc3a3ac772c"
+    "source_sha256": "3e62a048eac64d0526379c8799eb3e7428e0f9e1877b64b05761ccc3a3ac772c",
+    "editorial_field_changes": [
+      {
+        "action": "correct_person_name_conflated_with_geographic_region",
+        "removed_relation_values": {
+          "key_references": [
+            "44016040"
+          ]
+        },
+        "replaced_field_values": {
+          "mentioned_in_bible": {
+            "from": true,
+            "to": false
+          },
+          "non_biblical": {
+            "from": false,
+            "to": true
+          }
+        },
+        "reason": "Acts 16:40 names the woman Lydia, not the historical region Lydia. The source word n44016040009 is already correctly assigned to person:Lydia with direct words in Acts 16:14 and 16:40. The inherited geographic source's only Bible reference/mention flag is a false person-place name conflation. Preserve the geographically distinct historical Lydia region as nonbiblical context without inventing another biblical mention.",
+        "evidence": [
+          "Acts 16:14; Acts 16:40",
+          "Pinned SBLGNT n44016040009 (Λυδίαν) is person:Lydia, source.lock.json",
+          "Current person:Lydia original source identity, references and word witness remain unchanged"
+        ]
+      }
+    ]
   },
   "explicit_instances": {},
   "id": "place:Lydia",
   "is_artifact": false,
   "is_person": false,
-  "key_references": [
-    "44016040"
-  ],
+  "key_references": [],
   "localizations": {
     "eng": {
       "preferred_label": "Lydia"
     }
   },
-  "mentioned_in_bible": true,
-  "non_biblical": false,
+  "mentioned_in_bible": false,
+  "non_biblical": true,
   "only_mentioned_in_apocrypha": true,
   "place_types": {
     "acai": [
