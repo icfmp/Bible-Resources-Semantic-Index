@@ -8,7 +8,9 @@ from __future__ import annotations
 
 import argparse
 import csv
+import gzip
 import hashlib
+import io
 import json
 import re
 from collections import Counter, defaultdict
@@ -40,6 +42,15 @@ def read_json(path: Path):
 def canonical_json(data):
     return (json.dumps(data, ensure_ascii=False, sort_keys=True,
                        separators=(",", ":"), allow_nan=False) + "\n").encode("utf-8")
+
+
+def gzip_payload(data: bytes) -> bytes:
+    """Reproducible gzip payload: no timestamp or producer filename."""
+    buffer = io.BytesIO()
+    with gzip.GzipFile(fileobj=buffer, mode="wb", compresslevel=9,
+                       filename="", mtime=0) as archive:
+        archive.write(data)
+    return buffer.getvalue()
 
 
 def digest(path: Path, expected: dict):
@@ -309,8 +320,13 @@ def main():
         data = canonical_json(index)
         path = args.output_dir / (canon + ".json")
         path.write_bytes(data)
+        compressed = gzip_payload(data)
+        (args.output_dir / (canon + ".json.gz")).write_bytes(compressed)
         outputs[canon] = {"sha256": hashlib.sha256(data).hexdigest(),
-                          "size": len(data), "coverage": index["coverage"],
+                          "size": len(data),
+                          "gzip_sha256": hashlib.sha256(compressed).hexdigest(),
+                          "gzip_size": len(compressed),
+                          "coverage": index["coverage"],
                           "problem_counts_by_book": index["problem_counts_by_book"]}
     receipt = {
         "schema_version": 1,
