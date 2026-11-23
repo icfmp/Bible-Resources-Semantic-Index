@@ -12,10 +12,39 @@
   },
   "bsi": {
     "canonical_id": "flora:Weed",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "flora:Weed",
     "source_primary_id": "flora:Weed",
-    "source_sha256": "29388dd06e762d4da074a0b83530d38b382a88f2a1c439fbaee08edd1d2ff045"
+    "source_sha256": "29388dd06e762d4da074a0b83530d38b382a88f2a1c439fbaee08edd1d2ff045",
+    "editorial_reason": "Correct an inherited key verse with transposed or adjacent verse digits; the original pinned verse does not mention this identity, while the corrected verse is already independently attested.",
+    "editorial_evidence": [
+      "Pinned Clear-Bible WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c exact verse/source-word inspection in PR #137",
+      "Job 31:4 concerns divine scrutiny of Job's ways; Job 31:40 explicitly speaks of weeds/thistles with original WLC o180310400071 already linked."
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "correct_wrong_inherited_key_verse_to_direct_source_attested_verse",
+        "reason": "Correct an inherited key verse with transposed or adjacent verse digits; the original pinned verse does not mention this identity, while the corrected verse is already independently attested.",
+        "evidence": [
+          "Pinned Clear-Bible WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c exact verse/source-word inspection in PR #137",
+          "Job 31:4 concerns divine scrutiny of Job's ways; Job 31:40 explicitly speaks of weeds/thistles with original WLC o180310400071 already linked."
+        ],
+        "replaced_field_values": {
+          "before": {
+            "key_references": [
+              "40013025",
+              "18031004"
+            ]
+          },
+          "after": {
+            "key_references": [
+              "40013025",
+              "18031040"
+            ]
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "SBLGNT": [
@@ -54,7 +83,7 @@
   "id": "flora:Weed",
   "key_references": [
     "40013025",
-    "18031004"
+    "18031040"
   ],
   "lemmas": {
     "el": [
