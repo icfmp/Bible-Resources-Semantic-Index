@@ -17,7 +17,37 @@
     "review_status": "source_unreviewed",
     "source_id": "realia:Tunic",
     "source_primary_id": "realia:Tunic",
-    "source_sha256": "709fe45ccfff8cf49eb12f528b8d49465ae63b303f5b0eb38af934fe99d84819"
+    "source_sha256": "709fe45ccfff8cf49eb12f528b8d49465ae63b303f5b0eb38af934fe99d84819",
+    "editorial_field_changes": [
+      {
+        "action": "restore_source_attested_object_word_instances",
+        "added_reference_values": {
+          "references": [
+            "40005040",
+            "43019023"
+          ]
+        },
+        "added_original_word_groups": {
+          "SBLGNT": [
+            [
+              "n40005040008"
+            ],
+            [
+              "n43019023021"
+            ],
+            [
+              "n43019023025"
+            ]
+          ]
+        },
+        "reason": "Exact original Greek tunic words are present in Matthew 5:40 and John 19:23.",
+        "evidence": [
+          "ORG BCV8 40005040",
+          "ORG BCV8 43019023",
+          "Pinned original-word texts/glosses inspected in Clear-Bible/Macula Greek SBLGNT@8423afe47b9e8f24b7772e808af45c7159a6fe7e; token IDs copied verbatim; source metadata and scripture unchanged"
+        ]
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -63,6 +93,17 @@
       ],
       [
         "o160070710122"
+      ]
+    ],
+    "SBLGNT": [
+      [
+        "n40005040008"
+      ],
+      [
+        "n43019023021"
+      ],
+      [
+        "n43019023025"
       ]
     ]
   },
@@ -115,7 +156,9 @@
     "03016004",
     "15002069",
     "16007069",
-    "16007071"
+    "16007071",
+    "40005040",
+    "43019023"
   ],
   "subject_referents": {},
   "type": "realia",
