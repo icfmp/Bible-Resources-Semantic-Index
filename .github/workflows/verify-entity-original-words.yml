@@ -168,3 +168,10 @@ jobs:
             --wlc macula-hebrew/WLC/tsv/macula-hebrew.tsv \
             --sblgnt macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv \
             --verses 06019024 06018011 06019040 06013029 06016005 06013024 06019017 06015001 06019032 06013015 06019001 06017001 06019010
+
+      - name: Adjudicate siege, covering and biblical coin cases in pinned originals
+        run: |
+          python3 -I scripts/inspect_pinned_original_verse.py \
+            --wlc macula-hebrew/WLC/tsv/macula-hebrew.tsv \
+            --sblgnt macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv \
+            --verses 27011015 26004002 33004014 10020015 01003007 23029003 09010001 04027058 04026058 40017024
