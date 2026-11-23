@@ -26,6 +26,7 @@ nor a SWORD module.
 | --- | --- | --- |
 | Biblical entities | [5,773 editable, corrected BSI records](data/entities/), [3 quarantined originals](data/quarantined/), [source lock](data/source.lock.json), [migration manifest](data/migration/acai-baseline-materialization.json) | [Entity index v0.1.0](https://github.com/icfmp/Bible-Resources/releases/tag/bsi-v0.1.0) |
 | UBS Greek lexical links | [Pinned bilingual source baseline and reviewed data](links/dictionaries/ubs-greek/) | [Identifier-only v0.1.0](https://github.com/icfmp/Bible-Resources/releases/tag/bsi-ubs-greek-v0.1.0) |
+| Clear.Bible LSG translation-token links (candidate only) | [Pinned alignment manifest, importer and private build](links/alignments/clear-bible-lsg/README.md); original inputs remain upstream | **Not published or approved for Bible consumption** |
 | UBS Hebrew lexical links | [Pinned bilingual source baseline and reviewed data](links/dictionaries/ubs-hebrew/) | [Lexical v1.0.0](https://github.com/icfmp/Bible-Resources/releases/tag/bsi-ubs-hebrew-v1.0.0) |
 
 **Current entity data are versioned directly in Git.** We imported and
