@@ -2,10 +2,41 @@
   "added_entry": true,
   "bsi": {
     "canonical_id": "place:TerritoryOfAsher",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:TerritoryOfAsher",
     "source_primary_id": "place:TerritoryOfAsher",
-    "source_sha256": "b448cdfa6ffd280e7fa88c5738809ceb81c2814ed5518c1407869a3c5b2df60d"
+    "source_sha256": "b448cdfa6ffd280e7fa88c5738809ceb81c2814ed5518c1407869a3c5b2df60d",
+    "editorial_reason": "The territorial inheritance of Asher is described in Joshua 19:24, with the exact original Hebrew tribe reference o060190240061; the source does not use a fixed proper name 'Territory of Asher'. This is a biblically derived land-allotment region, not a historical administrative province or a separately named place in an original-language token. No lexical occurrence or verse reference is manufactured.",
+    "editorial_evidence": [
+      "Pinned Clear-Bible/macula-hebrew WLC 06019024 exact tribe word o060190240061; Joshua's inheritance/lot context",
+      "Imported ACAI record place:TerritoryOfAsher and unchanged source SHA-256 b448cdfa6ffd280e7fa88c5738809ceb81c2814ed5518c1407869a3c5b2df60d"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "classify_biblical_tribal_allotment_not_province",
+        "reason": "The territorial inheritance of Asher is described in Joshua 19:24, with the exact original Hebrew tribe reference o060190240061; the source does not use a fixed proper name 'Territory of Asher'. This is a biblically derived land-allotment region, not a historical administrative province or a separately named place in an original-language token. No lexical occurrence or verse reference is manufactured.",
+        "evidence": [
+          "Pinned Clear-Bible/macula-hebrew WLC 06019024 exact tribe word o060190240061; Joshua's inheritance/lot context",
+          "Imported ACAI record place:TerritoryOfAsher and unchanged source SHA-256 b448cdfa6ffd280e7fa88c5738809ceb81c2814ed5518c1407869a3c5b2df60d"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "place_types": {
+              "acai": [
+                "province"
+              ]
+            }
+          },
+          "after": {
+            "place_types": {
+              "acai": [
+                "tribal territory"
+              ]
+            }
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {},
   "id": "place:TerritoryOfAsher",
@@ -27,7 +58,7 @@
   "only_mentioned_in_apocrypha": false,
   "place_types": {
     "acai": [
-      "province"
+      "tribal territory"
     ]
   },
   "primary_id": "place:TerritoryOfAsher",

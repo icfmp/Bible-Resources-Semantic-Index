@@ -2,10 +2,41 @@
   "added_entry": true,
   "bsi": {
     "canonical_id": "place:TerritoryOfZebulun",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:TerritoryOfZebulun",
     "source_primary_id": "place:TerritoryOfZebulun",
-    "source_sha256": "fd964568bc773e27e432031e58359d9ceb38f7e8efd32c179b0647774297093b"
+    "source_sha256": "fd964568bc773e27e432031e58359d9ceb38f7e8efd32c179b0647774297093b",
+    "editorial_reason": "The territorial inheritance of Zebulun is described in Joshua 19:10, with the exact original Hebrew tribe reference o060190100051; the source does not use a fixed proper name 'Territory of Zebulun'. This is a biblically derived land-allotment region, not a historical administrative province or a separately named place in an original-language token. No lexical occurrence or verse reference is manufactured.",
+    "editorial_evidence": [
+      "Pinned Clear-Bible/macula-hebrew WLC 06019010 exact tribe word o060190100051; Joshua's inheritance/lot context",
+      "Imported ACAI record place:TerritoryOfZebulun and unchanged source SHA-256 fd964568bc773e27e432031e58359d9ceb38f7e8efd32c179b0647774297093b"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "classify_biblical_tribal_allotment_not_province",
+        "reason": "The territorial inheritance of Zebulun is described in Joshua 19:10, with the exact original Hebrew tribe reference o060190100051; the source does not use a fixed proper name 'Territory of Zebulun'. This is a biblically derived land-allotment region, not a historical administrative province or a separately named place in an original-language token. No lexical occurrence or verse reference is manufactured.",
+        "evidence": [
+          "Pinned Clear-Bible/macula-hebrew WLC 06019010 exact tribe word o060190100051; Joshua's inheritance/lot context",
+          "Imported ACAI record place:TerritoryOfZebulun and unchanged source SHA-256 fd964568bc773e27e432031e58359d9ceb38f7e8efd32c179b0647774297093b"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "place_types": {
+              "acai": [
+                "province"
+              ]
+            }
+          },
+          "after": {
+            "place_types": {
+              "acai": [
+                "tribal territory"
+              ]
+            }
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {},
   "id": "place:TerritoryOfZebulun",
@@ -28,7 +59,7 @@
   "only_mentioned_in_apocrypha": false,
   "place_types": {
     "acai": [
-      "province"
+      "tribal territory"
     ]
   },
   "primary_id": "place:TerritoryOfZebulun",

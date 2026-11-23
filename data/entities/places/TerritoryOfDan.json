@@ -2,10 +2,41 @@
   "added_entry": true,
   "bsi": {
     "canonical_id": "place:TerritoryOfDan",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:TerritoryOfDan",
     "source_primary_id": "place:TerritoryOfDan",
-    "source_sha256": "b185272c7b95a1e6270db43a2e9d1c56ec1707fdb875d1eacb9e88f865b69a1e"
+    "source_sha256": "b185272c7b95a1e6270db43a2e9d1c56ec1707fdb875d1eacb9e88f865b69a1e",
+    "editorial_reason": "The territorial inheritance of Dan is described in Joshua 19:40, with the exact original Hebrew tribe reference o060190400031; the source does not use a fixed proper name 'Territory of Dan'. This is a biblically derived land-allotment region, not a historical administrative province or a separately named place in an original-language token. No lexical occurrence or verse reference is manufactured.",
+    "editorial_evidence": [
+      "Pinned Clear-Bible/macula-hebrew WLC 06019040 exact tribe word o060190400031; Joshua's inheritance/lot context",
+      "Imported ACAI record place:TerritoryOfDan and unchanged source SHA-256 b185272c7b95a1e6270db43a2e9d1c56ec1707fdb875d1eacb9e88f865b69a1e"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "classify_biblical_tribal_allotment_not_province",
+        "reason": "The territorial inheritance of Dan is described in Joshua 19:40, with the exact original Hebrew tribe reference o060190400031; the source does not use a fixed proper name 'Territory of Dan'. This is a biblically derived land-allotment region, not a historical administrative province or a separately named place in an original-language token. No lexical occurrence or verse reference is manufactured.",
+        "evidence": [
+          "Pinned Clear-Bible/macula-hebrew WLC 06019040 exact tribe word o060190400031; Joshua's inheritance/lot context",
+          "Imported ACAI record place:TerritoryOfDan and unchanged source SHA-256 b185272c7b95a1e6270db43a2e9d1c56ec1707fdb875d1eacb9e88f865b69a1e"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "place_types": {
+              "acai": [
+                "province"
+              ]
+            }
+          },
+          "after": {
+            "place_types": {
+              "acai": [
+                "tribal territory"
+              ]
+            }
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {},
   "id": "place:TerritoryOfDan",
@@ -28,7 +59,7 @@
   "only_mentioned_in_apocrypha": false,
   "place_types": {
     "acai": [
-      "province"
+      "tribal territory"
     ]
   },
   "primary_id": "place:TerritoryOfDan",

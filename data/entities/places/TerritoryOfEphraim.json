@@ -2,10 +2,41 @@
   "added_entry": true,
   "bsi": {
     "canonical_id": "place:TerritoryOfEphraim",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:TerritoryOfEphraim",
     "source_primary_id": "place:TerritoryOfEphraim",
-    "source_sha256": "1b3e6eb720db262630f4792d86095be70da6109010f67369ac01c38ee71f260f"
+    "source_sha256": "1b3e6eb720db262630f4792d86095be70da6109010f67369ac01c38ee71f260f",
+    "editorial_reason": "The territorial inheritance of Ephraim is described in Joshua 16:5, with the exact original Hebrew tribe reference o060160050041; the source does not use a fixed proper name 'Territory of Ephraim'. This is a biblically derived land-allotment region, not a historical administrative province or a separately named place in an original-language token. No lexical occurrence or verse reference is manufactured.",
+    "editorial_evidence": [
+      "Pinned Clear-Bible/macula-hebrew WLC 06016005 exact tribe word o060160050041; Joshua's inheritance/lot context",
+      "Imported ACAI record place:TerritoryOfEphraim and unchanged source SHA-256 1b3e6eb720db262630f4792d86095be70da6109010f67369ac01c38ee71f260f"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "classify_biblical_tribal_allotment_not_province",
+        "reason": "The territorial inheritance of Ephraim is described in Joshua 16:5, with the exact original Hebrew tribe reference o060160050041; the source does not use a fixed proper name 'Territory of Ephraim'. This is a biblically derived land-allotment region, not a historical administrative province or a separately named place in an original-language token. No lexical occurrence or verse reference is manufactured.",
+        "evidence": [
+          "Pinned Clear-Bible/macula-hebrew WLC 06016005 exact tribe word o060160050041; Joshua's inheritance/lot context",
+          "Imported ACAI record place:TerritoryOfEphraim and unchanged source SHA-256 1b3e6eb720db262630f4792d86095be70da6109010f67369ac01c38ee71f260f"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "place_types": {
+              "acai": [
+                "province"
+              ]
+            }
+          },
+          "after": {
+            "place_types": {
+              "acai": [
+                "tribal territory"
+              ]
+            }
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {},
   "id": "place:TerritoryOfEphraim",
@@ -27,7 +58,7 @@
   "only_mentioned_in_apocrypha": false,
   "place_types": {
     "acai": [
-      "province"
+      "tribal territory"
     ]
   },
   "primary_id": "place:TerritoryOfEphraim",

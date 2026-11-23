@@ -7,10 +7,41 @@
   },
   "bsi": {
     "canonical_id": "place:TerritoryOfJudah",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:TerritoryOfJudah",
     "source_primary_id": "place:TerritoryOfJudah",
-    "source_sha256": "7e52df7f4de70a9bcae96baf7f87dbedd1cd385109201d277f2734165ecb7682"
+    "source_sha256": "7e52df7f4de70a9bcae96baf7f87dbedd1cd385109201d277f2734165ecb7682",
+    "editorial_reason": "The territorial inheritance of Judah is described in Joshua 15:1, with the exact original Hebrew tribe reference o060150010051; the source does not use a fixed proper name 'Territory of Judah'. This is a biblically derived land-allotment region, not a historical administrative province or a separately named place in an original-language token. No lexical occurrence or verse reference is manufactured.",
+    "editorial_evidence": [
+      "Pinned Clear-Bible/macula-hebrew WLC 06015001 exact tribe word o060150010051; Joshua's inheritance/lot context",
+      "Imported ACAI record place:TerritoryOfJudah and unchanged source SHA-256 7e52df7f4de70a9bcae96baf7f87dbedd1cd385109201d277f2734165ecb7682"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "classify_biblical_tribal_allotment_not_province",
+        "reason": "The territorial inheritance of Judah is described in Joshua 15:1, with the exact original Hebrew tribe reference o060150010051; the source does not use a fixed proper name 'Territory of Judah'. This is a biblically derived land-allotment region, not a historical administrative province or a separately named place in an original-language token. No lexical occurrence or verse reference is manufactured.",
+        "evidence": [
+          "Pinned Clear-Bible/macula-hebrew WLC 06015001 exact tribe word o060150010051; Joshua's inheritance/lot context",
+          "Imported ACAI record place:TerritoryOfJudah and unchanged source SHA-256 7e52df7f4de70a9bcae96baf7f87dbedd1cd385109201d277f2734165ecb7682"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "place_types": {
+              "acai": [
+                "province"
+              ]
+            }
+          },
+          "after": {
+            "place_types": {
+              "acai": [
+                "tribal territory"
+              ]
+            }
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {},
   "id": "place:TerritoryOfJudah",
@@ -33,7 +64,7 @@
   "only_mentioned_in_apocrypha": false,
   "place_types": {
     "acai": [
-      "province"
+      "tribal territory"
     ]
   },
   "primary_id": "place:TerritoryOfJudah",
