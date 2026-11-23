@@ -134,7 +134,7 @@ def review(rows: list[dict], words: dict[str, list[dict]]) -> dict:
             "kind": row["kind"],
             "verse_id": row["verse_id"],
             "status": status,
-            "source_word_candidates": found[:15],
+            "source_word_candidates": found,
         })
     return {
         "schema_version": 1,
