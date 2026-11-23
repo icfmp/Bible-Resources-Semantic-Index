@@ -10,9 +10,37 @@
     "review_status": "source_unreviewed",
     "source_id": "place:Kir-hareseth",
     "source_primary_id": "place:Kir-hareseth",
-    "source_sha256": "de3df08088dfc1385d8edff85412247c58f1b0ef9ff0133b9c17e884d1109147"
+    "source_sha256": "de3df08088dfc1385d8edff85412247c58f1b0ef9ff0133b9c17e884d1109147",
+    "editorial_field_changes": [
+      {
+        "action": "restore_exact_heb_source_urban_geography",
+        "added_reference_values": {
+          "references": [
+            "12003025"
+          ]
+        },
+        "added_original_word_groups": {
+          "wlc": [
+            [
+              "o120030250221"
+            ]
+          ]
+        },
+        "reason": "2 Kings 3:25 explicitly names Hareseth, the stronghold corresponding to Kir-hareseth in the source key; restore its exact original Hebrew name token rather than pretend the entire full compound appears in this verse.",
+        "evidence": [
+          "ORG BCV8 12003025",
+          "Exact original Hebrew phrase and token IDs visually collated in WLC lowfat XML frozen at Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c"
+        ]
+      }
+    ]
   },
-  "explicit_instances": {},
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o120030250221"
+      ]
+    ]
+  },
   "id": "place:Kir-hareseth",
   "is_artifact": false,
   "is_person": false,
@@ -43,7 +71,9 @@
   ],
   "primary_id": "place:Kir-hareseth",
   "pronominal_referents": {},
-  "references": [],
+  "references": [
+    "12003025"
+  ],
   "subject_referents": {},
   "subregion_of": [
     "place:Moab"
