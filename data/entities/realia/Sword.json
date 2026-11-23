@@ -19,7 +19,34 @@
     "review_status": "source_unreviewed",
     "source_id": "realia:Sword",
     "source_primary_id": "realia:Sword",
-    "source_sha256": "511cd16d5b008d3681e38ce0b9e731d6be59d988c28cfcdf87d7f1957488e1e1"
+    "source_sha256": "511cd16d5b008d3681e38ce0b9e731d6be59d988c28cfcdf87d7f1957488e1e1",
+    "editorial_field_changes": [
+      {
+        "action": "restore_source_attested_object_word_instances",
+        "added_reference_values": {
+          "references": [
+            "40026051",
+            "66019015"
+          ]
+        },
+        "added_original_word_groups": {
+          "SBLGNT": [
+            [
+              "n40026051012"
+            ],
+            [
+              "n66019015007"
+            ]
+          ]
+        },
+        "reason": "Exact Greek sword nouns occur in Matthew 26:51 and Revelation 19:15; imagery is not asserted as a literal physical sword in Revelation.",
+        "evidence": [
+          "ORG BCV8 40026051",
+          "ORG BCV8 66019015",
+          "Pinned original-word texts/glosses inspected in Clear-Bible/Macula Greek SBLGNT@8423afe47b9e8f24b7772e808af45c7159a6fe7e; token IDs copied verbatim; source metadata and scripture unchanged"
+        ]
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -700,6 +727,14 @@
         "o330050050092",
         "o330050050093"
       ]
+    ],
+    "SBLGNT": [
+      [
+        "n40026051012"
+      ],
+      [
+        "n66019015007"
+      ]
     ]
   },
   "id": "realia:Sword",
@@ -1031,7 +1066,9 @@
     "37002022",
     "38009013",
     "38011017",
-    "38013007"
+    "38013007",
+    "40026051",
+    "66019015"
   ],
   "subject_referents": {
     "wlc": [
