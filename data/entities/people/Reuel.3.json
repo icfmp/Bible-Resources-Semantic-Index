@@ -15,10 +15,47 @@
   },
   "bsi": {
     "canonical_id": "person:Reuel.3",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "person:Reuel.3",
     "source_primary_id": "person:Reuel.3",
-    "source_sha256": "844d350c456633f5f205ed8efc91de0e99b094700ea13e3db43162e70760430c"
+    "source_sha256": "844d350c456633f5f205ed8efc91de0e99b094700ea13e3db43162e70760430c",
+    "editorial_reason": "Genesis 36:11-12 specifically lists the sons of Eliphaz and Eliphaz's concubine Timna (Amalek), a different son of Esau than Reuel. Reuel appears at 36:10 and his own sons at 36:13. These two verses must not be attributed as key personal evidence to Esau's separate son Reuel.",
+    "editorial_evidence": [
+      "Pinned WLC Genesis 36:10 names Reuel alongside Eliphaz as distinct sons of Esau",
+      "Pinned WLC Genesis 36:11-12 names descendants of Eliphaz only, not Reuel",
+      "Pinned WLC Genesis 36:13 o010360130031 explicitly names Reuel and lists his sons; source direct witness preserved"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "remove_misattributed_personal_source_key",
+        "reason": "Genesis 36:11-12 specifically lists the sons of Eliphaz and Eliphaz's concubine Timna (Amalek), a different son of Esau than Reuel. Reuel appears at 36:10 and his own sons at 36:13. These two verses must not be attributed as key personal evidence to Esau's separate son Reuel.",
+        "evidence": [
+          "Pinned WLC Genesis 36:10 names Reuel alongside Eliphaz as distinct sons of Esau",
+          "Pinned WLC Genesis 36:11-12 names descendants of Eliphaz only, not Reuel",
+          "Pinned WLC Genesis 36:13 o010360130031 explicitly names Reuel and lists his sons; source direct witness preserved"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "key_references": [
+              "01036004",
+              "01036010",
+              "01036011",
+              "01036012",
+              "01036013",
+              "13001035"
+            ]
+          },
+          "after": {
+            "key_references": [
+              "01036004",
+              "01036010",
+              "01036013",
+              "13001035"
+            ]
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -51,8 +88,6 @@
   "key_references": [
     "01036004",
     "01036010",
-    "01036011",
-    "01036012",
     "01036013",
     "13001035"
   ],
