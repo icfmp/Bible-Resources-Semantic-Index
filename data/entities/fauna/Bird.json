@@ -15,7 +15,34 @@
     "review_status": "source_unreviewed",
     "source_id": "fauna:Bird",
     "source_primary_id": "fauna:Bird",
-    "source_sha256": "34d7c6de4884e67484e7cedce20e76a0eafa4ceb05cdea96eabce0c981c95bc7"
+    "source_sha256": "34d7c6de4884e67484e7cedce20e76a0eafa4ceb05cdea96eabce0c981c95bc7",
+    "editorial_field_changes": [
+      {
+        "action": "restore_exact_source_term_in_original_witness",
+        "added_reference_values": {
+          "references": [
+            "01001020",
+            "03001014"
+          ]
+        },
+        "added_original_word_groups": {
+          "wlc": [
+            [
+              "o010010200082"
+            ],
+            [
+              "o030010140032"
+            ]
+          ]
+        },
+        "reason": "Genesis 1:20 and Leviticus 1:14 explicitly name birds in the original Hebrew corpus, not an inferred zoological species.",
+        "evidence": [
+          "ORG BCV8 01001020",
+          "ORG BCV8 03001014",
+          "Pinned Macula original-word TSV evidence Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c"
+        ]
+      }
+    ]
   },
   "explicit_instances": {
     "SBLGNT": [
@@ -161,6 +188,12 @@
       ],
       [
         "o300030050021"
+      ],
+      [
+        "o010010200082"
+      ],
+      [
+        "o030010140032"
       ]
     ]
   },
@@ -266,7 +299,9 @@
     "59003007",
     "66018002",
     "66019017",
-    "66019021"
+    "66019021",
+    "01001020",
+    "03001014"
   ],
   "subject_referents": {
     "SBLGNT": [
