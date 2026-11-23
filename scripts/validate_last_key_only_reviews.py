@@ -186,7 +186,7 @@ def validate(data:Path,ledger_file:Path,wlc:Path|None=None,sblgnt:Path|None=None
                 require(wid in direct|indirect and wid[1:9] in source_verse_neighbors(verse),
                         sid+": witness neither native nor neighboring the claimed source verse")
                 pending_original_words.add(wid)
-            new=target.get("restored_exact_word_ids")
+            new=target.get("restored_exact_word_groups")
             false=target.get("contradicting_original_word_ids")
             if mode=="corrected":
                 correction_pairs.add(pair)
@@ -205,17 +205,22 @@ def validate(data:Path,ledger_file:Path,wlc:Path|None=None,sblgnt:Path|None=None
                                 sid+": alleged contrary name not in target verse")
                         pending_original_words.add(wid)
                 elif witness_kind=="restored_complete_original_word_group":
-                    require(false is None and isinstance(new,list) and len(new)>=2
-                            and new in record["explicit_instances"].get("wlc",[])
-                            and new not in before.get("explicit_instances",{}).get("wlc",[])
+                    require(false is None and isinstance(new,list) and bool(new)
+                            and len(new)==len({tuple(group) for group in new})
+                            and all(isinstance(group,list) and len(group)>=2
+                                    and group in record["explicit_instances"].get("wlc",[])
+                                    and group not in before.get("explicit_instances",{}).get("wlc",[])
+                                    for group in new)
                             and verse in record["key_references"]
                             and verse not in before.get("references",[])
                             and verse in after.get("references",[]),
-                            sid+": original-language name phrase or direct reference not really restored")
-                    for wid in new:
-                        require(re.fullmatch(r"o[0-9]{12}",wid) and wid[1:9]==verse,
-                                sid+": invented/mixed source verse word group")
-                        pending_original_words.add(wid)
+                            sid+": original-language name phrases or direct reference not really restored")
+                    for group in new:
+                        for wid in group:
+                            require(isinstance(wid,str) and
+                                    re.fullmatch(r"o[0-9]{12}",wid) and wid[1:9]==verse,
+                                    sid+": invented/mixed source verse word group")
+                            pending_original_words.add(wid)
                 else:
                     raise ValueError(sid+": correction lacks direct-name or false-assignment proof")
             else:
