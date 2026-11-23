@@ -5,9 +5,37 @@
     "review_status": "source_unreviewed",
     "source_id": "place:MountZemaraim",
     "source_primary_id": "place:MountZemaraim",
-    "source_sha256": "c3ab64cf3a7aeb29f058474ce7ab8d1904dd8f6019f4f0478dce30ff497928fd"
+    "source_sha256": "c3ab64cf3a7aeb29f058474ce7ab8d1904dd8f6019f4f0478dce30ff497928fd",
+    "editorial_field_changes": [
+      {
+        "action": "restore_exact_source_named_place_occurrence",
+        "added_reference_values": {
+          "references": [
+            "14013004"
+          ]
+        },
+        "added_original_word_groups": {
+          "wlc": [
+            [
+              "o140130040051"
+            ]
+          ]
+        },
+        "reason": "2 Chronicles 13:4 names Mount Zemaraim; the exact proper noun is an identifiable mountain toponym distinct from an inferred tribe/person.",
+        "evidence": [
+          "ORG BCV8 14013004",
+          "Exact original-word IDs and source-language names independently identified in Clear-Bible/macula-hebrew/WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c; no extrapolated lexical sense"
+        ]
+      }
+    ]
   },
-  "explicit_instances": {},
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o140130040051"
+      ]
+    ]
+  },
   "id": "place:MountZemaraim",
   "is_artifact": false,
   "is_person": false,
@@ -32,7 +60,9 @@
   },
   "primary_id": "place:MountZemaraim",
   "pronominal_referents": {},
-  "references": [],
+  "references": [
+    "14013004"
+  ],
   "subject_referents": {},
   "type": "place"
 }

@@ -10,9 +10,37 @@
     "review_status": "source_unreviewed",
     "source_id": "place:Ephron.2",
     "source_primary_id": "place:Ephron.2",
-    "source_sha256": "d602765038c6cd318a2b2506331873ce3e3b7787aec730f7bbd266399e1f490c"
+    "source_sha256": "d602765038c6cd318a2b2506331873ce3e3b7787aec730f7bbd266399e1f490c",
+    "editorial_field_changes": [
+      {
+        "action": "restore_exact_source_named_place_occurrence",
+        "added_reference_values": {
+          "references": [
+            "14013019"
+          ]
+        },
+        "added_original_word_groups": {
+          "wlc": [
+            [
+              "o140130190191"
+            ]
+          ]
+        },
+        "reason": "2 Chronicles 13:19 explicitly names Ephron/Ephrain among the captured towns; exact proper name refers this distinct locality.",
+        "evidence": [
+          "ORG BCV8 14013019",
+          "Exact original-word IDs and source-language names independently identified in Clear-Bible/macula-hebrew/WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c; no extrapolated lexical sense"
+        ]
+      }
+    ]
   },
-  "explicit_instances": {},
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o140130190191"
+      ]
+    ]
+  },
   "id": "place:Ephron.2",
   "is_artifact": false,
   "is_person": false,
@@ -44,7 +72,9 @@
   ],
   "primary_id": "place:Ephron.2",
   "pronominal_referents": {},
-  "references": [],
+  "references": [
+    "14013019"
+  ],
   "subject_referents": {},
   "type": "place"
 }

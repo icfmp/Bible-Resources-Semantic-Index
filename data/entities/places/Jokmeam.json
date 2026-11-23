@@ -19,12 +19,37 @@
     "review_status": "source_unreviewed",
     "source_id": "place:Jokmeam",
     "source_primary_id": "place:Jokneam",
-    "source_sha256": "ed2cf2c171b5c8efccc687a90338ef1a1c260baa9fe4eae24dde533b6b6ef644"
+    "source_sha256": "ed2cf2c171b5c8efccc687a90338ef1a1c260baa9fe4eae24dde533b6b6ef644",
+    "editorial_field_changes": [
+      {
+        "action": "restore_exact_source_named_place_occurrence",
+        "added_reference_values": {
+          "references": [
+            "13006053"
+          ]
+        },
+        "added_original_word_groups": {
+          "wlc": [
+            [
+              "o130060530021"
+            ]
+          ]
+        },
+        "reason": "1 Chronicles 6:53 (ORG) explicitly names Jokmeam, retained as an alternate of the independently anchored source town Jokneam.",
+        "evidence": [
+          "ORG BCV8 13006053",
+          "Exact original-word IDs and source-language names independently identified in Clear-Bible/macula-hebrew/WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c; no extrapolated lexical sense"
+        ]
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
       [
         "o110040120212"
+      ],
+      [
+        "o130060530021"
       ]
     ]
   },
@@ -77,7 +102,8 @@
   "primary_id": "place:Jokneam",
   "pronominal_referents": {},
   "references": [
-    "11004012"
+    "11004012",
+    "13006053"
   ],
   "referred_to_as": [
     "place:Jokneam"

@@ -35,6 +35,36 @@
             ]
           }
         }
+      },
+      {
+        "action": "restore_exact_source_named_place_occurrence",
+        "added_reference_values": {
+          "references": [
+            "40004024",
+            "42002002",
+            "44015023"
+          ]
+        },
+        "added_original_word_groups": {
+          "SBLGNT": [
+            [
+              "n40004024009"
+            ],
+            [
+              "n42002002007"
+            ],
+            [
+              "n44015023016"
+            ]
+          ]
+        },
+        "reason": "Matthew 4:24, Luke 2:2 and Acts 15:23 explicitly name the wider Syria territory/province with the Greek original name.",
+        "evidence": [
+          "ORG BCV8 40004024",
+          "ORG BCV8 42002002",
+          "ORG BCV8 44015023",
+          "Exact original-word IDs and source-language names independently identified in Clear-Bible/macula-greek/SBLGNT@8423afe47b9e8f24b7772e808af45c7159a6fe7e; no extrapolated lexical sense"
+        ]
       }
     ],
     "review_status": "source_unreviewed",
@@ -52,6 +82,17 @@
       ],
       [
         "o140200020112"
+      ]
+    ],
+    "SBLGNT": [
+      [
+        "n40004024009"
+      ],
+      [
+        "n42002002007"
+      ],
+      [
+        "n44015023016"
       ]
     ]
   },
@@ -82,7 +123,10 @@
   "references": [
     "10008012",
     "10008013",
-    "14020002"
+    "14020002",
+    "40004024",
+    "42002002",
+    "44015023"
   ],
   "referred_to_as": [
     "place:Aram"

@@ -5,9 +5,53 @@
     "review_status": "source_unreviewed",
     "source_id": "place:Gihon.2",
     "source_primary_id": "place:Gihon.2",
-    "source_sha256": "81e2447ffd3ed1be76e9c3a0a52add769de48474496e246c998731cc45214859"
+    "source_sha256": "81e2447ffd3ed1be76e9c3a0a52add769de48474496e246c998731cc45214859",
+    "editorial_field_changes": [
+      {
+        "action": "restore_exact_source_named_place_occurrence",
+        "added_reference_values": {
+          "references": [
+            "11001033",
+            "11001045",
+            "14032030"
+          ]
+        },
+        "added_original_word_groups": {
+          "wlc": [
+            [
+              "o110010330201"
+            ],
+            [
+              "o110010450082"
+            ],
+            [
+              "o140320300071"
+            ]
+          ]
+        },
+        "reason": "1 Kings 1:33,45 and 2 Chronicles 32:30 explicitly identify the spring of Gihon in Jerusalem, not the different Genesis 2 river.",
+        "evidence": [
+          "ORG BCV8 11001033",
+          "ORG BCV8 11001045",
+          "ORG BCV8 14032030",
+          "Exact original-word IDs and source-language names independently identified in Clear-Bible/macula-hebrew/WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c; no extrapolated lexical sense"
+        ]
+      }
+    ]
   },
-  "explicit_instances": {},
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o110010330201"
+      ],
+      [
+        "o110010450082"
+      ],
+      [
+        "o140320300071"
+      ]
+    ]
+  },
   "id": "place:Gihon.2",
   "is_artifact": false,
   "is_person": false,
@@ -37,7 +81,11 @@
   },
   "primary_id": "place:Gihon.2",
   "pronominal_referents": {},
-  "references": [],
+  "references": [
+    "11001033",
+    "11001045",
+    "14032030"
+  ],
   "subject_referents": {},
   "type": "place"
 }

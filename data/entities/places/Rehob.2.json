@@ -19,12 +19,37 @@
     "review_status": "source_unreviewed",
     "source_id": "place:Rehob.2",
     "source_primary_id": "place:Rehob.2",
-    "source_sha256": "abf4893a66bdc627d14f84e3abae5981ff73c099427ef29991c90ee2c815c358"
+    "source_sha256": "abf4893a66bdc627d14f84e3abae5981ff73c099427ef29991c90ee2c815c358",
+    "editorial_field_changes": [
+      {
+        "action": "restore_exact_source_named_place_occurrence",
+        "added_reference_values": {
+          "references": [
+            "07001031"
+          ]
+        },
+        "added_original_word_groups": {
+          "wlc": [
+            [
+              "o070010310191"
+            ]
+          ]
+        },
+        "reason": "Judges 1:31 explicitly names Rehob among towns of Asher, matching the record's existing Asher location key.",
+        "evidence": [
+          "ORG BCV8 07001031",
+          "Exact original-word IDs and source-language names independently identified in Clear-Bible/macula-hebrew/WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c; no extrapolated lexical sense"
+        ]
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
       [
         "o060190280022"
+      ],
+      [
+        "o070010310191"
       ]
     ]
   },
@@ -70,7 +95,8 @@
   "primary_id": "place:Rehob.2",
   "pronominal_referents": {},
   "references": [
-    "06019028"
+    "06019028",
+    "07001031"
   ],
   "subject_referents": {},
   "subregion_of": [
