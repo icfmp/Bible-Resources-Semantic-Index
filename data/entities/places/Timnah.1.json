@@ -10,9 +10,53 @@
     "review_status": "source_unreviewed",
     "source_id": "place:Timnah.1",
     "source_primary_id": "place:Timnah.1",
-    "source_sha256": "6ece0f9ae43da2a58d2494872d31ea8f98e6d50db5bcd941293ee2733acfe77f"
+    "source_sha256": "6ece0f9ae43da2a58d2494872d31ea8f98e6d50db5bcd941293ee2733acfe77f",
+    "editorial_field_changes": [
+      {
+        "action": "restore_direct_compound_place_word_witness",
+        "added_reference_values": {
+          "references": [
+            "06015010",
+            "07014001"
+          ]
+        },
+        "added_original_word_groups": {
+          "wlc": [
+            [
+              "o060150100201"
+            ],
+            [
+              "o070140010031",
+              "o070140010032"
+            ],
+            [
+              "o070140010062"
+            ]
+          ]
+        },
+        "reason": "Joshua 15:10 and Judges 14:1 identify Timnah at the Judah/Dan border. The pinned WLC source marks the Judg 14:1 first Timnah expression as proper name plus directional suffix, and the later Timnah as separate word; keep original morphological segmentation in groups without adding a new town.",
+        "evidence": [
+          "Source word IDs, text, morphological segmentation and lemma inspected in frozen Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c/WLC/lowfat XML",
+          "ORG BCV8 06015010",
+          "ORG BCV8 07014001"
+        ]
+      }
+    ]
   },
-  "explicit_instances": {},
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o060150100201"
+      ],
+      [
+        "o070140010031",
+        "o070140010032"
+      ],
+      [
+        "o070140010062"
+      ]
+    ]
+  },
   "id": "place:Timnah.1",
   "is_artifact": false,
   "is_person": false,
@@ -35,7 +79,10 @@
   },
   "primary_id": "place:Timnah.1",
   "pronominal_referents": {},
-  "references": [],
+  "references": [
+    "06015010",
+    "07014001"
+  ],
   "subject_referents": {},
   "subregion_of": [
     "place:TerritoryOfDan"
