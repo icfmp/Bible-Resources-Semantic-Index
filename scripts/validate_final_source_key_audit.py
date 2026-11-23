@@ -258,7 +258,7 @@ def validate(data:Path, ledger_path:Path,
                 expected=" ".join(verse_words.get(context["verse"],[]))[:230]
                 require(context["excerpt"]==expected,
                         row["source_id"]+": frozen original passage content mismatch "+context["verse"])
-    return dict(sorted(counters.items()))|{
+    return {key:counters[key] for key in sorted(STATUS)}|{
       "total":len(cases),"prior_resolved":len(already),
       "resolved_in_pinned_scope":counters["corrected"]+counters["verified_correct"],
       "documented_external_source":counters["secondary_verified"],
