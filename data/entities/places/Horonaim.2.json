@@ -7,25 +7,52 @@
   },
   "bsi": {
     "canonical_id": "place:Horonaim.2",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:Horonaim.2",
     "source_primary_id": "place:Horonaim.2",
-    "source_sha256": "b1387cd3554f0f853ab78aff7ddc126bd9dfb2c983f08e76cdccad6439667651"
+    "source_sha256": "b1387cd3554f0f853ab78aff7ddc126bd9dfb2c983f08e76cdccad6439667651",
+    "editorial_reason": "The inherited distinct `Horonaim (2 Samuel 13:34)` identity is unsupported by the pinned Hebrew verse: the text describes a mountain and Absalom's flight but does not name Horonaim. A separate, correctly attested Horonaim of Moab remains indexed with its original-word evidence.",
+    "editorial_evidence": [
+      "Pinned WLC 2 Samuel 13:34 has generic terms for path, side and mountain, no Horonaim proper name",
+      "Source identity place:Horonaim.2 remains tracked with immutable ACAI source_sha256; valid Moabite Horonaim is place:Horonaim"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "remove_fabricated_horonaim_in_absalom_narrative",
+        "reason": "The inherited distinct `Horonaim (2 Samuel 13:34)` identity is unsupported by the pinned Hebrew verse: the text describes a mountain and Absalom's flight but does not name Horonaim. A separate, correctly attested Horonaim of Moab remains indexed with its original-word evidence.",
+        "evidence": [
+          "Pinned WLC 2 Samuel 13:34 has generic terms for path, side and mountain, no Horonaim proper name",
+          "Source identity place:Horonaim.2 remains tracked with immutable ACAI source_sha256; valid Moabite Horonaim is place:Horonaim"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "key_references": [
+              "10013034"
+            ],
+            "mentioned_in_bible": true,
+            "non_biblical": false
+          },
+          "after": {
+            "key_references": [],
+            "mentioned_in_bible": false,
+            "non_biblical": true
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {},
   "id": "place:Horonaim.2",
   "is_artifact": false,
   "is_person": false,
-  "key_references": [
-    "10013034"
-  ],
+  "key_references": [],
   "localizations": {
     "eng": {
       "preferred_label": "Horonaim (2 Samuel 13:34)"
     }
   },
-  "mentioned_in_bible": true,
-  "non_biblical": false,
+  "mentioned_in_bible": false,
+  "non_biblical": true,
   "only_mentioned_in_apocrypha": false,
   "place_types": {
     "acai": [
