@@ -31,7 +31,13 @@ BRSI package.
   witnesses and reproducible release-scope evidence. These are **not**
   disposable reports.
 - `build_final_reviewed_candidate.py` reconstructs the private reviewed
-  word-level candidate; `package_reviewed_v1_candidate.py` creates the
+  word-level candidate, directly rerunning the complete **26-original-word**
+  WLC and bilingual UBS source audit against the exact *pre-review* index
+  byte lock before the two individually authorized approvals and 24
+  explicit abstentions are applied. The independent
+  `audit_final_lexical_uncertainties.py` remains maintained and testable;
+  only its one-use temporary workflow report was retired.
+  `package_reviewed_v1_candidate.py` creates the
   historical technical candidate, and
   `promote_verified_ubs_release.py --preview` checks its
   owner-authorized historical projection without publishing anything.
