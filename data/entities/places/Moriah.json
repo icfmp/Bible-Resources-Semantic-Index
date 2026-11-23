@@ -10,9 +10,37 @@
     "review_status": "source_unreviewed",
     "source_id": "place:Moriah",
     "source_primary_id": "place:Moriah",
-    "source_sha256": "11e5fbbb99bbb2fd4b7d50651c247d888ea5d02f10707463ccc13f6a585b8ad6"
+    "source_sha256": "11e5fbbb99bbb2fd4b7d50651c247d888ea5d02f10707463ccc13f6a585b8ad6",
+    "editorial_field_changes": [
+      {
+        "action": "restore_direct_original_word_and_verse_witness",
+        "added_reference_values": {
+          "references": [
+            "01022002"
+          ]
+        },
+        "added_original_word_groups": {
+          "wlc": [
+            [
+              "o010220020162"
+            ]
+          ]
+        },
+        "reason": "Genesis 22:2 explicitly names the land of Moriah, not an unnamed general mountain.",
+        "evidence": [
+          "ORG BCV8 01022002",
+          "Exact source token(s) independently located in pinned Macula WLC TSV at source.lock.json edition hash; each source English gloss and original lemma confirms the named place; no auto-merged identity"
+        ]
+      }
+    ]
   },
-  "explicit_instances": {},
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o010220020162"
+      ]
+    ]
+  },
   "id": "place:Moriah",
   "is_artifact": false,
   "is_person": false,
@@ -40,7 +68,9 @@
   ],
   "primary_id": "place:Moriah",
   "pronominal_referents": {},
-  "references": [],
+  "references": [
+    "01022002"
+  ],
   "subject_referents": {},
   "type": "place"
 }

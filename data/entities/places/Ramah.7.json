@@ -5,9 +5,37 @@
     "review_status": "source_unreviewed",
     "source_id": "place:Ramah.7",
     "source_primary_id": "place:Ramah.7",
-    "source_sha256": "8073faeb1821fc4f46ddcee0896ddbb96b3e635d4810b338f4da7cc30487d301"
+    "source_sha256": "8073faeb1821fc4f46ddcee0896ddbb96b3e635d4810b338f4da7cc30487d301",
+    "editorial_field_changes": [
+      {
+        "action": "restore_direct_original_word_and_verse_witness",
+        "added_reference_values": {
+          "references": [
+            "16011033"
+          ]
+        },
+        "added_original_word_groups": {
+          "wlc": [
+            [
+              "o160110330021"
+            ]
+          ]
+        },
+        "reason": "Nehemiah 11:33 names Ramah as a postexilic Benjamin-region settlement; source distinguishes this use.",
+        "evidence": [
+          "ORG BCV8 16011033",
+          "Exact source token(s) independently located in pinned Macula WLC TSV at source.lock.json edition hash; each source English gloss and original lemma confirms the named place; no auto-merged identity"
+        ]
+      }
+    ]
   },
-  "explicit_instances": {},
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o160110330021"
+      ]
+    ]
+  },
   "id": "place:Ramah.7",
   "is_artifact": false,
   "is_person": false,
@@ -35,7 +63,9 @@
   ],
   "primary_id": "place:Ramah.7",
   "pronominal_referents": {},
-  "references": [],
+  "references": [
+    "16011033"
+  ],
   "subject_referents": {},
   "type": "place"
 }

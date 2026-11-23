@@ -11,9 +11,37 @@
     "review_status": "source_unreviewed",
     "source_id": "place:Ramah.6",
     "source_primary_id": "place:Ramah.6",
-    "source_sha256": "7014bc399fc257662bf9a9ccb3f40396699925fe5e9c6dba6daf0bfb28b4594d"
+    "source_sha256": "7014bc399fc257662bf9a9ccb3f40396699925fe5e9c6dba6daf0bfb28b4594d",
+    "editorial_field_changes": [
+      {
+        "action": "restore_direct_original_word_and_verse_witness",
+        "added_reference_values": {
+          "references": [
+            "06019029"
+          ]
+        },
+        "added_original_word_groups": {
+          "wlc": [
+            [
+              "o060190290032"
+            ]
+          ]
+        },
+        "reason": "Joshua 19:29 names Ramah among the towns of Asher; distinct from other Ramah locations.",
+        "evidence": [
+          "ORG BCV8 06019029",
+          "Exact source token(s) independently located in pinned Macula WLC TSV at source.lock.json edition hash; each source English gloss and original lemma confirms the named place; no auto-merged identity"
+        ]
+      }
+    ]
   },
-  "explicit_instances": {},
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o060190290032"
+      ]
+    ]
+  },
   "id": "place:Ramah.6",
   "is_artifact": false,
   "is_person": false,
@@ -35,7 +63,9 @@
   },
   "primary_id": "place:Ramah.6",
   "pronominal_referents": {},
-  "references": [],
+  "references": [
+    "06019029"
+  ],
   "subject_referents": {},
   "subregion_of": [
     "place:TerritoryOfAsher"

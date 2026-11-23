@@ -10,9 +10,38 @@
     "review_status": "source_unreviewed",
     "source_id": "place:Bealoth.2",
     "source_primary_id": "place:Bealoth.2",
-    "source_sha256": "77fd33c5992fab5450bcba08e16b02afb585b77a57fb46cba901c645f5e0e0bf"
+    "source_sha256": "77fd33c5992fab5450bcba08e16b02afb585b77a57fb46cba901c645f5e0e0bf",
+    "editorial_field_changes": [
+      {
+        "action": "restore_direct_original_word_and_verse_witness",
+        "added_reference_values": {
+          "references": [
+            "11004016"
+          ]
+        },
+        "added_original_word_groups": {
+          "wlc": [
+            [
+              "o110040160052"
+            ]
+          ]
+        },
+        "reason": "1 Kings 4:16 names Bealoth/Aloth directly; the pinned WLC original word carries the proper toponym.",
+        "evidence": [
+          "ORG BCV8 11004016",
+          "Pinned original corpus: Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c",
+          "Exact original-word ID(s) and English gloss independently extracted from frozen Macula TSV; source IDs and text unchanged"
+        ]
+      }
+    ]
   },
-  "explicit_instances": {},
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o110040160052"
+      ]
+    ]
+  },
   "id": "place:Bealoth.2",
   "is_artifact": false,
   "is_person": false,
@@ -37,7 +66,9 @@
   },
   "primary_id": "place:Bealoth.2",
   "pronominal_referents": {},
-  "references": [],
+  "references": [
+    "11004016"
+  ],
   "subject_referents": {},
   "type": "place"
 }

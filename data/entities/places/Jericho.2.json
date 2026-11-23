@@ -12,9 +12,68 @@
     "review_status": "source_unreviewed",
     "source_id": "place:Jericho.2",
     "source_primary_id": "place:Jericho.2",
-    "source_sha256": "6b668a139da1cab3c3d61a998254327de06cca58f2a66a68e783ef65d5af8ed1"
+    "source_sha256": "6b668a139da1cab3c3d61a998254327de06cca58f2a66a68e783ef65d5af8ed1",
+    "editorial_field_changes": [
+      {
+        "action": "restore_direct_original_word_and_verse_witness",
+        "added_reference_values": {
+          "references": [
+            "40020029",
+            "41010046",
+            "42010030",
+            "42018035"
+          ]
+        },
+        "added_original_word_groups": {
+          "SBLGNT": [
+            [
+              "n40020029005"
+            ],
+            [
+              "n41010046004"
+            ],
+            [
+              "n41010046009"
+            ],
+            [
+              "n42010030012"
+            ],
+            [
+              "n42018035008"
+            ]
+          ]
+        },
+        "reason": "The pinned SBLGNT explicitly names Jericho in Matthew 20:29, Mark 10:46 (twice), Luke 10:30 and Luke 18:35; the inherited entity identifies the New Testament site.",
+        "evidence": [
+          "ORG BCV8 40020029",
+          "ORG BCV8 41010046",
+          "ORG BCV8 42010030",
+          "ORG BCV8 42018035",
+          "Pinned original corpus: Clear-Bible/macula-greek@8423afe47b9e8f24b7772e808af45c7159a6fe7e",
+          "Exact original-word ID(s) and English gloss independently extracted from frozen Macula TSV; source IDs and text unchanged"
+        ]
+      }
+    ]
   },
-  "explicit_instances": {},
+  "explicit_instances": {
+    "SBLGNT": [
+      [
+        "n40020029005"
+      ],
+      [
+        "n41010046004"
+      ],
+      [
+        "n41010046009"
+      ],
+      [
+        "n42010030012"
+      ],
+      [
+        "n42018035008"
+      ]
+    ]
+  },
   "id": "place:Jericho.2",
   "is_artifact": false,
   "is_person": false,
@@ -42,7 +101,12 @@
   },
   "primary_id": "place:Jericho.2",
   "pronominal_referents": {},
-  "references": [],
+  "references": [
+    "40020029",
+    "41010046",
+    "42010030",
+    "42018035"
+  ],
   "subject_referents": {},
   "subregion_of": [
     "place:Judea"

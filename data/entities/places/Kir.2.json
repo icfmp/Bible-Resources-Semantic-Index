@@ -10,9 +10,38 @@
     "review_status": "source_unreviewed",
     "source_id": "place:Kir.2",
     "source_primary_id": "place:Kir.2",
-    "source_sha256": "1359fd6fcd906e64e2b10e016f06dece0d51b8369e72b181074f508373f64473"
+    "source_sha256": "1359fd6fcd906e64e2b10e016f06dece0d51b8369e72b181074f508373f64473",
+    "editorial_field_changes": [
+      {
+        "action": "restore_direct_original_word_and_verse_witness",
+        "added_reference_values": {
+          "references": [
+            "23015001"
+          ]
+        },
+        "added_original_word_groups": {
+          "wlc": [
+            [
+              "o230150010121"
+            ]
+          ]
+        },
+        "reason": "Isaiah 15:1 explicitly names Kir of Moab (Kir-Moab); this matches the existing distinct Moabite source place.",
+        "evidence": [
+          "ORG BCV8 23015001",
+          "Pinned original corpus: Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c",
+          "Exact original-word ID(s) and English gloss independently extracted from frozen Macula TSV; source IDs and text unchanged"
+        ]
+      }
+    ]
   },
-  "explicit_instances": {},
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o230150010121"
+      ]
+    ]
+  },
   "id": "place:Kir.2",
   "is_artifact": false,
   "is_person": false,
@@ -40,7 +69,9 @@
   ],
   "primary_id": "place:Kir.2",
   "pronominal_referents": {},
-  "references": [],
+  "references": [
+    "23015001"
+  ],
   "subject_referents": {},
   "subregion_of": [
     "place:Moab"

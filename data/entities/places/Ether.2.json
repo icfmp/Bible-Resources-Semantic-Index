@@ -10,9 +10,38 @@
     "review_status": "source_unreviewed",
     "source_id": "place:Ether.2",
     "source_primary_id": "place:Ether.2",
-    "source_sha256": "8cffd7c44a21cda7b02fd551001c58ea7a4b3ca5f66f15405234e685fb10fdc0"
+    "source_sha256": "8cffd7c44a21cda7b02fd551001c58ea7a4b3ca5f66f15405234e685fb10fdc0",
+    "editorial_field_changes": [
+      {
+        "action": "restore_direct_original_word_and_verse_witness",
+        "added_reference_values": {
+          "references": [
+            "06019007"
+          ]
+        },
+        "added_original_word_groups": {
+          "wlc": [
+            [
+              "o060190070032"
+            ]
+          ]
+        },
+        "reason": "Joshua 19:7 lists Ether in Simeon's allotment, distinct from other homonymous places.",
+        "evidence": [
+          "ORG BCV8 06019007",
+          "Pinned original corpus: Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c",
+          "Exact original-word ID(s) and English gloss independently extracted from frozen Macula TSV; source IDs and text unchanged"
+        ]
+      }
+    ]
   },
-  "explicit_instances": {},
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o060190070032"
+      ]
+    ]
+  },
   "id": "place:Ether.2",
   "is_artifact": false,
   "is_person": false,
@@ -37,7 +66,9 @@
   ],
   "primary_id": "place:Ether.2",
   "pronominal_referents": {},
-  "references": [],
+  "references": [
+    "06019007"
+  ],
   "subject_referents": {},
   "subregion_of": [
     "place:TerritoryOfSimeon"

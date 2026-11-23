@@ -15,9 +15,45 @@
     "review_status": "source_unreviewed",
     "source_id": "place:Samaria.2",
     "source_primary_id": "place:Samaria.2",
-    "source_sha256": "a93d49e212c9e41ea63d2cded9f5123c1d60e45b12c6be579829a2991ef4b91f"
+    "source_sha256": "a93d49e212c9e41ea63d2cded9f5123c1d60e45b12c6be579829a2991ef4b91f",
+    "editorial_field_changes": [
+      {
+        "action": "restore_direct_original_word_and_verse_witness",
+        "added_reference_values": {
+          "references": [
+            "42017011",
+            "43004004"
+          ]
+        },
+        "added_original_word_groups": {
+          "SBLGNT": [
+            [
+              "n42017011013"
+            ],
+            [
+              "n43004004007"
+            ]
+          ]
+        },
+        "reason": "Luke 17:11 and John 4:4 explicitly mention the region Samaria on a journey; this record is the territorial region distinct from the city.",
+        "evidence": [
+          "ORG BCV8 42017011",
+          "ORG BCV8 43004004",
+          "Exact source token(s) independently located in pinned Macula SBLGNT TSV at source.lock.json edition hash; each source English gloss and original lemma confirms the named place; no auto-merged identity"
+        ]
+      }
+    ]
   },
-  "explicit_instances": {},
+  "explicit_instances": {
+    "SBLGNT": [
+      [
+        "n42017011013"
+      ],
+      [
+        "n43004004007"
+      ]
+    ]
+  },
   "id": "place:Samaria.2",
   "is_artifact": false,
   "is_person": false,
@@ -45,7 +81,10 @@
   },
   "primary_id": "place:Samaria.2",
   "pronominal_referents": {},
-  "references": [],
+  "references": [
+    "42017011",
+    "43004004"
+  ],
   "subject_referents": {},
   "subregion_of": [
     "place:Israel"
