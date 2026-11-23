@@ -9,12 +9,51 @@
   },
   "bsi": {
     "canonical_id": "place:Nebo.3",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:Nebo.3",
     "source_primary_id": "place:Nebo.3",
-    "source_sha256": "54163e6810989748c176208aef9f2f0f4dc7c5c50b498fe4bd771dd41760bbf5"
+    "source_sha256": "54163e6810989748c176208aef9f2f0f4dc7c5c50b498fe4bd771dd41760bbf5",
+    "editorial_reason": "Restore the direct inherited key name Nebo in the Ezra returnee-community context without identifying the site with another Nebo namesake.",
+    "editorial_evidence": [
+      "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c WLC original-word verse 15010043",
+      "Ezra 10:43 in the pinned WLC explicitly names the 'sons of Nebo' (o150100430021); the register denotes the community of the named settlement, not Mount Nebo, while the geographical interpretation is preserved as a source qualification."
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "restore_pinned_direct_mention_from_verified_key",
+        "reason": "Restore the direct inherited key name Nebo in the Ezra returnee-community context without identifying the site with another Nebo namesake.",
+        "evidence": [
+          "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c WLC original-word verse 15010043",
+          "Ezra 10:43 in the pinned WLC explicitly names the 'sons of Nebo' (o150100430021); the register denotes the community of the named settlement, not Mount Nebo, while the geographical interpretation is preserved as a source qualification."
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [],
+            "explicit_instances": {}
+          },
+          "after": {
+            "references": [
+              "15010043"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o150100430021"
+                ]
+              ]
+            }
+          }
+        }
+      }
+    ]
   },
-  "explicit_instances": {},
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o150100430021"
+      ]
+    ]
+  },
   "id": "place:Nebo.3",
   "is_artifact": false,
   "is_person": false,
@@ -39,7 +78,9 @@
   ],
   "primary_id": "place:Nebo.3",
   "pronominal_referents": {},
-  "references": [],
+  "references": [
+    "15010043"
+  ],
   "subject_referents": {},
   "type": "place"
 }
