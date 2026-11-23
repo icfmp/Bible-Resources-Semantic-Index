@@ -81,17 +81,16 @@ class LastKeyOnlyDecisionsTests(unittest.TestCase):
     def test_missing_previous_disjoint_case_fails(self):
         self.alter(lambda d:d["cases"].pop())
 
-    def test_cannot_forge_original_text_excerpt(self):
-        def update(d):
-            x=next(z for z in d["cases"] if z["source_id"]=="person:Moses")
-            x["targets"][-1]["locked_source_excerpt"]="Moses named in Matthew"
-        self.alter(update) if False else self.assertNotEqual(
-            next(x for x in json.loads((ROOT/"data"/"v1-key-only-final-63-review.json").read_text())["cases"]
-                 if x["source_id"]=="person:Moses")["targets"][-1]["locked_source_excerpt"],
-            "Moses named in Matthew")
-        # Bytewise original excerpt validation is additionally done against
-        # the independently pinned TSVs in CI; metadata-only mode cannot
-        # pretend to re-collate a source it does not have.
+    def test_exact_original_excerpt_is_recorded_for_cross_corpus_ci(self):
+        ledger=json.loads((ROOT/"data"/"v1-key-only-final-63-review.json").read_text())
+        case=next(x for x in ledger["cases"] if x["source_id"]=="person:Moses")
+        excerpt=next(x["locked_source_excerpt"] for x in case["targets"]
+                     if x["verse_id"]=="40001009")
+        self.assertIn("Uzziah",excerpt)
+        self.assertIn("Hezekiah",excerpt)
+        self.assertNotIn("Moses",excerpt)
+        # Re-collating every excerpt from the immutable WLC/SBLGNT takes
+        # place in the separate source-pinned CI, not metadata-only mode.
 
     def test_cannot_make_contextual_key_direct_without_source_receipt(self):
         def update(d):
