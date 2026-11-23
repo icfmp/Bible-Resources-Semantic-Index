@@ -1,8 +1,11 @@
 # BRSI shared scripts
 
-This directory contains the **current native entity build**, reusable validators,
-distribution-contract utilities, and explicitly retained historical tools.
-It is **not** a directory of exclusively current production commands.
+This directory holds **maintained shared tools only**: native entity builds,
+source-neutral validators, nonpublishing release checks and reusable audits.
+Completed one-off probes belong in Git history, not alongside active commands.
+Source-specific UBS tools, tests and review ledgers remain beside their
+pinned sources; historical replay helpers required solely by regression tests
+belong under `tests/support/`, not here.
 
 ## Current native entity workflow
 
