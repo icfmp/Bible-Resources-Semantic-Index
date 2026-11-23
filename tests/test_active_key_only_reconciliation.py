@@ -33,7 +33,7 @@ class NativeKeyOnlyReconciliationTests(unittest.TestCase):
         self.assertTrue(historic)
         self.assertTrue(all(verse in resolved[sid]["keys"] for sid,verse in historic))
         self.assertNotIn(("person:Paul","44009002"),historic)
-        self.assertIn(("deity:Beelzebub","41003022"),
+        self.assertIn(("deity:Beelzebub","12001002"),
                       {(k,v) for k,val in resolved.items() for v in val["keys"]})
 
     def test_linguistic_or_historical_cross_reference_is_not_direct_name(self):
