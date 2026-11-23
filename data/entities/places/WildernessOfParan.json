@@ -2,12 +2,75 @@
   "added_entry": true,
   "bsi": {
     "canonical_id": "place:WildernessOfParan",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:WildernessOfParan",
     "source_primary_id": "place:WildernessOfParan",
-    "source_sha256": "6c34f717caa1f4fb0a7fb35a640cf5d95a96a047edf5b5c7ed593efe58ecd112"
+    "source_sha256": "6c34f717caa1f4fb0a7fb35a640cf5d95a96a047edf5b5c7ed593efe58ecd112",
+    "editorial_reason": "Restore the complete lexical phrase directly attested in the inherited key verse(s), retaining distinct original-word IDs, source identity, and every inherited contextual key.",
+    "editorial_evidence": [
+      "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c WLC/tsv/macula-hebrew.tsv inspected by GitHub Actions pinned original-verse job",
+      "01021021 direct original-name group o010210210022, o010210210031",
+      "04013026 direct original-name group o040130260131, o040130260141",
+      "09025001 direct original-name group o090250010151, o090250010161"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "restore_exact_attested_topographic_original_phrase",
+        "reason": "Restore the complete lexical phrase directly attested in the inherited key verse(s), retaining distinct original-word IDs, source identity, and every inherited contextual key.",
+        "evidence": [
+          "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c WLC/tsv/macula-hebrew.tsv inspected by GitHub Actions pinned original-verse job",
+          "01021021 direct original-name group o010210210022, o010210210031",
+          "04013026 direct original-name group o040130260131, o040130260141",
+          "09025001 direct original-name group o090250010151, o090250010161"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [],
+            "explicit_instances": {}
+          },
+          "after": {
+            "references": [
+              "01021021",
+              "04013026",
+              "09025001"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o010210210022",
+                  "o010210210031"
+                ],
+                [
+                  "o040130260131",
+                  "o040130260141"
+                ],
+                [
+                  "o090250010151",
+                  "o090250010161"
+                ]
+              ]
+            }
+          }
+        }
+      }
+    ]
   },
-  "explicit_instances": {},
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o010210210022",
+        "o010210210031"
+      ],
+      [
+        "o040130260131",
+        "o040130260141"
+      ],
+      [
+        "o090250010151",
+        "o090250010161"
+      ]
+    ]
+  },
   "id": "place:WildernessOfParan",
   "is_artifact": false,
   "is_person": false,
@@ -31,7 +94,11 @@
   },
   "primary_id": "place:WildernessOfParan",
   "pronominal_referents": {},
-  "references": [],
+  "references": [
+    "01021021",
+    "04013026",
+    "09025001"
+  ],
   "subject_referents": {},
   "type": "place"
 }
