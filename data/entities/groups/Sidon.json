@@ -12,10 +12,42 @@
   },
   "bsi": {
     "canonical_id": "group:Sidon",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "group:Sidon",
     "source_primary_id": "group:Sidon",
-    "source_sha256": "9c82c1ef601443620b1bfbfe564197683d252e726c9ca9fe6548c90996feccbc"
+    "source_sha256": "9c82c1ef601443620b1bfbfe564197683d252e726c9ca9fe6548c90996feccbc",
+    "editorial_reason": "Joshua 10:6 in the pinned WLC is the Gibeonites' request for help against the Amorite kings; its Hebrew specifically says Gibeon, Joshua, Gilgal and Amorite, not Sidon or Sidonians. The historical Sidonian group key at this verse is an unrelated identity attribution, not merely a key outside general references. Remove this particular key with reversible receipt; preserve the two genuine Genesis 10 group origin keys and all attested Sidonian word groups.",
+    "editorial_evidence": [
+      "WLC Josh 10:6 o060100060031 Gibeon, o060100060051 Joshua, o060100060252 Amorites; no Sidon/Sidonians",
+      "WLC Gen 10:15 and 10:19 are the separately retained original Sidonian historical keys",
+      "https://www.biblegateway.com/passage/?search=Joshua+10%3A6&version=NET"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "remove_unproven_sidon_joshua_10_6_key",
+        "reason": "Joshua 10:6 in the pinned WLC is the Gibeonites' request for help against the Amorite kings; its Hebrew specifically says Gibeon, Joshua, Gilgal and Amorite, not Sidon or Sidonians. The historical Sidonian group key at this verse is an unrelated identity attribution, not merely a key outside general references. Remove this particular key with reversible receipt; preserve the two genuine Genesis 10 group origin keys and all attested Sidonian word groups.",
+        "evidence": [
+          "WLC Josh 10:6 o060100060031 Gibeon, o060100060051 Joshua, o060100060252 Amorites; no Sidon/Sidonians",
+          "WLC Gen 10:15 and 10:19 are the separately retained original Sidonian historical keys",
+          "https://www.biblegateway.com/passage/?search=Joshua+10%3A6&version=NET"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "key_references": [
+              "01010015",
+              "01010019",
+              "06010006"
+            ]
+          },
+          "after": {
+            "key_references": [
+              "01010015",
+              "01010019"
+            ]
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "SBLGNT": [
@@ -79,8 +111,7 @@
   "id": "group:Sidon",
   "key_references": [
     "01010015",
-    "01010019",
-    "06010006"
+    "01010019"
   ],
   "lemmas": {
     "el": [

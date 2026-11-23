@@ -8,7 +8,7 @@
   },
   "bsi": {
     "canonical_id": "place:CityOfDavid",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:CityOfDavid",
     "source_primary_id": "place:CityOfDavid",
     "source_sha256": "5f50a0c1ca1c877e1b781e00d9adcc792577dd08ae1a062488a2a3680ac7cc0f",
@@ -45,7 +45,73 @@
           "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c WLC/lowfat/13-1Ch-011-lowfat.xml",
           "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c WLC/lowfat/13-1Ch-015-lowfat.xml"
         ]
+      },
+      {
+        "action": "restore_city_of_david_first_kings_exact_source_word",
+        "reason": "The locked WLC 1 Kings 2:10 explicitly names the city of David in David's burial account: the Hebrew noun 'city' and the proper noun 'David' form a complete local toponymic expression. The inherited key verse was correct but missing an exact source name group and its independently verified general reference. Add both existing original word IDs as one group, preserving the previously tracked City of David word groups and all original source fields.",
+        "evidence": [
+          "WLC 1Kgs 2:10 o110020100062 = city (עִיר), o110020100071 = of David (דָּוִד), exact two-word place phrase",
+          "https://classic.net.bible.org/verse.php?book=1Ki&chapter=2&verse=10"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [
+              "10006016",
+              "13011007",
+              "13015001"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o100060160051",
+                  "o100060160061"
+                ],
+                [
+                  "o130110070081",
+                  "o130110070091"
+                ],
+                [
+                  "o130150010042",
+                  "o130150010051"
+                ]
+              ]
+            }
+          },
+          "after": {
+            "references": [
+              "10006016",
+              "11002010",
+              "13011007",
+              "13015001"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o100060160051",
+                  "o100060160061"
+                ],
+                [
+                  "o130110070081",
+                  "o130110070091"
+                ],
+                [
+                  "o130150010042",
+                  "o130150010051"
+                ],
+                [
+                  "o110020100062",
+                  "o110020100071"
+                ]
+              ]
+            }
+          }
+        }
       }
+    ],
+    "editorial_reason": "The locked WLC 1 Kings 2:10 explicitly names the city of David in David's burial account: the Hebrew noun 'city' and the proper noun 'David' form a complete local toponymic expression. The inherited key verse was correct but missing an exact source name group and its independently verified general reference. Add both existing original word IDs as one group, preserving the previously tracked City of David word groups and all original source fields.",
+    "editorial_evidence": [
+      "WLC 1Kgs 2:10 o110020100062 = city (עִיר), o110020100071 = of David (דָּוִד), exact two-word place phrase",
+      "https://classic.net.bible.org/verse.php?book=1Ki&chapter=2&verse=10"
     ]
   },
   "explicit_instances": {
@@ -61,6 +127,10 @@
       [
         "o130150010042",
         "o130150010051"
+      ],
+      [
+        "o110020100062",
+        "o110020100071"
       ]
     ]
   },
@@ -97,6 +167,7 @@
   "pronominal_referents": {},
   "references": [
     "10006016",
+    "11002010",
     "13011007",
     "13015001"
   ],
