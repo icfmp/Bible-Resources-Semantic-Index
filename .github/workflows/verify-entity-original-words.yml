@@ -13,6 +13,8 @@ on:
       - "scripts/validate_final_source_key_audit.py"
       - "tests/test_final_source_key_audit.py"
       - "data/source-key-final-128-candidates.json"
+      - "data/source-key-last-12-candidates.json"
+      - "tests/test_final_twelve_source_integrity.py"
       - "scripts/validate_source_key_resolution_batches.py"
       - "tests/test_source_key_resolution_batches.py"
       - "scripts/inspect_next_source_key_cases.py"
@@ -276,3 +278,14 @@ jobs:
             --wlc macula-hebrew/WLC/tsv/macula-hebrew.tsv \
             --sblgnt macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv
           # Unresolved editorial identities are explicitly not counted as completed.
+
+      - name: Inspect twelve final historical identity source verses without editing source
+        run: |
+          python3 -I scripts/inspect_pinned_original_verse.py \
+            --wlc macula-hebrew/WLC/tsv/macula-hebrew.tsv \
+            --sblgnt macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv \
+            --verses 03014004 04019006 24017006 24048006 23044014 11006023 \
+              13007028 16011031 23010028 06007001 44023031 23015005 \
+              24048034 12011006 14023005 07009037 26038006 24048001 \
+              09022006 06012018 09004001 23041019 01012008
+          # The original word-level evidence is inspected, never rewritten.

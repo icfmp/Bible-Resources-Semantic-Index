@@ -25,13 +25,16 @@ class FinalAuditDecisionsTests(unittest.TestCase):
     def test_full_128_selection_distinct_from_prior_230(self):
         x=self.evaluate()
         self.assertEqual(x["total"],128)
-        self.assertEqual(x["corrected"],44)
-        self.assertEqual(x["verified_correct"],69)
+        self.assertEqual(x["corrected"],52)
+        self.assertEqual(x["verified_correct"],73)
         self.assertEqual(x["secondary_verified"],3)
-        self.assertEqual(x["unresolved"],12)
+        self.assertEqual(x["unresolved"],0)
         self.assertEqual(x["prior_resolved"],230)
-        self.assertEqual(x["remaining_unresolved"],12)
-        self.assertGreater(x["distinct_witness_word_ids"],0)  # exact IDs tested against pinned TSVs by CI
+        self.assertEqual(x["remaining_unresolved"],0)
+        self.assertGreaterEqual(x["distinct_witness_word_ids"],35)
+        self.assertEqual(x["final_twelve_proven"],12)
+        self.assertEqual(x["last_twelve_reversible"],8)
+        self.assertEqual(x["last_twelve_contextual"],4)
 
     def test_no_unreviewed_case_can_claim_correction(self):
         def change(d):
@@ -67,10 +70,42 @@ class FinalAuditDecisionsTests(unittest.TestCase):
             z["required_receipt_action"]="not_a_genuine_source_edit"
         self.mutate(change)
 
-    def test_unresolved_is_not_reported_as_resolved(self):
+    def test_final_twelve_have_exact_separate_decisions(self):
         doc=json.loads((ROOT/"data"/"source-key-final-128-review.json").read_text(encoding="utf-8"))
-        self.assertTrue(all(r["outcome"]!="verified_correct" for r in doc["cases"]
-                            if r["source_id"] in {"place:Ai","place:Misgab.1","deity:Beelzebub"}))
+        selected=json.loads((ROOT/"data"/"source-key-last-12-candidates.json").read_text(encoding="utf-8"))
+        historical={x["source_id"] for x in selected["cases"]}
+        resolved={x["source_id"] for x in doc["cases"] if "source_proof" in x}
+        self.assertEqual(historical,resolved)
+        self.assertEqual(len(historical),12)
+        self.assertTrue(all(x["outcome"] in {"corrected","verified_correct"}
+                            for x in doc["cases"] if x["source_id"] in historical))
+        corrected={"deity:Beelzebub","flora:JuniperTree","flora:PineTree",
+                   "place:Ai","place:Aiath","place:Eglath-shelishiyah.1",
+                   "place:Misgab.1","place:Ramah.8"}
+        self.assertEqual(corrected,{x["source_id"] for x in doc["cases"]
+                                   if x["source_id"] in historical and x["outcome"]=="corrected"})
+
+    def test_missing_source_proof_is_not_a_resolution(self):
+        self.mutate(lambda d:next(x for x in d["cases"] if x["source_id"]=="place:Gomer")
+                    .pop("source_proof"))
+
+    def test_cannot_forge_original_word_syntax(self):
+        def change(doc):
+            row=next(x for x in doc["cases"] if x["source_id"]=="place:GerizimMount")
+            row["source_proof"]["pinned_word_ids"][0]="o000000000999"
+        self.mutate(change)
+
+    def test_cannot_claim_unsupported_direct_word(self):
+        def change(doc):
+            row=next(x for x in doc["cases"] if x["source_id"]=="place:Aphek")
+            row["source_proof"]["claimed_relation"]="reversible_correction_with_pinned_source_lexemes"
+        self.mutate(change)
+
+    def test_cannot_remove_independent_source_citation(self):
+        def change(doc):
+            row=next(x for x in doc["cases"] if x["source_id"]=="flora:PineTree")
+            row["source_proof"]["independent_references"]=[]
+        self.mutate(change)
 
 if __name__=="__main__":
     unittest.main()

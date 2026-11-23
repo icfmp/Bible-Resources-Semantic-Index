@@ -9,10 +9,42 @@
   },
   "bsi": {
     "canonical_id": "flora:JuniperTree",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "flora:JuniperTree",
     "source_primary_id": "flora:JuniperTree",
-    "source_sha256": "66695b1634bea6c3c1694de3db11fb35159e9aeeb6edb2eaf9e8465363f96422"
+    "source_sha256": "66695b1634bea6c3c1694de3db11fb35159e9aeeb6edb2eaf9e8465363f96422",
+    "editorial_reason": "The Hebrew 'erez in Leviticus 14:4 and Numbers 19:6 denotes cedar wood broadly, and specialist translators permit Phoenician juniper as one candidate in ritual contexts; it does not establish the exact modern species. Jeremiah 17:6 and 48:6 use separate 'ar'ar words for a dry-land bush/juniper. Preserve both independently attested lexical groups, but remove false certainty from the editorial species label, without changing the original Bible words, references or anatomical identification.",
+    "editorial_evidence": [
+      "Pinned WLC Lev 14:4 o030140040101 and Num 19:6 o040190060041 are אֶרֶז (cedar wood)",
+      "Pinned WLC Jer 17:6 o240170060022 עַרְעָר and Jer 48:6 o240480060052 עֲרוֹעֵר are the separate bush words",
+      "UBS translators' botanical reference explicitly allows Phoenician juniper for Hebrew 'erez but does not restrict every occurrence: https://tips.translation.bible/story/phoenician-juniper-coastal-juniper/"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "resolve_final_twelve_source_identity",
+        "reason": "The Hebrew 'erez in Leviticus 14:4 and Numbers 19:6 denotes cedar wood broadly, and specialist translators permit Phoenician juniper as one candidate in ritual contexts; it does not establish the exact modern species. Jeremiah 17:6 and 48:6 use separate 'ar'ar words for a dry-land bush/juniper. Preserve both independently attested lexical groups, but remove false certainty from the editorial species label, without changing the original Bible words, references or anatomical identification.",
+        "evidence": [
+          "Pinned WLC Lev 14:4 o030140040101 and Num 19:6 o040190060041 are אֶרֶז (cedar wood)",
+          "Pinned WLC Jer 17:6 o240170060022 עַרְעָר and Jer 48:6 o240480060052 עֲרוֹעֵר are the separate bush words",
+          "UBS translators' botanical reference explicitly allows Phoenician juniper for Hebrew 'erez but does not restrict every occurrence: https://tips.translation.bible/story/phoenician-juniper-coastal-juniper/"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "preferred_label": "Phoenician Juniper",
+            "alternate_labels": [
+              "Cedar"
+            ]
+          },
+          "after": {
+            "preferred_label": "Phoenician juniper (proposed identification)",
+            "alternate_labels": [
+              "Phoenician Juniper",
+              "Cedar"
+            ]
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -95,9 +127,10 @@
   "localizations": {
     "eng": {
       "alternate_labels": [
+        "Phoenician Juniper",
         "Cedar"
       ],
-      "preferred_label": "Phoenician Juniper"
+      "preferred_label": "Phoenician juniper (proposed identification)"
     }
   },
   "non_biblical": false,

@@ -16,15 +16,72 @@
   },
   "bsi": {
     "canonical_id": "place:Ai",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:Aiath",
     "source_primary_id": "place:Ai",
-    "source_sha256": "248a6080a48c4ce777c632ce1926dc3299f6efa513e92e5b9856cfd2b836b3da"
+    "source_sha256": "248a6080a48c4ce777c632ce1926dc3299f6efa513e92e5b9856cfd2b836b3da",
+    "editorial_reason": "Aiath, Aija and Ayyah are attested variant forms of the biblical Ai toponym in the pinned WLC. The historical key claims 1 Chronicles 7:28 and Nehemiah 11:31 were not arbitrary: their exact original Hebrew tokens can now be supplied. Keep the inherited source ID Aiath and canonical Ai while adding only the two complete independently sourced variant word groups; geographic site precision is not being invented.",
+    "editorial_evidence": [
+      "Pinned WLC Isa 10:28 o230100280031 = Aiath, already linked",
+      "Pinned WLC 1Chr 7:28 o130070280141 = Ayyah, source-attested",
+      "Pinned WLC Neh 11:31 o160110310052 = Aija; Hebrew lexical variant account https://www.blueletterbible.org/lexicon/h5857/nasb20/wlc/0-3/"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "resolve_final_twelve_source_identity",
+        "reason": "Aiath, Aija and Ayyah are attested variant forms of the biblical Ai toponym in the pinned WLC. The historical key claims 1 Chronicles 7:28 and Nehemiah 11:31 were not arbitrary: their exact original Hebrew tokens can now be supplied. Keep the inherited source ID Aiath and canonical Ai while adding only the two complete independently sourced variant word groups; geographic site precision is not being invented.",
+        "evidence": [
+          "Pinned WLC Isa 10:28 o230100280031 = Aiath, already linked",
+          "Pinned WLC 1Chr 7:28 o130070280141 = Ayyah, source-attested",
+          "Pinned WLC Neh 11:31 o160110310052 = Aija; Hebrew lexical variant account https://www.blueletterbible.org/lexicon/h5857/nasb20/wlc/0-3/"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [
+              "23010028"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o230100280031"
+                ]
+              ]
+            }
+          },
+          "after": {
+            "references": [
+              "13007028",
+              "16011031",
+              "23010028"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o230100280031"
+                ],
+                [
+                  "o130070280141"
+                ],
+                [
+                  "o160110310052"
+                ]
+              ]
+            }
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
       [
         "o230100280031"
+      ],
+      [
+        "o130070280141"
+      ],
+      [
+        "o160110310052"
       ]
     ]
   },
@@ -76,6 +133,8 @@
   "primary_id": "place:Ai",
   "pronominal_referents": {},
   "references": [
+    "13007028",
+    "16011031",
     "23010028"
   ],
   "referred_to_as": [

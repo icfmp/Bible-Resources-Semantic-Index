@@ -20,10 +20,355 @@
   },
   "bsi": {
     "canonical_id": "place:Ai",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:Ai",
     "source_primary_id": "place:Ai",
-    "source_sha256": "dc834b66d650f65cea70428874ab50cac1dd55e1808374a087bc45591ae11cf5"
+    "source_sha256": "dc834b66d650f65cea70428874ab50cac1dd55e1808374a087bc45591ae11cf5",
+    "editorial_reason": "The pinned WLC does explicitly read Ayyah (עַיָּה) at 1 Chronicles 7:28 and Aija at Nehemiah 11:31, while Isaiah 10:28 has Aiath (עַיַּת). Authoritative Hebrew lexicons group these vocalic spelling variants with Ai. Retain the source's established Ai canonical indexing and add the exact attested Ayyah original word instead of treating it as a fabricated or absent key. This is lexical and traditional topographic identification, not proof of the archaeological location of ancient Ai.",
+    "editorial_evidence": [
+      "Pinned WLC 1Chr 7:28 o130070280141 = Ayyah, in original word inventory, not a conjectural missing verse",
+      "WLC Neh 11:31 o160110310052 = Aija; Isa 10:28 o230100280031 = Aiath",
+      "BDB original lexicon evidence: https://www.blueletterbible.org/lexicon/h5857/nasb20/wlc/0-3/"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "resolve_final_twelve_source_identity",
+        "reason": "The pinned WLC does explicitly read Ayyah (עַיָּה) at 1 Chronicles 7:28 and Aija at Nehemiah 11:31, while Isaiah 10:28 has Aiath (עַיַּת). Authoritative Hebrew lexicons group these vocalic spelling variants with Ai. Retain the source's established Ai canonical indexing and add the exact attested Ayyah original word instead of treating it as a fabricated or absent key. This is lexical and traditional topographic identification, not proof of the archaeological location of ancient Ai.",
+        "evidence": [
+          "Pinned WLC 1Chr 7:28 o130070280141 = Ayyah, in original word inventory, not a conjectural missing verse",
+          "WLC Neh 11:31 o160110310052 = Aija; Isa 10:28 o230100280031 = Aiath",
+          "BDB original lexicon evidence: https://www.blueletterbible.org/lexicon/h5857/nasb20/wlc/0-3/"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [
+              "01012008",
+              "01013003",
+              "06007002",
+              "06007003",
+              "06007004",
+              "06007005",
+              "06008001",
+              "06008002",
+              "06008003",
+              "06008005",
+              "06008009",
+              "06008010",
+              "06008011",
+              "06008012",
+              "06008014",
+              "06008016",
+              "06008017",
+              "06008018",
+              "06008020",
+              "06008021",
+              "06008022",
+              "06008023",
+              "06008024",
+              "06008025",
+              "06008026",
+              "06008028",
+              "06008029",
+              "06009001",
+              "06009003",
+              "06010001",
+              "06010002",
+              "06012009",
+              "15002028",
+              "16007032",
+              "16011031",
+              "23010028"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o010120080123"
+                ],
+                [
+                  "o010130030192"
+                ],
+                [
+                  "o060070020052"
+                ],
+                [
+                  "o060070020242"
+                ],
+                [
+                  "o060070030192"
+                ],
+                [
+                  "o060070040112"
+                ],
+                [
+                  "o060070050042"
+                ],
+                [
+                  "o060080010172"
+                ],
+                [
+                  "o060080010232"
+                ],
+                [
+                  "o060080020022"
+                ],
+                [
+                  "o060080030072"
+                ],
+                [
+                  "o060080090112"
+                ],
+                [
+                  "o060080090132"
+                ],
+                [
+                  "o060080100132"
+                ],
+                [
+                  "o060080110132"
+                ],
+                [
+                  "o060080110182"
+                ],
+                [
+                  "o060080120122"
+                ],
+                [
+                  "o060080140042"
+                ],
+                [
+                  "o060080160062"
+                ],
+                [
+                  "o060080170042"
+                ],
+                [
+                  "o060080180102"
+                ],
+                [
+                  "o060080200032"
+                ],
+                [
+                  "o060080210182"
+                ],
+                [
+                  "o060080230032"
+                ],
+                [
+                  "o060080240082"
+                ],
+                [
+                  "o060080240232"
+                ],
+                [
+                  "o060080250142"
+                ],
+                [
+                  "o060080260142"
+                ],
+                [
+                  "o060080280042"
+                ],
+                [
+                  "o060080290032"
+                ],
+                [
+                  "o060090030093"
+                ],
+                [
+                  "o060100010112"
+                ],
+                [
+                  "o060100010192"
+                ],
+                [
+                  "o060100020142"
+                ],
+                [
+                  "o060120090052"
+                ],
+                [
+                  "o150020280043"
+                ],
+                [
+                  "o160070320043"
+                ],
+                [
+                  "o160110310052"
+                ],
+                [
+                  "o230100280031"
+                ]
+              ]
+            }
+          },
+          "after": {
+            "references": [
+              "01012008",
+              "01013003",
+              "06007002",
+              "06007003",
+              "06007004",
+              "06007005",
+              "06008001",
+              "06008002",
+              "06008003",
+              "06008005",
+              "06008009",
+              "06008010",
+              "06008011",
+              "06008012",
+              "06008014",
+              "06008016",
+              "06008017",
+              "06008018",
+              "06008020",
+              "06008021",
+              "06008022",
+              "06008023",
+              "06008024",
+              "06008025",
+              "06008026",
+              "06008028",
+              "06008029",
+              "06009001",
+              "06009003",
+              "06010001",
+              "06010002",
+              "06012009",
+              "13007028",
+              "15002028",
+              "16007032",
+              "16011031",
+              "23010028"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o010120080123"
+                ],
+                [
+                  "o010130030192"
+                ],
+                [
+                  "o060070020052"
+                ],
+                [
+                  "o060070020242"
+                ],
+                [
+                  "o060070030192"
+                ],
+                [
+                  "o060070040112"
+                ],
+                [
+                  "o060070050042"
+                ],
+                [
+                  "o060080010172"
+                ],
+                [
+                  "o060080010232"
+                ],
+                [
+                  "o060080020022"
+                ],
+                [
+                  "o060080030072"
+                ],
+                [
+                  "o060080090112"
+                ],
+                [
+                  "o060080090132"
+                ],
+                [
+                  "o060080100132"
+                ],
+                [
+                  "o060080110132"
+                ],
+                [
+                  "o060080110182"
+                ],
+                [
+                  "o060080120122"
+                ],
+                [
+                  "o060080140042"
+                ],
+                [
+                  "o060080160062"
+                ],
+                [
+                  "o060080170042"
+                ],
+                [
+                  "o060080180102"
+                ],
+                [
+                  "o060080200032"
+                ],
+                [
+                  "o060080210182"
+                ],
+                [
+                  "o060080230032"
+                ],
+                [
+                  "o060080240082"
+                ],
+                [
+                  "o060080240232"
+                ],
+                [
+                  "o060080250142"
+                ],
+                [
+                  "o060080260142"
+                ],
+                [
+                  "o060080280042"
+                ],
+                [
+                  "o060080290032"
+                ],
+                [
+                  "o060090030093"
+                ],
+                [
+                  "o060100010112"
+                ],
+                [
+                  "o060100010192"
+                ],
+                [
+                  "o060100020142"
+                ],
+                [
+                  "o060120090052"
+                ],
+                [
+                  "o150020280043"
+                ],
+                [
+                  "o160070320043"
+                ],
+                [
+                  "o160110310052"
+                ],
+                [
+                  "o230100280031"
+                ],
+                [
+                  "o130070280141"
+                ]
+              ]
+            }
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -143,6 +488,9 @@
       ],
       [
         "o230100280031"
+      ],
+      [
+        "o130070280141"
       ]
     ]
   },
@@ -247,6 +595,7 @@
     "06010001",
     "06010002",
     "06012009",
+    "13007028",
     "15002028",
     "16007032",
     "16011031",

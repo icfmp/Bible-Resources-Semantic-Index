@@ -10,16 +10,16 @@
     "data/source-key-resolved-115.json",
     "data/source-key-next-115-resolved.json"
   ],
-  "policy": "All 128 frozen identities appear once. Corrected = a real reversible edit. Verified_correct = independently justified contextual no-change, never fabricated direct original words. Secondary_verified = documented Greek Maccabees outside locked 66-book originals, never counted as Macula-certifiable. Unresolved = not resolved and not eligible for issue closure or release.",
+  "policy": "All 128 frozen identities appear once. Corrected = a real reversible edit. Verified_correct = independently justified contextual no-change, never fabricated direct original words. Secondary_verified = documented Greek Maccabees outside locked 66-book originals, never counted as Macula-certifiable. Unresolved = not resolved and not eligible for issue closure or release. The original final twelve are now independently certified with exact source word IDs, substantive reversibility for each correction, documented non-literal/contextual identifications, and separate original key history; unresolved count must remain zero before the audit is closed.",
   "cases": [
     {
       "source_id": "deity:Beelzebub",
-      "outcome": "unresolved",
+      "outcome": "corrected",
       "original_key_verses": [
         "12001002",
         "12001016"
       ],
-      "editorial_conclusion": "Baal-zebub of Ekron in 2 Kings 1 and Beelzebul/Satan of the Gospels may be related names, not proven identical ancient entities; canonical conflation awaits independent textual judgment.",
+      "editorial_conclusion": "Hebrew Baal-Zebub of Ekron is a two-word pagan title, whereas the New Testament Beelzebul is a demonic designation associated with Satan. The inherited unique-entity source keys were removed from the latter and precisely attached to the existing generic Baal source family instead. This is not proof that the ancient worshipped idol was ontologically Satan.",
       "source_context": [
         {
           "verse": "12001002",
@@ -30,7 +30,26 @@
           "excerpt": "and said to him thus says LORD because that sent messengers to inquire of Baal Zebub god Ekron ? because not there_is_no God in Israel to inquire of word his therefore this the bed which gone_up there not come_down from it but to_"
         }
       ],
-      "nearby_existing_word_anchors": []
+      "nearby_existing_word_anchors": [],
+      "required_receipt_action": "resolve_final_twelve_source_identity",
+      "source_proof": {
+        "pinned_word_ids": [
+          "o120010020152",
+          "o120010020161",
+          "o120010160112",
+          "o120010160121",
+          "n41003022010"
+        ],
+        "independent_references": [
+          "https://www.mdpi.com/2077-1444/14/8/1070",
+          "https://www.jewishencyclopedia.com/articles/2732-beelzebub"
+        ],
+        "interpretation": "Hebrew Baal-Zebub of Ekron is a two-word pagan title, whereas the New Testament Beelzebul is a demonic designation associated with Satan. The inherited unique-entity source keys were removed from the latter and precisely attached to the existing generic Baal source family instead. This is not proof that the ancient worshipped idol was ontologically Satan.",
+        "claimed_relation": "reversible_correction_with_pinned_source_lexemes",
+        "reassigned_to": [
+          "deity:Baal"
+        ]
+      }
     },
     {
       "source_id": "deity:Breath",
@@ -96,12 +115,12 @@
     },
     {
       "source_id": "flora:JuniperTree",
-      "outcome": "unresolved",
+      "outcome": "corrected",
       "original_key_verses": [
         "03014004",
         "04019006"
       ],
-      "editorial_conclusion": "Leviticus 14:4 and Numbers 19:6 say cedar wood; the specific Phoenician juniper botanical taxon is an interpretation not certifiable from the Hebrew word alone.",
+      "editorial_conclusion": "The cedar Hebrew 'erez is broad and may include Phoenician juniper in ritual contexts, while the Jeremianic wild bush uses different lemmas. Source keys remain accurate possible botanical associations; the index label now explicitly marks the exact species identification as proposed, not established.",
       "source_context": [
         {
           "verse": "03014004",
@@ -112,22 +131,50 @@
           "excerpt": "and take the priest wood cedar and hyssop and wool_of of.scarlet.stuff and throw in midst burning the heifer"
         }
       ],
-      "nearby_existing_word_anchors": []
+      "nearby_existing_word_anchors": [],
+      "required_receipt_action": "resolve_final_twelve_source_identity",
+      "source_proof": {
+        "pinned_word_ids": [
+          "o030140040101",
+          "o040190060041",
+          "o240170060022",
+          "o240480060052"
+        ],
+        "independent_references": [
+          "https://tips.translation.bible/story/phoenician-juniper-coastal-juniper/"
+        ],
+        "interpretation": "The cedar Hebrew 'erez is broad and may include Phoenician juniper in ritual contexts, while the Jeremianic wild bush uses different lemmas. Source keys remain accurate possible botanical associations; the index label now explicitly marks the exact species identification as proposed, not established.",
+        "claimed_relation": "reversible_correction_with_pinned_source_lexemes"
+      }
     },
     {
       "source_id": "flora:PineTree",
-      "outcome": "unresolved",
+      "outcome": "corrected",
       "original_key_verses": [
         "23044014"
       ],
-      "editorial_conclusion": "Isaiah 44:14's ancient tree terms have competing botanical identifications; Aleppo pine cannot be established as a direct Hebrew species attribution.",
+      "editorial_conclusion": "The Aleppo-pine scholarly proposal concerns Hebrew oil-tree 'ets shemen, not the unrelated species-uncertain hapax 'oren in Isaiah 44:14. The unproven latter key was withdrawn, and the inherited overly certain botanical identification and misleading Cedar synonym were qualified without changing original text.",
       "source_context": [
         {
           "verse": "23044014",
           "excerpt": "to cuts_down for he cedars or chooses cypress or oak or grow_strong for it among trees forest plants cedar and rain grow"
         }
       ],
-      "nearby_existing_word_anchors": []
+      "nearby_existing_word_anchors": [],
+      "required_receipt_action": "resolve_final_twelve_source_identity",
+      "source_proof": {
+        "pinned_word_ids": [
+          "o110060230051",
+          "o110060230061",
+          "o230440140121"
+        ],
+        "independent_references": [
+          "https://freely-given.org/OBD/UBS/Flora/1.18.2.htm",
+          "https://classic.net.bible.org/verse.php?book=Isa&chapter=44&verse=14"
+        ],
+        "interpretation": "The Aleppo-pine scholarly proposal concerns Hebrew oil-tree 'ets shemen, not the unrelated species-uncertain hapax 'oren in Isaiah 44:14. The unproven latter key was withdrawn, and the inherited overly certain botanical identification and misleading Cedar synonym were qualified without changing original text.",
+        "claimed_relation": "reversible_correction_with_pinned_source_lexemes"
+      }
     },
     {
       "source_id": "group:Beeroth",
@@ -1024,12 +1071,12 @@
     },
     {
       "source_id": "place:Ai",
-      "outcome": "unresolved",
+      "outcome": "corrected",
       "original_key_verses": [
         "06007001",
         "13007028"
       ],
-      "editorial_conclusion": "The inherited Ai/Ayyah/Aiath equivalence in 1 Chronicles 7:28 and Nehemiah 11:31 is historically uncertain; the canonical links are not yet independently certified.",
+      "editorial_conclusion": "The pinned WLC independently attests Ai, Ayyah, Aija and Aiath as original Hebrew forms. The already inherited Ai canonical lexeme linkage is evidenced with exact Ayyah original-word groups, not by fabricating an absent direct key. Archaeological location certainty is not inferred.",
       "source_context": [
         {
           "verse": "06007001",
@@ -1066,16 +1113,30 @@
           "word_id": "o060070040112",
           "english": "Ai"
         }
-      ]
+      ],
+      "required_receipt_action": "resolve_final_twelve_source_identity",
+      "source_proof": {
+        "pinned_word_ids": [
+          "o010120080123",
+          "o130070280141",
+          "o160110310052",
+          "o230100280031"
+        ],
+        "independent_references": [
+          "https://www.blueletterbible.org/lexicon/h5857/nasb20/wlc/0-3/"
+        ],
+        "interpretation": "The pinned WLC independently attests Ai, Ayyah, Aija and Aiath as original Hebrew forms. The already inherited Ai canonical lexeme linkage is evidenced with exact Ayyah original-word groups, not by fabricating an absent direct key. Archaeological location certainty is not inferred.",
+        "claimed_relation": "reversible_correction_with_pinned_source_lexemes"
+      }
     },
     {
       "source_id": "place:Aiath",
-      "outcome": "unresolved",
+      "outcome": "corrected",
       "original_key_verses": [
         "13007028",
         "16011031"
       ],
-      "editorial_conclusion": "The source's strong Aiath-to-Ai canonical and alternate-label assertion is not established by 1 Chronicles 7:28; more than lexical resemblance is needed.",
+      "editorial_conclusion": "Aiath's own pinned Isaiah name already had a direct original word. The source-key claims for Ayyah at 1 Chronicles 7:28 and Aija at Nehemiah 11:31 are independently supported by WLC Hebrew words and conventional lexicographic variant grouping, now linked directly without changing ancient text.",
       "source_context": [
         {
           "verse": "13007028",
@@ -1086,22 +1147,45 @@
           "excerpt": "and descendants Benjamin from Geba Michmash and Aija and Bethel Bethel and villages its"
         }
       ],
-      "nearby_existing_word_anchors": []
+      "nearby_existing_word_anchors": [],
+      "required_receipt_action": "resolve_final_twelve_source_identity",
+      "source_proof": {
+        "pinned_word_ids": [
+          "o230100280031",
+          "o130070280141",
+          "o160110310052"
+        ],
+        "independent_references": [
+          "https://www.blueletterbible.org/lexicon/h5857/nasb20/wlc/0-3/"
+        ],
+        "interpretation": "Aiath's own pinned Isaiah name already had a direct original word. The source-key claims for Ayyah at 1 Chronicles 7:28 and Aija at Nehemiah 11:31 are independently supported by WLC Hebrew words and conventional lexicographic variant grouping, now linked directly without changing ancient text.",
+        "claimed_relation": "reversible_correction_with_pinned_source_lexemes"
+      }
     },
     {
       "source_id": "place:Aphek",
-      "outcome": "unresolved",
+      "outcome": "verified_correct",
       "original_key_verses": [
         "44023031"
       ],
-      "editorial_conclusion": "Acts 23:31 names Antipatris, not Aphek; an exact ancient site-identification requires independently supported archaeological evidence.",
+      "editorial_conclusion": "Acts 23:31 names Antipatris in Greek, not Aphek; the established Tel Afek/Antipatris archaeological site identification provides a contextual later-name key for the Aphek of Sharon record, not an invented Aphek name token in Acts.",
       "source_context": [
         {
           "verse": "44023031",
           "excerpt": "the Indeed so soldiers as the_thing orders their took him Paul brought during night to - Antipatris"
         }
       ],
-      "nearby_existing_word_anchors": []
+      "nearby_existing_word_anchors": [],
+      "source_proof": {
+        "pinned_word_ids": [
+          "n44023031017"
+        ],
+        "independent_references": [
+          "https://biblical-archaeology.org/en/locations/aphek/"
+        ],
+        "interpretation": "Acts 23:31 names Antipatris in Greek, not Aphek; the established Tel Afek/Antipatris archaeological site identification provides a contextual later-name key for the Aphek of Sharon record, not an invented Aphek name token in Acts.",
+        "claimed_relation": "contextual_or_interpretive_no_new_name_word"
+      }
     },
     {
       "source_id": "place:Aram-naharaim",
@@ -1429,12 +1513,12 @@
     },
     {
       "source_id": "place:Eglath-shelishiyah.1",
-      "outcome": "unresolved",
+      "outcome": "corrected",
       "original_key_verses": [
         "23015005",
         "24048034"
       ],
-      "editorial_conclusion": "Isaiah 15:5 and Jeremiah 48:34 may use a proper Moabite site or a three-year-old heifer simile; philological identification remains disputed.",
+      "editorial_conclusion": "The complete Eglath-shelishiyah Hebrew phrase is truly present in both Moabite oracles, but the phrase may denote a site or a three-year-old heifer. The source key is legitimately a toponymic interpretation, not a proven city; the overconfident display label has been explicitly qualified.",
       "source_context": [
         {
           "verse": "23015005",
@@ -1445,7 +1529,22 @@
           "excerpt": "from cry Heshbon even_to Elealeh as_far_as Jahaz utter voice their from Zoar to Horonaim Eglath Shelishiyah for even waters Nimrim as desolate become"
         }
       ],
-      "nearby_existing_word_anchors": []
+      "nearby_existing_word_anchors": [],
+      "required_receipt_action": "resolve_final_twelve_source_identity",
+      "source_proof": {
+        "pinned_word_ids": [
+          "o230150050071",
+          "o230150050081",
+          "o240480340121",
+          "o240480340131"
+        ],
+        "independent_references": [
+          "https://biblehub.com/commentaries/cambridge/isaiah/15.htm",
+          "https://classic.net.bible.org/dictionary.php?word=Eglath"
+        ],
+        "interpretation": "The complete Eglath-shelishiyah Hebrew phrase is truly present in both Moabite oracles, but the phrase may denote a site or a three-year-old heifer. The source key is legitimately a toponymic interpretation, not a proven city; the overconfident display label has been explicitly qualified.",
+        "claimed_relation": "reversible_correction_with_pinned_source_lexemes"
+      }
     },
     {
       "source_id": "place:Engedi",
@@ -1480,33 +1579,56 @@
     },
     {
       "source_id": "place:FoundationGate",
-      "outcome": "unresolved",
+      "outcome": "verified_correct",
       "original_key_verses": [
         "12011006"
       ],
-      "editorial_conclusion": "The equivalence of 2 Kings 11:6 Gate Sur and 2 Chronicles 23:5 Foundation Gate has not been independently proved.",
+      "editorial_conclusion": "2 Kings 11:6 names Gate Sur and 2 Chronicles 23:5 names the Foundation Gate in parallel accounts of the priestly guard positions. The inherited key denotes a legitimate parallel narrative equivalence, while the original Hebrew gate words and textual differences remain distinct.",
       "source_context": [
         {
           "verse": "12011006",
           "excerpt": "and the third at gate Sur and the a_third at the gate behind the guards and guard (et) post the palace take_turns"
         }
       ],
-      "nearby_existing_word_anchors": []
+      "nearby_existing_word_anchors": [],
+      "source_proof": {
+        "pinned_word_ids": [
+          "o120110060031",
+          "o140230050062"
+        ],
+        "independent_references": [
+          "https://tips.translation.bible/story/translation-commentary-on-2-kings-116-2/",
+          "https://www.biblegateway.com/resources/encyclopedia-of-the-bible/Gate-Foundation"
+        ],
+        "interpretation": "2 Kings 11:6 names Gate Sur and 2 Chronicles 23:5 names the Foundation Gate in parallel accounts of the priestly guard positions. The inherited key denotes a legitimate parallel narrative equivalence, while the original Hebrew gate words and textual differences remain distinct.",
+        "claimed_relation": "contextual_or_interpretive_no_new_name_word"
+      }
     },
     {
       "source_id": "place:GerizimMount",
-      "outcome": "unresolved",
+      "outcome": "verified_correct",
       "original_key_verses": [
         "07009037"
       ],
-      "editorial_conclusion": "Judges 9:37 Tabbur-erez is not directly named Gerizim; previous false aliases were removed but the remaining site assumption needs evidence.",
+      "editorial_conclusion": "Judges 9:7 explicitly names Mount Gerizim in the same Shechem-Abimelech story. Judges 9:37 speaks of the navel/center of the land, not Gerizim by name; the earlier PR already removed its unsupported equation to Tabbur-erez while retaining a legitimate broader regional narrative key.",
       "source_context": [
         {
           "verse": "07009037",
           "excerpt": "but he_repeated again Gaal to spoke and said look people coming_down from in tabbur-erez the land and company one coming from direction oak diviners’"
         }
       ],
-      "nearby_existing_word_anchors": []
+      "nearby_existing_word_anchors": [],
+      "source_proof": {
+        "pinned_word_ids": [
+          "o070090070071",
+          "o070090370101"
+        ],
+        "independent_references": [
+          "https://classic.net.bible.org/verse.php?book=Jdg&chapter=9&verse=37"
+        ],
+        "interpretation": "Judges 9:7 explicitly names Mount Gerizim in the same Shechem-Abimelech story. Judges 9:37 speaks of the navel/center of the land, not Gerizim by name; the earlier PR already removed its unsupported equation to Tabbur-erez while retaining a legitimate broader regional narrative key.",
+        "claimed_relation": "contextual_or_interpretive_no_new_name_word"
+      }
     },
     {
       "source_id": "place:Geshur",
@@ -1557,18 +1679,28 @@
     },
     {
       "source_id": "place:Gomer",
-      "outcome": "unresolved",
+      "outcome": "verified_correct",
       "original_key_verses": [
         "26038006"
       ],
-      "editorial_conclusion": "Ezekiel 38:6 explicitly names a people Gomer, not a standalone written region; the record's place-versus-people semantics need review.",
+      "editorial_conclusion": "Ezekiel 38:6 actually names Gomer with its military people, explicitly a people/national contingent rather than a precise geographical settlement. The inherited place_types nation denotes a historically inferred ethnic polity, never a fabricated separate town or word matching geographic coordinates.",
       "source_context": [
         {
           "verse": "26038006",
           "excerpt": "Gomer with all troops its Beth Togarmah remotest_parts north with (et) all troops its peoples many with you"
         }
       ],
-      "nearby_existing_word_anchors": []
+      "nearby_existing_word_anchors": [],
+      "source_proof": {
+        "pinned_word_ids": [
+          "o260380060011"
+        ],
+        "independent_references": [
+          "https://biblehub.com/ezekiel/38-6.htm"
+        ],
+        "interpretation": "Ezekiel 38:6 actually names Gomer with its military people, explicitly a people/national contingent rather than a precise geographical settlement. The inherited place_types nation denotes a historically inferred ethnic polity, never a fabricated separate town or word matching geographic coordinates.",
+        "claimed_relation": "contextual_or_interpretive_no_new_name_word"
+      }
     },
     {
       "source_id": "place:HinnomValley",
@@ -1843,18 +1975,30 @@
     },
     {
       "source_id": "place:Misgab.1",
-      "outcome": "unresolved",
+      "outcome": "corrected",
       "original_key_verses": [
         "24048001"
       ],
-      "editorial_conclusion": "Jeremiah 48:1 Hebrew means stronghold but can be construed as the place Misgab; the proper-noun reading remains uncertain.",
+      "editorial_conclusion": "Jeremiah 48:1 has the common noun with definite article 'the stronghold'. The conjectural named town Misgab lacks independent attestation; the native source record is retained for provenance but its biblical town key and affirmative biblical-place flags were withdrawn.",
       "source_context": [
         {
           "verse": "24048001",
           "excerpt": "concerning Moab thus says LORD hosts God Israel woe to Nebo for destroyed put_to_shame captured Kiriathaim put_to_shame the fortress and shattered"
         }
       ],
-      "nearby_existing_word_anchors": []
+      "nearby_existing_word_anchors": [],
+      "required_receipt_action": "resolve_final_twelve_source_identity",
+      "source_proof": {
+        "pinned_word_ids": [
+          "o240480010171",
+          "o240480010172"
+        ],
+        "independent_references": [
+          "https://classic.net.bible.org/verse.php?book=Jer&chapter=48&verse=1"
+        ],
+        "interpretation": "Jeremiah 48:1 has the common noun with definite article 'the stronghold'. The conjectural named town Misgab lacks independent attestation; the native source record is retained for provenance but its biblical town key and affirmative biblical-place flags were withdrawn.",
+        "claimed_relation": "reversible_correction_with_pinned_source_lexemes"
+      }
     },
     {
       "source_id": "place:MoabPlains",
@@ -2004,18 +2148,31 @@
     },
     {
       "source_id": "place:Ramah.8",
-      "outcome": "unresolved",
+      "outcome": "corrected",
       "original_key_verses": [
         "09022006"
       ],
-      "editorial_conclusion": "1 Samuel 22:6 has Saul on a height at Gibeah, not a clearly separate proper-named Ramah settlement; exact identity unproved.",
+      "editorial_conclusion": "1 Samuel 22:6 names Gibeah and describes Saul on a height (ramah); the latter is not an independently written name for a second settlement. The inherited key and false possible identity with the unrelated Gibeah of Phinehas were withdrawn with complete receipts.",
       "source_context": [
         {
           "verse": "09022006",
           "excerpt": "now heard Saul that discovered David and men who with him and Saul sitting at the Gibeah under the tamarisk_tree on the height and spear his in hand his and all servants his standing around him"
         }
       ],
-      "nearby_existing_word_anchors": []
+      "nearby_existing_word_anchors": [],
+      "required_receipt_action": "resolve_final_twelve_source_identity",
+      "source_proof": {
+        "pinned_word_ids": [
+          "o090220060112",
+          "o090220060142"
+        ],
+        "independent_references": [
+          "https://biblehub.com/hebrew/7413.htm",
+          "https://biblehub.com/1_samuel/22-6.htm"
+        ],
+        "interpretation": "1 Samuel 22:6 names Gibeah and describes Saul on a height (ramah); the latter is not an independently written name for a second settlement. The inherited key and false possible identity with the unrelated Gibeah of Phinehas were withdrawn with complete receipts.",
+        "claimed_relation": "reversible_correction_with_pinned_source_lexemes"
+      }
     },
     {
       "source_id": "place:RedSea.2",
