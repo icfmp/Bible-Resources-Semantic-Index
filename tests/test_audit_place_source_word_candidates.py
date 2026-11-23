@@ -46,6 +46,19 @@ class PlaceWordTriageTests(unittest.TestCase):
                              "o070120120081")
             self.assertEqual(p.read_bytes(), original)
 
+    def test_more_than_twenty_source_candidates_remain_inspectable(self):
+        row = {"source_id": "place:Complete", "label": "Complete",
+               "query_name": "complete", "key_references": ["01001001"],
+               "only_mentioned_in_apocrypha": False}
+        words = {"01001001": [
+            {"word_id": f"o01001001{i:04d}", "english": "Complete",
+             "gloss": "Complete", "lemma": "x", "text": "x"} for i in range(25)
+        ]}
+        result = mod.triage([row], words)
+        self.assertEqual(len(result["cases"][0]["matching_source_words"]), 25)
+        self.assertEqual(result["cases"][0]["matching_source_words"][-1]["word_id"],
+                         "o010010010024")
+
     def test_corpus_without_candidate_does_not_fabricate_word_id(self):
         cases = [{"source_id": "place:Foo", "label": "Foo",
                   "query_name": "foo", "key_references": ["78005026"],
