@@ -19,7 +19,32 @@
     "review_status": "source_unreviewed",
     "source_id": "place:Bezek",
     "source_primary_id": "place:Bezek",
-    "source_sha256": "7d2d57091a96d5e9e2702690aecc3e2ee96113c88f0a605d0f4a2c81b6a96b7e"
+    "source_sha256": "7d2d57091a96d5e9e2702690aecc3e2ee96113c88f0a605d0f4a2c81b6a96b7e",
+    "editorial_field_changes": [
+      {
+        "action": "remove_unproven_cross_entity_key_identity",
+        "removed_reference_values": {
+          "key_references": [
+            "09011008"
+          ]
+        },
+        "reason": "Judges 1:4–5 names the site associated with Adoni-bezek, already linked to this source ID, while 1 Samuel 11:8 names Saul's mustering place. The latter has a separately anchored source identity place:Bezek.2 with exact WLC word; the identity of the two historical places is not established. Remove the incorrectly cross-linked Saul key and replace the unproved Manasseh geographical qualifier with the actual Judges narrative qualifier.",
+        "evidence": [
+          "Judges 1:4–7; 1 Samuel 11:8",
+          "https://www.knowing-jesus.com/places/Bezek",
+          "https://biblecentral.info/places/bezek/",
+          "Pinned o090110080022 remains on distinct place:Bezek.2"
+        ],
+        "replaced_localization_values": {
+          "eng": {
+            "preferred_label": {
+              "from": "Bezek (of Manasseh)",
+              "to": "Bezek (Adoni-bezek)"
+            }
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -45,7 +70,6 @@
   "is_artifact": false,
   "is_person": false,
   "key_references": [
-    "09011008",
     "07001005",
     "07001004"
   ],
@@ -60,7 +84,7 @@
       "alternate_labels": [
         "Bezek"
       ],
-      "preferred_label": "Bezek (of Manasseh)"
+      "preferred_label": "Bezek (Adoni-bezek)"
     }
   },
   "mentioned_in_bible": true,
