@@ -59,6 +59,8 @@ def diagnose(index: dict, target_ids: set[str]) -> dict:
 
     missing = Counter()
     missing_by_book = Counter()
+    missing_per_verse = Counter()
+    above_span_gaps = Counter()
     cross = Counter()
     cross_by_book = Counter()
     deltas = Counter()
@@ -86,10 +88,17 @@ def diagnose(index: dict, target_ids: set[str]) -> dict:
                     kind = "below_target_verse_span"
                 elif _ordinal(t) > max(ordinals):
                     kind = "above_target_verse_span"
+                    base_delta = _ordinal(t)[0] - max(ordinals)[0]
+                    if base_delta:
+                        above_span_gaps[f"word_ordinal_+{base_delta}"] += 1
+                    else:
+                        part_delta = _ordinal(t)[1] - max(ordinals)[1]
+                        above_span_gaps[f"subword_part_+{part_delta}"] += 1
                 else:
                     kind = "gap_within_target_verse_span"
                 missing[kind] += 1
                 missing_by_book[t[:2]] += 1
+                missing_per_verse[t[:8]] += 1
         if "cross_verse_selector" in problems:
             counted_cross += 1
             if not source or not target or any(not isinstance(x, str) for x in source + target):
@@ -123,6 +132,9 @@ def diagnose(index: dict, target_ids: set[str]) -> dict:
         "unattested_target_selectors": sum(missing.values()),
         "unattested_target_classes": _ordered(missing),
         "unattested_target_by_book": _ordered(missing_by_book),
+        "unattested_target_distinct_verses": len(missing_per_verse),
+        "unattested_targets_per_verse": _ordered(Counter(str(n) for n in missing_per_verse.values())),
+        "above_target_span_ordinal_gaps": _ordered(above_span_gaps),
         "cross_verse_records": counted_cross,
         "cross_verse_reference_pairs": sum(pairs.values()),
         "distinct_cross_verse_pairs": len(pairs),
