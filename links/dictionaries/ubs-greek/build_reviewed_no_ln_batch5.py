@@ -75,10 +75,20 @@ def review_ledger(ledger, report):
     return reviewed
 
 
-def build(candidate, source_report, baseline, english, french, macula, report, ledger):
-    independently_audited = AUDIT["audit"](source_report, baseline, english, french, macula)
-    if independently_audited != report:
-        raise ValueError("Pinned original Greek no-LN word-ID evidence register modified")
+def build(candidate, source_report, baseline, english, french, macula, ledger):
+    # This retained independent audit exhaustively scans the original
+    # 137,741-word corpus and original UBS EN/FR headwords. Its former
+    # temporary JSON handoff had no reader other than this builder.
+    report = AUDIT["audit"](source_report, baseline, english, french, macula)
+    if (report.get("status") !=
+          "PRIVATE_1218_original_Greek_lemma_only_without_UBS_LN_NOT_APPROVED"
+        or report.get("all_original_words_audited") != 137741
+        or report.get("original_no_ln_words") != 3249
+        or report.get("previously_reviewed_eimi_entry_only_words") != 2031
+        or report.get("remaining_unapproved_original_words") != 1218
+        or report.get("new_contextual_ubs_lexids") != 0
+        or report.get("publication_approved") is not False):
+        raise ValueError("Original Greek no-LN source audit contract drift")
     if (candidate["editorial_candidate"].get("reviewed_original_headword_words_total") != 7934
         or candidate["editorial_candidate"].get("other_original_words_still_unapproved") != 35
         or candidate["editorial_candidate"].get("publication_approved") is not False
@@ -177,13 +187,13 @@ def build(candidate, source_report, baseline, english, french, macula, report, l
 def main():
     p = argparse.ArgumentParser(description=__doc__)
     for name in ("candidate", "source_report", "index", "english", "french",
-                 "macula", "report", "ledger", "output"):
+                 "macula", "ledger", "output"):
         p.add_argument("--" + name, type=Path, required=True)
     a = p.parse_args()
     read = lambda x: json.loads(x.read_text(encoding="utf-8-sig"))
     out = build(read(a.candidate), read(a.source_report), read(a.index),
                 read(a.english), read(a.french), a.macula,
-                read(a.report), read(a.ledger))
+                read(a.ledger))
     a.output.write_bytes(canonical(out))
     print("UBS_GREEK_BATCH5_ENTRY_ONLY_VERIFIED", json.dumps({
         "new_word_ids": 1218,
