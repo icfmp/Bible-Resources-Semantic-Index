@@ -14,10 +14,38 @@
   },
   "bsi": {
     "canonical_id": "place:HolyPlace",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:HolyPlace",
     "source_primary_id": "place:HolyPlace",
-    "source_sha256": "0d5a9e3b9b2d047d3d73ac670d939abddc8dcc49416146c0277feba04bfb67c9"
+    "source_sha256": "0d5a9e3b9b2d047d3d73ac670d939abddc8dcc49416146c0277feba04bfb67c9",
+    "editorial_reason": "Leviticus chapter 2 has no verse 23 in the pinned Hebrew edition. No reliable one-to-one replacement for that invented key is evidenced; retain the independently attested Exodus 26:33 Holy Place key and remove only the impossible reference.",
+    "editorial_evidence": [
+      "Pinned WLC has no Lev 2:23",
+      "Pinned WLC Ex 26:33 o020260330172 is an already linked direct Holy Place source word"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "adjudicate_final_source_key_mismatch",
+        "reason": "Leviticus chapter 2 has no verse 23 in the pinned Hebrew edition. No reliable one-to-one replacement for that invented key is evidenced; retain the independently attested Exodus 26:33 Holy Place key and remove only the impossible reference.",
+        "evidence": [
+          "Pinned WLC has no Lev 2:23",
+          "Pinned WLC Ex 26:33 o020260330172 is an already linked direct Holy Place source word"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "key_references": [
+              "02026033",
+              "03002023"
+            ]
+          },
+          "after": {
+            "key_references": [
+              "02026033"
+            ]
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "SBLGNT": [
@@ -155,8 +183,7 @@
   "is_artifact": true,
   "is_person": false,
   "key_references": [
-    "02026033",
-    "03002023"
+    "02026033"
   ],
   "localizations": {
     "eng": {

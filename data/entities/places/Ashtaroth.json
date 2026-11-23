@@ -20,10 +20,39 @@
   },
   "bsi": {
     "canonical_id": "place:Ashtaroth",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:Ashtaroth",
     "source_primary_id": "place:Ashtaroth",
-    "source_sha256": "65c2214d9615162ddaf80776e531819c0f04246b70a21678de387eb64ddd4b83"
+    "source_sha256": "65c2214d9615162ddaf80776e531819c0f04246b70a21678de387eb64ddd4b83",
+    "editorial_reason": "The inherited 1 Chronicles 6:71 key follows a different chapter-numbering convention than the pinned WLC and has no verse witness there. In this source edition Ashtaroth is attested at 1 Chronicles 6:56, with an original place-name token already linked.",
+    "editorial_evidence": [
+      "Pinned WLC 1Chr 6:71 has no aligned verse in this edition",
+      "Pinned WLC 1Chr 6:56 o130060560131 directly attests Ashtaroth"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "adjudicate_final_source_key_mismatch",
+        "reason": "The inherited 1 Chronicles 6:71 key follows a different chapter-numbering convention than the pinned WLC and has no verse witness there. In this source edition Ashtaroth is attested at 1 Chronicles 6:56, with an original place-name token already linked.",
+        "evidence": [
+          "Pinned WLC 1Chr 6:71 has no aligned verse in this edition",
+          "Pinned WLC 1Chr 6:56 o130060560131 directly attests Ashtaroth"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "key_references": [
+              "13006071",
+              "06012004"
+            ]
+          },
+          "after": {
+            "key_references": [
+              "06012004",
+              "13006056"
+            ]
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -71,8 +100,8 @@
   "is_artifact": false,
   "is_person": false,
   "key_references": [
-    "13006071",
-    "06012004"
+    "06012004",
+    "13006056"
   ],
   "localizations": {
     "eng": {

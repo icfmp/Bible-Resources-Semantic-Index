@@ -19,10 +19,41 @@
   ],
   "bsi": {
     "canonical_id": "place:Beth-horonUpper",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:Beth-horonUpper",
     "source_primary_id": "place:Beth-horonUpper",
-    "source_sha256": "3c921eed31da953fa5b378d9be4d8d8d5858730ba189ef4690029db65637a3da"
+    "source_sha256": "3c921eed31da953fa5b378d9be4d8d8d5858730ba189ef4690029db65637a3da",
+    "editorial_reason": "Judges 16:5 concerns the Philistine rulers' demand to Delilah, not Upper Beth-horon. The matching topographical source appears at Joshua 16:5 with an explicit original Hebrew name word, already linked to this location.",
+    "editorial_evidence": [
+      "Pinned WLC Judg 16:5 describes Delilah and Philistine rulers",
+      "Pinned WLC Josh 16:5 o060160050151 names Upper Beth-horon"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "adjudicate_final_source_key_mismatch",
+        "reason": "Judges 16:5 concerns the Philistine rulers' demand to Delilah, not Upper Beth-horon. The matching topographical source appears at Joshua 16:5 with an explicit original Hebrew name word, already linked to this location.",
+        "evidence": [
+          "Pinned WLC Judg 16:5 describes Delilah and Philistine rulers",
+          "Pinned WLC Josh 16:5 o060160050151 names Upper Beth-horon"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "key_references": [
+              "13007024",
+              "14008005",
+              "07016005"
+            ]
+          },
+          "after": {
+            "key_references": [
+              "13007024",
+              "14008005",
+              "06016005"
+            ]
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -53,7 +84,7 @@
   "key_references": [
     "13007024",
     "14008005",
-    "07016005"
+    "06016005"
   ],
   "localizations": {
     "eng": {

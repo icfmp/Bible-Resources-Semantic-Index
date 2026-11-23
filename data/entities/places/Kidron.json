@@ -24,10 +24,45 @@
   },
   "bsi": {
     "canonical_id": "place:Kidron",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:Kidron",
     "source_primary_id": "place:Kidron",
-    "source_sha256": "8c8e91d7653f8394f8f975a39c227a5b9c23eee4a7740235081e0e8be0413e7c"
+    "source_sha256": "8c8e91d7653f8394f8f975a39c227a5b9c23eee4a7740235081e0e8be0413e7c",
+    "editorial_reason": "John 8:1 states only that Jesus went to the Mount of Olives; it does not describe his crossing the Kidron. John 18:1 explicitly locates the crossing beyond the Kidron brook in the pinned Greek and is already directly linked.",
+    "editorial_evidence": [
+      "Pinned SBLGNT John 8:1 names the Mount of Olives, not Kidron",
+      "Pinned SBLGNT John 18:1 n43018001013 directly names Kidron"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "adjudicate_final_source_key_mismatch",
+        "reason": "John 8:1 states only that Jesus went to the Mount of Olives; it does not describe his crossing the Kidron. John 18:1 explicitly locates the crossing beyond the Kidron brook in the pinned Greek and is already directly linked.",
+        "evidence": [
+          "Pinned SBLGNT John 8:1 names the Mount of Olives, not Kidron",
+          "Pinned SBLGNT John 18:1 n43018001013 directly names Kidron"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "key_references": [
+              "14015016",
+              "43008001",
+              "11015013",
+              "12023012",
+              "12023004"
+            ]
+          },
+          "after": {
+            "key_references": [
+              "14015016",
+              "11015013",
+              "12023012",
+              "12023004",
+              "43018001"
+            ]
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "SBLGNT": [
@@ -98,10 +133,10 @@
   "is_person": false,
   "key_references": [
     "14015016",
-    "43008001",
     "11015013",
     "12023012",
-    "12023004"
+    "12023004",
+    "43018001"
   ],
   "localizations": {
     "eng": {
