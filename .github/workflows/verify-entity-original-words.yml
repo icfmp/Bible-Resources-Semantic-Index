@@ -335,3 +335,11 @@ jobs:
             --compact
           # Distinguish genuine source identities, adjacent narratives,
           # false inherited associations and absent words without rewriting sources.
+
+      - name: Inspect word-level disputed Sidon Moses city-of-David and idol-temple claims
+        run: |
+          python3 -I scripts/inspect_pinned_original_verse.py \
+            --wlc macula-hebrew/WLC/tsv/macula-hebrew.tsv \
+            --sblgnt macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv \
+            --verses 06010006 40001009 11002010 12010027 13010010 12024018 58011037 16004002 12023031 12023034
+          # No source proof may be borrowed from a neighboring identity.
