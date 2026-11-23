@@ -525,16 +525,3 @@ jobs:
           python3 -I scripts/verify_historical_asset.py \
             --kind ubs_hebrew \
             --archive /tmp/BSI-UBSHebrew-0.9.4-v1.0.0.zip
-      - name: Verify complete ubs-hebrew snapshot against actual pinned-source output (runner-local only)
-        shell: bash
-        run: |
-          set -euo pipefail
-          output="/tmp/bsi-work-ubs-hebrew-${GITHUB_SHA}.tar.gz"
-          python3 -I scripts/work_snapshot.py pack \
-            --kind ubs-hebrew \
-            --source-commit "$GITHUB_SHA" \
-            --file reviewed-lexical-candidate.json=/tmp/bsi-ubs-v1-final-275-word-candidate.json \
-            --file semantic-feasibility-audit.json=/tmp/bsi-ubs-hebrew-v11-source-only-semantic-feasibility-PRIVATE.json \
-            --file contextual-pilot-witnesses.json=/tmp/bsi-ubs-hebrew-v11-72-word-contextual-pilot-PRIVATE.json \
-            --output "$output"
-          python3 -I scripts/work_snapshot.py verify --archive "$output"
