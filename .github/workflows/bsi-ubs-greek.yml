@@ -9,6 +9,8 @@ on:
       - "docs/V1_CONSUMPTION.md"
       - "scripts/inspect_v1_published_assets.py"
       - "tests/test_v1_published_consumer.py"
+      - "scripts/verify_generated_json.py"
+      - "tests/test_verify_generated_json.py"
       - "scripts/verify_historical_asset.py"
   push:
     branches: [main]
@@ -19,6 +21,8 @@ on:
       - "docs/V1_CONSUMPTION.md"
       - "scripts/inspect_v1_published_assets.py"
       - "tests/test_v1_published_consumer.py"
+      - "scripts/verify_generated_json.py"
+      - "tests/test_verify_generated_json.py"
   workflow_dispatch:
 
 permissions:
@@ -70,12 +74,13 @@ jobs:
             --french ubs-source/dictionaries/greek/JSON/UBSGreekNTDic-v1.0-fr.JSON \
             --macula macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv \
             --output /tmp/bsi-ubs-greek-index.json
+          python3 -I scripts/verify_generated_json.py \
+            --generated /tmp/bsi-ubs-greek-index.json \
+            --baseline links/dictionaries/ubs-greek/index.json
           python3 - <<'PY'
           import json
           from pathlib import Path
           actual=json.loads(Path("/tmp/bsi-ubs-greek-index.json").read_text(encoding="utf-8"))
-          pinned=json.loads(Path("links/dictionaries/ubs-greek/index.json").read_text(encoding="utf-8"))
-          assert actual==pinned, "Generated UBS index differs from committed index"
           assert actual["statistics"]["shared_entries"]==5507
           assert actual["statistics"]["shared_senses"]==9160
           assert actual["coverage"]["macula_words"]==137741
