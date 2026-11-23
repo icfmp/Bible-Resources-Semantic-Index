@@ -42,22 +42,31 @@ def read_json(path):
                       object_pairs_hook=strict_object, parse_constant=reject)
 
 
-def normalized_id(value, canon):
+def normalized_id(value, canon, allow_wlc_suffix=False):
     if not isinstance(value, str):
         raise ValueError("non-string original token ID")
-    digits = value[1:] if value[:1] in ("n", "o") else value
     prefix = "n" if canon == "nt" else "o"
-    if (value[:1] in ("n", "o") and value[0] != prefix
-            or not re.fullmatch(r"[0-9]{11,12}", digits)
-            or (len(digits) == 12 and digits[11] == "0")):
+    if value[:1] in ("n", "o") and value[0] != prefix:
+        raise ValueError(f"unsupported original token ID: {value}")
+    unprefixed = value[1:] if value[:1] == prefix else value
+    # MACULA WLC has *additional real token identities* such as
+    # o010010050031ה. Never strip the Hebrew suffix to force a join with
+    # Clear.Bible's ordinal-only WLCM alignment.
+    match = re.fullmatch(r"([0-9]{11,12})([\u05d0-\u05ea]*)", unprefixed)
+    if match is None:
+        raise ValueError(f"unsupported original token ID: {value}")
+    digits, suffix = match.groups()
+    if suffix and (canon != "ot" or not allow_wlc_suffix):
+        raise ValueError(f"unsupported original token ID: {value}")
+    if len(digits) == 12 and digits[11] == "0":
         raise ValueError(f"unsupported original token ID: {value}")
     book = int(digits[:2])
     if not ((40 <= book <= 66) if canon == "nt" else (1 <= book <= 39)):
         raise ValueError(f"outside expected corpus: {value}")
-    return prefix + digits
+    return prefix + digits + suffix
 
 
-def collect_source(path, canon, id_field, lemma_field):
+def collect_source(path, canon, id_field, lemma_field, allow_wlc_suffix=False):
     """Preserve an original source's IDs exactly, but count lemmas without export."""
     source = {}
     with Path(path).open("r", encoding="utf-8-sig", newline="") as file:
@@ -67,7 +76,7 @@ def collect_source(path, canon, id_field, lemma_field):
         has_lemma = lemma_field in reader.fieldnames
         for n, row in enumerate(reader, start=2):
             value = row[id_field]
-            wid = normalized_id(value, canon)
+            wid = normalized_id(value, canon, allow_wlc_suffix=allow_wlc_suffix)
             if wid in source:
                 raise ValueError(f"{path}:{n}: duplicated ID {wid}")
             lemma = row[lemma_field] if has_lemma else ""
@@ -118,6 +127,10 @@ def compare(canon, source, pivot, aligned):
         "canon": canon,
         "source_tokens_clear_bible": len(all_source),
         "source_tokens_brsi_macula": len(all_pivot),
+        "brsi_macula_wlc_suffix_tokens": sum(
+            bool(re.fullmatch(r"o[0-9]{11,12}[\u05d0-\u05ea]+", wid))
+            for wid in all_pivot
+        ),
         "original_ids_present_in_both": len(common),
         "clear_bible_only_original_ids": len(all_source - all_pivot),
         "brsi_macula_only_original_ids": len(all_pivot - all_source),
@@ -167,7 +180,8 @@ def audit(alignment_manifest, candidate_receipt, source_paths, candidate_paths, 
         pivot_path = Path(pivot_paths[canon])
         pivot_sha = expected_integrity(pivot_path, pivot_lock.get("sha256"))
         source = collect_source(source_path, canon, "id", "lemma")
-        pivot = collect_source(pivot_path, canon, "xml:id", "lemma")
+        pivot = collect_source(pivot_path, canon, "xml:id", "lemma",
+                               allow_wlc_suffix=(canon == "ot"))
         aligned = candidate.get("by_source")
         if not isinstance(aligned, dict):
             raise ValueError(f"{canon}: no candidate by_source index")
