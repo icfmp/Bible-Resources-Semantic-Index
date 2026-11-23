@@ -9,6 +9,7 @@ on:
       - "data/source-key-next-115-candidates.json"
       - "data/source-key-unresolved-queue.json"
       - "data/source-key-next-115-resolved.json"
+      - "data/source-key-final-128-candidates.json"
       - "scripts/validate_source_key_resolution_batches.py"
       - "tests/test_source_key_resolution_batches.py"
       - "scripts/inspect_next_source_key_cases.py"
@@ -241,3 +242,13 @@ jobs:
             --pool data/source-key-unresolved-queue.json \
             --wlc macula-hebrew/WLC/tsv/macula-hebrew.tsv \
             --sblgnt macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv
+
+      - name: Inspect final 128 distinct source-key identities without automatic adjudication
+        run: |
+          python3 -I scripts/inspect_next_source_key_cases.py \
+            --data data \
+            --candidates data/source-key-final-128-candidates.json \
+            --wlc macula-hebrew/WLC/tsv/macula-hebrew.tsv \
+            --sblgnt macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv \
+            --compact
+          # No records are changed by this read-only dossier.
