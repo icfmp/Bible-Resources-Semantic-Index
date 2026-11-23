@@ -89,10 +89,10 @@ def review_ledger(ledger, report):
     return decisions
 
 
-def review(candidate, raw_source, report, ledger, english, french):
-    independently_verified=SOURCE["audit"](raw_source,english,french)
-    if independently_verified!=report:
-        raise ValueError("Greek five original compound Strong source report drift")
+def review(candidate, raw_source, ledger, english, french):
+    # Recompute the independent source audit directly: the historical
+    # temporary report was immediately recomputed and compared here.
+    report=SOURCE["audit"](raw_source,english,french)
     if (candidate["editorial_candidate"].get("reviewed_original_headword_words_total")!=9189
         or candidate["editorial_candidate"].get("other_original_words_still_unapproved")!=1
         or candidate["editorial_candidate"].get("publication_approved") is not False
@@ -206,11 +206,11 @@ def review(candidate, raw_source, report, ledger, english, french):
 
 def main():
     p=argparse.ArgumentParser(description=__doc__)
-    for x in ("candidate","raw_source","report","ledger","english","french","output"):
+    for x in ("candidate","raw_source","ledger","english","french","output"):
         p.add_argument("--"+x, required=True, type=Path)
     a=p.parse_args()
     read=lambda path:json.loads(path.read_text(encoding="utf-8-sig"))
-    result=review(read(a.candidate),read(a.raw_source),read(a.report),
+    result=review(read(a.candidate),read(a.raw_source),
                   read(a.ledger),read(a.english),read(a.french))
     a.output.write_bytes((json.dumps(result,sort_keys=True,ensure_ascii=False,
                           separators=(",",":"))+"\n").encode("utf-8"))
