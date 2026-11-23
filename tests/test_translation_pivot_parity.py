@@ -116,7 +116,7 @@ class PivotParityAuditTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "unsupported original token ID"):
             audit.normalized_id(extended, "ot")
         with self.pivot_paths["ot"].open("a", encoding="utf-8") as f:
-            f.write(extended + "\\tadditional\\n")
+            f.write(extended + "\tadditional\n")
         self.pivot_manifest["sources"]["ot"]["sha256"] = lock(self.pivot_paths["ot"])
         report = self.run_audit()["canon_audits"]["ot"]
         self.assertEqual(report["brsi_macula_wlc_suffix_tokens"], 1)
