@@ -18,7 +18,34 @@
     "review_status": "source_unreviewed",
     "source_id": "realia:UnleavenedBread",
     "source_primary_id": "realia:UnleavenedBread",
-    "source_sha256": "a7eff975eb74788fdf54298f8e11d1c0d886f48f29aefbc9d1ca075002e559a0"
+    "source_sha256": "a7eff975eb74788fdf54298f8e11d1c0d886f48f29aefbc9d1ca075002e559a0",
+    "editorial_field_changes": [
+      {
+        "action": "restore_exact_source_term_in_original_witness",
+        "added_reference_values": {
+          "references": [
+            "40026017",
+            "46005008"
+          ]
+        },
+        "added_original_word_groups": {
+          "SBLGNT": [
+            [
+              "n40026017005"
+            ],
+            [
+              "n46005008015"
+            ]
+          ]
+        },
+        "reason": "Matthew 26:17 and 1 Corinthians 5:8 directly name unleavened bread in exact Greek source tokens.",
+        "evidence": [
+          "ORG BCV8 40026017",
+          "ORG BCV8 46005008",
+          "Pinned Macula original-word TSV evidence Clear-Bible/macula-greek@8423afe47b9e8f24b7772e808af45c7159a6fe7e"
+        ]
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -181,6 +208,14 @@
       [
         "o260450210121"
       ]
+    ],
+    "SBLGNT": [
+      [
+        "n40026017005"
+      ],
+      [
+        "n46005008015"
+      ]
     ]
   },
   "id": "realia:UnleavenedBread",
@@ -253,7 +288,9 @@
     "14030021",
     "14035017",
     "15006022",
-    "26045021"
+    "26045021",
+    "40026017",
+    "46005008"
   ],
   "subject_referents": {
     "wlc": [
