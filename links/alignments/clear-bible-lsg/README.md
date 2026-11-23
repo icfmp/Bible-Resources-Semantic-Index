@@ -88,6 +88,19 @@ schema, which retains 1:n, n:1, n:m and unresolved records.
   [issue #5](https://github.com/Clear-Bible/Alignments/issues/5) tracks
   historical WLC source ID compatibility.
 
+## Read-only classification of outstanding token gaps
+
+The maintained [target-gap auditor](../../../scripts/audit_translation_target_gaps.py)
+is run by the pinned alignment workflow after full candidate and original-file
+checksum verification. It checks the target TSVs again against their pinned
+SHA-256 digests, then classifies unattested NT target token IDs by target
+verse availability and ordinal range, and OT cross-verse references by
+book/chapter/verse shifts and repeated source→target reference pairs. Its
+text-free report remains runner-local, and is not a publication or a corrected
+alignment. Numeric ordinal proximity **never proves** a replacement word;
+repeated verse shifts **never prove** a legitimate versification conversion.
+The original problem counts must still match the full importer receipt.
+
 **No fabricated alignments, upstream source edits, editorial approvals or
 claims of full-corpus coverage** follow from a clean transformation.
 
