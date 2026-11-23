@@ -15,10 +15,42 @@
   },
   "bsi": {
     "canonical_id": "person:Nathanael",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "person:Nathanael",
     "source_primary_id": "person:Nathanael",
-    "source_sha256": "c6d3da2e60ea96727d5785f429cba71bc8c0193de24bd9442ab42bc729adf34c"
+    "source_sha256": "c6d3da2e60ea96727d5785f429cba71bc8c0193de24bd9442ab42bc729adf34c",
+    "editorial_reason": "Matthew 10:3 explicitly lists Bartholomew, not Nathanael. Their traditional identification is a hypothesis, not a direct biblical identity attestation; preserve the John 1 and 21 explicit Nathanael source links without turning an unproved identification into a key claim.",
+    "editorial_evidence": [
+      "Pinned SBLGNT Matt 10:3 names Bartholomew, not Nathanael",
+      "Pinned SBLGNT John 1:45 n43001045004 directly names Nathanael"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "adjudicate_final_source_key_mismatch",
+        "reason": "Matthew 10:3 explicitly lists Bartholomew, not Nathanael. Their traditional identification is a hypothesis, not a direct biblical identity attestation; preserve the John 1 and 21 explicit Nathanael source links without turning an unproved identification into a key claim.",
+        "evidence": [
+          "Pinned SBLGNT Matt 10:3 names Bartholomew, not Nathanael",
+          "Pinned SBLGNT John 1:45 n43001045004 directly names Nathanael"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "key_references": [
+              "43001045",
+              "43001046",
+              "43021002",
+              "40010003"
+            ]
+          },
+          "after": {
+            "key_references": [
+              "43001045",
+              "43001046",
+              "43021002"
+            ]
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "SBLGNT": [
@@ -47,8 +79,7 @@
   "key_references": [
     "43001045",
     "43001046",
-    "43021002",
-    "40010003"
+    "43021002"
   ],
   "lemmas": {
     "el": [

@@ -19,10 +19,45 @@
   },
   "bsi": {
     "canonical_id": "person:Hilkiah.2",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "person:Hilkiah.2",
     "source_primary_id": "person:Hilkiah.2",
-    "source_sha256": "0efb02b7cd2d85c405440b428a38d55a3771703e58f1e2fda8bfcb89c93e57ab"
+    "source_sha256": "0efb02b7cd2d85c405440b428a38d55a3771703e58f1e2fda8bfcb89c93e57ab",
+    "editorial_reason": "1 Chronicles 6:13 contains the genealogy of Samuel's sons and does not identify Hilkiah the priest. The priest's own pinned Hebrew name occurs at 1 Chronicles 5:39; retain the other explicit Hilkiah references, including Josiah's temple reforms.",
+    "editorial_evidence": [
+      "Pinned WLC 1Chr 6:13 concerns Samuel's sons",
+      "Pinned WLC 1Chr 5:39 o130050390041 names the priest Hilkiah"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "adjudicate_final_source_key_mismatch",
+        "reason": "1 Chronicles 6:13 contains the genealogy of Samuel's sons and does not identify Hilkiah the priest. The priest's own pinned Hebrew name occurs at 1 Chronicles 5:39; retain the other explicit Hilkiah references, including Josiah's temple reforms.",
+        "evidence": [
+          "Pinned WLC 1Chr 6:13 concerns Samuel's sons",
+          "Pinned WLC 1Chr 5:39 o130050390041 names the priest Hilkiah"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "key_references": [
+              "12022008",
+              "12023004",
+              "14034014",
+              "13006013",
+              "24029003"
+            ]
+          },
+          "after": {
+            "key_references": [
+              "12022008",
+              "12023004",
+              "14034014",
+              "24029003",
+              "13005039"
+            ]
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -101,8 +136,8 @@
     "12022008",
     "12023004",
     "14034014",
-    "13006013",
-    "24029003"
+    "24029003",
+    "13005039"
   ],
   "lemmas": {
     "he": [

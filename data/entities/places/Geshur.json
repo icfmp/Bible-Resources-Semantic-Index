@@ -20,10 +20,39 @@
   },
   "bsi": {
     "canonical_id": "place:Geshur",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:Geshur",
     "source_primary_id": "place:Geshur",
-    "source_sha256": "d0b05406c108d1afb916ffa8ea5568d33a4df13b341c86833aac86d66f50b597"
+    "source_sha256": "d0b05406c108d1afb916ffa8ea5568d33a4df13b341c86833aac86d66f50b597",
+    "editorial_reason": "2 Samuel 13:3 names Jonadab the friend of Amnon and does not identify Geshur. 2 Samuel 3:3 expressly identifies Maacah as daughter of Talmai king of Geshur; the transposed chapter key is corrected without changing the biblical text.",
+    "editorial_evidence": [
+      "Pinned WLC 2Sam 13:3 is about Jonadab and Amnon",
+      "Pinned WLC 2Sam 3:3 o100030030151 names Geshur directly"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "adjudicate_final_source_key_mismatch",
+        "reason": "2 Samuel 13:3 names Jonadab the friend of Amnon and does not identify Geshur. 2 Samuel 3:3 expressly identifies Maacah as daughter of Talmai king of Geshur; the transposed chapter key is corrected without changing the biblical text.",
+        "evidence": [
+          "Pinned WLC 2Sam 13:3 is about Jonadab and Amnon",
+          "Pinned WLC 2Sam 3:3 o100030030151 names Geshur directly"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "key_references": [
+              "10013003",
+              "10013037"
+            ]
+          },
+          "after": {
+            "key_references": [
+              "10003003",
+              "10013037"
+            ]
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -88,7 +117,7 @@
   "is_artifact": false,
   "is_person": false,
   "key_references": [
-    "10013003",
+    "10003003",
     "10013037"
   ],
   "localizations": {

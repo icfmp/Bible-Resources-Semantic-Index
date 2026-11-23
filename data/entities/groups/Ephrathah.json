@@ -9,10 +9,40 @@
   },
   "bsi": {
     "canonical_id": "group:Ephrathah",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "group:Ephrathah",
     "source_primary_id": "group:Ephrathah",
-    "source_sha256": "e59325c1934a5cb1e9373fd11428b87095d0134c8846ae3aa0006c61e3554d14"
+    "source_sha256": "e59325c1934a5cb1e9373fd11428b87095d0134c8846ae3aa0006c61e3554d14",
+    "editorial_reason": "1 Samuel 1:1 describes Elkanah as an Ephraimite from the hill country of Ephraim; that ethnonym is not the Ephrathite from Bethlehem associated with Jesse's family and Ruth. Preserve the distinct directly attested Ephrathite group and exclude the unrelated Ephraimite key.",
+    "editorial_evidence": [
+      "Pinned WLC 1Sam 1:1 identifies Elkanah as Ephraimite, not an Ephrathite",
+      "Pinned WLC 1Sam 17:12 o090170120041 directly denotes Ephrathite Jesse"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "adjudicate_final_source_key_mismatch",
+        "reason": "1 Samuel 1:1 describes Elkanah as an Ephraimite from the hill country of Ephraim; that ethnonym is not the Ephrathite from Bethlehem associated with Jesse's family and Ruth. Preserve the distinct directly attested Ephrathite group and exclude the unrelated Ephraimite key.",
+        "evidence": [
+          "Pinned WLC 1Sam 1:1 identifies Elkanah as Ephraimite, not an Ephrathite",
+          "Pinned WLC 1Sam 17:12 o090170120041 directly denotes Ephrathite Jesse"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "key_references": [
+              "08001002",
+              "09001001",
+              "09017012"
+            ]
+          },
+          "after": {
+            "key_references": [
+              "08001002",
+              "09017012"
+            ]
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -29,7 +59,6 @@
   "id": "group:Ephrathah",
   "key_references": [
     "08001002",
-    "09001001",
     "09017012"
   ],
   "lemmas": {

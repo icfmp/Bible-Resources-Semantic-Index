@@ -15,10 +15,42 @@
   },
   "bsi": {
     "canonical_id": "person:Bukki.2",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "person:Bukki.2",
     "source_primary_id": "person:Bukki.2",
-    "source_sha256": "d0638ae2cfa9398934c30e7e0dfa39ee438c8fc60026d0ddccd77debcbe88fde"
+    "source_sha256": "d0638ae2cfa9398934c30e7e0dfa39ee438c8fc60026d0ddccd77debcbe88fde",
+    "editorial_reason": "1 Chronicles 6:5 is the Gershomite genealogy, not the priest Bukki son of Abishua. In the pinned WLC the explicit Bukki priestly name occurs at 1 Chronicles 6:36 and has an existing linked original-word witness.",
+    "editorial_evidence": [
+      "Pinned WLC 1Chr 6:5 lists Gershomite descendants",
+      "Pinned WLC 1Chr 6:36 o130060360011 directly names the priest Bukki"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "adjudicate_final_source_key_mismatch",
+        "reason": "1 Chronicles 6:5 is the Gershomite genealogy, not the priest Bukki son of Abishua. In the pinned WLC the explicit Bukki priestly name occurs at 1 Chronicles 6:36 and has an existing linked original-word witness.",
+        "evidence": [
+          "Pinned WLC 1Chr 6:5 lists Gershomite descendants",
+          "Pinned WLC 1Chr 6:36 o130060360011 directly names the priest Bukki"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "key_references": [
+              "13005031",
+              "13006005",
+              "13006036",
+              "15007004"
+            ]
+          },
+          "after": {
+            "key_references": [
+              "13005031",
+              "13006036",
+              "15007004"
+            ]
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -41,7 +73,6 @@
   "id": "person:Bukki.2",
   "key_references": [
     "13005031",
-    "13006005",
     "13006036",
     "15007004"
   ],

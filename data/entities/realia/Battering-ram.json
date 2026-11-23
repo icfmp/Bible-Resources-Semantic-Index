@@ -11,10 +11,42 @@
   },
   "bsi": {
     "canonical_id": "realia:Battering-ram",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "realia:Battering-ram",
     "source_primary_id": "realia:Battering-ram",
-    "source_sha256": "a57e01e6a57691f2b22fa7fb19ffd51b4e5bf3a94a00c7883248e6d653a21c8f"
+    "source_sha256": "a57e01e6a57691f2b22fa7fb19ffd51b4e5bf3a94a00c7883248e6d653a21c8f",
+    "editorial_reason": "Isaiah 29:3 in the pinned WLC describes siegeworks or encircling siege towers but does not name the battering ram implement. The generic siegework cannot safely be turned into a specific ram word. Retain the exact original Hebrew ram and siege tool witness groups in Ezekiel 4:2 and 26:9, which are linked independently and already keyed.",
+    "editorial_evidence": [
+      "Pinned WLC Isa 29:3 o230290030061/o230290030091 is generic siege terminology and no specific ram term",
+      "Pinned WLC Ezek 26:9 o260260090072/o260260090073 refers to battering equipment, exact original linked source words",
+      "Current Ezek 4:2 and 26:9 key references and all immutable original source IDs remain unchanged"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "adjudicate_final_source_key_mismatch",
+        "reason": "Isaiah 29:3 in the pinned WLC describes siegeworks or encircling siege towers but does not name the battering ram implement. The generic siegework cannot safely be turned into a specific ram word. Retain the exact original Hebrew ram and siege tool witness groups in Ezekiel 4:2 and 26:9, which are linked independently and already keyed.",
+        "evidence": [
+          "Pinned WLC Isa 29:3 o230290030061/o230290030091 is generic siege terminology and no specific ram term",
+          "Pinned WLC Ezek 26:9 o260260090072/o260260090073 refers to battering equipment, exact original linked source words",
+          "Current Ezek 4:2 and 26:9 key references and all immutable original source IDs remain unchanged"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "key_references": [
+              "23029003",
+              "26004002",
+              "26026009"
+            ]
+          },
+          "after": {
+            "key_references": [
+              "26004002",
+              "26026009"
+            ]
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -39,7 +71,6 @@
   },
   "id": "realia:Battering-ram",
   "key_references": [
-    "23029003",
     "26004002",
     "26026009"
   ],

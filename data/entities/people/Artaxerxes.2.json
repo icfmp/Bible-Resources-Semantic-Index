@@ -14,10 +14,40 @@
   },
   "bsi": {
     "canonical_id": "person:Artaxerxes.2",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "person:Artaxerxes.2",
     "source_primary_id": "person:Artaxerxes.2",
-    "source_sha256": "4932525379ae6140c5206aed8fdb801ced07c3c509c1e495eec23237d40cf62b"
+    "source_sha256": "4932525379ae6140c5206aed8fdb801ced07c3c509c1e495eec23237d40cf62b",
+    "editorial_reason": "Ezra 4:6 and Esther 1:1, 1:9 and 2:17 identify the ruler as Ahasuerus/Xerxes, not the independently attested Artaxerxes of Ezra 4:7-23. These inherited identity keys conflate distinct royal-name witnesses; retain the source-linked Artaxerxes identity and the exact 4:7 token.",
+    "editorial_evidence": [
+      "Pinned WLC Ezra 4:6 explicitly names Ahasuerus; Ezra 4:7 o150040070021 and o150040070121 name Artaxerxes",
+      "Pinned WLC Esther 1:1 and 1:9 explicitly name Ahasuerus; Esther 2:17 refers to the same king, not Artaxerxes"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "adjudicate_final_source_key_mismatch",
+        "reason": "Ezra 4:6 and Esther 1:1, 1:9 and 2:17 identify the ruler as Ahasuerus/Xerxes, not the independently attested Artaxerxes of Ezra 4:7-23. These inherited identity keys conflate distinct royal-name witnesses; retain the source-linked Artaxerxes identity and the exact 4:7 token.",
+        "evidence": [
+          "Pinned WLC Ezra 4:6 explicitly names Ahasuerus; Ezra 4:7 o150040070021 and o150040070121 name Artaxerxes",
+          "Pinned WLC Esther 1:1 and 1:9 explicitly name Ahasuerus; Esther 2:17 refers to the same king, not Artaxerxes"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "key_references": [
+              "15004006",
+              "17001001",
+              "17001009",
+              "17002017"
+            ]
+          },
+          "after": {
+            "key_references": [
+              "15004007"
+            ]
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -41,10 +71,7 @@
   "gender": "male",
   "id": "person:Artaxerxes.2",
   "key_references": [
-    "15004006",
-    "17001001",
-    "17001009",
-    "17002017"
+    "15004007"
   ],
   "localizations": {
     "eng": {

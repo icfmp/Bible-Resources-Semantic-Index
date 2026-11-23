@@ -27,7 +27,17 @@ class OriginalObjectWordsTest(unittest.TestCase):
                 self.assertTrue(all(x["reason"] and x["evidence"] for x in receipts))
                 self.assertEqual(len(row["bsi"]["source_sha256"]),64)
                 self.assertEqual(row["bsi"]["review_status"],
-                                 "editorially_reviewed" if path == "fauna/Bird" else "source_unreviewed")
+                                 "editorially_reviewed" if path in {"fauna/Bird","realia/Rod"} else "source_unreviewed")
+                if path == "realia/Rod":
+                    corrections=[x for x in row["bsi"]["editorial_field_changes"]
+                                 if x["action"]=="adjudicate_final_source_key_mismatch"]
+                    self.assertEqual(len(corrections),1)
+                    before=corrections[0]["replaced_field_values"]["before"]["key_references"]
+                    after=corrections[0]["replaced_field_values"]["after"]["key_references"]
+                    self.assertIn("66012009",before)
+                    self.assertNotIn("66012009",after)
+                    self.assertIn("66012005",after)
+                    self.assertTrue(corrections[0]["reason"] and corrections[0]["evidence"])
                 if path == "fauna/Bird":
                     self.assertTrue(any(x["action"] == "restore_independently_pinned_exact_direct_mention"
                                         for x in row["bsi"]["editorial_field_changes"]))

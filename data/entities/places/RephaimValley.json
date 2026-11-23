@@ -22,10 +22,54 @@
   },
   "bsi": {
     "canonical_id": "place:RephaimValley",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:RephaimValley",
     "source_primary_id": "place:RephaimValley",
-    "source_sha256": "5f1a03869a3bcff919bb5e8d0ada3ef23c217b05047a1cefc9d795791436d67a"
+    "source_sha256": "5f1a03869a3bcff919bb5e8d0ada3ef23c217b05047a1cefc9d795791436d67a",
+    "editorial_reason": "2 Samuel 15:17 narrates David leaving Jerusalem during Absalom's rebellion, not the Valley of Rephaim. 2 Samuel 5:18 explicitly names the valley during the Philistine campaign. The inherited alternate label 'valley of Hinnom' conflates two distinct geographical valleys and is independently removed.",
+    "editorial_evidence": [
+      "Pinned WLC 2Sam 15:17 narrates David's escape, with no Valley of Rephaim",
+      "Pinned WLC 2Sam 5:18 o100050180042/o100050180051 names Valley of Rephaim",
+      "The Valley of Hinnom is a separate geographical source identity (place:HinnomValley)"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "adjudicate_final_source_key_mismatch",
+        "reason": "2 Samuel 15:17 narrates David leaving Jerusalem during Absalom's rebellion, not the Valley of Rephaim. 2 Samuel 5:18 explicitly names the valley during the Philistine campaign. The inherited alternate label 'valley of Hinnom' conflates two distinct geographical valleys and is independently removed.",
+        "evidence": [
+          "Pinned WLC 2Sam 15:17 narrates David's escape, with no Valley of Rephaim",
+          "Pinned WLC 2Sam 5:18 o100050180042/o100050180051 names Valley of Rephaim",
+          "The Valley of Hinnom is a separate geographical source identity (place:HinnomValley)"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "key_references": [
+              "10015017",
+              "06018016",
+              "06015008"
+            ],
+            "alternate_labels": [
+              "Valley of the Rephaim",
+              "Rephaim Valley",
+              "valley of Hinnom",
+              "Valley of the Rephaites"
+            ]
+          },
+          "after": {
+            "key_references": [
+              "10005018",
+              "06018016",
+              "06015008"
+            ],
+            "alternate_labels": [
+              "Valley of the Rephaim",
+              "Rephaim Valley",
+              "Valley of the Rephaites"
+            ]
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -77,7 +121,7 @@
   "is_artifact": false,
   "is_person": false,
   "key_references": [
-    "10015017",
+    "10005018",
     "06018016",
     "06015008"
   ],
@@ -86,7 +130,6 @@
       "alternate_labels": [
         "Valley of the Rephaim",
         "Rephaim Valley",
-        "valley of Hinnom",
         "Valley of the Rephaites"
       ],
       "preferred_label": "Valley of Rephaim"

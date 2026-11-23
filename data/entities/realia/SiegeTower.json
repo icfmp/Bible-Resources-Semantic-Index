@@ -12,10 +12,42 @@
   },
   "bsi": {
     "canonical_id": "realia:SiegeTower",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "realia:SiegeTower",
     "source_primary_id": "realia:SiegeTower",
-    "source_sha256": "6db11fc03267a457abb7c4fb300605c397851c48d4f244ef2b237a5d0e0e795e"
+    "source_sha256": "6db11fc03267a457abb7c4fb300605c397851c48d4f244ef2b237a5d0e0e795e",
+    "editorial_reason": "2 Samuel 20:15 builds a siege mound, Ezekiel 4:2 depicts multiple generic siegeworks and ramps, and Micah 4:14 describes a siege and rod-strike. None independently names this specific siege tower; retain the exact Isaiah 29:3 original-word source key instead of assigning unrelated implements.",
+    "editorial_evidence": [
+      "Pinned WLC 2Sam 20:15 describes a ramp or siege mound without an explicit tower",
+      "Pinned WLC Ezek 4:2 describes a siege wall, ramp and battering equipment; Mic 4:14 a besieged daughter of troops",
+      "Pinned WLC Isa 29:3 o230290030061 is already a directly linked siegeworks/tower witness"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "adjudicate_final_source_key_mismatch",
+        "reason": "2 Samuel 20:15 builds a siege mound, Ezekiel 4:2 depicts multiple generic siegeworks and ramps, and Micah 4:14 describes a siege and rod-strike. None independently names this specific siege tower; retain the exact Isaiah 29:3 original-word source key instead of assigning unrelated implements.",
+        "evidence": [
+          "Pinned WLC 2Sam 20:15 describes a ramp or siege mound without an explicit tower",
+          "Pinned WLC Ezek 4:2 describes a siege wall, ramp and battering equipment; Mic 4:14 a besieged daughter of troops",
+          "Pinned WLC Isa 29:3 o230290030061 is already a directly linked siegeworks/tower witness"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "key_references": [
+              "10020015",
+              "26004002",
+              "33004014",
+              "23029003"
+            ]
+          },
+          "after": {
+            "key_references": [
+              "23029003"
+            ]
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -36,9 +68,6 @@
   },
   "id": "realia:SiegeTower",
   "key_references": [
-    "10020015",
-    "26004002",
-    "33004014",
     "23029003"
   ],
   "lemmas": {

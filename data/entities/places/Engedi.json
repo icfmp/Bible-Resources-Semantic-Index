@@ -24,10 +24,38 @@
   },
   "bsi": {
     "canonical_id": "place:Engedi",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:Engedi",
     "source_primary_id": "place:Engedi",
-    "source_sha256": "f695df055afc6d4c56b7fcba14d56b30c50479515d0a8f6318712a8a1d545718"
+    "source_sha256": "f695df055afc6d4c56b7fcba14d56b30c50479515d0a8f6318712a8a1d545718",
+    "editorial_reason": "The inherited 1 Samuel 23:39 key is outside the source chapter; the En-gedi location appears explicitly in the pinned original at 1 Samuel 24:1, already a distinct, correctly retained key.",
+    "editorial_evidence": [
+      "Original key 09023039 is not present in the pinned WLC chapter",
+      "Pinned WLC 1Sam 24:1 o090240010061 and o090240010071 explicitly attest En-gedi"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "adjudicate_final_source_key_mismatch",
+        "reason": "The inherited 1 Samuel 23:39 key is outside the source chapter; the En-gedi location appears explicitly in the pinned original at 1 Samuel 24:1, already a distinct, correctly retained key.",
+        "evidence": [
+          "Original key 09023039 is not present in the pinned WLC chapter",
+          "Pinned WLC 1Sam 24:1 o090240010061 and o090240010071 explicitly attest En-gedi"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "key_references": [
+              "09023039",
+              "09024001"
+            ]
+          },
+          "after": {
+            "key_references": [
+              "09024001"
+            ]
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -83,7 +111,6 @@
   "is_artifact": false,
   "is_person": false,
   "key_references": [
-    "09023039",
     "09024001"
   ],
   "localizations": {

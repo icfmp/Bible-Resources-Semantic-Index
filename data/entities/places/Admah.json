@@ -22,10 +22,41 @@
   },
   "bsi": {
     "canonical_id": "place:Admah",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:Admah",
     "source_primary_id": "place:Admah",
-    "source_sha256": "e34a03d41adb714bd1627da2ed8bd9a9bffea0ebdd86cf380910a016f6d031c6"
+    "source_sha256": "e34a03d41adb714bd1627da2ed8bd9a9bffea0ebdd86cf380910a016f6d031c6",
+    "editorial_reason": "Genesis 10:10 enumerates Nimrod's cities Babel, Erech, Accad and Calneh, not Admah. The original Hebrew explicitly locates Admah in the Canaanite boundary at Genesis 10:19; this is the already preserved source word for this identity.",
+    "editorial_evidence": [
+      "Pinned WLC Gen 10:10 enumerates Babel, Erech, Accad and Calneh",
+      "Pinned WLC Gen 10:19 o010100190122 directly names Admah"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "adjudicate_final_source_key_mismatch",
+        "reason": "Genesis 10:10 enumerates Nimrod's cities Babel, Erech, Accad and Calneh, not Admah. The original Hebrew explicitly locates Admah in the Canaanite boundary at Genesis 10:19; this is the already preserved source word for this identity.",
+        "evidence": [
+          "Pinned WLC Gen 10:10 enumerates Babel, Erech, Accad and Calneh",
+          "Pinned WLC Gen 10:19 o010100190122 directly names Admah"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "key_references": [
+              "28011008",
+              "05029022",
+              "01010010"
+            ]
+          },
+          "after": {
+            "key_references": [
+              "28011008",
+              "05029022",
+              "01010019"
+            ]
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -62,7 +93,7 @@
   "key_references": [
     "28011008",
     "05029022",
-    "01010010"
+    "01010019"
   ],
   "lemmas": {
     "he": [

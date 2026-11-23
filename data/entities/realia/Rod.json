@@ -19,7 +19,7 @@
   },
   "bsi": {
     "canonical_id": "realia:Rod",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "realia:Rod",
     "source_primary_id": "realia:Rod",
     "source_sha256": "1ca4d6d7d7c7255135895818beab93aa40151f8ac4536f72187d6de284bdbe54",
@@ -46,7 +46,36 @@
           "ORG BCV8 19045007",
           "Pinned Macula original-word TSV evidence Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c"
         ]
+      },
+      {
+        "action": "adjudicate_final_source_key_mismatch",
+        "reason": "Revelation 12:9 describes the dragon/Satan being cast out, not any rod. Revelation 12:5 explicitly describes ruling the nations with an iron rod; the exact original Greek source word is already linked to this record.",
+        "evidence": [
+          "Pinned SBLGNT Rev 12:9 refers to the dragon/Satan, not a rod",
+          "Pinned SBLGNT Rev 12:5 n66012005012 is the original rod word"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "key_references": [
+              "19045007",
+              "66002027",
+              "66012009"
+            ]
+          },
+          "after": {
+            "key_references": [
+              "19045007",
+              "66002027",
+              "66012005"
+            ]
+          }
+        }
       }
+    ],
+    "editorial_reason": "Revelation 12:9 describes the dragon/Satan being cast out, not any rod. Revelation 12:5 explicitly describes ruling the nations with an iron rod; the exact original Greek source word is already linked to this record.",
+    "editorial_evidence": [
+      "Pinned SBLGNT Rev 12:9 refers to the dragon/Satan, not a rod",
+      "Pinned SBLGNT Rev 12:5 n66012005012 is the original rod word"
     ]
   },
   "explicit_instances": {
@@ -372,7 +401,7 @@
   "key_references": [
     "19045007",
     "66002027",
-    "66012009"
+    "66012005"
   ],
   "lemmas": {
     "el": [

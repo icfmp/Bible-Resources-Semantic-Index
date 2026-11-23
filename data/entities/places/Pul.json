@@ -19,10 +19,35 @@
   },
   "bsi": {
     "canonical_id": "place:Put",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:Pul",
     "source_primary_id": "place:Put",
-    "source_sha256": "eaed35dcabc5b2109a7507ace9a52c93b8ac0a9e0f46236555d0abcb2cbeb410"
+    "source_sha256": "eaed35dcabc5b2109a7507ace9a52c93b8ac0a9e0f46236555d0abcb2cbeb410",
+    "editorial_reason": "The pinned WLC Isaiah 66:19 has separate adjacent proper names in exact Hebrew: o230660190101 is פּוּל, glossed Pul (English field Put), whereas o230660190112 is ל֛וּד, Lud. The inherited preferred label 'Lud' on source identity place:Pul incorrectly conflates these neighboring names. Restore the source's Pul label without changing its Put association, Isaiah/Exekiel contextual key references, or pinned lexical data.",
+    "editorial_evidence": [
+      "Pinned Macula WLC Isa 66:19 o230660190101 = פּ֥וּל, original gloss Pul, English Put",
+      "Pinned WLC Isa 66:19 o230660190112 = ל֛וּד, separate name Lud",
+      "Pinned WLC Ezek 27:10 o260270100022 = Lud, o260270100032 = Put; contextual association to Put remains editorially qualified"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "disambiguate_pul_from_lud_source_label",
+        "reason": "The pinned WLC Isaiah 66:19 has separate adjacent proper names in exact Hebrew: o230660190101 is פּוּל, glossed Pul (English field Put), whereas o230660190112 is ל֛וּד, Lud. The inherited preferred label 'Lud' on source identity place:Pul incorrectly conflates these neighboring names. Restore the source's Pul label without changing its Put association, Isaiah/Exekiel contextual key references, or pinned lexical data.",
+        "evidence": [
+          "Pinned Macula WLC Isa 66:19 o230660190101 = פּ֥וּל, original gloss Pul, English Put",
+          "Pinned WLC Isa 66:19 o230660190112 = ל֛וּד, separate name Lud",
+          "Pinned WLC Ezek 27:10 o260270100022 = Lud, o260270100032 = Put; contextual association to Put remains editorially qualified"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "preferred_label": "Lud"
+          },
+          "after": {
+            "preferred_label": "Pul"
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -61,7 +86,7 @@
         "Phut",
         "Pul"
       ],
-      "preferred_label": "Lud"
+      "preferred_label": "Pul"
     }
   },
   "mentioned_in_bible": true,

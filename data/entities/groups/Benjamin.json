@@ -12,10 +12,39 @@
   },
   "bsi": {
     "canonical_id": "group:Benjamin",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "group:Benjamin",
     "source_primary_id": "group:Benjamin",
-    "source_sha256": "39e2815de4b262718deb7e7e6c39ad21800914b77e2c290fe22d7720e4d80fe9"
+    "source_sha256": "39e2815de4b262718deb7e7e6c39ad21800914b77e2c290fe22d7720e4d80fe9",
+    "editorial_reason": "The Hebrew Psalm 7 superscription identifies Cush as a Benjamite in verse 7:1, not in a zero-numbered Hebrew verse. Replace the inherited editorial 7:0 key with the source edition's actual first verse without inventing text.",
+    "editorial_evidence": [
+      "Pinned WLC Ps 7:1 o190070010101 is the Benjamite original word in the superscription",
+      "Pinned WLC has no lexical words at editorial BCV8 Psalm 7:0"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "adjudicate_final_source_key_mismatch",
+        "reason": "The Hebrew Psalm 7 superscription identifies Cush as a Benjamite in verse 7:1, not in a zero-numbered Hebrew verse. Replace the inherited editorial 7:0 key with the source edition's actual first verse without inventing text.",
+        "evidence": [
+          "Pinned WLC Ps 7:1 o190070010101 is the Benjamite original word in the superscription",
+          "Pinned WLC has no lexical words at editorial BCV8 Psalm 7:0"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "key_references": [
+              "07019016",
+              "19007000"
+            ]
+          },
+          "after": {
+            "key_references": [
+              "07019016",
+              "19007001"
+            ]
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "SBLGNT": [
@@ -499,7 +528,7 @@
   "id": "group:Benjamin",
   "key_references": [
     "07019016",
-    "19007000"
+    "19007001"
   ],
   "localizations": {
     "eng": {

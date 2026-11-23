@@ -9,10 +9,40 @@
   },
   "bsi": {
     "canonical_id": "realia:Jug",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "realia:Jug",
     "source_primary_id": "realia:Jug",
-    "source_sha256": "dd7b4e7f0bd0f0844888f0f3018390f40274feba483633b878250005dc97c718"
+    "source_sha256": "dd7b4e7f0bd0f0844888f0f3018390f40274feba483633b878250005dc97c718",
+    "editorial_reason": "Exodus 29:40 and Numbers 15:5 and 28:7 prescribe measured wine drink offerings in fractions of a hin; none names a jug or another container. Preserve the remaining directly attested vessel key in Exodus 25:29 rather than turning wine quantities into unsupported physical-jar identities.",
+    "editorial_evidence": [
+      "Pinned WLC Ex 29:40 and Num 15:5, 28:7 mention wine volumes or pouring, without a vessel term",
+      "Pinned WLC Ex 25:29 o020250290042/o020250290043 is already linked to the actual jug or libation vessel"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "adjudicate_final_source_key_mismatch",
+        "reason": "Exodus 29:40 and Numbers 15:5 and 28:7 prescribe measured wine drink offerings in fractions of a hin; none names a jug or another container. Preserve the remaining directly attested vessel key in Exodus 25:29 rather than turning wine quantities into unsupported physical-jar identities.",
+        "evidence": [
+          "Pinned WLC Ex 29:40 and Num 15:5, 28:7 mention wine volumes or pouring, without a vessel term",
+          "Pinned WLC Ex 25:29 o020250290042/o020250290043 is already linked to the actual jug or libation vessel"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "key_references": [
+              "02025029",
+              "02029040",
+              "04015005",
+              "04028007"
+            ]
+          },
+          "after": {
+            "key_references": [
+              "02025029"
+            ]
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -33,10 +63,7 @@
   },
   "id": "realia:Jug",
   "key_references": [
-    "02025029",
-    "02029040",
-    "04015005",
-    "04028007"
+    "02025029"
   ],
   "lemmas": {
     "he": [

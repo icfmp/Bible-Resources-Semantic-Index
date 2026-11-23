@@ -12,10 +12,37 @@
   },
   "bsi": {
     "canonical_id": "realia:RaisinCake",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "realia:RaisinCake",
     "source_primary_id": "realia:RaisinCake",
-    "source_sha256": "53971b228359563b424649c99e8d9e71f18bf76c1b88270c20b1a699b15736a2"
+    "source_sha256": "53971b228359563b424649c99e8d9e71f18bf76c1b88270c20b1a699b15736a2",
+    "editorial_reason": "1 Samuel 25:18 lists Abigail's loaves, wine, sheep and clusters of raisins; it does not name a pressed raisin cake. The exact food item is directly attested in 2 Samuel 6:19, with its original Hebrew word already linked to the record.",
+    "editorial_evidence": [
+      "Pinned WLC 1Sam 25:18 identifies clusters of raisins, not raisin cakes",
+      "Pinned WLC 2Sam 6:19 o100060190162 names a raisin cake"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "adjudicate_final_source_key_mismatch",
+        "reason": "1 Samuel 25:18 lists Abigail's loaves, wine, sheep and clusters of raisins; it does not name a pressed raisin cake. The exact food item is directly attested in 2 Samuel 6:19, with its original Hebrew word already linked to the record.",
+        "evidence": [
+          "Pinned WLC 1Sam 25:18 identifies clusters of raisins, not raisin cakes",
+          "Pinned WLC 2Sam 6:19 o100060190162 names a raisin cake"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "key_references": [
+              "09025018"
+            ]
+          },
+          "after": {
+            "key_references": [
+              "10006019"
+            ]
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -38,7 +65,7 @@
   },
   "id": "realia:RaisinCake",
   "key_references": [
-    "09025018"
+    "10006019"
   ],
   "lemmas": {
     "he": [

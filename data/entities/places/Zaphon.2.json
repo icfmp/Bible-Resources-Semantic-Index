@@ -2,10 +2,40 @@
   "added_entry": false,
   "bsi": {
     "canonical_id": "place:Zaphon.2",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:Zaphon.2",
     "source_primary_id": "place:Zaphon.2",
-    "source_sha256": "6e375b8dbc2c9953f840ec73b796eb3835d03db5565efd7d6cbc0c2806423499"
+    "source_sha256": "6e375b8dbc2c9953f840ec73b796eb3835d03db5565efd7d6cbc0c2806423499",
+    "editorial_reason": "Job 26:7 speaks of the northern sky spread over empty space: the Hebrew directional word north does not name the distinct Mount Zaphon location. The source-created mountain interpretation remains potentially relevant to other poetic mountain imagery but cannot be asserted for this cosmological description.",
+    "editorial_evidence": [
+      "Pinned WLC Job 26:7 refers to the north as a direction in a cosmological description, not to a named mountain",
+      "Mount Zaphon is preserved as a distinct identity for separately assessed poetic contexts"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "adjudicate_final_source_key_mismatch",
+        "reason": "Job 26:7 speaks of the northern sky spread over empty space: the Hebrew directional word north does not name the distinct Mount Zaphon location. The source-created mountain interpretation remains potentially relevant to other poetic mountain imagery but cannot be asserted for this cosmological description.",
+        "evidence": [
+          "Pinned WLC Job 26:7 refers to the north as a direction in a cosmological description, not to a named mountain",
+          "Mount Zaphon is preserved as a distinct identity for separately assessed poetic contexts"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "key_references": [
+              "18026007",
+              "19048003",
+              "23014013"
+            ]
+          },
+          "after": {
+            "key_references": [
+              "19048003",
+              "23014013"
+            ]
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {},
   "geocoordinates": {
@@ -18,7 +48,6 @@
   "is_artifact": false,
   "is_person": false,
   "key_references": [
-    "18026007",
     "19048003",
     "23014013"
   ],

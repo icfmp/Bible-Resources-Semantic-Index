@@ -16,10 +16,39 @@
   },
   "bsi": {
     "canonical_id": "place:GilboaMount",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:GilboaMount",
     "source_primary_id": "place:GilboaMount",
-    "source_sha256": "fed41baf22f8c9e240987548bdb863b32c4e753a607ecca4ae29a2525a0d977d"
+    "source_sha256": "fed41baf22f8c9e240987548bdb863b32c4e753a607ecca4ae29a2525a0d977d",
+    "editorial_reason": "The old 2 Samuel 10:1 verse concerns Hanun king of the Ammonites and has no Mount Gilboa connection. 2 Samuel 1:6 instead explicitly records Saul's death at Mount Gilboa and the original-source name is already linked to this identity.",
+    "editorial_evidence": [
+      "Pinned WLC 2Sam 10:1 concerns the death of the king of the Ammonites, not Gilboa",
+      "Pinned WLC 2Sam 1:6 o100010060082 explicitly names Gilboa"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "adjudicate_final_source_key_mismatch",
+        "reason": "The old 2 Samuel 10:1 verse concerns Hanun king of the Ammonites and has no Mount Gilboa connection. 2 Samuel 1:6 instead explicitly records Saul's death at Mount Gilboa and the original-source name is already linked to this identity.",
+        "evidence": [
+          "Pinned WLC 2Sam 10:1 concerns the death of the king of the Ammonites, not Gilboa",
+          "Pinned WLC 2Sam 1:6 o100010060082 explicitly names Gilboa"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "key_references": [
+              "09031001",
+              "10010001"
+            ]
+          },
+          "after": {
+            "key_references": [
+              "09031001",
+              "10001006"
+            ]
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -67,7 +96,7 @@
   "is_person": false,
   "key_references": [
     "09031001",
-    "10010001"
+    "10001006"
   ],
   "localizations": {
     "eng": {

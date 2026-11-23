@@ -16,10 +16,39 @@
   },
   "bsi": {
     "canonical_id": "place:Bozkath",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:Bozkath",
     "source_primary_id": "place:Bozkath",
-    "source_sha256": "a521d71e77dfc62455f39abbae92dc5c88a977cf8ce8844a0b28327112ce0dc3"
+    "source_sha256": "a521d71e77dfc62455f39abbae92dc5c88a977cf8ce8844a0b28327112ce0dc3",
+    "editorial_reason": "Joshua 15:19 describes Achsah's request for springs of water, not Bozkath. The town Bozkath is explicitly listed at Joshua 15:39 and already has a direct Hebrew source word in this entity.",
+    "editorial_evidence": [
+      "Pinned WLC Josh 15:19 is Achsah and the springs",
+      "Pinned WLC Josh 15:39 o060150390022 names Bozkath"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "adjudicate_final_source_key_mismatch",
+        "reason": "Joshua 15:19 describes Achsah's request for springs of water, not Bozkath. The town Bozkath is explicitly listed at Joshua 15:39 and already has a direct Hebrew source word in this entity.",
+        "evidence": [
+          "Pinned WLC Josh 15:19 is Achsah and the springs",
+          "Pinned WLC Josh 15:39 o060150390022 names Bozkath"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "key_references": [
+              "06015019",
+              "12022001"
+            ]
+          },
+          "after": {
+            "key_references": [
+              "12022001",
+              "06015039"
+            ]
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -45,8 +74,8 @@
   "is_artifact": false,
   "is_person": false,
   "key_references": [
-    "06015019",
-    "12022001"
+    "12022001",
+    "06015039"
   ],
   "lemmas": {
     "he": [

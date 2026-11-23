@@ -17,10 +17,39 @@
   },
   "bsi": {
     "canonical_id": "place:Jokneam",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:Jokneam",
     "source_primary_id": "place:Jokneam",
-    "source_sha256": "61375f281726d3675bf6407bbabbe9bc77c161cd6703b8cb2041e8590984cbd0"
+    "source_sha256": "61375f281726d3675bf6407bbabbe9bc77c161cd6703b8cb2041e8590984cbd0",
+    "editorial_reason": "Joshua 21:24 enumerates Aijalon and Gath-rimmon, neither of which is Jokneam. The original Hebrew explicitly lists Jokneam at Joshua 21:34, already recorded as a direct source witness.",
+    "editorial_evidence": [
+      "Pinned WLC Josh 21:24 lists Aijalon and Gath-rimmon",
+      "Pinned WLC Josh 21:34 o060210340101 names Jokneam"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "adjudicate_final_source_key_mismatch",
+        "reason": "Joshua 21:24 enumerates Aijalon and Gath-rimmon, neither of which is Jokneam. The original Hebrew explicitly lists Jokneam at Joshua 21:34, already recorded as a direct source witness.",
+        "evidence": [
+          "Pinned WLC Josh 21:24 lists Aijalon and Gath-rimmon",
+          "Pinned WLC Josh 21:34 o060210340101 names Jokneam"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "key_references": [
+              "06021024",
+              "06019011"
+            ]
+          },
+          "after": {
+            "key_references": [
+              "06021034",
+              "06019011"
+            ]
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -52,7 +81,7 @@
   "is_artifact": false,
   "is_person": false,
   "key_references": [
-    "06021024",
+    "06021034",
     "06019011"
   ],
   "localizations": {

@@ -15,10 +15,40 @@
   },
   "bsi": {
     "canonical_id": "person:Ahitub.2",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "person:Ahitub.2",
     "source_primary_id": "person:Ahitub.2",
-    "source_sha256": "b33d93282074bca069864b1cd6bba212cf6a54e7573b4d7b2043f91728e4e3ee"
+    "source_sha256": "b33d93282074bca069864b1cd6bba212cf6a54e7573b4d7b2043f91728e4e3ee",
+    "editorial_reason": "1 Chronicles 6:7-8 lists the Kohathite descendants Amminadab, Korah, Assir, Elkanah and Ebiasaph, not Ahitub son of Amariah. The correct priestly ancestor Ahitub has a directly linked source name in 1 Chronicles 6:37; both unrelated genealogy keys are withdrawn.",
+    "editorial_evidence": [
+      "Pinned WLC 1Chr 6:7-8 names the Korahite genealogy, not Ahitub son of Amariah",
+      "Pinned WLC 1Chr 6:37 o130060370051 explicitly names Ahitub"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "adjudicate_final_source_key_mismatch",
+        "reason": "1 Chronicles 6:7-8 lists the Kohathite descendants Amminadab, Korah, Assir, Elkanah and Ebiasaph, not Ahitub son of Amariah. The correct priestly ancestor Ahitub has a directly linked source name in 1 Chronicles 6:37; both unrelated genealogy keys are withdrawn.",
+        "evidence": [
+          "Pinned WLC 1Chr 6:7-8 names the Korahite genealogy, not Ahitub son of Amariah",
+          "Pinned WLC 1Chr 6:37 o130060370051 explicitly names Ahitub"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "key_references": [
+              "10008017",
+              "13006007",
+              "13006008"
+            ]
+          },
+          "after": {
+            "key_references": [
+              "10008017",
+              "13006037"
+            ]
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -44,8 +74,7 @@
   "id": "person:Ahitub.2",
   "key_references": [
     "10008017",
-    "13006007",
-    "13006008"
+    "13006037"
   ],
   "lemmas": {
     "he": [

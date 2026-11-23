@@ -20,10 +20,45 @@
   },
   "bsi": {
     "canonical_id": "place:HinnomValley",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "place:HinnomValley",
     "source_primary_id": "place:HinnomValley",
-    "source_sha256": "7e8d5ccacc5237661cf138b9211931a2bf1c337d278c7d57cccaf8ad4a8f36e3"
+    "source_sha256": "7e8d5ccacc5237661cf138b9211931a2bf1c337d278c7d57cccaf8ad4a8f36e3",
+    "editorial_reason": "The old reference 2 Kings 28:3 cannot exist: 2 Kings has only 25 chapters. The corresponding Ahaz episode describing worship in the valley of Ben-Hinnom is 2 Chronicles 28:3, with direct pinned Hebrew name words already present.",
+    "editorial_evidence": [
+      "2 Kings chapter 28 does not occur in WLC",
+      "Pinned WLC 2Chr 28:3 o140280030032/o140280030041/o140280030051 attest the Hinnom Valley name"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "adjudicate_final_source_key_mismatch",
+        "reason": "The old reference 2 Kings 28:3 cannot exist: 2 Kings has only 25 chapters. The corresponding Ahaz episode describing worship in the valley of Ben-Hinnom is 2 Chronicles 28:3, with direct pinned Hebrew name words already present.",
+        "evidence": [
+          "2 Kings chapter 28 does not occur in WLC",
+          "Pinned WLC 2Chr 28:3 o140280030032/o140280030041/o140280030051 attest the Hinnom Valley name"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "key_references": [
+              "24007031",
+              "12028003",
+              "12023010",
+              "14033006",
+              "24032035"
+            ]
+          },
+          "after": {
+            "key_references": [
+              "24007031",
+              "14028003",
+              "12023010",
+              "14033006",
+              "24032035"
+            ]
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -136,7 +171,7 @@
   "is_person": false,
   "key_references": [
     "24007031",
-    "12028003",
+    "14028003",
     "12023010",
     "14033006",
     "24032035"

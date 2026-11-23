@@ -14,10 +14,46 @@
   },
   "bsi": {
     "canonical_id": "person:Uzziah",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "person:Azariah.22",
     "source_primary_id": "person:Uzziah",
-    "source_sha256": "227ba6872035f26a6f7920a8ab2889770cd64e86881310d65b06c0ec973c110c"
+    "source_sha256": "227ba6872035f26a6f7920a8ab2889770cd64e86881310d65b06c0ec973c110c",
+    "editorial_reason": "The king Azariah/Uzziah is not the gatekeeper Meshelemiah or one of his sons. 1 Chronicles 26:1-3 lists the Korahite gatekeepers and their sons; these three inherited keys wrongly conflate the Judahite king with a separate genealogy, whereas 2 Kings 15:1 directly identifies the king.",
+    "editorial_evidence": [
+      "Pinned WLC 1Chr 26:1-3 names the Korahite gatekeepers Meshelemiah, Zechariah, Jediael, Zebadiah, Jathniel and others, not King Uzziah",
+      "Pinned WLC 2Kgs 15:1 o120150010091 directly names King Azariah"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "adjudicate_final_source_key_mismatch",
+        "reason": "The king Azariah/Uzziah is not the gatekeeper Meshelemiah or one of his sons. 1 Chronicles 26:1-3 lists the Korahite gatekeepers and their sons; these three inherited keys wrongly conflate the Judahite king with a separate genealogy, whereas 2 Kings 15:1 directly identifies the king.",
+        "evidence": [
+          "Pinned WLC 1Chr 26:1-3 names the Korahite gatekeepers Meshelemiah, Zechariah, Jediael, Zebadiah, Jathniel and others, not King Uzziah",
+          "Pinned WLC 2Kgs 15:1 o120150010091 directly names King Azariah"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "key_references": [
+              "12015001",
+              "12015006",
+              "12015007",
+              "13003012",
+              "13026001",
+              "13026002",
+              "13026003"
+            ]
+          },
+          "after": {
+            "key_references": [
+              "12015001",
+              "12015006",
+              "12015007",
+              "13003012"
+            ]
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -57,10 +93,7 @@
     "12015001",
     "12015006",
     "12015007",
-    "13003012",
-    "13026001",
-    "13026002",
-    "13026003"
+    "13003012"
   ],
   "lemmas": {
     "he": [
