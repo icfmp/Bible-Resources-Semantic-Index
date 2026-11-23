@@ -46,86 +46,45 @@ source-import path.
 | UBS Greek | 74 total; 34 `test_*.py` modules | [Pinned Greek workflow](../.github/workflows/bsi-ubs-greek.yml) and its source-local builders | Original source locks, reviewed JSON headword/word-ID ledgers, explicit sense abstentions |
 | UBS Hebrew | 36 total; 18 `test_*.py` modules | [Pinned Hebrew workflow](../.github/workflows/bsi-ubs-hebrew.yml) and its source-local builders | Original source locks, reviewed JSON identity/disposition/abstention ledgers, v1 and v1.1 reviews |
 
-Completed report-only probes are retired once their general exclusion rule
-is covered by a maintained test and any non-reproducible editorial decision
-is retained beside its source.
+Active source-pinned UBS workflows reconstruct source material from exact
+upstream revisions, check original-word identifiers and source-specific
+editorial ledgers, then compare reconstructed **historical public ZIP bytes**
+against immutable release locks. A source-derived private report or research
+probe is not a new publication authorization; all rights, negative decisions
+and original source annotations remain separately protected.
 
-Two further Greek report stages were removed because their
-source evidence was **already recomputed** by the very next maintained
-producer: the 224 original Strong multi-headword classification and the
-single Greek temporal ὁπότε grammar/source witness. The source-specific
-`audit_224_ambiguities.py` and `audit_hopote_original_word.py` validators
-are retained and called **directly** by their reviewed builders. Their
-existing approved source-word ledgers, independent bilingual checks and
-negative test coverage remain; transient duplicate reports no longer
-exist as separate workflow inputs. Neither change widens lexical matching.
+- **Greek headwords:** the reviewed 224-source-word Strong ambiguity and
+  temporal ὁπότε cases are audited directly in their builders; the
+  original 459-word missing-headword witness is partitioned into 3
+  separately reviewed case-only words and 456 source words checked against
+  authentic bilingual UBS `AlternateLemmas`. Exactly 409 individually
+  authorized headword links and 47 explicit abstentions remain in the
+  final source-specific ledgers; accent/inflection/Strong resemblance is
+  never sufficient evidence of lexical identity.
+- **Greek composite Strong and provisional senses:** the 5-original-word
+  compound-Strong source audit, full 137,741-word UBS/MACULA sense
+  *candidate* census, and 15,237-word unresolved-source priority
+  classification run **inside** their maintained builders. Each retained
+  source-specific auditor checks the original data directly, without a
+  redundant temporary JSON handoff. All 123,195 provisional source-based
+  suggestions remain *unverified contextual meanings*, with 14,546
+  unresolved, and must not be republished or silently promoted.
+- **Hebrew:** v1.0 remains source-pinned, including the original-word
+  identity and H/A Strong/SDBH anti-collision rules. The six committed
+  JSON baselines (index plus five source-evidence snapshots) are
+  mandatory strict-content gates. The historically completed v1.1
+  53,981-candidate / 72-word NO-GO experiment is retained in versioned
+  editorial reports, **not** the maintained v1.0 workflow.
+- **Shared protection:** `verify_generated_json.py` fails on missing or
+  altered source-basis evidence. `verify_historical_asset.py` verifies
+  exact previously published assets without uploading or publishing a
+  resource. Source-specific auditors and all source-local `test_*.py`
+  modules remain independently maintained.
 
-The Greek 456-word **accentless-variant diagnostic stage** was likewise
-retired after the original 459-word source-evidence audit became the direct
-input to the maintained bilingual UBS `AlternateLemmas` verifier. That
-verifier projects the exact 456 residual word-ID witnesses while excluding
-the three source-case-only occurrences handled by their separate reviewed
-ledger. It does **not** use accent stripping, shared Strong/LN domains or
-inflection similarity as lexical identity. A generic negative regression
-for this exact-source distinction replaces the completed diagnostic test.
-The unused optional `runpy` import in the downstream 409-word builder was
-also removed; its own original-source and editorial checks remain active.
-Historical implementations remain at
-[the immutable pre-cleanup revision](https://github.com/icfmp/Bible-Resources-Semantic-Index/blob/c5025d4580973d6ea3588069f00550e4705cd8b9/links/dictionaries/ubs-greek/audit_456_lexical_variants.py).
- See issue [#145](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/145) for the second-pass review; the first example
-retired a terminal 47-word Greek inflection investigation, while retaining
-its independent negative no-guess invariant and the 47-word source report.
-
-The discontinued runner-only `work_snapshot.py` generated temporary archives
-and verified them inside the same CI job but never stored them. It added no
-independent durable evidence beyond the source-pinned checks and the historical
-release parity gates. Its implementation and tests are preserved in Git history;
-no private research corpus was copied, published, or lost from Git.
-
-The completed Hebrew v1.1 semantic-feasibility and 72-word pilot
-was **one-shot research**, not an active v1.0 release dependency. Three
-nonpublishing pilot scripts and their three dedicated tests were retired
-from `main` under [#145](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/145);
-the two historical reports and original six source-specific editorial
-cautions remain beside UBS Hebrew. Immutable Git revisions preserve the
-reproduction commands. No v1.0 source-locked builder, negative headword
-identity guard, or published archive verification was removed.
-
-The Greek and Hebrew workflows first verify exact upstream commits and
-source checksums, then reconstruct source-backed indexes, check reviewed
-decisions and compare historical public archives. **A missing checked-in
-baseline now fails**: the earlier Hebrew initial-import fallback is no longer
-allowed. The shared strict JSON verifier compares source-rebuilt resources
-against the canonical committed baselines, with no edition-specific logic.
-The formerly separate Hebrew headword-scope report step was retired because
-both source-pinned private/final builders already call the maintained
-`audit_dictionary_scope.py` on actual WLC inputs; its tests remain.
-The Greek and Hebrew workflows also use the shared
-`verify_historical_asset.py` to enforce **exact released archive bytes**;
-their separate temporary ZIP-fingerprint display steps were redundant with
-that historical release lock and the preceding independently verified
-`.sha256` sidecars, so both were removed.
-
-The old Hebrew numeric-SDBH/UBS cross-edition **diagnostic survey**
-had no persisted report, no downstream builder consumer and no independent
-drift gate. The `build_index.py` lookup already rejects false direct
-sense identity across original Strong numeric families and H/A languages;
-`test_index.py` covers real-pattern and synthetic negative collisions.
-The terminal report-only auditor was retired; its complete historical
-implementation remains at [the prior Git revision](https://github.com/icfmp/Bible-Resources-Semantic-Index/blob/7ea875a5a866d678958264a8f830418ed538a7ce/links/dictionaries/ubs-hebrew/audit_direct_sense_fidelity.py).
-It was never permission to infer a new UBS contextual sense.
-
-Five Hebrew source-evidence outputs now use the **same strict JSON baseline
-guard**: Strong-family reconciliation, the initial reviewed word preview,
-the remaining-family witness census, the subsequent word-specific approvals,
-and the v1 editorial-disposition coverage report. These five checked-in
-evidence JSON files are **mandatory** and unchanged. The former optional
-"pending initial pin" bypasses have been retired; source-side validators,
-word-ID checks and dedicated unit tests remain in place. Every source-local
-`test_*.py` runs individually via a fail-fast glob. Their full research
-chains remain where the source-specific build genuinely depends on them;
-a report-only stage with no downstream use is not a reason to keep an
-obsolete script forever.
+Retired one-off programs, runner-only reports, source-revision links
+and batch-by-batch audit outcomes are recorded in
+[maintenance issue #145](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/145)
+and the merged PRs, not duplicated as a development diary here.
 
 Detailed editorial assumptions and source exceptions belong in each
 source's README, not in a generic shared script or a special-case rule
