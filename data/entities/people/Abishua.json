@@ -15,10 +15,43 @@
   },
   "bsi": {
     "canonical_id": "person:Abishua",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "person:Abishua",
     "source_primary_id": "person:Abishua",
-    "source_sha256": "79f08ded549ff5d28874925a32fd7fca24cc8f3825ebbdebe23be55740e00f5e"
+    "source_sha256": "79f08ded549ff5d28874925a32fd7fca24cc8f3825ebbdebe23be55740e00f5e",
+    "editorial_reason": "2 Samuel 6:3-4 explicitly identifies Uzzah and Ahio, sons of Abinadab, while Abishua is a different named individual descended from Aaron, explicitly linked in 1 Chronicles 6:35 and Ezra 7:5. The old keys falsely conflate Abinadab's household with Abishua.",
+    "editorial_evidence": [
+      "Pinned WLC 2Sam 6:3 o100060030132 Uzzah, o100060030142 Ahio, o100060030101/o100060030161 Abinadab",
+      "Pinned WLC 2Sam 6:4 o100060040092 Ahio and o100060040031 Abinadab; no Abishua",
+      "Pinned WLC 1Chr 6:35 o130060350081 Abishua; existing direct source token"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "adjudicate_source_identity_key_mismatch",
+        "reason": "2 Samuel 6:3-4 explicitly identifies Uzzah and Ahio, sons of Abinadab, while Abishua is a different named individual descended from Aaron, explicitly linked in 1 Chronicles 6:35 and Ezra 7:5. The old keys falsely conflate Abinadab's household with Abishua.",
+        "evidence": [
+          "Pinned WLC 2Sam 6:3 o100060030132 Uzzah, o100060030142 Ahio, o100060030101/o100060030161 Abinadab",
+          "Pinned WLC 2Sam 6:4 o100060040092 Ahio and o100060040031 Abinadab; no Abishua",
+          "Pinned WLC 1Chr 6:35 o130060350081 Abishua; existing direct source token"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "key_references": [
+              "10006003",
+              "10006004",
+              "13006035",
+              "15007005"
+            ]
+          },
+          "after": {
+            "key_references": [
+              "13006035",
+              "15007005"
+            ]
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -40,8 +73,6 @@
   "gender": "male",
   "id": "person:Abishua",
   "key_references": [
-    "10006003",
-    "10006004",
     "13006035",
     "15007005"
   ],
