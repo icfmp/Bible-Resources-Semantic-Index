@@ -109,6 +109,15 @@ source-derived intermediate evidence is **not** stored in the public tree.
 See [working-state limitations](work/README.md): a successful CI build
 is not proof of permanent archival of every intermediate file.
 
+## Contributing and maintenance
+
+Follow [CONTRIBUTING.md](CONTRIBUTING.md) and the
+[maintenance policy](docs/MAINTENANCE_POLICY.md) for code lifetime, maintained
+source-local tests, current documentation and review gates. The offline CI
+rejects tracked temporary files, broken local Markdown paths and newly added
+Python tools without a regression-test reference; it never deletes sources
+or guesses that a reviewed audit is obsolete.
+
 ## Editorial and rights policy
 
 Preserve source provenance, source-versification differences, uncertainties,

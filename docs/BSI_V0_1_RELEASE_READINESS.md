@@ -80,7 +80,7 @@ A successful artifact upload in CI remains an **internal candidate**, never a Gi
 
 ## Traceability
 
-- Existing internal candidate: [V0_1_CANDIDATE_HANDOFF.md](V0_1_CANDIDATE_HANDOFF.md)
+- Historical internal candidate handoff: `V0_1_CANDIDATE_HANDOFF.md` (not present in this standalone checkout; original monorepo history remains the provenance record).
 - Acceptance: issues [#337](https://github.com/icfmp/Bible-Resources/issues/337), [#338](https://github.com/icfmp/Bible-Resources/issues/338)
 - Open publication rights issue: [#339](https://github.com/icfmp/Bible-Resources/issues/339)
 - Historic ACAI audit tracker [#299](https://github.com/icfmp/Bible-Resources/issues/299) is **not** a requirement to resolve all indirect pronoun conflicts before a bounded v0.1 release.

@@ -104,7 +104,7 @@ application are all **unchanged**.
 ## Technical verification boundary
 
 The [maintained GitHub Actions UBS Hebrew workflow](
-../../../../.github/workflows/bsi-ubs-hebrew.yml) rebuilds the
+../../../.github/workflows/bsi-ubs-hebrew.yml) rebuilds the
 complete source-pinned **v1.0 lexical candidate**, validates the
 original source editions and editorial/abstention ledgers, and compares
 the exact historical public ZIP. It **does not rerun** the completed
