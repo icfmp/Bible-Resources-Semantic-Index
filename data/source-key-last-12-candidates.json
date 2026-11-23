@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "from_merged_commit": "1aad2adfffe0afba0d25d361243429cb4c0d7977",
+  "parent_register": "data/source-key-final-128-review.json",
+  "policy": "Frozen twelve cases previously marked unresolved in PR #141; cannot be modified by later outcome rewriting or abandoned as already resolved",
+  "cases": [
+    {
+      "source_id": "deity:Beelzebub",
+      "original_key_verses": [
+        "12001002",
+        "12001016"
+      ],
+      "prior_conclusion": "Baal-zebub of Ekron in 2 Kings 1 and Beelzebul/Satan of the Gospels may be related names, not proven identical ancient entities; canonical conflation awaits independent textual judgment."
+    },
+    {
+      "source_id": "flora:JuniperTree",
+      "original_key_verses": [
+        "03014004",
+        "04019006"
+      ],
+      "prior_conclusion": "Leviticus 14:4 and Numbers 19:6 say cedar wood; the specific Phoenician juniper botanical taxon is an interpretation not certifiable from the Hebrew word alone."
+    },
+    {
+      "source_id": "flora:PineTree",
+      "original_key_verses": [
+        "23044014"
+      ],
+      "prior_conclusion": "Isaiah 44:14's ancient tree terms have competing botanical identifications; Aleppo pine cannot be established as a direct Hebrew species attribution."
+    },
+    {
+      "source_id": "place:Ai",
+      "original_key_verses": [
+        "06007001",
+        "13007028"
+      ],
+      "prior_conclusion": "The inherited Ai/Ayyah/Aiath equivalence in 1 Chronicles 7:28 and Nehemiah 11:31 is historically uncertain; the canonical links are not yet independently certified."
+    },
+    {
+      "source_id": "place:Aiath",
+      "original_key_verses": [
+        "13007028",
+        "16011031"
+      ],
+      "prior_conclusion": "The source's strong Aiath-to-Ai canonical and alternate-label assertion is not established by 1 Chronicles 7:28; more than lexical resemblance is needed."
+    },
+    {
+      "source_id": "place:Aphek",
+      "original_key_verses": [
+        "44023031"
+      ],
+      "prior_conclusion": "Acts 23:31 names Antipatris, not Aphek; an exact ancient site-identification requires independently supported archaeological evidence."
+    },
+    {
+      "source_id": "place:Eglath-shelishiyah.1",
+      "original_key_verses": [
+        "23015005",
+        "24048034"
+      ],
+      "prior_conclusion": "Isaiah 15:5 and Jeremiah 48:34 may use a proper Moabite site or a three-year-old heifer simile; philological identification remains disputed."
+    },
+    {
+      "source_id": "place:FoundationGate",
+      "original_key_verses": [
+        "12011006"
+      ],
+      "prior_conclusion": "The equivalence of 2 Kings 11:6 Gate Sur and 2 Chronicles 23:5 Foundation Gate has not been independently proved."
+    },
+    {
+      "source_id": "place:GerizimMount",
+      "original_key_verses": [
+        "07009037"
+      ],
+      "prior_conclusion": "Judges 9:37 Tabbur-erez is not directly named Gerizim; previous false aliases were removed but the remaining site assumption needs evidence."
+    },
+    {
+      "source_id": "place:Gomer",
+      "original_key_verses": [
+        "26038006"
+      ],
+      "prior_conclusion": "Ezekiel 38:6 explicitly names a people Gomer, not a standalone written region; the record's place-versus-people semantics need review."
+    },
+    {
+      "source_id": "place:Misgab.1",
+      "original_key_verses": [
+        "24048001"
+      ],
+      "prior_conclusion": "Jeremiah 48:1 Hebrew means stronghold but can be construed as the place Misgab; the proper-noun reading remains uncertain."
+    },
+    {
+      "source_id": "place:Ramah.8",
+      "original_key_verses": [
+        "09022006"
+      ],
+      "prior_conclusion": "1 Samuel 22:6 has Saul on a height at Gibeah, not a clearly separate proper-named Ramah settlement; exact identity unproved."
+    }
+  ]
+}
