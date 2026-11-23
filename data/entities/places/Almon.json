@@ -19,12 +19,37 @@
     "review_status": "source_unreviewed",
     "source_id": "place:Almon",
     "source_primary_id": "place:Alemeth",
-    "source_sha256": "f3bff1435ae60ac04aca6ac4029131dba78d43bf78eccbe42a16f912e42826f0"
+    "source_sha256": "f3bff1435ae60ac04aca6ac4029131dba78d43bf78eccbe42a16f912e42826f0",
+    "editorial_field_changes": [
+      {
+        "action": "restore_original_named_place_token",
+        "added_reference_values": {
+          "references": [
+            "13006045"
+          ]
+        },
+        "added_original_word_groups": {
+          "wlc": [
+            [
+              "o130060450081"
+            ]
+          ]
+        },
+        "reason": "1 Chronicles 6:45 explicitly names Alemeth, the alternative recorded form of the Levitical town Almon of Benjamin, attested in Joshua 21:18. Restore the exact source name word without merging a different town.",
+        "evidence": [
+          "Joshua 21:18; 1 Chronicles 6:45",
+          "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c locked WLC word/verse attestations"
+        ]
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
       [
         "o060210180061"
+      ],
+      [
+        "o130060450081"
       ]
     ]
   },
@@ -70,7 +95,8 @@
   "primary_id": "place:Alemeth",
   "pronominal_referents": {},
   "references": [
-    "06021018"
+    "06021018",
+    "13006045"
   ],
   "referred_to_as": [
     "place:Alemeth"
