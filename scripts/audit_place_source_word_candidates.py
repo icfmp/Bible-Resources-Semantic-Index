@@ -105,7 +105,7 @@ def triage(records: list[dict], words_by_verse: dict[str, list[dict]]) -> dict:
             else "no_english_gloss_candidate_review_original_text_manually")
         counts[status] += 1
         result.append({**rec, "status": status,
-                       "matching_source_words": matches[:20]})
+                       "matching_source_words": matches})
     return {"policy": "source_original_word_candidates_only_no_automatic_mapping",
             "counts": dict(sorted(counts.items())),
             "cases": result}
