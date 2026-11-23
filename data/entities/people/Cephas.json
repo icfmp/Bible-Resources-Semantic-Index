@@ -12,10 +12,121 @@
   },
   "bsi": {
     "canonical_id": "person:Peter",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "person:Cephas",
     "source_primary_id": "person:Peter",
-    "source_sha256": "14caef1a89cfdd1878176ac9f6c325b0551f84d37137c628255a809f475f0f8c"
+    "source_sha256": "14caef1a89cfdd1878176ac9f6c325b0551f84d37137c628255a809f475f0f8c",
+    "editorial_reason": "Restore original-word mentions for the explicitly named person in reviewed source-key verses. The historical source alias/canonical identity is preserved and no similarly named individual is merged.",
+    "editorial_evidence": [
+      "Pinned Clear-Bible Macula WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c / SBLGNT@8423afe47b9e8f24b7772e808af45c7159a6fe7e, full original-word source audit and exact ID verification in GitHub Actions",
+      "Matthew 4:18 explicitly identifies Simon called Peter, the same person given the Aramaic name Cephas in John 1:42 and elsewhere; preserve canonical person:Peter.",
+      "40004018 SBLGNT: n40004018014"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "restore_exact_person_name_witnesses_from_original",
+        "reason": "Restore original-word mentions for the explicitly named person in reviewed source-key verses. The historical source alias/canonical identity is preserved and no similarly named individual is merged.",
+        "evidence": [
+          "Pinned Clear-Bible Macula WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c / SBLGNT@8423afe47b9e8f24b7772e808af45c7159a6fe7e, full original-word source audit and exact ID verification in GitHub Actions",
+          "Matthew 4:18 explicitly identifies Simon called Peter, the same person given the Aramaic name Cephas in John 1:42 and elsewhere; preserve canonical person:Peter.",
+          "40004018 SBLGNT: n40004018014"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [
+              "43001042",
+              "46001012",
+              "46003022",
+              "46009005",
+              "46015005",
+              "48001018",
+              "48002009",
+              "48002011",
+              "48002014"
+            ],
+            "explicit_instances": {
+              "SBLGNT": [
+                [
+                  "n43001042019"
+                ],
+                [
+                  "n46001012017"
+                ],
+                [
+                  "n46003022006"
+                ],
+                [
+                  "n46009005019"
+                ],
+                [
+                  "n46015005004"
+                ],
+                [
+                  "n48001018009"
+                ],
+                [
+                  "n48002009010"
+                ],
+                [
+                  "n48002011004"
+                ],
+                [
+                  "n48002014014"
+                ]
+              ]
+            }
+          },
+          "after": {
+            "references": [
+              "40004018",
+              "43001042",
+              "46001012",
+              "46003022",
+              "46009005",
+              "46015005",
+              "48001018",
+              "48002009",
+              "48002011",
+              "48002014"
+            ],
+            "explicit_instances": {
+              "SBLGNT": [
+                [
+                  "n43001042019"
+                ],
+                [
+                  "n46001012017"
+                ],
+                [
+                  "n46003022006"
+                ],
+                [
+                  "n46009005019"
+                ],
+                [
+                  "n46015005004"
+                ],
+                [
+                  "n48001018009"
+                ],
+                [
+                  "n48002009010"
+                ],
+                [
+                  "n48002011004"
+                ],
+                [
+                  "n48002014014"
+                ],
+                [
+                  "n40004018014"
+                ]
+              ]
+            }
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "SBLGNT": [
@@ -45,6 +156,9 @@
       ],
       [
         "n48002014014"
+      ],
+      [
+        "n40004018014"
       ]
     ]
   },
@@ -163,6 +277,7 @@
     ]
   },
   "references": [
+    "40004018",
     "43001042",
     "46001012",
     "46003022",
