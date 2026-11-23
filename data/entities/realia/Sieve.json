@@ -14,7 +14,32 @@
     "review_status": "source_unreviewed",
     "source_id": "realia:Sieve",
     "source_primary_id": "realia:Sieve",
-    "source_sha256": "c5b1bba4dfec660e5df8df290922bb6c6a1326f845556c98bfe2d49ed17f75c6"
+    "source_sha256": "c5b1bba4dfec660e5df8df290922bb6c6a1326f845556c98bfe2d49ed17f75c6",
+    "editorial_field_changes": [
+      {
+        "action": "remove_verb_as_physical_sieve_object_claim",
+        "removed_reference_values": {
+          "key_references": [
+            "42022031"
+          ]
+        },
+        "removed_localization_values": {
+          "eng": {
+            "alternate_labels": [
+              "To Sieve",
+              "To Sift",
+              "Winnowing"
+            ]
+          }
+        },
+        "reason": "Luke 22:31 uses the verb σινιάζω, 'to sift', figuratively for Satan's testing of disciples. It does not name a physical sieve artifact or use a sieve noun. The inherited lexical key and alternate names 'To Sieve', 'To Sift', 'Winnowing' conflate the action with the material object. Amos 9:9 and Isaiah 30:28 contain the actual Hebrew physical sieve word and retain their existing direct source references.",
+        "evidence": [
+          "Luke 22:31 Greek σινιάζω / pinned SBLGNT n42022031009",
+          "Amos 9:9 WLC o300090090132 sieve; Isaiah 30:28 o230300280072/o230300280092",
+          "https://biblehub.com/greek/4617.htm"
+        ]
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -31,8 +56,7 @@
   },
   "id": "realia:Sieve",
   "key_references": [
-    "30009009",
-    "42022031"
+    "30009009"
   ],
   "lemmas": {
     "he": [
@@ -43,11 +67,7 @@
   },
   "localizations": {
     "eng": {
-      "alternate_labels": [
-        "To Sieve",
-        "To Sift",
-        "Winnowing"
-      ],
+      "alternate_labels": [],
       "preferred_label": "Sieve"
     }
   },
