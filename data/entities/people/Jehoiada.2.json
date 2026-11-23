@@ -18,14 +18,53 @@
     "review_status": "source_unreviewed",
     "source_id": "person:Jehoiada.2",
     "source_primary_id": "person:Jehoiada.2",
-    "source_sha256": "8ceeb3559e5240eac0d4b094cf8b4e36440b68ab6e43a9da0cd81087bfd1eedb"
+    "source_sha256": "8ceeb3559e5240eac0d4b094cf8b4e36440b68ab6e43a9da0cd81087bfd1eedb",
+    "editorial_field_changes": [
+      {
+        "action": "separate_unproven_berechiah_jehoiada_source_identity",
+        "removed_reference_values": {
+          "key_references": [
+            "38001001",
+            "40023035",
+            "38001007"
+          ],
+          "references": [
+            "40023035"
+          ]
+        },
+        "removed_original_word_groups": {
+          "SBLGNT": [
+            [
+              "n40023035023"
+            ]
+          ]
+        },
+        "removed_localization_values": {
+          "eng": {
+            "alternate_labels": [
+              "Berekiah",
+              "Barachiah",
+              "Barachias"
+            ]
+          }
+        },
+        "removed_relation_values": {
+          "referred_to_as": [
+            "person:Barachiah"
+          ]
+        },
+        "reason": "The distinct father names in 2 Chronicles 24:20 and Matthew 23:35 (and Zechariah 1:1) do not prove that the Jehoiada who mentored Joash is the same person as Barachiah. The pinned Greek word explicitly reads Barachiah, so it cannot also be an exact named Jehoiada word or an approved alias. Withhold identity merger without editing either original biblical text.",
+        "evidence": [
+          "2 Chronicles 24:20–22 names Zechariah son of Jehoiada",
+          "Matthew 23:35 in the pinned SBLGNT has Zechariah son of Barachiah (Βαραχίου)",
+          "Zechariah 1:1,7 names a third, prophetic setting: Berechiah father of Zechariah",
+          "https://www.bibliaplus.org/en/commentaries/254/cambridge-bible-for-schools-and-colleges/matthew/23/35",
+          "https://www.bibliaplus.org/en/dictionaries/19/international-standard-bible-encyclopedia/alphaeus"
+        ]
+      }
+    ]
   },
   "explicit_instances": {
-    "SBLGNT": [
-      [
-        "n40023035023"
-      ]
-    ],
     "wlc": [
       [
         "o120110040041"
@@ -118,18 +157,11 @@
   "key_references": [
     "12011004",
     "12012010",
-    "14024002",
-    "38001001",
-    "40023035",
-    "38001007"
+    "14024002"
   ],
   "localizations": {
     "eng": {
-      "alternate_labels": [
-        "Berekiah",
-        "Barachiah",
-        "Barachias"
-      ],
+      "alternate_labels": [],
       "preferred_label": "Jehoiada"
     }
   },
@@ -168,11 +200,7 @@
     "14024017",
     "14024020",
     "14024022",
-    "14024025",
-    "40023035"
-  ],
-  "referred_to_as": [
-    "person:Barachiah"
+    "14024025"
   ],
   "roles": [
     "Priest",
