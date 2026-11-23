@@ -10,9 +10,39 @@
     "review_status": "source_unreviewed",
     "source_id": "place:Nimrod",
     "source_primary_id": "place:Nimrod",
-    "source_sha256": "4b669120e2b8df661f5e7b3304301478f68aa46eed0bdf01d1f463d88455e827"
+    "source_sha256": "4b669120e2b8df661f5e7b3304301478f68aa46eed0bdf01d1f463d88455e827",
+    "editorial_field_changes": [
+      {
+        "action": "restore_direct_primary_hebrew_place_name",
+        "added_reference_values": {
+          "references": [
+            "33005005"
+          ]
+        },
+        "added_original_word_groups": {
+          "wlc": [
+            [
+              "o330050050071",
+              "o330050050081"
+            ]
+          ]
+        },
+        "reason": "Micah 5:5 in the exact pinned Hebrew WLC text explicitly refers to land of Nimrod (ארץ נמרד) alongside Assyria; both components are required. The entity is a geographic designation for a land, not the person Nimrod token alone.",
+        "evidence": [
+          "Frozen WLC lowfat exact verse text and word IDs manually compared at Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c",
+          "ORG BCV8 33005005"
+        ]
+      }
+    ]
   },
-  "explicit_instances": {},
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o330050050071",
+        "o330050050081"
+      ]
+    ]
+  },
   "id": "place:Nimrod",
   "is_artifact": false,
   "is_person": false,
@@ -41,7 +71,9 @@
   ],
   "primary_id": "place:Nimrod",
   "pronominal_referents": {},
-  "references": [],
+  "references": [
+    "33005005"
+  ],
   "subject_referents": {},
   "subregion_of": [
     "place:Mesopotamia"
