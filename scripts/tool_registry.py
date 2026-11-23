@@ -77,9 +77,18 @@ def inventory(root: Path) -> dict:
             rel = caller.relative_to(root).as_posix()
             # Match literal full path or same-directory basename (e.g. runpy
             # Path(__file__).with_name("foo.py")). These are hints, not proofs.
-            if target not in content and not (
-                caller.parent == candidate.parent and candidate.name in content
-            ):
+            mentioned = (
+                target in content
+                or (caller.parent == candidate.parent
+                    and candidate.name in content)
+                # Root-level tests often build script paths as
+                # ROOT / "scripts" / "file.py", so the complete path is
+                # absent from the source while the local filename is exact.
+                or (candidate.parent == root / "scripts"
+                    and caller.is_relative_to(root / "tests")
+                    and candidate.name in content)
+            )
+            if not mentioned:
                 continue
             category = ("workflows" if rel.startswith(".github/workflows/")
                         else "documentation" if caller.suffix == ".md"
