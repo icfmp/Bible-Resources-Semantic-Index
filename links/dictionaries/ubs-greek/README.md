@@ -31,6 +31,13 @@ public BRSI index merely because they are available upstream.
   source-specific approved headword links, explicit abstentions and
   word-level evidence. Original Greek word IDs and source annotations
   remain unchanged.
+- `reviewed_word_integrity.py` now supplies one source-word witness guard
+  for the three historically distinct lexical family review batches
+  (577, 155 and 138 original word IDs). It checks the exact original
+  lemma, Strong, LN, citation, morphology and bilingual LN corroboration
+  before allowing a **status-only** edit. This does not authorize any
+  individual source-word decision; each original editorial ledger and
+  each source-specific grammar/headword gate remain mandatory.
 - `build_consolidated_v1_review_index.py` creates a **private** complete
   original-word lookup using the reviewed ledgers and provisional source
   candidates; it does not certify a contextual sense.

@@ -8,7 +8,6 @@ source-reviewed headwords are immutable; no contextual UBS meaning is chosen.
 from __future__ import annotations
 
 import argparse
-import copy
 import hashlib
 import json
 import runpy
@@ -18,6 +17,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 SOURCE = runpy.run_path(str(HERE / "audit_remaining_173.py"))
+INTEGRITY = runpy.run_path(str(HERE / "reviewed_word_integrity.py"))
 NEW = "source_reviewed_original_greek_headword_batch4_only"
 OLD = "nfc_canonically_identical_lemma_and_original_ln_unapproved_word_candidate"
 GRAMMAR = {
@@ -126,25 +126,15 @@ def build(candidate, residual328, third_ledger, residual173, ledger, english, fr
         observed_approved.add(key)
         for word in f["all_original_word_witnesses"]:
             wid = word["word_id"]
-            original = candidate["by_macula_word"].get(wid)
-            if (wid in newly_reviewed or original is None
-                or original["match_type"] != OLD
-                or original["entry_id"] != key[1]
-                or original["original_lemma"] != word["original_lemma"]
-                or original["original_strong"] != word["original_strong"]
-                or original["original_ln"] != word["original_ln"]
-                or original["original_reference"] != word["reference"]
-                or original["original_class"] != word["original_class"]
-                or original["original_morph"] != word["original_morph"]
-                or original["corroborating_ubs_ln_codes"] != word["attested_headword_ln_codes"]):
-                raise ValueError("Unattested exact original Greek word-ID headword evidence: " + wid)
+            if wid in newly_reviewed:
+                raise ValueError("Duplicate original Greek reviewed word ID: " + wid)
+            INTEGRITY["verify_original_word"](
+                candidate["by_macula_word"].get(wid), word, wid, key[1], OLD)
             newly_reviewed.add(wid)
     if (observed_approved != set(approved) or observed_deferred != set(deferred)
         or len(newly_reviewed) != 138):
         raise ValueError("Source-original Greek fourth review ledger not exhaustively matched")
-    output = copy.deepcopy(candidate)
-    for wid in newly_reviewed:
-        output["by_macula_word"][wid]["match_type"] = NEW
+    output = INTEGRITY["apply_review_status"](candidate, newly_reviewed, OLD, NEW)
     kinds = Counter(x["match_type"] for x in output["by_macula_word"].values())
     if kinds != {
         "source_reviewed_original_greek_pronoun_headword_only": 5033,
@@ -155,15 +145,6 @@ def build(candidate, residual328, third_ledger, residual173, ledger, english, fr
         OLD: 35,
     }:
         raise ValueError("Greek original word headword review partition changed")
-    for wid, original in candidate["by_macula_word"].items():
-        updated = output["by_macula_word"][wid]
-        if ({k: v for k, v in original.items() if k != "match_type"} !=
-                {k: v for k, v in updated.items() if k != "match_type"}
-            or (wid not in newly_reviewed and original != updated)):
-            raise ValueError("Greek original source annotation or earlier approval mutated")
-    for key in candidate:
-        if key not in ("by_macula_word", "editorial_candidate", "word_aware_coverage") and candidate[key] != output[key]:
-            raise ValueError("Frozen original UBS Greek lexical map modified")
     output["editorial_candidate"] = {
         **candidate["editorial_candidate"],
         "status": "PRIVATE_source-reviewed_138_Greek_original_word_headwords_NOT_PUBLISHED",
