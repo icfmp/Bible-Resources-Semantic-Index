@@ -8,6 +8,9 @@ on:
       - "data/source-key-resolved-115.json"
       - "data/source-key-next-115-candidates.json"
       - "data/source-key-unresolved-queue.json"
+      - "data/source-key-next-115-resolved.json"
+      - "scripts/validate_source_key_resolution_batches.py"
+      - "tests/test_source_key_resolution_batches.py"
       - "scripts/inspect_next_source_key_cases.py"
       - "scripts/validate_resolved_source_keys.py"
       - "tests/test_resolved_source_keys.py"
@@ -31,6 +34,9 @@ on:
       - "data/source-key-resolved-115.json"
       - "data/source-key-next-115-candidates.json"
       - "data/source-key-unresolved-queue.json"
+      - "data/source-key-next-115-resolved.json"
+      - "scripts/validate_source_key_resolution_batches.py"
+      - "tests/test_source_key_resolution_batches.py"
       - "scripts/inspect_next_source_key_cases.py"
       - "scripts/validate_resolved_source_keys.py"
       - "tests/test_resolved_source_keys.py"
@@ -254,3 +260,15 @@ jobs:
             --wlc macula-hebrew/WLC/tsv/macula-hebrew.tsv \
             --sblgnt macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv \
             --verses 05023026 09017004 09017023 09017048 09017049 09017050 09017051 44010024 44010044 44010045 44010046 44010047 44010048
+
+      - name: Certify second 115 genuinely resolved source keys against exact Hebrew and Greek pins
+        run: |
+          python3 -I tests/test_source_key_resolution_batches.py
+          python3 -I scripts/validate_source_key_resolution_batches.py \
+            --data data \
+            --ledger data/source-key-next-115-resolved.json \
+            --selection data/source-key-next-115-candidates.json \
+            --previous data/source-key-resolved-115.json \
+            --pool data/source-key-unresolved-queue.json \
+            --wlc macula-hebrew/WLC/tsv/macula-hebrew.tsv \
+            --sblgnt macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv
