@@ -98,6 +98,18 @@ class PivotParityAuditTests(unittest.TestCase):
         self.assertEqual(row["linked_ids_absent_from_brsi_macula"], 1)
         self.assertEqual(row["linked_ids_present_in_brsi_macula"], 1)
 
+    def test_source_without_lemma_column_abstains_instead_of_inventing(self):
+        path = self.source_paths["ot"]
+        path.write_text(
+            "id\\n" + "o01001001001\\n" + "o01001001002\\n",
+            encoding="utf-8",
+        )
+        self.manifest["inputs"][1]["sha256"] = lock(path)
+        summary = self.run_audit()["canon_audits"]["ot"]
+        self.assertEqual(summary["linked_same_id_lemma_unavailable"], 2)
+        self.assertEqual(summary["linked_same_id_lemma_nfc_equal"], 0)
+        self.assertEqual(summary["linked_same_id_lemma_nfc_different"], 0)
+
     def test_upstream_byte_tampering_fails_closed(self):
         self.source_paths["ot"].write_text("id\tlemma\n", encoding="utf-8")
         with self.assertRaisesRegex(ValueError, "SHA-256 changed"):
