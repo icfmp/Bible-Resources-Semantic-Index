@@ -15,10 +15,39 @@
   },
   "bsi": {
     "canonical_id": "fauna:Sparrow",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "fauna:Sparrow",
     "source_primary_id": "fauna:Sparrow",
-    "source_sha256": "f67da567de15fe71f3223cbb5c4ff24fa9a9532fb02c9f017dc412efc26bd3ad"
+    "source_sha256": "f67da567de15fe71f3223cbb5c4ff24fa9a9532fb02c9f017dc412efc26bd3ad",
+    "editorial_reason": "Remove an inherited key/alias that incorrectly attributes a distinct generic, geographical or personal lexical reference to this narrowly defined source identity.",
+    "editorial_evidence": [
+      "Clear-Bible Macula WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c and Greek SBLGNT@8423afe47b9e8f24b7772e808af45c7159a6fe7e, complete original-verse inspection in #136 CI",
+      "Genesis 15:10 names birds generically (צִפּוֹר); Ecclesiastes 12:4 also has generic צִפּוֹר, not a Hebrew sparrow species. The generic Bird entity owns actual birds in those verses; the species Sparrow must not own the contextual generic keys."
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "remove_source_proven_wrong_identity_key",
+        "reason": "Remove an inherited key/alias that incorrectly attributes a distinct generic, geographical or personal lexical reference to this narrowly defined source identity.",
+        "evidence": [
+          "Clear-Bible Macula WLC@47db250bd55d0d8577f2a94fba114ef16c35b23c and Greek SBLGNT@8423afe47b9e8f24b7772e808af45c7159a6fe7e, complete original-verse inspection in #136 CI",
+          "Genesis 15:10 names birds generically (צִפּוֹר); Ecclesiastes 12:4 also has generic צִפּוֹר, not a Hebrew sparrow species. The generic Bird entity owns actual birds in those verses; the species Sparrow must not own the contextual generic keys."
+        ],
+        "replaced_field_values": {
+          "before": {
+            "key_references": [
+              "01015010",
+              "21012004",
+              "40010029"
+            ]
+          },
+          "after": {
+            "key_references": [
+              "40010029"
+            ]
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "SBLGNT": [
@@ -53,8 +82,6 @@
   "fauna_type": "Birds",
   "id": "fauna:Sparrow",
   "key_references": [
-    "01015010",
-    "21012004",
     "40010029"
   ],
   "lemmas": {
