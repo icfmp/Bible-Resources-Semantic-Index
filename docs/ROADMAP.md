@@ -42,11 +42,14 @@ The verified word-to-word alignment for the LSG is **not** an external
 dictionary/article crosswalk and is not supplied by UBS lexical IDs.
 [The Bible application issue #282](https://github.com/icfmp/Bible/issues/282)
 already identifies the Clear.Bible alignment candidate and edition mismatch
-risk. BRSI can separately curate a source-pinned alignment **only after**
-the real Hebrew/Greek-to-LSG payloads, licences, corpus editions and token
-correspondences have passed an evidence-based feasibility review. No import,
-publication or correction is authorized by this roadmap note. The requested
-repository cleanup comes first.
+risk. The post-cleanup [nonpublishing source-pinned import PR #163](https://github.com/icfmp/Bible-Resources-Semantic-Index/pull/163)
+now maintains its **separate** translation-alignment importer, manifest,
+review-only correction ledger and full-source checks. These are *candidate*
+translation token links, never UBS lexical or context-specific senses.
+Clear.Bible's OT target-token TSV is header-only; OT token membership cannot
+be certified by that file. The source editions and LSG tokenization must be
+independently matched to the downstream Bible reader before use. Distribution
+remains gated by [#62](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/62).
 
 ## Explicitly deferred or excluded
 
