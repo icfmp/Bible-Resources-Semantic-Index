@@ -12,14 +12,18 @@
       "source": "nt_source",
       "target": "nt_target",
       "alignment": "nt_alignment",
-      "source_edition": "SBLGNT as shipped in Clear-Bible/Alignments pinned commit"
+      "source_edition": "SBLGNT as shipped in Clear-Bible/Alignments pinned commit",
+      "source_docid": "SBLGNT",
+      "target_docid": "LSG"
     },
     {
       "canon": "ot",
       "source": "ot_source",
       "target": "ot_target",
       "alignment": "ot_alignment",
-      "source_edition": "WLCM as shipped in Clear-Bible/Alignments pinned commit"
+      "source_edition": "WLCM as shipped in Clear-Bible/Alignments pinned commit",
+      "source_docid": "WLCM",
+      "target_docid": "LSG"
     }
   ],
   "inputs": [
