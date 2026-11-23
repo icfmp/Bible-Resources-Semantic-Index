@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "resource_id": "clear-bible-lsg-manual-alignment",
+  "revision": "c99bd0ae6946775f932517656308ca19fc706921",
+  "upstream_url": "https://github.com/Clear-Bible/Alignments",
+  "source_data_license": "CC BY 4.0 (Clear Bible, Inc.; verify attribution and edition-specific notices)",
+  "target_edition": "Clear.Bible LSG, upstream TOML label Louis Segond 1910; exact equivalence to Bible app/SWORD LSG not certified",
+  "publication_status": "blocked_owner_approval_and_edition_rights",
+  "groups": [
+    {
+      "canon": "nt",
+      "source": "nt_source",
+      "target": "nt_target",
+      "alignment": "nt_alignment",
+      "source_edition": "SBLGNT as shipped in Clear-Bible/Alignments pinned commit"
+    },
+    {
+      "canon": "ot",
+      "source": "ot_source",
+      "target": "ot_target",
+      "alignment": "ot_alignment",
+      "source_edition": "WLCM as shipped in Clear-Bible/Alignments pinned commit"
+    }
+  ],
+  "inputs": [
+    {
+      "key": "nt_source",
+      "path": "data/sources/SBLGNT.tsv",
+      "git_blob_sha": "f5c89a4759f34fa4d8cc5f3de28f52df0934be54",
+      "size": 10976793,
+      "sha256": null
+    },
+    {
+      "key": "ot_source",
+      "path": "data/sources/WLCM.tsv",
+      "git_blob_sha": "ef8e7009e4434d4064a1c96b08bfed7711c661f0",
+      "size": 28766689,
+      "sha256": null
+    },
+    {
+      "key": "nt_target",
+      "path": "data/fra/targets/LSG/nt_LSG.tsv",
+      "git_blob_sha": "917988f79e8d6da310d3a76c7475e250ed0fc6c5",
+      "size": 10131670,
+      "sha256": null
+    },
+    {
+      "key": "ot_target",
+      "path": "data/fra/targets/LSG/ot_LSG.tsv",
+      "git_blob_sha": "9907861b52cfe153fda1a6b99298c07be121f681",
+      "size": 66,
+      "sha256": null
+    },
+    {
+      "key": "nt_alignment",
+      "path": "data/fra/alignments/LSG/SBLGNT-LSG-manual.json",
+      "git_blob_sha": "c365bfb94bc066d3431e097aefa024f28a210da3",
+      "size": 11359344,
+      "sha256": null
+    },
+    {
+      "key": "ot_alignment",
+      "path": "data/fra/alignments/LSG/WLCM-LSG-manual.json",
+      "git_blob_sha": "a81b299df602cb2bc18269228bafd07127ddc641",
+      "size": 22237502,
+      "sha256": null
+    },
+    {
+      "key": "nt_metadata",
+      "path": "data/fra/alignments/LSG/SBLGNT-LSG-manual.toml",
+      "git_blob_sha": "5ba3582b07f596e182717928ffc1073766830f0c",
+      "size": 451,
+      "sha256": null
+    },
+    {
+      "key": "ot_metadata",
+      "path": "data/fra/alignments/LSG/WLCM-LSG-manual.toml",
+      "git_blob_sha": "f923db04809d0f160ef16a02c6de017df6e2a0d5",
+      "size": 387,
+      "sha256": null
+    }
+  ]
+}
