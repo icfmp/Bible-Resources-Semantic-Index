@@ -27,7 +27,9 @@ class SourceIdentityReviewTests(unittest.TestCase):
         self.assertEqual(result["classifications"]["constructed_tribal_territory_no_source_key"], 13)
         self.assertEqual(result["classifications"]["indirect_original_referent"], 32)
         self.assertGreater(result["exact_original_word_evidence"], 40)
-        self.assertEqual(result["already_indirect_pinned_word_evidence"], 32)
+        self.assertEqual(result["already_indirect_pinned_word_evidence"], 31)
+        # Abram and Abraham are two inherited identity records sharing one
+        # grammatical referent word in Genesis 17:4; count unique IDs.
 
     def _reject_mutation(self, change):
         doc = json.loads(LEDGER.read_text("utf-8"))
