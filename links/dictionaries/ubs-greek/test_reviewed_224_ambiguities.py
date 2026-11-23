@@ -64,5 +64,23 @@ class GreekSourceAmbiguityTests(unittest.TestCase):
             self.assertEqual(lookup(**wrong)["entry_ids"], [], wrong)
 
 
+
+    def test_direct_original_224_source_audit_cannot_be_bypassed(self):
+        # The reviewed builder now recomputes the source classification
+        # directly; there is no unverified intermediate partition file.
+        source={
+            "status":"PRIVATE_source_pinned_Greek_unresolved_499_plus_224_ambiguities",
+            "original_exception_counts":{"multiple_existing_ubs_headwords":224},
+            "new_lexical_headword_links_approved":0,
+            "publication_approved":True,
+            "original_exception_groups":[],
+        }
+        with self.assertRaisesRegex(ValueError,"ambiguity source drift"):
+            MOD["build"]({},source,LEDGER,[],[])
+        source["publication_approved"]=False
+        with self.assertRaisesRegex(ValueError,"inventory incomplete"):
+            MOD["build"]({},source,LEDGER,[],[])
+
+
 if __name__ == "__main__":
     unittest.main()
