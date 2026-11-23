@@ -10,10 +10,106 @@
   },
   "bsi": {
     "canonical_id": "realia:AnointingFlask",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "realia:AnointingFlask",
     "source_primary_id": "realia:AnointingFlask",
-    "source_sha256": "5038051f0961152068c0b36798142df88c24571b12f89a5c718f526242ab3905"
+    "source_sha256": "5038051f0961152068c0b36798142df88c24571b12f89a5c718f526242ab3905",
+    "editorial_reason": "Restore exact pinned original-language object name, distinguishing contextual narrative keys from directly written source words and correcting nonexistent verse when proven.",
+    "editorial_evidence": [
+      "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c exact whole-verse Macula WLC",
+      "1 Samuel 16:13 explicitly names the horn containing anointing oil (קֶרֶן), already an allowed alternate label Horn of the source AnointingFlask entry. The key 1 Samuel 16:11 is preceding narrative context of David's choosing, legitimately retained as contextual rather than fictitiously a direct word.",
+      "o090160130041"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "restore_direct_source_object_and_correct_invalid_key_if_present",
+        "reason": "Restore exact pinned original-language object name, distinguishing contextual narrative keys from directly written source words and correcting nonexistent verse when proven.",
+        "evidence": [
+          "Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c exact whole-verse Macula WLC",
+          "1 Samuel 16:13 explicitly names the horn containing anointing oil (קֶרֶן), already an allowed alternate label Horn of the source AnointingFlask entry. The key 1 Samuel 16:11 is preceding narrative context of David's choosing, legitimately retained as contextual rather than fictitiously a direct word.",
+          "o090160130041"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [
+              "09010001",
+              "09016001",
+              "09016013",
+              "11001039",
+              "12009001",
+              "12009003"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o090100010041"
+                ],
+                [
+                  "o120090010121"
+                ],
+                [
+                  "o120090030021"
+                ],
+                [
+                  "o090160010171",
+                  "o090160010172"
+                ],
+                [
+                  "o090160130041"
+                ],
+                [
+                  "o110010390051"
+                ]
+              ]
+            },
+            "key_references": [
+              "09010001",
+              "09016011"
+            ]
+          },
+          "after": {
+            "references": [
+              "09010001",
+              "09016001",
+              "09016013",
+              "11001039",
+              "12009001",
+              "12009003"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o090100010041"
+                ],
+                [
+                  "o120090010121"
+                ],
+                [
+                  "o120090030021"
+                ],
+                [
+                  "o090160010171",
+                  "o090160010172"
+                ],
+                [
+                  "o090160130041"
+                ],
+                [
+                  "o110010390051"
+                ],
+                [
+                  "o090160130041"
+                ]
+              ]
+            },
+            "key_references": [
+              "09010001",
+              "09016011"
+            ]
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -35,6 +131,9 @@
       ],
       [
         "o110010390051"
+      ],
+      [
+        "o090160130041"
       ]
     ]
   },
