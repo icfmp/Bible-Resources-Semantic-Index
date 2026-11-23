@@ -30,6 +30,10 @@ def build(unresolved,en,fr):
         or len(unresolved.get("word_id_to_unresolved_original_source_evidence",{}))!=15237
         or unresolved.get("published") is not False
         or priorities.get("status")!="PRIVATE_source_review_Greek_15237_semantic_exceptions_diagnostics_ONLY"
+        or priorities.get("all_original_unresolved_words")!=15237
+        or sum(priorities.get("source_categories",{}).values())!=15237
+        or priorities.get("contextual_senses_independently_verified")!=0
+        or priorities.get("original_UBS_or_MACULA_modified") is not False
         or priorities.get("source_categories") is None
         or priorities.get("provisional_new_lexids_selected")!=0
         or priorities.get("published") is not False):
