@@ -9,10 +9,39 @@
   },
   "bsi": {
     "canonical_id": "group:Izhar",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "group:Izhar",
     "source_primary_id": "group:Izhar",
-    "source_sha256": "fc665fd5869a31b88f3078f920f72b9c722299bb194625d36fae3373f33c27c4"
+    "source_sha256": "fc665fd5869a31b88f3078f920f72b9c722299bb194625d36fae3373f33c27c4",
+    "editorial_reason": "1 Chronicles 24:29 lists the sons of Kish (Jerahmeel), in the Merarite lineage rather than the Izharites of Kohath. The Izhar descendant is named at 1 Chronicles 24:22, supported by an already linked original Hebrew word; correct the unrelated identity key.",
+    "editorial_evidence": [
+      "Pinned WLC 1Chr 24:29 lists Kish and Jerahmeel",
+      "Pinned WLC 1Chr 24:22 o130240220012 directly names the Izhar line"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "adjudicate_final_source_key_mismatch",
+        "reason": "1 Chronicles 24:29 lists the sons of Kish (Jerahmeel), in the Merarite lineage rather than the Izharites of Kohath. The Izhar descendant is named at 1 Chronicles 24:22, supported by an already linked original Hebrew word; correct the unrelated identity key.",
+        "evidence": [
+          "Pinned WLC 1Chr 24:29 lists Kish and Jerahmeel",
+          "Pinned WLC 1Chr 24:22 o130240220012 directly names the Izhar line"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "key_references": [
+              "04003027",
+              "13024029"
+            ]
+          },
+          "after": {
+            "key_references": [
+              "04003027",
+              "13024022"
+            ]
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -35,7 +64,7 @@
   "id": "group:Izhar",
   "key_references": [
     "04003027",
-    "13024029"
+    "13024022"
   ],
   "lemmas": {
     "he": [

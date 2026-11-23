@@ -13,10 +13,39 @@
   },
   "bsi": {
     "canonical_id": "person:Zerahiah",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "person:Zerahiah",
     "source_primary_id": "person:Zerahiah",
-    "source_sha256": "72a1c2a7debe8da11617f025069468990f3434b98ad95f4c917518817d4c8e8b"
+    "source_sha256": "72a1c2a7debe8da11617f025069468990f3434b98ad95f4c917518817d4c8e8b",
+    "editorial_reason": "1 Chronicles 6:6 names Zerah, son of Iddo, in a separate genealogy; it is not Zerahiah the priestly ancestor of Meraioth. The pinned Hebrew priestly name Zerahiah occurs at 1 Chronicles 6:36 and is already anchored by this record.",
+    "editorial_evidence": [
+      "Pinned WLC 1Chr 6:6 has Zerah son of Iddo, not Zerahiah",
+      "Pinned WLC 1Chr 6:36 o130060360051 names Zerahiah"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "adjudicate_final_source_key_mismatch",
+        "reason": "1 Chronicles 6:6 names Zerah, son of Iddo, in a separate genealogy; it is not Zerahiah the priestly ancestor of Meraioth. The pinned Hebrew priestly name Zerahiah occurs at 1 Chronicles 6:36 and is already anchored by this record.",
+        "evidence": [
+          "Pinned WLC 1Chr 6:6 has Zerah son of Iddo, not Zerahiah",
+          "Pinned WLC 1Chr 6:36 o130060360051 names Zerahiah"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "key_references": [
+              "15007004",
+              "13006006"
+            ]
+          },
+          "after": {
+            "key_references": [
+              "15007004",
+              "13006036"
+            ]
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -45,7 +74,7 @@
   "id": "person:Zerahiah",
   "key_references": [
     "15007004",
-    "13006006"
+    "13006036"
   ],
   "localizations": {
     "eng": {

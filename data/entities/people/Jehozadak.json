@@ -13,10 +13,47 @@
   },
   "bsi": {
     "canonical_id": "person:Jehozadak",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "person:Jehozadak",
     "source_primary_id": "person:Jehozadak",
-    "source_sha256": "c03d380d5e5e5fcba1a48657a022fbcc2c456d7757d357fb55ccc23e5015886a"
+    "source_sha256": "c03d380d5e5e5fcba1a48657a022fbcc2c456d7757d357fb55ccc23e5015886a",
+    "editorial_reason": "The pinned 1 Chronicles 6:14-15 lists Merarite Levites (Mahli, Libni, Shimei, Uzzah and their descendants), not the priest Jehozadak. The priestly ancestor appears in the distinct Hebrew priestly line at 1 Chronicles 5:40-41, with both original name witnesses already preserved.",
+    "editorial_evidence": [
+      "Pinned WLC 1Chr 6:14-15 names the Merarite line, not Jehozadak",
+      "Pinned WLC 1Chr 5:40 o130050400081 and 5:41 o130050410012 name Jehozadak"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "adjudicate_final_source_key_mismatch",
+        "reason": "The pinned 1 Chronicles 6:14-15 lists Merarite Levites (Mahli, Libni, Shimei, Uzzah and their descendants), not the priest Jehozadak. The priestly ancestor appears in the distinct Hebrew priestly line at 1 Chronicles 5:40-41, with both original name witnesses already preserved.",
+        "evidence": [
+          "Pinned WLC 1Chr 6:14-15 names the Merarite line, not Jehozadak",
+          "Pinned WLC 1Chr 5:40 o130050400081 and 5:41 o130050410012 name Jehozadak"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "key_references": [
+              "13006014",
+              "13006015",
+              "15003002",
+              "37001001",
+              "37001014",
+              "38006011"
+            ]
+          },
+          "after": {
+            "key_references": [
+              "15003002",
+              "37001001",
+              "37001014",
+              "38006011",
+              "13005040",
+              "13005041"
+            ]
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -62,12 +99,12 @@
   "gender": "male",
   "id": "person:Jehozadak",
   "key_references": [
-    "13006014",
-    "13006015",
     "15003002",
     "37001001",
     "37001014",
-    "38006011"
+    "38006011",
+    "13005040",
+    "13005041"
   ],
   "localizations": {
     "eng": {

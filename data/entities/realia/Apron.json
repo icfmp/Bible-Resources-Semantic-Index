@@ -9,10 +9,41 @@
   },
   "bsi": {
     "canonical_id": "realia:Apron",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "realia:Apron",
     "source_primary_id": "realia:Apron",
-    "source_sha256": "1bb385787d5a4da6e14d69b47fa1d8665eb1474a5de32b073905f9ad193455a1"
+    "source_sha256": "1bb385787d5a4da6e14d69b47fa1d8665eb1474a5de32b073905f9ad193455a1",
+    "editorial_reason": "Ezekiel 23:15 describes belts and turbans worn by pictured officials, and Matthew 3:4 explicitly names John the Baptist's leather belt. Neither verse refers to an apron. Acts 19:12, by contrast, directly attests the indexed Greek apron and remains the sole key.",
+    "editorial_evidence": [
+      "Pinned WLC Ezek 23:15 refers to belts at the waist and flowing turbans",
+      "Pinned SBLGNT Matt 3:4 names a leather belt, not an apron",
+      "Pinned SBLGNT Acts 19:12 n44019012013 directly names the apron"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "adjudicate_final_source_key_mismatch",
+        "reason": "Ezekiel 23:15 describes belts and turbans worn by pictured officials, and Matthew 3:4 explicitly names John the Baptist's leather belt. Neither verse refers to an apron. Acts 19:12, by contrast, directly attests the indexed Greek apron and remains the sole key.",
+        "evidence": [
+          "Pinned WLC Ezek 23:15 refers to belts at the waist and flowing turbans",
+          "Pinned SBLGNT Matt 3:4 names a leather belt, not an apron",
+          "Pinned SBLGNT Acts 19:12 n44019012013 directly names the apron"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "key_references": [
+              "44019012",
+              "26023015",
+              "40003004"
+            ]
+          },
+          "after": {
+            "key_references": [
+              "44019012"
+            ]
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "SBLGNT": [
@@ -23,9 +54,7 @@
   },
   "id": "realia:Apron",
   "key_references": [
-    "44019012",
-    "26023015",
-    "40003004"
+    "44019012"
   ],
   "lemmas": {
     "el": [
