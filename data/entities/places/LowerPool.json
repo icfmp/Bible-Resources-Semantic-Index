@@ -5,9 +5,41 @@
     "review_status": "source_unreviewed",
     "source_id": "place:LowerPool",
     "source_primary_id": "place:LowerPool",
-    "source_sha256": "f1d4d6bdb9a222d411a6f3b74c0b02c6841708be1a1d2c778da878c6b24b9c31"
+    "source_sha256": "f1d4d6bdb9a222d411a6f3b74c0b02c6841708be1a1d2c778da878c6b24b9c31",
+    "editorial_field_changes": [
+      {
+        "action": "restore_exact_heb_source_urban_geography",
+        "added_reference_values": {
+          "references": [
+            "23022009"
+          ]
+        },
+        "added_original_word_groups": {
+          "wlc": [
+            [
+              "o230220090112",
+              "o230220090121",
+              "o230220090122"
+            ]
+          ]
+        },
+        "reason": "Isaiah 22:9 explicitly names the lower pool in Jerusalem, including pool and lower adjective; this is not the old pool of Isaiah 22:11, a separately named reference.",
+        "evidence": [
+          "ORG BCV8 23022009",
+          "Exact original Hebrew phrase and token IDs visually collated in WLC lowfat XML frozen at Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c"
+        ]
+      }
+    ]
   },
-  "explicit_instances": {},
+  "explicit_instances": {
+    "wlc": [
+      [
+        "o230220090112",
+        "o230220090121",
+        "o230220090122"
+      ]
+    ]
+  },
   "id": "place:LowerPool",
   "is_artifact": true,
   "is_person": false,
@@ -29,7 +61,9 @@
   },
   "primary_id": "place:LowerPool",
   "pronominal_referents": {},
-  "references": [],
+  "references": [
+    "23022009"
+  ],
   "subject_referents": {},
   "type": "place"
 }
