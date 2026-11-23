@@ -154,3 +154,10 @@ jobs:
       - name: Audit complete remaining source-reference queue for resolution, read-only
         run: |
           python3 -I scripts/audit_source_reference_evidence.py --data data --details
+
+      - name: Collate 38 remaining object and ethnonym verses against pinned originals
+        run: |
+          python3 -I scripts/inspect_pinned_original_verse.py \
+            --wlc macula-hebrew/WLC/tsv/macula-hebrew.tsv \
+            --sblgnt macula-greek/SBLGNT/tsv/macula-greek-SBLGNT.tsv \
+            --verses 04026058 01014005 01014015 01010013 01010014 41012041 41012042 40022020 41012016 66012005 66012009 10012031 09016011 66003014 66003015 06006020 16002017 12004002 02026001 46009025 01024053 02035022 04031050 09013020 66001018 09025018 01028018 01031045 02003005 05023025 26001019 05022012 09005002 40023027 02028042 10005023 03011031 09016013
