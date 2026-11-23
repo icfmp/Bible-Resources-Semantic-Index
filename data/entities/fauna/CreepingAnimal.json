@@ -9,10 +9,89 @@
   },
   "bsi": {
     "canonical_id": "fauna:CreepingAnimal",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "fauna:CreepingAnimal",
     "source_primary_id": "fauna:CreepingAnimal",
-    "source_sha256": "f1894b2e6d8de0d17fc748bbdab919f67a37733fd9ef6384750c59e86beb905d"
+    "source_sha256": "f1894b2e6d8de0d17fc748bbdab919f67a37733fd9ef6384750c59e86beb905d",
+    "editorial_reason": "Restore exact source-language direct mention in this identity's inherited key verses without conflating ancestor, location and lineage identities.",
+    "editorial_evidence": [
+      "Pinned Macula WLC Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c; SBLGNT Clear-Bible/macula-greek@8423afe47b9e8f24b7772e808af45c7159a6fe7e, verse inspection PR #137",
+      "Leviticus 5:2 names swarming creatures and Deuteronomy 32:24 names crawling things in dust; generalized animal class and no species-level claim.",
+      "03005002 wlc: o030050020181",
+      "05032024 wlc: o050320240131"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "restore_compound_original_source_mention",
+        "reason": "Restore exact source-language direct mention in this identity's inherited key verses without conflating ancestor, location and lineage identities.",
+        "evidence": [
+          "Pinned Macula WLC Clear-Bible/macula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c; SBLGNT Clear-Bible/macula-greek@8423afe47b9e8f24b7772e808af45c7159a6fe7e, verse inspection PR #137",
+          "Leviticus 5:2 names swarming creatures and Deuteronomy 32:24 names crawling things in dust; generalized animal class and no species-level claim.",
+          "03005002 wlc: o030050020181",
+          "05032024 wlc: o050320240131"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [
+              "44010012",
+              "44011006",
+              "45001023",
+              "59003007"
+            ],
+            "explicit_instances": {
+              "SBLGNT": [
+                [
+                  "n44010012008"
+                ],
+                [
+                  "n44011006016"
+                ],
+                [
+                  "n45001023018"
+                ],
+                [
+                  "n59003007008"
+                ]
+              ]
+            }
+          },
+          "after": {
+            "references": [
+              "03005002",
+              "05032024",
+              "44010012",
+              "44011006",
+              "45001023",
+              "59003007"
+            ],
+            "explicit_instances": {
+              "SBLGNT": [
+                [
+                  "n44010012008"
+                ],
+                [
+                  "n44011006016"
+                ],
+                [
+                  "n45001023018"
+                ],
+                [
+                  "n59003007008"
+                ]
+              ],
+              "wlc": [
+                [
+                  "o030050020181"
+                ],
+                [
+                  "o050320240131"
+                ]
+              ]
+            }
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "SBLGNT": [
@@ -27,6 +106,14 @@
       ],
       [
         "n59003007008"
+      ]
+    ],
+    "wlc": [
+      [
+        "o030050020181"
+      ],
+      [
+        "o050320240131"
       ]
     ]
   },
@@ -62,6 +149,8 @@
     ]
   },
   "references": [
+    "03005002",
+    "05032024",
     "44010012",
     "44011006",
     "45001023",
