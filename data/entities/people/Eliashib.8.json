@@ -15,10 +15,93 @@
   },
   "bsi": {
     "canonical_id": "person:Eliashib.8",
-    "review_status": "source_unreviewed",
+    "review_status": "editorially_reviewed",
     "source_id": "person:Eliashib.8",
     "source_primary_id": "person:Eliashib.8",
-    "source_sha256": "c3dc71653ab72e34d97bb4732b1e7dde044789bc6cfcaf2691e128b1c4bc1840"
+    "source_sha256": "c3dc71653ab72e34d97bb4732b1e7dde044789bc6cfcaf2691e128b1c4bc1840",
+    "editorial_reason": "Restore each verified direct original-language word witness independently while leaving non-direct contextual key claims distinct.",
+    "editorial_evidence": [
+      "Clear-Bible/mac-ula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c exact WLC original-word source",
+      "Nehemiah 13:4,7 directly names the priest Eliashib in the Temple chamber incident, consistent with the same indexed Eliashib priest; other namesakes are separate source identities.",
+      "BCV8 16013004 exact wlc token(s) o160130040031",
+      "BCV8 16013007 exact wlc token(s) o160130070071"
+    ],
+    "editorial_field_changes": [
+      {
+        "action": "restore_verified_direct_original_word_after_identity_corroboration",
+        "reason": "Restore each verified direct original-language word witness independently while leaving non-direct contextual key claims distinct.",
+        "evidence": [
+          "Clear-Bible/mac-ula-hebrew@47db250bd55d0d8577f2a94fba114ef16c35b23c exact WLC original-word source",
+          "Nehemiah 13:4,7 directly names the priest Eliashib in the Temple chamber incident, consistent with the same indexed Eliashib priest; other namesakes are separate source identities.",
+          "BCV8 16013004 exact wlc token(s) o160130040031",
+          "BCV8 16013007 exact wlc token(s) o160130070071"
+        ],
+        "replaced_field_values": {
+          "before": {
+            "references": [
+              "16012010",
+              "16012022",
+              "16012023",
+              "16013028"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o160120100081"
+                ],
+                [
+                  "o160120100092"
+                ],
+                [
+                  "o160120220031"
+                ],
+                [
+                  "o160120230141"
+                ],
+                [
+                  "o160130280041"
+                ]
+              ]
+            }
+          },
+          "after": {
+            "references": [
+              "16012010",
+              "16012022",
+              "16012023",
+              "16013004",
+              "16013007",
+              "16013028"
+            ],
+            "explicit_instances": {
+              "wlc": [
+                [
+                  "o160120100081"
+                ],
+                [
+                  "o160120100092"
+                ],
+                [
+                  "o160120220031"
+                ],
+                [
+                  "o160120230141"
+                ],
+                [
+                  "o160130280041"
+                ],
+                [
+                  "o160130040031"
+                ],
+                [
+                  "o160130070071"
+                ]
+              ]
+            }
+          }
+        }
+      }
+    ]
   },
   "explicit_instances": {
     "wlc": [
@@ -36,6 +119,12 @@
       ],
       [
         "o160130280041"
+      ],
+      [
+        "o160130040031"
+      ],
+      [
+        "o160130070071"
       ]
     ]
   },
@@ -74,6 +163,8 @@
     "16012010",
     "16012022",
     "16012023",
+    "16013004",
+    "16013007",
     "16013028"
   ],
   "roles": [
