@@ -330,3 +330,74 @@ not automatically close the broader issue #23**, validate every
 remaining lexical/place source field outside this selection or authorize
 a release. The underlying original Bible text, immutable ACAI source
 fingerprints, original word editions and Bible application remain unchanged.
+
+## V1 place-source review: all 27 Bible-marked places without direct-name tokens
+
+After PR #142, the complete native read-only census reports **27** biblical
+place entries with neither general-reference nor exact original-word link
+(14 with key verses; 13 territorially constructed from Joshua allotments).
+An absence of a direct-name word does **not** itself prove a corrupt source
+record. PR #143 reviews **each of these 27 individually** in
+[`data/source-place-attestation-review.json`](../data/source-place-attestation-review.json).
+
+Decisions, with pinned Hebrew originals and an external historical/lexical
+reference for each place:
+
+- **13 reversible source classification fixes**: the territories allotted to
+  Asher, Benjamin, Dan, East/West Manasseh, Ephraim, Gad, Issachar, Judah,
+  Naphtali, Reuben, Simeon and Zebulun have been changed from an
+  anachronistic ACAI `province` kind to `tribal territory`. Each has a
+  separately quoted real Hebrew tribal original-word witness in Joshua
+  13–19. This original tribe word does **not** turn the *constructed*
+  territory name into a literal Hebrew toponym; inherited key/general
+  reference lists stay empty. Original source SHA-256 and province kind
+  are preserved in reversible editorial receipts.
+- **3 more reversible identity-qualification corrections**:
+  `place:Nehelam` is an *inferred*, unlocated origin of the Nehelamite
+  in Jeremiah 29, possibly related to the Hebrew for *dreaming*;
+  `place:NorthGate` and `place:SouthGate` are *inferred*
+  gatekeeper posts from the northern/southern assignments in
+  1 Chronicles 26:14–15, not attested proper gate names in those verses.
+- **11 source-qualified, legitimate contextual records with no
+  additional data edits**: Babylonia (Shinar/Babylon/Chaldea),
+  Eglath-shelishiyah (disputed site/heifer reading), Gederah.2,
+  Gomer (ethnonymic nation), Hushah, Lud.2, Meronoth, Naamah.2,
+  Shaalbon (demonym-inferred communities), South.3 (Ptolemaic
+  *king of the south*), and Zaphon.2 (poetic cosmic/northern mountain
+  allusion). These are **not claims of precisely located ancient
+  settlements**.
+
+The strict [place-attestation validator](../scripts/validate_source_place_attestations.py)
+recomputes the unanchored inventory from the current native records and
+requires that every member occur **once** in the review docket. It
+checks original keys, exact named source IDs, immutable source
+fingerprints, edition locks, editorial receipts, no silently inserted
+original-word groups, and all **42 distinct** corroborating word
+identifiers/English/gloss/lemma from pinned WLC/SBLGNT TSVs. The
+[adversarial regression suite](../tests/test_source_place_attestations.py)
+rejects a missing place, fabricated source witness, disguised province,
+altered name or unsupported direct-name claim. All place qualifications
+remain separate from exact word mentions and corpus-specific publication
+rights.
+
+Reproducible metadata-only review:
+
+```sh
+python3 -I scripts/validate_source_place_attestations.py \
+  --data data --ledger data/source-place-attestation-review.json
+```
+
+The stronger independent original-language verification with `--wlc`
+and `--sblgnt` executes in the pinned-source CI workflow.
+
+**Scope:** This finishes the source attestation and uncertainty review for
+the **27-current-place cohort**, but it does not make the raw unanchored
+count zero: constructed regional concepts *correctly* remain without
+fake direct-name words. Separately, the same native census has
+**462 key-verses absent from general references across 264 entities**
+(53 with genuine indirect words, 409 without their own exact/indirect
+word group). Those are independent ACAI source fields, not automatically
+errors. The full-field audit still needs separate disposition for the
+cases not previously certified, so issue #23 must remain open until
+those findings are resolved. Publication and release rights remain
+independently blocked by #62.
