@@ -1,4 +1,4 @@
-name: Audit Clear.Bible LSG targets against curated BRLSG1910 1.0.2 (no publication)
+name: Build BRSI-owned LSG word index from pinned Clear.Bible (no publication)
 
 on:
   pull_request:
@@ -71,8 +71,8 @@ jobs:
             --curated-root /tmp/brsi-curated-reader \
             --candidate-dir /tmp/brsi-curated-candidate \
             --output /tmp/brsi-curated-edition-report.json \
-            --bridge-output /tmp/brsi-curated-nt-position-candidate.json.gz
-      - name: Inspect private unapproved coordinate candidate integrity
+            --index-output /tmp/brsi-curated-lsg-nt-index.json.gz
+      - name: Verify BRSI-owned, source-preserving bidirectional index
         run: |
           set -euo pipefail
           python3 -I - <<'PY'
@@ -81,8 +81,8 @@ jobs:
           import json
           from pathlib import Path
           report = json.loads(Path('/tmp/brsi-curated-edition-report.json').read_text())
-          receipt = report['private_nt_word_candidate']
-          file = Path('/tmp/brsi-curated-nt-position-candidate.json.gz')
+          receipt = report['private_nt_word_index']
+          file = Path('/tmp/brsi-curated-lsg-nt-index.json.gz')
           compressed = file.read_bytes()
           assert hashlib.sha256(compressed).hexdigest() == receipt['gzip_sha256']
           assert len(compressed) == receipt['gzip_bytes']
@@ -91,12 +91,18 @@ jobs:
           assert len(raw) == receipt['uncompressed_bytes']
           result = json.loads(raw)
           assert result['status'] == 'private_nonpublishing_unapproved'
+          assert result['format'] == 'brsi-curated-translation-word-index-candidate'
+          assert result['index_owner'] == 'Bible Resources Semantic Index'
+          assert len(result['by_original_macula_id']) >= 90000
+          assert len(result['by_curated_word']) >= 50000
+          assert sum(len(v) for v in result['by_curated_word'].values()) == result['coverage']['surface_word_position_candidate']
+          assert all(isinstance(v, list) and v for v in result['by_original_macula_id'].values())
           assert result['original_alignment_records'] == 104807
           assert result['coverage'] == receipt['coverage']
           assert result['coverage']['surface_word_position_candidate'] > 1000
           assert result['coverage']['unresolved'] > 0
           assert all(row['editorially_approved'] is False for row in result['rows'])
-          print('BRSI_PRIVATE_BRIDGE_CANDIDATE', result['coverage'])
+          print('BRSI_OWNED_INDEX_CANDIDATE', result['coverage'])
           PY
       - name: Verify full pinned curated-edition diagnostic JSON receipt
         run: |
