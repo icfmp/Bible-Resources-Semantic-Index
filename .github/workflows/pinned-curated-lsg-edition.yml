@@ -70,7 +70,34 @@ jobs:
             --upstream-root /tmp/brsi-curated-upstream \
             --curated-root /tmp/brsi-curated-reader \
             --candidate-dir /tmp/brsi-curated-candidate \
-            --output /tmp/brsi-curated-edition-report.json
+            --output /tmp/brsi-curated-edition-report.json \
+            --bridge-output /tmp/brsi-curated-nt-position-candidate.json.gz
+      - name: Inspect private unapproved coordinate candidate integrity
+        run: |
+          set -euo pipefail
+          python3 -I - <<'PY'
+          import gzip
+          import hashlib
+          import json
+          from pathlib import Path
+          report = json.loads(Path('/tmp/brsi-curated-edition-report.json').read_text())
+          receipt = report['private_nt_word_candidate']
+          file = Path('/tmp/brsi-curated-nt-position-candidate.json.gz')
+          compressed = file.read_bytes()
+          assert hashlib.sha256(compressed).hexdigest() == receipt['gzip_sha256']
+          assert len(compressed) == receipt['gzip_bytes']
+          raw = gzip.decompress(compressed)
+          assert hashlib.sha256(raw).hexdigest() == receipt['uncompressed_sha256']
+          assert len(raw) == receipt['uncompressed_bytes']
+          result = json.loads(raw)
+          assert result['status'] == 'private_nonpublishing_unapproved'
+          assert result['original_alignment_records'] == 104807
+          assert result['coverage'] == receipt['coverage']
+          assert result['coverage']['surface_word_position_candidate'] > 1000
+          assert result['coverage']['unresolved'] > 0
+          assert all(row['editorially_approved'] is False for row in result['rows'])
+          print('BRSI_PRIVATE_BRIDGE_CANDIDATE', result['coverage'])
+          PY
       - name: Verify full pinned curated-edition diagnostic JSON receipt
         run: |
           set -euo pipefail
