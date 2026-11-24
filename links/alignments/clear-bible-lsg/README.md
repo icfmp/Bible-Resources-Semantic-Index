@@ -199,8 +199,8 @@ No Scripture text or word lists are committed as a product of this audit.
 ### Deterministic BRSI-owned word index (private pending review)
 
 The same pinned [curated audit workflow](../../../.github/workflows/pinned-curated-lsg-edition.yml)
-also regenerates a **private** compressed, source-ID-preserving coordinate
-candidate for the actual curated LSG v1.0.2. No generated corpus is committed,
+also regenerates a **private** compressed, BRSI-owned, source-ID-preserving
+bidirectional word index for the actual curated LSG v1.0.2. No generated corpus is committed,
 uploaded as a public GitHub Actions artifact, released or sent to the Bible app.
 Its full deterministic SHA-256 and byte size are protected by
 [curated-1.0.2-parity.lock.json](curated-1.0.2-parity.lock.json), with a separate
