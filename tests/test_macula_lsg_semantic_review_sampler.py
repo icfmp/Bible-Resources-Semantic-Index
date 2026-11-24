@@ -55,7 +55,7 @@ def lock(index, sha="b" * 64):
 
 
 class ReviewSamplerTests(unittest.TestCase):
-    def test_exact_four_strata_and_distinct_verses(self):
+    def test_exact_four_strata_and_distinct_original_ids(self):
         cases, population = sampler.select_cases(fixture(), per_stratum=6)
         self.assertEqual(len(cases), 24)
         self.assertEqual(len({x["original_macula_id"] for x in cases}), 24)
@@ -64,17 +64,14 @@ class ReviewSamplerTests(unittest.TestCase):
                          {name: 6 for name in sampler.STRATA})
         self.assertEqual({x["review_status"] for x in cases}, {"unreviewed"})
         self.assertEqual(sum(x["total"] for x in population.values()), 48)
-        self.assertTrue(all(len(set(population[name]["books"])) == 2
+        self.assertTrue(all(len(population[name]["books"]) == 2
                             for name in sampler.STRATA))
 
-    def test_reproducible_seeded_order_and_each_book_covered(self):
+    def test_reproducible_seeded_order_without_book_oversampling(self):
         data = fixture()
         a, _ = sampler.select_cases(data, per_stratum=6)
         b, _ = sampler.select_cases(data, per_stratum=6)
         self.assertEqual(a, b)
-        for reason in sampler.STRATA:
-            self.assertEqual(len({x["book_code"] for x in a
-                                  if x["source_cause"] == reason}), 2)
         self.assertNotEqual(
             sampler.rank(sampler.SEED, "n40001001001"),
             sampler.rank(sampler.SEED, "n40001001002"))
@@ -89,7 +86,9 @@ class ReviewSamplerTests(unittest.TestCase):
         self.assertEqual(document["reviewed_case_count"], 0)
         self.assertFalse(document["automatic_linguistic_approval"])
         self.assertFalse(document["publication_authorized"])
-        self.assertFalse(report["population_error_rate_estimable_without_weights"])
+        self.assertTrue(report["overall_population_rate_requires_stratum_weights"])
+        self.assertTrue(report["blind_evaluation_must_cluster_by_source_verse"])
+        self.assertTrue(report["uniform_source_id_sampling_within_stratum"])
         self.assertEqual(report["private_unreviewed_cases_sha256"],
                          hashlib.sha256(raw).hexdigest())
         self.assertEqual(report["human_gold_cases"], 0)
@@ -134,21 +133,27 @@ class ReviewSamplerTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "positive"):
             sampler.select_cases(fixture(), per_stratum=0)
 
-    def test_no_artificial_fill_when_unique_verse_sample_insufficient(self):
+    def test_same_verse_tokens_stay_in_unbiased_original_id_sample(self):
         data = fixture()
         reason = sampler.STRATA[0]
         sources = [s for s, r in data["unlinked_cause_by_original_macula_id"].items()
                    if r == reason]
-        # Many distinct original tokens within the same verse are not many
-        # independent review observations; this must not silently fill quota.
-        shared = sources[0][1:9]
-        for source in sources[1:]:
-            new_source = source[0] + shared + source[9:]
-            # Token IDs must remain distinct (a second part/source ordinal).
-            if new_source in data["unlinked_cause_by_original_macula_id"]:
-                continue
+        first, second = sources[:2]
+        shared_verse_other_token = first[:9] + "002"
+        data["unlinked_cause_by_original_macula_id"].pop(second)
+        data["unlinked_cause_by_original_macula_id"][shared_verse_other_token] = reason
+        data["by_original_macula_id"][shared_verse_other_token] = (
+            data["by_original_macula_id"].pop(second))
+        cases, _ = sampler.select_cases(data, per_stratum=12)
+        self.assertEqual(len(cases), 48)
+        self.assertEqual(len({c["source_verse_coordinate"] for c in cases}), 47)
+        self.assertIn(first, {c["original_macula_id"] for c in cases})
+        self.assertIn(shared_verse_other_token,
+                      {c["original_macula_id"] for c in cases})
+
+    def test_not_enough_source_ids_fails_instead_of_repeating(self):
         with self.assertRaisesRegex(ValueError, "cannot fulfill"):
-            sampler.select_cases(data, per_stratum=20)
+            sampler.select_cases(fixture(), per_stratum=20)
 
 
 if __name__ == "__main__":
