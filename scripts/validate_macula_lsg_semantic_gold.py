@@ -80,7 +80,13 @@ def validated_review(record: dict, case: dict, dossier: dict,
     if source not in original_ids:
         raise ValueError("original group does not include the reviewed source")
     positions = []
+    in_index = {
+        row["original_macula_id"]: row.get("present_in_correspondence_index")
+        for row in dossier["original_source_verses"][verse]
+    }
     for original in original_ids:
+        if original in in_index and in_index[original] is not True:
+            raise ValueError("original source part absent from existing indexed MACULA identity")
         if original not in in_verse:
             raise ValueError("unattested or cross-verse source word")
         positions.append(in_verse.index(original))
