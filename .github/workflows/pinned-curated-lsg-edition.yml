@@ -1,0 +1,110 @@
+name: Audit Clear.Bible LSG targets against curated BRLSG1910 1.0.2 (no publication)
+
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/pinned-curated-lsg-edition.yml"
+      - "links/alignments/clear-bible-lsg/**"
+      - "scripts/build_translation_alignments.py"
+      - "scripts/audit_curated_translation_edition.py"
+      - "tests/test_curated_translation_edition.py"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-curated-lsg-edition:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - name: Check out BRSI
+        uses: actions/checkout@v4
+      - name: Run source-independent curated edition diagnostic regressions
+        run: python3 -I -m unittest discover -s tests -p 'test_curated_translation_edition.py' -v
+      - name: Retrieve pinned Clear.Bible alignment inputs
+        shell: bash
+        run: |
+          set -euo pipefail
+          revision=c99bd0ae6946775f932517656308ca19fc706921
+          mkdir -p /tmp/brsi-curated-upstream
+          git -C /tmp/brsi-curated-upstream init
+          git -C /tmp/brsi-curated-upstream remote add origin https://github.com/Clear-Bible/Alignments.git
+          git -C /tmp/brsi-curated-upstream sparse-checkout init --cone
+          git -C /tmp/brsi-curated-upstream sparse-checkout set data/sources data/fra/alignments/LSG data/fra/targets/LSG
+          git -C /tmp/brsi-curated-upstream -c protocol.version=2 fetch --depth 1 --filter=blob:none origin "$revision"
+          git -C /tmp/brsi-curated-upstream checkout --detach FETCH_HEAD
+          test "$(git -C /tmp/brsi-curated-upstream rev-parse HEAD)" = "$revision"
+      - name: Retrieve immutable Bible Resources 1.0.2 cleaned OSIS and module metadata
+        shell: bash
+        run: |
+          set -euo pipefail
+          revision=7092d6e9318eeff46081feb831c207efa5859af2
+          mkdir -p /tmp/brsi-curated-reader
+          git -C /tmp/brsi-curated-reader init
+          git -C /tmp/brsi-curated-reader remote add origin https://github.com/icfmp/Bible-Resources.git
+          git -C /tmp/brsi-curated-reader sparse-checkout init --cone
+          git -C /tmp/brsi-curated-reader sparse-checkout set sources/cleaned/bibles/fr/lsg-1910 modules/lsg-1910
+          git -C /tmp/brsi-curated-reader -c protocol.version=2 fetch --depth 1 --filter=blob:none origin "$revision"
+          git -C /tmp/brsi-curated-reader checkout --detach FETCH_HEAD
+          test "$(git -C /tmp/brsi-curated-reader rev-parse HEAD)" = "$revision"
+      - name: Recreate exact private alignment candidates
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -I scripts/build_translation_alignments.py \
+            --manifest links/alignments/clear-bible-lsg/manifest.json \
+            --corrections links/alignments/clear-bible-lsg/corrections.json \
+            --upstream-root /tmp/brsi-curated-upstream \
+            --output-dir /tmp/brsi-curated-candidate
+          python3 -I scripts/verify_generated_json.py \
+            --generated /tmp/brsi-curated-candidate/receipt.json \
+            --baseline links/alignments/clear-bible-lsg/receipt.lock.json
+      - name: Compare every curated OSIS verse to original French target TSV and OT references
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -I scripts/audit_curated_translation_edition.py \
+            --alignment-manifest links/alignments/clear-bible-lsg/manifest.json \
+            --curated-lock links/alignments/clear-bible-lsg/curated-1.0.2.lock.json \
+            --upstream-root /tmp/brsi-curated-upstream \
+            --curated-root /tmp/brsi-curated-reader \
+            --candidate-dir /tmp/brsi-curated-candidate \
+            --output /tmp/brsi-curated-edition-report.json \
+            --bridge-output /tmp/brsi-curated-nt-position-candidate.json.gz
+      - name: Inspect private unapproved coordinate candidate integrity
+        run: |
+          set -euo pipefail
+          python3 -I - <<'PY'
+          import gzip
+          import hashlib
+          import json
+          from pathlib import Path
+          report = json.loads(Path('/tmp/brsi-curated-edition-report.json').read_text())
+          receipt = report['private_nt_word_candidate']
+          file = Path('/tmp/brsi-curated-nt-position-candidate.json.gz')
+          compressed = file.read_bytes()
+          assert hashlib.sha256(compressed).hexdigest() == receipt['gzip_sha256']
+          assert len(compressed) == receipt['gzip_bytes']
+          raw = gzip.decompress(compressed)
+          assert hashlib.sha256(raw).hexdigest() == receipt['uncompressed_sha256']
+          assert len(raw) == receipt['uncompressed_bytes']
+          result = json.loads(raw)
+          assert result['status'] == 'private_nonpublishing_unapproved'
+          assert result['original_alignment_records'] == 104807
+          assert result['coverage'] == receipt['coverage']
+          assert result['coverage']['surface_word_position_candidate'] > 1000
+          assert result['coverage']['unresolved'] > 0
+          assert all(row['editorially_approved'] is False for row in result['rows'])
+          print('BRSI_PRIVATE_BRIDGE_CANDIDATE', result['coverage'])
+          PY
+      - name: Verify full pinned curated-edition diagnostic JSON receipt
+        run: |
+          set -euo pipefail
+          python3 -I scripts/verify_generated_json.py \
+            --generated /tmp/brsi-curated-edition-report.json \
+            --baseline links/alignments/clear-bible-lsg/curated-1.0.2-parity.lock.json
+      - name: Explicit source and publication boundaries
+        run: |
+          echo "Read-only edition candidate comparison. No source text committed or uploaded."
+          echo "No French token remaps, cross-versification guesses, release or app changes."

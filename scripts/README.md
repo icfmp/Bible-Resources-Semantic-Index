@@ -42,6 +42,16 @@ never changes the application. See [V1 consumer guide](../docs/V1_CONSUMPTION.md
   are locked under [the LSG candidate directory](../links/alignments/clear-bible-lsg/README.md).
   Missing original lemmas and morphological Hebrew suffix IDs are preserved
   as explicit limitations; no guessed translation/lexical-sense mapping.
+- `audit_curated_translation_edition.py`: reusable, nonpublishing,
+  source-pinned comparison of original translation-token TSV surfaces with
+  an immutable curated OSIS edition. Counts verse-level textual equality,
+  punctuation and segmentation mismatches and aligned-token boundary
+  classes without inferring any word link or rewriting references. See
+  [LSG 1.0.2 audit](../links/alignments/clear-bible-lsg/README.md).
+  Its optional, private, deterministic word-position candidate retains exact
+  source IDs and explicitly separates surface-matched coordinates from
+  unresolved punctuation, word-boundary and edition differences; it
+  is never a validated mapping or distributable package.
 - `audit_translation_target_gaps.py`: source-locked, nonpublishing
   classification of missing translation target selectors and cross-verse
   patterns in private candidates. No token replacements, inferred
