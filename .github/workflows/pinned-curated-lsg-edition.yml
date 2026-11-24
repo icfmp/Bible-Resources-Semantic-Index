@@ -72,6 +72,43 @@ jobs:
             --candidate-dir /tmp/brsi-curated-candidate \
             --output /tmp/brsi-curated-edition-report.json \
             --index-output /tmp/brsi-curated-lsg-nt-index.json.gz
+      - name: Review bounded text witnesses for all NT edition mismatches (temporary research)
+        run: |
+          python3 -I - <<'PY'
+          import difflib
+          import importlib.util
+          import json
+          from pathlib import Path
+          spec = importlib.util.spec_from_file_location("edition", "scripts/audit_curated_translation_edition.py")
+          ed = importlib.util.module_from_spec(spec)
+          spec.loader.exec_module(ed)
+          root = Path("links/alignments/clear-bible-lsg")
+          manifest = json.loads((root / "manifest.json").read_text())
+          curated = json.loads((root / "curated-1.0.2.lock.json").read_text())
+          inputs = {x["key"]: x for x in manifest["inputs"]}
+          nt = inputs["nt_target"]
+          tsv = ed.pinned_file(Path("/tmp/brsi-curated-upstream"), nt["path"], nt["sha256"])
+          osis = ed.pinned_file(Path("/tmp/brsi-curated-reader"), curated["osis_path"], curated["osis_sha256"])
+          targets, _ = ed.read_target_tsv(tsv)
+          verses = ed.read_osis(osis)
+          mismatches = 0
+          for bcv in sorted(targets):
+              original = ed.character_stream(verses[bcv])
+              target = ed.character_stream(" ".join(x[1] for x in targets[bcv]))
+              if original == target:
+                  continue
+              mismatches += 1
+              opcodes = difflib.SequenceMatcher(None, original, target, autojunk=False).get_opcodes()
+              changed = []
+              for op, a, b, c, d in opcodes:
+                  if op == "equal":
+                      continue
+                  # Bounded, publicly documented Louis Segond surface witnesses only.
+                  changed.append([op, original[a:b][:75], target[c:d][:75],
+                                  len(original[a:b]), len(target[c:d])])
+              print("REVIEW_NT_MISMATCH", bcv, json.dumps(changed, ensure_ascii=False))
+          assert mismatches == 13, mismatches
+          PY
       - name: Verify BRSI-owned, source-preserving bidirectional index
         run: |
           set -euo pipefail
