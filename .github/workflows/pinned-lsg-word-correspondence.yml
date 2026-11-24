@@ -227,7 +227,8 @@ jobs:
                   assert proof['aquifer_target_id'][:8] == bcv
                   assert proof['location_proof'] in (
                       'forced_ordered_exact_word',
-                      'unique_exact_surface_without_order_proof')
+                      'unique_exact_surface_without_order_proof',
+                      'unique_exact_contiguous_original_target_trigram')
                   evidence_counts[proof['location_proof']] += 1
           assert evidence_counts['forced_ordered_exact_word'] > 300000
           assert r['aquifer_text_witness_census'].get(
@@ -235,6 +236,89 @@ jobs:
           ) + r['aquifer_text_witness_census'].get(
               'nt_target_words_unique_exact_surface_without_order_proof', 0
           ) > 0
+          # Independently verify each *new* repeated-word location using
+          # the unchanged complete Aquifer French target-verse token list,
+          # three consecutive original full-word selector IDs, the
+          # independently parsed LSG authorial word sequence and an
+          # exactly once-occurring contiguous 3-word phrase on EACH side.
+          from collections import defaultdict
+          new_trigrams = {}
+          for row in doc['rows']:
+              for proof in row.get('aquifer_source_word_location_proofs', []):
+                  if proof['location_proof'] != (
+                      'unique_exact_contiguous_original_target_trigram'):
+                      continue
+                  key = proof['aquifer_target_id']
+                  witness = proof['word_id']
+                  if key in new_trigrams:
+                      assert new_trigrams[key] == witness
+                  new_trigrams[key] = witness
+          assert new_trigrams, "source corpus has no new repeat-word trigrams"
+          target_verses = {selector[:8] for selector in new_trigrams}
+          target_items = defaultdict(dict)
+          for path in sorted(Path(
+                  '/tmp/brsi-word-aquifer/fra/alignments/json').glob('*.alignment.json')):
+              chapter = json.loads(path.read_text(encoding='utf-8'))
+              for group in chapter['groups']:
+                  if group.get('type') != 'translation':
+                      continue
+                  strings = [
+                      value for record in group['records']
+                      for value in record.get('target', [])
+                  ] + group.get('meta', {}).get('nonEquivalent', {}).get('target', [])
+                  for value in strings:
+                      selector, delimiter, word = value.partition('|')
+                      if selector[:8] not in target_verses:
+                          continue
+                      assert delimiter
+                      assert word
+                      word = unicodedata.normalize('NFC', word)
+                      old = target_items[selector[:8]].setdefault(selector, word)
+                      assert old == word
+          verified = set()
+          for selector, witness in sorted(new_trigrams.items()):
+              bcv, ordinal = witness.split(':')
+              ordinal = int(ordinal)
+              source = sorted(
+                  target_items[bcv].items(),
+                  key=lambda pair: (int(pair[0][8:11]),
+                                    int(pair[0][11:] or '0')))
+              source_ids = [item[0] for item in source]
+              source_surfaces = [item[1] for item in source]
+              i = source_ids.index(selector)
+              authored_words = word_cache[bcv]
+              j = ordinal - 1
+              assert source_surfaces[i] == authored_words[j]
+              candidates = []
+              for k in (i - 2, i - 1, i):
+                  if k < 0 or k + 3 > len(source):
+                      continue
+                  selectors = source_ids[k:k + 3]
+                  if (not all(len(s) == 11 and s[:8] == bcv for s in selectors)
+                      or [int(s[8:]) for s in selectors] !=
+                          list(range(int(selectors[0][8:]),
+                                     int(selectors[0][8:]) + 3))):
+                      continue
+                  phrase = source_surfaces[k:k + 3]
+                  author_start = j - (i - k)
+                  if author_start < 0 or author_start + 3 > len(authored_words):
+                      continue
+                  if authored_words[author_start:author_start + 3] != phrase:
+                      continue
+                  original_copies = sum(
+                      source_surfaces[x:x + 3] == phrase
+                      for x in range(len(source_surfaces) - 2))
+                  authored_copies = sum(
+                      authored_words[x:x + 3] == phrase
+                      for x in range(len(authored_words) - 2))
+                  if original_copies == authored_copies == 1:
+                      candidates.append(k)
+              assert candidates, (
+                  'unverified original+curated repeated-word contiguous trigram',
+                  selector, witness)
+              verified.add(selector)
+          assert verified == set(new_trigrams)
+          print('BRSI_INDEPENDENT_ORIGINAL_REPEATED_WORD_TRIGRAMS', len(verified))
           print('BRSI_FULL_AUTHORIAL_WORD_WITNESSES', dict(sorted(evidence_counts.items())))
           assert all(row['source_provenance'] for row in doc['rows'])
           assert doc['source_license_aquifer_alignment'] == 'CC BY-SA 4.0'
