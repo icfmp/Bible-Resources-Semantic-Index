@@ -11,6 +11,9 @@ on:
       - "scripts/audit_macula_lsg_original_syntax.py"
       - "scripts/audit_macula_lsg_diverse_syntax.py"
       - "scripts/audit_macula_lsg_syntax_lexical_neighborhood.py"
+      - "scripts/audit_macula_lsg_syntax_anchor_only.py"
+      - "tests/test_macula_lsg_syntax_anchor_only.py"
+      - "links/alignments/clear-bible-lsg/syntax-anchor-only.lock.json"
       - "tests/test_macula_lsg_syntax_lexical_neighborhood.py"
       - "links/alignments/clear-bible-lsg/syntax-lexical-neighborhood.lock.json"
       - "tests/test_macula_lsg_diverse_syntax.py"
@@ -65,6 +68,8 @@ jobs:
         run: python3 -I -m unittest discover -s tests -p 'test_macula_lsg_diverse_syntax.py' -v
       - name: Real source grammar by French lexical-neighborhood masked-pseudogold tests
         run: python3 -I -m unittest discover -s tests -p 'test_macula_lsg_syntax_lexical_neighborhood.py' -v
+      - name: Real syntax-group French anchor-only bracket and heldout target masking tests
+        run: python3 -I -m unittest discover -s tests -p 'test_macula_lsg_syntax_anchor_only.py' -v
       - name: Retrieve exact original Clear.Bible alignment sources
         shell: bash
         run: |
@@ -1081,6 +1086,59 @@ jobs:
               --baseline links/alignments/clear-bible-lsg/syntax-lexical-neighborhood.lock.json
           else
             echo "FIRST BILINGUAL SOURCE-SYNTAX RESEARCH RUN: freeze source-free report before merge"
+          fi
+
+      - name: Audit genuine syntax-group French brackets without lexical prematching
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -I scripts/audit_macula_lsg_syntax_anchor_only.py \
+            --original-index /tmp/brsi-macula-lsg-correspondence.json.gz \
+            --correspondence-lock links/alignments/clear-bible-lsg/aquifer-correspondence.lock.json \
+            --pivot-lock links/alignments/clear-bible-lsg/pivot.lock.json \
+            --pivot-nt /tmp/brsi-semantic-macula-nt/SBLGNT/tsv/macula-greek-SBLGNT.tsv \
+            --pivot-ot /tmp/brsi-semantic-macula-ot/WLC/tsv/macula-hebrew.tsv \
+            --original-nt-root /tmp/brsi-macula-syntax-nt \
+            --original-ot-root /tmp/brsi-macula-syntax-ot \
+            --curated-lock links/alignments/clear-bible-lsg/curated-1.0.2.lock.json \
+            --curated-root /tmp/brsi-word-reader \
+            --private-candidates /tmp/brsi-macula-syntax-anchor-only-private.json.gz \
+            --report /tmp/brsi-macula-syntax-anchor-only-source-free.json
+          python3 -I - <<'PY'
+          import gzip, hashlib, json
+          from pathlib import Path
+          p=Path('/tmp/brsi-macula-syntax-anchor-only-source-free.json')
+          r=json.loads(p.read_text())
+          raw=Path('/tmp/brsi-macula-syntax-anchor-only-private.json.gz').read_bytes()
+          private=json.loads(gzip.decompress(raw))
+          assert len(raw)==r['private_candidates_gzip_bytes']
+          assert hashlib.sha256(raw).hexdigest()==r['private_candidates_gzip_sha256']
+          assert r['kind']=='brsi-macula-authentic-syntax-anchor-only-bracket-research'
+          assert r['source_verses']==1960
+          assert r['original_MACULA_IDs']==607217
+          assert r['original_MACULA_unlinked_IDs']==119691
+          assert r['original_unlinked_in_selected_XML_scope']==3790
+          assert r['retrospective_NT_evaluation']['pseudo_gold_cases']==600
+          assert r['retrospective_NT_evaluation']['distinct_heldout_NT_source_verses']==600
+          assert r['human_reviewed_bilingual_phrase_gold']==0
+          assert r['new_links_automatically_approved']==0
+          assert r['publication_authorized'] is False
+          assert r['source_text_or_french_scripture_in_report'] is False
+          assert r['original_unlinked_with_anchor_only_bracket']==len(
+              private['original_source_candidates'])
+          assert all(c['automatic_link_approvals']==0 and
+                     c['publication_authorized'] is False and
+                     c['French_span_is_only_navigation_not_translation'] is True
+                     for c in private['original_source_candidates'])
+          print('MACULA_LSG_ANCHOR_ONLY_SOURCE_FREE_RECEIPT')
+          print(p.read_text())
+          PY
+          if test -f links/alignments/clear-bible-lsg/syntax-anchor-only.lock.json; then
+            python3 -I scripts/verify_generated_json.py \
+              --generated /tmp/brsi-macula-syntax-anchor-only-source-free.json \
+              --baseline links/alignments/clear-bible-lsg/syntax-anchor-only.lock.json
+          else
+            echo "FIRST ANCHOR-ONLY SOURCE RUN: freeze exact source-free receipt before merge"
           fi
 
       - name: Explicit no-publication boundary
