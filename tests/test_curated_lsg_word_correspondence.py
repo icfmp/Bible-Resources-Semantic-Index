@@ -193,7 +193,8 @@ class LSGOriginalWordWitnessTests(unittest.TestCase):
         # cannot be replaced by a contextual adjacency heuristic.
         unique_tokens = [("40001001001", "Alpha"),
                          ("40001001002", "Dieu"),
-                         ("40001001003", "Beta")]
+                         ("40001001003", "Beta"),
+                         ("40001001004", "Dieu")]
         unique_authored = [("Alpha", 0, 5), ("Dieu", 6, 10),
                            ("Beta", 11, 15), ("Dieu", 16, 20)]
         self.assertNotIn(1, tool.uniquely_anchored_original_target_pairs(
