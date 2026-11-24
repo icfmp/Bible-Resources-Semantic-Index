@@ -78,6 +78,19 @@ witnesses. No automatic link or Bible-app consumer export is authorized.
 The full set of unresolved original IDs, and the preselected 2,000-case
 four-stratum human cohort, are counted in a source-free aggregate report.
 
+
+The same research pilot also measures a **phrase-conditioned lemma challenger**:
+instead of demanding that an independently chosen full-verse lemma word falls
+inside an independently bounded French interval, it searches only the
+attested French words **inside that phrase** using lemma distributions trained
+on other verses. Duplicate surfaces, tied lexical supports and empty evidence
+force abstention. This challenger may recover localized hypotheses missed by
+the strict intersection; any such results remain **speculative candidate
+locations**, not semantic translation decisions. Although evaluation verses
+are excluded from lexical training, the same NT cases were already reported
+in #186/#189: this is **not** a new prospectively sealed independent benchmark,
+and the final human-approved phrase-accuracy remains unmeasured.
+
 ## Maintained pipeline
 
 **Clear.Bible is our immutable original alignment source; the index is ours.**
