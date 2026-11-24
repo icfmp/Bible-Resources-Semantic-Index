@@ -1,0 +1,30 @@
+{
+  "aquifer_revision": "c25cc382fb3584a0837289f1499a7f56a4798dde",
+  "by_canon": {
+    "nt": {
+      "multiple_target_diagnostics": 1,
+      "no_strict_orthographic_candidate": 2576,
+      "normalized_candidate_ambiguous": 19
+    },
+    "ot": {
+      "multiple_target_diagnostics": 8,
+      "no_strict_orthographic_candidate": 17213,
+      "normalized_candidate_ambiguous": 63
+    }
+  },
+  "clear_bible_revision": "c99bd0ae6946775f932517656308ca19fc706921",
+  "correspondence_index_sha256": "9978414b07dec293aaa4c08ab5e3c3b1b2886f177ab767325c448d75ec919d83",
+  "curated_osis_sha256": "2b8342a67d8e97b433670450fe9dd9e58917a7fcfc0cb4d321882ca8219dc3bd",
+  "format": "brsi-french-surface-difference-readonly-audit",
+  "full_diagnostic_sha256": "6be8307d03d1c5016f2b6345e3a581fa0a151a74124e2a42efe408a9976ec93e",
+  "linguistic_links_automatically_approved": false,
+  "original_source_ids_modified": false,
+  "original_unlinked_exact_word_absence": {
+    "nt": 2596,
+    "ot": 17284
+  },
+  "original_unlinked_exact_word_absence_total": 19880,
+  "purpose": "classify_only_no_automatic_translation_link",
+  "schema_version": 1,
+  "source_french_text_modified": false
+}
