@@ -10,6 +10,9 @@ on:
       - "scripts/audit_macula_lsg_phrase_brackets.py"
       - "scripts/audit_macula_lsg_original_syntax.py"
       - "scripts/audit_macula_lsg_diverse_syntax.py"
+      - "scripts/audit_macula_lsg_syntax_lexical_neighborhood.py"
+      - "tests/test_macula_lsg_syntax_lexical_neighborhood.py"
+      - "links/alignments/clear-bible-lsg/syntax-lexical-neighborhood.lock.json"
       - "tests/test_macula_lsg_diverse_syntax.py"
       - "links/alignments/clear-bible-lsg/diverse-original-syntax.lock.json"
       - "tests/test_macula_lsg_original_syntax.py"
@@ -60,6 +63,8 @@ jobs:
         run: python3 -I -m unittest discover -s tests -p 'test_macula_lsg_original_syntax.py' -v
       - name: Mixed genre MACULA original syntax review-unit regressions
         run: python3 -I -m unittest discover -s tests -p 'test_macula_lsg_diverse_syntax.py' -v
+      - name: Real source grammar by French lexical-neighborhood masked-pseudogold tests
+        run: python3 -I -m unittest discover -s tests -p 'test_macula_lsg_syntax_lexical_neighborhood.py' -v
       - name: Retrieve exact original Clear.Bible alignment sources
         shell: bash
         run: |
@@ -1012,6 +1017,70 @@ jobs:
               --baseline links/alignments/clear-bible-lsg/diverse-original-syntax.lock.json
           else
             echo "FIRST BREADTH AUDIT: freeze source-free report after independent identity review"
+          fi
+
+      - name: Evaluate real MACULA syntax group × authored French lexical neighborhood (nonpublishing)
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -I scripts/audit_macula_lsg_syntax_lexical_neighborhood.py \
+            --original-index /tmp/brsi-macula-lsg-correspondence.json.gz \
+            --correspondence-lock links/alignments/clear-bible-lsg/aquifer-correspondence.lock.json \
+            --pivot-lock links/alignments/clear-bible-lsg/pivot.lock.json \
+            --pivot-nt /tmp/brsi-semantic-macula-nt/SBLGNT/tsv/macula-greek-SBLGNT.tsv \
+            --pivot-ot /tmp/brsi-semantic-macula-ot/WLC/tsv/macula-hebrew.tsv \
+            --original-nt-root /tmp/brsi-macula-syntax-nt \
+            --original-ot-root /tmp/brsi-macula-syntax-ot \
+            --curated-lock links/alignments/clear-bible-lsg/curated-1.0.2.lock.json \
+            --curated-root /tmp/brsi-word-reader \
+            --private-candidates /tmp/brsi-macula-syntax-lexical-private.json.gz \
+            --report /tmp/brsi-macula-syntax-lexical-source-free.json
+          python3 -I - <<'PY'
+          import gzip,hashlib,json
+          from pathlib import Path
+          p=Path('/tmp/brsi-macula-syntax-lexical-source-free.json')
+          r=json.loads(p.read_text())
+          raw=Path('/tmp/brsi-macula-syntax-lexical-private.json.gz').read_bytes()
+          assert hashlib.sha256(raw).hexdigest()==r['private_candidates_gzip_sha256']
+          assert len(raw)==r['private_candidates_gzip_bytes']
+          private=json.loads(gzip.decompress(raw))
+          assert private['kind']=='brsi-private-macula-lexical-neighborhood-source-phrase-review'
+          assert r['source_original_XML_file_count']==18
+          assert r['source_original_verse_count']==1960
+          assert r['original_index_full_MACULA_ID_count']==607217
+          assert r['original_index_unlinked_ID_count']==119691
+          assert r['original_unlinked_IDs_in_XML_scope']==3790
+          assert r['candidate_source_original_IDs']==len(private['original_review_candidate_ids'])
+          assert r['evaluation']['pseudo_gold_total']==600
+          assert r['evaluation']['distinct_source_verses']==600
+          assert r['evaluation']['calibration_verses']==300
+          assert r['evaluation']['reporting_verses']==300
+          assert r['evaluation']['all_heldout_verses_excluded_from_lemma_training'] is True
+          assert r['evaluation']['masked_source_and_all_same_French_word_anchors'] is True
+          assert r['evaluation']['does_not_measure_human_phrase_semantics'] is True
+          assert r['human_reviewed_original_to_french_semantic_gold']==0
+          assert r['automatic_approved_new_source_target_links']==0
+          assert r['publication_authorized'] is False
+          assert r['report_includes_private_original_or_authored_french_text'] is False
+          assert all(c['automatic_word_or_phrase_links_approved']==0
+                     and c['publication_authorized'] is False
+                     and c['french_span_is_not_verified_translation'] is True
+                     for c in private['original_review_candidate_ids'])
+          assert all(c['original_macula_id_under_review'][1:9]==
+                     c['original_source_verse'] for c in
+                     private['original_review_candidate_ids'])
+          assert len({c['original_macula_id_under_review']
+                      for c in private['original_review_candidate_ids']})==
+                 len(private['original_review_candidate_ids'])
+          print('BRSI_MACULA_SYNTAX_BILINGUAL_NEGATIVE_CONTROL_SOURCE_FREE_RECEIPT')
+          print(p.read_text())
+          PY
+          if test -f links/alignments/clear-bible-lsg/syntax-lexical-neighborhood.lock.json; then
+            python3 -I scripts/verify_generated_json.py \
+              --generated /tmp/brsi-macula-syntax-lexical-source-free.json \
+              --baseline links/alignments/clear-bible-lsg/syntax-lexical-neighborhood.lock.json
+          else
+            echo "FIRST BILINGUAL SOURCE-SYNTAX RESEARCH RUN: freeze source-free report before merge"
           fi
 
       - name: Explicit no-publication boundary
