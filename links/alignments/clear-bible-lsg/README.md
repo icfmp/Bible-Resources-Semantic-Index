@@ -114,6 +114,57 @@ edition/versification comparison but certify **zero** changes. The
 workflow checks the generated report against this JSON lock fail-closed.
 
 
+## Comparison with Bible Resources' curated Louis Segond 1910 v1.0.2
+
+**Reader edition authority is the verified and published Bible Resources
+[LSG 1.0.2](https://github.com/icfmp/Bible-Resources/releases/tag/lsg-1.0.2),
+not an unmodified eBible source archive.** The [curated source lock](curated-1.0.2.lock.json)
+pins the exact Bible Resources release commit `7092d6e9318eeff46081feb831c207efa5859af2`,
+corrected 30.5 MB OSIS SHA-256
+`2b8342a67d8e97b433670450fe9dd9e58917a7fcfc0cb4d321882ca8219dc3bd`,
+module version `1.0.2`, module ID `BRLSG1910`, and `Segond` versification.
+The upstream editorial changes and verified 803 chapter-opening headings are
+preserved unmodified.
+
+The maintained generic [edition-surface auditor](../../../scripts/audit_curated_translation_edition.py)
+uses **both** immutable source revisions and the existing lossless alignment
+candidate receipts. It reads source-authored OSIS verse bodies but excludes
+notes and headings from comparison; it does not rewrite Bible text, MACULA IDs,
+translation selectors, notes, versification or the existing empty corrections
+ledger. Its full metadata-only [curated edition audit lock](curated-1.0.2-parity.lock.json)
+is regenerated and compared by [pinned CI](../../../.github/workflows/pinned-curated-lsg-edition.yml).
+No Scripture text or word lists are committed as a product of this audit.
+
+- **NT surface:** all **7,959** curated numbered NT verses have corresponding
+  Clear.Bible target TSV verses; **7,946** have the same concatenated Unicode
+  alphanumeric character sequence after NFC/casefold, ignoring punctuation and
+  spacing. **13** differ; **8** occur in four adjacent pairs whose **combined**
+  character sequences are equal (Phil 1:4–5, 1:28–29, 3:10–11, 4:15–16).
+  The remaining **five** individual mismatches are John 2:17, Rom 13:9,
+  Phil 4:20 and Titus 3:8, 3:14. No numerical reference was rewritten.
+- **NT segmentation diagnostic:** the actual 210,628 target TSV token surfaces
+  are distinct from curated-word boundaries in many places. Of the **103,811
+  aligned targets whose IDs exist** in that TSV, **91,649** cover exactly
+  one curated diagnostic word's character boundaries, **7,457** carry no
+  alphanumeric characters, **4,574** split a curated word boundary, and
+  **131** occur in text-mismatching verses. The other **996 aligned target IDs**
+  remain unattested in the original target TSV. All these are classifications,
+  **not independently approved original→French mappings**; NFC/casefold plus
+  punctuation removal is weaker than exact text, authorial punctuation and
+  edition-specific token proof.
+- **OT reference availability:** all **203,597** original target selectors
+  point to a numbered verse present in the curated authored OSIS, but the
+  original Clear.Bible OT target TSV still has no French token rows. Thus **zero**
+  OT French word identities are independently verified. The 920 differing
+  source/target verse pairs still need independent versification witnesses.
+
+This comparison makes the edition/gap review **more precise**, not complete.
+Do not backfill missing target IDs from word positions, use raw eBible in place
+of this pinned curated edition, or expose French aligned words in the app based
+only on normalized surface matches. Keep publication and Bible consumer gates
+open until target token IDs, textual exceptions, versification and source-field
+rights have separate approvals.
+
 **No fabricated alignments, upstream source edits, editorial approvals or
 claims of full-corpus coverage** follow from a clean transformation.
 
