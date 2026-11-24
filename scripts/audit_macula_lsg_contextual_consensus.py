@@ -98,6 +98,80 @@ def consensus(source: str, guess: dict | None, group: dict | None
     }
 
 
+
+def constrained_lexical_candidate(
+        source: str, original: dict,
+        authored: dict[str, str], cache: dict,
+        distributions: dict, group: dict | None) -> dict | None:
+    """Search ONLY an anchored French phrase for attested lemma surfaces.
+
+    The original linked-source lexicon is trained outside *all* evaluation
+    verses; the phrase anchor constraints must independently locate its
+    exact authored French words. No French word is invented. Do not
+    coerce repeated surface forms, support ties or unpaired grammar.
+    """
+    if group is None:
+        return None
+    canon = "nt" if source.startswith("n") else "ot"
+    data = original.get(source)
+    if not data or not data[0]:
+        return None
+    lemma, pos = data
+    basic = distributions["lemma"].get((canon, lemma), {})
+    refined = distributions["lemma_pos"].get((canon, lemma, pos), {}) if pos else {}
+    counts = refined if sum(refined.values()) >= 8 else basic
+    if not counts:
+        return None
+    verse = source[1:9]
+    if verse != group["source_verse"]:
+        raise ValueError("anchored source and authored French verse disagree")
+    french = lexical.words_in_verse(verse, authored, cache)
+    if not french:
+        return None
+    possible = []
+    frequency = Counter()
+    for identifier in group["lsg_word_ids"]:
+        bcv, colon, raw_ordinal = identifier.partition(":")
+        if not colon or bcv != verse or not raw_ordinal.isdecimal():
+            raise ValueError("phrase references non-authorial French verse/word")
+        ordinal = int(raw_ordinal)
+        if ordinal < 1 or ordinal > len(french):
+            raise ValueError("original-source bracket points beyond French word text")
+        surface = lexical.norm(french[ordinal-1])
+        frequency[surface] += 1
+        if surface in counts:
+            possible.append((counts[surface], identifier, surface, ordinal))
+    if not possible:
+        return None
+    possible.sort(key=lambda x: (-x[0], x[3]))
+    top_support, word_id, text, ordinal = possible[0]
+    # A tie or duplicate surface inside the same phrase has no unique
+    # local target—even when the repeated word is unique elsewhere.
+    if frequency[text] != 1 or (
+            len(possible) > 1 and possible[1][0] == top_support):
+        return None
+    total = sum(counts.values())
+    if total <= 0:
+        return None
+    second_support = possible[1][0] if len(possible) > 1 else 0
+    guess = {
+        "source_id": source, "word_id": word_id,
+        "word_sha256": hashlib.sha256(
+            french[ordinal-1].encode("utf-8")).hexdigest(),
+        "lemma_sha256": hashlib.sha256(lemma.encode("utf-8")).hexdigest(),
+        "support_independent_source_verses": top_support,
+        "share": round(top_support / total, 6),
+        "margin": round((top_support-second_support) / total, 6),
+        "candidate_only": True,
+        "automatic_linguistic_approval": False,
+    }
+    candidate = consensus(source, guess, group)
+    if candidate is not None:
+        candidate["lexical_selection_restricted_to_bounded_phrase"] = True
+        candidate["word_level_semantic_equivalence_proven"] = False
+    return candidate
+
+
 def eligible(item: dict | None, threshold: tuple[int, float],
              mode: str) -> bool:
     if mode not in MODES:
