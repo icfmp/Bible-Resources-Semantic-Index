@@ -1,4 +1,42 @@
-# Clear.Bible LSG manual translation alignments — internal development resource
+# BRSI LSG word index — generated from original Clear.Bible alignments
+
+## Maintained pipeline
+
+**Clear.Bible is our immutable original alignment source; the index is ours.**
+BRSI maintains the original commit/files/SHA-256 witnesses in [manifest.json](manifest.json),
+editable **source-evidenced BRSI corrections** in [corrections.json](corrections.json),
+and a reproducible indexed output built from those originals. The canonical
+French text authority is Bible Resources **LSG 1.0.2**, pinned in
+[curated-1.0.2.lock.json](curated-1.0.2.lock.json). Original upstream bytes,
+MACULA word identifiers, LSG verse text and SWORD modules are never rewritten.
+
+The pipeline is **original Clear.Bible → our reviewed source corrections →
+our BRSI-owned generated index**. It is not an extra live compatibility layer,
+not an eBible text modification and not a manual re-creation of Clear.Bible
+alignment. The exact original sources are reproducibly acquired by pinned
+Git revision and verified against each original file's SHA-256 and Git blob;
+they are **not falsely described as copies committed to this repository**.
+The derived index itself is a separate BRSI artifact, which must be approved
+and versioned before release.
+
+Currently the full private development index preserves **104,807 original
+NT alignment records**, with bidirectional lookup by original MACULA ID and
+by French edition word position. **91,649** rows yield a uniquely located
+*diagnostic* French word position and **13,158** remain explicitly unresolved.
+These numbers are **not an editorial certification or a published release**.
+The complete original OT alignment records are preserved by the existing
+pinned import; an authoritative French OT token inventory is still missing.
+See [the pinned BRSI index build](../../../.github/workflows/pinned-curated-lsg-edition.yml)
+and [full reproducible private index receipt](curated-1.0.2-parity.lock.json).
+
+### Key rule
+
+A source correction is a change to **our maintained index** justified by
+pinned witnesses, not a patch to Clear.Bible's original or Bible Resources'
+LSG 1.0.2. Resolved and unresolved records must both remain traceable
+back to exact original alignment IDs. Do not invent target tokens, flatten
+1:n relations or silently convert source-versification coordinates.
+
 
 **Not a dictionary, original-word identity ledger, contextual sense database or public release.** This maintained resource provides two independent, exact-edition groups of upstream *translation-token* selectors: SBLGNT → LSG (NT) and WLCM → LSG (OT). It does not rewrite the Bible text or MACULA linguistic data.
 
