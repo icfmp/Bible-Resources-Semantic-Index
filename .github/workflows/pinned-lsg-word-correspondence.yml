@@ -146,6 +146,23 @@ jobs:
                      for x in coverage.values())
           assert coverage['nt']['macula_source_ids_with_word_evidence'] > 100000
           assert coverage['ot']['macula_source_ids_with_word_evidence'] > 350000
+          # Every unlinked original MACULA source ID gets exactly one
+          # source-evidenced explanation, not a guessed French word.
+          reasons = doc['unlinked_cause_by_original_macula_id']
+          cause_counts = doc['unlinked_source_cause_counts']
+          assert cause_counts == r['unlinked_source_cause_counts']
+          assert doc['unlinked_source_diagnostics'] == r['unlinked_source_diagnostics']
+          assert len(reasons) == 119723
+          assert all(source in doc['by_original_macula_id'] and not any(
+              doc['rows'][i]['word_ids'] for i in doc['by_original_macula_id'][source]
+          ) for source in reasons)
+          assert all(sum(cause_counts[canon].values()) ==
+                     coverage[canon]['macula_source_ids_without_word_evidence']
+                     for canon in ('nt', 'ot'))
+          assert all(row['linguistically_reviewed_by_brsi'] is False
+                     for row in doc['rows'])
+          assert doc['unlinked_cause_evidence_level'] == 'source_metadata_or_structure_not_word_equivalence'
+          print('BRSI_MACULA_UNLINKED_SOURCE_CAUSES', cause_counts)
           assert len(doc['by_original_macula_id']) > 200000
           assert doc['aquifer_text_witness_census']['chapters'] >= 1180
           assert all(row['linguistically_reviewed_by_brsi'] is False for row in doc['rows'])
