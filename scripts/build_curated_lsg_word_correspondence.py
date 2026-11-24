@@ -378,6 +378,22 @@ def build_corroborated_index(aquifer_root: Path, original_candidates: Path,
         raise ValueError("original or supplementary correspondence groups lost")
     if len(rows) != sum(statuses.values()):
         raise ValueError("correspondence status census did not partition rows")
+    # Coverage is counted by distinct authentic MACULA source ID, not by
+    # French word, row multiplicity, or LLM-proposed translation decisions.
+    source_coverage = {}
+    for canon in ("nt", "ot"):
+        prefix = "n" if canon == "nt" else "o"
+        ids = {source_id for source_id in by_macula if source_id.startswith(prefix)}
+        linked_ids = {source_id for source_id in ids
+                      if any(rows[i]["word_ids"] for i in by_macula[source_id])}
+        source_coverage[canon] = {
+            "macula_source_ids": len(ids),
+            "macula_source_ids_with_word_evidence": len(linked_ids),
+            "macula_source_ids_without_word_evidence": len(ids - linked_ids),
+        }
+    if clear_root is not None and sum(group["macula_source_ids"]
+                                      for group in source_coverage.values()) != len(by_macula):
+        raise ValueError("source coverage lost a pinned MACULA identifier")
     report = {
         "format": "brsi-original-and-independent-word-corroboration-candidate",
         "schema_version": 1,
@@ -391,6 +407,7 @@ def build_corroborated_index(aquifer_root: Path, original_candidates: Path,
         "publication_approved": False,
         "automatic_linguistic_approval": False,
         "original_group_counts": groups,
+        "source_coverage": source_coverage,
         "supplemental_macula_source_counts": dict(sorted(supplemental_counts.items())),
         "aquifer_text_witness_census": census,
         "status_counts": dict(sorted(statuses.items())),
@@ -402,7 +419,8 @@ def build_corroborated_index(aquifer_root: Path, original_candidates: Path,
     return ((json.dumps(report, ensure_ascii=False, sort_keys=True,
                         separators=(",", ":"), allow_nan=False) + "\n").encode("utf-8"),
             {k: report[k] for k in (
-                "original_group_counts", "supplemental_macula_source_counts",
+                "original_group_counts", "source_coverage",
+                "supplemental_macula_source_counts",
                 "aquifer_text_witness_census", "status_counts", "target_id_calibration")})
 
 
