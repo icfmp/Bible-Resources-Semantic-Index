@@ -9,6 +9,9 @@ on:
       - "scripts/sample_macula_lsg_semantic_review.py"
       - "scripts/audit_macula_lsg_phrase_brackets.py"
       - "scripts/audit_macula_lsg_original_syntax.py"
+      - "scripts/audit_macula_lsg_diverse_syntax.py"
+      - "tests/test_macula_lsg_diverse_syntax.py"
+      - "links/alignments/clear-bible-lsg/diverse-original-syntax.lock.json"
       - "tests/test_macula_lsg_original_syntax.py"
       - "scripts/audit_macula_lsg_contextual_consensus.py"
       - "tests/test_macula_lsg_contextual_consensus.py"
@@ -55,6 +58,8 @@ jobs:
         run: python3 -I -m unittest discover -s tests -p 'test_macula_lsg_contextual_consensus.py' -v
       - name: Original Hebrew/Greek lowfat syntax and morpheme safety synthetic regressions
         run: python3 -I -m unittest discover -s tests -p 'test_macula_lsg_original_syntax.py' -v
+      - name: Mixed genre MACULA original syntax review-unit regressions
+        run: python3 -I -m unittest discover -s tests -p 'test_macula_lsg_diverse_syntax.py' -v
       - name: Retrieve exact original Clear.Bible alignment sources
         shell: bash
         run: |
@@ -910,6 +915,103 @@ jobs:
               --baseline links/alignments/clear-bible-lsg/original-syntax-pilot.lock.json
           else
             echo "FIRST EXACT LOWFAT SYNTAX PILOT: freeze reviewed source-free receipt before merge"
+          fi
+
+      - name: Fetch fixed diverse Hebrew and Greek MACULA lowfat source witnesses
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git -C /tmp/brsi-macula-syntax-ot rev-parse HEAD)" = 47db250bd55d0d8577f2a94fba114ef16c35b23c
+          test "$(git -C /tmp/brsi-macula-syntax-nt rev-parse HEAD)" = 8423afe47b9e8f24b7772e808af45c7159a6fe7e
+          git -C /tmp/brsi-macula-syntax-ot sparse-checkout set --no-cone \
+            /WLC/lowfat/02-Exo-020-lowfat.xml \
+            /WLC/lowfat/03-Lev-019-lowfat.xml \
+            /WLC/lowfat/05-Deu-006-lowfat.xml \
+            /WLC/lowfat/08-Rut-001-lowfat.xml \
+            /WLC/lowfat/09-1Sa-017-lowfat.xml \
+            /WLC/lowfat/18-Job-001-lowfat.xml \
+            /WLC/lowfat/19-Psa-023-lowfat.xml \
+            /WLC/lowfat/20-Pro-003-lowfat.xml \
+            /WLC/lowfat/21-Ecc-001-lowfat.xml \
+            /WLC/lowfat/23-Isa-053-lowfat.xml \
+            /WLC/lowfat/27-Dan-007-lowfat.xml \
+            /WLC/lowfat/32-Jon-001-lowfat.xml \
+            /WLC/lowfat/38-Zec-004-lowfat.xml
+          git -C /tmp/brsi-macula-syntax-nt sparse-checkout set --no-cone \
+            /SBLGNT/lowfat/02-mark.xml \
+            /SBLGNT/lowfat/06-romans.xml \
+            /SBLGNT/lowfat/18-philemon.xml \
+            /SBLGNT/lowfat/20-james.xml \
+            /SBLGNT/lowfat/27-revelation.xml
+          test -s /tmp/brsi-macula-syntax-ot/WLC/lowfat/19-Psa-023-lowfat.xml
+          test -s /tmp/brsi-macula-syntax-nt/SBLGNT/lowfat/27-revelation.xml
+          test "$(git -C /tmp/brsi-macula-syntax-ot rev-parse HEAD)" = 47db250bd55d0d8577f2a94fba114ef16c35b23c
+          test "$(git -C /tmp/brsi-macula-syntax-nt rev-parse HEAD)" = 8423afe47b9e8f24b7772e808af45c7159a6fe7e
+
+      - name: Audit 13 Hebrew chapters and five complete Greek books as real source syntax units
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -I scripts/audit_macula_lsg_diverse_syntax.py \
+            --original-index /tmp/brsi-macula-lsg-correspondence.json.gz \
+            --correspondence-lock links/alignments/clear-bible-lsg/aquifer-correspondence.lock.json \
+            --pivot-lock links/alignments/clear-bible-lsg/pivot.lock.json \
+            --original-nt-root /tmp/brsi-macula-syntax-nt \
+            --original-ot-root /tmp/brsi-macula-syntax-ot \
+            --curated-root /tmp/brsi-word-reader \
+            --curated-lock links/alignments/clear-bible-lsg/curated-1.0.2.lock.json \
+            --private-dossiers /tmp/brsi-diverse-syntax-private-review-dossiers.json.gz \
+            --report /tmp/brsi-diverse-original-syntax-report.json
+          python3 -I - <<'PY'
+          import gzip, hashlib, json
+          from pathlib import Path
+          p=Path('/tmp/brsi-diverse-original-syntax-report.json')
+          r=json.loads(p.read_text())
+          packed=Path('/tmp/brsi-diverse-syntax-private-review-dossiers.json.gz').read_bytes()
+          assert hashlib.sha256(packed).hexdigest() == r['private_dossiers_gzip_sha256']
+          assert len(packed) == r['private_dossiers_gzip_bytes']
+          private=json.loads(gzip.decompress(packed))
+          assert r['kind'] == 'brsi-diverse-original-syntax-review-units-nonpublishing'
+          assert len(r['source_files']) == len(r['per_source_document']) == 18
+          assert sum(c['canon']=='ot' for c in r['per_source_document']) == 13
+          assert sum(c['canon']=='nt' for c in r['per_source_document']) == 5
+          assert private['kind'] == 'brsi-private-diverse-original-macula-syntax-review-units'
+          assert len(private['cases']) == r['unresolved_original_ids_in_selected_source_documents']
+          assert len(private['source_side_syntax_review_units']) == r['source_side_review_units']['total']
+          assert len({c['original_macula_id'] for c in private['cases']}) == len(private['cases'])
+          assert sum(c['unlinked_indexed_original_ids'] for c in r['per_source_document']) == len(private['cases'])
+          assert sum(c['source_verse_count'] for c in r['per_source_document']) == r['source_verse_count']
+          assert sum(c['original_macula_source_xml_id_count'] for c in r['per_source_document']) == r['source_xml_total_original_token_ids']
+          assert r['source_xml_total_original_token_ids'] > 2020
+          assert r['unresolved_original_ids_in_selected_source_documents'] > 385
+          assert r['source_side_review_units']['total'] > 100
+          assert all(c['automatic_word_links_added'] == 0 and
+                     c['original_phrase_semantically_verified'] is False and
+                     c['individual_source_token_translated'] is False and
+                     c['publication_authorized'] is False
+                     for c in private['cases'])
+          assert all(x['new_source_french_links_approved'] == 0 and
+                     x['publication_authorized'] is False and
+                     x['whole_original_phrase_translated_to_french_not_proven']
+                     for x in private['source_side_syntax_review_units'])
+          assert r['source_side_review_units']['original_ids_represented_in_review_units'] + r['source_side_review_units']['unlinked_original_ids_without_bounded_syntax_unit'] == len(private['cases'])
+          assert r['new_individually_approved_MACULA_original_ids'] == 0
+          assert r['new_semantically_approved_source_phrases'] == 0
+          assert r['new_french_word_or_phrase_links_approved'] == 0
+          assert r['human_gold_original_to_authored_french_phrase_cases'] == 0
+          assert r['study_selection_is_random_or_representative'] is False
+          assert r['translation_accuracy_measured'] is False
+          assert r['publication_authorized'] is False
+          assert r['source_text_in_public_receipt'] is False
+          print('BRSI_MACULA_DIVERSE_SYNTAX_SOURCE_FREE_RECEIPT')
+          print(p.read_text())
+          PY
+          if test -f links/alignments/clear-bible-lsg/diverse-original-syntax.lock.json; then
+            python3 -I scripts/verify_generated_json.py \
+              --generated /tmp/brsi-diverse-original-syntax-report.json \
+              --baseline links/alignments/clear-bible-lsg/diverse-original-syntax.lock.json
+          else
+            echo "FIRST BREADTH AUDIT: freeze source-free report after independent identity review"
           fi
 
       - name: Explicit no-publication boundary
