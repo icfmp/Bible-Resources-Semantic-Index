@@ -157,6 +157,18 @@ never changes the application. See [V1 consumer guide](../docs/V1_CONSUMPTION.md
   and SHA-256 only**. All proposals are explicitly source-side structures,
   never Greek/Hebrew-to-French phrase equivalences. No publication.
 
+- `audit_macula_lsg_diverse_syntax.py`: nonpublishing mixed-genre scope
+  expansion of the original MACULA lowfat XML syntax audit. Uses 13 pinned
+  Hebrew/Aramaic OT chapters and five complete Greek NT books selected to
+  exercise differing literary forms, **not** as a statistically representative
+  sample. Deduplicates original `wg` groups containing unresolved MACULA
+  token IDs into private source-syntax **review units**; preserves exact
+  orthographic word-morpheme sibling identity, original grammar and any
+  *existing* source-attested French anchor navigation cue. Reports per-book
+  evidence, reordering, group size and abstentions without asserting
+  original-phrase↔French-phrase semantics. Only a source-free aggregate
+  receipt and deterministic SHA-256 of private nonpublished cases are tracked.
+
 - `calibrate_aquifer_lsg_target_ids.py`: continuous source-pinned safety
   calibration against 91,649 independent original NT word witnesses.
   It demonstrates why identical **numeric** target IDs between independently
