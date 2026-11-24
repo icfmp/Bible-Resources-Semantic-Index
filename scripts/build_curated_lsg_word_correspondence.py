@@ -193,11 +193,20 @@ def load_aquifer(root: Path, authored: dict[str, str],
 def build_corroborated_index(aquifer_root: Path, original_candidates: Path,
                              osis_file: Path, curated_lock: dict,
                              original_revision: str, aquifer_revision: str,
-                             min_chapters: int = 1) -> tuple[bytes, dict]:
+                             min_chapters: int = 1,
+                             gold_nt_index: Path | None = None) -> tuple[bytes, dict]:
     if not COMMIT_RE.fullmatch(aquifer_revision) or not COMMIT_RE.fullmatch(original_revision):
         raise ValueError("invalid pinned alignment revisions")
     authored = ed.read_osis(osis_file)
     located, source_links, census = load_aquifer(aquifer_root, authored, min_chapters)
+    gold_rows = None
+    if gold_nt_index is not None:
+        gold = json.loads(gzip.decompress(gold_nt_index.read_bytes()))
+        if (gold.get("format") != "brsi-curated-translation-word-index-candidate" or
+            gold.get("curated_osis_sha256") != curated_lock["osis_sha256"] or
+            gold.get("source_alignment_revision") != original_revision):
+            raise ValueError("original NT word witness revision/edition mismatch")
+        gold_rows = gold["rows"]
     groups = {}
     matches_by_target = Counter()
     rows = []
@@ -247,6 +256,18 @@ def build_corroborated_index(aquifer_root: Path, original_candidates: Path,
                     calibration["nt_original_target_id_attested_by_aquifer"] += 1
                 else:
                     calibration["nt_original_target_id_not_located_by_aquifer"] += 1
+            if canon == "nt" and gold_rows is not None:
+                original = gold_rows[source_row["ordinal"]]
+                if (original["original_macula_ids"] != source or
+                    original["original_target_ids"] != original_targets):
+                    raise ValueError("NT original record identity differs from direct source witness")
+                if original["status"] == "surface_word_position_candidate":
+                    key = original["curated_bcv"] + ":" + str(original["curated_diagnostic_word_ordinal"])
+                    status = ("clear_bible_direct_word_and_aquifer_agree" if key in from_source
+                              else "clear_bible_direct_word_aquifer_disagree" if from_source
+                              else "clear_bible_direct_word_only")
+                    matched_words = [key]
+                    census["clear_bible_direct_nt_words_retained"] = census.get("clear_bible_direct_nt_words_retained", 0) + 1
             statuses[canon + "_" + status] += 1
             ordinal = len(rows)
             row = {
@@ -258,7 +279,8 @@ def build_corroborated_index(aquifer_root: Path, original_candidates: Path,
                 "original_target_word_witness_ids": sorted(original_target_locations),
                 "aquifer_source_word_witness_ids": sorted(from_source),
                 "status": status,
-                "source_provenance": ("BibleAquifer_source_and_verified_French_surface"
+                "source_provenance": ("ClearBible_direct_nt_target_and_authored_OSIS" if status.startswith("clear_bible_direct_word")
+                                      else "BibleAquifer_source_and_verified_French_surface"
                                       if matched_words else "original_ClearBible_record_unresolved"),
                 "target_selector_numeric_equivalence_proven": False,
                 "linguistically_reviewed_by_brsi": False,
@@ -268,11 +290,8 @@ def build_corroborated_index(aquifer_root: Path, original_candidates: Path,
                 by_macula[source_id].append(ordinal)
             for word in matched_words:
                 by_french_word[word].append(ordinal)
-    if groups["nt"] != 104807 or groups["ot"] != 203597:
-        # Synthetic tests may supply shorter original inputs, so validate
-        # exact group size against authenticated candidate receipts, not
-        # absolute book-specific constants here.
-        pass
+    if gold_rows is not None and len(gold_rows) != groups["nt"]:
+        raise ValueError("full original NT text-witness group coverage changed")
     if len(rows) != sum(groups.values()) or len(rows) != sum(statuses.values()):
         raise ValueError("correspondence records lost")
     report = {
@@ -313,6 +332,7 @@ def main() -> None:
     parser.add_argument("--output", required=True, type=Path)
     parser.add_argument("--report", required=True, type=Path)
     parser.add_argument("--min-chapters", type=int, default=1180)
+    parser.add_argument("--gold-nt-index", type=Path, required=True)
     args = parser.parse_args()
     if args.output.resolve().is_relative_to(ROOT) or args.report.resolve().is_relative_to(ROOT):
         raise ValueError("nonpublishing outputs must remain outside the repository")
@@ -320,7 +340,8 @@ def main() -> None:
     osis = ed.pinned_file(args.curated_root, curated["osis_path"], curated["osis_sha256"])
     raw, counts = build_corroborated_index(
         args.aquifer_root, args.candidates, osis, curated,
-        args.clear_revision, args.aquifer_revision, args.min_chapters)
+        args.clear_revision, args.aquifer_revision, args.min_chapters,
+        args.gold_nt_index)
     receipt = {
         "schema_version": 1,
         "kind": "brsi-macula-curated-lsg-word-corroboration-development",
