@@ -254,10 +254,12 @@ def calibrate(index: dict, pivots: dict, authored: dict[str, str],
     order = sorted(gold, key=lexical.stable_key)
     half = len(order)//2
     eval_parts = []
+    eval_parts_constrained = []
     cached = {}
     for selected in (order[:half], order[half:]):
         answers = {source:gold[source] for source in selected}
         predictions = {}
+        conditioned = {}
         for source in selected:
             verse = source[1:9]
             authored_count = (len(bridge.word_tokens(authored[verse]))
@@ -270,11 +272,16 @@ def calibrate(index: dict, pivots: dict, authored: dict[str, str],
                 raise ValueError("multiple masked phrase candidates for one NT gold")
             guessed = lexical.predict(
                 source, pivots["nt"], authored, cached, buckets)
-            predictions[source] = consensus(
-                source, guessed, relevant[0] if relevant else None)
+            group = relevant[0] if relevant else None
+            predictions[source] = consensus(source, guessed, group)
+            conditioned[source] = constrained_lexical_candidate(
+                source, pivots["nt"], authored, cached, buckets, group)
         eval_parts.append((answers, predictions))
+        eval_parts_constrained.append((answers, conditioned))
     cal_gold, cal_guesses = eval_parts[0]
     blind_gold, blind_guesses = eval_parts[1]
+    _cal_fixed, cal_constrained = eval_parts_constrained[0]
+    _blind_fixed, blind_constrained = eval_parts_constrained[1]
     selected, grid = frozen_threshold(cal_gold, cal_guesses)
     if selected:
         threshold = (selected["min_source_verses"],
@@ -306,6 +313,33 @@ def calibrate(index: dict, pivots: dict, authored: dict[str, str],
             "blind_half": error_metrics(
                 blind_gold, blind_guesses, exploratory, mode)}
         for mode in MODES}
+    # Challenger uses the *same masked NT cases*, never a different or
+    # easier validation subset. Its lexical search is limited to the
+    # anchored phrase rather than globally chosen before bracketing.
+    challenger_selected, challenger_grid = frozen_threshold(
+        cal_gold, cal_constrained)
+    if challenger_selected:
+        challenger_blind = error_metrics(
+            blind_gold, blind_constrained,
+            (challenger_selected["min_source_verses"],
+             challenger_selected["min_lemma_share"]),
+            challenger_selected["mode"])
+    else:
+        challenger_blind = error_metrics(
+            blind_gold, {source:None for source in blind_gold},
+            (3, .5), "any_bounded_phrase")
+    challenger_gate = (
+        challenger_selected is not None
+        and challenger_blind["attempted"] >= MIN_BLIND_PROPOSALS
+        and challenger_blind["exact_word_precision"] >= MIN_BLIND_PRECISION
+        and challenger_blind["wilson95_lower"] >= MIN_BLIND_WILSON_LOWER)
+    challenger_exploratory = {
+        mode: {
+            "calibration_half": error_metrics(
+                cal_gold, cal_constrained, exploratory, mode),
+            "blind_half": error_metrics(
+                blind_gold, blind_constrained, exploratory, mode)}
+        for mode in MODES}
     return {
         "2k_gold_design": "2000_distinct_NT_source_verses_all_excluded_from_lexical_training",
         "source_word_and_all_same_french_word_anchor_masked": True,
@@ -316,6 +350,17 @@ def calibrate(index: dict, pivots: dict, authored: dict[str, str],
         "predeclared_exploratory_comparisons": compare,
         "blind_selected_threshold_metrics": blind_metrics,
         "blind_precision_gate_passed": blind_gate,
+        "bracket_constrained_challenger": {
+            "method": "source_lemma_attested_french_word_chosen_only_inside_bounded_phrase",
+            "calibration_threshold_grid": challenger_grid,
+            "selected_only_on_calibration": challenger_selected,
+            "predeclared_exploratory_comparisons": challenger_exploratory,
+            "blind_selected_threshold_metrics": challenger_blind,
+            "blind_precision_gate_passed": challenger_gate,
+            "no_semantic_approval": True,
+        },
+        "reuses_previously_reported_nt_verses_from_lexical_and_bracket_pilots": True,
+        "not_a_fresh_prospectively_sealed_blind_gold_set": True,
         "disclaimer": (
             "Original NT positional pseudo-gold is independently source-attested; "
             "not linguistically reviewed phrase equivalence, no OT gold, "
