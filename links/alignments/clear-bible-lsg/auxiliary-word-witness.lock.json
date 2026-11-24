@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "resource_id": "auxiliary-aquifer-lsg-word-surface-witness",
+  "source_repository": "https://github.com/BibleAquifer/LouisSegond1910",
+  "revision": "c25cc382fb3584a0837289f1499a7f56a4798dde",
+  "source_folder": "fra/alignments/json",
+  "source_alignment_metadata": "fra/metadata.json",
+  "source_word_alignment_license": "CC BY-SA 4.0 (Mission Mutual; see fra/metadata.json alignment_metadata)",
+  "bible_text_license": "Public Domain CC0 (Bible text only; distinct from generated word alignments)",
+  "authoritative_target_edition": "Bible Resources BRLSG1910 v1.0.2 (pinned in curated-1.0.2.lock.json)",
+  "canonical_original_alignment": "Clear.Bible/Alignments c99bd0ae6946775f932517656308ca19fc706921",
+  "role": "auxiliary original-source-to-French-word-surface witness; never a replacement of source Clear.Bible records",
+  "development_only": true,
+  "publication_approved": false,
+  "disallow_auto_approval": true
+}
