@@ -135,6 +135,16 @@ never changes the application. See [V1 consumer guide](../docs/V1_CONSUMPTION.md
   audited against four frozen source-evidence strata; private candidates
   are not committed, and no model can approve original↔French links.
 
+
+  A second **bracket-conditioned lexical challenger** ranks only independently
+  attested lemma-associated French words *inside* the strict source-bound
+  phrase; it abstains on local duplicate surfaces and support ties. Its
+  original IDs, French phrase coordinates, and proposed word remain distinct
+  and unapproved. The same 2,000 verse-disjoint NT positional pseudo-gold
+  cases support both method comparisons. Because #186/#189 previously used
+  those verses, these are **reused reporting cases, not prospectively untouched
+  new blind gold**.
+
 - `calibrate_aquifer_lsg_target_ids.py`: continuous source-pinned safety
   calibration against 91,649 independent original NT word witnesses.
   It demonstrates why identical **numeric** target IDs between independently
