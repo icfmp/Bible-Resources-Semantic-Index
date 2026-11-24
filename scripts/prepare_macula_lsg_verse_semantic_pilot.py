@@ -349,6 +349,7 @@ def main() -> None:
     p.add_argument("--ot-verses", type=int, default=100)
     p.add_argument("--private-pilot", type=Path, required=True)
     p.add_argument("--machine-response", type=Path)
+    p.add_argument("--pilot-receipt", type=Path)
     p.add_argument("--report", type=Path, required=True)
     a = p.parse_args()
     require_outside_repo(a.private_pilot)
@@ -356,7 +357,7 @@ def main() -> None:
     if a.private_pilot.resolve() == a.report.resolve():
         raise ValueError("private output and aggregate receipt must differ")
     if a.mode == "prepare":
-        if not a.private_dossiers or not a.dossier_lock or a.machine_response:
+        if not a.private_dossiers or not a.dossier_lock or a.machine_response or a.pilot_receipt:
             raise ValueError("prepare requires pinned private dossiers and lock only")
         require_outside_repo(a.private_dossiers)
         lock = json.loads(a.dossier_lock.read_text(encoding="utf-8"))
@@ -368,11 +369,24 @@ def main() -> None:
         receipt["private_pilot_gzip_sha256"] = sha256(packed)
         receipt["private_pilot_gzip_bytes"] = len(packed)
     else:
-        if not a.machine_response or a.private_dossiers or a.dossier_lock:
-            raise ValueError("validate requires private pilot and machine response")
+        if (not a.machine_response or not a.pilot_receipt or
+                a.private_dossiers or a.dossier_lock):
+            raise ValueError("validate requires private pilot, exact receipt and model response")
         require_outside_repo(a.machine_response)
+        if a.report.resolve() == a.pilot_receipt.resolve():
+            raise ValueError("cannot replace the source-locked pilot receipt")
         packed = a.private_pilot.read_bytes()
+        locked_receipt = json.loads(a.pilot_receipt.read_text(encoding="utf-8"))
+        if (locked_receipt.get("kind") !=
+                "brsi-whole-verse-semantic-pilot-source-free-receipt" or
+                locked_receipt.get("private_pilot_gzip_sha256") != sha256(packed) or
+                locked_receipt.get("private_pilot_gzip_bytes") != len(packed)):
+            raise ValueError("private pilot changed since source-locked preparation")
         pilot = json.loads(gzip.decompress(packed))
+        if (pilot.get("pilot_id") != locked_receipt.get("pilot_id") or
+                pilot.get("source_dossier_gzip_sha256") !=
+                locked_receipt.get("source_dossier_gzip_sha256")):
+            raise ValueError("private pilot provenance differs from source-free receipt")
         if pilot.get("kind") != "brsi-private-whole-verse-semantic-pilot":
             raise ValueError("incorrect original verse-pilot input")
         response = json.loads(a.machine_response.read_text(encoding="utf-8"))
