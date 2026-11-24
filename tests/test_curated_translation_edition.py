@@ -145,6 +145,22 @@ class CuratedLSGEditionTests(unittest.TestCase):
         self.assertEqual(report["nt"]["diagnostic_text_mismatch_coordinates"][0]["bcv"], "40001001")
         self.assertEqual(report["nt"]["aligned_attested_target_boundary_classes"]["verse_text_mismatch"], 3)
 
+    def test_adjacent_verse_surface_shift_is_diagnostic_not_a_remap(self):
+        path = self.upstream / "nt.tsv"
+        text = path.read_text(encoding="utf-8")
+        path.write_text(text.replace("nouvelle", "nouvelleL").replace("L'autre", "'autre"),
+                        encoding="utf-8")
+        self.manifest["inputs"][0]["sha256"] = module.sha256(path)
+        report = self.compare()
+        self.assertEqual(report["nt"]["verse_content_comparison"]["different_alphanumeric_stream"], 2)
+        self.assertEqual(report["nt"]["adjacent_mismatch_verses_with_identical_combined_stream"], 2)
+        self.assertEqual(report["nt"]["adjacent_text_mismatch_runs"], [{
+            "first_bcv": "40001001", "last_bcv": "40001002",
+            "verse_count": 2, "combined_alphanumeric_stream_equal": True,
+            "automatic_verse_reassignments": 0
+        }])
+        self.assertFalse(report["nt"]["target_token_id_matches_certified"])
+
     def test_fails_when_authorial_verse_body_changes_behind_pin(self):
         self.xml.write_text("<osis></osis>", encoding="utf-8")
         with self.assertRaisesRegex(ValueError, "pinned byte witness differs"):
