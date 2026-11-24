@@ -462,7 +462,10 @@ def build_report(alignment_manifest: dict, curated_lock: dict,
                for key in ("module_version", "sword_id", "versification", "release_tag", "revision")):
         raise ValueError("missing exact curated edition identity")
     meta_path = pinned_file(curated_root, curated_lock["osis_path"], curated_lock["osis_sha256"])
-    metadata_path = curated_root / curated_lock["module_metadata_path"]
+    metadata_relative = Path(curated_lock["module_metadata_path"])
+    if metadata_relative.is_absolute() or ".." in metadata_relative.parts:
+        raise ValueError("unsafe curated module metadata path")
+    metadata_path = curated_root / metadata_relative
     meta = json.loads(metadata_path.read_text(encoding="utf-8"))
     if (meta.get("version") != curated_lock["module_version"] or
         meta.get("sword_id") != curated_lock["sword_id"] or
