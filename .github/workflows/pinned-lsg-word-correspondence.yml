@@ -5,6 +5,8 @@ on:
     paths:
       - "scripts/build_curated_lsg_word_correspondence.py"
       - "tests/test_curated_lsg_word_correspondence.py"
+      - "scripts/audit_curated_lsg_surface_variants.py"
+      - "tests/test_curated_lsg_surface_variants.py"
       - "scripts/calibrate_aquifer_lsg_target_ids.py"
       - "tests/test_aquifer_target_id_calibration.py"
       - "links/alignments/clear-bible-lsg/**"
@@ -23,6 +25,8 @@ jobs:
         uses: actions/checkout@v4
       - name: Synthetic word correspondence and fail-closed regressions
         run: python3 -I -m unittest discover -s tests -p 'test_curated_lsg_word_correspondence.py' -v
+      - name: Standalone French-source diagnostic proof regressions
+        run: python3 -I -m unittest discover -s tests -p 'test_curated_lsg_surface_variants.py' -v
       - name: Retrieve exact original Clear.Bible alignment sources
         shell: bash
         run: |
@@ -265,6 +269,39 @@ jobs:
               --baseline links/alignments/clear-bible-lsg/aquifer-correspondence.lock.json
           else
             echo "INITIAL SOURCE AUDIT: exact receipt must be independently frozen before merge"
+          fi
+      - name: Audit orthographic differences in all 19,880 original unlinked MACULA words
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -I scripts/audit_curated_lsg_surface_variants.py \
+            --aquifer-root /tmp/brsi-word-aquifer \
+            --curated-root /tmp/brsi-word-reader \
+            --curated-lock links/alignments/clear-bible-lsg/curated-1.0.2.lock.json \
+            --original-index /tmp/brsi-macula-lsg-correspondence.json.gz \
+            --correspondence-lock links/alignments/clear-bible-lsg/aquifer-correspondence.lock.json \
+            --min-chapters 1188 \
+            --report /tmp/brsi-lsg-orthographic-diagnostic.json
+          python3 -I - <<'PY'
+          import json
+          from pathlib import Path
+          report = json.loads(Path('/tmp/brsi-lsg-orthographic-diagnostic.json').read_text())
+          assert report['original_unlinked_exact_word_absence_total'] == 19880
+          assert report['original_unlinked_exact_word_absence'] == {
+              'nt': 2596, 'ot': 17284}
+          assert sum(sum(classes.values()) for classes in
+                     report['by_canon'].values()) == 19880
+          assert report['linguistic_links_automatically_approved'] is False
+          assert report['source_french_text_modified'] is False
+          assert report['original_source_ids_modified'] is False
+          print('BRSI_FRENCH_DIFFERENCE_DIAGNOSTICS', report['by_canon'])
+          PY
+          if test -f links/alignments/clear-bible-lsg/orthographic-diagnostic.lock.json; then
+            python3 -I scripts/verify_generated_json.py \
+              --generated /tmp/brsi-lsg-orthographic-diagnostic.json \
+              --baseline links/alignments/clear-bible-lsg/orthographic-diagnostic.lock.json
+          else
+            echo "FIRST AUDIT: review source-derived diagnostic and pin its exact receipt before merge"
           fi
       - name: Explicit no-publication boundary
         run: |
