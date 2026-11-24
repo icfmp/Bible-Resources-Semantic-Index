@@ -32,7 +32,11 @@ SPLIT_SEED = "brsi-semantic-review-verse-cluster-split-v1"
 FORM_FIELDS = ("text", "surface", "word", "unicode", "form")
 MORPH_FIELDS = ("morph", "morphology", "morph_code")
 POS_FIELDS = ("sp", "pos", "partOfSpeech", "part_of_speech")
-SOURCE_PIN_COUNT = {"nt": 137741, "ot": 469476}
+# These are *raw pinned MACULA TSV* token counts, not the BRSI
+# correspondence-index source IDs (OT index has 469,476, while the
+# pinned original Hebrew TSV has 475,911: 6,435 additional original parts).
+# Both inventories must remain distinct and untouched.
+SOURCE_PIN_COUNT = {"nt": 137741, "ot": 475911}
 
 
 def sha256(raw: bytes) -> str:
