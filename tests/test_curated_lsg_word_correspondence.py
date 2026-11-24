@@ -104,6 +104,63 @@ class LSGOriginalWordWitnessTests(unittest.TestCase):
         self.assertEqual(doc["rows"][2]["linguistically_reviewed_by_brsi"], False)
         self.assertEqual(counters["original_group_counts"], {"ot": 3, "nt": 0})
 
+    def test_unlinked_source_explicitly_non_equivalent_is_not_a_missing_word_guess(self):
+        self.aquifer_doc["groups"][0]["meta"]["nonEquivalent"]["source"] = [
+            "010010010099|אֵת"]
+        self.save()
+        raw, counters = tool.build_corroborated_index(
+            self.aquifer, self.candidates, self.osis, self.lock,
+            "a" * 40, "b" * 40)
+        data = json.loads(raw)
+        self.assertEqual(
+            data["unlinked_cause_by_original_macula_id"]["o010010010099"],
+            "aquifer_explicit_non_equivalent_source")
+        self.assertEqual(
+            data["unlinked_source_cause_counts"]["ot"]["aquifer_explicit_non_equivalent_source"], 1)
+        self.assertEqual(
+            data["unlinked_source_diagnostics"]["aquifer_non_equivalent_source_unique"], 1)
+        self.assertEqual(
+            data["source_coverage"]["ot"]["macula_source_ids_without_word_evidence"], 1)
+        self.assertEqual(
+            counters["unlinked_source_cause_counts"]["ot"]["aquifer_explicit_non_equivalent_source"], 1)
+        self.assertEqual(data["rows"][1]["word_ids"], [])
+        self.assertFalse(data["rows"][1]["linguistically_reviewed_by_brsi"])
+
+    def test_unlinked_subpart_with_attested_sibling_is_not_silently_mapped(self):
+        doc = json.loads((self.candidates / "ot.json").read_text(encoding="utf-8"))
+        doc["records"].append({
+            "ordinal": 3, "source_lookup_ids": ["o010010010012"],
+            "target_lookup_ids": ["01001001998"],
+        })
+        doc["coverage"]["records"] = 4
+        (self.candidates / "ot.json").write_text(json.dumps(doc), encoding="utf-8")
+        raw, _ = tool.build_corroborated_index(
+            self.aquifer, self.candidates, self.osis, self.lock,
+            "a" * 40, "b" * 40)
+        data = json.loads(raw)
+        self.assertEqual(
+            data["unlinked_cause_by_original_macula_id"]["o010010010012"],
+            "other_part_of_same_original_word_has_link")
+        self.assertEqual(data["rows"][3]["word_ids"], [])
+        self.assertEqual(data["source_coverage"]["ot"]["macula_source_ids_without_word_evidence"], 2)
+        self.assertEqual(sum(data["unlinked_source_cause_counts"]["ot"].values()), 2)
+
+    def test_alignment_source_whose_target_was_not_located_remains_unresolved(self):
+        self.aquifer_doc["groups"][0]["records"].append({
+            "source": ["010010010099|אֵת"],
+            "target": ["01001001098|absent_du_texte"],
+        })
+        self.save()
+        raw, _ = tool.build_corroborated_index(
+            self.aquifer, self.candidates, self.osis, self.lock,
+            "a" * 40, "b" * 40)
+        data = json.loads(raw)
+        self.assertEqual(
+            data["unlinked_cause_by_original_macula_id"]["o010010010099"],
+            "aquifer_record_source_with_no_uniquely_located_french_word")
+        self.assertEqual(data["rows"][1]["word_ids"], [])
+        self.assertEqual(sum(data["unlinked_source_cause_counts"]["ot"].values()), 1)
+
     def test_direct_clear_bible_nt_word_wins_over_incompatible_aquifer_source_alignment(self):
         import gzip
         old = self.osis.read_text(encoding="utf-8")
