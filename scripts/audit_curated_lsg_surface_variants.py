@@ -100,6 +100,62 @@ def classify_absent_french_target(
     return unambiguous[0]
 
 
+def neighboring_verse_context(
+        source_word: str,
+        target_verse: str,
+        authored: dict[str, str],
+        word_cache: dict[str, list[str]],
+) -> str:
+    """Report exact word presence in consecutive same-chapter verses only.
+
+    No inferred versification remapping or word position is returned.
+    Missing numbered verses do NOT authorize jumping to a distant verse.
+    """
+    if len(target_verse) != 8 or not target_verse.isdigit():
+        raise ValueError("invalid original Aquifer target verse reference")
+    chapter, number = target_verse[:5], int(target_verse[5:])
+    def contains(n: int) -> bool:
+        if not 1 <= n <= 999:
+            return False
+        key = chapter + str(n).zfill(3)
+        if key not in authored:
+            return False
+        if key not in word_cache:
+            word_cache[key] = [
+                text for text, _, _ in bridge.word_tokens(authored[key])]
+        return source_word in word_cache[key]
+    previous = contains(number - 1)
+    following = contains(number + 1)
+    if previous and following:
+        return "exact_word_in_both_adjacent_verses"
+    if previous:
+        return "exact_word_in_previous_verse"
+    if following:
+        return "exact_word_in_next_verse"
+    return "no_exact_word_in_consecutive_same_chapter_verses"
+
+
+def original_source_verse_context(
+        source_word: str,
+        source_id: str,
+        target_verse: str,
+        authored: dict[str, str],
+        word_cache: dict[str, list[str]],
+) -> str:
+    """Read original source coordinate as a diagnostic, not a French target."""
+    original_verse = source_id[1:9]
+    if original_verse == target_verse:
+        return "original_source_and_aquifer_target_verses_identical"
+    if original_verse not in authored:
+        return "different_original_source_verse_missing_from_curated"
+    if original_verse not in word_cache:
+        word_cache[original_verse] = [
+            text for text, _, _ in bridge.word_tokens(authored[original_verse])]
+    if source_word in word_cache[original_verse]:
+        return "exact_french_word_present_at_original_source_verse_reference"
+    return "different_original_source_verse_without_exact_french_word"
+
+
 def audit_target_surfaces(aquifer_root: Path, authored: dict[str, str],
                           original_unlocated: dict[str, str],
                           *, min_chapters: int = 1) -> dict:
@@ -162,9 +218,15 @@ def audit_target_surfaces(aquifer_root: Path, authored: dict[str, str],
     original_cache: dict[str, list[str]] = {}
     status_by_source = {}
     counters = defaultdict(Counter)
+    neighbor_by_source = {}
+    original_coordinate_by_source = {}
+    neighbor_counts = defaultdict(Counter)
+    coordinate_counts = defaultdict(Counter)
     examples = defaultdict(list)
     for source_id in sorted(missing_sources):
         results = set()
+        neighboring_results = set()
+        coordinate_results = set()
         for target_id in sorted(targets_by_source[source_id]):
             verse = target_id[:8]
             if verse not in authored:
@@ -186,6 +248,10 @@ def audit_target_surfaces(aquifer_root: Path, authored: dict[str, str],
             result = classify_absent_french_target(
                 surface, original_cache[verse], word_cache[verse])
             results.add(result)
+            neighboring_results.add(neighboring_verse_context(
+                surface, verse, authored, word_cache))
+            coordinate_results.add(original_source_verse_context(
+                surface, source_id, verse, authored, word_cache))
             if result[1] is not None and len(examples[result[0]]) < 5:
                 examples[result[0]].append({
                     "original_macula_id": source_id,
@@ -203,6 +269,18 @@ def audit_target_surfaces(aquifer_root: Path, authored: dict[str, str],
         status_by_source[source_id] = status
         canon = "ot" if source_id.startswith("o") else "nt"
         counters[canon][status] += 1
+        if len(neighboring_results) == 1:
+            neighbor = next(iter(neighboring_results))
+        else:
+            neighbor = "multiple_original_target_or_missing_verse_contexts"
+        if len(coordinate_results) == 1:
+            coordinate = next(iter(coordinate_results))
+        else:
+            coordinate = "multiple_original_target_or_missing_source_contexts"
+        neighbor_by_source[source_id] = neighbor
+        original_coordinate_by_source[source_id] = coordinate
+        neighbor_counts[canon][neighbor] += 1
+        coordinate_counts[canon][coordinate] += 1
 
     baseline = {
         canon: sum(1 for source in missing_sources
@@ -212,6 +290,9 @@ def audit_target_surfaces(aquifer_root: Path, authored: dict[str, str],
     for canon in ("nt", "ot"):
         if sum(counters[canon].values()) != baseline[canon]:
             raise ValueError("incomplete French orthography diagnostic census")
+        if (sum(neighbor_counts[canon].values()) != baseline[canon] or
+                sum(coordinate_counts[canon].values()) != baseline[canon]):
+            raise ValueError("incomplete adjacent/source French verse diagnostic census")
 
     return {
         "format": "brsi-french-surface-difference-readonly-audit",
@@ -222,6 +303,15 @@ def audit_target_surfaces(aquifer_root: Path, authored: dict[str, str],
         "by_canon": {canon: dict(sorted(counters[canon].items()))
                      for canon in ("nt", "ot")},
         "source_ids_by_diagnostic": status_by_source,
+        "reference_context_by_original_macula_id": neighbor_by_source,
+        "source_coordinate_context_by_original_macula_id": original_coordinate_by_source,
+        "reference_context_by_canon": {
+            canon: dict(sorted(neighbor_counts[canon].items())) for canon in ("nt", "ot")
+        },
+        "source_coordinate_context_by_canon": {
+            canon: dict(sorted(coordinate_counts[canon].items()))
+            for canon in ("nt", "ot")
+        },
         "sample_source_word_hashes_only": dict(sorted(examples.items())),
         "source_french_text_modified": False,
         "original_source_ids_modified": False,
@@ -274,7 +364,9 @@ def main() -> None:
         "format", "schema_version", "purpose",
         "original_unlinked_exact_word_absence",
         "original_unlinked_exact_word_absence_total",
-        "by_canon", "source_french_text_modified",
+        "by_canon", "reference_context_by_canon",
+        "source_coordinate_context_by_canon",
+        "source_french_text_modified",
         "original_source_ids_modified", "linguistic_links_automatically_approved",
         "curated_osis_sha256", "clear_bible_revision", "aquifer_revision",
         "correspondence_index_sha256")}
