@@ -421,7 +421,7 @@ def stage_private_nt_word_bridge(osis_verses: dict[str, str],
         "rows": rows,
     }
     raw = (json.dumps(payload, ensure_ascii=False, sort_keys=True,
-                      separators=(",", ":"), allow_nan=False) + "\\n").encode("utf-8")
+                      separators=(",", ":"), allow_nan=False) + "\n").encode("utf-8")
     return raw, dict(sorted(census.items()))
 
 
