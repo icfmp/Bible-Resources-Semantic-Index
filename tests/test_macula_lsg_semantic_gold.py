@@ -145,6 +145,17 @@ class HumanGoldTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "distinct third"):
             tool.evaluate(dossier(), submissions(contested, [adjudicator]))
 
+    def test_unresolved_original_to_target_versification_dispute_stays_undetermined(self):
+        data = copy.deepcopy(dossier())
+        data["cases"][0]["original_target_verse_disagreement"] = True
+        with self.assertRaisesRegex(ValueError, "versification"):
+            tool.validated_review(review(), data["cases"][0], data)
+        undecided = review(decision="undetermined",
+                           source=["n40001001001"])
+        undecided["undetermined_reason"] = "versification"
+        result = tool.validated_review(undecided, data["cases"][0], data)
+        self.assertEqual(result["decision"], "undetermined")
+
     def test_original_span_must_be_contiguous_and_contain_reviewed_word(self):
         r = review(source=["n40001001001", "n40001001003"])
         with self.assertRaisesRegex(ValueError, "noncontiguous"):
