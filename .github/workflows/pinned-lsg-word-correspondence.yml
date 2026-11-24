@@ -291,6 +291,14 @@ jobs:
               'nt': 2596, 'ot': 17284}
           assert sum(sum(classes.values()) for classes in
                      report['by_canon'].values()) == 19880
+          assert all(sum(report['reference_context_by_canon'][canon].values()) ==
+                     report['original_unlinked_exact_word_absence'][canon]
+                     for canon in ('nt', 'ot'))
+          assert all(sum(report['source_coordinate_context_by_canon'][canon].values()) ==
+                     report['original_unlinked_exact_word_absence'][canon]
+                     for canon in ('nt', 'ot'))
+          print('BRSI_FRENCH_NEIGHBORING_VERSE_EVIDENCE', report['reference_context_by_canon'])
+          print('BRSI_FRENCH_ORIGINAL_SOURCE_COORDINATE_EVIDENCE', report['source_coordinate_context_by_canon'])
           assert report['linguistic_links_automatically_approved'] is False
           assert report['source_french_text_modified'] is False
           assert report['original_source_ids_modified'] is False
