@@ -50,7 +50,12 @@ now maintains its **separate** translation-alignment importer, manifest,
 review-only correction ledger and full-source checks. These are *candidate*
 translation token links, never UBS lexical or context-specific senses.
 Clear.Bible's OT target-token TSV is header-only; OT token membership cannot
-be certified by that file. The source editions and LSG tokenization must be
+be certified by that file. **Numeric direct mapping is ruled out** by the
+source-pinned calibration: 66,214/91,649 verified NT source-target word
+IDs differ from their real authorial French word ordinals; 40,281/203,597
+OT original target ordinals exceed the count of authorial French words in
+their own verse. Preserve original OT ID rows but require authentic
+OT word token surfaces before any word-level approval. The source editions and LSG tokenization must be
 independently matched to the downstream Bible reader before use. Distribution
 remains gated by [#62](https://github.com/icfmp/Bible-Resources-Semantic-Index/issues/62).
 
