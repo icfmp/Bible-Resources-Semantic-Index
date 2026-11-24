@@ -90,6 +90,15 @@ def unique_ordered_exact_locations(tokens: list[str],
     return matches
 
 
+def apostrophe_style_key(word: str) -> str:
+    """Normalize only French straight/curly apostrophe typography.
+
+    Do NOT alter accents, case, letters, hyphens, word spacing or source text.
+    This key is diagnostic and only safe with full-word unique-location proof.
+    """
+    return unicodedata.normalize("NFC", word).replace("\u2019", "'")
+
+
 def locate_aquifer_words_with_proof(
         original_tokens: list[tuple[str, str]],
         authored_words: list[tuple[str, int, int]]
@@ -120,6 +129,33 @@ def locate_aquifer_words_with_proof(
             raise ValueError("incompatible exact-word target position proofs")
         result[i] = (j, "unique_exact_surface_without_order_proof")
         occupied.add(j)
+    # A narrowly defined editorial typography variant is stronger than
+    # generic fuzzy matching: ' and the typographical right apostrophe are
+    # the ONLY characters allowed to differ, and the *complete word* must
+    # occur exactly once in both source-verse word inventories.
+    source_style = [apostrophe_style_key(word) for word in original_surfaces]
+    authored_style = [apostrophe_style_key(word) for word in authored_surfaces]
+    original_style_counts = Counter(source_style)
+    authored_style_counts = Counter(authored_style)
+    authored_style_unique = {word: i for i, word in enumerate(authored_style)
+                             if authored_style_counts[word] == 1}
+    for i, source_word in enumerate(original_surfaces):
+        if i in result:
+            continue
+        key = source_style[i]
+        if (original_style_counts[key] != 1 or authored_style_counts[key] != 1
+                or key not in authored_style_unique):
+            continue
+        j = authored_style_unique[key]
+        authored_word = authored_surfaces[j]
+        if source_word == authored_word:
+            raise ValueError("exact unique French word was improperly skipped")
+        if apostrophe_style_key(source_word) != apostrophe_style_key(authored_word):
+            raise ValueError("invalid typographic apostrophe-only witness")
+        if j in occupied:
+            raise ValueError("typographic word target would duplicate an attested span")
+        result[i] = (j, "unique_apostrophe_style_only")
+        occupied.add(j)
     if len({position for position, _ in result.values()}) != len(result):
         raise ValueError("original targets would duplicate authored word span")
     return result
@@ -136,11 +172,14 @@ def aquifer_source_word_witnesses(
             location = located[target_id]
             word_id = location["bcv"] + ":" + str(location["word_ordinal"])
             seen.add((word_id, target_id, location["word_sha256"],
+                      location["source_surface_sha256"],
                       location["word_location_proof"]))
     return [
         {"word_id": word_id, "aquifer_target_id": target_id,
-         "word_sha256": word_sha256, "location_proof": proof}
-        for word_id, target_id, word_sha256, proof in sorted(seen)
+         "word_sha256": word_sha256,
+         "original_french_surface_sha256": source_surface_sha256,
+         "location_proof": proof}
+        for word_id, target_id, word_sha256, source_surface_sha256, proof in sorted(seen)
     ]
 
 
@@ -243,7 +282,11 @@ def load_aquifer(root: Path, authored: dict[str, str],
             matched, start, end = authored_words[authored_index]
             canon = "ot" if int(bcv[:2]) < 40 else "nt"
             counts[canon + "_target_words_" + proof] += 1
-            if surface != matched:
+            if proof == "unique_apostrophe_style_only":
+                if (surface == matched or
+                        apostrophe_style_key(surface) != apostrophe_style_key(matched)):
+                    raise ValueError("original French token differs beyond apostrophe style")
+            elif surface != matched:
                 raise ValueError("source text changed behind exact match")
             located[original_id] = {
                 "bcv": bcv,
@@ -251,7 +294,10 @@ def load_aquifer(root: Path, authored: dict[str, str],
                 "nfc_start": start,
                 "nfc_end": end,
                 "word_sha256": hashlib.sha256(matched.encode("utf-8")).hexdigest(),
-                "surface_match": "exact_NFC",
+                "source_surface_sha256": hashlib.sha256(surface.encode("utf-8")).hexdigest(),
+                "surface_match": (
+                    "apostrophe_style_only" if proof == "unique_apostrophe_style_only"
+                    else "exact_NFC"),
                 "word_location_proof": proof,
                 "source": "BibleAquifer/LouisSegond1910",
             }
