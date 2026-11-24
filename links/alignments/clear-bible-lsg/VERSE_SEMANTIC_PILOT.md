@@ -21,12 +21,14 @@ The generator uses pinned, immutable, separately sourced material:
   full original MACULA token sequence, surfaces, lemmas, morphology and
   optionally POS; complete French verse NFC text, exact word IDs and character
   offsets; neighboring **French** verses where present; and the selected
-  original IDs/causes.
+  selected original IDs. Upstream missing-link cause labels are **not**
+  disclosed to the model, so they cannot bias the independent reading.
 - The exact Bible Resources authored **BRLSG1910 1.0.2** edition digest and
   original source/correspondence index digests from that dossier.
 - It selects **100 NT and 100 OT complete verses** only from the original
   **training** partition. Neither calibration nor blind validation is allowed
-  into a model's prompt, selection or response.
+  into a model's prompt, selection or response. Adjacent French context is
+  also removed whenever its source verse belongs to calibration/blind.
 - Cross-versification disputes and absent same-coordinate authored verses
   are **excluded from the initial pilot**, not silently remapped.
 - Original-language *neighboring verses* and verified XML `<wg>` source
