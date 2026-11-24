@@ -78,6 +78,10 @@ class SourcePhraseFrenchNeighborhoodTests(unittest.TestCase):
         self.assertEqual(candidate["original_syntax_class"],"pp")
         self.assertEqual(candidate["lexical_source_lemma_candidate_french_word_id"],
                          "01001001:2")
+        self.assertFalse(candidate[
+            "original_source_verse_excluded_from_lexical_training"])
+        self.assertTrue(candidate[
+            "training_may_include_other_anchors_of_this_unresolved_verse"])
         self.assertTrue(candidate["french_span_is_not_verified_translation"])
         self.assertEqual(candidate["automatic_word_or_phrase_links_approved"],0)
         self.assertFalse(candidate["publication_authorized"])
@@ -124,6 +128,10 @@ class SourcePhraseFrenchNeighborhoodTests(unittest.TestCase):
             ["63001001:2"])
         self.assertEqual(candidate["candidate_authored_french_phrase_word_ids"],
                          ["63001001:2","63001001:3"])
+        self.assertTrue(candidate[
+            "original_source_verse_excluded_from_lexical_training"])
+        self.assertFalse(candidate[
+            "training_may_include_other_anchors_of_this_unresolved_verse"])
         # Even a *different* original source sharing gold target is masked.
         mutated=copy.deepcopy(index)
         other=fixtures.NT_IDS[1]
