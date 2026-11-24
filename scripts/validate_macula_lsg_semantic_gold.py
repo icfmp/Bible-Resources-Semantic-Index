@@ -94,6 +94,8 @@ def validated_review(record: dict, case: dict, dossier: dict,
         raise ValueError("noncontiguous original source group is not supported")
     if original_ids != [in_verse[i] for i in sorted(positions)]:
         raise ValueError("original source group order changed")
+    if outcome == "phrase_span" and case.get("original_target_verse_disagreement"):
+        raise ValueError("disputed original-target versification cannot become phrase gold")
     spans = record.get("french_spans", [])
     if not isinstance(spans, list):
         raise ValueError("French spans must be explicit list")
