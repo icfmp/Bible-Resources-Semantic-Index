@@ -24,8 +24,15 @@ NT alignment records**, with bidirectional lookup by original MACULA ID and
 by French edition word position. **91,649** rows yield a uniquely located
 *diagnostic* French word position and **13,158** remain explicitly unresolved.
 These numbers are **not an editorial certification or a published release**.
-The complete original OT alignment records are preserved by the existing
-pinned import; an authoritative French OT token inventory is still missing.
+The full **203,597 original OT rows** are now also maintained in **our own
+BRSI OT verse-reference index**, searchable by original MACULA Hebrew ID
+and by source-attested French LSG 1.0.2 verse reference. Exactly **920**
+original source/target verse disagreements are preserved verbatim. Since
+Clear.Bible supplies no French OT word-token inventory, every OT row
+explicitly has **no approved French word position**: a French verse-reference
+index is not a certified Hebrew↔French word index. The deterministic
+[OT source-rebuild receipt](curated-1.0.2-parity.lock.json) pins the complete
+private OT index SHA-256 and exact bytes, separately from the NT word index.
 See [the pinned BRSI index build](../../../.github/workflows/pinned-curated-lsg-edition.yml)
 and [full reproducible private index receipt](curated-1.0.2-parity.lock.json).
 
