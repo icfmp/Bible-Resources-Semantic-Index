@@ -817,6 +817,10 @@ jobs:
           print(Path('/tmp/brsi-semantic-verse-tasks-source-free.json').read_text())
           PY
 
+          python3 -I scripts/verify_generated_json.py \
+            --generated /tmp/brsi-semantic-verse-tasks-source-free.json \
+            --baseline links/alignments/clear-bible-lsg/verse-semantic-pilot.lock.json
+
       - name: Full pinned-source lexical plus bounded phrase consensus negative control
         shell: bash
         run: |
