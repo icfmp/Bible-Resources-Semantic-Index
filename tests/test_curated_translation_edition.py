@@ -234,7 +234,7 @@ class CuratedLSGEditionTests(unittest.TestCase):
         self.assertEqual(payload["format"], "brsi-curated-authorial-word-inventory")
         self.assertEqual(payload["curated_release"], "lsg-1.0.2")
         self.assertFalse(payload["source_text_embedded"])
-        self.assertFalse(payload["status"] != "private_nonpublishing_unapproved")
+        self.assertEqual(payload["status"], "private_nonpublishing_unapproved")
         self.assertEqual(payload["coverage"]["nt"]["verses"], 2)
         self.assertEqual(payload["coverage"]["ot"]["verses"], 1)
         self.assertEqual(len(payload["by_verse"]["01001001"]["words"]), 4)
@@ -266,7 +266,7 @@ class CuratedLSGEditionTests(unittest.TestCase):
         self.assertNotIn("original_target_ids", payload)
         self.assertNotIn("L'amour", raw.decode())
         self.assertEqual(module.word_stream(verses["40001001"]),
-                         ["lamour", "de", "loeuvre", "aujourdhui", "jeanbaptiste"])
+                         ["lamour", "de", "lœuvre", "aujourdhui", "jeanbaptiste"])
         newer, stats = module.build_authored_word_inventory(verses, self.lock)
         self.assertEqual(raw, newer)
         self.assertEqual(coverage, stats)
