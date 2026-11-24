@@ -145,6 +145,18 @@ never changes the application. See [V1 consumer guide](../docs/V1_CONSUMPTION.md
   those verses, these are **reused reporting cases, not prospectively untouched
   new blind gold**.
 
+- `audit_macula_lsg_original_syntax.py`: initial pinned-source **real MACULA
+  lowfat XML syntax hierarchy** pilot (Genesis 1–3 OT and 2 John NT). Parses
+  nested original language `wg` groups, exact token IDs, verse refs,
+  original orthographic-word `w/@ref` siblings and original morphology.
+  Reports source-token coverage with small authentic syntax constituents,
+  already verified French anchor navigation cues, cross-verse abstentions,
+  and differences between original lowfat XML vs existing MACULA
+  correspondence-index identity. The private reproducible dossier includes
+  original and authored LSG text; Git records **source-free aggregate counts
+  and SHA-256 only**. All proposals are explicitly source-side structures,
+  never Greek/Hebrew-to-French phrase equivalences. No publication.
+
 - `calibrate_aquifer_lsg_target_ids.py`: continuous source-pinned safety
   calibration against 91,649 independent original NT word witnesses.
   It demonstrates why identical **numeric** target IDs between independently
