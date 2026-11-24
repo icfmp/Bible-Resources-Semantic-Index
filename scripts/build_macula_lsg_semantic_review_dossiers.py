@@ -55,7 +55,8 @@ def _first_present(columns: list[str], preferred: tuple[str, ...]) -> str | None
 
 
 def selected_original_context(path: Path, canon: str, expected_sha: str,
-                              verses: set[str]) -> tuple[dict, dict]:
+                              verses: set[str], *, expected_count: int | None = None
+                              ) -> tuple[dict, dict]:
     if lexical.sha256_file(path) != expected_sha:
         raise ValueError("MACULA original source SHA-256 differs from exact pinned input")
     context = defaultdict(list)
@@ -90,7 +91,7 @@ def selected_original_context(path: Path, canon: str, expected_sha: str,
                 "morphology": (record.get(morph_field) or None) if morph_field else None,
                 "part_of_speech": (record.get(pos_field) or None) if pos_field else None,
             })
-    if total != SOURCE_PIN_COUNT[canon]:
+    if total != (SOURCE_PIN_COUNT[canon] if expected_count is None else expected_count):
         raise ValueError("complete MACULA source census differs from pinned baseline")
     if set(context) != verses:
         raise ValueError("selected original verse lacks MACULA source context")
