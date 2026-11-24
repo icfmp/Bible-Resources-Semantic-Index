@@ -72,7 +72,8 @@ jobs:
             --candidate-dir /tmp/brsi-curated-candidate \
             --output /tmp/brsi-curated-edition-report.json \
             --index-output /tmp/brsi-curated-lsg-nt-index.json.gz \
-            --ot-index-output /tmp/brsi-curated-lsg-ot-verse-index.json.gz
+            --ot-index-output /tmp/brsi-curated-lsg-ot-verse-index.json.gz \
+            --word-inventory-output /tmp/brsi-curated-lsg-authorial-words.json.gz
       - name: Verify BRSI-owned, source-preserving bidirectional index
         run: |
           set -euo pipefail
@@ -130,6 +131,58 @@ jobs:
           assert all(all(verse in ot['by_curated_verse'] for verse in row['curated_target_verses'])
                      for row in ot['rows'])
           print('BRSI_OWNED_OT_VERSE_INDEX', ot['coverage'])
+          PY
+      - name: Verify complete independently indexed French words against pinned authored OSIS
+        run: |
+          set -euo pipefail
+          python3 -I - <<'PY'
+          import gzip
+          import hashlib
+          import importlib.util
+          import json
+          import unicodedata
+          from pathlib import Path
+          report = json.loads(Path('/tmp/brsi-curated-edition-report.json').read_text())
+          receipt = report['private_authorial_word_inventory']
+          path = Path('/tmp/brsi-curated-lsg-authorial-words.json.gz')
+          compressed = path.read_bytes()
+          assert hashlib.sha256(compressed).hexdigest() == receipt['gzip_sha256']
+          assert len(compressed) == receipt['gzip_bytes']
+          raw = gzip.decompress(compressed)
+          assert hashlib.sha256(raw).hexdigest() == receipt['uncompressed_sha256']
+          assert len(raw) == receipt['uncompressed_bytes']
+          index = json.loads(raw)
+          assert index['source_text_embedded'] is False
+          assert index['status'] == 'private_nonpublishing_unapproved'
+          assert index['format'] == 'brsi-curated-authorial-word-inventory'
+          assert index['curated_osis_sha256'] == report['curated_osis_sha256']
+          assert index['coverage'] == receipt['coverage']
+          assert index['coverage']['verses'] == 31170
+          assert index['coverage']['ot']['words'] > 100000
+          assert index['coverage']['nt']['words'] > 50000
+          spec = importlib.util.spec_from_file_location('edition', 'scripts/audit_curated_translation_edition.py')
+          ed = importlib.util.module_from_spec(spec)
+          spec.loader.exec_module(ed)
+          lock = json.loads(Path('links/alignments/clear-bible-lsg/curated-1.0.2.lock.json').read_text())
+          authored = ed.read_osis(ed.pinned_file(Path('/tmp/brsi-curated-reader'), lock['osis_path'], lock['osis_sha256']))
+          assert set(authored) == set(index['by_verse'])
+          verified = 0
+          for bcv, record in index['by_verse'].items():
+              text = unicodedata.normalize('NFC', authored[bcv])
+              assert hashlib.sha256(text.encode('utf-8')).hexdigest() == record['nfc_verse_sha256']
+              assert len(text) == record['nfc_codepoints']
+              previous_end = 0
+              for ordinal, word in enumerate(record['words'], 1):
+                  assert word['ordinal'] == ordinal
+                  start, end = word['nfc_start_codepoint'], word['nfc_end_codepoint']
+                  assert 0 <= previous_end <= start < end <= len(text)
+                  assert hashlib.sha256(text[start:end].encode('utf-8')).hexdigest() == word['nfc_word_sha256']
+                  assert 'surface' not in word
+                  previous_end = end
+                  verified += 1
+          assert verified == index['coverage']['words']
+          assert index['coverage']['ot']['verses'] + index['coverage']['nt']['verses'] == 31170
+          print('BRSI_AUTHORED_WORD_INVENTORY', index['coverage'])
           PY
       - name: Verify full pinned curated-edition diagnostic JSON receipt
         run: |
