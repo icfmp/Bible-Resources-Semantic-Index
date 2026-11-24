@@ -90,6 +90,12 @@ def anchor_bracket(
                 f"{verse}:{p}" for p in range(first, last + 1)],
             "span_width": last - first + 1,
             "independently_located_distinct_anchor_words": len(positions),
+            # Original source coordinates are independently reproduced, but
+            # this does NOT make the contextual translation semantics gold.
+            "existing_anchor_evidence_tier": (
+                "clear_bible_direct_nt_word_location_not_semantic_gold"
+                if original.startswith("n") else
+                "aquifer_surface_attested_ot_candidate_not_semantic_gold"),
             "lexical_translation_guess_required": False,
             "source_group_is_authentic": True,
             "French_span_is_only_navigation_not_translation": True,
