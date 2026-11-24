@@ -217,6 +217,48 @@ class CuratedLSGEditionTests(unittest.TestCase):
                                 self.curated, self.candidate, output)
         self.assertFalse(output.exists())
 
+    def test_generic_text_exception_triage_separates_boundary_orthography_and_omission(self):
+        verses = {
+            "40001001": "alpha beta",
+            "40001002": "gamma delta",
+            "40001004": "à notre œuvre",
+            "40001006": "une longue citation",
+            "40001008": "texte ordinaire",
+        }
+        target = {
+            "40001001": [("40001001001", "alpha")],
+            "40001002": [("40001002001", "beta gamma delta")],
+            "40001004": [("40001004001", "a notre oeuvre")],
+            "40001006": [("40001006001", "une")],
+            "40001008": [("40001008001", "texte autre")],
+        }
+        mismatches = [{"bcv": key} for key in sorted(verses)]
+        runs = module.contiguous_mismatch_runs(verses, target, mismatches)
+        report = module.triage_verse_text_exceptions(
+            verses, target, mismatches, runs)
+        self.assertEqual(report["categories"], {
+            "adjacent_verse_boundary_partition": 2,
+            "original_target_tsv_omits_curated_characters": 1,
+            "orthographic_folding_only": 1,
+            "other_unresolved_text_difference": 1,
+        })
+        self.assertEqual(report["automated_alignment_corrections"], 0)
+        self.assertTrue(all(not r["original_alignment_changed"] for r in report["cases"]))
+        self.assertTrue(all(not r["curated_scripture_changed"] for r in report["cases"]))
+
+    def test_generic_text_exception_rejects_spurious_mismatch(self):
+        with self.assertRaisesRegex(ValueError, "reported mismatch is actually equal"):
+            module.triage_verse_text_exceptions(
+                {"40001001": "un mot"},
+                {"40001001": [("40001001001", "un mot")]},
+                [{"bcv": "40001001"}], [])
+
+    def test_orthographic_folding_preserves_actual_word_changes(self):
+        self.assertEqual(module.orthographic_character_stream("à l'œuvre"),
+                         module.orthographic_character_stream("a l'oeuvre"))
+        self.assertNotEqual(module.orthographic_character_stream("fils"),
+                            module.orthographic_character_stream("filles"))
+
     def test_fails_when_authorial_verse_body_changes_behind_pin(self):
         self.xml.write_text("<osis></osis>", encoding="utf-8")
         with self.assertRaisesRegex(ValueError, "pinned byte witness differs"):

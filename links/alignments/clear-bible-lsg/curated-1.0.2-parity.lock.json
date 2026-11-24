@@ -354,6 +354,108 @@
       "whole_one_word": 167462
     },
     "target_token_id_matches_certified": false,
+    "text_exception_triage": {
+      "automated_alignment_corrections": 0,
+      "cases": [
+        {
+          "automatic_verse_reassignment": false,
+          "bcv": "43002017",
+          "category": "original_target_tsv_omits_curated_characters",
+          "curated_scripture_changed": false,
+          "original_alignment_changed": false
+        },
+        {
+          "automatic_verse_reassignment": false,
+          "bcv": "45013009",
+          "category": "original_target_tsv_omits_curated_characters",
+          "curated_scripture_changed": false,
+          "original_alignment_changed": false
+        },
+        {
+          "automatic_verse_reassignment": false,
+          "bcv": "50001004",
+          "category": "adjacent_verse_boundary_partition",
+          "curated_scripture_changed": false,
+          "original_alignment_changed": false
+        },
+        {
+          "automatic_verse_reassignment": false,
+          "bcv": "50001005",
+          "category": "adjacent_verse_boundary_partition",
+          "curated_scripture_changed": false,
+          "original_alignment_changed": false
+        },
+        {
+          "automatic_verse_reassignment": false,
+          "bcv": "50001028",
+          "category": "adjacent_verse_boundary_partition",
+          "curated_scripture_changed": false,
+          "original_alignment_changed": false
+        },
+        {
+          "automatic_verse_reassignment": false,
+          "bcv": "50001029",
+          "category": "adjacent_verse_boundary_partition",
+          "curated_scripture_changed": false,
+          "original_alignment_changed": false
+        },
+        {
+          "automatic_verse_reassignment": false,
+          "bcv": "50003010",
+          "category": "adjacent_verse_boundary_partition",
+          "curated_scripture_changed": false,
+          "original_alignment_changed": false
+        },
+        {
+          "automatic_verse_reassignment": false,
+          "bcv": "50003011",
+          "category": "adjacent_verse_boundary_partition",
+          "curated_scripture_changed": false,
+          "original_alignment_changed": false
+        },
+        {
+          "automatic_verse_reassignment": false,
+          "bcv": "50004015",
+          "category": "adjacent_verse_boundary_partition",
+          "curated_scripture_changed": false,
+          "original_alignment_changed": false
+        },
+        {
+          "automatic_verse_reassignment": false,
+          "bcv": "50004016",
+          "category": "adjacent_verse_boundary_partition",
+          "curated_scripture_changed": false,
+          "original_alignment_changed": false
+        },
+        {
+          "automatic_verse_reassignment": false,
+          "bcv": "50004020",
+          "category": "orthographic_folding_only",
+          "curated_scripture_changed": false,
+          "original_alignment_changed": false
+        },
+        {
+          "automatic_verse_reassignment": false,
+          "bcv": "56003008",
+          "category": "orthographic_folding_only",
+          "curated_scripture_changed": false,
+          "original_alignment_changed": false
+        },
+        {
+          "automatic_verse_reassignment": false,
+          "bcv": "56003014",
+          "category": "orthographic_folding_only",
+          "curated_scripture_changed": false,
+          "original_alignment_changed": false
+        }
+      ],
+      "categories": {
+        "adjacent_verse_boundary_partition": 8,
+        "original_target_tsv_omits_curated_characters": 2,
+        "orthographic_folding_only": 3
+      },
+      "orthographic_equivalence_not_word_link_proof": true
+    },
     "token_rows": 210628,
     "verse_content_comparison": {
       "different_alphanumeric_stream": 13,
