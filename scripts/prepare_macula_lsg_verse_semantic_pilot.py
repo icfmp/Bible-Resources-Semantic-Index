@@ -100,6 +100,10 @@ def prepare_pilot(dossier: dict, *, dossier_sha: str,
         if not french["authorial_verse_present"]:
             continue
         by_verse[verse].append(case)
+    # Do not expose adjacent French verses belonging to calibration/blind
+    # clusters inside training prompts, even when the dossier has them.
+    heldout_verses = {c["source_verse_coordinate"] for c in cases
+                      if c["evaluation_partition"] != "training"}
     chosen = []
     sizes = {"nt": nt_count, "ot": ot_count}
     for canon in ("nt", "ot"):
@@ -119,7 +123,12 @@ def prepare_pilot(dossier: dict, *, dossier_sha: str,
     causes = Counter()
     canon_counts = Counter()
     for verse in sorted(chosen):
-        context = dossier["exact_authored_french_verses"][verse]
+        authored = dossier["exact_authored_french_verses"][verse]
+        context = dict(authored)
+        context["context_neighbors"] = {
+            key: neighbor for key, neighbor in authored["context_neighbors"].items()
+            if neighbor["verse"] not in heldout_verses
+        }
         tokens = _full_original_tokens(dossier, verse)
         ids = {t["original_macula_id"] for t in tokens}
         french_words = context["exact_words"]
@@ -141,11 +150,12 @@ def prepare_pilot(dossier: dict, *, dossier_sha: str,
             "authored_french_verse": verse,
             "original_tokens_in_source_order": tokens,
             "authored_french": context,
-            "selected_unresolved_cases": [{
-                "case_id": case["case_id"],
-                "original_macula_id": case["original_macula_id"],
-                "source_cause": case["source_cause"],
-            } for case in sorted(by_verse[verse], key=lambda c: c["case_id"])],
+            # Do not reveal Aquifer stratum labels or upstream lexical guesses
+            # to the model; they could bias an independent semantic reading.
+            "priority_original_macula_ids": [
+                case["original_macula_id"]
+                for case in sorted(by_verse[verse], key=lambda c: c["case_id"])
+            ],
             "original_syntax_constituents_supplied": False,
             "original_source_verse_neighbors_supplied": False,
             "existing_translation_anchors_semantically_approved": False,
@@ -178,7 +188,7 @@ def prepare_pilot(dossier: dict, *, dossier_sha: str,
         "verses": len(tasks),
         "verses_by_canon": dict(sorted(canon_counts.items())),
         "sampled_unresolved_original_ids": sum(len(t[
-            "selected_unresolved_cases"]) for t in tasks),
+            "priority_original_macula_ids"]) for t in tasks),
         "sampled_case_causes": dict(sorted(causes.items())),
         "full_verse_original_tokens": sum(len(t[
             "original_tokens_in_source_order"]) for t in tasks),
