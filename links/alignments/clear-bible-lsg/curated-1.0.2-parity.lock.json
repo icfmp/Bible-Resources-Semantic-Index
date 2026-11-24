@@ -1,0 +1,496 @@
+{
+  "clear_bible_revision": "c99bd0ae6946775f932517656308ca19fc706921",
+  "curated_osis_sha256": "2b8342a67d8e97b433670450fe9dd9e58917a7fcfc0cb4d321882ca8219dc3bd",
+  "curated_osis_verses": 31170,
+  "curated_release": "lsg-1.0.2",
+  "curated_revision": "7092d6e9318eeff46081feb831c207efa5859af2",
+  "editions_proven_identical": false,
+  "kind": "curated-lsg-verse-surface-and-ot-reference-diagnostic",
+  "nt": {
+    "adjacent_mismatch_verses_with_identical_combined_stream": 8,
+    "adjacent_text_mismatch_runs": [
+      {
+        "automatic_verse_reassignments": 0,
+        "combined_alphanumeric_stream_equal": true,
+        "first_bcv": "50001004",
+        "last_bcv": "50001005",
+        "verse_count": 2
+      },
+      {
+        "automatic_verse_reassignments": 0,
+        "combined_alphanumeric_stream_equal": true,
+        "first_bcv": "50001028",
+        "last_bcv": "50001029",
+        "verse_count": 2
+      },
+      {
+        "automatic_verse_reassignments": 0,
+        "combined_alphanumeric_stream_equal": true,
+        "first_bcv": "50003010",
+        "last_bcv": "50003011",
+        "verse_count": 2
+      },
+      {
+        "automatic_verse_reassignments": 0,
+        "combined_alphanumeric_stream_equal": true,
+        "first_bcv": "50004015",
+        "last_bcv": "50004016",
+        "verse_count": 2
+      }
+    ],
+    "aligned_attested_target_boundary_classes": {
+      "punctuation_only": 7457,
+      "splits_curated_word_boundary": 4574,
+      "verse_text_mismatch": 131,
+      "whole_one_word": 91649
+    },
+    "aligned_attested_target_by_book": {
+      "40": {
+        "punctuation_only": 991,
+        "splits_curated_word_boundary": 648,
+        "whole_one_word": 12183
+      },
+      "41": {
+        "punctuation_only": 597,
+        "splits_curated_word_boundary": 340,
+        "whole_one_word": 7349
+      },
+      "42": {
+        "punctuation_only": 947,
+        "splits_curated_word_boundary": 586,
+        "whole_one_word": 13083
+      },
+      "43": {
+        "punctuation_only": 827,
+        "splits_curated_word_boundary": 461,
+        "verse_text_mismatch": 5,
+        "whole_one_word": 10453
+      },
+      "44": {
+        "punctuation_only": 918,
+        "splits_curated_word_boundary": 597,
+        "whole_one_word": 12067
+      },
+      "45": {
+        "punctuation_only": 395,
+        "splits_curated_word_boundary": 264,
+        "verse_text_mismatch": 2,
+        "whole_one_word": 4671
+      },
+      "46": {
+        "punctuation_only": 439,
+        "splits_curated_word_boundary": 257,
+        "whole_one_word": 4552
+      },
+      "47": {
+        "punctuation_only": 298,
+        "splits_curated_word_boundary": 122,
+        "whole_one_word": 3013
+      },
+      "48": {
+        "punctuation_only": 144,
+        "splits_curated_word_boundary": 86,
+        "whole_one_word": 1528
+      },
+      "49": {
+        "punctuation_only": 115,
+        "splits_curated_word_boundary": 80,
+        "whole_one_word": 1598
+      },
+      "50": {
+        "punctuation_only": 122,
+        "splits_curated_word_boundary": 98,
+        "verse_text_mismatch": 92,
+        "whole_one_word": 948
+      },
+      "51": {
+        "punctuation_only": 60,
+        "splits_curated_word_boundary": 44,
+        "whole_one_word": 1090
+      },
+      "52": {
+        "punctuation_only": 65,
+        "splits_curated_word_boundary": 51,
+        "whole_one_word": 1039
+      },
+      "53": {
+        "punctuation_only": 41,
+        "splits_curated_word_boundary": 32,
+        "whole_one_word": 561
+      },
+      "54": {
+        "punctuation_only": 115,
+        "splits_curated_word_boundary": 76,
+        "whole_one_word": 1084
+      },
+      "55": {
+        "punctuation_only": 80,
+        "splits_curated_word_boundary": 45,
+        "whole_one_word": 824
+      },
+      "56": {
+        "punctuation_only": 59,
+        "splits_curated_word_boundary": 36,
+        "verse_text_mismatch": 32,
+        "whole_one_word": 417
+      },
+      "57": {
+        "punctuation_only": 20,
+        "splits_curated_word_boundary": 14,
+        "whole_one_word": 214
+      },
+      "58": {
+        "punctuation_only": 313,
+        "splits_curated_word_boundary": 179,
+        "whole_one_word": 3307
+      },
+      "59": {
+        "punctuation_only": 104,
+        "splits_curated_word_boundary": 48,
+        "whole_one_word": 1202
+      },
+      "60": {
+        "punctuation_only": 110,
+        "splits_curated_word_boundary": 49,
+        "whole_one_word": 1182
+      },
+      "61": {
+        "punctuation_only": 57,
+        "splits_curated_word_boundary": 38,
+        "whole_one_word": 775
+      },
+      "62": {
+        "punctuation_only": 93,
+        "splits_curated_word_boundary": 82,
+        "whole_one_word": 1454
+      },
+      "63": {
+        "punctuation_only": 13,
+        "splits_curated_word_boundary": 13,
+        "whole_one_word": 167
+      },
+      "64": {
+        "punctuation_only": 20,
+        "splits_curated_word_boundary": 11,
+        "whole_one_word": 130
+      },
+      "65": {
+        "punctuation_only": 25,
+        "splits_curated_word_boundary": 24,
+        "whole_one_word": 296
+      },
+      "66": {
+        "punctuation_only": 489,
+        "splits_curated_word_boundary": 293,
+        "whole_one_word": 6462
+      }
+    },
+    "automatic_missing_token_remaps": 0,
+    "blank_token_surfaces": 0,
+    "by_book": {
+      "40": {
+        "same_alphanumeric_stream": 1071
+      },
+      "41": {
+        "same_alphanumeric_stream": 680
+      },
+      "42": {
+        "same_alphanumeric_stream": 1151
+      },
+      "43": {
+        "different_alphanumeric_stream": 1,
+        "same_alphanumeric_stream": 878
+      },
+      "44": {
+        "same_alphanumeric_stream": 1006
+      },
+      "45": {
+        "different_alphanumeric_stream": 1,
+        "same_alphanumeric_stream": 432
+      },
+      "46": {
+        "same_alphanumeric_stream": 437
+      },
+      "47": {
+        "same_alphanumeric_stream": 256
+      },
+      "48": {
+        "same_alphanumeric_stream": 149
+      },
+      "49": {
+        "same_alphanumeric_stream": 155
+      },
+      "50": {
+        "different_alphanumeric_stream": 9,
+        "same_alphanumeric_stream": 95
+      },
+      "51": {
+        "same_alphanumeric_stream": 95
+      },
+      "52": {
+        "same_alphanumeric_stream": 89
+      },
+      "53": {
+        "same_alphanumeric_stream": 47
+      },
+      "54": {
+        "same_alphanumeric_stream": 113
+      },
+      "55": {
+        "same_alphanumeric_stream": 83
+      },
+      "56": {
+        "different_alphanumeric_stream": 2,
+        "same_alphanumeric_stream": 44
+      },
+      "57": {
+        "same_alphanumeric_stream": 25
+      },
+      "58": {
+        "same_alphanumeric_stream": 303
+      },
+      "59": {
+        "same_alphanumeric_stream": 108
+      },
+      "60": {
+        "same_alphanumeric_stream": 105
+      },
+      "61": {
+        "same_alphanumeric_stream": 61
+      },
+      "62": {
+        "same_alphanumeric_stream": 105
+      },
+      "63": {
+        "same_alphanumeric_stream": 13
+      },
+      "64": {
+        "same_alphanumeric_stream": 15
+      },
+      "65": {
+        "same_alphanumeric_stream": 25
+      },
+      "66": {
+        "same_alphanumeric_stream": 405
+      }
+    },
+    "clear_bible_target_nt_verses": 7959,
+    "curated_nt_verses": 7959,
+    "diagnostic_text_mismatch_coordinates": [
+      {
+        "bcv": "43002017",
+        "curated_alphanumeric_characters": 60,
+        "target_alphanumeric_characters": 36
+      },
+      {
+        "bcv": "45013009",
+        "curated_alphanumeric_characters": 187,
+        "target_alphanumeric_characters": 23
+      },
+      {
+        "bcv": "50001004",
+        "curated_alphanumeric_characters": 41,
+        "target_alphanumeric_characters": 59
+      },
+      {
+        "bcv": "50001005",
+        "curated_alphanumeric_characters": 91,
+        "target_alphanumeric_characters": 73
+      },
+      {
+        "bcv": "50001028",
+        "curated_alphanumeric_characters": 104,
+        "target_alphanumeric_characters": 124
+      },
+      {
+        "bcv": "50001029",
+        "curated_alphanumeric_characters": 113,
+        "target_alphanumeric_characters": 93
+      },
+      {
+        "bcv": "50003010",
+        "curated_alphanumeric_characters": 123,
+        "target_alphanumeric_characters": 111
+      },
+      {
+        "bcv": "50003011",
+        "curated_alphanumeric_characters": 37,
+        "target_alphanumeric_characters": 49
+      },
+      {
+        "bcv": "50004015",
+        "curated_alphanumeric_characters": 161,
+        "target_alphanumeric_characters": 186
+      },
+      {
+        "bcv": "50004016",
+        "curated_alphanumeric_characters": 100,
+        "target_alphanumeric_characters": 75
+      },
+      {
+        "bcv": "50004020",
+        "curated_alphanumeric_characters": 52,
+        "target_alphanumeric_characters": 52
+      },
+      {
+        "bcv": "56003008",
+        "curated_alphanumeric_characters": 145,
+        "target_alphanumeric_characters": 146
+      },
+      {
+        "bcv": "56003014",
+        "curated_alphanumeric_characters": 129,
+        "target_alphanumeric_characters": 130
+      }
+    ],
+    "diagnostic_word_streams_equal_verses": 4010,
+    "distinct_verses": 7959,
+    "original_aligned_target_ids": 104807,
+    "original_unattested_target_ids": 996,
+    "target_surface_boundary_classes": {
+      "punctuation_only": 30884,
+      "splits_curated_word_boundary": 11966,
+      "verse_text_mismatch": 316,
+      "whole_one_word": 167462
+    },
+    "target_token_id_matches_certified": false,
+    "token_rows": 210628,
+    "verse_content_comparison": {
+      "different_alphanumeric_stream": 13,
+      "same_alphanumeric_stream": 7946
+    }
+  },
+  "ot": {
+    "alignment_groups": 203597,
+    "automatic_cross_versification_fixes": 0,
+    "curated_ot_verses": 23211,
+    "target_reference_presence": {
+      "target_verse_present": 203597
+    },
+    "target_reference_presence_by_book": {
+      "10": {
+        "target_verse_present": 7126
+      },
+      "11": {
+        "target_verse_present": 8687
+      },
+      "12": {
+        "target_verse_present": 8439
+      },
+      "13": {
+        "target_verse_present": 7481
+      },
+      "14": {
+        "target_verse_present": 9446
+      },
+      "15": {
+        "target_verse_present": 3076
+      },
+      "16": {
+        "target_verse_present": 3450
+      },
+      "17": {
+        "target_verse_present": 2229
+      },
+      "18": {
+        "target_verse_present": 5828
+      },
+      "19": {
+        "target_verse_present": 9216
+      },
+      "20": {
+        "target_verse_present": 5687
+      },
+      "21": {
+        "target_verse_present": 1759
+      },
+      "22": {
+        "target_verse_present": 799
+      },
+      "23": {
+        "target_verse_present": 12332
+      },
+      "24": {
+        "target_verse_present": 14481
+      },
+      "25": {
+        "target_verse_present": 1192
+      },
+      "26": {
+        "target_verse_present": 12875
+      },
+      "27": {
+        "target_verse_present": 3877
+      },
+      "28": {
+        "target_verse_present": 1260
+      },
+      "29": {
+        "target_verse_present": 481
+      },
+      "30": {
+        "target_verse_present": 1492
+      },
+      "31": {
+        "target_verse_present": 208
+      },
+      "32": {
+        "target_verse_present": 383
+      },
+      "33": {
+        "target_verse_present": 900
+      },
+      "34": {
+        "target_verse_present": 307
+      },
+      "35": {
+        "target_verse_present": 512
+      },
+      "36": {
+        "target_verse_present": 562
+      },
+      "37": {
+        "target_verse_present": 425
+      },
+      "38": {
+        "target_verse_present": 2025
+      },
+      "39": {
+        "target_verse_present": 545
+      },
+      "01": {
+        "target_verse_present": 13989
+      },
+      "02": {
+        "target_verse_present": 11227
+      },
+      "03": {
+        "target_verse_present": 7870
+      },
+      "04": {
+        "target_verse_present": 11601
+      },
+      "05": {
+        "target_verse_present": 8738
+      },
+      "06": {
+        "target_verse_present": 6840
+      },
+      "07": {
+        "target_verse_present": 6754
+      },
+      "08": {
+        "target_verse_present": 836
+      },
+      "09": {
+        "target_verse_present": 8662
+      }
+    },
+    "target_token_id_matches_certified": false,
+    "target_word_inventory_present": false
+  },
+  "publication_approved": false,
+  "schema_version": 1,
+  "token_mapping_certified": false,
+  "unaligned_guesses_introduced": 0
+}
