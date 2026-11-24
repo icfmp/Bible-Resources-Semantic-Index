@@ -196,7 +196,7 @@ No Scripture text or word lists are committed as a product of this audit.
   OT French word identities are independently verified. The 920 differing
   source/target verse pairs still need independent versification witnesses.
 
-### Deterministic private word-position candidate
+### Deterministic BRSI-owned word index (private pending review)
 
 The same pinned [curated audit workflow](../../../.github/workflows/pinned-curated-lsg-edition.yml)
 also regenerates a **private** compressed, source-ID-preserving coordinate
