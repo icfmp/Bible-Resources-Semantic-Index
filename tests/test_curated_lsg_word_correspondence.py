@@ -132,7 +132,11 @@ class LSGOriginalWordWitnessTests(unittest.TestCase):
         self.assertEqual(tool.contiguous_original_target_trigrams(
             originals, authored, existing), {})
         self.assertEqual(tool.contiguous_original_target_trigrams(
-            originals, authored, {}), {})
+            originals, authored, {}), {
+                0: (0, "unique_exact_contiguous_original_target_trigram"),
+                1: (1, "unique_exact_contiguous_original_target_trigram"),
+                2: (2, "unique_exact_contiguous_original_target_trigram"),
+            })
         self.assertEqual(tool.contiguous_original_target_trigrams(
             [("40001001001", "A"), ("40001001003", "X"),
              ("40001001004", "B")],
