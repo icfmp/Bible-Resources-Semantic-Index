@@ -55,6 +55,42 @@ or unclear syntax are explicitly *undetermined*. Neither tool can publish
 a translation link, modify LSG, rewrite MACULA or trigger Bible app changes.
 See [protocol and review schema](SEMANTIC_REVIEW_PROTOCOL.md).
 
+## Lexical and phrase consistency research — not translation approval
+
+The [source-locked consensus negative control](../../../scripts/audit_macula_lsg_contextual_consensus.py)
+intersects the previous lemma-derived French word location hypothesis and
+strict ordered neighboring source-phrase anchors. A source word is considered
+an *exploratory agreement* only if the lemma candidate falls inside its
+attested **French phrase interval**. The original source group, the bounded
+French phrase, and the lemma's one-word hypothesis are retained separately;
+no individual translation relation is claimed or automatically accepted.
+
+To assess whether this actually improves localization, it masks 2,000
+original NT source IDs with a directly attested French position in 2,000
+distinct NT verses, removes **every** evaluation verse from the lexical
+training pool, and blocks all anchors pointing to the tested French word.
+A fixed 1,000/1,000 split selects any threshold solely from calibration
+and measures exact-word mistakes, bracket containment and abstentions on
+blind cases. A source-attested French position is not a human-certified
+Greek semantic equivalence; tests say nothing about OT semantic accuracy.
+The two source-based methods are not fully independent of their upstream
+witnesses. No automatic link or Bible-app consumer export is authorized.
+The full set of unresolved original IDs, and the preselected 2,000-case
+four-stratum human cohort, are counted in a source-free aggregate report.
+
+
+The same research pilot also measures a **phrase-conditioned lemma challenger**:
+instead of demanding that an independently chosen full-verse lemma word falls
+inside an independently bounded French interval, it searches only the
+attested French words **inside that phrase** using lemma distributions trained
+on other verses. Duplicate surfaces, tied lexical supports and empty evidence
+force abstention. This challenger may recover localized hypotheses missed by
+the strict intersection; any such results remain **speculative candidate
+locations**, not semantic translation decisions. Although evaluation verses
+are excluded from lexical training, the same NT cases were already reported
+in #186/#189: this is **not** a new prospectively sealed independent benchmark,
+and the final human-approved phrase-accuracy remains unmeasured.
+
 ## Maintained pipeline
 
 **Clear.Bible is our immutable original alignment source; the index is ours.**

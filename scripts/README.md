@@ -120,6 +120,31 @@ never changes the application. See [V1 consumer guide](../docs/V1_CONSUMPTION.md
   cannot be silently repaired. Gold is a research benchmark, NEVER an
   automatic production alignment or release. See
   [semantic review protocol](../links/alignments/clear-bible-lsg/SEMANTIC_REVIEW_PROTOCOL.md).
+- `audit_macula_lsg_contextual_consensus.py`: **nonpublishing** overlap of
+  independently masked NT lemma-to-authorial-word predictions (#186) and
+  source-anchored phrase brackets (#189). It requires the predicted French
+  word to lie inside a bounded French phrase for the original MACULA unit;
+  the full original group and phrase are preserved, never decomposed into
+  individually approved links. Calibrates only on 1,000 separate held-out NT
+  source verses and tests on another 1,000, excludes all 2,000 test verses
+  from lemma training, and masks the tested source and every source anchor
+  sharing its gold French word. Reports blind **exact word** precision,
+  bracket containment, attempted coverage and abstention separately. The
+  two methods share some upstream evidence: agreement is NOT independently
+  validated semantic correctness. The full unlinked 119,691-ID cohort is
+  audited against four frozen source-evidence strata; private candidates
+  are not committed, and no model can approve original↔French links.
+
+
+  A second **bracket-conditioned lexical challenger** ranks only independently
+  attested lemma-associated French words *inside* the strict source-bound
+  phrase; it abstains on local duplicate surfaces and support ties. Its
+  original IDs, French phrase coordinates, and proposed word remain distinct
+  and unapproved. The same 2,000 verse-disjoint NT positional pseudo-gold
+  cases support both method comparisons. Because #186/#189 previously used
+  those verses, these are **reused reporting cases, not prospectively untouched
+  new blind gold**.
+
 - `calibrate_aquifer_lsg_target_ids.py`: continuous source-pinned safety
   calibration against 91,649 independent original NT word witnesses.
   It demonstrates why identical **numeric** target IDs between independently
