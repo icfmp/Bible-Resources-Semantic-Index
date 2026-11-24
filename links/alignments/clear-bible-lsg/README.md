@@ -562,10 +562,11 @@ Future recovery work should first measure **strict, explicitly graded
 orthographic equivalences** against exact French word spans, separately
 from substantive translation changes, and reject nonunique matches.
 
-### Independent strict orthography census for the 19,880 missing French surfaces
+### Independent strict orthography census for the current 19,879 missing French surfaces
 
-Before attempting any additional word-location transform, BRSI re-read all
-**19,880 original MACULA source IDs** in the exact-word-absent recovery
+PR #181 originally examined 19,880 source IDs. After additional
+independently proved word positions in PR #185, BRSI rechecks the
+**current 19,879 original MACULA source IDs** in the exact-word-absent recovery
 queue, with their **original Aquifer target-token text**, the original
 verse-wide token inventory (including `nonEquivalent.target`), and
 the unchanged published **Bible Resources LSG 1.0.2** verse text.
@@ -581,11 +582,11 @@ word position is guessed.
 
 | Exact-word-absent source-ID diagnostic | NT | OT | Total |
 | --- | ---: | ---: | ---: |
-| No safely unique candidate under any strict orthographic rule | 2,576 | 17,213 | **19,789** |
+| No safely unique candidate under any strict orthographic rule | 2,576 | 17,212 | **19,788** |
 | One or more normalization methods would match but occurrences remain ambiguous | 19 | 63 | **82** |
 | Source ID has several original target-word diagnostics | 1 | 8 | **9** |
 | Unique, exactly checkable case/ligature/accent/apostrophe variant | **0** | **0** | **0** |
-| **Original MACULA source IDs audited** | **2,596** | **17,284** | **19,880** |
+| **Original MACULA source IDs audited** | **2,596** | **17,283** | **19,879** |
 
 **This audit recovered no new alignment** and does not weaken the existing
 word-location rules. The source data has no uniquely located target word
@@ -603,13 +604,13 @@ or closest French word. The next source-driven task is to examine actual
 **lexical wording and verse segmentation differences**. The maintained
 audit receipt
 [`orthographic-diagnostic.lock.json`](orthographic-diagnostic.lock.json)
-pins the 19,880-ID partition, the original revision IDs, the exact
+pins the current 19,879-ID partition, the original revision IDs, the exact
 curated OSIS and source index fingerprints, and the full private
 per-ID diagnostic SHA-256; no original French Scripture text is committed.
 
 ### Can a missing French word be found at the neighboring verse boundary?
 
-Using the same exact **19,880 original MACULA source IDs** with an
+Using the current exact **19,879 original MACULA source IDs** with an
 original Aquifer French target word absent from our curated verse,
 the read-only audit now also checks **precisely consecutive numbered
 verses of the same book and chapter** in the exact unchanged authored
@@ -620,9 +621,9 @@ LSG 1.0.2. It neither jumps a gap nor silently relocates a word.
 | Previous verse only | 100 | 554 | **654** |
 | Next verse only | 109 | 500 | **609** |
 | Both previous and next verses | 25 | 136 | **161** |
-| Neither neighboring verse | 2,361 | 16,076 | **18,437** |
+| Neither neighboring verse | 2,361 | 16,075 | **18,436** |
 | Several original target contexts | 1 | 18 | **19** |
-| **Complete source-ID audit** | **2,596** | **17,284** | **19,880** |
+| **Complete source-ID audit** | **2,596** | **17,283** | **19,879** |
 
 **Presence is not proof of alignment:** frequently occurring French
 words can appear by chance in nearby verses, and the original
@@ -639,7 +640,7 @@ interchangeable with the authored LSG:
 
 | Original MACULA source verse vs Aquifer French target verse | NT | OT |
 | --- | ---: | ---: |
-| Identical coordinates | 2,596 | 16,820 |
+| Identical coordinates | 2,596 | 16,819 |
 | Different coordinates; original source coordinate **contains the exact missing French word** in authored LSG | 0 | **9** |
 | Different coordinates; original source verse exists but does not contain the exact word | 0 | 386 |
 | Different coordinates; original source verse is absent from authored LSG | 0 | 68 |
