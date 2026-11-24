@@ -19,6 +19,8 @@ on:
       - "scripts/audit_macula_lsg_contextual_consensus.py"
       - "tests/test_macula_lsg_contextual_consensus.py"
       - "scripts/build_macula_lsg_semantic_review_dossiers.py"
+      - "scripts/prepare_macula_lsg_verse_semantic_pilot.py"
+      - "tests/test_macula_lsg_verse_semantic_pilot.py"
       - "scripts/validate_macula_lsg_semantic_gold.py"
       - "tests/test_macula_lsg_semantic_review_dossiers.py"
       - "tests/test_macula_lsg_semantic_gold.py"
@@ -687,6 +689,9 @@ jobs:
             echo "FIRST PHRASE PILOT: independently audit output, then pin the source-free receipt"
           fi
 
+      - name: Whole-verse contextual semantic pilot synthetic regressions
+        run: python3 -I -m unittest discover -s tests -p 'test_macula_lsg_verse_semantic_pilot.py' -v
+
       - name: Rebuild all original/LSG context for private human semantic review dossiers
         shell: bash
         run: |
@@ -773,6 +778,44 @@ jobs:
           else
             echo "FIRST ORIGINAL-SOURCE REVIEW DOSSIER: audit the source-free receipt and pin before enabling empty-gold validation"
           fi
+
+      - name: Prepare exact whole-verse semantic pilot privately from frozen training cases
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -I scripts/prepare_macula_lsg_verse_semantic_pilot.py \
+            --mode prepare \
+            --private-dossiers /tmp/brsi-semantic-private-review-dossiers.json.gz \
+            --dossier-lock links/alignments/clear-bible-lsg/semantic-review-dossiers.lock.json \
+            --nt-verses 100 --ot-verses 100 \
+            --private-pilot /tmp/brsi-semantic-verse-tasks.json.gz \
+            --report /tmp/brsi-semantic-verse-tasks-source-free.json
+          python3 -I - <<'PY'
+          import gzip, hashlib, json
+          from pathlib import Path
+          packed = Path('/tmp/brsi-semantic-verse-tasks.json.gz').read_bytes()
+          receipt = json.loads(Path('/tmp/brsi-semantic-verse-tasks-source-free.json').read_text())
+          pilot = json.loads(gzip.decompress(packed))
+          assert receipt['private_pilot_gzip_sha256'] == hashlib.sha256(packed).hexdigest()
+          assert receipt['private_pilot_gzip_bytes'] == len(packed)
+          assert receipt['verses'] == 200
+          assert receipt['verses_by_canon'] == {'nt': 100, 'ot': 100}
+          assert pilot['selection_partition'] == 'training'
+          assert pilot['model_proposals_included'] is False
+          assert pilot['automatic_approved_links'] == 0
+          assert receipt['automatically_approved_links'] == 0
+          assert receipt['publication_authorized'] is False
+          assert receipt['source_text_in_public_receipt'] is False
+          assert len({t['original_verse'] for t in pilot['tasks']}) == 200
+          assert all(len(t['original_tokens_in_source_order']) >= 1
+                     and t['authored_french']['authorial_verse_present']
+                     and len(t['authored_french']['exact_words']) >= 1
+                     and t['task_requires_complete_verse_and_clause_reasoning']
+                     and t['original_syntax_constituents_supplied'] is False
+                     for t in pilot['tasks'])
+          print('BRSI_WHOLE_VERSE_TRAINING_PILOT_SOURCE_FREE_RECEIPT')
+          print(Path('/tmp/brsi-semantic-verse-tasks-source-free.json').read_text())
+          PY
 
       - name: Full pinned-source lexical plus bounded phrase consensus negative control
         shell: bash
