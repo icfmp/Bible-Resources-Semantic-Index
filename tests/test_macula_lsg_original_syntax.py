@@ -176,6 +176,26 @@ class SyntaxLowfatTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "wrong Testament"):
             tool.parse_original_syntax(OT_XML.encode(), "nt", OT_PATH)
 
+    def test_source_suffix_hebrew_xml_id_is_preserved_not_stripped_or_rewritten(self):
+        # Actual pinned Gen 1–3 lowfat source files contain special IDs
+        # such as o010010050031ה. Suffix is an original-source identity
+        # detail, never a normalization or alias for the indexed word.
+        original = "o010010010031"
+        suffixed = original + "ה"
+        raw = OT_XML.replace(original, suffixed)
+        parsed = tool.parse_original_syntax(raw.encode(), "ot", OT_PATH)
+        self.assertIn(suffixed, parsed["tokens"])
+        self.assertNotIn(original, parsed["tokens"])
+        self.assertEqual(tool.source_verse(suffixed), "01001001")
+        self.assertEqual(parsed["tokens"][suffixed][
+            "original_orthographic_word_ref"], "GEN 1:1!3")
+        self.assertEqual(parsed["preferred_by_source"][suffixed][
+            "original_macula_ids"][-1], suffixed)
+        with self.assertRaisesRegex(ValueError, "malformed"):
+            tool.source_verse("o01001001")
+        with self.assertRaisesRegex(ValueError, "malformed"):
+            tool.source_verse("o01001001003 whitespace")
+
     def test_cross_verse_syntax_group_is_not_silently_split(self):
         bad = NT_XML.replace('n63001001003" ref="2JN 1:1!3"',
                              'n63001002001" ref="2JN 1:2!1"')
