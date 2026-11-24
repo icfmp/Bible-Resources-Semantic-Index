@@ -1,5 +1,16 @@
 # BRSI LSG word index — generated from original Clear.Bible alignments
 
+## Contextual semantic alignment review (research, not approved)
+
+The [2,000-original-ID stratified human-review protocol](SEMANTIC_REVIEW_PROTOCOL.md)
+selects 500 reproducible, privately stored *unreviewed* cases from each of
+four actual source-evidence groups. Its source-free, SHA-256-pinned receipt
+supports a future independent, verse-clustered phrase-alignment evaluation;
+it is **not** the completed 2,000-verse NT lemma pilot and does not create
+or approve Greek/Hebrew-to-French word or phrase matches. The corresponding
+source-pinned generator is
+[`scripts/sample_macula_lsg_semantic_review.py`](../../../scripts/sample_macula_lsg_semantic_review.py).
+
 ## Maintained pipeline
 
 **Clear.Bible is our immutable original alignment source; the index is ours.**

@@ -6,6 +6,8 @@ on:
       - "scripts/build_curated_lsg_word_correspondence.py"
       - "tests/test_curated_lsg_word_correspondence.py"
       - "scripts/audit_macula_lsg_contextual_lexical_pilot.py"
+      - "scripts/sample_macula_lsg_semantic_review.py"
+      - "tests/test_macula_lsg_semantic_review_sampler.py"
       - "tests/test_macula_lsg_contextual_lexical_pilot.py"
       - "scripts/audit_curated_lsg_surface_variants.py"
       - "tests/test_curated_lsg_surface_variants.py"
@@ -31,6 +33,8 @@ jobs:
         run: python3 -I -m unittest discover -s tests -p 'test_curated_lsg_surface_variants.py' -v
       - name: Blind NT semantic-lexical pilot fail-closed synthetic tests
         run: python3 -I -m unittest discover -s tests -p 'test_macula_lsg_contextual_lexical_pilot.py' -v
+      - name: Stratified semantic reviewer sample fail-closed synthetic tests
+        run: python3 -I -m unittest discover -s tests -p 'test_macula_lsg_semantic_review_sampler.py' -v
       - name: Retrieve exact original Clear.Bible alignment sources
         shell: bash
         run: |
@@ -491,6 +495,47 @@ jobs:
           else
             echo "FIRST AUDIT: review source-derived diagnostic and pin its exact receipt before merge"
           fi
+      - name: Prepare source-locked 2,000 original-ID semantic review cohort (no publication)
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -I scripts/sample_macula_lsg_semantic_review.py \
+            --original-index /tmp/brsi-macula-lsg-correspondence.json.gz \
+            --correspondence-lock links/alignments/clear-bible-lsg/aquifer-correspondence.lock.json \
+            --private-unreviewed-cases /tmp/brsi-lsg-semantic-review-unreviewed.json \
+            --report /tmp/brsi-lsg-semantic-review-sample-receipt.json \
+            --per-stratum 500
+          python3 -I - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+          p=Path('/tmp/brsi-lsg-semantic-review-sample-receipt.json')
+          r=json.loads(p.read_text())
+          candidates=Path('/tmp/brsi-lsg-semantic-review-unreviewed.json').read_bytes()
+          assert hashlib.sha256(candidates).hexdigest() == r['private_unreviewed_cases_sha256']
+          assert len(candidates) == r['private_unreviewed_cases_bytes']
+          assert r['case_count'] == 2000
+          assert r['sample_by_cause'] == {
+              'aquifer_explicit_non_equivalent_source':500,
+              'other_part_of_same_original_word_has_link':500,
+              'not_present_in_aquifer_source_alignment_records':500,
+              'aquifer_record_source_with_no_uniquely_located_french_word':500}
+          assert sum(x['total'] for x in r['population'].values()) == 119691
+          assert r['human_gold_cases'] == r['machine_proposals'] == 0
+          assert r['automatic_linguistic_approval'] is False
+          assert r['publication_authorized'] is False
+          assert r['uniform_source_id_sampling_within_stratum'] is True
+          assert r['blind_evaluation_must_cluster_by_source_verse'] is True
+          print('BRSI_STRATIFIED_SAMPLE_SOURCE_FREE_RECEIPT')
+          print(p.read_text())
+          PY
+          if test -f links/alignments/clear-bible-lsg/semantic-review-sample.lock.json; then
+            python3 -I scripts/verify_generated_json.py \
+              --generated /tmp/brsi-lsg-semantic-review-sample-receipt.json \
+              --baseline links/alignments/clear-bible-lsg/semantic-review-sample.lock.json
+          else
+            echo "FIRST SOURCE-PINNED SAMPLE: freeze exact text-free receipt after independent review"
+          fi
+
       - name: Retrieve independently pinned MACULA NT and OT lemma/morphology sources
         shell: bash
         run: |
