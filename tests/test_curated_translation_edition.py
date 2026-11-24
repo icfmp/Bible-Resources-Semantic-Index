@@ -65,9 +65,11 @@ class CuratedLSGEditionTests(unittest.TestCase):
                 "upstream_revision": "a" * 40,
                 "coverage": {"records": 5, "problem_target_token_unattested": 0},
                 "records": [
-                    {"target_lookup_ids": [f"4000100100{i}"]} for i in range(1, 4)
+                    {"ordinal": i - 1, "source_lookup_ids": [f"n4000100100{i}"],
+                     "target_lookup_ids": [f"4000100100{i}"]} for i in range(1, 4)
                 ] + [
-                    {"target_lookup_ids": [f"4000100200{i}"]} for i in range(1, 3)
+                    {"ordinal": 2 + i, "source_lookup_ids": [f"n4000100200{i}"],
+                     "target_lookup_ids": [f"4000100200{i}"]} for i in range(1, 3)
                 ],
             },
             "ot": {
@@ -160,6 +162,53 @@ class CuratedLSGEditionTests(unittest.TestCase):
             "automatic_verse_reassignments": 0
         }])
         self.assertFalse(report["nt"]["target_token_id_matches_certified"])
+
+    def test_private_bridge_stages_exact_word_position_candidates_only(self):
+        import gzip
+        output = self.root / "internal-bridge.json.gz"
+        report = module.build_report(self.manifest, self.lock, self.upstream,
+                                     self.curated, self.candidate, output)
+        receipt = report["private_nt_word_candidate"]
+        self.assertEqual(receipt["coverage"]["surface_word_position_candidate"], 5)
+        self.assertFalse(receipt["editorially_approved"])
+        self.assertEqual(module.sha256(output), receipt["gzip_sha256"])
+        payload = json.loads(gzip.decompress(output.read_bytes()))
+        self.assertEqual(payload["status"], "private_nonpublishing_unapproved")
+        self.assertEqual(payload["rows"][0]["original_macula_ids"], ["n40001001001"])
+        self.assertEqual(payload["rows"][0]["original_target_ids"], ["40001001001"])
+        self.assertEqual(payload["rows"][0]["curated_diagnostic_word_ordinal"], 1)
+        self.assertFalse(payload["rows"][0]["editorially_approved"])
+
+    def test_private_bridge_abstains_on_unattested_and_crossverse_ids(self):
+        verses = module.read_osis(self.xml)
+        targets, _ = module.read_target_tsv(self.upstream / "nt.tsv")
+        candidate = {
+            "coverage": {"records": 3},
+            "records": [
+                {"ordinal": 0, "source_lookup_ids": ["n40001001001"],
+                 "target_lookup_ids": ["40001001001"]},
+                {"ordinal": 1, "source_lookup_ids": ["n40001001001"],
+                 "target_lookup_ids": ["40001001999"]},
+                {"ordinal": 2, "source_lookup_ids": ["n40001002001"],
+                 "target_lookup_ids": ["40001001002"]},
+            ],
+        }
+        raw, counts = module.stage_private_nt_word_bridge(
+            verses, targets, candidate, self.lock, self.manifest["revision"])
+        payload = json.loads(raw)
+        self.assertEqual(counts["surface_word_position_candidate"], 1)
+        self.assertEqual(counts["reason_unattested_target_selector"], 1)
+        self.assertEqual(counts["reason_cross_verse_selector"], 1)
+        self.assertEqual(payload["rows"][1]["status"], "unresolved")
+        self.assertIsNone(payload["rows"][1]["curated_diagnostic_word_ordinal"])
+        self.assertFalse(payload["rows"][2]["editorially_approved"])
+
+    def test_private_bridge_rejects_output_inside_checked_out_repository(self):
+        output = Path.cwd() / "should-not-write-bridge.json.gz"
+        with self.assertRaisesRegex(ValueError, "must not be written in checkout"):
+            module.build_report(self.manifest, self.lock, self.upstream,
+                                self.curated, self.candidate, output)
+        self.assertFalse(output.exists())
 
     def test_fails_when_authorial_verse_body_changes_behind_pin(self):
         self.xml.write_text("<osis></osis>", encoding="utf-8")
