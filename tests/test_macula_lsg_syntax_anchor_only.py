@@ -157,6 +157,30 @@ class AnchorOnlySyntaxReviewTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "partition mismatch"):
             study.bracket_metric({original: "01001001:2"}, {}, 16)
 
+    def test_document_and_distinct_source_phrase_accounting_is_source_safe(self):
+        _, _, parsed, _ = sample()
+        original = fixtures.OT_IDS[-1]
+        proposal = {
+            "original_macula_id_under_review": original,
+            "authentic_MACULA_source_group_id": "source:wg:1",
+        }
+        by_source = study.per_document_counts(
+            {original}, {original}, [proposal], parsed)
+        self.assertEqual(len(by_source), 2)
+        self.assertEqual(sum(x[
+            "unlinked_original_IDs_with_anchor_only_candidate"]
+            for x in by_source), 1)
+        self.assertEqual(sum(x[
+            "distinct_real_source_constituents_with_candidates"]
+            for x in by_source), 1)
+        with self.assertRaisesRegex(ValueError, "duplicate"):
+            study.per_document_counts(
+                {original}, {original}, [proposal, proposal], parsed)
+        with self.assertRaisesRegex(ValueError, "not contained"):
+            study.per_document_counts(set(), {original}, [proposal], parsed)
+        with self.assertRaisesRegex(ValueError, "out-of-scope"):
+            study.per_document_counts({original}, set(), [proposal], parsed)
+
     def test_no_lexical_guess_needed_and_no_generated_new_authorial_text(self):
         index, authored, _, groups = sample()
         proposal = study.anchor_bracket(
