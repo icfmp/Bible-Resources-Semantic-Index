@@ -119,6 +119,11 @@ class CuratedLSGEditionTests(unittest.TestCase):
         self.assertEqual(report["nt"]["original_unattested_target_ids"], 0)
         self.assertEqual(report["nt"]["token_rows"], 5)
         self.assertEqual(report["ot"]["alignment_groups"], 2)
+        self.assertEqual(report["nt"]["original_target_ordinal_vs_authored_word_calibration"],
+                         {"ordinal_equal": 5})
+        self.assertEqual(report["ot"]["target_ordinal_diagnostic"],
+                         {"ordinal_within_authored_word_count_only": 1,
+                          "target_verse_unavailable": 1})
         self.assertEqual(report["ot"]["target_reference_presence"],
                          {"target_verse_absent": 1, "target_verse_present": 1})
         self.assertFalse(report["nt"]["target_token_id_matches_certified"])
@@ -164,6 +169,45 @@ class CuratedLSGEditionTests(unittest.TestCase):
             "automatic_verse_reassignments": 0
         }])
         self.assertFalse(report["nt"]["target_token_id_matches_certified"])
+
+    def test_real_nt_token_ordinals_do_not_equal_authored_word_positions_after_punctuation(self):
+        source = {"40001001": "Un mot utile"}
+        targets = {"40001001": [("40001001001", "Un"),
+                               ("40001001002", ","),
+                               ("40001001003", "mot"),
+                               ("40001001004", "utile")]}
+        orig = {"canon": "nt",
+                "format": "brsi-translation-alignment-candidate",
+                "coverage": {"records": 3, "problem_target_token_unattested": 0},
+                "records": [{"target_lookup_ids": ["40001001001"]},
+                            {"target_lookup_ids": ["40001001003"]},
+                            {"target_lookup_ids": ["40001001004"]}]}
+        report = module.compare_nt(
+            source, targets, {"token_rows": 4}, orig)
+        self.assertEqual(report["original_target_ordinal_vs_authored_word_calibration"],
+                         {"ordinal_different": 2, "ordinal_equal": 1})
+        self.assertTrue(report["ordinal_equality_not_a_word_link_proof"])
+        self.assertEqual(report["aligned_attested_target_boundary_classes"]["whole_one_word"], 3)
+
+    def test_ot_original_ordinals_are_bounds_checks_not_word_correspondences(self):
+        source = module.read_osis(self.xml)
+        doc = {"canon": "ot",
+               "format": "brsi-translation-alignment-candidate",
+               "coverage": {"records": 3},
+               "records": [
+                   {"target_lookup_ids": ["01001001001"]},
+                   {"target_lookup_ids": ["01001001999"]},
+                   {"target_lookup_ids": ["01001002001"]},
+               ]}
+        report = module.compare_ot(source, doc)
+        self.assertEqual(report["target_ordinal_diagnostic"], {
+            "ordinal_exceeds_authored_word_count": 1,
+            "ordinal_within_authored_word_count_only": 1,
+            "target_verse_unavailable": 1,
+        })
+        self.assertTrue(report["target_ordinal_not_a_word_link_proof"])
+        self.assertFalse(report["target_word_inventory_present"])
+        self.assertFalse(report["target_token_id_matches_certified"])
 
     def test_own_index_preserves_original_ids_and_reverse_lookup(self):
         import gzip
