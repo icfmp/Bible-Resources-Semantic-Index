@@ -1,0 +1,126 @@
+name: Reconcile full MACULA to curated LSG words (private development)
+
+on:
+  pull_request:
+    paths:
+      - "scripts/build_curated_lsg_word_correspondence.py"
+      - "tests/test_curated_lsg_word_correspondence.py"
+      - "links/alignments/clear-bible-lsg/**"
+      - ".github/workflows/pinned-lsg-word-correspondence.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-correspondence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    steps:
+      - name: Check out BRSI
+        uses: actions/checkout@v4
+      - name: Synthetic word correspondence and fail-closed regressions
+        run: python3 -I -m unittest discover -s tests -p 'test_curated_lsg_word_correspondence.py' -v
+      - name: Retrieve exact original Clear.Bible alignment sources
+        shell: bash
+        run: |
+          set -euo pipefail
+          revision=c99bd0ae6946775f932517656308ca19fc706921
+          git init /tmp/brsi-word-clear
+          git -C /tmp/brsi-word-clear remote add origin https://github.com/Clear-Bible/Alignments.git
+          git -C /tmp/brsi-word-clear sparse-checkout init --cone
+          git -C /tmp/brsi-word-clear sparse-checkout set data/sources data/fra/alignments/LSG data/fra/targets/LSG
+          git -C /tmp/brsi-word-clear -c protocol.version=2 fetch --depth 1 --filter=blob:none origin "$revision"
+          git -C /tmp/brsi-word-clear checkout --detach FETCH_HEAD
+          test "$(git -C /tmp/brsi-word-clear rev-parse HEAD)" = "$revision"
+      - name: Rebuild all original source groups with exact file checksums
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -I scripts/build_translation_alignments.py \
+            --manifest links/alignments/clear-bible-lsg/manifest.json \
+            --corrections links/alignments/clear-bible-lsg/corrections.json \
+            --upstream-root /tmp/brsi-word-clear \
+            --output-dir /tmp/brsi-word-original
+          python3 -I scripts/verify_generated_json.py \
+            --generated /tmp/brsi-word-original/receipt.json \
+            --baseline links/alignments/clear-bible-lsg/receipt.lock.json
+      - name: Retrieve exact published Bible Resources LSG 1.0.2 OSIS
+        shell: bash
+        run: |
+          set -euo pipefail
+          revision=7092d6e9318eeff46081feb831c207efa5859af2
+          git init /tmp/brsi-word-reader
+          git -C /tmp/brsi-word-reader remote add origin https://github.com/icfmp/Bible-Resources.git
+          git -C /tmp/brsi-word-reader sparse-checkout init --cone
+          git -C /tmp/brsi-word-reader sparse-checkout set sources/cleaned/bibles/fr/lsg-1910 modules/lsg-1910
+          git -C /tmp/brsi-word-reader -c protocol.version=2 fetch --depth 1 --filter=blob:none origin "$revision"
+          git -C /tmp/brsi-word-reader checkout --detach FETCH_HEAD
+          test "$(git -C /tmp/brsi-word-reader rev-parse HEAD)" = "$revision"
+      - name: Retrieve Aquifer French word-surfaced alignment evidence at pinned revision
+        shell: bash
+        run: |
+          set -euo pipefail
+          revision=c25cc382fb3584a0837289f1499a7f56a4798dde
+          git init /tmp/brsi-word-aquifer
+          git -C /tmp/brsi-word-aquifer remote add origin https://github.com/BibleAquifer/LouisSegond1910.git
+          git -C /tmp/brsi-word-aquifer sparse-checkout init --cone
+          git -C /tmp/brsi-word-aquifer sparse-checkout set fra/alignments/json
+          git -C /tmp/brsi-word-aquifer -c protocol.version=2 fetch --depth 1 --filter=blob:none origin "$revision"
+          git -C /tmp/brsi-word-aquifer checkout --detach FETCH_HEAD
+          test "$(git -C /tmp/brsi-word-aquifer rev-parse HEAD)" = "$revision"
+          test "$(find /tmp/brsi-word-aquifer/fra/alignments/json -name '*.alignment.json' | wc -l)" -ge 1180
+      - name: Generate BRSI-owned original+independent MACULA French word candidate
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -I scripts/build_curated_lsg_word_correspondence.py \
+            --aquifer-root /tmp/brsi-word-aquifer \
+            --candidates /tmp/brsi-word-original \
+            --curated-root /tmp/brsi-word-reader \
+            --curated-lock links/alignments/clear-bible-lsg/curated-1.0.2.lock.json \
+            --clear-revision c99bd0ae6946775f932517656308ca19fc706921 \
+            --aquifer-revision c25cc382fb3584a0837289f1499a7f56a4798dde \
+            --min-chapters 1180 \
+            --output /tmp/brsi-macula-lsg-correspondence.json.gz \
+            --report /tmp/brsi-macula-lsg-correspondence-receipt.json
+      - name: Independently verify full index gzip digests and source coverage
+        run: |
+          set -euo pipefail
+          python3 -I - <<'PY'
+          import gzip, hashlib, json
+          from pathlib import Path
+          r = json.loads(Path('/tmp/brsi-macula-lsg-correspondence-receipt.json').read_text())
+          compressed = Path('/tmp/brsi-macula-lsg-correspondence.json.gz').read_bytes()
+          assert hashlib.sha256(compressed).hexdigest() == r['gzip_sha256']
+          assert len(compressed) == r['gzip_bytes']
+          raw = gzip.decompress(compressed)
+          assert hashlib.sha256(raw).hexdigest() == r['uncompressed_sha256']
+          assert len(raw) == r['uncompressed_bytes']
+          doc = json.loads(raw)
+          assert doc['original_group_counts'] == {'nt': 104807, 'ot': 203597}
+          assert doc['publication_approved'] is False
+          assert doc['automatic_linguistic_approval'] is False
+          assert len(doc['rows']) == 308404
+          assert len(doc['by_original_macula_id']) > 200000
+          assert doc['aquifer_text_witness_census']['chapters'] >= 1180
+          assert all(row['linguistically_reviewed_by_brsi'] is False for row in doc['rows'])
+          assert all(row['source_provenance'] for row in doc['rows'])
+          assert doc['source_license_aquifer_alignment'] == 'CC BY-SA 4.0'
+          assert sum(doc['status_counts'].values()) == 308404
+          print('BRSI_MACULA_LSG_SOURCE_PRESERVATION_OK', r['status_counts'])
+          PY
+      - name: Check published private development evidence receipt when frozen
+        run: |
+          set -euo pipefail
+          if test -f links/alignments/clear-bible-lsg/aquifer-correspondence.lock.json; then
+            python3 -I scripts/verify_generated_json.py \
+              --generated /tmp/brsi-macula-lsg-correspondence-receipt.json \
+              --baseline links/alignments/clear-bible-lsg/aquifer-correspondence.lock.json
+          else
+            echo "INITIAL SOURCE AUDIT: exact receipt must be independently frozen before merge"
+          fi
+      - name: Explicit no-publication boundary
+        run: |
+          echo "Both source witnesses are immutable; no Scripture or MACULA changes."
+          echo "Full private index is not uploaded or released without separate approval."
