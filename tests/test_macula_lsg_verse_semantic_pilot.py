@@ -137,6 +137,30 @@ class WholeVersePilotTests(unittest.TestCase):
                                       nt_count=2, ot_count=2)
         self.assertNotIn(candidate, {t["original_verse"] for t in new["tasks"]})
 
+    def test_heldout_french_neighbor_is_not_exposed_to_model(self):
+        d = copy.deepcopy(self.dossier)
+        heldout = "63001001"
+        for c in d["cases"]:
+            if c["source_verse_coordinate"] == heldout:
+                c["evaluation_partition"] = "blind_validation"
+        for verse, context in d["exact_authored_french_verses"].items():
+            if verse.startswith("63") and verse != heldout:
+                context["context_neighbors"] = {
+                    "previous": {"verse": heldout,
+                                 "nfc_verse": "PRIVATE HELDOUT FRENCH"}
+                }
+        pilot, _ = study.prepare_pilot(d, dossier_sha="f" * 64,
+                                       nt_count=2, ot_count=2)
+        self.assertTrue(all(
+            "previous" not in t["authored_french"]["context_neighbors"]
+            for t in pilot["tasks"] if t["canon"] == "nt"))
+        self.assertNotIn("PRIVATE HELDOUT FRENCH", json.dumps(pilot))
+        self.assertNotIn("synthetic_unresolved_original_id", json.dumps(pilot))
+        self.assertTrue(all(
+            "priority_original_macula_ids" in t
+            and "selected_unresolved_cases" not in t
+            for t in pilot["tasks"]))
+
     def test_excludes_disputed_versification_without_inventing_target(self):
         d = copy.deepcopy(self.dossier)
         verse = self.pilot["tasks"][0]["original_verse"]
