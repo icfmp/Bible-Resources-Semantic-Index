@@ -137,6 +137,15 @@ jobs:
           assert supp['original_source_macula_ids'] == 607217
           assert len(doc['by_original_macula_id']) == 607217
           assert all(doc['by_original_macula_id'].values())
+          coverage = doc['source_coverage']
+          assert coverage == r['source_coverage']
+          assert coverage['nt']['macula_source_ids'] == 137741
+          assert coverage['ot']['macula_source_ids'] == 469476
+          assert all(x['macula_source_ids_with_word_evidence'] +
+                     x['macula_source_ids_without_word_evidence'] == x['macula_source_ids']
+                     for x in coverage.values())
+          assert coverage['nt']['macula_source_ids_with_word_evidence'] > 100000
+          assert coverage['ot']['macula_source_ids_with_word_evidence'] > 350000
           assert len(doc['by_original_macula_id']) > 200000
           assert doc['aquifer_text_witness_census']['chapters'] >= 1180
           assert all(row['linguistically_reviewed_by_brsi'] is False for row in doc['rows'])
