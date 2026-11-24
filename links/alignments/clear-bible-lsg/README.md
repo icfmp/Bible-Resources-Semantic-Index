@@ -261,6 +261,33 @@ in [the generated parity report](curated-1.0.2-parity.lock.json) and checked
 against whole-corpus original inputs on every relevant PR. This improves
 editorial triage; it does not turn unresolved word IDs into certified links.
 
+### Why an OT target selector ordinal is NOT our French word index
+
+A complete source-driven *negative calibration* against the **91,649**
+independently attested NT French word links shows that the original
+Clear.Bible target primary word ordinal equals our authored LSG word ordinal
+for only **25,435** links; for **66,214** links the ordinals **differ**
+(about 72.25%). This is expected when tokenization distinguishes
+punctuation or word parts. The original ID `BBCCCVVVWWW(P)` must **never**
+be interpreted as `our_curated_BCV:word_ordinal` without a separately
+verified token-to-span witness.
+
+An independent full **203,597-OT-target-selector** numeric bounds check
+against our exact authorial LSG inventory finds **40,281** original target
+ordinals *exceeding* the total authored words of their own target verse,
+and **163,316** within the count. Being numerically in range is **not**
+an attestation of the French word identity or its position. None of the
+203,597 OT rows was converted into a French word match; the 920 original
+source/target versification differences are unchanged.
+
+Both complete counts are frozen in the
+[full source report](curated-1.0.2-parity.lock.json) and rechecked by the
+[pinned workflow](../../../.github/workflows/pinned-curated-lsg-edition.yml).
+The correct next proof is to recover the original OT LSG **token surfaces and
+tokenizer/edition**, or independently establish a tokenizer whose *exact*
+identity can be verified for every target selector. A plausible number
+is not that proof.
+
 ### Deterministic BRSI-owned NT word and OT verse indexes (private pending review)
 
 The same pinned [curated audit workflow](../../../.github/workflows/pinned-curated-lsg-edition.yml)
