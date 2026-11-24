@@ -15,8 +15,8 @@
   },
   "curated_osis_sha256": "2b8342a67d8e97b433670450fe9dd9e58917a7fcfc0cb4d321882ca8219dc3bd",
   "curated_release": "lsg-1.0.2",
-  "gzip_bytes": 13854022,
-  "gzip_sha256": "70cf9e69022abaf95d86dda8299cddf915775d319a9ff62da12139b7193e63ae",
+  "gzip_bytes": 13854125,
+  "gzip_sha256": "e972039a52d458b69f03cf269efbca59d70dc6f9ea140a30add308b7752c7211",
   "kind": "brsi-macula-curated-lsg-word-corroboration-development",
   "no_automatic_editorial_approval": true,
   "original_group_counts": {
@@ -27,6 +27,18 @@
   "schema_version": 1,
   "source_aquifer_revision": "c25cc382fb3584a0837289f1499a7f56a4798dde",
   "source_clear_bible_revision": "c99bd0ae6946775f932517656308ca19fc706921",
+  "source_coverage": {
+    "nt": {
+      "macula_source_ids": 137741,
+      "macula_source_ids_with_word_evidence": 126304,
+      "macula_source_ids_without_word_evidence": 11437
+    },
+    "ot": {
+      "macula_source_ids": 469476,
+      "macula_source_ids_with_word_evidence": 361190,
+      "macula_source_ids_without_word_evidence": 108286
+    }
+  },
   "status_counts": {
     "nt_aquifer_additional_pinned_macula_word": 24748,
     "nt_aquifer_source_word_witness": 1822,
@@ -55,6 +67,6 @@
     "nt_original_target_id_attested_by_aquifer": 97590,
     "nt_original_target_id_not_located_by_aquifer": 7217
   },
-  "uncompressed_bytes": 308007620,
-  "uncompressed_sha256": "b510d94cf5b5045f9e9a86199c2ce8a63442008865c63fe39154ba95a6ffb7e2"
+  "uncompressed_bytes": 308007897,
+  "uncompressed_sha256": "bb0bd4b4d749605fce76d4570b9bcf9d1464fb259530eb34349713f0a4d70baa"
 }
