@@ -219,6 +219,66 @@ class CuratedLSGEditionTests(unittest.TestCase):
                                 self.curated, self.candidate, output)
         self.assertFalse(output.exists())
 
+    def test_authored_word_inventory_preserves_exact_french_spans_and_excludes_notes(self):
+        import gzip
+        import unicodedata
+        output = self.root / "owned-words.json.gz"
+        report = module.build_report(self.manifest, self.lock, self.upstream,
+                                     self.curated, self.candidate,
+                                     word_inventory_output=output)
+        receipt = report["private_authorial_word_inventory"]
+        self.assertEqual(receipt["coverage"]["verses"], 3)
+        self.assertEqual(receipt["coverage"]["words"], 9)
+        self.assertEqual(module.sha256(output), receipt["gzip_sha256"])
+        payload = json.loads(gzip.decompress(output.read_bytes()))
+        self.assertEqual(payload["format"], "brsi-curated-authorial-word-inventory")
+        self.assertEqual(payload["curated_release"], "lsg-1.0.2")
+        self.assertFalse(payload["source_text_embedded"])
+        self.assertEqual(payload["status"], "private_nonpublishing_unapproved")
+        self.assertEqual(payload["coverage"]["nt"]["verses"], 2)
+        self.assertEqual(payload["coverage"]["ot"]["verses"], 1)
+        self.assertEqual(len(payload["by_verse"]["01001001"]["words"]), 4)
+        self.assertEqual(len(payload["by_verse"]["40001001"]["words"]), 3)
+        self.assertEqual(len(payload["by_verse"]["40001002"]["words"]), 2)
+        original = module.read_osis(self.xml)
+        for bcv, verse in payload["by_verse"].items():
+            text = unicodedata.normalize("NFC", original[bcv])
+            self.assertEqual(hashlib.sha256(text.encode()).hexdigest(),
+                             verse["nfc_verse_sha256"])
+            self.assertEqual(len(text), verse["nfc_codepoints"])
+            for i, word in enumerate(verse["words"], 1):
+                self.assertEqual(word["ordinal"], i)
+                match = text[word["nfc_start_codepoint"]:word["nfc_end_codepoint"]]
+                self.assertEqual(hashlib.sha256(match.encode()).hexdigest(),
+                                 word["nfc_word_sha256"])
+                self.assertNotIn("surface", word)
+        self.assertNotIn("non biblique", output.read_bytes().decode("latin1"))
+        self.assertNotIn("Ajouter faux mots", output.read_bytes().decode("latin1"))
+
+    def test_authored_word_inventory_is_independent_of_original_target_token_ids(self):
+        verses = {"40001001": "L'amour de l'œuvre aujourd’hui ; Jean-Baptiste."}
+        raw, coverage = module.build_authored_word_inventory(verses, self.lock)
+        payload = json.loads(raw)
+        self.assertEqual(coverage["words"], 5)
+        self.assertEqual([w["ordinal"] for w in payload["by_verse"]["40001001"]["words"]],
+                         [1, 2, 3, 4, 5])
+        self.assertNotIn("target_lookup_ids", payload["by_verse"]["40001001"])
+        self.assertNotIn("original_target_ids", payload)
+        self.assertNotIn("L'amour", raw.decode())
+        self.assertEqual(module.word_stream(verses["40001001"]),
+                         ["lamour", "de", "lœuvre", "aujourdhui", "jeanbaptiste"])
+        newer, stats = module.build_authored_word_inventory(verses, self.lock)
+        self.assertEqual(raw, newer)
+        self.assertEqual(coverage, stats)
+
+    def test_authored_word_inventory_refuses_tracked_checkout_and_bad_verse(self):
+        with self.assertRaisesRegex(ValueError, "must not be written in checkout"):
+            module.build_report(self.manifest, self.lock, self.upstream,
+                                self.curated, self.candidate,
+                                word_inventory_output=Path.cwd() / "forbidden-owned-words.json.gz")
+        with self.assertRaisesRegex(ValueError, "invalid authored verse input"):
+            module.build_authored_word_inventory({"BAD": "hello"}, self.lock)
+
     def test_ot_owned_index_retains_all_original_rows_without_word_guesses(self):
         import gzip
         output = self.root / "private-ot-owned.json.gz"

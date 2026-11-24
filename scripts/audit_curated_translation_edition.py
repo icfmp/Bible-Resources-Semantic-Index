@@ -138,11 +138,89 @@ def character_stream(text: str) -> str:
     return "".join(c for c in unicodedata.normalize("NFC", text).casefold() if c.isalnum())
 
 
+AUTHORIAL_WORD_RE = re.compile(r"[^\W_]+(?:['’\-][^\W_]+)*")
+
+
 def word_stream(text: str) -> list[str]:
-    """Diagnostic whitespace/punctuation tokenization; never an ID mapping."""
-    return [character_stream(word) for word in
-            re.findall(r"[^\W_]+(?:['’\-][^\W_]+)*", unicodedata.normalize("NFC", text))
-            if character_stream(word)]
+    """Diagnostic normalized word stream; never a Clear.Bible token-ID claim."""
+    return [character_stream(m.group(0))
+            for m in AUTHORIAL_WORD_RE.finditer(unicodedata.normalize("NFC", text))
+            if character_stream(m.group(0))]
+
+
+def build_authored_word_inventory(osis_verses: dict[str, str],
+                                  curated_lock: dict) -> tuple[bytes, dict]:
+    """Own edition-specific French word coordinates without inventing source IDs.
+
+    A word coordinate identifies only a span of the *extracted authored verse
+    body*, after Unicode NFC normalization and removal of OSIS notes/titles.
+    It is never an OSIS byte offset or an upstream Clear.Bible target selector.
+    Surfaces are excluded from the serialized inventory; strong exact-word and
+    verse witnesses allow independent readback against the pinned OSIS file.
+    """
+    if not osis_verses or not curated_lock.get("osis_sha256"):
+        raise ValueError("missing pinned curated OSIS or empty authored verses")
+    canon_counts = defaultdict(Counter)
+    by_verse = {}
+    for bcv, raw_text in sorted(osis_verses.items()):
+        if not BCV_RE.fullmatch(bcv) or not isinstance(raw_text, str):
+            raise ValueError("invalid authored verse input")
+        if not 1 <= int(bcv[:2]) <= 66:
+            raise ValueError("unsupported authored book number")
+        canon = "ot" if int(bcv[:2]) <= 39 else "nt"
+        text = unicodedata.normalize("NFC", raw_text)
+        words = []
+        preceding_end = 0
+        for match in AUTHORIAL_WORD_RE.finditer(text):
+            word = match.group(0)
+            if not any(char.isalnum() for char in word):
+                raise ValueError("extracted non-word token")
+            if match.start() < preceding_end:
+                raise ValueError("overlapping authored word spans")
+            preceding_end = match.end()
+            words.append({
+                "ordinal": len(words) + 1,
+                "nfc_start_codepoint": match.start(),
+                "nfc_end_codepoint": match.end(),
+                "nfc_word_sha256": hashlib.sha256(word.encode("utf-8")).hexdigest(),
+            })
+        if character_stream(text) != "".join(
+                character_stream(text[row["nfc_start_codepoint"]:
+                                           row["nfc_end_codepoint"]])
+                for row in words):
+            raise ValueError("word inventory omitted alphanumeric verse characters")
+        by_verse[bcv] = {
+            "nfc_verse_sha256": hashlib.sha256(text.encode("utf-8")).hexdigest(),
+            "nfc_codepoints": len(text),
+            "words": words,
+        }
+        canon_counts[canon]["verses"] += 1
+        canon_counts[canon]["words"] += len(words)
+        if not words:
+            canon_counts[canon]["zero_word_verses"] += 1
+    coverage = {
+        "ot": dict(sorted(canon_counts["ot"].items())),
+        "nt": dict(sorted(canon_counts["nt"].items())),
+        "verses": len(by_verse),
+        "words": sum(len(row["words"]) for row in by_verse.values()),
+    }
+    payload = {
+        "format": "brsi-curated-authorial-word-inventory",
+        "schema_version": 1,
+        "index_owner": "Bible Resources Semantic Index",
+        "word_id_scheme": "curated_BCV_colon_one_based_word_ordinal",
+        "tokenizer": "unicode_nfc_word_v1_apostrophes_and_hyphens_inside",
+        "word_spans_relative_to": "extracted_NFC_OSIS_verse_body_not_XML_bytes",
+        "source_text_embedded": False,
+        "curated_release": curated_lock["release_tag"],
+        "curated_osis_sha256": curated_lock["osis_sha256"],
+        "status": "private_nonpublishing_unapproved",
+        "coverage": coverage,
+        "by_verse": by_verse,
+    }
+    return ((json.dumps(payload, sort_keys=True, ensure_ascii=False,
+                        separators=(",", ":"), allow_nan=False) + "\n").encode("utf-8"),
+            coverage)
 
 
 def read_target_tsv(path: Path, field: str = "text") -> tuple[dict[str, list[str]], dict[str, int]]:
@@ -666,7 +744,8 @@ def compare_ot(osis_verses: dict[str, str], ot_candidate: dict):
 def build_report(alignment_manifest: dict, curated_lock: dict,
                  upstream_root: Path, curated_root: Path,
                  candidate_dir: Path, index_output: Path | None = None,
-                 ot_index_output: Path | None = None) -> dict:
+                 ot_index_output: Path | None = None,
+                 word_inventory_output: Path | None = None) -> dict:
     if alignment_manifest.get("schema_version") != 1 or curated_lock.get("schema_version") != 1:
         raise ValueError("wrong manifest schema")
     if not all(isinstance(curated_lock.get(key), str) and curated_lock[key].strip()
@@ -707,6 +786,11 @@ def build_report(alignment_manifest: dict, curated_lock: dict,
     verses = read_osis(meta_path)
     nt = compare_nt(verses, target, target_census, nt_candidate)
     ot = compare_ot(verses, ot_candidate)
+    word_inventory_receipt = None
+    if word_inventory_output is not None:
+        raw, coverage = build_authored_word_inventory(verses, curated_lock)
+        word_inventory_receipt = write_private_index(
+            raw, word_inventory_output, coverage)
     index_receipt = None
     if index_output is not None:
         raw, coverage = build_private_nt_word_index(
@@ -731,6 +815,7 @@ def build_report(alignment_manifest: dict, curated_lock: dict,
         "ot": ot,
         "private_nt_word_index": index_receipt,
         "private_ot_verse_index": ot_index_receipt,
+        "private_authorial_word_inventory": word_inventory_receipt,
         "editions_proven_identical": False,
         "token_mapping_certified": False,
         "publication_approved": False,
@@ -748,12 +833,13 @@ def main():
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--index-output", type=Path)
     parser.add_argument("--ot-index-output", type=Path)
+    parser.add_argument("--word-inventory-output", type=Path)
     args = parser.parse_args()
     report = build_report(
         json.loads(args.alignment_manifest.read_text(encoding="utf-8")),
         json.loads(args.curated_lock.read_text(encoding="utf-8")),
         args.upstream_root, args.curated_root, args.candidate_dir,
-        args.index_output, args.ot_index_output,
+        args.index_output, args.ot_index_output, args.word_inventory_output,
     )
     content = json.dumps(report, sort_keys=True, indent=2, ensure_ascii=False) + "\n"
     args.output.write_text(content, encoding="utf-8")

@@ -591,6 +591,25 @@
     "target_token_id_matches_certified": false,
     "target_word_inventory_present": false
   },
+  "private_authorial_word_inventory": {
+    "coverage": {
+      "nt": {
+        "verses": 7959,
+        "words": 173732
+      },
+      "ot": {
+        "verses": 23211,
+        "words": 548864
+      },
+      "verses": 31170,
+      "words": 722596
+    },
+    "editorially_approved": false,
+    "gzip_bytes": 19772274,
+    "gzip_sha256": "3704e09532cf1e7e890a50d2946636d3bf05435492e3d48752a896efd60cfdf6",
+    "uncompressed_bytes": 111055661,
+    "uncompressed_sha256": "85b4fd8aae691aada2521b04b40edd1736f5a35b86e00a4ae42eb1967c702cbd"
+  },
   "private_nt_word_index": {
     "coverage": {
       "reason_punctuation_only": 7457,
