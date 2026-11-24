@@ -11,6 +11,7 @@ word spans, with duplicate-position ambiguity explicitly retained.
 from __future__ import annotations
 
 import argparse
+import csv
 import gzip
 import hashlib
 import importlib.util
@@ -194,7 +195,9 @@ def build_corroborated_index(aquifer_root: Path, original_candidates: Path,
                              osis_file: Path, curated_lock: dict,
                              original_revision: str, aquifer_revision: str,
                              min_chapters: int = 1,
-                             gold_nt_index: Path | None = None) -> tuple[bytes, dict]:
+                             gold_nt_index: Path | None = None,
+                             clear_root: Path | None = None,
+                             source_manifest: Path | None = None) -> tuple[bytes, dict]:
     if not COMMIT_RE.fullmatch(aquifer_revision) or not COMMIT_RE.fullmatch(original_revision):
         raise ValueError("invalid pinned alignment revisions")
     authored = ed.read_osis(osis_file)
@@ -208,7 +211,7 @@ def build_corroborated_index(aquifer_root: Path, original_candidates: Path,
             raise ValueError("original NT word witness revision/edition mismatch")
         gold_rows = gold["rows"]
     groups = {}
-    matches_by_target = Counter()
+    seen_original_source_ids = set()
     rows = []
     by_macula: dict[str, list[int]] = defaultdict(list)
     by_french_word: dict[str, list[int]] = defaultdict(list)
@@ -225,6 +228,7 @@ def build_corroborated_index(aquifer_root: Path, original_candidates: Path,
         for source_row in records:
             source = source_row["source_lookup_ids"]
             original_targets = source_row["target_lookup_ids"]
+            seen_original_source_ids.update(source)
             if not isinstance(source, list) or not isinstance(original_targets, list):
                 raise ValueError("original selector groups missing")
             original_target_locations = {
@@ -292,8 +296,63 @@ def build_corroborated_index(aquifer_root: Path, original_candidates: Path,
                 by_french_word[word].append(ordinal)
     if gold_rows is not None and len(gold_rows) != groups["nt"]:
         raise ValueError("full original NT text-witness group coverage changed")
-    if len(rows) != sum(groups.values()) or len(rows) != sum(statuses.values()):
-        raise ValueError("correspondence records lost")
+    original_group_total = sum(groups.values())
+    supplemental_counts = Counter()
+    if (clear_root is None) != (source_manifest is None):
+        raise ValueError("supplemental MACULA validation requires both original source pins")
+    if clear_root is not None:
+        manifest = json.loads(source_manifest.read_text(encoding="utf-8"))
+        if manifest["revision"] != original_revision:
+            raise ValueError("pinned source inventory revision differs from alignment groups")
+        source_spec = {p["key"]: p for p in manifest["inputs"]}
+        original_source_ids = set()
+        # Reuse the repository's generic, strict original corpus-ID parser.
+        import importlib.util
+        spec = importlib.util.spec_from_file_location(
+            "brsi_original", ROOT / "scripts" / "build_translation_alignments.py")
+        original_parser = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(original_parser)
+        for canon in ("nt", "ot"):
+            entry = source_spec[canon + "_source"]
+            file = ed.pinned_file(clear_root, entry["path"], entry["sha256"])
+            original_source_ids.update(original_parser.token_census(file, canon, True))
+        supplemental_counts["original_source_macula_ids"] = len(original_source_ids)
+        for source_id in sorted(source_links):
+            if source_id in seen_original_source_ids:
+                continue
+            if source_id not in original_source_ids:
+                supplemental_counts["aquifer_source_not_in_pinned_original_macula"] += 1
+                continue
+            french_words = sorted({
+                located[token]["bcv"] + ":" + str(located[token]["word_ordinal"])
+                for token in source_links[source_id] if token in located})
+            if not french_words:
+                continue
+            canon = "ot" if source_id.startswith("o") else "nt"
+            ordinal = len(rows)
+            rows.append({
+                "canon": canon,
+                "original_ordinal": None,
+                "original_macula_ids": [source_id],
+                "original_clear_bible_target_ids": [],
+                "word_ids": french_words,
+                "original_target_word_witness_ids": [],
+                "aquifer_source_word_witness_ids": french_words,
+                "status": "aquifer_additional_pinned_macula_word",
+                "source_provenance": "BibleAquifer_MACULA_source_and_verified_French_surface",
+                "target_selector_numeric_equivalence_proven": False,
+                "linguistically_reviewed_by_brsi": False,
+            })
+            by_macula[source_id].append(ordinal)
+            for word in french_words:
+                by_french_word[word].append(ordinal)
+            statuses[canon + "_aquifer_additional_pinned_macula_word"] += 1
+            supplemental_counts[canon + "_added_source_words"] += 1
+    if len(rows) != original_group_total + sum(
+            supplemental_counts.get(c + "_added_source_words", 0) for c in ("nt", "ot")):
+        raise ValueError("original or supplementary correspondence groups lost")
+    if len(rows) != sum(statuses.values()):
+        raise ValueError("correspondence status census did not partition rows")
     report = {
         "format": "brsi-original-and-independent-word-corroboration-candidate",
         "schema_version": 1,
@@ -307,6 +366,7 @@ def build_corroborated_index(aquifer_root: Path, original_candidates: Path,
         "publication_approved": False,
         "automatic_linguistic_approval": False,
         "original_group_counts": groups,
+        "supplemental_macula_source_counts": dict(sorted(supplemental_counts.items())),
         "aquifer_text_witness_census": census,
         "status_counts": dict(sorted(statuses.items())),
         "target_id_calibration": dict(sorted(calibration.items())),
@@ -317,8 +377,8 @@ def build_corroborated_index(aquifer_root: Path, original_candidates: Path,
     return ((json.dumps(report, ensure_ascii=False, sort_keys=True,
                         separators=(",", ":"), allow_nan=False) + "\n").encode("utf-8"),
             {k: report[k] for k in (
-                "original_group_counts", "aquifer_text_witness_census",
-                "status_counts", "target_id_calibration")})
+                "original_group_counts", "supplemental_macula_source_counts",
+                "aquifer_text_witness_census", "status_counts", "target_id_calibration")})
 
 
 def main() -> None:
@@ -333,6 +393,8 @@ def main() -> None:
     parser.add_argument("--report", required=True, type=Path)
     parser.add_argument("--min-chapters", type=int, default=1180)
     parser.add_argument("--gold-nt-index", type=Path, required=True)
+    parser.add_argument("--clear-root", type=Path, required=True)
+    parser.add_argument("--source-manifest", type=Path, required=True)
     args = parser.parse_args()
     if args.output.resolve().is_relative_to(ROOT) or args.report.resolve().is_relative_to(ROOT):
         raise ValueError("nonpublishing outputs must remain outside the repository")
@@ -341,7 +403,7 @@ def main() -> None:
     raw, counts = build_corroborated_index(
         args.aquifer_root, args.candidates, osis, curated,
         args.clear_revision, args.aquifer_revision, args.min_chapters,
-        args.gold_nt_index)
+        args.gold_nt_index, args.clear_root, args.source_manifest)
     receipt = {
         "schema_version": 1,
         "kind": "brsi-macula-curated-lsg-word-corroboration-development",
