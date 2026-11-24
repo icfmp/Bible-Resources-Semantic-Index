@@ -145,6 +145,42 @@ def bracket_metric(known: dict[str, str], predictions: dict, width: int) -> dict
     }
 
 
+def per_document_counts(scope: set[str], grouped: set[str],
+                        candidates: list[dict], parsed: list[dict]) -> list[dict]:
+    """Account for review yield by original source document, without text."""
+    if not grouped.issubset(scope):
+        raise ValueError("syntax groups not contained in original unlinked scope")
+    by_id = {x["original_macula_id_under_review"]: x for x in candidates}
+    if len(by_id) != len(candidates) or not set(by_id).issubset(grouped):
+        raise ValueError("duplicate or out-of-scope anchor-only candidate")
+    seen_source_ids = set()
+    reports = []
+    for doc in parsed:
+        original_ids = set(doc["tokens"])
+        if not seen_source_ids.isdisjoint(original_ids):
+            raise ValueError("original MACULA ID repeated in different source documents")
+        seen_source_ids.update(original_ids)
+        source = scope.intersection(original_ids)
+        active = grouped.intersection(original_ids)
+        proposals = [by_id[x] for x in sorted(source.intersection(by_id))]
+        reports.append({
+            "original_XML_file": doc["source_file"],
+            "canon": doc["canon"],
+            "original_verses": len(doc["verses"]),
+            "unlinked_original_IDs_in_scope": len(source),
+            "unlinked_original_IDs_with_source_syntax": len(active),
+            "unlinked_original_IDs_with_anchor_only_candidate": len(proposals),
+            "distinct_real_source_constituents_with_candidates":
+                len({p["authentic_MACULA_source_group_id"] for p in proposals}),
+        })
+    if not scope.issubset(seen_source_ids):
+        raise ValueError("original unlinked review scope absent from original XML")
+    if sum(x["unlinked_original_IDs_with_anchor_only_candidate"]
+           for x in reports) != len(candidates):
+        raise ValueError("per-book candidate counts differ from original IDs")
+    return reports
+
+
 def study(index: dict, pivots: dict, authored: dict[str, str],
           parsed: list[dict]) -> tuple[dict, dict]:
     groups, documents = base.syntax_families(parsed)
@@ -257,6 +293,10 @@ def study(index: dict, pivots: dict, authored: dict[str, str],
         "original_unlinked_in_selected_XML_scope": len(total_scope),
         "original_unlinked_with_source_syntax_group": len(seen),
         "original_unlinked_with_anchor_only_bracket": len(proposals),
+        "distinct_original_XML_source_constituents_with_candidates":
+            len({p["authentic_MACULA_source_group_id"] for p in proposals}),
+        "per_original_source_document":
+            per_document_counts(total_scope, seen, proposals, parsed),
         "by_original_unlinked_cause": strata,
         "previous_lexical_pilot_research_proposals": 55,
         "lexical_prematch_required": False,
