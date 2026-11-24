@@ -280,6 +280,16 @@ readback/decompression and original-source record-count guard.
   remain in each owned index row; inverse lookup keys identify original IDs
   and curated LSG word positions without editing either source. Every row still says
   `editorially_approved: false`.
+- **Exact word-surface attestation (full-corpus verified): all 91,649**
+  located NT target word candidates have the **same exact NFC French word
+  surface** in the original Clear.Bible target TSV and independently pinned
+  Bible Resources LSG 1.0.2 OSIS. The generated index stores the exact
+  authorial NFC codepoint span and independent SHA-256 witnesses of the
+  authored word and original target token for **each row**, verified against
+  both independently pinned inputs on CI. This is considerably stronger
+  than the earlier alphanumeric-only verse diagnostic but **still not
+  contextual semantic or manual translation-alignment approval**. The
+  source MACULA IDs and original target selectors remain unchanged.
 - **13,158** records explicitly abstain: **7,457** target punctuation/symbol
   surfaces, **4,574** target surfaces splitting our diagnostic word
   boundaries, **131** records in text-mismatching verses, and the original
