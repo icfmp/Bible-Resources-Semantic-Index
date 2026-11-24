@@ -321,18 +321,18 @@ editorially approved French reverse interlinear:
 
 | Canon | Original MACULA IDs | With French word-surface evidence | Without evidence |
 | --- | ---: | ---: | ---: |
-| NT | 137,741 | **126,306** | 11,435 |
-| OT | 469,476 | **361,214** | 108,262 |
-| Total | 607,217 | **487,520** | 119,697 |
+| NT | 137,741 | **126,307** | 11,434 |
+| OT | 469,476 | **361,219** | 108,257 |
+| Total | 607,217 | **487,526** | 119,691 |
 
 For NT, **91,649** words continue to use the directly verified original
 Clear.Bible target TSV and authored LSG. A further **9,909** source groups
-have independently located Aquifer word candidates, plus **24,748**
+have independently located Aquifer word candidates, plus **24,749**
 MACULA source IDs not part of the original Clear.Bible alignment groups.
 
-For OT, **175,922** original groups have an independently witnessed Aquifer
-source→French word location, plus **185,292** additional MACULA original
-IDs with linked French word evidence. The other **108,262** original
+For OT, **175,924** original groups have an independently witnessed Aquifer
+source→French word location, plus **185,295** additional MACULA original
+IDs with linked French word evidence. The other **108,257** original
 MACULA IDs explicitly remain unlinked; this is **not evidence of an
 untranslated Hebrew word**.
 
@@ -353,11 +353,11 @@ Each record therefore retains its evidence class, original MACULA IDs,
 original Clear.Bible selectors and `linguistically_reviewed_by_brsi=false`.
 The producer neither rewrites the LSG nor invents any missing alignments.
 
-### Investigating the current 119,697 unlinked original MACULA source IDs
+### Investigating the current 119,691 unlinked original MACULA source IDs
 
 The source-pinned classification first partitioned 119,723 unlinked MACULA
 IDs in PR #177; subsequent exact-surface recovery in PR #178 lowered the
-count to **119,712**; PR #184 then lowered it to **119,697**, without automatic editorial approvals. It checks **each original source ID**
+count to **119,712**; PR #184 then lowered it to **119,697**, and PR #185 further to **119,691**, without automatic editorial approvals. It checks **each original source ID**
 against Aquifer's explicit `meta.nonEquivalent.source` entries, its original
 source-to-target alignment records and the original WLCM Hebrew word-part
 coordinates already in the BRSI-owned index.
@@ -365,10 +365,10 @@ coordinates already in the BRSI-owned index.
 | Primary source-evidence category | NT | OT | Total |
 | --- | ---: | ---: | ---: |
 | Listed in Aquifer `nonEquivalent.source` | 3,378 | 59,514 | **62,892** |
-| Another original Hebrew part of the same numbered word has an attested French link | 0 | 8,764 | **8,764** |
-| Aquifer source alignment exists, but its target cannot be uniquely located in our authored LSG 1.0.2 | 2,755 | 18,063 | **20,818** |
+| Another original Hebrew part of the same numbered word has an attested French link | 0 | 8,762 | **8,762** |
+| Aquifer source alignment exists, but its target cannot be uniquely located in our authored LSG 1.0.2 | 2,754 | 18,060 | **20,814** |
 | No usable source alignment record in Aquifer | 5,302 | 21,921 | **27,223** |
-| **Unlinked source ID total** | **11,435** | **108,262** | **119,697** |
+| **Unlinked source ID total** | **11,434** | **108,257** | **119,691** |
 
 These categories are **diagnostics, not editorial judgments**:
 
@@ -381,7 +381,7 @@ These categories are **diagnostics, not editorial judgments**:
 - Hebrew word-part evidence says only that another original part with
   the same numbered Hebrew word has a link; it **does not inherit that
   French word position** for the unlinked part.
-- The 20,818 French-location cases are the **next text-evidence recovery
+- The 20,814 French-location cases are the **next text-evidence recovery
   queue**, for independent verse-local word matching and repeated-word
   disambiguation. The 27,223 source-record absences require genuinely
   additional evidence; numbers, lemmas or co-occurrence alone are not
@@ -389,7 +389,7 @@ These categories are **diagnostics, not editorial judgments**:
 
 Every original ID is individually indexed with its own primary evidence
 category in `unlinked_cause_by_original_macula_id`. The full set
-partitions the same **119,697** unlinked IDs, and the full source-pinned
+partitions the same **119,691** unlinked IDs, and the full source-pinned
 workflow verifies that no member was accidentally assigned a French
 word. Detailed numbers, source fingerprints, no-approval controls and the
 exact rebuilt SHA-256 are locked in
@@ -477,7 +477,53 @@ No Bible app, OSIS, SWORD module, Scripture, word annotation,
 versification or original alignment input is changed, and no public
 release or automatic linguistic approval is implied.
 
-### What remains among the 20,818 Aquifer word-location failures
+### Repeated words anchored by a uniquely located neighboring word
+
+PR #185 supplies another **strict, independently verifiable French
+target location method**, `unique_exact_adjacent_anchored_pair`. It
+applies only after all the preceding stronger locators, and only when:
+
+- The original French target word is repeated or otherwise ambiguous.
+- A directly neighboring **original whole-word** Aquifer French
+  target selector belongs to the same verse and is **numerically
+  consecutive** (not a skipped original selector).
+- The complete NFC-identical neighboring anchor word occurs **exactly
+  once** in both the original Aquifer French word inventory and the
+  authored published LSG 1.0.2 verse, with an existing, stronger
+  verified word location.
+- The repeated word occurs **immediately next to that anchor** in
+  authored French. If original left and right anchors propose
+  different word positions, or a previous source word occupies the
+  target, the mapping is refused.
+
+Over the **complete pinned 1,188 chapters**, this adds **9 distinct
+original French target-word locations** (2 NT, 7 OT) from uniquely
+identifiable adjacent exact-word pairs. They provide **6 additional
+distinct original MACULA source IDs** with candidate word evidence
+(1 NT, 5 OT). Thus the cumulative word-linked source census is
+**487,526 of 607,217**, with **119,691** explicit no-word-evidence
+original MACULA IDs. The remaining strictly repeated source-ID
+location queue contains **910** cases (149 NT, 761 OT).
+
+Full source-pinned CI independently opens the original Aquifer
+target-verse records and independently parsed authored OSIS to
+verify, for **each** new candidate, the original consecutive
+whole-word selectors, unique neighboring French anchor,
+original-and-authored exact surface identity, unique proposed
+word position, and unchanged word SHA-256. All **91,649**
+originally text-attested direct NT French word positions remain
+authoritative; no source/target numeric ordinal or translation
+meaning is inferred.
+
+The new original target selector, authorial LSG word ID, word
+SHA-256 and distinct source-proof method are stored in the
+private development evidence index. No Bible application,
+published SWORD module, OSIS, original source text, original
+word segmentation, editorial annotation or release is changed,
+and no model-assisted source translation judgment becomes
+automatically linguistically approved.
+
+### What remains among the 20,814 Aquifer word-location failures
 
 A further complete pinned-source audit differentiates source-edition word
 surface divergence from genuinely repeated-word location ambiguity. It
@@ -488,10 +534,10 @@ not guessed from either numeric ordinal.
 
 | Original target-location failure | NT source IDs | OT source IDs | Total |
 | --- | ---: | ---: | ---: |
-| Complete original Aquifer French word **not exactly present** anywhere among our authored LSG words in that target verse | 2,596 | 17,284 | **19,880** |
-| Exact French word exists, but a **repeated surface** prevents a uniquely proven location | 150 | 763 | **913** |
+| Complete original Aquifer French word **not exactly present** anywhere among our authored LSG words in that target verse | 2,596 | 17,283 | **19,879** |
+| Exact French word exists, but a **repeated surface** prevents a uniquely proven location | 149 | 761 | **910** |
 | Several original target witnesses have **different failure causes** | 9 | 16 | **25** |
-| **All source IDs in target-location recovery queue** | **2,755** | **18,063** | **20,818** |
+| **All source IDs in target-location recovery queue** | **2,754** | **18,060** | **20,814** |
 
 This is **not** evidence that 19,880 Greek/Hebrew translation links are
 wrong. It means that the target word string in the *specific Aquifer
@@ -501,14 +547,14 @@ may arise from apostrophe/hyphen styles, letter-case, orthography,
 tokenization, wording or a genuine editorial edition difference. No
 historical French text is rewritten to force equality.
 
-The other 913 require stronger local context before linking a repeated
+The other 910 require stronger local context before linking a repeated
 French word to an original MACULA source. The 25 mixed cases retain
 multiple original target testimonies; none was silently chosen.
 
-Each of the **20,818** source IDs gets an independent second-level,
+Each of the **20,814** source IDs gets an independent second-level,
 text-free classification in
 `unlocated_french_target_cause_by_original_macula_id`, while the
-maintained index retains its **119,697** primary unlinked causes.
+maintained index retains its **119,691** primary unlinked causes.
 The exact aggregate is pinned in
 [aquifer-correspondence.lock.json](aquifer-correspondence.lock.json),
 and source-pinned CI refuses an incomplete or non-reproducible partition.
