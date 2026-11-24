@@ -71,7 +71,8 @@ jobs:
             --curated-root /tmp/brsi-curated-reader \
             --candidate-dir /tmp/brsi-curated-candidate \
             --output /tmp/brsi-curated-edition-report.json \
-            --index-output /tmp/brsi-curated-lsg-nt-index.json.gz
+            --index-output /tmp/brsi-curated-lsg-nt-index.json.gz \
+            --ot-index-output /tmp/brsi-curated-lsg-ot-verse-index.json.gz
       - name: Verify BRSI-owned, source-preserving bidirectional index
         run: |
           set -euo pipefail
@@ -103,6 +104,32 @@ jobs:
           assert result['coverage']['unresolved'] > 0
           assert all(row['editorially_approved'] is False for row in result['rows'])
           print('BRSI_OWNED_INDEX_CANDIDATE', result['coverage'])
+          # OT has genuine original verse selectors but NO French word-token
+          # inventory: source IDs and verse-level inverse lookup only.
+          ot_receipt = report['private_ot_verse_index']
+          ot_file = Path('/tmp/brsi-curated-lsg-ot-verse-index.json.gz')
+          ot_compressed = ot_file.read_bytes()
+          assert hashlib.sha256(ot_compressed).hexdigest() == ot_receipt['gzip_sha256']
+          assert len(ot_compressed) == ot_receipt['gzip_bytes']
+          ot_raw = gzip.decompress(ot_compressed)
+          assert hashlib.sha256(ot_raw).hexdigest() == ot_receipt['uncompressed_sha256']
+          assert len(ot_raw) == ot_receipt['uncompressed_bytes']
+          ot = json.loads(ot_raw)
+          assert ot['format'] == 'brsi-curated-translation-verse-index-candidate'
+          assert ot['index_owner'] == 'Bible Resources Semantic Index'
+          assert ot['canon'] == 'ot'
+          assert ot['original_alignment_records'] == 203597
+          assert ot['coverage'] == ot_receipt['coverage']
+          assert ot['coverage']['verse_reference_present_word_unverified'] == 203597
+          assert ot['coverage']['different_original_source_target_verse_coordinates'] == 920
+          assert len(ot['by_original_macula_id']) >= 100000
+          assert len(ot['by_curated_verse']) > 10000
+          assert all(row['curated_word_position'] is None and
+                     row['target_word_inventory_verified'] is False and
+                     row['editorially_approved'] is False for row in ot['rows'])
+          assert all(all(verse in ot['by_curated_verse'] for verse in row['curated_target_verses'])
+                     for row in ot['rows'])
+          print('BRSI_OWNED_OT_VERSE_INDEX', ot['coverage'])
           PY
       - name: Verify full pinned curated-edition diagnostic JSON receipt
         run: |

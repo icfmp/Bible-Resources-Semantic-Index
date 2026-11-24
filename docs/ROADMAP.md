@@ -42,7 +42,7 @@ The verified word-to-word alignment for the LSG is **not** an external
 dictionary/article crosswalk and is not supplied by UBS lexical IDs.
 [The Bible application issue #282](https://github.com/icfmp/Bible/issues/282)
 already identifies the Clear.Bible alignment candidate and edition mismatch
-risk. The separately maintained **BRSI-owned word index** is generated directly from the pinned original Clear.Bible alignment, reviewed BRSI correction ledger and the exact LSG 1.0.2 edition; it is **not a runtime translation adapter**. Its current build is an unapproved private candidate, and unmatched cases remain visible. The post-cleanup [nonpublishing source-pinned import PR #163](https://github.com/icfmp/Bible-Resources-Semantic-Index/pull/163)
+risk. The separately maintained **BRSI-owned translation index** is generated directly from the pinned original Clear.Bible alignment, reviewed BRSI correction ledger and the exact LSG 1.0.2 edition; it is **not a runtime translation adapter**. The indexed development source includes NT provisional word positions and **all 203,597 OT original records as verse-reference candidates only**; the original OT French target-word inventory is absent and no OT word positions are asserted. Its current build is an unapproved private candidate, and unmatched cases remain visible. The post-cleanup [nonpublishing source-pinned import PR #163](https://github.com/icfmp/Bible-Resources-Semantic-Index/pull/163)
 now maintains its **separate** translation-alignment importer, manifest,
 review-only correction ledger and full-source checks. These are *candidate*
 translation token links, never UBS lexical or context-specific senses.

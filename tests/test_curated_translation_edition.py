@@ -77,8 +77,10 @@ class CuratedLSGEditionTests(unittest.TestCase):
                 "upstream_revision": "a" * 40,
                 "coverage": {"records": 2},
                 "records": [
-                    {"target_lookup_ids": ["01001001001"]},
-                    {"target_lookup_ids": ["01001002001"]},
+                    {"ordinal": 0, "source_lookup_ids": ["o01001001001"],
+                     "target_lookup_ids": ["01001001001"]},
+                    {"ordinal": 1, "source_lookup_ids": ["o01001001002"],
+                     "target_lookup_ids": ["01001002001"]},
                 ],
             },
         }
@@ -216,6 +218,70 @@ class CuratedLSGEditionTests(unittest.TestCase):
             module.build_report(self.manifest, self.lock, self.upstream,
                                 self.curated, self.candidate, output)
         self.assertFalse(output.exists())
+
+    def test_ot_owned_index_retains_all_original_rows_without_word_guesses(self):
+        import gzip
+        output = self.root / "private-ot-owned.json.gz"
+        report = module.build_report(self.manifest, self.lock, self.upstream,
+                                     self.curated, self.candidate,
+                                     ot_index_output=output)
+        receipt = report["private_ot_verse_index"]
+        self.assertEqual(receipt["coverage"], {
+            "different_original_source_target_verse_coordinates": 1,
+            "unresolved_target_verse_not_attested": 1,
+            "verse_reference_present_word_unverified": 1,
+        })
+        self.assertFalse(receipt["editorially_approved"])
+        self.assertEqual(module.sha256(output), receipt["gzip_sha256"])
+        payload = json.loads(gzip.decompress(output.read_bytes()))
+        self.assertEqual(payload["format"], "brsi-curated-translation-verse-index-candidate")
+        self.assertFalse(payload["word_positions_available"])
+        self.assertEqual(payload["original_alignment_records"], 2)
+        self.assertEqual(payload["by_original_macula_id"]["o01001001001"], [0])
+        self.assertEqual(payload["by_curated_verse"], {"01001001": [0]})
+        self.assertEqual(payload["rows"][1]["original_target_ids"], ["01001002001"])
+        self.assertEqual(payload["rows"][1]["original_source_verses"], ["01001001"])
+        self.assertEqual(payload["rows"][1]["curated_target_verses"], ["01001002"])
+        self.assertTrue(payload["rows"][1]["original_source_target_verse_differ"])
+        self.assertIsNone(payload["rows"][1]["curated_word_position"])
+        self.assertFalse(payload["rows"][1]["target_word_inventory_verified"])
+        self.assertFalse(payload["rows"][1]["editorially_approved"])
+
+    def test_ot_index_preserves_many_to_many_original_groups(self):
+        candidate = {
+            "canon": "ot", "format": "brsi-translation-alignment-candidate",
+            "coverage": {"records": 1},
+            "records": [{
+                "ordinal": 0,
+                "source_lookup_ids": ["o01001001001", "o01001001002"],
+                "target_lookup_ids": ["01001001001", "01001001002"],
+            }],
+        }
+        raw, coverage = module.build_private_ot_verse_index(
+            module.read_osis(self.xml), candidate, self.lock, "a" * 40)
+        document = json.loads(raw)
+        self.assertEqual(coverage["verse_reference_present_word_unverified"], 1)
+        self.assertEqual(document["by_curated_verse"]["01001001"], [0])
+        self.assertEqual(document["by_original_macula_id"]["o01001001001"], [0])
+        self.assertEqual(document["by_original_macula_id"]["o01001001002"], [0])
+        self.assertEqual(document["rows"][0]["original_target_ids"],
+                         ["01001001001", "01001001002"])
+        self.assertIsNone(document["rows"][0]["curated_word_position"])
+
+    def test_ot_index_rejects_invalid_source_id_and_private_checkout_write(self):
+        candidate = {"canon": "ot", "format": "brsi-translation-alignment-candidate",
+                     "coverage": {"records": 1},
+                     "records": [{
+                         "ordinal": 0, "source_lookup_ids": ["n01001001001"],
+                         "target_lookup_ids": ["01001001001"],
+                     }]}
+        with self.assertRaisesRegex(ValueError, "invalid OT MACULA original selector"):
+            module.build_private_ot_verse_index(
+                module.read_osis(self.xml), candidate, self.lock, "a" * 40)
+        with self.assertRaisesRegex(ValueError, "must not be written in checkout"):
+            module.build_report(self.manifest, self.lock, self.upstream,
+                                self.curated, self.candidate,
+                                ot_index_output=Path.cwd() / "forbidden-ot-index.json.gz")
 
     def test_generic_text_exception_triage_separates_boundary_orthography_and_omission(self):
         verses = {
