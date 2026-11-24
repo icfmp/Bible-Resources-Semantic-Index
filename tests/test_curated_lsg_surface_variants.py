@@ -43,6 +43,48 @@ class SourceOnlyOrthographyAuditTests(unittest.TestCase):
         self.check("oeuvre", ["œuvre", "œuvre"],
                    "normalized_candidate_ambiguous")
 
+    def test_neighboring_verse_exact_word_is_diagnostic_not_remap(self):
+        verses = {
+            "01001001": "Dieu parle",
+            "01001002": "Un autre mot",
+            "01001003": "Dieu aussi",
+            "01002001": "Dieu dans un autre chapitre",
+        }
+        cache = {}
+        self.assertEqual(audit.neighboring_verse_context(
+            "Dieu", "01001002", verses, cache),
+            "exact_word_in_both_adjacent_verses")
+        del verses["01001003"]
+        self.assertEqual(audit.neighboring_verse_context(
+            "Dieu", "01001002", verses, cache),
+            "exact_word_in_previous_verse")
+        self.assertEqual(audit.neighboring_verse_context(
+            "Dieu", "01001003", verses, cache),
+            "no_exact_word_in_consecutive_same_chapter_verses")
+        self.assertEqual(audit.neighboring_verse_context(
+            "Dieu", "01001004", verses, cache),
+            "no_exact_word_in_consecutive_same_chapter_verses")
+        with self.assertRaisesRegex(ValueError, "invalid original"):
+            audit.neighboring_verse_context(
+                "Dieu", "Gen1", verses, cache)
+
+    def test_original_source_coordinates_are_not_called_french_word_links(self):
+        authored = {"01001001": "Dieu parla",
+                    "01001002": "Un autre mot"}
+        cache = {}
+        self.assertEqual(audit.original_source_verse_context(
+            "Dieu", "o010010010011", "01001002", authored, cache),
+            "exact_french_word_present_at_original_source_verse_reference")
+        self.assertEqual(audit.original_source_verse_context(
+            "Dieu", "o010010020011", "01001002", authored, cache),
+            "original_source_and_aquifer_target_verses_identical")
+        self.assertEqual(audit.original_source_verse_context(
+            "Dieu", "o010010030011", "01001002", authored, cache),
+            "different_original_source_verse_missing_from_curated")
+        self.assertEqual(audit.original_source_verse_context(
+            "Dieu", "o010010010011", "01001001", authored, cache),
+            "original_source_and_aquifer_target_verses_identical")
+
     def test_original_aquifer_ids_are_read_not_generated(self):
         with tempfile.TemporaryDirectory() as folder:
             root = Path(folder)
@@ -74,6 +116,12 @@ class SourceOnlyOrthographyAuditTests(unittest.TestCase):
             self.assertEqual(result["original_unlinked_exact_word_absence_total"], 2)
             self.assertEqual(result["by_canon"]["ot"], {
                 "case_only": 1, "ligature_only": 1})
+            self.assertEqual(result["reference_context_by_canon"]["ot"], {
+                "no_exact_word_in_consecutive_same_chapter_verses": 2})
+            self.assertEqual(
+                result["source_coordinate_context_by_canon"]["ot"],
+                {"original_source_and_aquifer_target_verses_identical": 2})
+            self.assertEqual(len(result["reference_context_by_original_macula_id"]), 2)
             self.assertEqual(result["source_ids_by_diagnostic"], {
                 "o010010010011": "case_only",
                 "o010010010021": "ligature_only",
