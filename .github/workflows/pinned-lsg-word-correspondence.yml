@@ -7,6 +7,8 @@ on:
       - "tests/test_curated_lsg_word_correspondence.py"
       - "scripts/audit_macula_lsg_contextual_lexical_pilot.py"
       - "scripts/sample_macula_lsg_semantic_review.py"
+      - "scripts/audit_macula_lsg_phrase_brackets.py"
+      - "tests/test_macula_lsg_phrase_brackets.py"
       - "tests/test_macula_lsg_semantic_review_sampler.py"
       - "tests/test_macula_lsg_contextual_lexical_pilot.py"
       - "scripts/audit_curated_lsg_surface_variants.py"
@@ -35,6 +37,8 @@ jobs:
         run: python3 -I -m unittest discover -s tests -p 'test_macula_lsg_contextual_lexical_pilot.py' -v
       - name: Stratified semantic reviewer sample fail-closed synthetic tests
         run: python3 -I -m unittest discover -s tests -p 'test_macula_lsg_semantic_review_sampler.py' -v
+      - name: Phrase-bracket localization and lexical abstention regressions
+        run: python3 -I -m unittest discover -s tests -p 'test_macula_lsg_phrase_brackets.py' -v
       - name: Retrieve exact original Clear.Bible alignment sources
         shell: bash
         run: |
@@ -599,6 +603,62 @@ jobs:
           else
             echo "FIRST SEMANTIC PILOT: audit complete blinded results and pin exact text-free receipt before merging"
           fi
+      - name: Source-pinned local phrase brackets and masked NT validation (private only)
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -I scripts/audit_macula_lsg_phrase_brackets.py \
+            --original-index /tmp/brsi-macula-lsg-correspondence.json.gz \
+            --correspondence-lock links/alignments/clear-bible-lsg/aquifer-correspondence.lock.json \
+            --semantic-sample-lock links/alignments/clear-bible-lsg/semantic-review-sample.lock.json \
+            --pivot-lock links/alignments/clear-bible-lsg/pivot.lock.json \
+            --pivot-nt /tmp/brsi-semantic-macula-nt/SBLGNT/tsv/macula-greek-SBLGNT.tsv \
+            --curated-root /tmp/brsi-word-reader \
+            --curated-lock links/alignments/clear-bible-lsg/curated-1.0.2.lock.json \
+            --report /tmp/brsi-macula-phrase-bracket-report.json \
+            --private-brackets /tmp/brsi-macula-phrase-brackets.json.gz
+          python3 -I - <<'PY'
+          import gzip, hashlib, json
+          from pathlib import Path
+          r=json.loads(Path('/tmp/brsi-macula-phrase-bracket-report.json').read_text())
+          packed=Path('/tmp/brsi-macula-phrase-brackets.json.gz').read_bytes()
+          assert hashlib.sha256(packed).hexdigest() == r['private_brackets_sha256']
+          assert len(packed) == r['private_brackets_bytes']
+          private=json.loads(gzip.decompress(packed))
+          groups=private['brackets']
+          assert len(groups) == r['full_corpus_brackets']['brackets']
+          assert sum(len(g['original_macula_ids']) for g in groups) == r[
+              'full_corpus_brackets']['bracketed_original_ids']
+          assert r['unlinked_source_original_ids'] == 119691
+          assert sum(x['unlinked_original_ids'] for x in
+                     r['by_unlinked_source_cause'].values()) == 119691
+          assert r['reviewed_gold_cases'] == r['automatically_approved_new_links'] == 0
+          assert r['publication_authorized'] is False
+          assert r['source_text_modified'] is False
+          assert r['source_originals_modified'] is False
+          assert all(g['semantic_equivalence_approved'] is False and
+                     g['source_words_individually_linked'] is False and
+                     g['publication_authorized'] is False and
+                     len(g['lsg_word_ids']) in range(1, 9) and
+                     len(g['original_macula_ids']) in range(1, 7) and
+                     all(w.startswith(g['source_verse'] + ':') for w in
+                         g['lsg_word_ids'])
+                     for g in groups)
+          masked=r['masked_direct_nt_2k_gold']
+          assert masked['calibration_half']['cases'] == 1000
+          assert masked['independent_reporting_half']['cases'] == 1000
+          assert r['full_corpus_brackets']['bracketed_original_ids'] > 0
+          print('BRSI_PHRASE_BRACKET_FULL_SOURCE_REVIEW_COUNTS',
+                r['full_corpus_brackets'], r['masked_direct_nt_2k_gold'])
+          PY
+          if test -f links/alignments/clear-bible-lsg/phrase-bracket-pilot.lock.json; then
+            python3 -I scripts/verify_generated_json.py \
+              --generated /tmp/brsi-macula-phrase-bracket-report.json \
+              --baseline links/alignments/clear-bible-lsg/phrase-bracket-pilot.lock.json
+          else
+            echo "FIRST PHRASE PILOT: independently audit output, then pin the source-free receipt"
+          fi
+
       - name: Explicit no-publication boundary
         run: |
           echo "Both source witnesses are immutable; no Scripture or MACULA changes."
