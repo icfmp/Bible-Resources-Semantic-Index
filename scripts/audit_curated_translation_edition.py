@@ -517,6 +517,124 @@ def build_private_nt_word_index(osis_verses: dict[str, str],
     return raw, dict(sorted(census.items()))
 
 
+def build_private_ot_verse_index(osis_verses: dict[str, str],
+                                 ot_candidate: dict,
+                                 curated_lock: dict,
+                                 alignment_revision: str) -> tuple[bytes, dict]:
+    """Own the OT index without fabricating French word identities.
+
+    Every original Hebrew→French selector survives, including genuine source
+    versus target verse-coordinate differences. Only independently attested
+    *target verse presence* is indexed until an original target-word corpus
+    allows a word-level validation. Original target ordinals are evidence,
+    never silently reinterpreted as positions in curated LSG.
+    """
+    if (ot_candidate.get("canon") != "ot" or
+            ot_candidate.get("format") != "brsi-translation-alignment-candidate"):
+        raise ValueError("not the original OT candidate format")
+    original_rows = ot_candidate.get("records")
+    if not isinstance(original_rows, list) or len(original_rows) != ot_candidate.get("coverage", {}).get("records"):
+        raise ValueError("OT source record census differs from original receipt")
+    row_index = []
+    by_original_macula_id: dict[str, list[int]] = defaultdict(list)
+    by_curated_verse: dict[str, list[int]] = defaultdict(list)
+    census = Counter()
+    for ordinal, record in enumerate(original_rows):
+        if not isinstance(record, dict) or record.get("ordinal") != ordinal:
+            raise ValueError("OT original record ordinal altered")
+        source = record.get("source_lookup_ids")
+        target = record.get("target_lookup_ids")
+        if not isinstance(source, list) or not isinstance(target, list):
+            raise ValueError("invalid original OT source or target selector array")
+        for identifier in source:
+            if not isinstance(identifier, str) or not re.fullmatch(r"o[0-9]{11,12}", identifier):
+                raise ValueError("invalid OT MACULA original selector")
+            by_original_macula_id[identifier].append(ordinal)
+        targets = []
+        for identifier in target:
+            if not isinstance(identifier, str) or not TARGET_RE.fullmatch(identifier):
+                raise ValueError("invalid OT French original selector")
+            targets.append(identifier[:8])
+        source_verses = sorted({identifier[1:9] for identifier in source})
+        target_verses = sorted(set(targets))
+        target_verse_present = bool(target_verses) and all(
+            verse in osis_verses and int(verse[:2]) < 40 for verse in target_verses
+        )
+        differing = bool(source_verses and target_verses and
+                         set(source_verses) != set(target_verses))
+        if not source:
+            status = "unresolved_no_original_macula_word"
+        elif not target_verse_present:
+            status = "unresolved_target_verse_not_attested"
+        else:
+            status = "verse_reference_present_word_unverified"
+            for verse in target_verses:
+                by_curated_verse[verse].append(ordinal)
+        census[status] += 1
+        if differing:
+            census["different_original_source_target_verse_coordinates"] += 1
+        row_index.append({
+            "original_ordinal": ordinal,
+            "original_macula_ids": source,
+            "original_target_ids": target,
+            "original_source_verses": source_verses,
+            "curated_target_verses": target_verses,
+            "original_source_target_verse_differ": differing,
+            "status": status,
+            "curated_word_position": None,
+            "target_word_inventory_verified": False,
+            "editorially_approved": False,
+        })
+    if sum(census.get(key, 0) for key in (
+        "unresolved_no_original_macula_word",
+        "unresolved_target_verse_not_attested",
+        "verse_reference_present_word_unverified"
+    )) != len(original_rows):
+        raise ValueError("OT candidates lost source records")
+    if sum(map(len, by_curated_verse.values())) < census["verse_reference_present_word_unverified"]:
+        raise ValueError("OT target verse index missing records")
+    payload = {
+        "format": "brsi-curated-translation-verse-index-candidate",
+        "schema_version": 1,
+        "canon": "ot",
+        "index_owner": "Bible Resources Semantic Index",
+        "provenance": "original_clear_bible_plus_reviewed_brsi_decisions",
+        "source_alignment_revision": alignment_revision,
+        "curated_release": curated_lock["release_tag"],
+        "curated_osis_sha256": curated_lock["osis_sha256"],
+        "status": "private_nonpublishing_unapproved",
+        "word_positions_available": False,
+        "original_alignment_records": len(row_index),
+        "coverage": dict(sorted(census.items())),
+        "by_original_macula_id": dict(sorted(by_original_macula_id.items())),
+        "by_curated_verse": dict(sorted(by_curated_verse.items())),
+        "rows": row_index,
+    }
+    raw = (json.dumps(payload, ensure_ascii=False, sort_keys=True,
+                      separators=(",", ":"), allow_nan=False) + "\n").encode("utf-8")
+    return raw, dict(sorted(census.items()))
+
+
+def write_private_index(raw: bytes, output: Path, coverage: dict) -> dict:
+    """Runner-local deterministic index and receipt, never inside Git."""
+    if output.resolve().is_relative_to(Path.cwd().resolve()):
+        raise ValueError("private alignment candidate must not be written in checkout")
+    with io.BytesIO() as buffer:
+        with gzip.GzipFile(fileobj=buffer, mode="wb", filename="", mtime=0,
+                           compresslevel=9) as archive:
+            archive.write(raw)
+        compressed = buffer.getvalue()
+    output.write_bytes(compressed)
+    return {
+        "gzip_sha256": hashlib.sha256(compressed).hexdigest(),
+        "gzip_bytes": len(compressed),
+        "uncompressed_sha256": hashlib.sha256(raw).hexdigest(),
+        "uncompressed_bytes": len(raw),
+        "coverage": coverage,
+        "editorially_approved": False,
+    }
+
+
 def compare_ot(osis_verses: dict[str, str], ot_candidate: dict):
     if ot_candidate.get("canon") != "ot" or ot_candidate.get("format") != "brsi-translation-alignment-candidate":
         raise ValueError("not the pinned OT candidate format")
@@ -547,7 +665,8 @@ def compare_ot(osis_verses: dict[str, str], ot_candidate: dict):
 
 def build_report(alignment_manifest: dict, curated_lock: dict,
                  upstream_root: Path, curated_root: Path,
-                 candidate_dir: Path, index_output: Path | None = None) -> dict:
+                 candidate_dir: Path, index_output: Path | None = None,
+                 ot_index_output: Path | None = None) -> dict:
     if alignment_manifest.get("schema_version") != 1 or curated_lock.get("schema_version") != 1:
         raise ValueError("wrong manifest schema")
     if not all(isinstance(curated_lock.get(key), str) and curated_lock[key].strip()
@@ -593,22 +712,13 @@ def build_report(alignment_manifest: dict, curated_lock: dict,
         raw, coverage = build_private_nt_word_index(
             verses, target, nt_candidate, curated_lock, alignment_manifest["revision"]
         )
-        with io.BytesIO() as buffer:
-            with gzip.GzipFile(fileobj=buffer, mode="wb", filename="", mtime=0,
-                               compresslevel=9) as archive:
-                archive.write(raw)
-            compressed = buffer.getvalue()
-        if index_output.resolve().is_relative_to(Path.cwd().resolve()):
-            raise ValueError("private alignment candidate must not be written in checkout")
-        index_output.write_bytes(compressed)
-        index_receipt = {
-            "gzip_sha256": hashlib.sha256(compressed).hexdigest(),
-            "gzip_bytes": len(compressed),
-            "uncompressed_sha256": hashlib.sha256(raw).hexdigest(),
-            "uncompressed_bytes": len(raw),
-            "coverage": coverage,
-            "editorially_approved": False,
-        }
+        index_receipt = write_private_index(raw, index_output, coverage)
+    ot_index_receipt = None
+    if ot_index_output is not None:
+        raw, coverage = build_private_ot_verse_index(
+            verses, ot_candidate, curated_lock, alignment_manifest["revision"]
+        )
+        ot_index_receipt = write_private_index(raw, ot_index_output, coverage)
     return {
         "schema_version": 1,
         "kind": "curated-lsg-verse-surface-and-ot-reference-diagnostic",
@@ -620,6 +730,7 @@ def build_report(alignment_manifest: dict, curated_lock: dict,
         "nt": nt,
         "ot": ot,
         "private_nt_word_index": index_receipt,
+        "private_ot_verse_index": ot_index_receipt,
         "editions_proven_identical": False,
         "token_mapping_certified": False,
         "publication_approved": False,
@@ -636,12 +747,13 @@ def main():
     parser.add_argument("--candidate-dir", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--index-output", type=Path)
+    parser.add_argument("--ot-index-output", type=Path)
     args = parser.parse_args()
     report = build_report(
         json.loads(args.alignment_manifest.read_text(encoding="utf-8")),
         json.loads(args.curated_lock.read_text(encoding="utf-8")),
         args.upstream_root, args.curated_root, args.candidate_dir,
-        args.index_output,
+        args.index_output, args.ot_index_output,
     )
     content = json.dumps(report, sort_keys=True, indent=2, ensure_ascii=False) + "\n"
     args.output.write_text(content, encoding="utf-8")
