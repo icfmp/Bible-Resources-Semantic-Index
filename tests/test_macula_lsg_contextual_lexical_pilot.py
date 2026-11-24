@@ -62,7 +62,7 @@ class PilotTests(unittest.TestCase):
             path.write_text(raw, encoding="utf-8")
             sha = hashlib.sha256(path.read_bytes()).hexdigest()
             source, census = pilot.pivot_source(path, "nt", sha)
-            self.assertEqual(source["n40001001001"], ("θεός", "n"))
+            self.assertEqual(source["n40001001001"], (pilot.norm("θεός"), "n"))
             self.assertEqual(census["pos_column"], "sp")
             self.assertEqual(census["tokens"], 2)
             with self.assertRaisesRegex(ValueError, "SHA-256"):
