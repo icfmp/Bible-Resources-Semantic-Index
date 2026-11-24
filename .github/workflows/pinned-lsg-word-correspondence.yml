@@ -5,6 +5,7 @@ on:
     paths:
       - "scripts/build_curated_lsg_word_correspondence.py"
       - "tests/test_curated_lsg_word_correspondence.py"
+      - "scripts/calibrate_aquifer_lsg_target_ids.py"
       - "links/alignments/clear-bible-lsg/**"
       - ".github/workflows/pinned-lsg-word-correspondence.yml"
   workflow_dispatch:
@@ -70,6 +71,21 @@ jobs:
           git -C /tmp/brsi-word-aquifer checkout --detach FETCH_HEAD
           test "$(git -C /tmp/brsi-word-aquifer rev-parse HEAD)" = "$revision"
           test "$(find /tmp/brsi-word-aquifer/fra/alignments/json -name '*.alignment.json' | wc -l)" -ge 1180
+      - name: Regenerate independently text-attested Clear.Bible NT word index
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -I scripts/audit_curated_translation_edition.py \
+            --alignment-manifest links/alignments/clear-bible-lsg/manifest.json \
+            --curated-lock links/alignments/clear-bible-lsg/curated-1.0.2.lock.json \
+            --upstream-root /tmp/brsi-word-clear \
+            --curated-root /tmp/brsi-word-reader \
+            --candidate-dir /tmp/brsi-word-original \
+            --output /tmp/brsi-word-nt-original-report.json \
+            --index-output /tmp/brsi-word-nt-original-index.json.gz
+          python3 -I scripts/verify_generated_json.py \
+            --generated /tmp/brsi-word-nt-original-report.json \
+            --baseline links/alignments/clear-bible-lsg/curated-1.0.2-parity.lock.json
       - name: Generate BRSI-owned original+independent MACULA French word candidate
         shell: bash
         run: |
@@ -109,6 +125,25 @@ jobs:
           assert doc['source_license_aquifer_alignment'] == 'CC BY-SA 4.0'
           assert sum(doc['status_counts'].values()) == 308404
           print('BRSI_MACULA_LSG_SOURCE_PRESERVATION_OK', r['status_counts'])
+          PY
+      - name: Calibrate auxiliary target IDs against source-text-attested NT word positions
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -I scripts/calibrate_aquifer_lsg_target_ids.py \
+            --gold-nt-index /tmp/brsi-word-nt-original-index.json.gz \
+            --auxiliary-index /tmp/brsi-macula-lsg-correspondence.json.gz \
+            --report /tmp/brsi-aquifer-target-id-calibration.json
+          python3 -I - <<'PY'
+          import json
+          from pathlib import Path
+          report = json.loads(Path('/tmp/brsi-aquifer-target-id-calibration.json').read_text())
+          c = report['counts']
+          assert c['original_nt_exact_french_word_candidates'] == 91649
+          assert c['original_nt_word_mapping_unresolved'] == 13158
+          assert c['aquifer_same_original_target_id_exact_word'] + c.get('aquifer_same_original_target_id_wrong_word', 0) + c.get('aquifer_original_target_id_not_located', 0) == 91649
+          assert report['target_id_equivalence_assumed'] is False
+          print('BRSI_NT_ORIGINAL_TARGET_ID_CROSSVALIDATION', c)
           PY
       - name: Check published private development evidence receipt when frozen
         run: |
