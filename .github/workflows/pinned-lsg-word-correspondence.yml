@@ -152,7 +152,10 @@ jobs:
           cause_counts = doc['unlinked_source_cause_counts']
           assert cause_counts == r['unlinked_source_cause_counts']
           assert doc['unlinked_source_diagnostics'] == r['unlinked_source_diagnostics']
-          assert len(reasons) == 119723
+          assert len(reasons) == sum(
+              coverage[canon]['macula_source_ids_without_word_evidence']
+              for canon in ('nt', 'ot'))
+          assert len(reasons) <= 119723  # no regression against reviewed PR #177
           assert all(source in doc['by_original_macula_id'] and not any(
               doc['rows'][i]['word_ids'] for i in doc['by_original_macula_id'][source]
           ) for source in reasons)
