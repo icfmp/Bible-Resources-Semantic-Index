@@ -163,23 +163,27 @@ class CuratedLSGEditionTests(unittest.TestCase):
         }])
         self.assertFalse(report["nt"]["target_token_id_matches_certified"])
 
-    def test_private_bridge_stages_exact_word_position_candidates_only(self):
+    def test_own_index_preserves_original_ids_and_reverse_lookup(self):
         import gzip
-        output = self.root / "internal-bridge.json.gz"
+        output = self.root / "internal-index.json.gz"
         report = module.build_report(self.manifest, self.lock, self.upstream,
                                      self.curated, self.candidate, output)
-        receipt = report["private_nt_word_candidate"]
+        receipt = report["private_nt_word_index"]
         self.assertEqual(receipt["coverage"]["surface_word_position_candidate"], 5)
         self.assertFalse(receipt["editorially_approved"])
         self.assertEqual(module.sha256(output), receipt["gzip_sha256"])
         payload = json.loads(gzip.decompress(output.read_bytes()))
         self.assertEqual(payload["status"], "private_nonpublishing_unapproved")
+        self.assertEqual(payload["index_owner"], "Bible Resources Semantic Index")
+        self.assertEqual(payload["format"], "brsi-curated-translation-word-index-candidate")
+        self.assertEqual(payload["by_original_macula_id"]["n40001001001"], [0])
+        self.assertEqual(payload["by_curated_word"]["40001001:1"], [0])
         self.assertEqual(payload["rows"][0]["original_macula_ids"], ["n40001001001"])
         self.assertEqual(payload["rows"][0]["original_target_ids"], ["40001001001"])
         self.assertEqual(payload["rows"][0]["curated_diagnostic_word_ordinal"], 1)
         self.assertFalse(payload["rows"][0]["editorially_approved"])
 
-    def test_private_bridge_abstains_on_unattested_and_crossverse_ids(self):
+    def test_own_index_retains_unattested_and_crossverse_abstentions(self):
         verses = module.read_osis(self.xml)
         targets, _ = module.read_target_tsv(self.upstream / "nt.tsv")
         candidate = {
@@ -193,18 +197,21 @@ class CuratedLSGEditionTests(unittest.TestCase):
                  "target_lookup_ids": ["40001001002"]},
             ],
         }
-        raw, counts = module.stage_private_nt_word_bridge(
+        raw, counts = module.build_private_nt_word_index(
             verses, targets, candidate, self.lock, self.manifest["revision"])
         payload = json.loads(raw)
         self.assertEqual(counts["surface_word_position_candidate"], 1)
         self.assertEqual(counts["reason_unattested_target_selector"], 1)
         self.assertEqual(counts["reason_cross_verse_selector"], 1)
         self.assertEqual(payload["rows"][1]["status"], "unresolved")
+        self.assertEqual(payload["by_original_macula_id"]["n40001001001"], [0, 1])
+        self.assertEqual(payload["by_curated_word"]["40001001:1"], [0])
+        self.assertNotIn("40001001:2", payload["by_curated_word"])
         self.assertIsNone(payload["rows"][1]["curated_diagnostic_word_ordinal"])
         self.assertFalse(payload["rows"][2]["editorially_approved"])
 
-    def test_private_bridge_rejects_output_inside_checked_out_repository(self):
-        output = Path.cwd() / "should-not-write-bridge.json.gz"
+    def test_own_index_rejects_output_inside_checked_out_repository(self):
+        output = Path.cwd() / "should-not-write-index.json.gz"
         with self.assertRaisesRegex(ValueError, "must not be written in checkout"):
             module.build_report(self.manifest, self.lock, self.upstream,
                                 self.curated, self.candidate, output)
