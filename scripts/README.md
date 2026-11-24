@@ -48,7 +48,7 @@ never changes the application. See [V1 consumer guide](../docs/V1_CONSUMPTION.md
   punctuation and segmentation mismatches and aligned-token boundary
   classes without inferring any word link or rewriting references. See
   [LSG 1.0.2 audit](../links/alignments/clear-bible-lsg/README.md).
-  Its optional, private, deterministic word-position candidate retains exact
+  Its optional, private, deterministic **BRSI-owned bidirectional word index** retains exact
   source IDs and explicitly separates surface-matched coordinates from
   unresolved punctuation, word-boundary and edition differences; it
   is never a validated mapping or distributable package.
