@@ -57,8 +57,19 @@ class AnchorOnlySyntaxReviewTests(unittest.TestCase):
         self.assertTrue(proposal["French_span_is_only_navigation_not_translation"])
         self.assertFalse(proposal["human_phrase_semantic_gold"])
         self.assertFalse(proposal["publication_authorized"])
+        self.assertEqual(proposal["existing_anchor_evidence_tier"],
+                         "aquifer_surface_attested_ot_candidate_not_semantic_gold")
         self.assertEqual(proposal["automatic_link_approvals"], 0)
         self.assertEqual(prior, (index, authored, parsed))
+
+    def test_NT_anchors_retain_their_distinct_direct_source_evidence_tier(self):
+        index, authored, _, groups = sample()
+        source = fixtures.NT_IDS[-1]
+        proposal = study.anchor_bracket(index, authored, source, groups[source])
+        if proposal is not None:
+            self.assertEqual(proposal["existing_anchor_evidence_tier"],
+                             "clear_bible_direct_nt_word_location_not_semantic_gold")
+            self.assertEqual(proposal["automatic_link_approvals"], 0)
 
     def test_without_two_distinct_target_words_the_small_group_abstains(self):
         index, authored, _, groups = sample()
