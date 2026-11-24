@@ -71,6 +71,12 @@ jobs:
             --curated-root /tmp/brsi-curated-reader \
             --candidate-dir /tmp/brsi-curated-candidate \
             --output /tmp/brsi-curated-edition-report.json
+      - name: Verify full pinned curated-edition diagnostic JSON receipt
+        run: |
+          set -euo pipefail
+          python3 -I scripts/verify_generated_json.py \
+            --generated /tmp/brsi-curated-edition-report.json \
+            --baseline links/alignments/clear-bible-lsg/curated-1.0.2-parity.lock.json
       - name: Explicit source and publication boundaries
         run: |
           echo "Read-only edition candidate comparison. No source text committed or uploaded."
