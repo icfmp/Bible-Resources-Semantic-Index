@@ -196,6 +196,29 @@ No Scripture text or word lists are committed as a product of this audit.
   OT French word identities are independently verified. The 920 differing
   source/target verse pairs still need independent versification witnesses.
 
+### Source-verified NT textual exception triage
+
+The maintained report also classifies **all** divergent NT verse character
+streams using original-target/curated-text witnesses, with no hard-coded
+verse-specific edit and no source text copied into the index. At the pinned
+Clear.Bible revision and reviewed Bible Resources LSG 1.0.2:
+
+- **8** verses in four adjacent Philippians pairs differ only in the
+  allocation of identical combined characters across verse boundaries;
+  preserve both original references until an independent versification decision.
+- **2** source verses, John 2:17 and Rom 13:9, contain characters absent from
+  Clear.Bible's published French target TSV. This proves a target-*inventory*
+  omission relative to our edition, **not** that an original alignment for
+  those words can be inferred.
+- **3** verses show only French orthographic spelling differences after
+  *diagnostic* folding (Phil 4:20 `a/à`; Titus 3:8 and 3:14 `œ/oe`).
+  Their exact original words and source wording remain unchanged.
+
+The exact case coordinates, categories and nonediting guarantees are pinned
+in [the generated parity report](curated-1.0.2-parity.lock.json) and checked
+against whole-corpus original inputs on every relevant PR. This improves
+editorial triage; it does not turn unresolved word IDs into certified links.
+
 ### Deterministic BRSI-owned word index (private pending review)
 
 The same pinned [curated audit workflow](../../../.github/workflows/pinned-curated-lsg-edition.yml)
