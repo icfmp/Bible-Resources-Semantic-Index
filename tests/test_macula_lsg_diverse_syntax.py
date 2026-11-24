@@ -180,6 +180,35 @@ class DiverseOriginalReviewUnitTests(unittest.TestCase):
         self.assertNotIn("Au commencement", json.dumps(report, ensure_ascii=False))
         self.assertEqual(json.loads(gzip.decompress(compressed)), private)
 
+    def test_pinned_source_XML_id_reconciliation_never_fabricates_missing_index(self):
+        index, authored, parsed = original_annotated_sample()
+        modified = copy.deepcopy(index)
+        linked_original = fixtures.NT_IDS[2]
+        modified["by_original_macula_id"].pop(linked_original)
+        old = (mod.BREADTH_SOURCES, mod.BREADTH_FILES)
+        try:
+            mod.BREADTH_SOURCES = (
+                ("ot", fixtures.OT_PATH, "law_covenant"),
+                ("nt", fixtures.NT_PATH, "letter"),
+            )
+            mod.BREADTH_FILES = tuple((c,n) for c,n,_ in mod.BREADTH_SOURCES)
+            private, report = mod.breadth(modified, authored, parsed)
+        finally:
+            mod.BREADTH_SOURCES, mod.BREADTH_FILES = old
+        self.assertEqual(report[
+            "original_XML_context_only_ids_absent_correspondence_index"], 1)
+        self.assertEqual(report["original_source_selector_reconciliation"][
+            "source_XML_context_only_decimal_selector_ids"], 1)
+        self.assertEqual(report["original_source_selector_reconciliation"][
+            "source_XML_context_only_nonnumeric_selector_ids"], 0)
+        self.assertEqual(sum(x[
+            "source_XML_ids_absent_original_correspondence_index"]
+            for x in report["per_source_document"]), 1)
+        self.assertIn(linked_original, private[
+            "source_tokens_not_in_existing_index"])
+        self.assertFalse(report["publication_authorized"])
+        self.assertEqual(report["new_french_word_or_phrase_links_approved"], 0)
+
     def test_source_file_has_unknown_canon_no_fallback_to_other_testament(self):
         index, authored, parsed = original_annotated_sample()
         saved = (mod.BREADTH_SOURCES, mod.BREADTH_FILES)
