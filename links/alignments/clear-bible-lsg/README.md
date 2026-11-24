@@ -229,8 +229,10 @@ editorial triage; it does not turn unresolved word IDs into certified links.
 ### Deterministic BRSI-owned NT word and OT verse indexes (private pending review)
 
 The same pinned [curated audit workflow](../../../.github/workflows/pinned-curated-lsg-edition.yml)
-also regenerates a **private** compressed, BRSI-owned, source-ID-preserving
-bidirectional word index for the actual curated LSG v1.0.2. No generated corpus is committed,
+also regenerates two **private** compressed, BRSI-owned, source-ID-preserving
+bidirectional indexes for the actual curated LSG v1.0.2: NT source word→French
+diagnostic word positions, and OT original Hebrew word→French **verse only**.
+No OT word mapping is inferred. No generated corpus is committed,
 uploaded as a public GitHub Actions artifact, released or sent to the Bible app.
 Its full deterministic SHA-256 and byte size are protected by
 [curated-1.0.2-parity.lock.json](curated-1.0.2-parity.lock.json), with a separate
