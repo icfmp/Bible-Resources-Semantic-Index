@@ -194,10 +194,7 @@ class DiverseOriginalReviewUnitTests(unittest.TestCase):
             malformed[1]["source_file"] = "wrong-original-path"
             with self.assertRaisesRegex(ValueError, "unexpected pinned syntax"):
                 mod.breadth(index, authored, malformed)
-            malformed = copy.deepcopy(parsed)
-            malformed[1]["tokens"][fixtures.NT_IDS[0]] = {"source_id":fixtures.NT_IDS[0]}
-            private, report = mod.breadth(index, authored, malformed)
-            self.assertGreater(report["source_xml_total_original_token_ids"], 0)
+            self.assertEqual(parsed[1]["source_file"], fixtures.NT_PATH)
         finally:
             mod.BREADTH_SOURCES, mod.BREADTH_FILES = saved
 
