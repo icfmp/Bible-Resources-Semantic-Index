@@ -50,7 +50,13 @@ def sha(raw: bytes) -> str:
 
 
 def source_verse(source: str) -> str:
-    if (len(source) < 10 or source[0] not in "no" or not source[1:].isdecimal()):
+    # Exact Hebrew lowfat <w xml:id> may contain a trailing Hebrew suffix
+    # (e.g. 'o010010050031ה'). Preserve it verbatim as source identity:
+    # original verses are encoded solely in the first eight decimal digits.
+    # Never strip a legitimate suffix or invent its numerical counterpart.
+    if (len(source) < 10 or source[0] not in "no" or
+            not source[1:9].isascii() or not source[1:9].isdecimal() or
+            not source[9:] or any(c.isspace() for c in source[9:])):
         raise ValueError("malformed original MACULA token ID")
     return source[1:9]
 
