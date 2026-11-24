@@ -81,7 +81,7 @@ never changes the application. See [V1 consumer guide](../docs/V1_CONSUMPTION.md
   NO-GO for mass auto-links.** This is neither a contextual translation
   model nor an OT independently gold-validated aligner; original
   source-word IDs, authored French text and existing links stay unchanged.
-- \`sample_macula_lsg_semantic_review.py\`: nonpublishing, original-ID
+- `sample_macula_lsg_semantic_review.py`: nonpublishing, original-ID
   **stratified semantic gold review sampler** (#187). Uniform deterministic
   selection of 500 still-unlinked original MACULA IDs in each of four
   independently pinned evidence strata. It emits **2,000 unreviewed cases**
