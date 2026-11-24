@@ -149,7 +149,14 @@ def candidate(
             "french_word_support_other_source_verses":
                 lexical_guess["support_independent_source_verses"],
             "french_word_support_share": lexical_guess["share"],
-            "source_verse_shared_with_training": False,
+            # Gold evaluation removes *all* 600 selected NT verses from
+            # lexicon learning. Exploratory unresolved original source verses
+            # can still contain other linked training anchors: do NOT claim
+            # held-out independence for their candidate hypotheses.
+            "original_source_verse_excluded_from_lexical_training":
+                hidden_source is not None,
+            "training_may_include_other_anchors_of_this_unresolved_verse":
+                hidden_source is None,
             "human_semantic_gold": False,
             "french_span_is_not_verified_translation": True,
             "automatic_word_or_phrase_links_approved": 0,
