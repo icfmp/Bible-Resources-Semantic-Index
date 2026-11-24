@@ -132,6 +132,65 @@ jobs:
                      for row in ot['rows'])
           print('BRSI_OWNED_OT_VERSE_INDEX', ot['coverage'])
           PY
+      - name: Check every NT Clear.Bible target surface against its exact authored French word
+        run: |
+          set -euo pipefail
+          python3 -I - <<'PY'
+          import gzip
+          import hashlib
+          import importlib.util
+          import json
+          import unicodedata
+          from collections import Counter
+          from pathlib import Path
+          spec = importlib.util.spec_from_file_location('edition', 'scripts/audit_curated_translation_edition.py')
+          ed = importlib.util.module_from_spec(spec)
+          spec.loader.exec_module(ed)
+          root = Path('links/alignments/clear-bible-lsg')
+          manifest = json.loads((root / 'manifest.json').read_text())
+          lock = json.loads((root / 'curated-1.0.2.lock.json').read_text())
+          upstream_files = {p['key']: p for p in manifest['inputs']}
+          key = next(x['target'] for x in manifest['groups'] if x['canon'] == 'nt')
+          input_spec = upstream_files[key]
+          tsv = ed.pinned_file(Path('/tmp/brsi-curated-upstream'), input_spec['path'], input_spec['sha256'])
+          words, _ = ed.read_target_tsv(tsv)
+          target = {identifier: surface for group in words.values() for identifier, surface in group}
+          authored_file = ed.pinned_file(Path('/tmp/brsi-curated-reader'), lock['osis_path'], lock['osis_sha256'])
+          authored = ed.read_osis(authored_file)
+          index = json.loads(gzip.decompress(Path('/tmp/brsi-curated-lsg-nt-index.json.gz').read_bytes()))
+          validated = 0
+          reasons = Counter()
+          for record in index['rows']:
+              assertion = record['authored_word_surface_attestation']
+              if record['status'] == 'unresolved':
+                  assert assertion is None
+                  continue
+              assert assertion is not None
+              assert record['editorially_approved'] is False
+              assert len(record['original_target_ids']) == 1
+              token = record['original_target_ids'][0]
+              assert token in target
+              assert record['curated_bcv'] == token[:8]
+              source = unicodedata.normalize('NFC', authored[record['curated_bcv']])
+              begin = assertion['nfc_start_codepoint']
+              end = assertion['nfc_end_codepoint']
+              assert 0 <= begin < end <= len(source)
+              word = source[begin:end]
+              assert hashlib.sha256(word.encode('utf-8')).hexdigest() == assertion['nfc_word_sha256']
+              original = unicodedata.normalize('NFC', target[token])
+              assert hashlib.sha256(original.encode('utf-8')).hexdigest() == assertion['original_target_nfc_sha256']
+              assert ed.classify_exact_word_surface(original, word) == assertion['word_surface_evidence']
+              assert assertion['word_ordinal'] == record['curated_diagnostic_word_ordinal']
+              assert assertion['source_surface_compatible_with_authored_word']
+              validated += 1
+              reasons[assertion['word_surface_evidence']] += 1
+          assert validated == index['coverage']['surface_word_position_candidate'] == 91649
+          assert sum(reasons.values()) == validated
+          for name, count in reasons.items():
+              assert index['coverage']['word_surface_evidence_' + name] == count
+          assert not any(row['editorially_approved'] for row in index['rows'])
+          print('BRSI_NT_EXACT_AUTHORIAL_WORD_EVIDENCE', dict(sorted(reasons.items())))
+          PY
       - name: Verify complete independently indexed French words against pinned authored OSIS
         run: |
           set -euo pipefail
