@@ -90,6 +90,16 @@ never changes the application. See [V1 consumer guide](../docs/V1_CONSUMPTION.md
   source IDs in one verse remain possible; later blind comparison must
   cluster by verse. See the
   [human-review protocol](../links/alignments/clear-bible-lsg/SEMANTIC_REVIEW_PROTOCOL.md).
+- `audit_macula_lsg_phrase_brackets.py`: source-locked, **nonpublishing**
+  original-word-group ↔ French-phrase *boundary hypothesis* explorer. It
+  brackets contiguous unresolved original MACULA IDs between independently
+  located French word anchors, retains original IDs and phrase spans as a
+  many-to-many candidate, and tests proposed intervals by masking 2,000
+  previously direct NT links. The exact original corpus and four-stratum
+  2,000-case review sample are pinned, and OT Aquifer candidates are explicitly
+  weaker evidence. A bracket is **not** word-level semantic equivalence,
+  grammatical sense approval, or permission for Bible highlighting. See
+  [source-owned protocol](../links/alignments/clear-bible-lsg/SEMANTIC_REVIEW_PROTOCOL.md).
 - `calibrate_aquifer_lsg_target_ids.py`: continuous source-pinned safety
   calibration against 91,649 independent original NT word witnesses.
   It demonstrates why identical **numeric** target IDs between independently
