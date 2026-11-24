@@ -144,12 +144,13 @@ def review_units(cases: list[dict]) -> tuple[list[dict], dict]:
     }
 
 
-def per_source_file(parsed: list[dict], cases: list[dict]) -> list[dict]:
+def per_source_file(parsed: list[dict], cases: list[dict], index: dict) -> list[dict]:
     """Book-specific counts make genre and OT-vs-NT asymmetry inspectable."""
     case_by_verse = collections.defaultdict(list)
     for c in cases:
         case_by_verse[c["original_verse"]].append(c)
     res = []
+    indexed_sources = index["by_original_macula_id"]
     genre_map = {(canon, name): genre
                  for canon, name, genre in BREADTH_SOURCES}
     for doc in parsed:
@@ -159,6 +160,19 @@ def per_source_file(parsed: list[dict], cases: list[dict]) -> list[dict]:
         if any(c["canon"] != canon for c in in_scope):
             raise ValueError("source verse reused in wrong Testament")
         counted = collections.Counter()
+        original_ids = set(doc["tokens"])
+        source_only_ids = original_ids.difference(indexed_sources)
+        counted["source_XML_ids_absent_original_correspondence_index"] = len(
+            source_only_ids)
+        counted["source_XML_ids_with_nonnumeric_original_selector"] = sum(
+            not source[1:].isascii() or not source[1:].isdecimal()
+            for source in original_ids)
+        counted["source_only_IDs_with_nonnumeric_original_selector"] = sum(
+            not source[1:].isascii() or not source[1:].isdecimal()
+            for source in source_only_ids)
+        counted["source_only_IDs_with_decimal_original_selector"] = (
+            len(source_only_ids)
+            - counted["source_only_IDs_with_nonnumeric_original_selector"])
         for case in in_scope:
             counted["unlinked_indexed_original_ids"] += 1
             if case["minimum_source_syntactic_constituent"]:
@@ -197,9 +211,17 @@ def breadth(
     private, base = syntax.synthesize(
         index, authored, parsed, expected_pilot_files=BREADTH_FILES)
     grouped, grammar = review_units(private["cases"])
-    byfile = per_source_file(parsed, private["cases"])
+    byfile = per_source_file(parsed, private["cases"], index)
     if len(byfile) != len(BREADTH_SOURCES):
         raise ValueError("missing selected original-language source witness")
+    if (sum(x["source_XML_ids_absent_original_correspondence_index"]
+            for x in byfile) !=
+            base["original_XML_context_only_ids_absent_correspondence_index"]):
+        raise ValueError("per-source-book original XML↔index reconciliation mismatch")
+    if sum(x["source_only_IDs_with_decimal_original_selector"] for x in byfile) > 0:
+        # Numeric source-only IDs may be legitimate differences between
+        # upstream editions. Report them, never synthesize missing links.
+        pass
     if sum(x["unlinked_indexed_original_ids"] for x in byfile) != len(private["cases"]):
         raise ValueError("per-source-file unresolved audit incomplete")
     if (grammar["original_ids_represented_in_review_units"] +
