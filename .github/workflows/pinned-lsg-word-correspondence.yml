@@ -650,6 +650,8 @@ jobs:
           assert r['full_corpus_brackets']['bracketed_original_ids'] > 0
           print('BRSI_PHRASE_BRACKET_FULL_SOURCE_REVIEW_COUNTS',
                 r['full_corpus_brackets'], r['masked_direct_nt_2k_gold'])
+          print('BRSI_PHRASE_BRACKET_SOURCE_FREE_RECEIPT')
+          print(Path('/tmp/brsi-macula-phrase-bracket-report.json').read_text())
           PY
           if test -f links/alignments/clear-bible-lsg/phrase-bracket-pilot.lock.json; then
             python3 -I scripts/verify_generated_json.py \
