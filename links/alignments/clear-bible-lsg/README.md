@@ -353,6 +353,49 @@ Each record therefore retains its evidence class, original MACULA IDs,
 original Clear.Bible selectors and `linguistically_reviewed_by_brsi=false`.
 The producer neither rewrites the LSG nor invents any missing alignments.
 
+### Investigating all 119,723 unlinked original MACULA source IDs
+
+The full source-pinned audit no longer treats all unlinked MACULA IDs as
+119,723 independent mapping failures. It checks **each original source ID**
+against Aquifer's explicit `meta.nonEquivalent.source` entries, its original
+source-to-target alignment records and the original WLCM Hebrew word-part
+coordinates already in the BRSI-owned index.
+
+| Primary source-evidence category | NT | OT | Total |
+| --- | ---: | ---: | ---: |
+| Listed in Aquifer `nonEquivalent.source` | 3,378 | 59,514 | **62,892** |
+| Another original Hebrew part of the same numbered word has an attested French link | 0 | 8,774 | **8,774** |
+| Aquifer source alignment exists, but its target cannot be uniquely located in our authored LSG 1.0.2 | 2,757 | 18,075 | **20,832** |
+| No usable source alignment record in Aquifer | 5,302 | 21,923 | **27,225** |
+| **Unlinked source ID total** | **11,437** | **108,286** | **119,723** |
+
+These categories are **diagnostics, not editorial judgments**:
+
+- An Aquifer `nonEquivalent.source` annotation reports that *Aquifer's
+  particular source alignment* gives no target equivalent; it is **not
+  proof that the original Hebrew/Greek element is untranslated** or an
+  authorization to drop it. Among all original IDs, 4,597 have both an
+  Aquifer nonEquivalent annotation and a **separate BRSI word-link witness**;
+  the annotation cannot be promoted to a universal prohibition.
+- Hebrew word-part evidence says only that another original part with
+  the same numbered Hebrew word has a link; it **does not inherit that
+  French word position** for the unlinked part.
+- The 20,832 French-location cases are the **next text-evidence recovery
+  queue**, for independent verse-local word matching and repeated-word
+  disambiguation. The 27,225 source-record absences require genuinely
+  additional evidence; numbers, lemmas or co-occurrence alone are not
+  word alignment proof.
+
+Every original ID is individually indexed with its own primary evidence
+category in `unlinked_cause_by_original_macula_id`. The full set
+partitions the same **119,723** unlinked IDs, and the full source-pinned
+workflow verifies that no member was accidentally assigned a French
+word. Detailed numbers, source fingerprints, no-approval controls and the
+exact rebuilt SHA-256 are locked in
+[aquifer-correspondence.lock.json](aquifer-correspondence.lock.json).
+The existing Scripture, word locations, source IDs, licenses and original
+Clear.Bible alignment records are unchanged.
+
 ### Why an OT target selector ordinal is NOT our French word index
 
 A complete source-driven *negative calibration* against the **91,649**
