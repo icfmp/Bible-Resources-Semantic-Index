@@ -114,7 +114,10 @@ class LSGOriginalWordWitnessTests(unittest.TestCase):
         authored = ["Béthel", "Dieu", "répondit", "Alpha", "Dieu", "parla"]
         # The first source phrase joins words around an unknown/missing
         # original target token. No positional assumption may bridge it.
-        tokens = [("40001001" + str(i + 1 + (i >= 1)).zfill(3), word)
+        # Leave an original target gap on BOTH sides of the first
+        # repeated French word. The later exact trigram stays intact.
+        ids = [1, 3, 5, 6, 7, 8]
+        tokens = [("40001001" + str(ids[i]).zfill(3), word)
                   for i, word in enumerate(original)]
         spans = [(word, i * 20, i * 20 + len(word))
                  for i, word in enumerate(authored)]
