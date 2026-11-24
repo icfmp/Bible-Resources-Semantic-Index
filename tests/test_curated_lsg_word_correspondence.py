@@ -91,6 +91,37 @@ class LSGOriginalWordWitnessTests(unittest.TestCase):
         self.assertEqual([authored[result[i][0]][0] for i in range(3)],
                          ["Jean", "Pierre", "Paul"])
 
+    def test_apostrophe_typography_only_recovers_unique_original_word(self):
+        result = tool.locate_aquifer_words_with_proof(
+            [("40001001001", "l'amour")],
+            [("l’amour", 0, 7)])
+        self.assertEqual(result, {0: (0, "unique_apostrophe_style_only")})
+        self.assertEqual(tool.apostrophe_style_key("l'amour"),
+                         tool.apostrophe_style_key("l’amour"))
+        self.assertNotEqual("l'amour", "l’amour")
+
+    def test_apostrophe_variant_never_folds_case_accents_hyphens_or_duplicates(self):
+        cases = [
+            ("L'amour", ["l’amour"]),
+            ("a-t-il", ["a–t–il"]),
+            ("a", ["à"]),
+            ("oeuvre", ["œuvre"]),
+            ("l'amour", ["l’amour", "l’amour"]),
+            ("l'amour", ["l’amour", "l'amour"]),
+        ]
+        for source, authored in cases:
+            with self.subTest(source=source, authored=authored):
+                positions = tool.locate_aquifer_words_with_proof(
+                    [("40001001001", source)],
+                    [(word, i * 20, i * 20 + len(word))
+                     for i, word in enumerate(authored)])
+                self.assertFalse(any(
+                    proof == "unique_apostrophe_style_only"
+                    for _, proof in positions.values()))
+        self.assertEqual(tool.locate_aquifer_words_with_proof(
+            [("40001001001", "l'amour"), ("40001001002", "l’amour")],
+            [("l’amour", 0, 7)]), {})
+
     def test_unique_surface_fallback_never_guesses_repeated_words(self):
         self.assertEqual(tool.locate_aquifer_words_with_proof(
             [("40001001001", "Dieu")],
@@ -116,6 +147,8 @@ class LSGOriginalWordWitnessTests(unittest.TestCase):
         self.assertEqual(proof["location_proof"], "forced_ordered_exact_word")
         import hashlib
         self.assertEqual(proof["word_sha256"],
+                         hashlib.sha256(b"Au").hexdigest())
+        self.assertEqual(proof["original_french_surface_sha256"],
                          hashlib.sha256(b"Au").hexdigest())
         self.assertFalse(doc["rows"][0]["linguistically_reviewed_by_brsi"])
 
