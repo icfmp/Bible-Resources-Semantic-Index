@@ -192,7 +192,7 @@ class LSGOriginalWordWitnessTests(unittest.TestCase):
     def test_alignment_source_whose_target_was_not_located_remains_unresolved(self):
         self.aquifer_doc["groups"][0]["records"].append({
             "source": ["010010010099|אֵת"],
-            "target": ["01001001098|absent_du_texte"],
+            "target": ["01001001098|Introuvable"],
         })
         self.save()
         raw, _ = tool.build_corroborated_index(
@@ -204,6 +204,45 @@ class LSGOriginalWordWitnessTests(unittest.TestCase):
             "aquifer_record_source_with_no_uniquely_located_french_word")
         self.assertEqual(data["rows"][1]["word_ids"], [])
         self.assertEqual(sum(data["unlinked_source_cause_counts"]["ot"].values()), 1)
+        self.assertEqual(
+            data["unlocated_french_target_cause_by_original_macula_id"]["o010010010099"],
+            "exact_french_word_absent_from_curated_verse")
+        self.assertEqual(
+            data["unlocated_french_target_cause_counts"]["ot"],
+            {"exact_french_word_absent_from_curated_verse": 1})
+
+    def test_original_repeated_french_target_without_unique_position_remains_unmapped(self):
+        self.aquifer_doc["groups"][0]["records"].append({
+            "source": ["010010010099|אֵת"],
+            "target": ["01001001099|Au"],
+        })
+        self.save()
+        raw, _ = tool.build_corroborated_index(
+            self.aquifer, self.candidates, self.osis, self.lock,
+            "a" * 40, "b" * 40)
+        doc = json.loads(raw)
+        self.assertEqual(doc["rows"][1]["word_ids"], [])
+        self.assertEqual(
+            doc["unlocated_french_target_cause_by_original_macula_id"]["o010010010099"],
+            "repeated_exact_word_surface_not_uniquely_locatable")
+        self.assertEqual(
+            doc["unlocated_french_target_cause_counts"]["ot"],
+            {"repeated_exact_word_surface_not_uniquely_locatable": 1})
+
+    def test_aquifer_source_alignment_without_french_target_remains_unmapped(self):
+        self.aquifer_doc["groups"][0]["records"].append({
+            "source": ["010010010099|אֵת"],
+            "target": [],
+        })
+        self.save()
+        raw, _ = tool.build_corroborated_index(
+            self.aquifer, self.candidates, self.osis, self.lock,
+            "a" * 40, "b" * 40)
+        doc = json.loads(raw)
+        self.assertEqual(doc["rows"][1]["word_ids"], [])
+        self.assertEqual(
+            doc["unlocated_french_target_cause_by_original_macula_id"]["o010010010099"],
+            "aquifer_source_record_without_target_token")
 
     def test_direct_clear_bible_nt_word_wins_over_incompatible_aquifer_source_alignment(self):
         import gzip

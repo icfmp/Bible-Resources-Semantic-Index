@@ -20,8 +20,8 @@
   },
   "curated_osis_sha256": "2b8342a67d8e97b433670450fe9dd9e58917a7fcfc0cb4d321882ca8219dc3bd",
   "curated_release": "lsg-1.0.2",
-  "gzip_bytes": 35765924,
-  "gzip_sha256": "b14e4c7323f46f00cb0e48316408ff27758c9c6d77d622c77180d6b21aac9f4a",
+  "gzip_bytes": 35840507,
+  "gzip_sha256": "9978414b07dec293aaa4c08ab5e3c3b1b2886f177ab767325c448d75ec919d83",
   "kind": "brsi-macula-curated-lsg-word-corroboration-development",
   "no_automatic_editorial_approval": true,
   "original_group_counts": {
@@ -72,8 +72,8 @@
     "nt_original_target_id_attested_by_aquifer": 97592,
     "nt_original_target_id_not_located_by_aquifer": 7215
   },
-  "uncompressed_bytes": 461784803,
-  "uncompressed_sha256": "1cc365f469261b51a94e13e0f253f150040fd2231e4b8fb219c18985c52ba8f8",
+  "uncompressed_bytes": 463079873,
+  "uncompressed_sha256": "1f92e965ce70ee65cc41d40574017a85d7b1bb6004612149fc030d64a168103a",
   "unlinked_source_cause_counts": {
     "nt": {
       "aquifer_explicit_non_equivalent_source": 3378,
@@ -93,5 +93,17 @@
     "aquifer_non_equivalent_without_pinned_macula": 0,
     "aquifer_source_record_unique": 506899,
     "aquifer_source_record_without_pinned_macula": 0
+  },
+  "unlocated_french_target_cause_counts": {
+    "nt": {
+      "exact_french_word_absent_from_curated_verse": 2596,
+      "mixed_unlocated_french_target_causes": 9,
+      "repeated_exact_word_surface_not_uniquely_locatable": 151
+    },
+    "ot": {
+      "exact_french_word_absent_from_curated_verse": 17284,
+      "mixed_unlocated_french_target_causes": 16,
+      "repeated_exact_word_surface_not_uniquely_locatable": 769
+    }
   }
 }

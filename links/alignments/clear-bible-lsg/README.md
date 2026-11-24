@@ -436,6 +436,45 @@ updated source-derived output and its deterministic gzip digest are
 locked in [aquifer-correspondence.lock.json](aquifer-correspondence.lock.json);
 no public release or Bible application change is implied.
 
+### What remains among the 20,825 Aquifer word-location failures
+
+A further complete pinned-source audit differentiates source-edition word
+surface divergence from genuinely repeated-word location ambiguity. It
+examines **all Aquifer original source→target witnesses** whose source
+MACULA ID has no attested LSG 1.0.2 French word location. The exact
+French target surface must be taken from Aquifer's recorded target token,
+not guessed from either numeric ordinal.
+
+| Original target-location failure | NT source IDs | OT source IDs | Total |
+| --- | ---: | ---: | ---: |
+| Complete original Aquifer French word **not exactly present** anywhere among our authored LSG words in that target verse | 2,596 | 17,284 | **19,880** |
+| Exact French word exists, but a **repeated surface** prevents a uniquely proven location | 151 | 769 | **920** |
+| Several original target witnesses have **different failure causes** | 9 | 16 | **25** |
+| **All source IDs in target-location recovery queue** | **2,756** | **18,069** | **20,825** |
+
+This is **not** evidence that 19,880 Greek/Hebrew translation links are
+wrong. It means that the target word string in the *specific Aquifer
+French corpus* has no **exact NFC-identical full-word surface** in
+our independently curated LSG 1.0.2 corresponding verse. Differences
+may arise from apostrophe/hyphen styles, letter-case, orthography,
+tokenization, wording or a genuine editorial edition difference. No
+historical French text is rewritten to force equality.
+
+The other 920 require stronger local context before linking a repeated
+French word to an original MACULA source. The 25 mixed cases retain
+multiple original target testimonies; none was silently chosen.
+
+Each of the **20,825** source IDs gets an independent second-level,
+text-free classification in
+`unlocated_french_target_cause_by_original_macula_id`, while the
+maintained index retains its **119,712** primary unlinked causes.
+The exact aggregate is pinned in
+[aquifer-correspondence.lock.json](aquifer-correspondence.lock.json),
+and source-pinned CI refuses an incomplete or non-reproducible partition.
+Future recovery work should first measure **strict, explicitly graded
+orthographic equivalences** against exact French word spans, separately
+from substantive translation changes, and reject nonunique matches.
+
 ### Why an OT target selector ordinal is NOT our French word index
 
 A complete source-driven *negative calibration* against the **91,649**

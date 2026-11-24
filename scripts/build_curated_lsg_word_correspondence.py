@@ -154,6 +154,7 @@ def load_aquifer(root: Path, authored: dict[str, str],
         raise ValueError("Aquifer chapter set is incomplete")
     targets_by_verse: dict[str, dict[str, str]] = defaultdict(dict)
     raw_links: list[tuple[str, str, str]] = []
+    unlocated_target_reasons: dict[str, str] = {}
     record_source_ids: set[str] = set()
     explicitly_non_equivalent_source_ids: set[str] = set()
     counts = Counter()
@@ -221,6 +222,8 @@ def load_aquifer(root: Path, authored: dict[str, str],
     for bcv, originals in sorted(targets_by_verse.items()):
         if bcv not in authored:
             counts["target_verse_missing_from_curated"] += 1
+            for original_id in originals:
+                unlocated_target_reasons[original_id] = "target_verse_absent_from_curated_LSG"
             continue
         content = unicodedata.normalize("NFC", authored[bcv])
         authored_words = word_tokens(content)
@@ -254,6 +257,26 @@ def load_aquifer(root: Path, authored: dict[str, str],
             }
             counts["target_tokens_uniquely_located"] += 1
         counts["target_tokens_unresolved"] += len(items) - len(positions)
+        located_ids = {eligible[i][0] for i in positions}
+        original_full_word_counts = Counter(surface for _, surface in eligible)
+        authored_word_counts = Counter(word for word, _, _ in authored_words)
+        authored_word_set = set(authored_word_counts)
+        eligible_ids = {original_id for original_id, _ in eligible}
+        for original_id, surface in items:
+            if original_id in located_ids:
+                continue
+            if original_id not in eligible_ids:
+                cause = "original_target_not_a_single_complete_french_word"
+            elif surface not in authored_word_set:
+                cause = "exact_french_word_absent_from_curated_verse"
+            elif (original_full_word_counts[surface] > 1 or
+                  authored_word_counts[surface] > 1):
+                cause = "repeated_exact_word_surface_not_uniquely_locatable"
+            else:
+                # The ordered and unique-surface locators should cover every
+                # complete exact source word appearing once on each side.
+                raise ValueError("complete uniquely occurring original French word was not located")
+            unlocated_target_reasons[original_id] = cause
     witness_by_source: dict[str, set[str]] = defaultdict(set)
     for src, target_id, _ in raw_links:
         if target_id in located:
@@ -261,9 +284,15 @@ def load_aquifer(root: Path, authored: dict[str, str],
             witness_by_source[prefix + src].add(target_id)
             counts["exact_located_source_target_edges"] += 1
     if include_source_evidence:
+        raw_source_targets = defaultdict(set)
+        for raw_source_id, original_target_id, _ in raw_links:
+            prefix = "o" if int(raw_source_id[:2]) < 40 else "n"
+            raw_source_targets[prefix + raw_source_id].add(original_target_id)
         return (located, witness_by_source, dict(sorted(counts.items())), {
             "in_aquifer_alignment_records": record_source_ids,
             "aquifer_declared_non_equivalent": explicitly_non_equivalent_source_ids,
+            "record_target_ids_by_original_macula_id": raw_source_targets,
+            "unlocated_aquifer_target_reason": unlocated_target_reasons,
         })
     return located, witness_by_source, dict(sorted(counts.items()))
 
@@ -503,6 +532,31 @@ def build_corroborated_index(aquifer_root: Path, original_candidates: Path,
         if sum(reason_counts[canon].values()) != source_coverage[canon][
                 "macula_source_ids_without_word_evidence"]:
             raise ValueError("unresolved MACULA cause audit failed full-corpus partition")
+    # Partition precisely the next remediation queue: original source IDs
+    # that have an Aquifer alignment row, but no safely locatable French word.
+    unlocated_by_source = {}
+    unlocated_source_counts = defaultdict(Counter)
+    for source_id, cause in unlinked_reasons.items():
+        if cause != "aquifer_record_source_with_no_uniquely_located_french_word":
+            continue
+        targets = source_evidence["record_target_ids_by_original_macula_id"].get(
+            source_id, set())
+        if not targets:
+            detail = "aquifer_source_record_without_target_token"
+        else:
+            causes = {source_evidence["unlocated_aquifer_target_reason"].get(
+                target, "target_missing_source_evidence") for target in targets}
+            if len(causes) == 1:
+                detail = next(iter(causes))
+            else:
+                detail = "mixed_unlocated_french_target_causes"
+        canon = "ot" if source_id.startswith("o") else "nt"
+        unlocated_by_source[source_id] = detail
+        unlocated_source_counts[canon][detail] += 1
+    for canon in ("nt", "ot"):
+        if sum(unlocated_source_counts[canon].values()) != reason_counts[canon][
+                "aquifer_record_source_with_no_uniquely_located_french_word"]:
+            raise ValueError("full unlocated French target cause census incomplete")
     diagnostics = Counter({
         "aquifer_non_equivalent_source_unique": len(aquifer_non_equivalent_ids),
         "aquifer_non_equivalent_source_also_linked": len(
@@ -532,6 +586,11 @@ def build_corroborated_index(aquifer_root: Path, original_candidates: Path,
         },
         "unlinked_source_diagnostics": dict(sorted(diagnostics.items())),
         "unlinked_cause_by_original_macula_id": unlinked_reasons,
+        "unlocated_french_target_cause_by_original_macula_id": unlocated_by_source,
+        "unlocated_french_target_cause_counts": {
+            canon: dict(sorted(unlocated_source_counts[canon].items()))
+            for canon in ("nt", "ot")
+        },
         "unlinked_cause_evidence_level": "source_metadata_or_structure_not_word_equivalence",
         "supplemental_macula_source_counts": dict(sorted(supplemental_counts.items())),
         "aquifer_text_witness_census": census,
@@ -546,6 +605,7 @@ def build_corroborated_index(aquifer_root: Path, original_candidates: Path,
             {k: report[k] for k in (
                 "original_group_counts", "source_coverage",
                 "unlinked_source_cause_counts", "unlinked_source_diagnostics",
+                "unlocated_french_target_cause_counts",
                 "supplemental_macula_source_counts",
                 "aquifer_text_witness_census", "status_counts", "target_id_calibration")})
 
