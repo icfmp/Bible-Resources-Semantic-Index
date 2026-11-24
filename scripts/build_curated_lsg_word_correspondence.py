@@ -149,6 +149,59 @@ def contiguous_original_target_trigrams(
     }
 
 
+def uniquely_anchored_original_target_pairs(
+        original_tokens: list[tuple[str, str]],
+        authored_words: list[tuple[str, int, int]],
+        existing: dict[int, tuple[int, str]]) -> dict[int, tuple[int, str]]:
+    """Locate repeated exact French words beside a unique, attested word.
+
+    A *strictly consecutive original full-word target selector* must stand
+    immediately beside an original French target word whose **whole
+    surface** occurs exactly once in BOTH original and authored verses.
+    That adjacent anchor must already have a stronger established word
+    location. The identical repeated French word must itself stand
+    immediately beside the exact anchor in the authored verse. Two
+    disagreeing anchors, repeated anchors, target conflicts, verse gaps
+    and any non-exact surface fail closed. This is only target *location*
+    evidence, never original-language translation approval.
+    """
+    original = [surface for _, surface in original_tokens]
+    authored = [word for word, _, _ in authored_words]
+    source_count = Counter(original)
+    authored_count = Counter(authored)
+    occupied = {j for j, _ in existing.values()}
+    proposals = {}
+    for i, (selector, word) in enumerate(original_tokens):
+        if i in existing or (source_count[word] == authored_count[word] == 1):
+            continue
+        if len(selector) != 11:
+            continue
+        word_positions = set()
+        for k in (i - 1, i + 1):
+            if not (0 <= k < len(original_tokens) and k in existing):
+                continue
+            anchor_selector, anchor_word = original_tokens[k]
+            if (len(anchor_selector) != 11 or
+                anchor_selector[:8] != selector[:8] or
+                int(selector[8:]) - int(anchor_selector[8:]) != i - k):
+                continue
+            if (source_count[anchor_word] != 1 or
+                authored_count[anchor_word] != 1):
+                continue
+            j = existing[k][0] + i - k
+            if (0 <= j < len(authored) and authored[j] == word and
+                authored[existing[k][0]] == anchor_word):
+                word_positions.add(j)
+        if len(word_positions) == 1:
+            proposals[i] = next(iter(word_positions))
+    duplicate_proposals = Counter(proposals.values())
+    return {
+        i: (j, "unique_exact_adjacent_anchored_pair")
+        for i, j in sorted(proposals.items())
+        if j not in occupied and duplicate_proposals[j] == 1
+    }
+
+
 def locate_aquifer_words_with_proof(
         original_tokens: list[tuple[str, str]],
         authored_words: list[tuple[str, int, int]]
@@ -183,6 +236,11 @@ def locate_aquifer_words_with_proof(
             original_tokens, authored_words, result).items():
         if source_index in result:
             raise ValueError("trigram proof cannot override earlier word locator")
+        result[source_index] = located
+    for source_index, located in uniquely_anchored_original_target_pairs(
+            original_tokens, authored_words, result).items():
+        if source_index in result:
+            raise ValueError("adjacent anchor cannot override earlier word locator")
         result[source_index] = located
     if len({position for position, _ in result.values()}) != len(result):
         raise ValueError("original targets would duplicate authored word span")

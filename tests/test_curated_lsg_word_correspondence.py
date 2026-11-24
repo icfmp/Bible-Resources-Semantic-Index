@@ -114,7 +114,10 @@ class LSGOriginalWordWitnessTests(unittest.TestCase):
         authored = ["Béthel", "Dieu", "répondit", "Alpha", "Dieu", "parla"]
         # The first source phrase joins words around an unknown/missing
         # original target token. No positional assumption may bridge it.
-        tokens = [("40001001" + str(i + 1 + (i >= 1)).zfill(3), word)
+        # Leave an original target gap on BOTH sides of the first
+        # repeated French word. The later exact trigram stays intact.
+        ids = [1, 3, 5, 6, 7, 8]
+        tokens = [("40001001" + str(ids[i]).zfill(3), word)
                   for i, word in enumerate(original)]
         spans = [(word, i * 20, i * 20 + len(word))
                  for i, word in enumerate(authored)]
@@ -141,6 +144,67 @@ class LSGOriginalWordWitnessTests(unittest.TestCase):
             [("40001001001", "A"), ("40001001003", "X"),
              ("40001001004", "B")],
             [("A", 0, 1), ("X", 2, 3), ("B", 4, 5)], {}), {})
+
+    def test_repeated_word_recovered_with_unique_neighbor_anchor_when_trigram_absent(self):
+        original = ["Alpha", "Dieu", "Beta", "Dieu"]
+        authored = ["Beta", "Dieu", "Alpha", "Dieu"]
+        tokens = [("40001001" + str(i + 1).zfill(3), word)
+                  for i, word in enumerate(original)]
+        spans = [(word, i * 15, i * 15 + len(word))
+                 for i, word in enumerate(authored)]
+        result = tool.locate_aquifer_words_with_proof(tokens, spans)
+        self.assertEqual(result[1], (3, "unique_exact_adjacent_anchored_pair"))
+        self.assertEqual(result[3], (1, "unique_exact_adjacent_anchored_pair"))
+        self.assertEqual([authored[result[i][0]] for i in range(4)], original)
+
+    def test_adjacent_anchor_never_crosses_original_target_selector_gap(self):
+        original = ["Alpha", "Dieu", "Beta", "Dieu"]
+        authored = ["Beta", "Dieu", "Alpha", "Dieu"]
+        selectors = ["40001001001", "40001001003",
+                     "40001001004", "40001001005"]
+        spans = [(word, i * 15, i * 15 + len(word))
+                 for i, word in enumerate(authored)]
+        result = tool.locate_aquifer_words_with_proof(
+            list(zip(selectors, original)), spans)
+        self.assertNotIn(1, result)
+        self.assertEqual(result[3], (1, "unique_exact_adjacent_anchored_pair"))
+
+    def test_adjacent_anchor_abstains_when_both_exact_unique_neighbors_disagree(self):
+        tokens = [("40001001001", "Alpha"),
+                  ("40001001002", "Dieu"),
+                  ("40001001003", "Beta")]
+        authored = [("Alpha", 0, 5), ("Dieu", 6, 10), ("autre", 11, 16),
+                    ("Dieu", 17, 21), ("Beta", 22, 26)]
+        anchored = tool.uniquely_anchored_original_target_pairs(
+            tokens, authored, {
+                0: (0, "forced_ordered_exact_word"),
+                2: (4, "forced_ordered_exact_word"),
+            })
+        self.assertNotIn(1, anchored)
+
+    def test_adjacent_anchor_requires_unique_existing_neighbor_and_unused_target(self):
+        tokens = [("40001001001", "Alpha"),
+                  ("40001001002", "Dieu"),
+                  ("40001001003", "Alpha")]
+        authored = [("Alpha", 0, 5), ("Dieu", 6, 10),
+                    ("Alpha", 11, 16)]
+        self.assertEqual(tool.uniquely_anchored_original_target_pairs(
+            tokens, authored, {}), {})
+        self.assertEqual(tool.uniquely_anchored_original_target_pairs(
+            tokens, authored, {0: (0, "forced_ordered_exact_word")}), {})
+        # A strong proof already occupying the candidate French target
+        # cannot be replaced by a contextual adjacency heuristic.
+        unique_tokens = [("40001001001", "Alpha"),
+                         ("40001001002", "Dieu"),
+                         ("40001001003", "Beta"),
+                         ("40001001004", "Dieu")]
+        unique_authored = [("Alpha", 0, 5), ("Dieu", 6, 10),
+                           ("Beta", 11, 15), ("Dieu", 16, 20)]
+        self.assertNotIn(1, tool.uniquely_anchored_original_target_pairs(
+            unique_tokens, unique_authored,
+            {0: (0, "forced_ordered_exact_word"),
+             2: (2, "forced_ordered_exact_word"),
+             3: (1, "forced_ordered_exact_word")}))
 
     def test_unique_surface_fallback_never_guesses_repeated_words(self):
         self.assertEqual(tool.locate_aquifer_words_with_proof(
