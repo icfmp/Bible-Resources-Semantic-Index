@@ -297,6 +297,22 @@ jobs:
           assert all(sum(report['source_coordinate_context_by_canon'][canon].values()) ==
                      report['original_unlinked_exact_word_absence'][canon]
                      for canon in ('nt', 'ot'))
+          independent = report['cross_witness_verse_reference_corroboration']
+          cases = independent['cases']
+          assert len(cases) == 9
+          assert sum(independent['counts'].values()) == len(cases)
+          assert len({c['original_macula_source_id'] for c in cases}) == 9
+          assert all(
+              c['word_translation_approved'] is False and
+              c['verse_remapping_approved'] is False and
+              c['macula_original_source_verse'] not in
+                  c['aquifer_original_target_verses']
+              for c in cases)
+          assert all(
+              c['original_macula_source_id'].startswith('o')
+              for c in cases)
+          print('BRSI_CLEAR_BIBLE_AQUIFER_SOURCE_COORDINATE_WITNESSES',
+                independent['counts'])
           print('BRSI_FRENCH_NEIGHBORING_VERSE_EVIDENCE', report['reference_context_by_canon'])
           print('BRSI_FRENCH_ORIGINAL_SOURCE_COORDINATE_EVIDENCE', report['source_coordinate_context_by_canon'])
           assert report['linguistic_links_automatically_approved'] is False

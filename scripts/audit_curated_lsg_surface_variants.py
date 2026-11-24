@@ -294,6 +294,13 @@ def audit_target_surfaces(aquifer_root: Path, authored: dict[str, str],
                 sum(coordinate_counts[canon].values()) != baseline[canon]):
             raise ValueError("incomplete adjacent/source French verse diagnostic census")
 
+    candidate_original_source_ids = sorted(
+        source_id for source_id, status in original_coordinate_by_source.items()
+        if status == "exact_french_word_present_at_original_source_verse_reference")
+    candidate_source_target_verses = {
+        source_id: sorted({target_id[:8] for target_id in targets_by_source[source_id]})
+        for source_id in candidate_original_source_ids
+    }
     return {
         "format": "brsi-french-surface-difference-readonly-audit",
         "schema_version": 1,
@@ -303,6 +310,8 @@ def audit_target_surfaces(aquifer_root: Path, authored: dict[str, str],
         "by_canon": {canon: dict(sorted(counters[canon].items()))
                      for canon in ("nt", "ot")},
         "source_ids_by_diagnostic": status_by_source,
+        "original_source_verse_exact_word_candidate_aquifer_verses":
+            candidate_source_target_verses,
         "reference_context_by_original_macula_id": neighbor_by_source,
         "source_coordinate_context_by_original_macula_id": original_coordinate_by_source,
         "reference_context_by_canon": {
@@ -317,6 +326,67 @@ def audit_target_surfaces(aquifer_root: Path, authored: dict[str, str],
         "original_source_ids_modified": False,
         "linguistic_links_automatically_approved": False,
     }
+
+
+def cross_check_original_source_verses_with_clear_bible(
+        source_target_verses: dict[str, list[str]],
+        owned_index: dict,
+) -> dict:
+    """Classify nine-like source-reference leads against ORIGINAL Clear.Bible.
+
+    Corroboration concerns *verse coordinates only*; original target selector
+    IDs and original MACULA IDs are preserved. It is never sufficient proof
+    for a Greek/Hebrew-to-French target word or an authorized verse remapping.
+    """
+    if (owned_index.get("format") !=
+            "brsi-original-and-independent-word-corroboration-candidate"):
+        raise ValueError("invalid BRSI original alignment index")
+    details = []
+    counts = Counter()
+    for source_id, aquifer_target_verses in sorted(source_target_verses.items()):
+        if not isinstance(source_id, str) or source_id[:1] not in ("n", "o"):
+            raise ValueError("invalid original MACULA source ID")
+        indexed = owned_index["by_original_macula_id"].get(source_id, [])
+        if not indexed:
+            raise ValueError("original MACULA source ID missing from pinned index")
+        original_verses = set()
+        original_rows = 0
+        for ordinal in indexed:
+            row = owned_index["rows"][ordinal]
+            if source_id not in row["original_macula_ids"]:
+                raise ValueError("source lookup points to unrelated original record")
+            if row["original_ordinal"] is not None:
+                original_rows += 1
+                original_verses.update(
+                    target[:8] for target in row["original_clear_bible_target_ids"])
+        source_verse = source_id[1:9]
+        aquifer_verses = set(aquifer_target_verses)
+        if source_verse in aquifer_verses:
+            raise ValueError("candidate does not have different source/target verses")
+        if not original_rows:
+            status = "clear_bible_has_no_original_alignment_record"
+        elif source_verse in original_verses and original_verses & aquifer_verses:
+            status = "clear_bible_original_targets_include_both_source_and_aquifer_references"
+        elif source_verse in original_verses:
+            status = "clear_bible_original_target_supports_macula_source_reference"
+        elif original_verses & aquifer_verses:
+            status = "clear_bible_original_target_supports_aquifer_target_reference"
+        else:
+            status = "clear_bible_original_target_is_another_reference"
+        counts[status] += 1
+        details.append({
+            "original_macula_source_id": source_id,
+            "macula_original_source_verse": source_verse,
+            "aquifer_original_target_verses": sorted(aquifer_verses),
+            "clear_bible_original_target_verses": sorted(original_verses),
+            "clear_bible_original_alignment_group_count": original_rows,
+            "reference_witness_result": status,
+            "word_translation_approved": False,
+            "verse_remapping_approved": False,
+        })
+    if sum(counts.values()) != len(details):
+        raise ValueError("cross-source verse witness census incomplete")
+    return {"counts": dict(sorted(counts.items())), "cases": details}
 
 
 def main() -> None:
@@ -358,6 +428,9 @@ def main() -> None:
     report["clear_bible_revision"] = index["source_clear_bible_revision"]
     report["aquifer_revision"] = index["source_aquifer_revision"]
     report["correspondence_index_sha256"] = baseline["gzip_sha256"]
+    corroboration = cross_check_original_source_verses_with_clear_bible(
+        report["original_source_verse_exact_word_candidate_aquifer_verses"], index)
+    report["cross_witness_verse_reference_corroboration"] = corroboration
     # The detailed per-source report remains private. CI pins a compact,
     # entirely text-free receipt while permitting targeted editorial review.
     counts = {k: report[k] for k in (
@@ -370,6 +443,7 @@ def main() -> None:
         "original_source_ids_modified", "linguistic_links_automatically_approved",
         "curated_osis_sha256", "clear_bible_revision", "aquifer_revision",
         "correspondence_index_sha256")}
+    counts["cross_witness_verse_reference_corroboration"] = corroboration
     counts["full_diagnostic_sha256"] = hashlib.sha256(
         (json.dumps(report, sort_keys=True, separators=(",", ":"),
                     ensure_ascii=False) + "\n").encode("utf-8")).hexdigest()
