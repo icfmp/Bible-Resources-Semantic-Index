@@ -1,0 +1,30 @@
+{
+  "authored_french_osis_sha256": "2b8342a67d8e97b433670450fe9dd9e58917a7fcfc0cb4d321882ca8219dc3bd",
+  "automatically_approved_links": 0,
+  "full_verse_french_words": 4793,
+  "full_verse_original_tokens": 4310,
+  "human_gold_reviewed": 0,
+  "kind": "brsi-whole-verse-semantic-pilot-source-free-receipt",
+  "model_proposals": 0,
+  "pilot_id": "5d06149d7cec0cb13c4a171cff7aafbf021770fc5c4268ea5b64cb6f40a1a87b",
+  "private_pilot_gzip_bytes": 187653,
+  "private_pilot_gzip_sha256": "9428e551c4fa084eb52816d5e6422d22f3238012624650af0b204d436035b798",
+  "publication_authorized": false,
+  "sampled_case_causes": {
+    "aquifer_explicit_non_equivalent_source": 34,
+    "aquifer_record_source_with_no_uniquely_located_french_word": 57,
+    "not_present_in_aquifer_source_alignment_records": 86,
+    "other_part_of_same_original_word_has_link": 34
+  },
+  "sampled_unresolved_original_ids": 211,
+  "schema_version": 1,
+  "selection_partition": "training",
+  "source_dossier_gzip_sha256": "e77d6d711e49e82618cc91dd003a0aaac989af522ec2f2f8aa47ee7622bfc347",
+  "source_index_gzip_sha256": "c4cab290357740b43ce9bfb9d8a6161eb32788d2212b6726fdb011ad0d3643cf",
+  "source_text_in_public_receipt": false,
+  "verses": 200,
+  "verses_by_canon": {
+    "nt": 100,
+    "ot": 100
+  }
+}
