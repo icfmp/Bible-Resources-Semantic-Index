@@ -8,6 +8,8 @@ on:
       - "scripts/audit_macula_lsg_contextual_lexical_pilot.py"
       - "scripts/sample_macula_lsg_semantic_review.py"
       - "scripts/audit_macula_lsg_phrase_brackets.py"
+      - "scripts/audit_macula_lsg_original_syntax.py"
+      - "tests/test_macula_lsg_original_syntax.py"
       - "scripts/audit_macula_lsg_contextual_consensus.py"
       - "tests/test_macula_lsg_contextual_consensus.py"
       - "scripts/build_macula_lsg_semantic_review_dossiers.py"
@@ -51,6 +53,8 @@ jobs:
         run: python3 -I -m unittest discover -s tests -p 'test_macula_lsg_semantic_gold.py' -v
       - name: Lexical and bracket consensus synthetic gold and no-promotion regressions
         run: python3 -I -m unittest discover -s tests -p 'test_macula_lsg_contextual_consensus.py' -v
+      - name: Original Hebrew/Greek lowfat syntax and morpheme safety synthetic regressions
+        run: python3 -I -m unittest discover -s tests -p 'test_macula_lsg_original_syntax.py' -v
       - name: Retrieve exact original Clear.Bible alignment sources
         shell: bash
         run: |
@@ -828,6 +832,84 @@ jobs:
               --baseline links/alignments/clear-bible-lsg/lexical-phrase-consensus.lock.json
           else
             echo "FIRST LEXICAL-PHRASE CONSENSUS: audit blind results before freezing source-free receipt"
+          fi
+
+      - name: Fetch precisely pinned MACULA original lowfat syntax witnesses (Genesis 1-3; 2 John)
+        shell: bash
+        run: |
+          set -euo pipefail
+          git init /tmp/brsi-macula-syntax-ot
+          git -C /tmp/brsi-macula-syntax-ot remote add origin https://github.com/Clear-Bible/macula-hebrew.git
+          git -C /tmp/brsi-macula-syntax-ot sparse-checkout init --no-cone
+          git -C /tmp/brsi-macula-syntax-ot sparse-checkout set --no-cone \
+            /WLC/lowfat/01-Gen-001-lowfat.xml \
+            /WLC/lowfat/01-Gen-002-lowfat.xml \
+            /WLC/lowfat/01-Gen-003-lowfat.xml
+          git -C /tmp/brsi-macula-syntax-ot -c protocol.version=2 fetch --depth 1 --filter=blob:none origin 47db250bd55d0d8577f2a94fba114ef16c35b23c
+          git -C /tmp/brsi-macula-syntax-ot checkout --detach FETCH_HEAD
+          test "$(git -C /tmp/brsi-macula-syntax-ot rev-parse HEAD)" = 47db250bd55d0d8577f2a94fba114ef16c35b23c
+          git init /tmp/brsi-macula-syntax-nt
+          git -C /tmp/brsi-macula-syntax-nt remote add origin https://github.com/Clear-Bible/macula-greek.git
+          git -C /tmp/brsi-macula-syntax-nt sparse-checkout init --no-cone
+          git -C /tmp/brsi-macula-syntax-nt sparse-checkout set --no-cone \
+            /SBLGNT/lowfat/24-2john.xml
+          git -C /tmp/brsi-macula-syntax-nt -c protocol.version=2 fetch --depth 1 --filter=blob:none origin 8423afe47b9e8f24b7772e808af45c7159a6fe7e
+          git -C /tmp/brsi-macula-syntax-nt checkout --detach FETCH_HEAD
+          test "$(git -C /tmp/brsi-macula-syntax-nt rev-parse HEAD)" = 8423afe47b9e8f24b7772e808af45c7159a6fe7e
+          test -s /tmp/brsi-macula-syntax-ot/WLC/lowfat/01-Gen-001-lowfat.xml
+          test -s /tmp/brsi-macula-syntax-ot/WLC/lowfat/01-Gen-002-lowfat.xml
+          test -s /tmp/brsi-macula-syntax-ot/WLC/lowfat/01-Gen-003-lowfat.xml
+          test -s /tmp/brsi-macula-syntax-nt/SBLGNT/lowfat/24-2john.xml
+
+      - name: Audit original lowfat syntax and same-word Hebrew morphemes against immutable LSG
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -I scripts/audit_macula_lsg_original_syntax.py \
+            --original-index /tmp/brsi-macula-lsg-correspondence.json.gz \
+            --correspondence-lock links/alignments/clear-bible-lsg/aquifer-correspondence.lock.json \
+            --pivot-lock links/alignments/clear-bible-lsg/pivot.lock.json \
+            --original-nt-root /tmp/brsi-macula-syntax-nt \
+            --original-ot-root /tmp/brsi-macula-syntax-ot \
+            --curated-root /tmp/brsi-word-reader \
+            --curated-lock links/alignments/clear-bible-lsg/curated-1.0.2.lock.json \
+            --private-syntax /tmp/brsi-macula-private-original-syntax-review.json.gz \
+            --report /tmp/brsi-macula-original-syntax-report.json
+          python3 -I - <<'PY'
+          import gzip, hashlib, json
+          from pathlib import Path
+          report=json.loads(Path('/tmp/brsi-macula-original-syntax-report.json').read_text())
+          packed=Path('/tmp/brsi-macula-private-original-syntax-review.json.gz').read_bytes()
+          assert hashlib.sha256(packed).hexdigest() == report['private_syntax_gzip_sha256']
+          assert len(packed) == report['private_syntax_gzip_bytes']
+          private=json.loads(gzip.decompress(packed))
+          assert private['kind'] == 'brsi-private-macula-syntax-source-original-phrase-review-pilot'
+          assert len(private['source_original_xml_files']) == len(report['source_files']) == 4
+          assert len(private['cases']) == report['unresolved_original_ids_in_selected_source_documents']
+          assert len({c['original_macula_id'] for c in private['cases']}) == len(private['cases'])
+          assert report['original_XML_context_only_ids_absent_correspondence_index'] >= 0
+          assert sum(x['unlinked_original_ids'] for x in
+                     report['unresolved_original_by_testament'].values()) == len(private['cases'])
+          assert all(c['automatic_word_links_added'] == 0
+                     and c['original_phrase_semantically_verified'] is False
+                     and c['individual_source_token_translated'] is False
+                     and c['publication_authorized'] is False
+                     for c in private['cases'])
+          assert report['new_individually_approved_MACULA_original_ids'] == 0
+          assert report['new_semantically_approved_source_phrases'] == 0
+          assert report['human_reviewed_original_phrases'] == 0
+          assert report['publication_authorized'] is False
+          assert report['syntactic_constituent_is_not_semantic_equivalence'] is True
+          assert report['source_text_in_public_receipt'] is False
+          print('BRSI_MACULA_SYNTAX_SOURCE_FREE_RECEIPT')
+          print(Path('/tmp/brsi-macula-original-syntax-report.json').read_text())
+          PY
+          if test -f links/alignments/clear-bible-lsg/original-syntax-pilot.lock.json; then
+            python3 -I scripts/verify_generated_json.py \
+              --generated /tmp/brsi-macula-original-syntax-report.json \
+              --baseline links/alignments/clear-bible-lsg/original-syntax-pilot.lock.json
+          else
+            echo "FIRST EXACT LOWFAT SYNTAX PILOT: freeze reviewed source-free receipt before merge"
           fi
 
       - name: Explicit no-publication boundary
