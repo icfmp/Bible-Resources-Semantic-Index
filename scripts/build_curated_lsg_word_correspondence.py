@@ -90,6 +90,60 @@ def unique_ordered_exact_locations(tokens: list[str],
     return matches
 
 
+def locate_aquifer_words_with_proof(
+        original_tokens: list[tuple[str, str]],
+        authored_words: list[tuple[str, int, int]]
+) -> dict[int, tuple[int, str]]:
+    """Locate exact NFC French words with explicit per-token proof strength.
+
+    First retain positions forced by *all* optimal ordered LCS alignments.
+    Independently recover a skipped original word only when its complete
+    exact surface occurs exactly once in each verse-level word inventory.
+    Such a fallback proves a unique **French span**, not the original
+    Hebrew/Greek-to-French linguistic choice and not a shared token ID.
+    If either witness repeats the surface, abstain.
+    """
+    original_surfaces = [word for _, word in original_tokens]
+    authored_surfaces = [word for word, _, _ in authored_words]
+    ordered = unique_ordered_exact_locations(original_surfaces, authored_surfaces)
+    result = {i: (j, "forced_ordered_exact_word") for i, j in ordered.items()}
+    original_counts = Counter(original_surfaces)
+    authored_counts = Counter(authored_surfaces)
+    authored_unique = {surface: i for i, surface in enumerate(authored_surfaces)
+                       if authored_counts[surface] == 1}
+    occupied = set(ordered.values())
+    for i, word in enumerate(original_surfaces):
+        if i in result or original_counts[word] != 1 or authored_counts[word] != 1:
+            continue
+        j = authored_unique[word]
+        if j in occupied:
+            raise ValueError("incompatible exact-word target position proofs")
+        result[i] = (j, "unique_exact_surface_without_order_proof")
+        occupied.add(j)
+    if len({position for position, _ in result.values()}) != len(result):
+        raise ValueError("original targets would duplicate authored word span")
+    return result
+
+
+def aquifer_source_word_witnesses(
+        source_ids: list[str],
+        source_links: dict[str, set[str]],
+        located: dict[str, dict]) -> list[dict]:
+    """Preserve original Aquifer selector and authorial word-hash evidence."""
+    seen = set()
+    for source_id in source_ids:
+        for target_id in source_links.get(source_id, ()):
+            location = located[target_id]
+            word_id = location["bcv"] + ":" + str(location["word_ordinal"])
+            seen.add((word_id, target_id, location["word_sha256"],
+                      location["word_location_proof"]))
+    return [
+        {"word_id": word_id, "aquifer_target_id": target_id,
+         "word_sha256": word_sha256, "location_proof": proof}
+        for word_id, target_id, word_sha256, proof in sorted(seen)
+    ]
+
+
 def load_aquifer(root: Path, authored: dict[str, str],
                  min_chapters: int = 1,
                  include_source_evidence: bool = False) -> tuple:
@@ -177,15 +231,15 @@ def load_aquifer(root: Path, authored: dict[str, str],
                     word_tokens(surface)[0][0] == surface]
         counts["target_tokens_observed"] += len(items)
         counts["target_tokens_not_full_words"] += len(items) - len(eligible)
-        positions = unique_ordered_exact_locations(
-            [surface for _, surface in eligible],
-            [word for word, _, _ in authored_words])
+        positions = locate_aquifer_words_with_proof(eligible, authored_words)
         counts["target_verses_with_source_text"] += 1
         if len(positions) == len(eligible) == len(authored_words):
             counts["verses_full_word_sequence_identical"] += 1
-        for index, authored_index in positions.items():
+        for index, (authored_index, proof) in positions.items():
             original_id, surface = eligible[index]
             matched, start, end = authored_words[authored_index]
+            canon = "ot" if int(bcv[:2]) < 40 else "nt"
+            counts[canon + "_target_words_" + proof] += 1
             if surface != matched:
                 raise ValueError("source text changed behind exact match")
             located[original_id] = {
@@ -195,6 +249,7 @@ def load_aquifer(root: Path, authored: dict[str, str],
                 "nfc_end": end,
                 "word_sha256": hashlib.sha256(matched.encode("utf-8")).hexdigest(),
                 "surface_match": "exact_NFC",
+                "word_location_proof": proof,
                 "source": "BibleAquifer/LouisSegond1910",
             }
             counts["target_tokens_uniquely_located"] += 1
@@ -257,10 +312,9 @@ def build_corroborated_index(aquifer_root: Path, original_candidates: Path,
             original_target_locations = {
                 located[target_id]["bcv"] + ":" + str(located[target_id]["word_ordinal"])
                 for target_id in original_targets if target_id in located}
-            from_source = {
-                located[t]["bcv"] + ":" + str(located[t]["word_ordinal"])
-                for source_id in source for t in source_links.get(source_id, ())
-                if t in located}
+            witness_details = aquifer_source_word_witnesses(
+                source, source_links, located)
+            from_source = {witness["word_id"] for witness in witness_details}
             # The two projects DO NOT share a target-word ID scheme.
             # Exact NT cross-calibration finds many identical numeric IDs
             # pointing at DIFFERENT French words. An original Clear.Bible
@@ -305,6 +359,7 @@ def build_corroborated_index(aquifer_root: Path, original_candidates: Path,
                 "word_ids": matched_words,
                 "original_target_word_witness_ids": sorted(original_target_locations),
                 "aquifer_source_word_witness_ids": sorted(from_source),
+                "aquifer_source_word_location_proofs": witness_details,
                 "status": status,
                 "source_provenance": ("ClearBible_direct_nt_target_and_authored_OSIS" if status.startswith("clear_bible_direct_word")
                                       else "BibleAquifer_source_and_verified_French_surface"
@@ -346,9 +401,9 @@ def build_corroborated_index(aquifer_root: Path, original_candidates: Path,
             if source_id not in original_source_ids:
                 supplemental_counts["aquifer_source_not_in_pinned_original_macula"] += 1
                 continue
-            french_words = sorted({
-                located[token]["bcv"] + ":" + str(located[token]["word_ordinal"])
-                for token in source_links[source_id] if token in located})
+            witness_details = aquifer_source_word_witnesses(
+                [source_id], source_links, located)
+            french_words = sorted({witness["word_id"] for witness in witness_details})
             if not french_words:
                 continue
             canon = "ot" if source_id.startswith("o") else "nt"
@@ -361,6 +416,7 @@ def build_corroborated_index(aquifer_root: Path, original_candidates: Path,
                 "word_ids": french_words,
                 "original_target_word_witness_ids": [],
                 "aquifer_source_word_witness_ids": french_words,
+                "aquifer_source_word_location_proofs": witness_details,
                 "status": "aquifer_additional_pinned_macula_word",
                 "source_provenance": "BibleAquifer_MACULA_source_and_verified_French_surface",
                 "target_selector_numeric_equivalence_proven": False,
@@ -384,6 +440,7 @@ def build_corroborated_index(aquifer_root: Path, original_candidates: Path,
                 "word_ids": [],
                 "original_target_word_witness_ids": [],
                 "aquifer_source_word_witness_ids": [],
+                "aquifer_source_word_location_proofs": [],
                 "status": "pinned_original_macula_word_without_translation_evidence",
                 "source_provenance": "pinned_MACULA_source_inventory_only",
                 "target_selector_numeric_equivalence_proven": False,

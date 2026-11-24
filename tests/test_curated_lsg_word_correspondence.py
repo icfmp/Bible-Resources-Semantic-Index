@@ -75,6 +75,50 @@ class LSGOriginalWordWitnessTests(unittest.TestCase):
         (self.group / "01-001.alignment.json").write_text(
             json.dumps(self.aquifer_doc, ensure_ascii=False), encoding="utf-8")
 
+    def test_unique_exact_surface_recovers_word_despite_reordered_source_tokens(self):
+        original = [
+            ("40001001001", "Jean"),
+            ("40001001002", "Pierre"),
+            ("40001001003", "Paul"),
+        ]
+        authored = [("Pierre", 0, 6), ("Jean", 7, 11), ("Paul", 12, 16)]
+        result = tool.locate_aquifer_words_with_proof(original, authored)
+        self.assertEqual(result, {
+            0: (1, "unique_exact_surface_without_order_proof"),
+            1: (0, "unique_exact_surface_without_order_proof"),
+            2: (2, "forced_ordered_exact_word"),
+        })
+        self.assertEqual([authored[result[i][0]][0] for i in range(3)],
+                         ["Jean", "Pierre", "Paul"])
+
+    def test_unique_surface_fallback_never_guesses_repeated_words(self):
+        self.assertEqual(tool.locate_aquifer_words_with_proof(
+            [("40001001001", "Dieu")],
+            [("Dieu", 0, 4), ("Dieu", 5, 9)]), {})
+        self.assertEqual(tool.locate_aquifer_words_with_proof(
+            [("40001001001", "Dieu"), ("40001001002", "Dieu")],
+            [("Dieu", 0, 4)]), {})
+        self.assertEqual(tool.locate_aquifer_words_with_proof(
+            [("40001001001", "Dieu")],
+            [("dieu", 0, 4)]), {})
+        self.assertEqual(tool.locate_aquifer_words_with_proof(
+            [("40001001001", "Dieu")],
+            [("Dien", 0, 4)]), {})
+
+    def test_located_word_witness_preserves_original_target_id_and_hash(self):
+        raw, _ = tool.build_corroborated_index(
+            self.aquifer, self.candidates, self.osis, self.lock,
+            "a" * 40, "b" * 40)
+        doc = json.loads(raw)
+        proof = doc["rows"][0]["aquifer_source_word_location_proofs"][0]
+        self.assertEqual(proof["aquifer_target_id"], "01001001001")
+        self.assertEqual(proof["word_id"], "01001001:1")
+        self.assertEqual(proof["location_proof"], "forced_ordered_exact_word")
+        import hashlib
+        self.assertEqual(proof["word_sha256"],
+                         hashlib.sha256(b"Au").hexdigest())
+        self.assertFalse(doc["rows"][0]["linguistically_reviewed_by_brsi"])
+
     def test_duplicate_subsequence_word_not_invented(self):
         self.assertEqual(tool.unique_ordered_exact_locations(
             ["Dieu"], ["Dieu", "Dieu"]), {})

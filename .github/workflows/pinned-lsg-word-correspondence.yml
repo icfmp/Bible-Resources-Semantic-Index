@@ -152,7 +152,10 @@ jobs:
           cause_counts = doc['unlinked_source_cause_counts']
           assert cause_counts == r['unlinked_source_cause_counts']
           assert doc['unlinked_source_diagnostics'] == r['unlinked_source_diagnostics']
-          assert len(reasons) == 119723
+          assert len(reasons) == sum(
+              coverage[canon]['macula_source_ids_without_word_evidence']
+              for canon in ('nt', 'ot'))
+          assert len(reasons) <= 119723  # no regression against reviewed PR #177
           assert all(source in doc['by_original_macula_id'] and not any(
               doc['rows'][i]['word_ids'] for i in doc['by_original_macula_id'][source]
           ) for source in reasons)
@@ -166,6 +169,48 @@ jobs:
           assert len(doc['by_original_macula_id']) > 200000
           assert doc['aquifer_text_witness_census']['chapters'] >= 1180
           assert all(row['linguistically_reviewed_by_brsi'] is False for row in doc['rows'])
+          # Independent exact authorial word-span proof for all retained
+          # Aquifer candidate word links, including any unordered fallback.
+          import importlib.util
+          import unicodedata
+          from collections import Counter
+          spec = importlib.util.spec_from_file_location(
+              'curated_index', 'scripts/audit_curated_translation_edition.py')
+          ed = importlib.util.module_from_spec(spec)
+          spec.loader.exec_module(ed)
+          lock = json.loads(Path('links/alignments/clear-bible-lsg/curated-1.0.2.lock.json').read_text())
+          osis = ed.pinned_file(Path('/tmp/brsi-word-reader'),
+                               lock['osis_path'], lock['osis_sha256'])
+          authored = ed.read_osis(osis)
+          word_cache = {}
+          evidence_counts = Counter()
+          for row in doc['rows']:
+              proofs = row.get('aquifer_source_word_location_proofs', [])
+              assert {p['word_id'] for p in proofs} == set(
+                  row['aquifer_source_word_witness_ids'])
+              for proof in proofs:
+                  bcv, word_ordinal = proof['word_id'].split(':')
+                  ordinal = int(word_ordinal)
+                  if bcv not in word_cache:
+                      text = unicodedata.normalize('NFC', authored[bcv])
+                      word_cache[bcv] = [m.group() for m in
+                                         ed.AUTHORIAL_WORD_RE.finditer(text)]
+                  words = word_cache[bcv]
+                  assert 1 <= ordinal <= len(words)
+                  actual_word = words[ordinal - 1]
+                  assert hashlib.sha256(actual_word.encode('utf-8')).hexdigest() == proof['word_sha256']
+                  assert proof['aquifer_target_id'][:8] == bcv
+                  assert proof['location_proof'] in (
+                      'forced_ordered_exact_word',
+                      'unique_exact_surface_without_order_proof')
+                  evidence_counts[proof['location_proof']] += 1
+          assert evidence_counts['forced_ordered_exact_word'] > 300000
+          assert r['aquifer_text_witness_census'].get(
+              'ot_target_words_unique_exact_surface_without_order_proof', 0
+          ) + r['aquifer_text_witness_census'].get(
+              'nt_target_words_unique_exact_surface_without_order_proof', 0
+          ) > 0
+          print('BRSI_FULL_AUTHORIAL_WORD_WITNESSES', dict(sorted(evidence_counts.items())))
           assert all(row['source_provenance'] for row in doc['rows'])
           assert doc['source_license_aquifer_alignment'] == 'CC BY-SA 4.0'
           assert sum(doc['status_counts'].values()) == 308404 + added + unmapped
