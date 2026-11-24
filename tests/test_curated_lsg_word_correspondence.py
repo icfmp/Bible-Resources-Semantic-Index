@@ -35,8 +35,8 @@ class LSGOriginalWordWitnessTests(unittest.TestCase):
             "records": [
                 {"ordinal": 0, "source_lookup_ids": ["o010010010011"],
                  "target_lookup_ids": ["01001001001"]},
-                {"ordinal": 1, "source_lookup_ids": ["o010010010021"],
-                 "target_lookup_ids": ["01001001005"]},
+                {"ordinal": 1, "source_lookup_ids": ["o010010010099"],
+                 "target_lookup_ids": ["01001001099"]},
                 {"ordinal": 2, "source_lookup_ids": ["o010010020011"],
                  "target_lookup_ids": ["01001002099"]},
             ],
@@ -97,7 +97,7 @@ class LSGOriginalWordWitnessTests(unittest.TestCase):
         self.assertEqual(doc["rows"][0]["word_ids"], ["01001001:1"])
         self.assertEqual(doc["rows"][0]["status"], "original_target_and_independent_source_agree")
         self.assertEqual(doc["by_lsg_word"]["01001001:1"], [0])
-        self.assertEqual(doc["rows"][1]["original_clear_bible_target_ids"], ["01001001005"])
+        self.assertEqual(doc["rows"][1]["original_clear_bible_target_ids"], ["01001001099"])
         self.assertEqual(doc["rows"][1]["status"], "unresolved_no_located_word")
         self.assertEqual(doc["rows"][2]["status"], "independent_aquifer_word_witness_only")
         self.assertEqual(doc["rows"][2]["word_ids"], ["01001002:5"])
