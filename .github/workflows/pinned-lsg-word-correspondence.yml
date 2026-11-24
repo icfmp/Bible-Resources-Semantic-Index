@@ -8,6 +8,8 @@ on:
       - "scripts/audit_macula_lsg_contextual_lexical_pilot.py"
       - "scripts/sample_macula_lsg_semantic_review.py"
       - "scripts/audit_macula_lsg_phrase_brackets.py"
+      - "scripts/audit_macula_lsg_contextual_consensus.py"
+      - "tests/test_macula_lsg_contextual_consensus.py"
       - "scripts/build_macula_lsg_semantic_review_dossiers.py"
       - "scripts/validate_macula_lsg_semantic_gold.py"
       - "tests/test_macula_lsg_semantic_review_dossiers.py"
@@ -47,6 +49,8 @@ jobs:
         run: python3 -I -m unittest discover -s tests -p 'test_macula_lsg_semantic_review_dossiers.py' -v
       - name: Human-only phrase/grammar gold adjudication synthetic regressions
         run: python3 -I -m unittest discover -s tests -p 'test_macula_lsg_semantic_gold.py' -v
+      - name: Lexical and bracket consensus synthetic gold and no-promotion regressions
+        run: python3 -I -m unittest discover -s tests -p 'test_macula_lsg_contextual_consensus.py' -v
       - name: Retrieve exact original Clear.Bible alignment sources
         shell: bash
         run: |
@@ -754,6 +758,65 @@ jobs:
           PY
           else
             echo "FIRST ORIGINAL-SOURCE REVIEW DOSSIER: audit the source-free receipt and pin before enabling empty-gold validation"
+          fi
+
+      - name: Full pinned-source lexical plus bounded phrase consensus negative control
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -I scripts/audit_macula_lsg_contextual_consensus.py \
+            --original-index /tmp/brsi-macula-lsg-correspondence.json.gz \
+            --correspondence-lock links/alignments/clear-bible-lsg/aquifer-correspondence.lock.json \
+            --semantic-sample-lock links/alignments/clear-bible-lsg/semantic-review-sample.lock.json \
+            --pivot-lock links/alignments/clear-bible-lsg/pivot.lock.json \
+            --pivot-nt /tmp/brsi-semantic-macula-nt/SBLGNT/tsv/macula-greek-SBLGNT.tsv \
+            --pivot-ot /tmp/brsi-semantic-macula-ot/WLC/tsv/macula-hebrew.tsv \
+            --curated-root /tmp/brsi-word-reader \
+            --curated-lock links/alignments/clear-bible-lsg/curated-1.0.2.lock.json \
+            --report /tmp/brsi-lsg-lexical-phrase-consensus-report.json \
+            --private-agreements /tmp/brsi-lsg-lexical-phrase-consensus.json.gz
+          python3 -I - <<'PY'
+          import hashlib, gzip, json
+          from pathlib import Path
+          r=json.loads(Path('/tmp/brsi-lsg-lexical-phrase-consensus-report.json').read_text())
+          packed=Path('/tmp/brsi-lsg-lexical-phrase-consensus.json.gz').read_bytes()
+          assert hashlib.sha256(packed).hexdigest() == r['private_agreements_sha256']
+          assert len(packed) == r['private_agreements_bytes']
+          p=json.loads(gzip.decompress(packed))
+          assert p['candidate_only'] and p['publication_authorized'] is False
+          links=p['suggestions']
+          assert len(links) == r['source_coverage']['lexical_phrase_exploratory_agreement_ids']
+          assert r['source_coverage']['full_original_macula_source_ids'] == 607217
+          assert r['source_coverage']['unresolved_original_macula_source_ids'] == 119691
+          assert r['source_coverage']['baseline_ids_with_candidate_french_word'] == 487526
+          assert r['source_coverage']['new_linguistically_approved_original_ids'] == 0
+          assert sum(x['total'] for x in r['four_unlinked_source_cause_counts'].values()) == 119691
+          assert all(x['total'] == 500 for x in r['fixed_2k_reviewer_sample_counts'].values())
+          assert all(row['publication_authorized'] is False and
+                     row['automatic_linguistic_approval'] is False and
+                     row['independently_human_reviewed'] is False and
+                     row['word_level_semantic_equivalence_proven'] is False and
+                     row['group_phrase_semantic_equivalence_proven'] is False and
+                     row['source_words_individually_linked'] is False and
+                     row['lemma_suggested_lsg_word_id'] in row['lsg_phrase_word_ids']
+                     for row in links)
+          assert r['independent_NT_pseudo_gold_evaluation']['calibration_size'] == 1000
+          assert r['independent_NT_pseudo_gold_evaluation']['blind_size'] == 1000
+          assert r['independent_NT_pseudo_gold_evaluation'][
+              'source_word_and_all_same_french_word_anchor_masked'] is True
+          assert r['training_excludes_all_2k_heldout_nt_verses'] is True
+          assert r['automatic_linguistic_approval'] is False
+          assert r['semantic_gold_human_reviewed'] == 0
+          assert r['publication_authorized'] is False
+          print('BRSI_LEXICAL_PHRASE_SOURCE_FREE_RECEIPT')
+          print(Path('/tmp/brsi-lsg-lexical-phrase-consensus-report.json').read_text())
+          PY
+          if test -f links/alignments/clear-bible-lsg/lexical-phrase-consensus.lock.json; then
+            python3 -I scripts/verify_generated_json.py \
+              --generated /tmp/brsi-lsg-lexical-phrase-consensus-report.json \
+              --baseline links/alignments/clear-bible-lsg/lexical-phrase-consensus.lock.json
+          else
+            echo "FIRST LEXICAL-PHRASE CONSENSUS: audit blind results before freezing source-free receipt"
           fi
 
       - name: Explicit no-publication boundary
