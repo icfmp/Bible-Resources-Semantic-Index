@@ -162,6 +162,27 @@ jobs:
           assert all(sum(cause_counts[canon].values()) ==
                      coverage[canon]['macula_source_ids_without_word_evidence']
                      for canon in ('nt', 'ot'))
+          # Partition every original MACULA source row with an Aquifer
+          # target that cannot be safely located in authored LSG.
+          failed_target_causes = doc['unlocated_french_target_cause_by_original_macula_id']
+          failed_target_counts = doc['unlocated_french_target_cause_counts']
+          assert failed_target_counts == r['unlocated_french_target_cause_counts']
+          assert len(failed_target_causes) == sum(
+              cause_counts[c].get(
+                  'aquifer_record_source_with_no_uniquely_located_french_word', 0)
+              for c in ('nt', 'ot'))
+          assert all(
+              source in reasons and
+              reasons[source] == 'aquifer_record_source_with_no_uniquely_located_french_word'
+              and all(not doc['rows'][i]['word_ids']
+                      for i in doc['by_original_macula_id'][source])
+              for source in failed_target_causes)
+          assert all(
+              sum(failed_target_counts[c].values()) ==
+              cause_counts[c].get(
+                  'aquifer_record_source_with_no_uniquely_located_french_word', 0)
+              for c in ('nt', 'ot'))
+          print('BRSI_UNLOCATED_FRENCH_TARGET_CAUSES', failed_target_counts)
           assert all(row['linguistically_reviewed_by_brsi'] is False
                      for row in doc['rows'])
           assert doc['unlinked_cause_evidence_level'] == 'source_metadata_or_structure_not_word_equivalence'
