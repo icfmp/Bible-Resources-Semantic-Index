@@ -369,17 +369,19 @@ def calibrate(index: dict, pivots: dict, authored: dict[str, str],
 
 
 def analyze(index: dict, pivots: dict, authored: dict[str, str],
-            sampled_cases: list[dict]) -> tuple[dict, list[dict]]:
+            sampled_cases: list[dict]) -> tuple[dict, dict]:
     gold = lexical.select_blind_gold(index, pivots["nt"], authored, n=2000)
     holdout_verses = {source[1:9] for source in gold}
     buckets, training = lexical.lexical_buckets(
         index, pivots, authored, holdout_verses)
-    blind, _ = calibrate(index, pivots, authored, gold, buckets)
+    evaluated, _ = calibrate(index, pivots, authored, gold, buckets)
     bracket_by_source = source_brackets(index, authored)
     stats = defaultdict(Counter)
     samples = defaultdict(Counter)
-    suggestions = []
-    by_source = {}
+    strict_suggestions = []
+    constrained_suggestions = []
+    by_strict = set()
+    by_constrained = set()
     cached = {}
     unlinked = index["unlinked_cause_by_original_macula_id"]
     for source, reason in sorted(unlinked.items()):
@@ -390,44 +392,75 @@ def analyze(index: dict, pivots: dict, authored: dict[str, str],
             continue
         stats[reason]["bounded_phrase_available"] += 1
         canon = "nt" if source.startswith("n") else "ot"
-        guess = lexical.predict(source, pivots[canon], authored, cached, buckets)
-        if guess is None:
-            stats[reason]["no_lexical_suggestion"] += 1
-            continue
-        agreement = consensus(source, guess, bracket)
-        if agreement is None:
-            stats[reason]["lexical_phrase_disagree"] += 1
-            continue
-        stats[reason]["lexical_phrase_agree"] += 1
-        if eligible(agreement, (3, .5), "any_bounded_phrase"):
-            stats[reason]["predeclared_exploratory_agreement"] += 1
-            if len(agreement["lsg_phrase_word_ids"]) == 1:
-                stats[reason]["exploratory_singleword_phrase"] += 1
-            else:
-                stats[reason]["exploratory_multiword_phrase"] += 1
-            data = {**agreement, "source_cause": reason,
-                    "source_canon": canon, "candidate_only": True}
-            suggestions.append(data)
-            by_source[source] = data
+
+        # Negative control: unconstrained lexical guess must already
+        # fall inside the strictly bounded original↔French phrase.
+        global_guess = lexical.predict(
+            source, pivots[canon], authored, cached, buckets)
+        if global_guess is None:
+            stats[reason]["no_global_lexical_suggestion"] += 1
         else:
-            stats[reason]["below_predeclared_lexical_threshold"] += 1
+            strict = consensus(source, global_guess, bracket)
+            if strict is None:
+                stats[reason]["global_lexical_phrase_disagreement"] += 1
+            elif eligible(strict, (3, .5), "any_bounded_phrase"):
+                stats[reason]["strict_exploratory_agreement"] += 1
+                if len(strict["lsg_phrase_word_ids"]) == 1:
+                    stats[reason]["strict_single_word"] += 1
+                else:
+                    stats[reason]["strict_multi_word"] += 1
+                strict_suggestions.append({
+                    **strict, "source_cause": reason, "source_canon": canon,
+                    "candidate_only": True, "experimental_method":
+                    "unconstrained_lexical_guess_intersected_with_phrase"})
+                by_strict.add(source)
+            else:
+                stats[reason]["strict_below_predeclared_threshold"] += 1
+
+        # Challenger: the lemma evidence directly disambiguates only
+        # the target surface(s) in the independently bounded phrase.
+        constrained = constrained_lexical_candidate(
+            source, pivots[canon], authored, cached, buckets, bracket)
+        if constrained is None:
+            stats[reason]["no_bracket_conditioned_lexical_word"] += 1
+        elif eligible(constrained, (3, .5), "any_bounded_phrase"):
+            stats[reason]["bracket_conditioned_exploratory"] += 1
+            if len(constrained["lsg_phrase_word_ids"]) == 1:
+                stats[reason]["bracket_conditioned_single_word"] += 1
+            else:
+                stats[reason]["bracket_conditioned_multi_word"] += 1
+            constrained_suggestions.append({
+                **constrained, "source_cause": reason, "source_canon": canon,
+                "candidate_only": True, "experimental_method":
+                "lemma_evidence_restricted_to_bounded_phrase"})
+            by_constrained.add(source)
+            if source not in by_strict:
+                stats[reason]["conditioned_candidate_not_strict_intersection"] += 1
+        else:
+            stats[reason]["bracket_conditioned_below_predeclared_threshold"] += 1
+
     if sum(row["total"] for row in stats.values()) != len(unlinked):
-        raise ValueError("unresolved source count differs from full pinned index")
+        raise ValueError("unresolved source count differs from pinned corpus")
     if set(stats) != set(sampler.STRATA):
-        raise ValueError("unresolved cause classes disagree with frozen sample")
+        raise ValueError("unresolved cause classes differ from frozen sample")
+    if len(by_strict) != len(strict_suggestions) or (
+            len(by_constrained) != len(constrained_suggestions)):
+        raise ValueError("duplicate original source in exploratory candidate set")
     for case in sampled_cases:
         source, cause = case["original_macula_id"], case["source_cause"]
         if unlinked.get(source) != cause:
-            raise ValueError("sample case changed pinned stratum")
+            raise ValueError("sample case changed pinned source cohort")
         samples[cause]["total"] += 1
-        if source in by_source:
-            samples[cause]["exploratory_agreement"] += 1
+        if source in by_strict:
+            samples[cause]["strict_intersection"] += 1
+        if source in by_constrained:
+            samples[cause]["phrase_conditioned"] += 1
     if any(v["total"] != 500 for v in samples.values()):
-        raise ValueError("review cohort is not evenly sampled across four strata")
+        raise ValueError("four-stratum review sampling changed")
     report = {
         "kind": "brsi-macula-lsg-lexical-and-phrase-consensus-negative-control",
         "schema_version": 1,
-        "method": "lemma_lexical_candidate_inside_strict_ordered_anchored_french_phrase",
+        "method": "unconstrained_lexical_bracket_intersection_and_phrase_conditioned_lemma_challenger",
         "no_independent_phrase_semantics_demonstrated": True,
         "training_source_counts": training,
         "training_excludes_all_2k_heldout_nt_verses": True,
@@ -439,7 +472,11 @@ def analyze(index: dict, pivots: dict, authored: dict[str, str],
                 len(index["by_original_macula_id"]) - len(unlinked)),
             "unresolved_original_macula_source_ids": len(unlinked),
             "bounded_original_source_ids": len(bracket_by_source),
-            "lexical_phrase_exploratory_agreement_ids": len(suggestions),
+            "lexical_phrase_exploratory_agreement_ids": len(strict_suggestions),
+            "bracket_conditioned_lexical_candidate_ids":
+                len(constrained_suggestions),
+            "bracket_conditioned_not_strict_ids": len(
+                by_constrained - by_strict),
             "new_linguistically_approved_original_ids": 0,
         },
         "four_unlinked_source_cause_counts": {
@@ -448,7 +485,7 @@ def analyze(index: dict, pivots: dict, authored: dict[str, str],
         "fixed_2k_reviewer_sample_counts": {
             cause: dict(sorted(samples[cause].items()))
             for cause in sampler.STRATA},
-        "independent_NT_pseudo_gold_evaluation": blind,
+        "independent_NT_pseudo_gold_evaluation": evaluated,
         "semantic_gold_human_reviewed": 0,
         "unpaired_grammar_gold_reviewed": 0,
         "no_original_or_authored_text_changed": True,
@@ -456,7 +493,10 @@ def analyze(index: dict, pivots: dict, authored: dict[str, str],
         "automatic_linguistic_approval": False,
         "publication_authorized": False,
     }
-    return report, suggestions
+    return report, {
+        "strict": strict_suggestions,
+        "conditioned": constrained_suggestions,
+    }
 
 
 def main() -> None:
@@ -509,7 +549,8 @@ def main() -> None:
         "authored_french_osis_sha256": curated["osis_sha256"],
         "candidate_only": True,
         "publication_authorized": False,
-        "suggestions": suggestions,
+        "suggestions": suggestions["strict"],
+        "bracket_conditioned_suggestions": suggestions["conditioned"],
     })
     report["private_agreements_sha256"] = hashlib.sha256(packed).hexdigest()
     report["private_agreements_bytes"] = len(packed)
@@ -523,6 +564,12 @@ def main() -> None:
                           "blind_selected_threshold_metrics"],
                       "control": report["independent_NT_pseudo_gold_evaluation"][
                           "predeclared_exploratory_comparisons"],
+                      "phrase_conditioned_candidate_count":
+                          report["source_coverage"]["bracket_conditioned_lexical_candidate_ids"],
+                      "phrase_conditioned_blind":
+                          report["independent_NT_pseudo_gold_evaluation"][
+                              "bracket_constrained_challenger"][
+                              "predeclared_exploratory_comparisons"],
                       "private_sha256": report["private_agreements_sha256"]},
                      sort_keys=True))
 
