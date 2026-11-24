@@ -163,9 +163,9 @@ class LSGOriginalWordWitnessTests(unittest.TestCase):
         original.mkdir()
         nt_tsv = original / "nt.tsv"
         ot_tsv = original / "ot.tsv"
-        nt_tsv.write_text("id\\n", encoding="utf-8")
-        ot_tsv.write_text("id\\n010010010011\\n010010010021\\n"
-                          "010010020011\\n010010010031\\n010010010041\\n",
+        nt_tsv.write_text("id\n", encoding="utf-8")
+        ot_tsv.write_text("id\n010010010011\n010010010021\n"
+                          "010010020011\n010010010031\n010010010041\n",
                           encoding="utf-8")
         manifest = self.root / "manifest.json"
         manifest.write_text(json.dumps({
