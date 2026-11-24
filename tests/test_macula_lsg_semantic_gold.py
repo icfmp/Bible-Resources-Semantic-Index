@@ -35,11 +35,11 @@ def dossier():
              "evaluation_partition": "blind_validation"},
         ],
         "original_source_verses": {
-            "40001001": [{"original_macula_id": "n40001001001"},
-                         {"original_macula_id": "n40001001002"},
-                         {"original_macula_id": "n40001001003"}],
-            "01001001": [{"original_macula_id": "o01001001001"}],
-            "40001002": [{"original_macula_id": "n40001002001"}],
+            "40001001": [{"original_macula_id": "n40001001001", "present_in_correspondence_index": True},
+                         {"original_macula_id": "n40001001002", "present_in_correspondence_index": True},
+                         {"original_macula_id": "n40001001003", "present_in_correspondence_index": True}],
+            "01001001": [{"original_macula_id": "o01001001001", "present_in_correspondence_index": True}],
+            "40001002": [{"original_macula_id": "n40001002001", "present_in_correspondence_index": True}],
         },
         "exact_authored_french_verses": {
             "40001001": {
@@ -205,6 +205,17 @@ class HumanGoldTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "uncontested"):
             tool.evaluate(dossier(), submissions([
                 review(reviewer="alice"), review(reviewer="bob")], [adjudicator]))
+
+    def test_authentic_hebrew_extra_part_is_context_only_not_gold_identity(self):
+        data = copy.deepcopy(dossier())
+        data["original_source_verses"]["01001001"].append({
+            "original_macula_id": "o01001001002",
+            "present_in_correspondence_index": False})
+        source = ["o01001001001", "o01001001002"]
+        record = review(case="b", reviewer="person2",
+                        decision="grammatical_unpaired", source=source)
+        with self.assertRaisesRegex(ValueError, "absent from existing indexed"):
+            tool.validated_review(record, data["cases"][1], data)
 
     def test_dossier_must_not_preexpose_machine_or_gold(self):
         data = copy.deepcopy(dossier())
