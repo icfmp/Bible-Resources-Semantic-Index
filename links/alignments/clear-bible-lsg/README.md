@@ -210,7 +210,8 @@ readback/decompression and original-source record-count guard.
   **91,649** can be projected to a single unambiguous **diagnostic** curated
   word position within their original same-verse character stream.
   Their original MACULA token IDs, Clear.Bible target IDs and record order
-  remain in each private candidate row. Every row still says
+  remain in each owned index row; inverse lookup keys identify original IDs
+  and curated LSG word positions without editing either source. Every row still says
   `editorially_approved: false`.
 - **13,158** records explicitly abstain: **7,457** target punctuation/symbol
   surfaces, **4,574** target surfaces splitting our diagnostic word
