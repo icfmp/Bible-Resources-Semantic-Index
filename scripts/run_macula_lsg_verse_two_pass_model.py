@@ -72,13 +72,25 @@ For phrase_span, grammatical_function and uncertainty_reason must be null;
 for grammatical_unpaired, supply grammatical_function and null reason;
 for undetermined, supply uncertainty_reason and null function.
 Every original group must have substantive contextual_reason, not a
-position/lemma-only assertion. Return ONLY JSON with this exact form:
+position/lemma-only assertion. Verify the reverse French-to-source direction:
+EVERY authored French word in the clause must be accounted for, either
+within a source-group phrase_span or within an EXPLICIT French-only
+grammatical expression that does not have an individual original source
+token (e.g. an auxiliary or an existential construction). Do not label
+a French expression as target-only when already aligned to a source
+phrase. Such expression needs a substantive contextual_reason and a
+function from grammatical_restructuring, existential_construction,
+discourse_cohesion, required_french_word, or other.
+Return ONLY JSON with this exact form:
 {"clauses":[{"original_macula_ids":["..."],"french_spans":
 [{"word_ids":["..."]}],"clause_sense":"...",
 "alignments":[{"original_macula_ids":["..."],"french_spans":
 [{"word_ids":["..."]}],"decision":"phrase_span",
 "contextual_reason":"...","grammatical_function":null,
-"uncertainty_reason":null}]}]}.
+"uncertainty_reason":null}],
+"french_only_constructions":[{"word_ids":["..."],"function":
+"grammatical_restructuring","contextual_reason":"..."}]}]}.
+Use an EMPTY french_only_constructions list when none is needed.
 No model-signed approvals or markdown."""
 
 def digest(raw: bytes) -> str:
@@ -208,6 +220,10 @@ def validate_pass1(task: dict, draft: dict) -> None:
         schema._rationale(clause["clause_sense"], "pass 1 contextual clause sense")
     if seen_original != all_original:
         raise ValueError("pass 1 did not read the complete original verse")
+    seen_french = {w for clause in clauses for part in clause["french_spans"]
+                   for w in part["word_ids"]}
+    if seen_french != set(french_words):
+        raise ValueError("pass 1 did not interpret every authored French word")
 
 def two_pass_one_verse(task: dict, *, model: str, completion,
                        endpoint: str, max_tokens: int, timeout: int) -> tuple[dict, dict]:
@@ -234,16 +250,52 @@ def two_pass_one_verse(task: dict, *, model: str, completion,
     if not isinstance(second["clauses"], list) or len(second["clauses"]) != len(
             first["clauses"]):
         raise ValueError("pass 2 changed original clause segmentation")
+    french_only_word_count = 0
+    private_french_only = []
+    cleaned_clauses = []
     for before, after in zip(first["clauses"], second["clauses"]):
         if not isinstance(after, dict) or {
                 k: after.get(k) for k in before} != before:
             raise ValueError("pass 2 rewrote pass 1 full-verse interpretation")
+        if set(after) != set(before) | {"alignments", "french_only_constructions"}:
+            raise ValueError("pass 2 did not classify source and French clauses completely")
+        clause_words = {w for part in before["french_spans"]
+                        for w in part["word_ids"]}
+        aligned_words = {w for align in after["alignments"]
+                         for part in align["french_spans"]
+                         for w in part["word_ids"]}
+        if not isinstance(after["french_only_constructions"], list):
+            raise ValueError("French-only grammatical constructions must be explicit")
+        explained_words = set()
+        words = [w["word_id"] for w in task["authored_french"]["exact_words"]]
+        for extra in after["french_only_constructions"]:
+            if not isinstance(extra, dict) or set(extra) != {
+                    "word_ids", "function", "contextual_reason"}:
+                raise ValueError("French-only explanation has invalid fields")
+            if extra["function"] not in {
+                    "grammatical_restructuring", "existential_construction",
+                    "discourse_cohesion", "required_french_word", "other"}:
+                raise ValueError("unsupported French-only function")
+            schema._rationale(extra["contextual_reason"],
+                              "French-only grammatical function")
+            schema._ordered_consecutive(extra["word_ids"], words,
+                                        "French-only exact target")
+            if (not explained_words.isdisjoint(extra["word_ids"]) or
+                    not aligned_words.isdisjoint(extra["word_ids"])):
+                raise ValueError("French-only target has overlapping/conflicting source mapping")
+            explained_words.update(extra["word_ids"])
+        if (aligned_words | explained_words) != clause_words:
+            raise ValueError("French clause includes unexplained or cross-clause target words")
+        french_only_word_count += len(explained_words)
+        private_french_only.append(after["french_only_constructions"])
+        cleaned_clauses.append({k: after[k] for k in (
+            "original_macula_ids", "french_spans", "clause_sense", "alignments")})
     result = {
         "task_id": task["task_id"],
         "original_verse": task["original_verse"],
         "source_verse_sense": first["source_verse_sense"],
         "french_verse_sense": first["french_verse_sense"],
-        "clauses": second["clauses"],
+        "clauses": cleaned_clauses,
     }
     test_pilot = {"pilot_id": "single-verse-research",
                   "source_dossier_gzip_sha256": "not-gold",
@@ -260,6 +312,8 @@ def two_pass_one_verse(task: dict, *, model: str, completion,
         "pass2_response_sha256": digest(json_bytes(second)),
         "model_name": model,
         "pass_count": 2,
+        "french_only_word_count": french_only_word_count,
+        "private_french_only_constructions_by_clause": private_french_only,
     }
 
 def _envelope(pilot_sha: str, pilot_id: str, model: str,
@@ -353,6 +407,9 @@ def run(pilot: dict, pilot_sha: str, *, model: str,
             verified["machine_dispositions_by_original_part"],
         "distinct_french_words_used_in_machine_spans":
             verified["distinct_french_words_used_in_machine_spans"],
+        "french_words_explained_as_target_only_grammar":
+            sum(p["french_only_word_count"]
+                for p in state["per_verse_private_provenance"]),
         "two_local_inference_passes_per_completed_verse": True,
         "private_checkpoint_sha256": digest(checkpoint.read_bytes()),
         "independent_semantic_accuracy_measured": False,
