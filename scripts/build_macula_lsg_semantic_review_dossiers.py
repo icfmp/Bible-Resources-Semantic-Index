@@ -170,13 +170,19 @@ def build_dossiers(index: dict, reviewed_cases: list[dict],
         if set(tokens[canon]) != selected_verses[canon]:
             raise ValueError("selected MACULA context does not match review case verses")
         original_by_verse.update(tokens[canon])
+    original_ids = index["by_original_macula_id"]
+    extra_authenticated_original_parts = 0
+    for verse_tokens in original_by_verse.values():
+        for source_word in verse_tokens:
+            in_index = source_word["original_macula_id"] in original_ids
+            source_word["present_in_correspondence_index"] = in_index
+            extra_authenticated_original_parts += int(not in_index)
     cases = []
     by_partition = Counter()
     by_partition_canon = defaultdict(Counter)
     by_partition_stratum = defaultdict(Counter)
     mismatch = 0
     unavailable = 0
-    original_ids = index["by_original_macula_id"]
     causes = index["unlinked_cause_by_original_macula_id"]
     for item in reviewed_cases:
         source = item["original_macula_id"]
@@ -261,6 +267,8 @@ def build_dossiers(index: dict, reviewed_cases: list[dict],
         "split_seed": SPLIT_SEED,
         "sample_original_macula_ids": len(cases),
         "original_source_verses": len(verse_splits),
+        "authentic_original_context_parts_not_in_correspondence_index":
+            extra_authenticated_original_parts,
         "original_target_verse_disagreement_cases": mismatch,
         "missing_authored_same_coordinate_verses": unavailable,
         "source_verse_cluster_partition_counts": dict(sorted(by_partition.items())),
