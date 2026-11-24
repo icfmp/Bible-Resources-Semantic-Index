@@ -92,9 +92,10 @@ The sampler's three gold fields start **null**. They are *placeholders*, not
 approval or absence-of-equivalent decisions. The initial sample generator
 does not edit them. Actual manually annotated gold must be stored separately
 and privately, with individual reviews and adjudicated final decisions.
-Blind reviewers should initially be independent; double-review at least 10%
-of cases distributed across all categories and explicitly adjudicate
-disagreements. This proposed 10% is a protocol target, not a completed review.
+Blind reviewers must initially be independent. **Every case accepted into the
+research gold must receive two independent, matching human reviews**, or a
+third independent adjudicator when they disagree. No sampling overlap rate,
+unreviewed source metadata or machine proposal substitutes for gold labels.
 
 ## Training, model comparison, and acceptance gates
 
@@ -149,3 +150,102 @@ cohorts exactly. A source revision mismatch, existing French word link on an
 "unlinked" original ID, altered category partition or undersized cohort
 fails closed. Keep both generated files out of the repository until the
 source-free receipt has been independently verified and explicitly approved.
+
+
+## Source-pinned reviewer dossiers and no-leak evaluation partitions
+
+The maintained bilingual dossier generator:
+
+    python3 -I scripts/build_macula_lsg_semantic_review_dossiers.py \
+      --original-index /tmp/brsi-macula-lsg-correspondence.json.gz \
+      --correspondence-lock links/alignments/clear-bible-lsg/aquifer-correspondence.lock.json \
+      --semantic-sample-lock links/alignments/clear-bible-lsg/semantic-review-sample.lock.json \
+      --pivot-lock links/alignments/clear-bible-lsg/pivot.lock.json \
+      --pivot-nt /tmp/brsi-semantic-macula-nt/SBLGNT/tsv/macula-greek-SBLGNT.tsv \
+      --pivot-ot /tmp/brsi-semantic-macula-ot/WLC/tsv/macula-hebrew.tsv \
+      --curated-root /tmp/brsi-word-reader \
+      --curated-lock links/alignments/clear-bible-lsg/curated-1.0.2.lock.json \
+      --private-dossiers /tmp/brsi-semantic-private-review-dossiers.json.gz \
+      --report /tmp/brsi-semantic-review-dossier-report.json
+
+This regenerates the **already frozen 2,000 original IDs** from full byte-locked
+source inputs. It retains original-token context for their source verses
+(MACULA lemma, original-language surface where available, POS, morphology),
+exact authored French word coordinates and adjacent authored French verses.
+There is deliberately **no machine-proposed French span** in a reviewer
+dossier. Source identifiers and bilingual texts are private, never printed
+to CI logs or committed; the committed aggregate receipt contains only
+counts, pinned source identities and private-file SHA-256.
+
+The exact original Hebrew MACULA TSV contains **475,911** source rows, while
+our existing correspondence index currently includes **469,476** Hebrew
+source IDs. The 6,435 authentic extra source parts are retained as **context**,
+never silently added to the correspondence index or used as review gold
+identifiers. Every source token records whether it is already present in the
+BRSI correspondence index. A proposed gold original group containing any
+context-only extra part must fail pending source-identity reconciliation.
+
+The generator records the literal MACULA TSV source column used for original
+forms. If the exact pinned TSV has no suitable surface column, do not invent
+original-language text from lemma or English glosses.
+
+A reproducible source-verse-cluster hash gives sampled original IDs training,
+calibration and blind-validation partitions. Source IDs from the same original
+verse **cannot be split across evaluation partitions**. Since the 920 known
+OT original-target reference shifts remain unresolved (#166), the dossier
+flags sampled source/reference disagreements. The original-source split is
+not in itself proof of complete *target-verse* independence in shifted verses:
+do not train on disputed targets until their authorized reference mapping
+and leakage grouping have been independently demonstrated.
+
+## Strict manual phrase-gold schema and review procedure
+
+The private human review manifest starts empty:
+
+    {
+      "schema_version": 1,
+      "source_dossiers_gzip_sha256": "sha256-of-the-pinned-dossier",
+      "reviews": [],
+      "adjudications": []
+    }
+
+Each populated review must include a sampled case ID, a distinct reviewer ID,
+a substantive source-evidence explanation, and both human_original_checked
+and human_curated_french_checked set to true. The reviewer must specify a
+nonempty original_macula_ids group, preserving exact contiguous source order
+and including the sampled ID, and exactly one decision:
+
+- phrase_span: one or more authored French spans with exact contiguous
+  BCV:ordinal identifiers from the same authorial verse, no overlapping or
+  invented French word IDs;
+- grammatical_unpaired: no French span, and a reviewed unpaired_function
+  (agreement, case, article, aspect, tense, particle, clitic, discourse,
+  or other) that does not force a misleading highlight;
+- undetermined: no French span, with an explicit undetermined_reason
+  (versification, missing_target, conflicting_sources, unclear_syntax,
+  no_independent_evidence or other).
+
+Until #166 is resolved, **cross-verse French span assertions fail closed**
+even if an original alignment hints at a numeric shift. Document such
+unresolved examples as undetermined with a versification reason.
+
+Two separate human reviewers must independently submit the same substantive
+original group, French span(s) and decision class to create *research gold*.
+Disputes require a third, distinct adjudicator with fresh evidence and a
+written adjudication_rationale. One review, incompatible reviews or source
+data alone do not establish gold.
+
+After the dossier source-free receipt has been verified and pinned, run:
+
+    python3 -I scripts/validate_macula_lsg_semantic_gold.py \
+      --private-dossiers /tmp/brsi-semantic-private-review-dossiers.json.gz \
+      --dossier-lock links/alignments/clear-bible-lsg/semantic-review-dossiers.lock.json \
+      --reviews-json /tmp/private-human-reviews.json \
+      --private-gold /tmp/private-source-locked-gold.json.gz \
+      --report /tmp/source-free-gold-adjudication.json
+
+Even independently corroborated human-gold is **research reference
+evidence**, not a published BRSI word link, consumer translation alignment,
+production-confidence certificate or permission to rewrite LSG/MACULA.
+The CI baseline deliberately validates an **empty submitted review
+manifest** first, ensuring no automatic semantic certification.

@@ -100,6 +100,26 @@ never changes the application. See [V1 consumer guide](../docs/V1_CONSUMPTION.md
   weaker evidence. A bracket is **not** word-level semantic equivalence,
   grammatical sense approval, or permission for Bible highlighting. See
   [source-owned protocol](../links/alignments/clear-bible-lsg/SEMANTIC_REVIEW_PROTOCOL.md).
+- `build_macula_lsg_semantic_review_dossiers.py`: reconstructs **private bilingual
+  review dossiers** for exactly the frozen 2,000 original-ID cases in #187;
+  checks full original MACULA NT/OT TSV SHA-256/census and exact authored LSG
+  1.0.2 OSIS. Includes complete selected original verses (source forms only
+  when actually present in source TSV), exact NFC French words/ordinals and
+  neighboring French verse context. Blind review sees NO model suggestion.
+  Source-verse clusters receive stable training/calibration/blind partitions;
+  920 known global Clear.Bible OT reference disagreements remain a separate
+  editorial gate, with sampled disagreements explicitly flagged. The raw
+  bilingual dossiers are private, source-free aggregate receipt is pinned.
+- `validate_macula_lsg_semantic_gold.py`: fail-closed, private **human-only**
+  source-span gold validator for independently reviewed phrase-equivalence,
+  grammatical-unpaired and genuinely undetermined outcomes. Validates original
+  MACULA groups against actual source verse context and French word spans
+  against the exact authored OSIS word inventory. Requires two *distinct*
+  matching reviewers or an independent third adjudicator for conflicts.
+  Mixed/invalid/out-of-verse invented words fail; source/versification gaps
+  cannot be silently repaired. Gold is a research benchmark, NEVER an
+  automatic production alignment or release. See
+  [semantic review protocol](../links/alignments/clear-bible-lsg/SEMANTIC_REVIEW_PROTOCOL.md).
 - `calibrate_aquifer_lsg_target_ids.py`: continuous source-pinned safety
   calibration against 91,649 independent original NT word witnesses.
   It demonstrates why identical **numeric** target IDs between independently

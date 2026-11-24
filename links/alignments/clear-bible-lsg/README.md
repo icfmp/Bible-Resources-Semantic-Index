@@ -33,6 +33,28 @@ receipt is versioned only after reproducible full-corpus runs and independent
 review; private candidate spans are not published. No LSG, MACULA or Bible
 app records are changed and no new semantic link is accepted.
 
+## Private bilingual gold review and independent adjudication (nonpublishing)
+
+The [source-locked bilingual dossier generator](../../../scripts/build_macula_lsg_semantic_review_dossiers.py)
+reconstructs **exact original Greek/Hebrew token context and exact authored
+French LSG 1.0.2 word coordinates** for the frozen four-category 2,000-case
+sample, preserving original forms, lemmas and morphology only when those
+fields actually appear in pinned MACULA source TSV. The generated dossiers
+carry no model suggestions or prior approved labels; train/calibration/blind
+splits isolate the *original source verse*. OT reference conflicts are flagged,
+not automatically resolved. The underlying bilingual data remains private:
+the checked-in JSON receipt contains only aggregate statistics and the
+private gzip SHA-256, not any copied Scripture or original token text.
+
+The independent [human-gold validator](../../../scripts/validate_macula_lsg_semantic_gold.py)
+requires two distinct human reviews of a case, exact original/LSG span
+identity and evidence, plus a third independent adjudicator for disagreements.
+A grammatical source unit can be confirmed *unpaired* without forcing a
+French highlighted word; unresolved reference shifts, competing witnesses
+or unclear syntax are explicitly *undetermined*. Neither tool can publish
+a translation link, modify LSG, rewrite MACULA or trigger Bible app changes.
+See [protocol and review schema](SEMANTIC_REVIEW_PROTOCOL.md).
+
 ## Maintained pipeline
 
 **Clear.Bible is our immutable original alignment source; the index is ours.**

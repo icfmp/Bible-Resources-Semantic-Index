@@ -8,6 +8,10 @@ on:
       - "scripts/audit_macula_lsg_contextual_lexical_pilot.py"
       - "scripts/sample_macula_lsg_semantic_review.py"
       - "scripts/audit_macula_lsg_phrase_brackets.py"
+      - "scripts/build_macula_lsg_semantic_review_dossiers.py"
+      - "scripts/validate_macula_lsg_semantic_gold.py"
+      - "tests/test_macula_lsg_semantic_review_dossiers.py"
+      - "tests/test_macula_lsg_semantic_gold.py"
       - "tests/test_macula_lsg_phrase_brackets.py"
       - "tests/test_macula_lsg_semantic_review_sampler.py"
       - "tests/test_macula_lsg_contextual_lexical_pilot.py"
@@ -39,6 +43,10 @@ jobs:
         run: python3 -I -m unittest discover -s tests -p 'test_macula_lsg_semantic_review_sampler.py' -v
       - name: Phrase-bracket localization and lexical abstention regressions
         run: python3 -I -m unittest discover -s tests -p 'test_macula_lsg_phrase_brackets.py' -v
+      - name: Review dossier exact-source and blind partition synthetic regressions
+        run: python3 -I -m unittest discover -s tests -p 'test_macula_lsg_semantic_review_dossiers.py' -v
+      - name: Human-only phrase/grammar gold adjudication synthetic regressions
+        run: python3 -I -m unittest discover -s tests -p 'test_macula_lsg_semantic_gold.py' -v
       - name: Retrieve exact original Clear.Bible alignment sources
         shell: bash
         run: |
@@ -659,6 +667,93 @@ jobs:
               --baseline links/alignments/clear-bible-lsg/phrase-bracket-pilot.lock.json
           else
             echo "FIRST PHRASE PILOT: independently audit output, then pin the source-free receipt"
+          fi
+
+      - name: Rebuild all original/LSG context for private human semantic review dossiers
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -I scripts/build_macula_lsg_semantic_review_dossiers.py \
+            --original-index /tmp/brsi-macula-lsg-correspondence.json.gz \
+            --correspondence-lock links/alignments/clear-bible-lsg/aquifer-correspondence.lock.json \
+            --semantic-sample-lock links/alignments/clear-bible-lsg/semantic-review-sample.lock.json \
+            --pivot-lock links/alignments/clear-bible-lsg/pivot.lock.json \
+            --pivot-nt /tmp/brsi-semantic-macula-nt/SBLGNT/tsv/macula-greek-SBLGNT.tsv \
+            --pivot-ot /tmp/brsi-semantic-macula-ot/WLC/tsv/macula-hebrew.tsv \
+            --curated-root /tmp/brsi-word-reader \
+            --curated-lock links/alignments/clear-bible-lsg/curated-1.0.2.lock.json \
+            --private-dossiers /tmp/brsi-semantic-private-review-dossiers.json.gz \
+            --report /tmp/brsi-semantic-review-dossier-report.json
+          python3 -I - <<'PY'
+          import gzip, hashlib, json
+          from pathlib import Path
+          p=Path('/tmp/brsi-semantic-review-dossier-report.json')
+          r=json.loads(p.read_text())
+          packed=Path('/tmp/brsi-semantic-private-review-dossiers.json.gz').read_bytes()
+          assert hashlib.sha256(packed).hexdigest() == r['private_dossiers_gzip_sha256']
+          assert len(packed) == r['private_dossiers_gzip_bytes']
+          d=json.loads(gzip.decompress(packed))
+          assert d['kind'] == 'brsi-private-exact-source-semantic-human-review-dossiers'
+          assert r['sample_original_macula_ids'] == len(d['cases']) == 2000
+          assert r['original_source_verses'] == len(d['original_source_verses']) == 1892
+          assert len(d['exact_authored_french_verses']) == 1892
+          assert sum(r['source_verse_cluster_partition_counts'].values()) == 2000
+          assert {case['original_macula_id'] for case in d['cases']} == {
+              t['original_macula_id']
+              for case in d['cases']
+              for t in d['original_source_verses'][case['source_verse_coordinate']]
+              if t['original_macula_id'] == case['original_macula_id']}
+          assert all(case['review_decision'] is None and
+                     case['human_reviewed'] is False and
+                     case['machine_candidate_visible_to_reviewers'] is False
+                     for case in d['cases'])
+          assert r['human_gold_reviewed_cases'] == 0
+          assert r['model_proposals_shown'] == 0
+          assert r['automatic_approved_word_links'] == 0
+          assert r['publication_authorized'] is False
+          assert r['source_text_in_public_receipt'] is False
+          assert all(any(token['original_macula_id'] == case['original_macula_id']
+                         for token in d['original_source_verses'][case['context_key']])
+                     for case in d['cases'])
+          assert all(all(w['word_id'].startswith(verse+':')
+                         for w in row['exact_words'])
+                     for verse,row in d['exact_authored_french_verses'].items())
+          print('BRSI_PRIVATE_REVIEW_DOSSIER_SOURCE_FREE_RECEIPT')
+          print(p.read_text())
+          PY
+          if test -f links/alignments/clear-bible-lsg/semantic-review-dossiers.lock.json; then
+            python3 -I scripts/verify_generated_json.py \
+              --generated /tmp/brsi-semantic-review-dossier-report.json \
+              --baseline links/alignments/clear-bible-lsg/semantic-review-dossiers.lock.json
+            python3 -I - <<'PY'
+          import json
+          from pathlib import Path
+          r=json.loads(Path('/tmp/brsi-semantic-review-dossier-report.json').read_text())
+          Path('/tmp/brsi-semantic-empty-human-reviews.json').write_text(
+              json.dumps({'schema_version':1,
+                          'source_dossiers_gzip_sha256':r['private_dossiers_gzip_sha256'],
+                          'reviews':[], 'adjudications':[]}, sort_keys=True) + '\n')
+          PY
+            python3 -I scripts/validate_macula_lsg_semantic_gold.py \
+              --private-dossiers /tmp/brsi-semantic-private-review-dossiers.json.gz \
+              --dossier-lock links/alignments/clear-bible-lsg/semantic-review-dossiers.lock.json \
+              --reviews-json /tmp/brsi-semantic-empty-human-reviews.json \
+              --private-gold /tmp/brsi-semantic-empty-private-gold.json.gz \
+              --report /tmp/brsi-semantic-empty-gold-report.json
+            python3 -I - <<'PY'
+          import json
+          from pathlib import Path
+          r=json.loads(Path('/tmp/brsi-semantic-empty-gold-report.json').read_text())
+          assert r['review_case_count'] == 2000
+          assert r['human_gold_cases'] == r['total_human_submissions'] == 0
+          assert r['automatic_production_approvals'] == 0
+          assert r['counts']['awaiting_independent_dual_review'] == 2000
+          assert r['publication_authorized'] is False
+          print('BRSI_PRIVATE_HUMAN_GOLD_EMPTY_REVIEW_RECEIPT',r['counts'],
+                r['private_gold_gzip_sha256'])
+          PY
+          else
+            echo "FIRST ORIGINAL-SOURCE REVIEW DOSSIER: audit the source-free receipt and pin before enabling empty-gold validation"
           fi
 
       - name: Explicit no-publication boundary
