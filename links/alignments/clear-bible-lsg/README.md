@@ -143,6 +143,38 @@ The first Genesis/2 John pilot remains independently locked and unmodified.
 No editorial gold, French word/phrase links, Bible-app edits or publication
 are produced by either study.
 
+## Original source syntax × learned French lexical neighborhoods (negative control)
+
+The [source-syntax lexical-neighborhood study](../../../scripts/audit_macula_lsg_syntax_lexical_neighborhood.py)
+combines *actual pinned nested MACULA XML groups* with independently indexed
+source↔authored LSG word anchors and a lemma→authorial French-surface
+lexicon trained on other verses. It allows source/translation word-order
+changes and Hebrew multiple-morpheme original words by proposing a **single
+source-side original phrase ↔ a contiguous authored French candidate span**;
+this is a strictly **unapproved bilingual localization hypothesis**, NOT a
+verified meaning equivalence.
+
+A real-source retrospective negative control chooses **600 distinct Greek
+NT source verses** across the five fixed complete Greek books. Each test
+source and **all other original source IDs sharing its exact French gold
+word are hidden from anchors**. Every evaluation verse is excluded from the
+lemma lexicon training. The first 300 verses alone choose an exploratory
+threshold among predeclared source-lemma support and source-anchor proximity
+settings, while the second 300 are reported independently. **Exact-word
+errors and merely containing the gold word in a longer target phrase are
+counted separately**. Because previously published Clear.Bible positional
+pseudo-gold informed this research family, this is neither prospectively
+sealed nor a human-reviewed source-phrase translation benchmark.
+
+Unresolved MACULA cases from all **four fixed cause classes** are scored in
+the diverse 18-witness cohort, with separate OT/NT counts and a source-free
+receipt. Source-lemma distributions from **Aquifer OT candidate word pairs
+are not bilingual gold**, and no NT metric can certify Hebrew semantic
+accuracy. Even when a statistical diagnostic is high, no candidate becomes
+an approved word or phrase link. Original and authored French text is kept
+only in transient private review gzip, never Git or a release. The previous
+source-only and edition-specific reports remain unchanged.
+
 ## Maintained pipeline
 
 **Clear.Bible is our immutable original alignment source; the index is ours.**
