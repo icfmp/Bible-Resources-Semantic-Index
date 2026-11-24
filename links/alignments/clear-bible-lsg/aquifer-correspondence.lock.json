@@ -3,21 +3,25 @@
     "chapters": 1188,
     "clear_bible_direct_nt_words_retained": 91649,
     "empty_non_equivalent_tokens": 4165,
-    "exact_located_source_target_edges": 656490,
+    "exact_located_source_target_edges": 656514,
+    "nt_target_words_forced_ordered_exact_word": 160574,
+    "nt_target_words_unique_exact_surface_without_order_proof": 5,
+    "ot_target_words_forced_ordered_exact_word": 490374,
+    "ot_target_words_unique_exact_surface_without_order_proof": 19,
     "source_declared_non_equivalent_occurrences": 67490,
     "source_record_outside_filename_chapter": 1636,
     "source_target_edges": 700996,
     "target_tokens_not_full_words": 0,
     "target_tokens_observed": 696964,
-    "target_tokens_uniquely_located": 650948,
-    "target_tokens_unresolved": 46016,
+    "target_tokens_uniquely_located": 650972,
+    "target_tokens_unresolved": 45992,
     "target_verses_with_source_text": 30607,
     "verses_full_word_sequence_identical": 6291
   },
   "curated_osis_sha256": "2b8342a67d8e97b433670450fe9dd9e58917a7fcfc0cb4d321882ca8219dc3bd",
   "curated_release": "lsg-1.0.2",
-  "gzip_bytes": 14265357,
-  "gzip_sha256": "8087d31f6fd43bfbf1102e3fdcfe9934b8532c28cd7245ee8201698ae2e29697",
+  "gzip_bytes": 35765924,
+  "gzip_sha256": "b14e4c7323f46f00cb0e48316408ff27758c9c6d77d622c77180d6b21aac9f4a",
   "kind": "brsi-macula-curated-lsg-word-corroboration-development",
   "no_automatic_editorial_approval": true,
   "original_group_counts": {
@@ -31,56 +35,56 @@
   "source_coverage": {
     "nt": {
       "macula_source_ids": 137741,
-      "macula_source_ids_with_word_evidence": 126304,
-      "macula_source_ids_without_word_evidence": 11437
+      "macula_source_ids_with_word_evidence": 126305,
+      "macula_source_ids_without_word_evidence": 11436
     },
     "ot": {
       "macula_source_ids": 469476,
-      "macula_source_ids_with_word_evidence": 361190,
-      "macula_source_ids_without_word_evidence": 108286
+      "macula_source_ids_with_word_evidence": 361200,
+      "macula_source_ids_without_word_evidence": 108276
     }
   },
   "status_counts": {
     "nt_aquifer_additional_pinned_macula_word": 24748,
     "nt_aquifer_source_word_witness": 1822,
-    "nt_aquifer_source_word_witness_numeric_coincidence": 7741,
+    "nt_aquifer_source_word_witness_numeric_coincidence": 7742,
     "nt_aquifer_source_word_witness_numeric_disagreement": 344,
-    "nt_clear_bible_direct_word_and_aquifer_agree": 63630,
+    "nt_clear_bible_direct_word_and_aquifer_agree": 63631,
     "nt_clear_bible_direct_word_aquifer_disagree": 21497,
-    "nt_clear_bible_direct_word_only": 6522,
+    "nt_clear_bible_direct_word_only": 6521,
     "nt_pinned_original_macula_word_without_translation_evidence": 8186,
-    "nt_unresolved_no_source_word_witness": 3251,
-    "ot_aquifer_additional_pinned_macula_word": 185275,
+    "nt_unresolved_no_source_word_witness": 3250,
+    "ot_aquifer_additional_pinned_macula_word": 185282,
     "ot_aquifer_source_word_witness": 5224,
-    "ot_aquifer_source_word_witness_numeric_coincidence": 164854,
+    "ot_aquifer_source_word_witness_numeric_coincidence": 164857,
     "ot_aquifer_source_word_witness_numeric_disagreement": 5837,
-    "ot_pinned_original_macula_word_without_translation_evidence": 80604,
-    "ot_unresolved_no_source_word_witness": 27682
+    "ot_pinned_original_macula_word_without_translation_evidence": 80597,
+    "ot_unresolved_no_source_word_witness": 27679
   },
   "supplemental_macula_source_counts": {
     "nt_added_source_words": 24748,
     "nt_source_tokens_without_word_evidence": 8186,
     "original_source_macula_ids": 607217,
-    "ot_added_source_words": 185275,
-    "ot_source_tokens_without_word_evidence": 80604
+    "ot_added_source_words": 185282,
+    "ot_source_tokens_without_word_evidence": 80597
   },
   "target_id_calibration": {
-    "nt_original_target_id_attested_by_aquifer": 97590,
-    "nt_original_target_id_not_located_by_aquifer": 7217
+    "nt_original_target_id_attested_by_aquifer": 97592,
+    "nt_original_target_id_not_located_by_aquifer": 7215
   },
-  "uncompressed_bytes": 315509528,
-  "uncompressed_sha256": "85ca0cc60fcaf8942afcf0d2a32b3a868f31610bff6f268ffad1cd2ab287413b",
+  "uncompressed_bytes": 461784803,
+  "uncompressed_sha256": "1cc365f469261b51a94e13e0f253f150040fd2231e4b8fb219c18985c52ba8f8",
   "unlinked_source_cause_counts": {
     "nt": {
       "aquifer_explicit_non_equivalent_source": 3378,
-      "aquifer_record_source_with_no_uniquely_located_french_word": 2757,
+      "aquifer_record_source_with_no_uniquely_located_french_word": 2756,
       "not_present_in_aquifer_source_alignment_records": 5302
     },
     "ot": {
       "aquifer_explicit_non_equivalent_source": 59514,
-      "aquifer_record_source_with_no_uniquely_located_french_word": 18075,
+      "aquifer_record_source_with_no_uniquely_located_french_word": 18069,
       "not_present_in_aquifer_source_alignment_records": 21923,
-      "other_part_of_same_original_word_has_link": 8774
+      "other_part_of_same_original_word_has_link": 8770
     }
   },
   "unlinked_source_diagnostics": {
