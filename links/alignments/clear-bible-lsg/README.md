@@ -118,6 +118,31 @@ and 2 John are a deliberately small, mixed-Testament technical witness pilot,
 **not** a representative sample for estimating whole-Bible semantic accuracy
 or target phrase-level precision. No gold or automatic word linking is created.
 
+## Multi-genre original syntax units (nonpublishing study)
+
+The [diverse original syntax auditor](../../../scripts/audit_macula_lsg_diverse_syntax.py)
+extends the source-locked lowfat XML parser from the first 93-verse pilot to a
+fixed, intentionally varied cohort of **13 Hebrew/Aramaic OT chapters** and
+**five complete Greek NT books**. The corpus includes legal, narrative,
+poetic, wisdom, prophetic, apocalyptic and epistolary witnesses, but it is
+**neither random nor representative** of all biblical grammar.
+
+The private output groups unresolved source IDs into **actual MACULA syntax
+constituents** rather than assigning one-to-one French links. Each reviewer
+unit retains the original source group and role/class/rule, every distinct
+unlinked original token ID and its unresolved reason, and only the *existing*
+source-attested French word anchors. A bounded French navigation cue, shared
+original orthographic word, or reordered source/French anchor is **not a
+semantically verified translation** of that source phrase. Actual Greek and
+Hebrew and authored LSG verse text remain in a deterministic private gzip,
+not a public tracked artifact. A separate text-free aggregate report records
+per-document original ID counts, syntax group coverage, word sibling evidence,
+reordering and French anchor cues, plus pinned provenance and SHA-256.
+
+The first Genesis/2 John pilot remains independently locked and unmodified.
+No editorial gold, French word/phrase links, Bible-app edits or publication
+are produced by either study.
+
 ## Maintained pipeline
 
 **Clear.Bible is our immutable original alignment source; the index is ours.**
