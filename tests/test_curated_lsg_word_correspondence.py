@@ -118,9 +118,11 @@ class LSGOriginalWordWitnessTests(unittest.TestCase):
                 self.assertFalse(any(
                     proof == "unique_apostrophe_style_only"
                     for _, proof in positions.values()))
-        self.assertEqual(tool.locate_aquifer_words_with_proof(
+        duplicate = tool.locate_aquifer_words_with_proof(
             [("40001001001", "l'amour"), ("40001001002", "l’amour")],
-            [("l’amour", 0, 7)]), {})
+            [("l’amour", 0, 7)])
+        self.assertNotIn(0, duplicate)
+        self.assertEqual(duplicate[1], (0, "forced_ordered_exact_word"))
 
     def test_unique_surface_fallback_never_guesses_repeated_words(self):
         self.assertEqual(tool.locate_aquifer_words_with_proof(
