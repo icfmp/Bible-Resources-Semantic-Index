@@ -786,6 +786,12 @@ jobs:
           assert p['candidate_only'] and p['publication_authorized'] is False
           links=p['suggestions']
           assert len(links) == r['source_coverage']['lexical_phrase_exploratory_agreement_ids']
+          conditioned=p['bracket_conditioned_suggestions']
+          assert len(conditioned) == r['source_coverage']['bracket_conditioned_lexical_candidate_ids']
+          assert len({x['source_id'] for x in conditioned}) == len(conditioned)
+          assert len({x['source_id'] for x in links}) == len(links)
+          assert all(x['lexical_selection_restricted_to_bounded_phrase'] is True
+                     for x in conditioned)
           assert r['source_coverage']['full_original_macula_source_ids'] == 607217
           assert r['source_coverage']['unresolved_original_macula_source_ids'] == 119691
           assert r['source_coverage']['baseline_ids_with_candidate_french_word'] == 487526
@@ -799,9 +805,14 @@ jobs:
                      row['group_phrase_semantic_equivalence_proven'] is False and
                      row['source_words_individually_linked'] is False and
                      row['lemma_suggested_lsg_word_id'] in row['lsg_phrase_word_ids']
-                     for row in links)
+                     for row in links + conditioned)
           assert r['independent_NT_pseudo_gold_evaluation']['calibration_size'] == 1000
           assert r['independent_NT_pseudo_gold_evaluation']['blind_size'] == 1000
+          assert r['independent_NT_pseudo_gold_evaluation'][
+              'bracket_constrained_challenger']['predeclared_exploratory_comparisons'][
+              'any_bounded_phrase']['blind_half']['cases'] == 1000
+          assert r['independent_NT_pseudo_gold_evaluation'][
+              'not_a_fresh_prospectively_sealed_blind_gold_set'] is True
           assert r['independent_NT_pseudo_gold_evaluation'][
               'source_word_and_all_same_french_word_anchor_masked'] is True
           assert r['training_excludes_all_2k_heldout_nt_verses'] is True
