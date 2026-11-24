@@ -108,6 +108,7 @@ jobs:
             --clear-revision c99bd0ae6946775f932517656308ca19fc706921 \
             --aquifer-revision c25cc382fb3584a0837289f1499a7f56a4798dde \
             --min-chapters 1180 \
+            --gold-nt-index /tmp/brsi-word-nt-original-index.json.gz \
             --output /tmp/brsi-macula-lsg-correspondence.json.gz \
             --report /tmp/brsi-macula-lsg-correspondence-receipt.json
       - name: Independently verify full index gzip digests and source coverage
