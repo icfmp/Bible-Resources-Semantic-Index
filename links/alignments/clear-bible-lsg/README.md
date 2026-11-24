@@ -178,6 +178,29 @@ an approved word or phrase link. Original and authored French text is kept
 only in transient private review gzip, never Git or a release. The previous
 source-only and edition-specific reports remain unchanged.
 
+## Authentic source syntax: anchor-only French navigation (research)
+
+The [anchor-only MACULA syntax experiment](../../../scripts/audit_macula_lsg_syntax_anchor_only.py)
+reuses the exact 18 pinned original XML source witnesses and the original
+3,790 unlinked source IDs. Unlike the earlier lexical-neighborhood negative
+control, it does **not** require a prior lemma-to-French single-word guess.
+A genuine original XML constituent can yield a bounded authored French
+**navigation window** when it contains at least two distinct already-located
+French anchor words; candidate windows remain source-verse-local and at
+most 16 words wide. NT anchors retain their direct Clear.Bible source tier,
+while OT Aquifer surface-location anchors are expressly lower confidence.
+Neither tier proves contextual semantic equivalence, a translated phrase, or
+an individually translatable Hebrew morpheme.
+
+A source-pinned, 600-distinct-NT-verse retrospective positional pseudo-gold
+control masks each heldout source and every anchor hitting its exact French
+target. It measures only containment, misses, width and abstention, **not**
+the meaning of the entire original group. Original and French text remain in
+a runner-local private gzip; only source-text-free aggregate counts and their
+private digest may be tracked. No automatic link, human semantic gold or
+release is authorized. The separate #187 human-gold and #166 source-edition
+review gates remain necessary.
+
 ## Maintained pipeline
 
 **Clear.Bible is our immutable original alignment source; the index is ours.**
