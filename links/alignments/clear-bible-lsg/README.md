@@ -280,17 +280,30 @@ readback/decompression and original-source record-count guard.
   remain in each owned index row; inverse lookup keys identify original IDs
   and curated LSG word positions without editing either source. Every row still says
   `editorially_approved: false`.
+- **Exact word-surface attestation (full-corpus verified): all 91,649**
+  located NT target word candidates have the **same exact NFC French word
+  surface** in the original Clear.Bible target TSV and independently pinned
+  Bible Resources LSG 1.0.2 OSIS. The generated index stores the exact
+  authorial NFC codepoint span and independent SHA-256 witnesses of the
+  authored word and original target token for **each row**, verified against
+  both independently pinned inputs on CI. This is considerably stronger
+  than the earlier alphanumeric-only verse diagnostic but **still not
+  contextual semantic or manual translation-alignment approval**. The
+  source MACULA IDs and original target selectors remain unchanged.
 - **13,158** records explicitly abstain: **7,457** target punctuation/symbol
   surfaces, **4,574** target surfaces splitting our diagnostic word
   boundaries, **131** records in text-mismatching verses, and the original
   **996** unattested upstream target IDs. No invented text, target selector,
   French word, missing verse or automatic cross-verse rewrite fills these.
-- The matching criterion deliberately ignores punctuation and case: therefore
-  **even the 91,649 are not certified editorially accurate links**. A later
-  reviewed consumer projection must decide which word-boundary evidence is
-  sufficient, exclude exception cases and independently validate the
-  exact intended French word spans in our source OSIS. The generated index draft
-  is evidence for that work, **not** a public resource.
+- Initial coordinates were found with an alphanumeric stream check, but the
+  strengthened source-verified producer **independently attests exact original
+  NT target word surfaces to authored French words**. All 91,649 candidate
+  surfaces happen to match **exactly after NFC** in the current pinned
+  source snapshot; no case-folding, accent removal, punctuation stripping or
+  word replacement is needed for those records. This does **not** assert that
+  the original Greek→French linguistic choices are each independently
+  reviewed, nor justify filling the remaining original target-ID gaps.
+  The generated index is still **not** a public release.
 
 This comparison makes the edition/gap review **more precise**, not complete.
 Do not backfill missing target IDs from word positions, use raw eBible in place

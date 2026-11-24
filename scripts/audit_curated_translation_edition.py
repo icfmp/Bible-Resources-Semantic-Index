@@ -255,9 +255,44 @@ def read_target_tsv(path: Path, field: str = "text") -> tuple[dict[str, list[str
     return result, {"token_rows": total, "blank_token_surfaces": blank, "distinct_verses": len(result)}
 
 
+def _strip_external_nonletters(text: str) -> str:
+    """Drop only material *outside* a token, never its apostrophes/hyphens."""
+    start, end = 0, len(text)
+    while start < end and not text[start].isalnum():
+        start += 1
+    while end > start and not text[end - 1].isalnum():
+        end -= 1
+    return text[start:end]
+
+
+def classify_exact_word_surface(original_target: str, authored_word: str) -> str:
+    """Require an attested full-word stream before classifying text evidence.
+
+    The original Clear.Bible token and independently sourced LSG 1.0.2 word
+    are not replaced or respelled. We record the strength of *observed*
+    evidence, not a claim that a linguistic translation decision is right.
+    """
+    original = unicodedata.normalize("NFC", original_target)
+    authored = unicodedata.normalize("NFC", authored_word)
+    if not authored or not character_stream(authored):
+        raise ValueError("cannot attest an empty French word")
+    if character_stream(original) != character_stream(authored):
+        raise ValueError("source token character stream differs from authored word")
+    if original == authored:
+        return "same_nfc_word_surface"
+    if original.casefold() == authored.casefold():
+        return "same_nfc_casefold_word_surface"
+    if (_strip_external_nonletters(original).casefold() ==
+            _strip_external_nonletters(authored).casefold()):
+        return "same_word_with_external_punctuation_difference"
+    return "only_alphanumeric_stream_matches"
+
+
 def _nt_token_boundaries(source_text: str, targets: list[tuple[str, str]]):
     """Compare only surface character spans; do not create word/ID links."""
-    words = word_stream(source_text)
+    original_text = unicodedata.normalize("NFC", source_text)
+    word_matches = list(AUTHORIAL_WORD_RE.finditer(original_text))
+    words = [character_stream(match.group()) for match in word_matches]
     boundaries = {0: 0}
     cumulative = 0
     for i, word in enumerate(words, 1):
@@ -275,9 +310,26 @@ def _nt_token_boundaries(source_text: str, targets: list[tuple[str, str]]):
             status = "whole_one_word" if count == 1 else "whole_multiple_words"
         else:
             status = "splits_curated_word_boundary"
+        attestation = None
+        if status == "whole_one_word":
+            ordinal = boundaries[offset] + 1
+            match = word_matches[ordinal - 1]
+            authored = match.group()
+            evidence = classify_exact_word_surface(word, authored)
+            attestation = {
+                "word_ordinal": ordinal,
+                "nfc_start_codepoint": match.start(),
+                "nfc_end_codepoint": match.end(),
+                "nfc_word_sha256": hashlib.sha256(authored.encode("utf-8")).hexdigest(),
+                "original_target_nfc_sha256": hashlib.sha256(
+                    unicodedata.normalize("NFC", word).encode("utf-8")).hexdigest(),
+                "word_surface_evidence": evidence,
+                "source_surface_compatible_with_authored_word": True,
+            }
         result[identifier] = {
             "status": status,
             "word_ordinal": boundaries[offset] + 1 if status == "whole_one_word" else None,
+            "attestation": attestation,
         }
         offset = end
     if offset != cumulative:
@@ -541,6 +593,11 @@ def build_private_nt_word_index(osis_verses: dict[str, str],
                 else:
                     ordinal = projection["word_ordinal"]
         status = "surface_word_position_candidate" if reason is None else "unresolved"
+        attestation = projection["attestation"] if reason is None else None
+        if attestation is not None:
+            census["word_surface_evidence_" + attestation["word_surface_evidence"]] += 1
+            if attestation["word_ordinal"] != ordinal:
+                raise ValueError("exact authored word witness differs from candidate position")
         census[status] += 1
         if reason:
             census["reason_" + reason] += 1
@@ -552,12 +609,16 @@ def build_private_nt_word_index(osis_verses: dict[str, str],
             "curated_diagnostic_word_ordinal": ordinal,
             "status": status,
             "reason": reason,
+            "authored_word_surface_attestation": attestation,
             "editorially_approved": False,
         })
     if len(rows) != nt_candidate["coverage"]["records"]:
         raise ValueError("generated index count differs from original source")
     if census["surface_word_position_candidate"] + census["unresolved"] != len(rows):
         raise ValueError("generated index statuses do not partition original source")
+    if sum(count for category, count in census.items()
+           if category.startswith("word_surface_evidence_")) != census["surface_word_position_candidate"]:
+        raise ValueError("attested word surface evidence does not partition candidate links")
     # The maintained BRSI output is a real bidirectional index, not a
     # runtime adapter applied to the original Clear.Bible lookup. Preserve
     # unresolved rows and source IDs for later evidence-based corrections.

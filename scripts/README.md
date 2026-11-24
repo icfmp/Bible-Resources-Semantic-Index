@@ -49,7 +49,9 @@ never changes the application. See [V1 consumer guide](../docs/V1_CONSUMPTION.md
   classes without inferring any word link or rewriting references. See
   [LSG 1.0.2 audit](../links/alignments/clear-bible-lsg/README.md).
   Its optional, private, deterministic **BRSI-owned index outputs** retain exact
-  source IDs: NT source-word→French diagnostic word candidates and OT
+  source IDs: NT source-word→French **exact NFC-word-attested** candidates
+  (every located original target ID checks against the actual authored LSG
+  word surface and SHA-256) and OT
   source-word→French **verse-reference-only** candidates. All unresolved
   punctuation, word boundaries, target inventory and versification remain
   explicit; these are not certified word mappings or distributable packages.
