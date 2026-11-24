@@ -437,6 +437,82 @@ updated source-derived output and its deterministic gzip digest are
 locked in [aquifer-correspondence.lock.json](aquifer-correspondence.lock.json);
 no public release or Bible application change is implied.
 
+### Contextual lexical alignment pilot: quantitative NO-GO for lemma-only auto-links
+
+A deliberately separate, **nonpublishing** source-pinned pilot in
+[`audit_macula_lsg_contextual_lexical_pilot.py`](../../../scripts/audit_macula_lsg_contextual_lexical_pilot.py)
+tested whether we could sustainably cover the remaining **119,691 original
+MACULA source IDs** using lemma-to-French translation frequencies,
+available MACULA part-of-speech metadata, and **actual authored LSG word
+availability inside each verse**, rather than requiring literal
+Greek/Hebrew-to-French word identity.
+
+**Training/evaluation firewall:** pick **2,000 original NT source
+tokens** with a unique original Clear.Bible directly text-attested
+French word position, in **2,000 distinct NT verses**. Exclude *every
+source token from those verses from lexical training*. Choose frequency
+and consensus gates using **1,000 calibration verses**, then validate
+the selected rule against the other **1,000 untouched verses**.
+The OT lexicon is additionally trained on independently located
+**model-assisted Aquifer candidate links**: this is deliberately
+distinguished from reviewed original-language translation evidence.
+OT French coordinates are exact, but linguistic meanings are not
+editorially validated.
+
+| Blind 1,000-verse NT evaluation (simple lemma baseline) | Result |
+| --- | ---: |
+| Lemma/verse baseline produced a word candidate | 865 |
+| Candidate exactly matches the original directly attested French word position | 447 |
+| Incorrect single-word location | **418** |
+| Raw positional precision on attempted cases | **51.676%** |
+| Candidate coverage of hidden originals | 86.5% |
+| Independently validated high-confidence threshold (minimum 95% precision, >=25 attempts) | **None** |
+
+The calibration set's largest `support>=12, share>=0.80` tested
+group still had **6 errors in 40 attempts** (85% observed precision);
+`support>=30, share>=0.90` hit all **8** attempts, but the sample
+was too small to justify applying that rule to the Bible. No such
+gated rule passed the **predeclared** calibration/independent-validation
+thresholds.
+
+A full source-ID census nevertheless creates **12,308 private
+exploratory hypotheses**, **not** linguistically validated links:
+
+| Unlinked source evidence | Total original IDs | Exploratory hypotheses |
+| --- | ---: | ---: |
+| Aquifer `nonEquivalent.source` annotations | 62,892 | 9,467 |
+| No usable Aquifer original alignment record | 27,223 | 2,065 |
+| Original Hebrew subpart has a linked sibling | 8,762 | 322 |
+| Aquifer original source record but French target not safely located | 20,814 | 454 |
+| **All** | **119,691** | **12,308** |
+
+The exact research receipt
+[`contextual-lexical-pilot.lock.json`](contextual-lexical-pilot.lock.json)
+pins the independent MACULA NT/OT TSV SHA-256s, original BRSI word-index
+fingerprint, published LSG 1.0.2 OSIS edition, 2,000-verse evaluation,
+precisions, source-stratum count census, and the checksum of the
+**private, uncommitted** candidate file. Only source IDs, target
+word-location IDs, SHA-256 hashes and scores occur in the ephemeral
+candidate file; no Bible or original-language source word text is
+published here.
+
+**Conclusion:** ordinary lemma-frequency transfer, even when it
+knows the exact French verse and uses source morphology where present,
+is far too error-prone to introduce new word links automatically.
+The result is a useful honest baseline and an exact, reproducible
+research queue — **not** automatic semantic approval.
+
+The next responsible high-coverage experiment should align **phrases
+and grammatical roles**, allow **many-to-one, one-to-many and
+zero-to-word** correspondences, exploit **independently located
+neighboring source/target anchors** and distinguish a functional
+equivalent of a grammatical particle from a missing French word.
+Any new model, contextual embeddings included, must pass an
+independently annotated original Greek/HE→French gold corpus and
+blind held-out checks, especially for OT where current alignment
+training labels remain model-assisted rather than independently
+reviewed. All proposals remain a separate, reversible layer.
+
 ### Source-verified exact context for repeated French target words
 
 PR #184 adds a **separate, weaker French word-location proof**

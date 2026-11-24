@@ -1,0 +1,184 @@
+{
+  "actual_audit_preview_sources": 1776,
+  "all_exploratory_candidate_count": 12308,
+  "audit_preview_max_sources": 2000,
+  "blind_validation_half": {
+    "all_predictions": {
+      "correct": 447,
+      "coverage": 0.865,
+      "gold": 1000,
+      "incorrect": 418,
+      "precision": 0.51676,
+      "precision_wilson95_lower": 0.48346,
+      "proposed": 865
+    },
+    "pilot_precision_gate_passed": false,
+    "selected_threshold_from_calibration": null,
+    "size": 1000,
+    "threshold_metrics": {
+      "correct": 0,
+      "coverage": 0.0,
+      "gold": 1000,
+      "incorrect": 0,
+      "precision": 0.0,
+      "precision_wilson95_lower": 0.0,
+      "proposed": 0
+    }
+  },
+  "calibration_half": {
+    "all_predictions": {
+      "correct": 441,
+      "coverage": 0.856,
+      "gold": 1000,
+      "incorrect": 415,
+      "precision": 0.51519,
+      "precision_wilson95_lower": 0.48171,
+      "proposed": 856
+    },
+    "size": 1000,
+    "threshold_grid": [
+      {
+        "correct": 140,
+        "coverage": 0.179,
+        "gold": 1000,
+        "incorrect": 39,
+        "min_lemma_share": 0.5,
+        "min_source_verses": 3,
+        "precision": 0.78212,
+        "precision_wilson95_lower": 0.71607,
+        "proposed": 179
+      },
+      {
+        "correct": 106,
+        "coverage": 0.131,
+        "gold": 1000,
+        "incorrect": 25,
+        "min_lemma_share": 0.6,
+        "min_source_verses": 5,
+        "precision": 0.80916,
+        "precision_wilson95_lower": 0.73344,
+        "proposed": 131
+      },
+      {
+        "correct": 71,
+        "coverage": 0.086,
+        "gold": 1000,
+        "incorrect": 15,
+        "min_lemma_share": 0.7,
+        "min_source_verses": 8,
+        "precision": 0.82558,
+        "precision_wilson95_lower": 0.73197,
+        "proposed": 86
+      },
+      {
+        "correct": 34,
+        "coverage": 0.04,
+        "gold": 1000,
+        "incorrect": 6,
+        "min_lemma_share": 0.8,
+        "min_source_verses": 12,
+        "precision": 0.85,
+        "precision_wilson95_lower": 0.70927,
+        "proposed": 40
+      },
+      {
+        "correct": 16,
+        "coverage": 0.019,
+        "gold": 1000,
+        "incorrect": 3,
+        "min_lemma_share": 0.85,
+        "min_source_verses": 20,
+        "precision": 0.84211,
+        "precision_wilson95_lower": 0.62434,
+        "proposed": 19
+      },
+      {
+        "correct": 8,
+        "coverage": 0.008,
+        "gold": 1000,
+        "incorrect": 0,
+        "min_lemma_share": 0.9,
+        "min_source_verses": 30,
+        "precision": 1.0,
+        "precision_wilson95_lower": 0.67558,
+        "proposed": 8
+      },
+      {
+        "correct": 0,
+        "coverage": 0.0,
+        "gold": 1000,
+        "incorrect": 0,
+        "min_lemma_share": 0.95,
+        "min_source_verses": 50,
+        "precision": 0.0,
+        "precision_wilson95_lower": 0.0,
+        "proposed": 0
+      }
+    ]
+  },
+  "curated_osis_sha256": "2b8342a67d8e97b433670450fe9dd9e58917a7fcfc0cb4d321882ca8219dc3bd",
+  "kind": "brsi-semantic-lexical-context-pilot-nonpublishing",
+  "lexicon_keys": {
+    "lemma": 10608,
+    "lemma_with_morphology": 6519
+  },
+  "no_new_source_word_link_accepted": true,
+  "none_of_the_original_macula_ids_rewritten": true,
+  "nt_gold": "direct_unique_original_clear_bible_nt_word_attestation",
+  "nt_gold_size": 2000,
+  "nt_gold_verses_held_out_from_all_lexical_training": 2000,
+  "original_index_gzip_sha256": "c4cab290357740b43ce9bfb9d8a6161eb32788d2212b6726fdb011ad0d3643cf",
+  "original_macula_pivot_statistics": {
+    "nt": {
+      "blank_lemma": 0,
+      "pos_available": 0,
+      "pos_column": null,
+      "tokens": 137741
+    },
+    "ot": {
+      "blank_lemma": 0,
+      "pos_available": 475911,
+      "pos_column": "pos",
+      "tokens": 475911
+    }
+  },
+  "private_exploratory_candidate_gzip_bytes": 328031,
+  "private_exploratory_candidate_gzip_sha256": "1cfb658cfbf301e51d6f5e2815fd2c84bfccfbe18cb7f7df35c0718fec1a4c6f",
+  "publication_authorized": false,
+  "schema_version": 1,
+  "semantic_translation_approved": false,
+  "source_aquifer_revision": "c25cc382fb3584a0837289f1499a7f56a4798dde",
+  "source_clear_bible_revision": "c99bd0ae6946775f932517656308ca19fc706921",
+  "source_macula_pivot_revisions": {
+    "nt": "8423afe47b9e8f24b7772e808af45c7159a6fe7e",
+    "ot": "47db250bd55d0d8577f2a94fba114ef16c35b23c"
+  },
+  "training": {
+    "nt_original_training_source_ids": 68725,
+    "ot_original_training_source_ids": 257437
+  },
+  "training_includes_unreviewed_ot_aquifer_hypotheses": true,
+  "unresolved_original_source_by_cause": {
+    "aquifer_explicit_non_equivalent_source": {
+      "exploratory_candidate": 9467,
+      "non_unique_or_unattested_candidate": 56895,
+      "total": 62892
+    },
+    "aquifer_record_source_with_no_uniquely_located_french_word": {
+      "exploratory_candidate": 454,
+      "non_unique_or_unattested_candidate": 12208,
+      "total": 20814
+    },
+    "not_present_in_aquifer_source_alignment_records": {
+      "exploratory_candidate": 2065,
+      "non_unique_or_unattested_candidate": 21317,
+      "total": 27223
+    },
+    "other_part_of_same_original_word_has_link": {
+      "exploratory_candidate": 322,
+      "non_unique_or_unattested_candidate": 6849,
+      "total": 8762
+    }
+  },
+  "unresolved_original_source_count": 119691
+}

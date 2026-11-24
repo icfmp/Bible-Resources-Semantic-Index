@@ -66,6 +66,21 @@ never changes the application. See [V1 consumer guide](../docs/V1_CONSUMPTION.md
   MACULA IDs even if translation evidence is missing; no missing word is
   inferred, no Bible/OSIS source file is rewritten. The full output is a
   private, reproducible candidate, **not a release**.
+- `audit_macula_lsg_contextual_lexical_pilot.py`: maintained **read-only**
+  source-pinned linguistic hypothesis baseline; source MACULA lemma/POS
+  observations train French token proposal distributions on an exact,
+  independently pinned authored LSG edition. It withholds **2,000
+  separate NT verses** with direct original Clear.Bible source-text
+  word attestations, with separate calibration/validation partitions,
+  measures precision (including false matches and Wilson bounds),
+  and partitions every unlinked original source ID into four evidence
+  strata. A separate private source-ID→French-word *hypothesis* file
+  remains outside the repository; the exact report is pinned under
+  [the LSG alignment source](../links/alignments/clear-bible-lsg/README.md).
+  **The initial observed 51.7% blind word-position precision is a
+  NO-GO for mass auto-links.** This is neither a contextual translation
+  model nor an OT independently gold-validated aligner; original
+  source-word IDs, authored French text and existing links stay unchanged.
 - `calibrate_aquifer_lsg_target_ids.py`: continuous source-pinned safety
   calibration against 91,649 independent original NT word witnesses.
   It demonstrates why identical **numeric** target IDs between independently
