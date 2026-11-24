@@ -55,6 +55,24 @@ never changes the application. See [V1 consumer guide](../docs/V1_CONSUMPTION.md
   source-word→French **verse-reference-only** candidates. All unresolved
   punctuation, word boundaries, target inventory and versification remain
   explicit; these are not certified word mappings or distributable packages.
+- `build_curated_lsg_word_correspondence.py`: maintained, reproducible
+  BRSI producer of the **MACULA→curated French word index for both Testaments**.
+  It consumes two independently pinned original alignment witnesses
+  (Clear.Bible and Aquifer/Mission Mutual), retains all 308,404 original
+  alignment groups, and resolves original source MACULA identifiers to
+  **exact NFC-matching French word spans** in the immutable Bible Resources
+  LSG 1.0.2. Duplicate words, source-edition disagreements and absent
+  surfaces remain explicit. It also indexes all 607,217 authentic original
+  MACULA IDs even if translation evidence is missing; no missing word is
+  inferred, no Bible/OSIS source file is rewritten. The full output is a
+  private, reproducible candidate, **not a release**.
+- `calibrate_aquifer_lsg_target_ids.py`: continuous source-pinned safety
+  calibration against 91,649 independent original NT word witnesses.
+  It demonstrates why identical **numeric** target IDs between independently
+  tokenized French corpora cannot be treated as equal French word locations.
+  This verifier runs on every relevant correspondence PR and prevents silent
+  ordinal-based OT reconstruction. See
+  [correspondence origin and exact-count receipt](../links/alignments/clear-bible-lsg/README.md).
 - `audit_translation_target_gaps.py`: source-locked, nonpublishing
   classification of missing translation target selectors and cross-verse
   patterns in private candidates. No token replacements, inferred
