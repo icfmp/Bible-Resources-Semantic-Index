@@ -113,11 +113,12 @@ To validate a machine-produced private response:
 python3 -I scripts/prepare_macula_lsg_verse_semantic_pilot.py \
   --mode validate \
   --private-pilot /tmp/brsi-semantic-verse-tasks.json.gz \
+  --pilot-receipt /tmp/brsi-semantic-verse-tasks-source-free.json \
   --machine-response /tmp/brsi-private-verse-model-proposals.json \
   --report /tmp/brsi-private-verse-validation-source-free.json
 ```
 
-Structural validation requires every original token in every selected verse
+The validator first verifies the private pilot's exact byte digest against\nthe source-locked preparer's receipt; edited task text or coordinates fail.\n\nStructural validation requires every original token in every selected verse
 to be addressed **exactly once**; each original source group is contiguous
 and ordered, and each French span is an attested contiguous word-coordinate
 sequence within the **exact authored verse**. The same French words may be
