@@ -36,6 +36,41 @@ private OT index SHA-256 and exact bytes, separately from the NT word index.
 See [the pinned BRSI index build](../../../.github/workflows/pinned-curated-lsg-edition.yml)
 and [full reproducible private index receipt](curated-1.0.2-parity.lock.json).
 
+### Bible Resources LSG 1.0.2 — owned French word inventory
+
+The BRSI-maintained edition-index producer now regenerates an **independent
+authorial French word inventory from the actual, SHA-256-pinned Bible Resources
+LSG 1.0.2 OSIS**, not from raw eBible or Clear.Bible target-token ordinals.
+The entire authored corpus produces **31,170 verses and 722,596 word
+coordinates** (OT: 23,211 verses / 548,864 words; NT: 7,959 verses / 173,732
+words). These are *our tokenization counts*, not an original alignment count
+or a claim of 722,596 proved Hebrew/Greek translation links.
+
+- A BRSI word coordinate is `BCV:one_based_ordinal`; internally it carries an
+  exact Unicode NFC start/end **codepoint span relative to the extracted
+  authored OSIS verse body**, not an XML byte position and not a Clear.Bible
+  original target ID.
+- The source-derived extraction excludes authorial notes, book headings,
+  chapter headings and figures from *word indexing* while preserving those
+  in the **unchanged** LSG source. Apostrophes and hyphens inside a word
+  remain attached; punctuation/capitalization are never silently edited.
+- The private, deterministically compressed inventory stores **full
+  SHA-256 witnesses for each original word surface and complete verse**,
+  but no word or verse text. The pinned CI checks every resulting span and
+  hash back against the exact authored OSIS, rejects corpus drift, and pins
+  the complete inventory's size and SHA-256 in
+  [the full source report](curated-1.0.2-parity.lock.json).
+- This is our **own BRSI token inventory**, not a translation alignment
+  overlay or an assertion that an upstream target `word_ordinal` matches our
+  word ordinal. Its sole source of French lexical surfaces is our published
+  LSG 1.0.2, and the generated data stay private until separately approved.
+
+The next alignment pass must compare original, immutable Clear.Bible token
+surfaces against those exact authorial positions, retain original MACULA
+identifiers, and abstain wherever source/editorial word evidence is missing.
+In particular, the OT French target TSV is still empty upstream; **an
+ordinal-only association is not a Hebrew→French word proof**.
+
 ### Key rule
 
 A source correction is a change to **our maintained index** justified by
