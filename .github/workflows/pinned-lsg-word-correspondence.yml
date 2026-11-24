@@ -1069,9 +1069,9 @@ jobs:
           assert all(c['original_macula_id_under_review'][1:9]==
                      c['original_source_verse'] for c in
                      private['original_review_candidate_ids'])
-          assert len({c['original_macula_id_under_review']
-                      for c in private['original_review_candidate_ids']})==
-                 len(private['original_review_candidate_ids'])
+          assert (len({c['original_macula_id_under_review']
+                       for c in private['original_review_candidate_ids']}) ==
+                  len(private['original_review_candidate_ids']))
           print('BRSI_MACULA_SYNTAX_BILINGUAL_NEGATIVE_CONTROL_SOURCE_FREE_RECEIPT')
           print(p.read_text())
           PY
