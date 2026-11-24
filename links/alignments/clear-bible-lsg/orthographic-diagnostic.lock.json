@@ -14,9 +14,129 @@
   },
   "clear_bible_revision": "c99bd0ae6946775f932517656308ca19fc706921",
   "correspondence_index_sha256": "9978414b07dec293aaa4c08ab5e3c3b1b2886f177ab767325c448d75ec919d83",
+  "cross_witness_verse_reference_corroboration": {
+    "cases": [
+      {
+        "aquifer_original_target_verses": [
+          "10019007"
+        ],
+        "clear_bible_original_alignment_group_count": 0,
+        "clear_bible_original_target_verses": [],
+        "macula_original_source_verse": "10019008",
+        "original_macula_source_id": "o100190080281",
+        "reference_witness_result": "clear_bible_has_no_original_alignment_record",
+        "verse_remapping_approved": false,
+        "word_translation_approved": false
+      },
+      {
+        "aquifer_original_target_verses": [
+          "11004025"
+        ],
+        "clear_bible_original_alignment_group_count": 0,
+        "clear_bible_original_target_verses": [],
+        "macula_original_source_verse": "11005005",
+        "original_macula_source_id": "o110050050112",
+        "reference_witness_result": "clear_bible_has_no_original_alignment_record",
+        "verse_remapping_approved": false,
+        "word_translation_approved": false
+      },
+      {
+        "aquifer_original_target_verses": [
+          "12012010"
+        ],
+        "clear_bible_original_alignment_group_count": 1,
+        "clear_bible_original_target_verses": [
+          "12012010"
+        ],
+        "macula_original_source_verse": "12012011",
+        "original_macula_source_id": "o120120110052",
+        "reference_witness_result": "clear_bible_original_target_supports_aquifer_target_reference",
+        "verse_remapping_approved": false,
+        "word_translation_approved": false
+      },
+      {
+        "aquifer_original_target_verses": [
+          "12012010"
+        ],
+        "clear_bible_original_alignment_group_count": 0,
+        "clear_bible_original_target_verses": [],
+        "macula_original_source_verse": "12012011",
+        "original_macula_source_id": "o120120110152",
+        "reference_witness_result": "clear_bible_has_no_original_alignment_record",
+        "verse_remapping_approved": false,
+        "word_translation_approved": false
+      },
+      {
+        "aquifer_original_target_verses": [
+          "13006037"
+        ],
+        "clear_bible_original_alignment_group_count": 0,
+        "clear_bible_original_target_verses": [],
+        "macula_original_source_verse": "13006022",
+        "original_macula_source_id": "o130060220041",
+        "reference_witness_result": "clear_bible_has_no_original_alignment_record",
+        "verse_remapping_approved": false,
+        "word_translation_approved": false
+      },
+      {
+        "aquifer_original_target_verses": [
+          "13006064"
+        ],
+        "clear_bible_original_alignment_group_count": 0,
+        "clear_bible_original_target_verses": [],
+        "macula_original_source_verse": "13006049",
+        "original_macula_source_id": "o130060490031",
+        "reference_witness_result": "clear_bible_has_no_original_alignment_record",
+        "verse_remapping_approved": false,
+        "word_translation_approved": false
+      },
+      {
+        "aquifer_original_target_verses": [
+          "16004021"
+        ],
+        "clear_bible_original_alignment_group_count": 0,
+        "clear_bible_original_target_verses": [],
+        "macula_original_source_verse": "16004015",
+        "original_macula_source_id": "o160040150032",
+        "reference_witness_result": "clear_bible_has_no_original_alignment_record",
+        "verse_remapping_approved": false,
+        "word_translation_approved": false
+      },
+      {
+        "aquifer_original_target_verses": [
+          "16010033"
+        ],
+        "clear_bible_original_alignment_group_count": 0,
+        "clear_bible_original_target_verses": [],
+        "macula_original_source_verse": "16010034",
+        "original_macula_source_id": "o160100340032",
+        "reference_witness_result": "clear_bible_has_no_original_alignment_record",
+        "verse_remapping_approved": false,
+        "word_translation_approved": false
+      },
+      {
+        "aquifer_original_target_verses": [
+          "27004014"
+        ],
+        "clear_bible_original_alignment_group_count": 1,
+        "clear_bible_original_target_verses": [
+          "27004014"
+        ],
+        "macula_original_source_verse": "27004011",
+        "original_macula_source_id": "o270040110061",
+        "reference_witness_result": "clear_bible_original_target_supports_aquifer_target_reference",
+        "verse_remapping_approved": false,
+        "word_translation_approved": false
+      }
+    ],
+    "counts": {
+      "clear_bible_has_no_original_alignment_record": 7,
+      "clear_bible_original_target_supports_aquifer_target_reference": 2
+    }
+  },
   "curated_osis_sha256": "2b8342a67d8e97b433670450fe9dd9e58917a7fcfc0cb4d321882ca8219dc3bd",
   "format": "brsi-french-surface-difference-readonly-audit",
-  "full_diagnostic_sha256": "2db59ca6a9b396f23bb9bba4d4648d823968eb2c971bf18a5343e8dc145cb51d",
+  "full_diagnostic_sha256": "deea74e2e3be67aa36d5a9d7a44a5fc24da09d6218a26c37fd30ea34c59944aa",
   "linguistic_links_automatically_approved": false,
   "original_source_ids_modified": false,
   "original_unlinked_exact_word_absence": {
