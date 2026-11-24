@@ -91,6 +91,33 @@ are excluded from lexical training, the same NT cases were already reported
 in #186/#189: this is **not** a new prospectively sealed independent benchmark,
 and the final human-approved phrase-accuracy remains unmeasured.
 
+## Source syntax and orthographic-morpheme review pilot (NOT word alignment)
+
+The [original lowfat syntax pilot](../../../scripts/audit_macula_lsg_original_syntax.py)
+checks **actual original nested <wg> constituents** in exactly pinned MACULA
+WLC Genesis 1–3 and SBLGNT 2 John source XML. It preserves the original XML
+word order, syntax group role/rule/class, original language forms/lemmas,
+and the original orthographic-word reference (<w ref="...">), which can
+span **several distinct Hebrew morpheme XML IDs**. This is important for
+the 8,762 indexed missing parts of Hebrew words: original morpheme siblings
+may share a word without each needing a separate French word.
+
+Each unresolved source ID is associated, where available, with the smallest
+real original-language syntactic phrase of at most 24 original XML IDs;
+cross-verse groups are not silently split. French review/navigation cues are
+made **only from existing exactly authored LSG word anchors** in that group.
+A bounded French span containing two anchors is **not asserted to translate
+the entire original group**, and a one-anchor cue does not predict the French
+location of any unlinked source token. Reordered and many-to-one anchors
+are preserved as evidence rather than "corrected."
+
+A deterministic **private** audit contains original-language source text and
+authored French verse context. Git stores only a **source-text-free exact
+aggregate receipt, SHA-256 and pinned upstream revisions**. Genesis 1–3
+and 2 John are a deliberately small, mixed-Testament technical witness pilot,
+**not** a representative sample for estimating whole-Bible semantic accuracy
+or target phrase-level precision. No gold or automatic word linking is created.
+
 ## Maintained pipeline
 
 **Clear.Bible is our immutable original alignment source; the index is ours.**

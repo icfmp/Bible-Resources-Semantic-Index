@@ -1,0 +1,111 @@
+{
+  "correspondence_index_source_ids_not_in_selected_XML": 0,
+  "eligible_original_lowfat_syntactic_group_count": {
+    "nt": 173,
+    "ot": 1185
+  },
+  "exact_authored_french_osis_sha256": "2b8342a67d8e97b433670450fe9dd9e58917a7fcfc0cb4d321882ca8219dc3bd",
+  "french_anchor_cue_is_not_translation_of_original_phrase": true,
+  "human_reviewed_original_phrases": 0,
+  "kind": "brsi-original-macula-lowfat-syntax-source-phrase-review-only-pilot",
+  "lowfat_syntax_group_rejection_counters": {
+    "cross_verse_group_rejected": 1,
+    "eligible_2_to_24_source_group": 1358,
+    "single_source_id_group": 31,
+    "too_large_group": 47
+  },
+  "new_individually_approved_MACULA_original_ids": 0,
+  "new_semantically_approved_source_phrases": 0,
+  "no_source_or_authored_lsg_text_modification": true,
+  "original_XML_context_only_ids_absent_correspondence_index": 18,
+  "original_clear_bible_revision": "c99bd0ae6946775f932517656308ca19fc706921",
+  "original_macula_lowfat_revisions": {
+    "nt": "8423afe47b9e8f24b7772e808af45c7159a6fe7e",
+    "ot": "47db250bd55d0d8577f2a94fba114ef16c35b23c"
+  },
+  "original_orthographic_sibling_evidence_is_not_french_translation": true,
+  "original_source_XML_ids_already_in_correspondence_index": 2002,
+  "pilot_scope": "Genesis_1_to_3_and_2_John_only_not_bible_wide",
+  "private_syntax_gzip_bytes": 36202,
+  "private_syntax_gzip_sha256": "beb01dcec2848dd9633777b734a92d988a44fd3335ee2d64da433602eee9b0b4",
+  "publication_authorized": false,
+  "schema_version": 1,
+  "source_aquifer_revision": "c25cc382fb3584a0837289f1499a7f56a4798dde",
+  "source_files": [
+    {
+      "canon": "ot",
+      "sha256": "523856a1f2953408d847e8d3fcc231f2bd681e540aa91c349cd9c4e128f30f60",
+      "source_file": "WLC/lowfat/01-Gen-001-lowfat.xml"
+    },
+    {
+      "canon": "ot",
+      "sha256": "25c7113185946010ce3444db66830709b89635cc1ce6fe94a57b98623ef53a58",
+      "source_file": "WLC/lowfat/01-Gen-002-lowfat.xml"
+    },
+    {
+      "canon": "ot",
+      "sha256": "defb971195c75028e9e978b41cab6d43adae29833c57c118ae083f8159f224e5",
+      "source_file": "WLC/lowfat/01-Gen-003-lowfat.xml"
+    },
+    {
+      "canon": "nt",
+      "sha256": "de822aa64dc6374ba1a0920fe85e44639b26d6a74e671c49b167334c17291a47",
+      "source_file": "SBLGNT/lowfat/24-2john.xml"
+    }
+  ],
+  "source_index_gzip_sha256": "c4cab290357740b43ce9bfb9d8a6161eb32788d2212b6726fdb011ad0d3643cf",
+  "source_text_in_public_receipt": false,
+  "source_verse_count": 93,
+  "source_verses_with_exact_authored_LSG": 93,
+  "source_xml_total_original_token_ids": 2020,
+  "syntactic_constituent_is_not_semantic_equivalence": true,
+  "unresolved_original_by_frozen_stratum": {
+    "aquifer_explicit_non_equivalent_source": {
+      "in_small_macula_syntax_constituent": 154,
+      "same_original_word_has_preexisting_french_anchor": 79,
+      "syntax_constituent_with_bounded_anchor_review_cue": 94,
+      "syntax_constituent_with_existing_french_anchor": 130,
+      "unlinked_original_ids": 189,
+      "within_multi_morpheme_orthographic_word": 138
+    },
+    "aquifer_record_source_with_no_uniquely_located_french_word": {
+      "in_small_macula_syntax_constituent": 98,
+      "syntax_constituent_with_bounded_anchor_review_cue": 21,
+      "syntax_constituent_with_existing_french_anchor": 49,
+      "unlinked_original_ids": 99,
+      "within_multi_morpheme_orthographic_word": 45
+    },
+    "not_present_in_aquifer_source_alignment_records": {
+      "in_small_macula_syntax_constituent": 66,
+      "syntax_constituent_with_bounded_anchor_review_cue": 10,
+      "syntax_constituent_with_existing_french_anchor": 18,
+      "unlinked_original_ids": 66,
+      "within_multi_morpheme_orthographic_word": 41
+    },
+    "other_part_of_same_original_word_has_link": {
+      "in_small_macula_syntax_constituent": 31,
+      "same_original_word_has_preexisting_french_anchor": 26,
+      "syntax_constituent_with_bounded_anchor_review_cue": 13,
+      "syntax_constituent_with_existing_french_anchor": 26,
+      "unlinked_original_ids": 31,
+      "within_multi_morpheme_orthographic_word": 31
+    }
+  },
+  "unresolved_original_by_testament": {
+    "nt": {
+      "in_small_macula_syntax_constituent": 22,
+      "syntax_constituent_with_bounded_anchor_review_cue": 5,
+      "syntax_constituent_with_existing_french_anchor": 8,
+      "unlinked_original_ids": 23
+    },
+    "ot": {
+      "in_small_macula_syntax_constituent": 327,
+      "same_original_word_has_preexisting_french_anchor": 105,
+      "syntax_constituent_with_bounded_anchor_review_cue": 133,
+      "syntax_constituent_with_existing_french_anchor": 215,
+      "unlinked_original_ids": 362,
+      "within_multi_morpheme_orthographic_word": 255
+    }
+  },
+  "unresolved_original_ids_in_selected_source_documents": 385
+}
