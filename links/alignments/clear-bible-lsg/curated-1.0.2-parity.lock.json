@@ -489,6 +489,21 @@
     "target_token_id_matches_certified": false,
     "target_word_inventory_present": false
   },
+  "private_nt_word_candidate": {
+    "coverage": {
+      "reason_punctuation_only": 7457,
+      "reason_splits_curated_word_boundary": 4574,
+      "reason_unattested_target_selector": 996,
+      "reason_verse_text_mismatch": 131,
+      "surface_word_position_candidate": 91649,
+      "unresolved": 13158
+    },
+    "editorially_approved": false,
+    "gzip_bytes": 1314914,
+    "gzip_sha256": "bd5042597511be45ff215fb1429a82c69d2f789f8120f0604453affe09ddcb1a",
+    "uncompressed_bytes": 26286525,
+    "uncompressed_sha256": "657b2b1f420b217e647763b6d468c969089206e4ce767fefc9d107294ec3512e"
+  },
   "publication_approved": false,
   "schema_version": 1,
   "token_mapping_certified": false,
