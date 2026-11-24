@@ -121,13 +121,15 @@ def load_aquifer(root: Path, authored: dict[str, str],
                 trg = [x for x in trg if x is not None]
                 for target_id, surface in trg:
                     if target_id[:5] != chapter:
-                        raise ValueError("Aquifer target verse outside chapter")
+                        counts["target_record_outside_filename_chapter"] += 1
                     old = targets_by_verse[target_id[:8]].setdefault(target_id, surface)
                     if old != surface:
                         raise ValueError("conflicting Aquifer French surface for one original ID")
                 for source_id, _ in src:
                     if source_id[:5] != chapter:
-                        raise ValueError("Aquifer source verse outside chapter")
+                        # Preserve cross-chapter original-versification or
+                        # source-file anomalies for independent review.
+                        counts["source_record_outside_filename_chapter"] += 1
                     for target_id, _ in trg:
                         raw_links.append((source_id, target_id, path.name))
                         counts["source_target_edges"] += 1
@@ -139,7 +141,7 @@ def load_aquifer(root: Path, authored: dict[str, str],
                     continue
                 target_id, surface = parsed
                 if target_id[:5] != chapter:
-                    raise ValueError("nonEquivalent target outside chapter")
+                    counts["unaligned_target_outside_filename_chapter"] += 1
                 old = targets_by_verse[target_id[:8]].setdefault(target_id, surface)
                 if old != surface:
                     raise ValueError("conflicting Aquifer unaligned target surface")
