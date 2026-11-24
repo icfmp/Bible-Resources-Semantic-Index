@@ -448,6 +448,7 @@ def compare_nt(osis_verses: dict[str, str], targets: dict[str, list[tuple[str, s
     diagnostic_word_order_equal = 0
     surface_boundaries = Counter()
     aligned_boundaries = Counter()
+    primary_ordinal_calibration = Counter()
     aligned_by_book: dict[str, Counter] = defaultdict(Counter)
     mismatching_verses = []
     if (nt_candidate.get("canon") != "nt" or
@@ -487,6 +488,17 @@ def compare_nt(osis_verses: dict[str, str], targets: dict[str, list[tuple[str, s
                         observed_aligned_ids.add(identifier)
                         aligned_boundaries[category] += 1
                         aligned_by_book[key[:2]][category] += 1
+                        if category == "whole_one_word":
+                            # Real original target IDs and actual authored word
+                            # coordinates are available for NT. Calibrate the
+                            # unsafe ordinal-only assumption here before it is
+                            # ever used as OT evidence.
+                            if int(identifier[8:11]) == projection["word_ordinal"]:
+                                primary_ordinal_calibration["ordinal_equal"] += 1
+                            else:
+                                primary_ordinal_calibration["ordinal_different"] += 1
+                            if len(identifier) == 12:
+                                primary_ordinal_calibration["original_target_has_subpart"] += 1
             else:
                 mismatching_verses.append({
                     "bcv": key,
@@ -510,6 +522,10 @@ def compare_nt(osis_verses: dict[str, str], targets: dict[str, list[tuple[str, s
         raise ValueError("classified more target IDs than source TSV contains")
     if sum(aligned_boundaries.values()) != len(observed_aligned_ids):
         raise ValueError("aligned boundary census inconsistent")
+    if (primary_ordinal_calibration["ordinal_equal"] +
+            primary_ordinal_calibration["ordinal_different"] !=
+            aligned_boundaries["whole_one_word"]):
+        raise ValueError("NT ordinal calibration omitted attested word records")
     target_inventory_ids = {identifier for rows in targets.values() for identifier, _ in rows}
     missing_aligned = aligned_target_ids - target_inventory_ids
     if len(missing_aligned) != nt_candidate["coverage"].get("problem_target_token_unattested", 0):
@@ -522,6 +538,8 @@ def compare_nt(osis_verses: dict[str, str], targets: dict[str, list[tuple[str, s
         "diagnostic_word_streams_equal_verses": diagnostic_word_order_equal,
         "target_surface_boundary_classes": dict(sorted(surface_boundaries.items())),
         "aligned_attested_target_boundary_classes": dict(sorted(aligned_boundaries.items())),
+        "original_target_ordinal_vs_authored_word_calibration": dict(sorted(primary_ordinal_calibration.items())),
+        "ordinal_equality_not_a_word_link_proof": True,
         "aligned_attested_target_by_book": {
             b: dict(sorted(c.items())) for b, c in sorted(aligned_by_book.items())
         },
@@ -779,6 +797,11 @@ def compare_ot(osis_verses: dict[str, str], ot_candidate: dict):
         raise ValueError("not the pinned OT candidate format")
     by_book: dict[str, Counter] = defaultdict(Counter)
     counts = Counter()
+    ordinal_hints = Counter()
+    ot_word_counts = {}
+    for key, text in osis_verses.items():
+        if int(key[:2]) < 40:
+            ot_word_counts[key] = len(word_stream(text))
     for row in ot_candidate["records"]:
         target = row.get("target_lookup_ids")
         if not isinstance(target, list) or not target:
@@ -787,14 +810,40 @@ def compare_ot(osis_verses: dict[str, str], ot_candidate: dict):
                       token[:8] in osis_verses for token in target)
         status = "target_verse_present" if present else "target_verse_absent"
         counts[status] += 1
+        for identifier in target:
+            if not isinstance(identifier, str) or not TARGET_RE.fullmatch(identifier):
+                raise ValueError("invalid original OT French target selector")
+            verse = identifier[:8]
+            word_count = ot_word_counts.get(verse)
+            if word_count is None:
+                ordinal_hints["target_verse_unavailable"] += 1
+                continue
+            raw_ordinal = int(identifier[8:11])
+            if raw_ordinal < 1:
+                raise ValueError("invalid original French target ordinal")
+            # With no original OT French target TSV this is just a bound
+            # test against a DIFFERENT tokenizer. It is never a word match.
+            if raw_ordinal <= word_count:
+                ordinal_hints["ordinal_within_authored_word_count_only"] += 1
+            else:
+                ordinal_hints["ordinal_exceeds_authored_word_count"] += 1
+            if len(identifier) == 12:
+                ordinal_hints["original_target_has_subword_suffix"] += 1
         for book in {x[:2] for x in target if isinstance(x, str)}:
             by_book[book][status] += 1
     if sum(counts.values()) != ot_candidate["coverage"]["records"]:
         raise ValueError("OT candidate total differs from reference census")
+    if (ordinal_hints["ordinal_within_authored_word_count_only"] +
+            ordinal_hints["ordinal_exceeds_authored_word_count"] +
+            ordinal_hints["target_verse_unavailable"] !=
+            sum(len(r["target_lookup_ids"]) for r in ot_candidate["records"])):
+        raise ValueError("original OT target ordinal hints did not partition selectors")
     return {
         "curated_ot_verses": sum(int(x[:2]) < 40 for x in osis_verses),
         "alignment_groups": len(ot_candidate["records"]),
         "target_reference_presence": dict(sorted(counts.items())),
+        "target_ordinal_diagnostic": dict(sorted(ordinal_hints.items())),
+        "target_ordinal_not_a_word_link_proof": True,
         "target_reference_presence_by_book": {b: dict(sorted(c.items())) for b, c in sorted(by_book.items())},
         "target_word_inventory_present": False,
         "target_token_id_matches_certified": False,

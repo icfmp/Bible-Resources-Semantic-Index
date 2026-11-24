@@ -345,7 +345,12 @@
     ],
     "diagnostic_word_streams_equal_verses": 4010,
     "distinct_verses": 7959,
+    "ordinal_equality_not_a_word_link_proof": true,
     "original_aligned_target_ids": 104807,
+    "original_target_ordinal_vs_authored_word_calibration": {
+      "ordinal_different": 66214,
+      "ordinal_equal": 25435
+    },
     "original_unattested_target_ids": 996,
     "target_surface_boundary_classes": {
       "punctuation_only": 30884,
@@ -466,6 +471,11 @@
     "alignment_groups": 203597,
     "automatic_cross_versification_fixes": 0,
     "curated_ot_verses": 23211,
+    "target_ordinal_diagnostic": {
+      "ordinal_exceeds_authored_word_count": 40281,
+      "ordinal_within_authored_word_count_only": 163316
+    },
+    "target_ordinal_not_a_word_link_proof": true,
     "target_reference_presence": {
       "target_verse_present": 203597
     },

@@ -243,6 +243,27 @@ jobs:
           assert index['coverage']['ot']['verses'] + index['coverage']['nt']['verses'] == 31170
           print('BRSI_AUTHORED_WORD_INVENTORY', index['coverage'])
           PY
+      - name: Calibrate unsafe OT target ordinals against real NT token-position proof
+        run: |
+          set -euo pipefail
+          python3 -I - <<'PY'
+          import json
+          from pathlib import Path
+          doc = json.loads(Path('/tmp/brsi-curated-edition-report.json').read_text())
+          nt = doc['nt']['original_target_ordinal_vs_authored_word_calibration']
+          total = nt.get('ordinal_equal', 0) + nt.get('ordinal_different', 0)
+          assert total == doc['nt']['aligned_attested_target_boundary_classes']['whole_one_word'] == 91649
+          assert doc['nt']['ordinal_equality_not_a_word_link_proof'] is True
+          ot = doc['ot']['target_ordinal_diagnostic']
+          assert sum(ot.get(k, 0) for k in ('ordinal_within_authored_word_count_only',
+                                            'ordinal_exceeds_authored_word_count',
+                                            'target_verse_unavailable')) == 203597
+          assert doc['ot']['target_ordinal_not_a_word_link_proof'] is True
+          assert doc['ot']['target_word_inventory_present'] is False
+          assert doc['ot']['automatic_cross_versification_fixes'] == 0
+          print('BRSI_NT_ORDINAL_CALIBRATION', nt)
+          print('BRSI_OT_NONMAPPING_ORDINAL_DIAGNOSTIC', ot)
+          PY
       - name: Verify full pinned curated-edition diagnostic JSON receipt
         run: |
           set -euo pipefail
