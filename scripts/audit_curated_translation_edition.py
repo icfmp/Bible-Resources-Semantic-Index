@@ -201,6 +201,42 @@ def _nt_token_boundaries(source_text: str, targets: list[tuple[str, str]]):
     return result
 
 
+def contiguous_mismatch_runs(osis_verses: dict[str, str],
+                             targets: dict[str, list[tuple[str, str]]],
+                             mismatches: list[dict]) -> list[dict]:
+    """Check whether adjacent differing verses have equal *combined* surfaces.
+
+    This suggests segmentation/reference-boundary drift, but never reassigns a
+    source or target verse, and never declares a legitimate versification.
+    """
+    ordered = [row["bcv"] for row in mismatches]
+    runs = []
+    current = []
+    for key in ordered:
+        if (current and (key[:5] != current[-1][:5]
+                         or int(key[5:]) != int(current[-1][5:]) + 1)):
+            if len(current) > 1:
+                runs.append(current)
+            current = []
+        current.append(key)
+    if len(current) > 1:
+        runs.append(current)
+    result = []
+    for run in runs:
+        source_chars = character_stream(" ".join(osis_verses[key] for key in run))
+        target_chars = character_stream(" ".join(
+            " ".join(surface for _, surface in targets[key]) for key in run
+        ))
+        result.append({
+            "first_bcv": run[0],
+            "last_bcv": run[-1],
+            "verse_count": len(run),
+            "combined_alphanumeric_stream_equal": source_chars == target_chars,
+            "automatic_verse_reassignments": 0,
+        })
+    return result
+
+
 def compare_nt(osis_verses: dict[str, str], targets: dict[str, list[tuple[str, str]]],
                census: dict[str, int], nt_candidate: dict):
     source = {k: v for k, v in osis_verses.items() if int(k[:2]) >= 40}
@@ -261,6 +297,7 @@ def compare_nt(osis_verses: dict[str, str], targets: dict[str, list[tuple[str, s
                         aligned_by_book[key[:2]]["verse_text_mismatch"] += 1
         kinds[status] += 1
         by_book[key[:2]][status] += 1
+    adjacent = contiguous_mismatch_runs(source, targets, mismatching_verses)
     if sum(kinds.values()) != len(set(source) | set(targets)):
         raise ValueError("inconsistent NT verse universe")
     if sum(surface_boundaries.values()) > census["token_rows"]:
@@ -285,6 +322,10 @@ def compare_nt(osis_verses: dict[str, str], targets: dict[str, list[tuple[str, s
         "original_aligned_target_ids": len(aligned_target_ids),
         "original_unattested_target_ids": len(missing_aligned),
         "diagnostic_text_mismatch_coordinates": mismatching_verses,
+        "adjacent_text_mismatch_runs": adjacent,
+        "adjacent_mismatch_verses_with_identical_combined_stream": sum(
+            item["verse_count"] for item in adjacent if item["combined_alphanumeric_stream_equal"]
+        ),
         "automatic_missing_token_remaps": 0,
         "by_book": {b: dict(sorted(c.items())) for b, c in sorted(by_book.items())},
         "target_token_id_matches_certified": False,
