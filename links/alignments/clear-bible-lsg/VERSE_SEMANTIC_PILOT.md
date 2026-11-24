@@ -189,6 +189,13 @@ The process performs **two separate inference calls for each full verse**:
 2. The second receives both complete verses and the *frozen* first reading,
    and only then proposes original **phrase groups** ↔ exact French spans,
    `grammatical_unpaired`, or `undetermined`, with contextual reasons.
+   Every authored French clause word must also be explained: a French
+   expression without an individually corresponding original token is
+   classified as `french_only_constructions` with an explicit function
+   and rationale, rather than falsely linked to the nearest source word.
+   This handles grammatical expansions such as a French existential
+   expression in a Hebrew verbless clause. The source and French directions
+   are both audited; the private result retains the explanation separately.
 
 Pass 2 cannot alter pass-1 clause boundaries. The existing source-aware
 validator rejects missing/duplicated tokens, unsupported source or French IDs,
