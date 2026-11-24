@@ -218,10 +218,23 @@ def breadth(
             for x in byfile) !=
             base["original_XML_context_only_ids_absent_correspondence_index"]):
         raise ValueError("per-source-book original XML↔index reconciliation mismatch")
-    if sum(x["source_only_IDs_with_decimal_original_selector"] for x in byfile) > 0:
-        # Numeric source-only IDs may be legitimate differences between
-        # upstream editions. Report them, never synthesize missing links.
-        pass
+    # Source-only numeric IDs and authentic suffixed IDs are distinct
+    # anomalies to investigate: neither authorizes an index repair.
+    selector_totals = {
+        "source_XML_context_only_nonnumeric_selector_ids": sum(
+            x["source_only_IDs_with_nonnumeric_original_selector"]
+            for x in byfile),
+        "source_XML_context_only_decimal_selector_ids": sum(
+            x["source_only_IDs_with_decimal_original_selector"]
+            for x in byfile),
+        "all_source_XML_nonnumeric_selector_ids": sum(
+            x["source_XML_ids_with_nonnumeric_original_selector"]
+            for x in byfile),
+    }
+    if (selector_totals["source_XML_context_only_nonnumeric_selector_ids"] +
+            selector_totals["source_XML_context_only_decimal_selector_ids"] !=
+            base["original_XML_context_only_ids_absent_correspondence_index"]):
+        raise ValueError("source-only ID selector class accounting differs from pinned index")
     if sum(x["unlinked_indexed_original_ids"] for x in byfile) != len(private["cases"]):
         raise ValueError("per-source-file unresolved audit incomplete")
     if (grammar["original_ids_represented_in_review_units"] +
@@ -248,6 +261,7 @@ def breadth(
         "total": len(grouped), **grammar,
     }
     base["per_source_document"] = byfile
+    base["original_source_selector_reconciliation"] = selector_totals
     base["human_gold_original_to_authored_french_phrase_cases"] = 0
     base["new_french_word_or_phrase_links_approved"] = 0
     base["translation_accuracy_measured"] = False
