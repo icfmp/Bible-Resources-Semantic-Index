@@ -148,7 +148,10 @@ are produced by either study.
 The [source-syntax lexical-neighborhood study](../../../scripts/audit_macula_lsg_syntax_lexical_neighborhood.py)
 combines *actual pinned nested MACULA XML groups* with independently indexed
 source↔authored LSG word anchors and a lemma→authorial French-surface
-lexicon trained on other verses. It allows source/translation word-order
+lexicon trained on indexed source evidence. Training excludes all **600
+NT evaluation verses**; exploratory unresolved original-source proposals
+may share a verse with other training anchors and are not independent
+validation. It allows source/translation word-order
 changes and Hebrew multiple-morpheme original words by proposing a **single
 source-side original phrase ↔ a contiguous authored French candidate span**;
 this is a strictly **unapproved bilingual localization hypothesis**, NOT a
