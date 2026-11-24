@@ -279,6 +279,67 @@ class CuratedLSGEditionTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "invalid authored verse input"):
             module.build_authored_word_inventory({"BAD": "hello"}, self.lock)
 
+    def test_original_nt_target_exact_word_witness_strengths_preserve_ids(self):
+        authored = {"40001001": "Dieu le Père ; Jésus-Christ aujourd’hui. L'amour"}
+        target = {"40001001": [
+            ("40001001001", "Dieu"),
+            ("40001001002", "LE"),
+            ("40001001003", "Père,"),
+            ("40001001004", "JésusChrist"),
+            ("40001001005", "aujourd'hui"),
+            ("40001001006", "L'amour"),
+        ]}
+        records = [{"ordinal": i - 1, "source_lookup_ids": [f"n4000100100{i}"],
+                    "target_lookup_ids": [f"4000100100{i}"]}
+                   for i in range(1, 7)]
+        doc = {"coverage": {"records": 6}, "records": records}
+        raw, counts = module.build_private_nt_word_index(
+            authored, target, doc, self.lock, self.manifest["revision"])
+        index = json.loads(raw)
+        self.assertEqual(counts["surface_word_position_candidate"], 6)
+        self.assertEqual(counts["word_surface_evidence_same_nfc_word_surface"], 2)
+        self.assertEqual(counts["word_surface_evidence_same_nfc_casefold_word_surface"], 1)
+        self.assertEqual(counts["word_surface_evidence_same_word_with_external_punctuation_difference"], 1)
+        self.assertEqual(counts["word_surface_evidence_only_alphanumeric_stream_matches"], 2)
+        self.assertEqual(index["by_original_macula_id"]["n40001001001"], [0])
+        self.assertEqual(index["by_curated_word"]["40001001:6"], [5])
+        import unicodedata
+        text = unicodedata.normalize("NFC", authored["40001001"])
+        for original, aligned in zip(records, index["rows"]):
+            attestation = aligned["authored_word_surface_attestation"]
+            self.assertEqual(aligned["original_macula_ids"], original["source_lookup_ids"])
+            self.assertEqual(aligned["original_target_ids"], original["target_lookup_ids"])
+            self.assertIsNotNone(attestation)
+            self.assertTrue(attestation["source_surface_compatible_with_authored_word"])
+            word = text[attestation["nfc_start_codepoint"]:attestation["nfc_end_codepoint"]]
+            self.assertEqual(hashlib.sha256(word.encode()).hexdigest(),
+                             attestation["nfc_word_sha256"])
+            self.assertFalse(aligned["editorially_approved"])
+        self.assertEqual(
+            index["rows"][3]["authored_word_surface_attestation"]["word_surface_evidence"],
+            "only_alphanumeric_stream_matches")
+
+    def test_no_word_attestation_when_target_selector_unattested(self):
+        authored = {"40001001": "Dieu est bon"}
+        target = {"40001001": [("40001001001", "Dieu"),
+                              ("40001001002", "est"),
+                              ("40001001003", "bon")]}
+        doc = {"coverage": {"records": 2}, "records": [
+            {"ordinal": 0, "source_lookup_ids": ["n40001001001"],
+             "target_lookup_ids": ["40001001001"]},
+            {"ordinal": 1, "source_lookup_ids": ["n40001001001"],
+             "target_lookup_ids": ["40001001999"]},
+        ]}
+        raw, coverage = module.build_private_nt_word_index(
+            authored, target, doc, self.lock, self.manifest["revision"])
+        rows = json.loads(raw)["rows"]
+        self.assertEqual(coverage["surface_word_position_candidate"], 1)
+        self.assertEqual(coverage["reason_unattested_target_selector"], 1)
+        self.assertEqual(rows[0]["authored_word_surface_attestation"]["word_ordinal"], 1)
+        self.assertIsNone(rows[1]["authored_word_surface_attestation"])
+        with self.assertRaisesRegex(ValueError, "character stream differs"):
+            module.classify_exact_word_surface("Dieux", "Dieu")
+
     def test_ot_owned_index_retains_all_original_rows_without_word_guesses(self):
         import gzip
         output = self.root / "private-ot-owned.json.gz"
