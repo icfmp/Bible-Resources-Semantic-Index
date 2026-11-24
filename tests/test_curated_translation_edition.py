@@ -60,7 +60,16 @@ class CuratedLSGEditionTests(unittest.TestCase):
             ],
         }
         self.candidates = {
-            "nt": {"canon": "nt"},
+            "nt": {
+                "canon": "nt", "format": "brsi-translation-alignment-candidate",
+                "upstream_revision": "a" * 40,
+                "coverage": {"records": 5, "problem_target_token_unattested": 0},
+                "records": [
+                    {"target_lookup_ids": [f"4000100100{i}"]} for i in range(1, 4)
+                ] + [
+                    {"target_lookup_ids": [f"4000100200{i}"]} for i in range(1, 3)
+                ],
+            },
             "ot": {
                 "canon": "ot", "format": "brsi-translation-alignment-candidate",
                 "upstream_revision": "a" * 40,
@@ -101,6 +110,9 @@ class CuratedLSGEditionTests(unittest.TestCase):
         self.assertEqual(report["nt"]["verse_content_comparison"].get(
             "same_alphanumeric_stream", 0), 2)
         self.assertEqual(report["nt"]["diagnostic_word_streams_equal_verses"], 2)
+        self.assertEqual(report["nt"]["target_surface_boundary_classes"], {"whole_one_word": 5})
+        self.assertEqual(report["nt"]["aligned_attested_target_boundary_classes"], {"whole_one_word": 5})
+        self.assertEqual(report["nt"]["original_unattested_target_ids"], 0)
         self.assertEqual(report["nt"]["token_rows"], 5)
         self.assertEqual(report["ot"]["alignment_groups"], 2)
         self.assertEqual(report["ot"]["target_reference_presence"],
@@ -109,6 +121,29 @@ class CuratedLSGEditionTests(unittest.TestCase):
         self.assertFalse(report["ot"]["target_token_id_matches_certified"])
         self.assertFalse(report["publication_approved"])
         self.assertFalse(report["editions_proven_identical"])
+
+    def test_classifies_token_split_without_inventing_equivalence(self):
+        path = self.upstream / "nt.tsv"
+        path.write_text(
+            "id\\ttext\\n40001001001\\tU\\n40001001002\\tnebonne\\n"
+            "40001001003\\tnouvelle\\n40001002001\\tL'autre\\n40001002002\\tverset\\n",
+            encoding="utf-8")
+        self.manifest["inputs"][0]["sha256"] = module.sha256(path)
+        report = self.compare()
+        self.assertEqual(report["nt"]["verse_content_comparison"].get("same_alphanumeric_stream"), 2)
+        self.assertEqual(report["nt"]["aligned_attested_target_boundary_classes"], {
+            "splits_curated_word_boundary": 2, "whole_one_word": 3
+        })
+        self.assertEqual(report["nt"]["automatic_missing_token_remaps"], 0)
+
+    def test_mismatched_verse_remains_unaccepted(self):
+        path = self.upstream / "nt.tsv"
+        path.write_text(path.read_text().replace("bonne", "mauvaise"), encoding="utf-8")
+        self.manifest["inputs"][0]["sha256"] = module.sha256(path)
+        report = self.compare()
+        self.assertEqual(report["nt"]["verse_content_comparison"]["different_alphanumeric_stream"], 1)
+        self.assertEqual(report["nt"]["diagnostic_text_mismatch_coordinates"][0]["bcv"], "40001001")
+        self.assertEqual(report["nt"]["aligned_attested_target_boundary_classes"]["verse_text_mismatch"], 3)
 
     def test_fails_when_authorial_verse_body_changes_behind_pin(self):
         self.xml.write_text("<osis></osis>", encoding="utf-8")
