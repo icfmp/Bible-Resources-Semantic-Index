@@ -226,7 +226,7 @@ in [the generated parity report](curated-1.0.2-parity.lock.json) and checked
 against whole-corpus original inputs on every relevant PR. This improves
 editorial triage; it does not turn unresolved word IDs into certified links.
 
-### Deterministic BRSI-owned word index (private pending review)
+### Deterministic BRSI-owned NT word and OT verse indexes (private pending review)
 
 The same pinned [curated audit workflow](../../../.github/workflows/pinned-curated-lsg-edition.yml)
 also regenerates a **private** compressed, BRSI-owned, source-ID-preserving
