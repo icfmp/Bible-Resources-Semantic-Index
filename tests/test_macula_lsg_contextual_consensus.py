@@ -146,6 +146,62 @@ class ConsensusTests(unittest.TestCase):
         rejected, _ = tool.frozen_threshold(gold, predictions)
         self.assertIsNone(rejected)
 
+    def test_phrase_conditioning_recovers_repeated_verse_word_only_if_locally_unique(self):
+        source = "n40001001002"
+        pivot = {source: ("θεός", "n")}
+        lexicon = {
+            "lemma": {("nt", "θεός"): {"dieu": 15, "seigneur": 8}},
+            "lemma_pos": {},
+        }
+        authored = {"40001001": "Dieu et Seigneur Dieu"}
+        words = ["40001001:3", "40001001:4"]
+        group = bracket(source, words=words)
+        global_guess = tool.lexical.predict(
+            source, pivot, authored, {}, lexicon)
+        self.assertEqual(global_guess["word_id"], "40001001:3")
+        constrained = tool.constrained_lexical_candidate(
+            source, pivot, authored, {}, lexicon, group)
+        self.assertEqual(constrained["lemma_suggested_lsg_word_id"],
+                         "40001001:4")
+        self.assertEqual(constrained["lsg_phrase_word_ids"], words)
+        self.assertEqual(constrained["support_independent_source_verses"], 15)
+        self.assertTrue(constrained["lexical_selection_restricted_to_bounded_phrase"])
+        self.assertFalse(constrained["word_level_semantic_equivalence_proven"])
+        self.assertFalse(constrained["publication_authorized"])
+        self.assertTrue(tool.eligible(constrained, (12, .6),
+                                      "any_bounded_phrase"))
+        self.assertFalse(tool.eligible(constrained, (20, .6),
+                                       "any_bounded_phrase"))
+
+    def test_phrase_conditioning_abstains_on_duplicate_tie_or_no_attested_lemma(self):
+        source = "n40001001002"
+        pivot = {source: ("θεός", "n")}
+        counts = {"lemma": {("nt", "θεός"): {"dieu": 10,
+                                            "seigneur": 10}},
+                  "lemma_pos": {}}
+        authored = {"40001001": "Dieu Seigneur"}
+        group = bracket(source, words=["40001001:1", "40001001:2"])
+        self.assertIsNone(tool.constrained_lexical_candidate(
+            source, pivot, authored, {}, counts, group))
+        unique = {"lemma": {("nt", "θεός"): {"dieu": 20}},
+                  "lemma_pos": {}}
+        repeated = {"40001001": "Dieu Dieu"}
+        self.assertIsNone(tool.constrained_lexical_candidate(
+            source, pivot, repeated, {}, unique, group))
+        self.assertIsNone(tool.constrained_lexical_candidate(
+            source, {source: ("nonexistent", "n")}, authored, {},
+            unique, group))
+        self.assertIsNone(tool.constrained_lexical_candidate(
+            source, pivot, authored, {}, unique, None))
+        bad = bracket(source, words=["40001002:1"])
+        with self.assertRaisesRegex(ValueError, "non-authorial"):
+            tool.constrained_lexical_candidate(
+                source, pivot, authored, {}, unique, bad)
+        bad = bracket(source, words=["40001001:50"])
+        with self.assertRaisesRegex(ValueError, "beyond French"):
+            tool.constrained_lexical_candidate(
+                source, pivot, authored, {}, unique, bad)
+
     def test_absent_predictions_fail_closed_and_width_never_invents_words(self):
         src = "n40001001002"
         token = tool.consensus(src, guess(), bracket())
