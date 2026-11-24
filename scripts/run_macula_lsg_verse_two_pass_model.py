@@ -261,13 +261,22 @@ def two_pass_one_verse(task: dict, *, model: str, completion,
             raise ValueError("pass 2 did not classify source and French clauses completely")
         clause_words = {w for part in before["french_spans"]
                         for w in part["word_ids"]}
-        aligned_words = {w for align in after["alignments"]
-                         for part in align["french_spans"]
-                         for w in part["word_ids"]}
+        words = [w["word_id"] for w in task["authored_french"]["exact_words"]]
+        if not isinstance(after["alignments"], list):
+            raise ValueError("source phrase alignments must be a list")
+        aligned_words = set()
+        for align in after["alignments"]:
+            if not isinstance(align, dict):
+                raise ValueError("source phrase alignment must be structured")
+            spans = schema._spans(align.get("french_spans"), words,
+                                  "French source-group phrase span")
+            for span in spans:
+                if not set(span["word_ids"]).issubset(clause_words):
+                    raise ValueError("source phrase references another French clause")
+                aligned_words.update(span["word_ids"])
         if not isinstance(after["french_only_constructions"], list):
             raise ValueError("French-only grammatical constructions must be explicit")
         explained_words = set()
-        words = [w["word_id"] for w in task["authored_french"]["exact_words"]]
         for extra in after["french_only_constructions"]:
             if not isinstance(extra, dict) or set(extra) != {
                     "word_ids", "function", "contextual_reason"}:
