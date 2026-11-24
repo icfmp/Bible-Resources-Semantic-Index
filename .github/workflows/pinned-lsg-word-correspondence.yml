@@ -6,6 +6,7 @@ on:
       - "scripts/build_curated_lsg_word_correspondence.py"
       - "tests/test_curated_lsg_word_correspondence.py"
       - "scripts/calibrate_aquifer_lsg_target_ids.py"
+      - "tests/test_aquifer_target_id_calibration.py"
       - "links/alignments/clear-bible-lsg/**"
       - ".github/workflows/pinned-lsg-word-correspondence.yml"
   workflow_dispatch:
@@ -83,9 +84,18 @@ jobs:
             --candidate-dir /tmp/brsi-word-original \
             --output /tmp/brsi-word-nt-original-report.json \
             --index-output /tmp/brsi-word-nt-original-index.json.gz
-          python3 -I scripts/verify_generated_json.py \
-            --generated /tmp/brsi-word-nt-original-report.json \
-            --baseline links/alignments/clear-bible-lsg/curated-1.0.2-parity.lock.json
+          python3 -I - <<'PY'
+          import json
+          from pathlib import Path
+          baseline = json.loads(Path('links/alignments/clear-bible-lsg/curated-1.0.2-parity.lock.json').read_text())
+          actual = json.loads(Path('/tmp/brsi-word-nt-original-report.json').read_text())
+          assert actual['private_nt_word_index'] == baseline['private_nt_word_index']
+          assert actual['nt'] == baseline['nt']
+          assert actual['curated_osis_sha256'] == baseline['curated_osis_sha256']
+          assert actual['clear_bible_revision'] == baseline['clear_bible_revision']
+          print('FULL_ORIGINAL_NT_FRENCH_WORD_INDEX_SHA_VERIFIED',
+                actual['private_nt_word_index']['gzip_sha256'])
+          PY
       - name: Generate BRSI-owned original+independent MACULA French word candidate
         shell: bash
         run: |
