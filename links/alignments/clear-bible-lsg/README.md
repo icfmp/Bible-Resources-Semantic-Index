@@ -27,10 +27,14 @@ These numbers are **not an editorial certification or a published release**.
 The full **203,597 original OT rows** are now also maintained in **our own
 BRSI OT verse-reference index**, searchable by original MACULA Hebrew ID
 and by source-attested French LSG 1.0.2 verse reference. Exactly **920**
-original source/target verse disagreements are preserved verbatim. Since
-Clear.Bible supplies no French OT word-token inventory, every OT row
-explicitly has **no approved French word position**: a French verse-reference
-index is not a certified Hebrew↔French word index. The deterministic
+original source/target verse disagreements are preserved verbatim. Because
+Clear.Bible supplies no French OT word-token inventory, that **original-only**
+OT index retains **no approved French word position**. The separately
+maintained [cross-witness MACULA→LSG index](#source-backed-hebrewgreek--actual-lsg-word-locations-development)
+supplies provisional OT **word locations from independent explicit
+MACULA→French surface attestations**, without pretending they follow from
+Clear.Bible's numeric target selectors. Neither index asserts that the
+linguistic translation choices are all editorially approved. The deterministic
 [OT source-rebuild receipt](curated-1.0.2-parity.lock.json) pins the complete
 private OT index SHA-256 and exact bytes, separately from the NT word index.
 See [the pinned BRSI index build](../../../.github/workflows/pinned-curated-lsg-edition.yml)
@@ -305,6 +309,49 @@ visible to the eventual consumer. LLM-assisted Aquifer links are **not
 independent editorial approval by BRSI**, even when their word surfaces
 and MACULA IDs match. Public redistribution additionally requires the
 separate alignment CC BY-SA 4.0 attribution and publication review.
+
+### Full original-word coverage from the two pinned alignment witnesses
+
+The first full 1,188-chapter source-driven build preserved **all 308,404
+original Clear.Bible source groups**, retained their source/target
+identifiers, and independently checked the **607,217 distinct original
+MACULA source IDs** against the exact locked SBLGNT/WLCM token corpora.
+The following original-word indexes are *development evidence*, not an
+editorially approved French reverse interlinear:
+
+| Canon | Original MACULA IDs | With French word-surface evidence | Without evidence |
+| --- | ---: | ---: | ---: |
+| NT | 137,741 | **126,304** | 11,437 |
+| OT | 469,476 | **361,190** | 108,286 |
+| Total | 607,217 | **487,494** | 119,723 |
+
+For NT, **91,649** words continue to use the directly verified original
+Clear.Bible target TSV and authored LSG. A further **9,907** source groups
+have independently located Aquifer word candidates, plus **24,748**
+MACULA source IDs not part of the original Clear.Bible alignment groups.
+
+For OT, **175,915** original groups have an independently witnessed Aquifer
+source→French word location, plus **185,275** additional MACULA original
+IDs with linked French word evidence. The other **108,286** original
+MACULA IDs explicitly remain unlinked; this is **not evidence of an
+untranslated Hebrew word**.
+
+Original target-ID numerical equivalence across data sources is **not**
+trusted: in an exhaustive NT gold calibration, **20,106** same-number
+Aquifer French token IDs pointed to a *different French word location* than
+the independently text-verified Clear.Bible word. Therefore only the
+Aquifer **MACULA source ID** and its **explicit French token surface**
+can supply an OT word hypothesis. The sequence locator also refuses
+ambiguous repeated-word positions. The complete status/coverage receipt
+is maintained in [aquifer-correspondence.lock.json](aquifer-correspondence.lock.json);
+every source input is pinned and CI regenerates/compares its SHA-256.
+
+The source-linked Aquifer alignments include model-assisted judgments. A
+matching word surface verifies the **referent French span**, but does not
+alone prove the **linguistic merit of the Hebrew/Greek translation link**.
+Each record therefore retains its evidence class, original MACULA IDs,
+original Clear.Bible selectors and `linguistically_reviewed_by_brsi=false`.
+The producer neither rewrites the LSG nor invents any missing alignments.
 
 ### Why an OT target selector ordinal is NOT our French word index
 
