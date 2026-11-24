@@ -10,7 +10,7 @@ import argparse
 import gzip
 import hashlib
 import json
-from collections import Counter, defaultdict
+from collections import Counter
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -43,11 +43,14 @@ def coordinates(source_id: str) -> tuple[str, str, str]:
 
 def select_cases(index: dict, *, per_stratum: int = 500,
                  seed: str = SEED) -> tuple[list[dict], dict]:
-    """Book-diverse, repeatable 4-stratum review cohort; no duplicate verses.
+    """Deterministic, uniform original-ID sample within each evidence stratum.
 
-    Guarantee at least one case per nonempty book/stratum when feasible, then
-    fill by SHA-256 priority. This deliberately oversamples sparse books and
-    is NOT a probability sample for naive whole-corpus error-rate estimates.
+    Random-like SHA-256 rankings give every source ID in a stratum the same
+    inclusion chance. Do NOT remove same-verse cases here: doing so would
+    bias the original-ID sample towards verses with fewer source words.
+    Later calibration/blind partitions and uncertainty estimation MUST
+    cluster by the original source verse, not pretend these cases are
+    mutually independent.
     """
     if per_stratum < 1 or not seed:
         raise ValueError("per-stratum count and seed must be positive")
@@ -56,57 +59,33 @@ def select_cases(index: dict, *, per_stratum: int = 500,
         raise ValueError("source cause partition differs from reviewed four strata")
     source_lookup = index["by_original_macula_id"]
     rows = index["rows"]
-    groups: dict[str, dict[str, list[str]]] = {
-        reason: defaultdict(list) for reason in STRATA
-    }
+    groups = {reason: [] for reason in STRATA}
+    book_counts = {reason: Counter() for reason in STRATA}
+    canon_counts = {reason: Counter() for reason in STRATA}
     for source, reason in causes.items():
-        canon, book, verse = coordinates(source)
+        canon, book, _ = coordinates(source)
         positions = source_lookup.get(source)
         if not positions or any(not isinstance(i, int) or i < 0 or
                                 i >= len(rows) or rows[i]["word_ids"]
                                 for i in positions):
             raise ValueError("unresolved source has existing word evidence or invalid index")
-        groups[reason][canon + ":" + book].append(source)
+        groups[reason].append(source)
+        book_counts[reason][canon + ":" + book] += 1
+        canon_counts[reason][canon] += 1
 
-    used_verses: set[str] = set()
-    selected: list[dict] = []
-    population: dict[str, dict] = {}
+    selected = []
+    population = {}
     for reason in STRATA:
-        by_book = groups[reason]
-        total = sum(len(ids) for ids in by_book.values())
-        if total < per_stratum or len(by_book) > per_stratum:
-            raise ValueError("review stratum cannot fulfill book-diverse quota")
+        source_ids = groups[reason]
+        total = len(source_ids)
+        if total < per_stratum:
+            raise ValueError("review stratum cannot fulfill exact source-ID quota")
         population[reason] = {
             "total": total,
-            "by_canon": dict(sorted(Counter(
-                key.split(":")[0] for key, ids in by_book.items()
-                for _ in ids).items())),
-            "books": {k: len(v) for k, v in sorted(by_book.items())},
+            "by_canon": dict(sorted(canon_counts[reason].items())),
+            "books": dict(sorted(book_counts[reason].items())),
         }
-        chosen: list[str] = []
-        # Explicitly cover each represented book; each case comes from a new verse.
-        for book in sorted(by_book):
-            for source in sorted(by_book[book], key=lambda s: (rank(seed, s), s)):
-                verse = coordinates(source)[2]
-                if verse not in used_verses:
-                    chosen.append(source)
-                    used_verses.add(verse)
-                    break
-            else:
-                raise ValueError("unable to preserve book coverage without verse duplication")
-        candidates = sorted(
-            (source for ids in by_book.values() for source in ids
-             if source not in set(chosen)),
-            key=lambda s: (rank(seed, s), s))
-        for source in candidates:
-            if len(chosen) == per_stratum:
-                break
-            verse = coordinates(source)[2]
-            if verse not in used_verses:
-                chosen.append(source)
-                used_verses.add(verse)
-        if len(chosen) != per_stratum:
-            raise ValueError("not enough independent verses for exact review quota")
+        chosen = sorted(source_ids, key=lambda s: (rank(seed, s), s))[:per_stratum]
         for source in chosen:
             canon, book, verse = coordinates(source)
             selected.append({
@@ -123,14 +102,12 @@ def select_cases(index: dict, *, per_stratum: int = 500,
                 "machine_candidate_approved": False,
             })
 
-    if len(selected) != len(STRATA) * per_stratum or len(used_verses) != len(selected):
-        raise ValueError("sample cardinality or verse isolation changed")
-    # Shuffle the exported review order independent of class to avoid a
-    # contiguous category reveal; retain category metadata for stratification.
+    if len(selected) != len(STRATA) * per_stratum or len({
+            case["original_macula_id"] for case in selected}) != len(selected):
+        raise ValueError("sample cardinality or identity changed")
     selected.sort(key=lambda case: (rank(seed + ":presentation", case["original_macula_id"]),
                                     case["original_macula_id"]))
     return selected, population
-
 
 def render(index: dict, lock: dict, source_sha256: str,
            per_stratum: int = 500) -> tuple[bytes, dict]:
@@ -173,14 +150,16 @@ def render(index: dict, lock: dict, source_sha256: str,
         "curated_osis_sha256": lock["curated_osis_sha256"],
         "case_count": len(cases),
         "unique_source_verses": len({case["source_verse_coordinate"] for case in cases}),
+        "same_verse_case_count": len(cases) - len({case["source_verse_coordinate"] for case in cases}),
         "per_stratum": per_stratum,
         "population": population,
         "sample_by_cause": dict(sorted(Counter(c["source_cause"] for c in cases).items())),
         "sample_by_canon": dict(sorted(Counter(c["canon"] for c in cases).items())),
         "private_unreviewed_cases_sha256": digest(raw),
         "private_unreviewed_cases_bytes": len(raw),
-        "book_diversity_priority": True,
-        "population_error_rate_estimable_without_weights": False,
+        "uniform_source_id_sampling_within_stratum": True,
+        "blind_evaluation_must_cluster_by_source_verse": True,
+        "overall_population_rate_requires_stratum_weights": True,
         "human_gold_cases": 0,
         "machine_proposals": 0,
         "automatic_linguistic_approval": False,
