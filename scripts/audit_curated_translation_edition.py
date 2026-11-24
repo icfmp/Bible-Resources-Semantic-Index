@@ -9,7 +9,9 @@ from __future__ import annotations
 
 import argparse
 import csv
+import gzip
 import hashlib
+import io
 import json
 import re
 import unicodedata
@@ -194,7 +196,10 @@ def _nt_token_boundaries(source_text: str, targets: list[tuple[str, str]]):
             status = "whole_one_word" if count == 1 else "whole_multiple_words"
         else:
             status = "splits_curated_word_boundary"
-        result[identifier] = status
+        result[identifier] = {
+            "status": status,
+            "word_ordinal": boundaries[offset] + 1 if status == "whole_one_word" else None,
+        }
         offset = end
     if offset != cumulative:
         raise ValueError("attempted span mapping across nonidentical character streams")
@@ -277,7 +282,8 @@ def compare_nt(osis_verses: dict[str, str], targets: dict[str, list[tuple[str, s
                 diagnostic_word_order_equal += 1
             if status != "different_alphanumeric_stream":
                 classified = _nt_token_boundaries(source_text, targets[key])
-                for identifier, category in classified.items():
+                for identifier, projection in classified.items():
+                    category = projection["status"]
                     surface_boundaries[category] += 1
                     if identifier in aligned_target_ids:
                         observed_aligned_ids.add(identifier)
@@ -332,6 +338,93 @@ def compare_nt(osis_verses: dict[str, str], targets: dict[str, list[tuple[str, s
     }
 
 
+def stage_private_nt_word_bridge(osis_verses: dict[str, str],
+                                 targets: dict[str, list[tuple[str, str]]],
+                                 nt_candidate: dict,
+                                 curated_lock: dict,
+                                 alignment_revision: str) -> tuple[bytes, dict]:
+    """Stage original-MACULA-to-curated-word-position CANDIDATES (never approve).
+
+    A candidate requires an original attested 1:1 source/target selector,
+    an identical verse alphanumeric stream and an exact one-curated-word
+    boundary. No guess can create a missing target token or change a verse.
+    """
+    target_positions = {}
+    for bcv, rows in targets.items():
+        text = osis_verses.get(bcv)
+        aligned = text is not None and character_stream(text) == character_stream(
+            " ".join(surface for _, surface in rows))
+        if aligned:
+            target_positions.update(_nt_token_boundaries(text, rows))
+        else:
+            for token_id, _ in rows:
+                target_positions[token_id] = {"status": "verse_text_mismatch",
+                                               "word_ordinal": None}
+
+    rows = []
+    census = Counter()
+    for record in nt_candidate["records"]:
+        sources = record["source_lookup_ids"]
+        targets_original = record["target_lookup_ids"]
+        if not isinstance(sources, list) or not isinstance(targets_original, list):
+            raise ValueError("invalid original source/target selectors in candidate")
+        reason = None
+        curated_bcv = None
+        ordinal = None
+        if len(sources) != 1 or len(targets_original) != 1:
+            reason = "non_one_to_one_selector"
+        elif not isinstance(sources[0], str) or not isinstance(targets_original[0], str):
+            reason = "invalid_original_selector"
+        else:
+            target_id = targets_original[0]
+            projection = target_positions.get(target_id)
+            if projection is None:
+                reason = "unattested_target_selector"
+            elif projection["status"] != "whole_one_word":
+                reason = projection["status"]
+            else:
+                source_bcv = sources[0][1:9]
+                curated_bcv = target_id[:8]
+                if source_bcv != curated_bcv:
+                    # Do not silently merge dissimilar versification coordinates.
+                    reason = "cross_verse_selector"
+                    curated_bcv = None
+                else:
+                    ordinal = projection["word_ordinal"]
+        status = "surface_word_position_candidate" if reason is None else "unresolved"
+        census[status] += 1
+        if reason:
+            census["reason_" + reason] += 1
+        rows.append({
+            "original_ordinal": record["ordinal"],
+            "original_macula_ids": sources,
+            "original_target_ids": targets_original,
+            "curated_bcv": curated_bcv,
+            "curated_diagnostic_word_ordinal": ordinal,
+            "status": status,
+            "reason": reason,
+            "editorially_approved": False,
+        })
+    if len(rows) != nt_candidate["coverage"]["records"]:
+        raise ValueError("private candidate count differs from original source")
+    if census["surface_word_position_candidate"] + census["unresolved"] != len(rows):
+        raise ValueError("private candidate statuses do not partition original source")
+    payload = {
+        "format": "brsi-curated-translation-position-candidate",
+        "schema_version": 1,
+        "source_alignment_revision": alignment_revision,
+        "curated_release": curated_lock["release_tag"],
+        "curated_osis_sha256": curated_lock["osis_sha256"],
+        "status": "private_nonpublishing_unapproved",
+        "original_alignment_records": len(rows),
+        "coverage": dict(sorted(census.items())),
+        "rows": rows,
+    }
+    raw = (json.dumps(payload, ensure_ascii=False, sort_keys=True,
+                      separators=(",", ":"), allow_nan=False) + "\\n").encode("utf-8")
+    return raw, dict(sorted(census.items()))
+
+
 def compare_ot(osis_verses: dict[str, str], ot_candidate: dict):
     if ot_candidate.get("canon") != "ot" or ot_candidate.get("format") != "brsi-translation-alignment-candidate":
         raise ValueError("not the pinned OT candidate format")
@@ -362,7 +455,7 @@ def compare_ot(osis_verses: dict[str, str], ot_candidate: dict):
 
 def build_report(alignment_manifest: dict, curated_lock: dict,
                  upstream_root: Path, curated_root: Path,
-                 candidate_dir: Path) -> dict:
+                 candidate_dir: Path, bridge_output: Path | None = None) -> dict:
     if alignment_manifest.get("schema_version") != 1 or curated_lock.get("schema_version") != 1:
         raise ValueError("wrong manifest schema")
     if not all(isinstance(curated_lock.get(key), str) and curated_lock[key].strip()
@@ -400,6 +493,27 @@ def build_report(alignment_manifest: dict, curated_lock: dict,
     verses = read_osis(meta_path)
     nt = compare_nt(verses, target, target_census, nt_candidate)
     ot = compare_ot(verses, ot_candidate)
+    bridge_receipt = None
+    if bridge_output is not None:
+        raw, coverage = stage_private_nt_word_bridge(
+            verses, target, nt_candidate, curated_lock, alignment_manifest["revision"]
+        )
+        with io.BytesIO() as buffer:
+            with gzip.GzipFile(fileobj=buffer, mode="wb", filename="", mtime=0,
+                               compresslevel=9) as archive:
+                archive.write(raw)
+            compressed = buffer.getvalue()
+        if bridge_output.resolve().is_relative_to(Path.cwd().resolve()):
+            raise ValueError("private alignment candidate must not be written in checkout")
+        bridge_output.write_bytes(compressed)
+        bridge_receipt = {
+            "gzip_sha256": hashlib.sha256(compressed).hexdigest(),
+            "gzip_bytes": len(compressed),
+            "uncompressed_sha256": hashlib.sha256(raw).hexdigest(),
+            "uncompressed_bytes": len(raw),
+            "coverage": coverage,
+            "editorially_approved": False,
+        }
     return {
         "schema_version": 1,
         "kind": "curated-lsg-verse-surface-and-ot-reference-diagnostic",
@@ -410,6 +524,7 @@ def build_report(alignment_manifest: dict, curated_lock: dict,
         "curated_osis_verses": len(verses),
         "nt": nt,
         "ot": ot,
+        "private_nt_word_candidate": bridge_receipt,
         "editions_proven_identical": False,
         "token_mapping_certified": False,
         "publication_approved": False,
@@ -425,11 +540,13 @@ def main():
     parser.add_argument("--curated-root", type=Path, required=True)
     parser.add_argument("--candidate-dir", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--bridge-output", type=Path)
     args = parser.parse_args()
     report = build_report(
         json.loads(args.alignment_manifest.read_text(encoding="utf-8")),
         json.loads(args.curated_lock.read_text(encoding="utf-8")),
         args.upstream_root, args.curated_root, args.candidate_dir,
+        args.bridge_output,
     )
     content = json.dumps(report, sort_keys=True, indent=2, ensure_ascii=False) + "\n"
     args.output.write_text(content, encoding="utf-8")
