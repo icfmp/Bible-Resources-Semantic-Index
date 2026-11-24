@@ -225,31 +225,26 @@ def build_corroborated_index(aquifer_root: Path, original_candidates: Path,
                 located[t]["bcv"] + ":" + str(located[t]["word_ordinal"])
                 for source_id in source for t in source_links.get(source_id, ())
                 if t in located}
-            corroborated = sorted(original_target_locations & from_source)
-            from_independent = sorted(from_source - set(corroborated))
-            if corroborated:
-                status = "original_target_and_independent_source_agree"
-                matched_words = corroborated
-            elif from_source and original_target_locations:
-                status = "conflicting_original_and_independent_witnesses"
-                matched_words = []
-            elif from_source:
-                status = "independent_aquifer_word_witness_only"
-                matched_words = from_independent
-            elif original_target_locations:
-                status = "original_target_id_has_independent_french_surface"
-                matched_words = sorted(original_target_locations)
+            # The two projects DO NOT share a target-word ID scheme.
+            # Exact NT cross-calibration finds many identical numeric IDs
+            # pointing at DIFFERENT French words. An original Clear.Bible
+            # target ID therefore must NEVER be resolved using Aquifer's
+            # same-number target ID alone.
+            numeric_agreement = bool(original_target_locations & from_source)
+            numeric_conflict = bool(original_target_locations and from_source and
+                                    not numeric_agreement)
+            if from_source:
+                status = ("aquifer_source_word_witness_numeric_coincidence" if numeric_agreement
+                          else "aquifer_source_word_witness_numeric_disagreement" if numeric_conflict
+                          else "aquifer_source_word_witness")
+                matched_words = sorted(from_source)
             else:
-                status = "unresolved_no_located_word"
+                status = "unresolved_no_source_word_witness"
                 matched_words = []
-            # NT calibration: previous fully attested original target
-            # word identity is an independent control for target-ID reuse.
             if canon == "nt" and len(original_targets) == 1:
                 calib_target = original_targets[0]
                 if calib_target in located:
                     calibration["nt_original_target_id_attested_by_aquifer"] += 1
-                    # An exact original full-word match is checked below by
-                    # comparing to BRSI's previously built NT word index.
                 else:
                     calibration["nt_original_target_id_not_located_by_aquifer"] += 1
             statuses[canon + "_" + status] += 1
@@ -263,10 +258,9 @@ def build_corroborated_index(aquifer_root: Path, original_candidates: Path,
                 "original_target_word_witness_ids": sorted(original_target_locations),
                 "aquifer_source_word_witness_ids": sorted(from_source),
                 "status": status,
-                "source_provenance": ("Clear.Bible+BibleAquifer"
-                                      if corroborated else "BibleAquifer"
-                                      if from_source else "Clear.Bible_target_and_Aquifer_surface"
-                                      if original_target_locations else "original_unresolved"),
+                "source_provenance": ("BibleAquifer_source_and_verified_French_surface"
+                                      if matched_words else "original_ClearBible_record_unresolved"),
+                "target_selector_numeric_equivalence_proven": False,
                 "linguistically_reviewed_by_brsi": False,
             }
             rows.append(row)
