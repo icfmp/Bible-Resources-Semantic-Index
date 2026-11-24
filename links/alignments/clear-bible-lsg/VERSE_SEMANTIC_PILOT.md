@@ -146,3 +146,75 @@ python3 -I -m unittest discover -s tests -p 'test_macula_lsg_verse_semantic_pilo
 Source-pinned full-corpus reconstruction must also run. Existing files in
 Bible Resources, original MACULA/LSG sources and the application are not
 modified by this pilot.
+
+## Two-pass local semantic inference (experimental)
+
+The next maintained stage is
+[`run_macula_lsg_verse_two_pass_model.py`](../../../scripts/run_macula_lsg_verse_two_pass_model.py).
+Unlike the earlier schema preparer, this tool **actually invokes an explicitly
+configured local language model** through an OpenAI-compatible *loopback-only*
+HTTP endpoint. It requires a model server reachable on
+`http://127.0.0.1:11434/v1/chat/completions` (for example a compatible local
+Ollama server), which is **not provided or launched by this repository**.
+There is no implicit cloud API, fallback lexical guess or automatic publication.
+
+After reconstructing the **exact pinned private** tasks *on the same private
+machine* as the model server (the public GitHub workflow intentionally does not
+upload these tasks), run a **small initial tranche**:
+
+```sh
+python3 -I scripts/run_macula_lsg_verse_two_pass_model.py \
+  --private-pilot /tmp/brsi-semantic-verse-tasks.json.gz \
+  --pilot-receipt links/alignments/clear-bible-lsg/verse-semantic-pilot.lock.json \
+  --model "<exact-local-model-id>" \
+  --limit 5 \
+  --private-checkpoint /tmp/brsi-two-pass-machine-candidates.private.json \
+  --report /tmp/brsi-two-pass-machine-receipt.json
+```
+
+Increase `--limit` only after checking the generated **private** outputs.
+The checkpoint resumes only when the original private task fingerprint and
+declared model identity still match. Model IDs and optional
+`--model-sha256` are *declared* provenance, never independently verified model
+weights. The source-free receipt explicitly reports that model weights and
+semantic correctness have **not** been independently verified. Even
+`temperature=0` does not guarantee deterministic model behavior.
+
+The process performs **two separate inference calls for each full verse**:
+
+1. The first call receives all original-language tokens with source surfaces,
+   lemmas and morphology **plus the exact complete French verse**. It
+   interprets original and target meaning separately and proposes
+   *complete original clause groups* with attested French clause spans.
+2. The second receives both complete verses and the *frozen* first reading,
+   and only then proposes original **phrase groups** ↔ exact French spans,
+   `grammatical_unpaired`, or `undetermined`, with contextual reasons.
+   Every authored French clause word must also be explained: a French
+   expression without an individually corresponding original token is
+   classified as `french_only_constructions` with an explicit function
+   and rationale, rather than falsely linked to the nearest source word.
+   This handles grammatical expansions such as a French existential
+   expression in a Hebrew verbless clause. The source and French directions
+   are both audited; the private result retains the explanation separately.
+
+Pass 2 cannot alter pass-1 clause boundaries. The existing source-aware
+validator rejects missing/duplicated tokens, unsupported source or French IDs,
+cross-verse references, forced grammatical words and invented approval fields.
+A model may still hallucinate plausible linguistic explanations: **this
+pipeline establishes mechanically valid candidate structure, not correct
+translation**. Exact bilingual semantic evidence still requires independent
+human review, especially for Hebrew morphemes, long sentences and source
+versification conflicts.
+
+The runner refuses **all non-loopback inference endpoints**, redirects,
+shared/public HTTP services and private outputs inside the repository.
+Neither prompts nor biblical surfaces are printed in public logs. Outputs
+and intermediate candidate checkpoint are *private local research data*.
+No candidate is merged into the index or sent to Bible automatically.
+
+The pinned GitHub workflow runs **synthetic tests** for this local runner,
+but it deliberately **does not launch a model or upload original/source
+verse content**. Do not misread its green checks as a completed contextual
+model experiment; record the actual model ID, independently verified model
+digest, input byte hash, private output hash and human-reviewed accuracy
+before evaluating any proposed large-scale rollout.
