@@ -11,6 +11,28 @@ or approve Greek/Hebrew-to-French word or phrase matches. The corresponding
 source-pinned generator is
 [`scripts/sample_macula_lsg_semantic_review.py`](../../../scripts/sample_macula_lsg_semantic_review.py).
 
+## Phrase-boundary research (no automatic links)
+
+The separate [source-locked phrase-bracket pilot](../../../scripts/audit_macula_lsg_phrase_brackets.py)
+uses existing **exact French word positions** only as ordered neighboring
+boundaries. When original MACULA units lie between two compatible source
+anchors and a bounded authored LSG 1.0.2 French span, the pilot proposes
+**one group-to-phrase hypothesis**, not individual word equivalences.
+It abstains when the source verse differs, anchors conflict or cross, the
+interval is too broad or a source inside the gap already has any linked word.
+Every proposed group preserves its original identifiers and the distinct
+NT direct-original versus OT Aquifer model-assisted evidence tier.
+
+The 2,000-case four-stratum human sample remains completely **unreviewed**.
+The pilot separately hides 2,000 independently direct-attested NT source
+word positions (and all anchors sharing the held-out answer) to measure
+how often strict neighboring anchors *bound* a known target. This reports
+bracket containment, incorrect intervals, and abstention, **not** semantic
+translation precision; no OT human gold has been established. Its source-free
+receipt is versioned only after reproducible full-corpus runs and independent
+review; private candidate spans are not published. No LSG, MACULA or Bible
+app records are changed and no new semantic link is accepted.
+
 ## Maintained pipeline
 
 **Clear.Bible is our immutable original alignment source; the index is ours.**
