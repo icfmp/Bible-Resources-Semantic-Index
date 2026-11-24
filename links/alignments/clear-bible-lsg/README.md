@@ -222,7 +222,7 @@ readback/decompression and original-source record-count guard.
   **even the 91,649 are not certified editorially accurate links**. A later
   reviewed consumer projection must decide which word-boundary evidence is
   sufficient, exclude exception cases and independently validate the
-  exact intended French word spans in our source OSIS. The compressed candidate
+  exact intended French word spans in our source OSIS. The generated index draft
   is evidence for that work, **not** a public resource.
 
 This comparison makes the edition/gap review **more precise**, not complete.
