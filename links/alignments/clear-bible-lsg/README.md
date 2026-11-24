@@ -261,6 +261,51 @@ in [the generated parity report](curated-1.0.2-parity.lock.json) and checked
 against whole-corpus original inputs on every relevant PR. This improves
 editorial triage; it does not turn unresolved word IDs into certified links.
 
+### Source-backed Hebrew/Greek → actual LSG word locations (development)
+
+To continue without falsely assigning original OT target ordinals, BRSI now
+also reads the public, independently published **Bible Aquifer
+LouisSegond1910** chapter-level alignment witnesses, pinned separately
+in [auxiliary-word-witness.lock.json](auxiliary-word-witness.lock.json).
+That witness has actual **French target-token text**, plus explicit MACULA
+source-token identifiers, which are absent from the published Clear.Bible
+OT target TSV. Its publisher identifies the Bible text as public domain
+but the **alignment layer as CC BY-SA 4.0 (Mission Mutual)**. Keep the
+sources and their licenses distinct: this is not a provenance-free merge.
+
+The deterministic BRSI producer
+[`build_curated_lsg_word_correspondence.py`](../../../scripts/build_curated_lsg_word_correspondence.py)
+reads original complete Clear.Bible alignment groups, the Aquifer chapter
+word-surfaced groups, and the **exact pinned authored LSG 1.0.2 OSIS**.
+
+- For every Aquifer French target token, locate its word only if the **actual
+  NFC French surface** occurs in our authored verse at a word boundary, in
+  a position that is **unique across all optimal order-preserving matches**.
+  A duplicate word with ambiguous position, text difference, split word or
+  unavailable verse remains unresolved; never guess from the target number.
+- Match Aquifer source IDs to preserved original MACULA IDs. Record whether
+  the independently located French word also agrees with the original
+  Clear.Bible **target selector**. Preserve separate statuses for
+  cross-source consensus, independently witnessed supplementary word
+  alignment, selector-only evidence, conflicts and unresolved cases.
+  The complete original Clear.Bible group list, source IDs and target IDs
+  survive unchanged.
+- Calibrate original target ID use against the 91,649 exact NT word
+  attestations already in BRSI. Source-provenance, ambiguity and conflicting
+  source alignments remain visible in every record.
+- The [separate pinned full build](../../../.github/workflows/pinned-lsg-word-correspondence.yml)
+  regenerates this **private development index**, checks full original
+  corpus coverage and protects an exact output SHA-256 receipt. No Scripture,
+  SWORD modules, original dataset or Bible application are changed.
+
+This produces a usable, independently substantiated set of **MACULA ↔
+our actual French word locations**, rather than indefinitely retaining all
+OT records at verse-only level. The source evidence classes must remain
+visible to the eventual consumer. LLM-assisted Aquifer links are **not
+independent editorial approval by BRSI**, even when their word surfaces
+and MACULA IDs match. Public redistribution additionally requires the
+separate alignment CC BY-SA 4.0 attribution and publication review.
+
 ### Why an OT target selector ordinal is NOT our French word index
 
 A complete source-driven *negative calibration* against the **91,649**
