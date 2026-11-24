@@ -338,7 +338,7 @@ def compare_nt(osis_verses: dict[str, str], targets: dict[str, list[tuple[str, s
     }
 
 
-def stage_private_nt_word_bridge(osis_verses: dict[str, str],
+def build_private_nt_word_index(osis_verses: dict[str, str],
                                  targets: dict[str, list[tuple[str, str]]],
                                  nt_candidate: dict,
                                  curated_lock: dict,
@@ -406,11 +406,30 @@ def stage_private_nt_word_bridge(osis_verses: dict[str, str],
             "editorially_approved": False,
         })
     if len(rows) != nt_candidate["coverage"]["records"]:
-        raise ValueError("private candidate count differs from original source")
+        raise ValueError("generated index count differs from original source")
     if census["surface_word_position_candidate"] + census["unresolved"] != len(rows):
-        raise ValueError("private candidate statuses do not partition original source")
+        raise ValueError("generated index statuses do not partition original source")
+    # The maintained BRSI output is a real bidirectional index, not a
+    # runtime adapter applied to the original Clear.Bible lookup. Preserve
+    # unresolved rows and source IDs for later evidence-based corrections.
+    by_original_macula_id = defaultdict(list)
+    by_curated_word = defaultdict(list)
+    for row in rows:
+        ordinal = row["original_ordinal"]
+        for original_id in row["original_macula_ids"]:
+            if not isinstance(original_id, str) or not original_id:
+                raise ValueError("invalid original MACULA source ID")
+            by_original_macula_id[original_id].append(ordinal)
+        if row["status"] == "surface_word_position_candidate":
+            key = (row["curated_bcv"] + ":" +
+                   str(row["curated_diagnostic_word_ordinal"]))
+            by_curated_word[key].append(ordinal)
+    if sum(map(len, by_curated_word.values())) != census["surface_word_position_candidate"]:
+        raise ValueError("curated-word inverse index is incomplete")
     payload = {
-        "format": "brsi-curated-translation-position-candidate",
+        "format": "brsi-curated-translation-word-index-candidate",
+        "index_owner": "Bible Resources Semantic Index",
+        "provenance": "original_clear_bible_plus_reviewed_brsi_decisions",
         "schema_version": 1,
         "source_alignment_revision": alignment_revision,
         "curated_release": curated_lock["release_tag"],
@@ -418,6 +437,8 @@ def stage_private_nt_word_bridge(osis_verses: dict[str, str],
         "status": "private_nonpublishing_unapproved",
         "original_alignment_records": len(rows),
         "coverage": dict(sorted(census.items())),
+        "by_original_macula_id": dict(sorted(by_original_macula_id.items())),
+        "by_curated_word": dict(sorted(by_curated_word.items())),
         "rows": rows,
     }
     raw = (json.dumps(payload, ensure_ascii=False, sort_keys=True,
@@ -455,7 +476,7 @@ def compare_ot(osis_verses: dict[str, str], ot_candidate: dict):
 
 def build_report(alignment_manifest: dict, curated_lock: dict,
                  upstream_root: Path, curated_root: Path,
-                 candidate_dir: Path, bridge_output: Path | None = None) -> dict:
+                 candidate_dir: Path, index_output: Path | None = None) -> dict:
     if alignment_manifest.get("schema_version") != 1 or curated_lock.get("schema_version") != 1:
         raise ValueError("wrong manifest schema")
     if not all(isinstance(curated_lock.get(key), str) and curated_lock[key].strip()
@@ -496,9 +517,9 @@ def build_report(alignment_manifest: dict, curated_lock: dict,
     verses = read_osis(meta_path)
     nt = compare_nt(verses, target, target_census, nt_candidate)
     ot = compare_ot(verses, ot_candidate)
-    bridge_receipt = None
-    if bridge_output is not None:
-        raw, coverage = stage_private_nt_word_bridge(
+    index_receipt = None
+    if index_output is not None:
+        raw, coverage = build_private_nt_word_index(
             verses, target, nt_candidate, curated_lock, alignment_manifest["revision"]
         )
         with io.BytesIO() as buffer:
@@ -506,10 +527,10 @@ def build_report(alignment_manifest: dict, curated_lock: dict,
                                compresslevel=9) as archive:
                 archive.write(raw)
             compressed = buffer.getvalue()
-        if bridge_output.resolve().is_relative_to(Path.cwd().resolve()):
+        if index_output.resolve().is_relative_to(Path.cwd().resolve()):
             raise ValueError("private alignment candidate must not be written in checkout")
-        bridge_output.write_bytes(compressed)
-        bridge_receipt = {
+        index_output.write_bytes(compressed)
+        index_receipt = {
             "gzip_sha256": hashlib.sha256(compressed).hexdigest(),
             "gzip_bytes": len(compressed),
             "uncompressed_sha256": hashlib.sha256(raw).hexdigest(),
@@ -527,7 +548,7 @@ def build_report(alignment_manifest: dict, curated_lock: dict,
         "curated_osis_verses": len(verses),
         "nt": nt,
         "ot": ot,
-        "private_nt_word_candidate": bridge_receipt,
+        "private_nt_word_index": index_receipt,
         "editions_proven_identical": False,
         "token_mapping_certified": False,
         "publication_approved": False,
@@ -543,13 +564,13 @@ def main():
     parser.add_argument("--curated-root", type=Path, required=True)
     parser.add_argument("--candidate-dir", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
-    parser.add_argument("--bridge-output", type=Path)
+    parser.add_argument("--index-output", type=Path)
     args = parser.parse_args()
     report = build_report(
         json.loads(args.alignment_manifest.read_text(encoding="utf-8")),
         json.loads(args.curated_lock.read_text(encoding="utf-8")),
         args.upstream_root, args.curated_root, args.candidate_dir,
-        args.bridge_output,
+        args.index_output,
     )
     content = json.dumps(report, sort_keys=True, indent=2, ensure_ascii=False) + "\n"
     args.output.write_text(content, encoding="utf-8")
