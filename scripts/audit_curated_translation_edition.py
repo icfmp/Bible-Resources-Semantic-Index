@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import difflib
 import gzip
 import hashlib
 import io
@@ -242,6 +243,73 @@ def contiguous_mismatch_runs(osis_verses: dict[str, str],
     return result
 
 
+def orthographic_character_stream(text: str) -> str:
+    """Diagnostic French accent/ligature folding only, never text replacement."""
+    text = unicodedata.normalize("NFKD", text.casefold())
+    text = text.replace("œ", "oe").replace("æ", "ae")
+    return "".join(char for char in text if char.isalnum() and
+                   unicodedata.category(char) != "Mn")
+
+
+def triage_verse_text_exceptions(osis_verses: dict[str, str],
+                                 targets: dict[str, list[tuple[str, str]]],
+                                 mismatches: list[dict],
+                                 contiguous_runs: list[dict]) -> dict:
+    """Classify evidence-backed edition differences, no hard-coded verse rules.
+
+    A combined equal adjacent run is a potential boundary variant. Else the
+    alphanumeric *opcode pattern* distinguishes missing curated characters
+    in the original TSV from punctuation-insensitive orthographic variants.
+    The output contains coordinates and counts, never biblical source text.
+    """
+    combined_equal = set()
+    for run in contiguous_runs:
+        if not run["combined_alphanumeric_stream_equal"]:
+            continue
+        if run["first_bcv"][:5] != run["last_bcv"][:5]:
+            raise ValueError("cross-chapter mismatch run")
+        lo, hi = int(run["first_bcv"][5:]), int(run["last_bcv"][5:])
+        combined_equal.update(run["first_bcv"][:5] + f"{v:03d}"
+                              for v in range(lo, hi + 1))
+    counts = Counter()
+    cases = []
+    for item in mismatches:
+        key = item["bcv"]
+        if key not in osis_verses or key not in targets:
+            raise ValueError("mismatch has no complete source/target verse witnesses")
+        source = character_stream(osis_verses[key])
+        target = character_stream(" ".join(text for _, text in targets[key]))
+        if source == target:
+            raise ValueError("reported mismatch is actually equal")
+        if key in combined_equal:
+            category = "adjacent_verse_boundary_partition"
+        elif (orthographic_character_stream(osis_verses[key]) ==
+              orthographic_character_stream(" ".join(text for _, text in targets[key]))):
+            category = "orthographic_folding_only"
+        else:
+            operations = {tag for tag, _, _, _, _ in
+                          difflib.SequenceMatcher(None, source, target,
+                                                   autojunk=False).get_opcodes()
+                          if tag != "equal"}
+            if operations == {"delete"}:
+                category = "original_target_tsv_omits_curated_characters"
+            elif operations == {"insert"}:
+                category = "original_target_tsv_adds_characters"
+            else:
+                category = "other_unresolved_text_difference"
+        counts[category] += 1
+        cases.append({"bcv": key, "category": category,
+                      "original_alignment_changed": False,
+                      "curated_scripture_changed": False,
+                      "automatic_verse_reassignment": False})
+    if sum(counts.values()) != len(mismatches):
+        raise ValueError("exception triage did not classify the full original census")
+    return {"categories": dict(sorted(counts.items())),
+            "cases": sorted(cases, key=lambda row: row["bcv"]),
+            "automated_alignment_corrections": 0,
+            "orthographic_equivalence_not_word_link_proof": True}
+
+
 def compare_nt(osis_verses: dict[str, str], targets: dict[str, list[tuple[str, str]]],
                census: dict[str, int], nt_candidate: dict):
     source = {k: v for k, v in osis_verses.items() if int(k[:2]) >= 40}
@@ -304,6 +372,8 @@ def compare_nt(osis_verses: dict[str, str], targets: dict[str, list[tuple[str, s
         kinds[status] += 1
         by_book[key[:2]][status] += 1
     adjacent = contiguous_mismatch_runs(source, targets, mismatching_verses)
+    exception_triage = triage_verse_text_exceptions(source, targets,
+                                                    mismatching_verses, adjacent)
     if sum(kinds.values()) != len(set(source) | set(targets)):
         raise ValueError("inconsistent NT verse universe")
     if sum(surface_boundaries.values()) > census["token_rows"]:
@@ -328,6 +398,7 @@ def compare_nt(osis_verses: dict[str, str], targets: dict[str, list[tuple[str, s
         "original_aligned_target_ids": len(aligned_target_ids),
         "original_unattested_target_ids": len(missing_aligned),
         "diagnostic_text_mismatch_coordinates": mismatching_verses,
+        "text_exception_triage": exception_triage,
         "adjacent_text_mismatch_runs": adjacent,
         "adjacent_mismatch_verses_with_identical_combined_stream": sum(
             item["verse_count"] for item in adjacent if item["combined_alphanumeric_stream_equal"]
