@@ -270,8 +270,11 @@ jobs:
                       selector, delimiter, word = value.partition('|')
                       if selector[:8] not in target_verses:
                           continue
-                      assert delimiter
-                      assert word
+                      # Original Aquifer nonEquivalent.target can contain
+                      # empty-surface selectors. The pinned producer excludes
+                      # exactly these; they cannot be word context anchors.
+                      if not delimiter or not word.strip():
+                          continue
                       word = unicodedata.normalize('NFC', word)
                       old = target_items[selector[:8]].setdefault(selector, word)
                       assert old == word
