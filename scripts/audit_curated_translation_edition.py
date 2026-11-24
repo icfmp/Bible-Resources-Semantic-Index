@@ -164,14 +164,13 @@ def read_target_tsv(path: Path, field: str = "text") -> tuple[dict[str, list[str
             if not text.strip():
                 blank += 1
             total += 1
-            tokens[tid[:8]].append((int(tid[8:11]), int(tid[11:]) if len(tid) == 12 else 0, text))
+            tokens[tid[:8]].append((int(tid[8:11]), int(tid[11:]) if len(tid) == 12 else 0, tid, text))
     result = {}
     for verse, entries in tokens.items():
         sorted_entries = sorted(entries, key=lambda p: (p[0], p[1]))
         if len({(x[0], x[1]) for x in sorted_entries}) != len(sorted_entries):
             raise ValueError("conflicting target token ordinals in one verse")
-        result[verse] = [(verse + f"{word:03d}" + (str(part) if part else ""), text)
-                         for word, part, text in sorted_entries]
+        result[verse] = [(identifier, text) for _, _, identifier, text in sorted_entries]
     return result, {"token_rows": total, "blank_token_surfaces": blank, "distinct_verses": len(result)}
 
 
