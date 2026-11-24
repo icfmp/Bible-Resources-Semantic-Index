@@ -42,7 +42,7 @@ never changes the application. See [V1 consumer guide](../docs/V1_CONSUMPTION.md
   are locked under [the LSG candidate directory](../links/alignments/clear-bible-lsg/README.md).
   Missing original lemmas and morphological Hebrew suffix IDs are preserved
   as explicit limitations; no guessed translation/lexical-sense mapping.
-- `audit_curated_translation_edition.py`: reusable, nonpublishing,
+- `audit_curated_translation_edition.py`: reusable, nonpublishing, source-pinned producer of the **complete BRSI-owned French word inventory** (NFC verse-relative word spans, word/verse SHA-256 witnesses and exact pinned LSG 1.0.2 identity; no source text included), as well as the
   source-pinned comparison of original translation-token TSV surfaces with
   an immutable curated OSIS edition. Counts verse-level textual equality,
   punctuation and segmentation mismatches and aligned-token boundary
