@@ -475,6 +475,51 @@ Future recovery work should first measure **strict, explicitly graded
 orthographic equivalences** against exact French word spans, separately
 from substantive translation changes, and reject nonunique matches.
 
+### Independent strict orthography census for the 19,880 missing French surfaces
+
+Before attempting any additional word-location transform, BRSI re-read all
+**19,880 original MACULA source IDs** in the exact-word-absent recovery
+queue, with their **original Aquifer target-token text**, the original
+verse-wide token inventory (including `nonEquivalent.target`), and
+the unchanged published **Bible Resources LSG 1.0.2** verse text.
+
+The separate maintained **read-only** auditor
+[`audit_curated_lsg_surface_variants.py`](../../../scripts/audit_curated_lsg_surface_variants.py)
+tests only concrete source-original French whole-word variations:
+case-only, `œ/oe` and `æ/ae` ligatures, case+ligature, accents (diagnostic
+only), and straight/curly apostrophe. Even a diagnostic match requires
+that the normalized complete word occur **exactly once in both original
+and curated French verse inventories**. No target ordinal or neighbouring
+word position is guessed.
+
+| Exact-word-absent source-ID diagnostic | NT | OT | Total |
+| --- | ---: | ---: | ---: |
+| No safely unique candidate under any strict orthographic rule | 2,576 | 17,213 | **19,789** |
+| One or more normalization methods would match but occurrences remain ambiguous | 19 | 63 | **82** |
+| Source ID has several original target-word diagnostics | 1 | 8 | **9** |
+| Unique, exactly checkable case/ligature/accent/apostrophe variant | **0** | **0** | **0** |
+| **Original MACULA source IDs audited** | **2,596** | **17,284** | **19,880** |
+
+**This audit recovered no new alignment** and does not weaken the existing
+word-location rules. The source data has no uniquely located target word
+that differs from the authored French verse *only* in those exact
+orthographic classes. The prior apostrophe-only producer experiment in
+[#180](https://github.com/icfmp/Bible-Resources-Semantic-Index/pull/180)
+was correctly closed unmerged for zero output gain; this audit further
+explains why adding generic case/ligature/accent rewriting would be an
+unjustified maintenance burden.
+
+In particular, `a` versus `à` can change meaning, so accent folding
+is **never used as proof of a translation link**. The **82 ambiguous
+cases** similarly cannot be resolved by arbitrarily picking the first
+or closest French word. The next source-driven task is to examine actual
+**lexical wording and verse segmentation differences**. The maintained
+audit receipt
+[`orthographic-diagnostic.lock.json`](orthographic-diagnostic.lock.json)
+pins the 19,880-ID partition, the original revision IDs, the exact
+curated OSIS and source index fingerprints, and the full private
+per-ID diagnostic SHA-256; no original French Scripture text is committed.
+
 ### Why an OT target selector ordinal is NOT our French word index
 
 A complete source-driven *negative calibration* against the **91,649**
