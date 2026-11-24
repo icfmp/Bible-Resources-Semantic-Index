@@ -91,7 +91,8 @@ def unique_ordered_exact_locations(tokens: list[str],
 
 
 def load_aquifer(root: Path, authored: dict[str, str],
-                 min_chapters: int = 1) -> tuple[dict, dict, dict]:
+                 min_chapters: int = 1,
+                 include_source_evidence: bool = False) -> tuple:
     """Read original Aquifer chapter alignments and verify their French text."""
     folder = root / "fra" / "alignments" / "json"
     files = sorted(folder.glob("*.alignment.json"))
@@ -99,6 +100,8 @@ def load_aquifer(root: Path, authored: dict[str, str],
         raise ValueError("Aquifer chapter set is incomplete")
     targets_by_verse: dict[str, dict[str, str]] = defaultdict(dict)
     raw_links: list[tuple[str, str, str]] = []
+    record_source_ids: set[str] = set()
+    explicitly_non_equivalent_source_ids: set[str] = set()
     counts = Counter()
     for path in files:
         match = CHAPTER_RE.fullmatch(path.name)
@@ -127,6 +130,8 @@ def load_aquifer(root: Path, authored: dict[str, str],
                     if old != surface:
                         raise ValueError("conflicting Aquifer French surface for one original ID")
                 for source_id, _ in src:
+                    prefix = "o" if int(source_id[:2]) < 40 else "n"
+                    record_source_ids.add(prefix + source_id)
                     if source_id[:5] != chapter:
                         # Preserve cross-chapter original-versification or
                         # source-file anomalies for independent review.
@@ -134,7 +139,19 @@ def load_aquifer(root: Path, authored: dict[str, str],
                     for target_id, _ in trg:
                         raw_links.append((source_id, target_id, path.name))
                         counts["source_target_edges"] += 1
-            extra = group.get("meta", {}).get("nonEquivalent", {}).get("target", [])
+            non_equivalent = group.get("meta", {}).get("nonEquivalent", {})
+            if not isinstance(non_equivalent, dict):
+                raise ValueError("invalid Aquifer nonEquivalent metadata")
+            for item in non_equivalent.get("source", []):
+                if not isinstance(item, str):
+                    raise ValueError("invalid Aquifer nonEquivalent source token")
+                source_id, delimiter, _ = item.partition("|")
+                if not delimiter or not SELECTOR_RE.fullmatch(source_id):
+                    raise ValueError("invalid Aquifer nonEquivalent source selector")
+                prefix = "o" if int(source_id[:2]) < 40 else "n"
+                explicitly_non_equivalent_source_ids.add(prefix + source_id)
+                counts["source_declared_non_equivalent_occurrences"] += 1
+            extra = non_equivalent.get("target", [])
             for item in extra:
                 parsed = split_selector(item)
                 if parsed is None:
@@ -188,6 +205,11 @@ def load_aquifer(root: Path, authored: dict[str, str],
             prefix = "o" if int(src[:2]) < 40 else "n"
             witness_by_source[prefix + src].add(target_id)
             counts["exact_located_source_target_edges"] += 1
+    if include_source_evidence:
+        return (located, witness_by_source, dict(sorted(counts.items())), {
+            "in_aquifer_alignment_records": record_source_ids,
+            "aquifer_declared_non_equivalent": explicitly_non_equivalent_source_ids,
+        })
     return located, witness_by_source, dict(sorted(counts.items()))
 
 
@@ -201,7 +223,8 @@ def build_corroborated_index(aquifer_root: Path, original_candidates: Path,
     if not COMMIT_RE.fullmatch(aquifer_revision) or not COMMIT_RE.fullmatch(original_revision):
         raise ValueError("invalid pinned alignment revisions")
     authored = ed.read_osis(osis_file)
-    located, source_links, census = load_aquifer(aquifer_root, authored, min_chapters)
+    located, source_links, census, source_evidence = load_aquifer(
+        aquifer_root, authored, min_chapters, include_source_evidence=True)
     gold_rows = None
     if gold_nt_index is not None:
         gold = json.loads(gzip.decompress(gold_nt_index.read_bytes()))
@@ -394,6 +417,45 @@ def build_corroborated_index(aquifer_root: Path, original_candidates: Path,
     if clear_root is not None and sum(group["macula_source_ids"]
                                       for group in source_coverage.values()) != len(by_macula):
         raise ValueError("source coverage lost a pinned MACULA identifier")
+    # Classify every source-token *without* a located French word.
+    # These are evidence categories, never automatic untranslated-word claims.
+    aquifer_record_source_ids = source_evidence["in_aquifer_alignment_records"]
+    aquifer_non_equivalent_ids = source_evidence["aquifer_declared_non_equivalent"]
+    linked_sources = {source for source, indices in by_macula.items()
+                      if any(rows[index]["word_ids"] for index in indices)}
+    linked_ot_parts = {source[:-1] for source in linked_sources
+                       if source.startswith("o") and len(source) == 13}
+    unlinked_reasons = {}
+    reason_counts = defaultdict(Counter)
+    for source_id in sorted(by_macula):
+        if source_id in linked_sources:
+            continue
+        canon = "ot" if source_id.startswith("o") else "nt"
+        if source_id in aquifer_non_equivalent_ids:
+            cause = "aquifer_explicit_non_equivalent_source"
+        elif (canon == "ot" and len(source_id) == 13 and
+              source_id[:-1] in linked_ot_parts):
+            cause = "other_part_of_same_original_word_has_link"
+        elif source_id in aquifer_record_source_ids:
+            cause = "aquifer_record_source_with_no_uniquely_located_french_word"
+        else:
+            cause = "not_present_in_aquifer_source_alignment_records"
+        unlinked_reasons[source_id] = cause
+        reason_counts[canon][cause] += 1
+    for canon in ("nt", "ot"):
+        if sum(reason_counts[canon].values()) != source_coverage[canon][
+                "macula_source_ids_without_word_evidence"]:
+            raise ValueError("unresolved MACULA cause audit failed full-corpus partition")
+    diagnostics = Counter({
+        "aquifer_non_equivalent_source_unique": len(aquifer_non_equivalent_ids),
+        "aquifer_non_equivalent_source_also_linked": len(
+            aquifer_non_equivalent_ids & linked_sources),
+        "aquifer_source_record_unique": len(aquifer_record_source_ids),
+        "aquifer_source_record_without_pinned_macula": len(
+            aquifer_record_source_ids - set(by_macula)),
+        "aquifer_non_equivalent_without_pinned_macula": len(
+            aquifer_non_equivalent_ids - set(by_macula)),
+    })
     report = {
         "format": "brsi-original-and-independent-word-corroboration-candidate",
         "schema_version": 1,
@@ -408,6 +470,12 @@ def build_corroborated_index(aquifer_root: Path, original_candidates: Path,
         "automatic_linguistic_approval": False,
         "original_group_counts": groups,
         "source_coverage": source_coverage,
+        "unlinked_source_cause_counts": {
+            canon: dict(sorted(reason_counts[canon].items())) for canon in ("nt", "ot")
+        },
+        "unlinked_source_diagnostics": dict(sorted(diagnostics.items())),
+        "unlinked_cause_by_original_macula_id": unlinked_reasons,
+        "unlinked_cause_evidence_level": "source_metadata_or_structure_not_word_equivalence",
         "supplemental_macula_source_counts": dict(sorted(supplemental_counts.items())),
         "aquifer_text_witness_census": census,
         "status_counts": dict(sorted(statuses.items())),
@@ -420,6 +488,7 @@ def build_corroborated_index(aquifer_root: Path, original_candidates: Path,
                         separators=(",", ":"), allow_nan=False) + "\n").encode("utf-8"),
             {k: report[k] for k in (
                 "original_group_counts", "source_coverage",
+                "unlinked_source_cause_counts", "unlinked_source_diagnostics",
                 "supplemental_macula_source_counts",
                 "aquifer_text_witness_census", "status_counts", "target_id_calibration")})
 
