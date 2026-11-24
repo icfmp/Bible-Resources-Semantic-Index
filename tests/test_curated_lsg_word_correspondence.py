@@ -91,6 +91,57 @@ class LSGOriginalWordWitnessTests(unittest.TestCase):
         self.assertEqual([authored[result[i][0]][0] for i in range(3)],
                          ["Jean", "Pierre", "Paul"])
 
+    def test_unique_original_and_curated_trigram_recovers_repeated_word(self):
+        # Global word order differs between source edition and authored
+        # edition, but both exact three-word phrases are unique in each.
+        original = ["Alpha", "Dieu", "parla", "Béthel", "Dieu", "répondit"]
+        authored = ["Béthel", "Dieu", "répondit", "Alpha", "Dieu", "parla"]
+        tokens = [("40001001" + str(i + 1).zfill(3), word)
+                  for i, word in enumerate(original)]
+        spans = [(word, i * 20, i * 20 + len(word))
+                 for i, word in enumerate(authored)]
+        word_matches = tool.locate_aquifer_words_with_proof(tokens, spans)
+        self.assertEqual(word_matches[1], (
+            4, "unique_exact_contiguous_original_target_trigram"))
+        self.assertEqual(word_matches[4], (
+            1, "unique_exact_contiguous_original_target_trigram"))
+        self.assertEqual(
+            [authored[word_matches[i][0]] for i in range(len(original))],
+            original)
+
+    def test_repeated_word_trigram_refuses_missing_source_target_ordinal(self):
+        original = ["Alpha", "Dieu", "parla", "Béthel", "Dieu", "répondit"]
+        authored = ["Béthel", "Dieu", "répondit", "Alpha", "Dieu", "parla"]
+        # The first source phrase joins words around an unknown/missing
+        # original target token. No positional assumption may bridge it.
+        tokens = [("40001001" + str(i + 1 + (i >= 1)).zfill(3), word)
+                  for i, word in enumerate(original)]
+        spans = [(word, i * 20, i * 20 + len(word))
+                 for i, word in enumerate(authored)]
+        matches = tool.locate_aquifer_words_with_proof(tokens, spans)
+        self.assertNotIn(1, matches)
+        self.assertEqual(matches[4][1],
+                         "unique_exact_contiguous_original_target_trigram")
+
+    def test_repeated_trigram_cannot_override_any_stronger_word_location(self):
+        originals = [("40001001001", "Dieu"),
+                     ("40001001002", "parla"),
+                     ("40001001003", "Dieu")]
+        authored = [("Dieu", 0, 4), ("parla", 5, 10), ("Dieu", 11, 15)]
+        existing = {1: (0, "forced_ordered_exact_word")}
+        self.assertEqual(tool.contiguous_original_target_trigrams(
+            originals, authored, existing), {})
+        self.assertEqual(tool.contiguous_original_target_trigrams(
+            originals, authored, {}), {
+                0: (0, "unique_exact_contiguous_original_target_trigram"),
+                1: (1, "unique_exact_contiguous_original_target_trigram"),
+                2: (2, "unique_exact_contiguous_original_target_trigram"),
+            })
+        self.assertEqual(tool.contiguous_original_target_trigrams(
+            [("40001001001", "A"), ("40001001003", "X"),
+             ("40001001004", "B")],
+            [("A", 0, 1), ("X", 2, 3), ("B", 4, 5)], {}), {})
+
     def test_unique_surface_fallback_never_guesses_repeated_words(self):
         self.assertEqual(tool.locate_aquifer_words_with_proof(
             [("40001001001", "Dieu")],
