@@ -132,14 +132,17 @@ jobs:
           assert doc['automatic_linguistic_approval'] is False
           supp = doc['supplemental_macula_source_counts']
           added = supp.get('nt_added_source_words', 0) + supp.get('ot_added_source_words', 0)
-          assert len(doc['rows']) == 308404 + added
+          unmapped = supp.get('nt_source_tokens_without_word_evidence', 0) + supp.get('ot_source_tokens_without_word_evidence', 0)
+          assert len(doc['rows']) == 308404 + added + unmapped
           assert supp['original_source_macula_ids'] == 607217
+          assert len(doc['by_original_macula_id']) == 607217
+          assert all(doc['by_original_macula_id'].values())
           assert len(doc['by_original_macula_id']) > 200000
           assert doc['aquifer_text_witness_census']['chapters'] >= 1180
           assert all(row['linguistically_reviewed_by_brsi'] is False for row in doc['rows'])
           assert all(row['source_provenance'] for row in doc['rows'])
           assert doc['source_license_aquifer_alignment'] == 'CC BY-SA 4.0'
-          assert sum(doc['status_counts'].values()) == 308404 + added
+          assert sum(doc['status_counts'].values()) == 308404 + added + unmapped
           print('BRSI_MACULA_LSG_SOURCE_PRESERVATION_OK', r['status_counts'])
           PY
       - name: Calibrate auxiliary target IDs against source-text-attested NT word positions
