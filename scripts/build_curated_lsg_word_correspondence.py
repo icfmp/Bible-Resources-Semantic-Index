@@ -348,8 +348,33 @@ def build_corroborated_index(aquifer_root: Path, original_candidates: Path,
                 by_french_word[word].append(ordinal)
             statuses[canon + "_aquifer_additional_pinned_macula_word"] += 1
             supplemental_counts[canon + "_added_source_words"] += 1
+        for source_id in sorted(original_source_ids):
+            if source_id in by_macula:
+                continue
+            canon = "ot" if source_id.startswith("o") else "nt"
+            ordinal = len(rows)
+            rows.append({
+                "canon": canon,
+                "original_ordinal": None,
+                "original_macula_ids": [source_id],
+                "original_clear_bible_target_ids": [],
+                "word_ids": [],
+                "original_target_word_witness_ids": [],
+                "aquifer_source_word_witness_ids": [],
+                "status": "pinned_original_macula_word_without_translation_evidence",
+                "source_provenance": "pinned_MACULA_source_inventory_only",
+                "target_selector_numeric_equivalence_proven": False,
+                "linguistically_reviewed_by_brsi": False,
+            })
+            by_macula[source_id].append(ordinal)
+            statuses[canon + "_pinned_original_macula_word_without_translation_evidence"] += 1
+            supplemental_counts[canon + "_source_tokens_without_word_evidence"] += 1
+        if len(by_macula) != len(original_source_ids):
+            raise ValueError("BRSI source-word index does not cover the entire original MACULA corpus")
     if len(rows) != original_group_total + sum(
-            supplemental_counts.get(c + "_added_source_words", 0) for c in ("nt", "ot")):
+            supplemental_counts.get(c + "_added_source_words", 0) +
+            supplemental_counts.get(c + "_source_tokens_without_word_evidence", 0)
+            for c in ("nt", "ot")):
         raise ValueError("original or supplementary correspondence groups lost")
     if len(rows) != sum(statuses.values()):
         raise ValueError("correspondence status census did not partition rows")
