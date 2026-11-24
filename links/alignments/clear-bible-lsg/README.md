@@ -295,12 +295,15 @@ readback/decompression and original-source record-count guard.
   boundaries, **131** records in text-mismatching verses, and the original
   **996** unattested upstream target IDs. No invented text, target selector,
   French word, missing verse or automatic cross-verse rewrite fills these.
-- The matching criterion deliberately ignores punctuation and case: therefore
-  **even the 91,649 are not certified editorially accurate links**. A later
-  reviewed consumer projection must decide which word-boundary evidence is
-  sufficient, exclude exception cases and independently validate the
-  exact intended French word spans in our source OSIS. The generated index draft
-  is evidence for that work, **not** a public resource.
+- Initial coordinates were found with an alphanumeric stream check, but the
+  strengthened source-verified producer **independently attests exact original
+  NT target word surfaces to authored French words**. All 91,649 candidate
+  surfaces happen to match **exactly after NFC** in the current pinned
+  source snapshot; no case-folding, accent removal, punctuation stripping or
+  word replacement is needed for those records. This does **not** assert that
+  the original Greek→French linguistic choices are each independently
+  reviewed, nor justify filling the remaining original target-ID gaps.
+  The generated index is still **not** a public release.
 
 This comparison makes the edition/gap review **more precise**, not complete.
 Do not backfill missing target IDs from word positions, use raw eBible in place
