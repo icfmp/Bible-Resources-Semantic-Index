@@ -169,6 +169,20 @@ never changes the application. See [V1 consumer guide](../docs/V1_CONSUMPTION.md
   original-phrase↔French-phrase semantics. Only a source-free aggregate
   receipt and deterministic SHA-256 of private nonpublished cases are tracked.
 
+- `audit_macula_lsg_syntax_lexical_neighborhood.py`: research on **real
+  source-constituent→French-phrase candidates**, using the pinned mixed-genre
+  original XML syntax groups and exact authorial LSG word positions. An
+  original lemma distribution trained outside all **600 NT positional
+  pseudo-gold verses** may supply a French word near an existing source
+  syntax-group anchor, forming a bounded candidate authored French phrase.
+  The heldout source and all other original IDs pointing to its target are
+  masked from anchors, with 300-verse calibration and 300-verse reporting.
+  Exact-word error, target-in-phrase containment and target phrase width
+  are different diagnostics. OT lexicon input is **unapproved Aquifer**;
+  zero human-reviewed semantic gold, zero approved original/French links,
+  zero publication. Only a source-text-free report and private gzip SHA are
+  tracked; all original-language/French text remains private.
+
 - `calibrate_aquifer_lsg_target_ids.py`: continuous source-pinned safety
   calibration against 91,649 independent original NT word witnesses.
   It demonstrates why identical **numeric** target IDs between independently
