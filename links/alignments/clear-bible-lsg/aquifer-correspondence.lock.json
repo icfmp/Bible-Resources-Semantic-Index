@@ -4,6 +4,7 @@
     "clear_bible_direct_nt_words_retained": 91649,
     "empty_non_equivalent_tokens": 4165,
     "exact_located_source_target_edges": 656490,
+    "source_declared_non_equivalent_occurrences": 67490,
     "source_record_outside_filename_chapter": 1636,
     "source_target_edges": 700996,
     "target_tokens_not_full_words": 0,
@@ -15,8 +16,8 @@
   },
   "curated_osis_sha256": "2b8342a67d8e97b433670450fe9dd9e58917a7fcfc0cb4d321882ca8219dc3bd",
   "curated_release": "lsg-1.0.2",
-  "gzip_bytes": 13854125,
-  "gzip_sha256": "e972039a52d458b69f03cf269efbca59d70dc6f9ea140a30add308b7752c7211",
+  "gzip_bytes": 14265357,
+  "gzip_sha256": "8087d31f6fd43bfbf1102e3fdcfe9934b8532c28cd7245ee8201698ae2e29697",
   "kind": "brsi-macula-curated-lsg-word-corroboration-development",
   "no_automatic_editorial_approval": true,
   "original_group_counts": {
@@ -67,6 +68,26 @@
     "nt_original_target_id_attested_by_aquifer": 97590,
     "nt_original_target_id_not_located_by_aquifer": 7217
   },
-  "uncompressed_bytes": 308007897,
-  "uncompressed_sha256": "bb0bd4b4d749605fce76d4570b9bcf9d1464fb259530eb34349713f0a4d70baa"
+  "uncompressed_bytes": 315509528,
+  "uncompressed_sha256": "85ca0cc60fcaf8942afcf0d2a32b3a868f31610bff6f268ffad1cd2ab287413b",
+  "unlinked_source_cause_counts": {
+    "nt": {
+      "aquifer_explicit_non_equivalent_source": 3378,
+      "aquifer_record_source_with_no_uniquely_located_french_word": 2757,
+      "not_present_in_aquifer_source_alignment_records": 5302
+    },
+    "ot": {
+      "aquifer_explicit_non_equivalent_source": 59514,
+      "aquifer_record_source_with_no_uniquely_located_french_word": 18075,
+      "not_present_in_aquifer_source_alignment_records": 21923,
+      "other_part_of_same_original_word_has_link": 8774
+    }
+  },
+  "unlinked_source_diagnostics": {
+    "aquifer_non_equivalent_source_also_linked": 4597,
+    "aquifer_non_equivalent_source_unique": 67489,
+    "aquifer_non_equivalent_without_pinned_macula": 0,
+    "aquifer_source_record_unique": 506899,
+    "aquifer_source_record_without_pinned_macula": 0
+  }
 }
