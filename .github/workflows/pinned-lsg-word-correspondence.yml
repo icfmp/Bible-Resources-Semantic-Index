@@ -21,6 +21,8 @@ on:
       - "scripts/build_macula_lsg_semantic_review_dossiers.py"
       - "scripts/prepare_macula_lsg_verse_semantic_pilot.py"
       - "tests/test_macula_lsg_verse_semantic_pilot.py"
+      - "scripts/run_macula_lsg_verse_two_pass_model.py"
+      - "tests/test_macula_lsg_verse_two_pass_model.py"
       - "scripts/validate_macula_lsg_semantic_gold.py"
       - "tests/test_macula_lsg_semantic_review_dossiers.py"
       - "tests/test_macula_lsg_semantic_gold.py"
@@ -691,6 +693,9 @@ jobs:
 
       - name: Whole-verse contextual semantic pilot synthetic regressions
         run: python3 -I -m unittest discover -s tests -p 'test_macula_lsg_verse_semantic_pilot.py' -v
+
+      - name: Two-pass local whole-verse inference security and synthetic reasoning tests
+        run: python3 -I -m unittest discover -s tests -p 'test_macula_lsg_verse_two_pass_model.py' -v
 
       - name: Rebuild all original/LSG context for private human semantic review dossiers
         shell: bash
