@@ -63,11 +63,12 @@ def calibrate(gold: dict, reconciled: dict) -> dict:
             counts["aquifer_original_macula_id_other_word"] += 1
         else:
             counts["aquifer_original_macula_id_unmapped"] += 1
-    if counts["original_nt_exact_french_word_candidates"] != 91649:
-        raise ValueError("pinned full NT original word corpus baseline changed")
+    expected = gold["coverage"]["surface_word_position_candidate"]
+    if counts["original_nt_exact_french_word_candidates"] != expected:
+        raise ValueError("original NT word candidate census changed")
     if (counts["aquifer_same_original_target_id_exact_word"] +
         counts["aquifer_same_original_target_id_wrong_word"] +
-        counts["aquifer_original_target_id_not_located"] != 91649):
+        counts["aquifer_original_target_id_not_located"] != expected):
         raise ValueError("Aquifer target NT calibration is incomplete")
     return {
         "format": "brsi-original-target-id-word-calibration",
