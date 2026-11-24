@@ -205,6 +205,7 @@ jobs:
           authored = ed.read_osis(osis)
           word_cache = {}
           evidence_counts = Counter()
+          apostrophe_witnesses = {}
           for row in doc['rows']:
               proofs = row.get('aquifer_source_word_location_proofs', [])
               assert {p['word_id'] for p in proofs} == set(
@@ -223,7 +224,17 @@ jobs:
                   assert proof['aquifer_target_id'][:8] == bcv
                   assert proof['location_proof'] in (
                       'forced_ordered_exact_word',
-                      'unique_exact_surface_without_order_proof')
+                      'unique_exact_surface_without_order_proof',
+                      'unique_apostrophe_style_only')
+                  if proof['location_proof'] == 'unique_apostrophe_style_only':
+                      assert proof['original_french_surface_sha256'] != proof['word_sha256']
+                      witness = (bcv, ordinal, proof['original_french_surface_sha256'])
+                      original_id = proof['aquifer_target_id']
+                      if original_id in apostrophe_witnesses:
+                          assert apostrophe_witnesses[original_id] == witness
+                      apostrophe_witnesses[original_id] = witness
+                  else:
+                      assert proof['original_french_surface_sha256'] == proof['word_sha256']
                   evidence_counts[proof['location_proof']] += 1
           assert evidence_counts['forced_ordered_exact_word'] > 300000
           assert r['aquifer_text_witness_census'].get(
@@ -231,6 +242,34 @@ jobs:
           ) + r['aquifer_text_witness_census'].get(
               'nt_target_words_unique_exact_surface_without_order_proof', 0
           ) > 0
+          # Reopen the untouched, independently pinned Aquifer chapter
+          # files to re-prove EVERY new apostrophe-only word witness.
+          from pathlib import Path
+          original_targets_seen = set()
+          for chapter in sorted(Path('/tmp/brsi-word-aquifer/fra/alignments/json').glob('*.alignment.json')):
+              chapter_doc = json.loads(chapter.read_text(encoding='utf-8'))
+              for group in chapter_doc['groups']:
+                  if group.get('type') != 'translation':
+                      continue
+                  target_tokens = [
+                      token for record in group.get('records', [])
+                      for token in record.get('target', [])
+                  ] + group.get('meta', {}).get('nonEquivalent', {}).get('target', [])
+                  for original_target in target_tokens:
+                      selector, separator, surface = original_target.partition('|')
+                      if selector not in apostrophe_witnesses:
+                          continue
+                      assert separator
+                      bcv, ordinal, original_sha = apostrophe_witnesses[selector]
+                      original_surface = unicodedata.normalize('NFC', surface)
+                      authored_surface = word_cache[bcv][ordinal - 1]
+                      assert hashlib.sha256(original_surface.encode('utf-8')).hexdigest() == original_sha
+                      assert original_surface != authored_surface
+                      assert original_surface.replace('’', "'") == authored_surface.replace('’', "'")
+                      original_targets_seen.add(selector)
+          assert original_targets_seen == set(apostrophe_witnesses)
+          assert len(apostrophe_witnesses) > 0
+          print('BRSI_APOSTROPHE_ONLY_SOURCE_TEXT_VERIFIED', len(apostrophe_witnesses))
           print('BRSI_FULL_AUTHORIAL_WORD_WITNESSES', dict(sorted(evidence_counts.items())))
           assert all(row['source_provenance'] for row in doc['rows'])
           assert doc['source_license_aquifer_alignment'] == 'CC BY-SA 4.0'
