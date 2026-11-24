@@ -16,7 +16,7 @@
   "correspondence_index_sha256": "9978414b07dec293aaa4c08ab5e3c3b1b2886f177ab767325c448d75ec919d83",
   "curated_osis_sha256": "2b8342a67d8e97b433670450fe9dd9e58917a7fcfc0cb4d321882ca8219dc3bd",
   "format": "brsi-french-surface-difference-readonly-audit",
-  "full_diagnostic_sha256": "6be8307d03d1c5016f2b6345e3a581fa0a151a74124e2a42efe408a9976ec93e",
+  "full_diagnostic_sha256": "2db59ca6a9b396f23bb9bba4d4648d823968eb2c971bf18a5343e8dc145cb51d",
   "linguistic_links_automatically_approved": false,
   "original_source_ids_modified": false,
   "original_unlinked_exact_word_absence": {
@@ -25,6 +25,34 @@
   },
   "original_unlinked_exact_word_absence_total": 19880,
   "purpose": "classify_only_no_automatic_translation_link",
+  "reference_context_by_canon": {
+    "nt": {
+      "exact_word_in_both_adjacent_verses": 25,
+      "exact_word_in_next_verse": 109,
+      "exact_word_in_previous_verse": 100,
+      "multiple_original_target_or_missing_verse_contexts": 1,
+      "no_exact_word_in_consecutive_same_chapter_verses": 2361
+    },
+    "ot": {
+      "exact_word_in_both_adjacent_verses": 136,
+      "exact_word_in_next_verse": 500,
+      "exact_word_in_previous_verse": 554,
+      "multiple_original_target_or_missing_verse_contexts": 18,
+      "no_exact_word_in_consecutive_same_chapter_verses": 16076
+    }
+  },
   "schema_version": 1,
+  "source_coordinate_context_by_canon": {
+    "nt": {
+      "original_source_and_aquifer_target_verses_identical": 2596
+    },
+    "ot": {
+      "different_original_source_verse_missing_from_curated": 68,
+      "different_original_source_verse_without_exact_french_word": 386,
+      "exact_french_word_present_at_original_source_verse_reference": 9,
+      "multiple_original_target_or_missing_source_contexts": 1,
+      "original_source_and_aquifer_target_verses_identical": 16820
+    }
+  },
   "source_french_text_modified": false
 }
