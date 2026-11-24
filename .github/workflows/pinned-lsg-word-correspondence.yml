@@ -414,7 +414,7 @@ jobs:
           else
             echo "INITIAL SOURCE AUDIT: exact receipt must be independently frozen before merge"
           fi
-      - name: Audit orthographic differences in all 19,880 original unlinked MACULA words
+      - name: Audit all original unlinked MACULA French exact-word gaps from pinned current index
         shell: bash
         run: |
           set -euo pipefail
@@ -430,11 +430,24 @@ jobs:
           import json
           from pathlib import Path
           report = json.loads(Path('/tmp/brsi-lsg-orthographic-diagnostic.json').read_text())
-          assert report['original_unlinked_exact_word_absence_total'] == 19880
-          assert report['original_unlinked_exact_word_absence'] == {
-              'nt': 2596, 'ot': 17284}
+          # The exact unlinked cohort legitimately SHRINKS when another
+          # original MACULA ID obtains an independently attested French
+          # word from a separate Aquifer target. Derive the queue from the
+          # pinned current index receipt, never a stale fixed 19,880.
+          locked = json.loads(Path(
+              'links/alignments/clear-bible-lsg/aquifer-correspondence.lock.json'
+          ).read_text())
+          expected_absent = {
+              canon: locked['unlocated_french_target_cause_counts'][canon].get(
+                  'exact_french_word_absent_from_curated_verse', 0)
+              for canon in ('nt', 'ot')
+          }
+          assert report['original_unlinked_exact_word_absence'] == expected_absent
+          assert report['original_unlinked_exact_word_absence_total'] == sum(
+              expected_absent.values())
+          assert report['original_unlinked_exact_word_absence_total'] <= 19880
           assert sum(sum(classes.values()) for classes in
-                     report['by_canon'].values()) == 19880
+                     report['by_canon'].values()) == sum(expected_absent.values())
           assert all(sum(report['reference_context_by_canon'][canon].values()) ==
                      report['original_unlinked_exact_word_absence'][canon]
                      for canon in ('nt', 'ot'))
@@ -443,9 +456,12 @@ jobs:
                      for canon in ('nt', 'ot'))
           independent = report['cross_witness_verse_reference_corroboration']
           cases = independent['cases']
-          assert len(cases) == 9
+          # The original nine-case lead cohort may shrink when a source
+          # ID obtains a safely located French word. The source-locked
+          # report (compared independently below) controls exact membership.
+          assert len(cases) <= 9
           assert sum(independent['counts'].values()) == len(cases)
-          assert len({c['original_macula_source_id'] for c in cases}) == 9
+          assert len({c['original_macula_source_id'] for c in cases}) == len(cases)
           assert all(
               c['word_translation_approved'] is False and
               c['verse_remapping_approved'] is False and
