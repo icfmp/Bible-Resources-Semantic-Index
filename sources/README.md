@@ -22,6 +22,19 @@ the maintained [entity core](../scripts/entity_index_core.py), not that
 historical compiler. Never use source replay as the current editing process
 or modify the pinned ACAI originals.
 
+## Clear.Bible as an original for the BRSI-owned LSG index
+
+The original Clear.Bible SBLGNT/WLCM-to-LSG alignments are pinned by their exact
+upstream commit and individual input file checksums in
+[the maintained source manifest](../links/alignments/clear-bible-lsg/manifest.json).
+The original inputs are fetched at that immutable revision and verified before
+**our own BRSI index** is generated. Source bytes are not silently modified
+or represented as locally committed archival copies. Our review-only
+[corrections register](../links/alignments/clear-bible-lsg/corrections.json)
+belongs to BRSI, not upstream. The independently curated Bible Resources LSG
+1.0.2 is the text edition used by the index, not an editable alignment input.
+See the [source-specific index documentation](../links/alignments/clear-bible-lsg/README.md).
+
 MACULA Hebrew/Greek and UBS dictionaries remain independent, edition-pinned
 lexical evidence sources. Their texts and permission-only annotations must
 not be copied into public releases without explicit rights clearance.
