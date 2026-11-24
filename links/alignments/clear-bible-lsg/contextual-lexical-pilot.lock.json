@@ -17,11 +17,11 @@
     "size": 1000,
     "threshold_metrics": {
       "correct": 0,
-      "coverage": 0,
+      "coverage": 0.0,
       "gold": 1000,
       "incorrect": 0,
-      "precision": 0,
-      "precision_wilson95_lower": 0,
+      "precision": 0.0,
+      "precision_wilson95_lower": 0.0,
       "proposed": 0
     }
   },
@@ -99,19 +99,19 @@
         "incorrect": 0,
         "min_lemma_share": 0.9,
         "min_source_verses": 30,
-        "precision": 1,
+        "precision": 1.0,
         "precision_wilson95_lower": 0.67558,
         "proposed": 8
       },
       {
         "correct": 0,
-        "coverage": 0,
+        "coverage": 0.0,
         "gold": 1000,
         "incorrect": 0,
         "min_lemma_share": 0.95,
         "min_source_verses": 50,
-        "precision": 0,
-        "precision_wilson95_lower": 0,
+        "precision": 0.0,
+        "precision_wilson95_lower": 0.0,
         "proposed": 0
       }
     ]
