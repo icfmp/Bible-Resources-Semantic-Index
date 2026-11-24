@@ -260,6 +260,8 @@ def build_corroborated_index(aquifer_root: Path, original_candidates: Path,
                 "original_macula_ids": source,
                 "original_clear_bible_target_ids": original_targets,
                 "word_ids": matched_words,
+                "original_target_word_witness_ids": sorted(original_target_locations),
+                "aquifer_source_word_witness_ids": sorted(from_source),
                 "status": status,
                 "source_provenance": ("Clear.Bible+BibleAquifer"
                                       if corroborated else "BibleAquifer"
