@@ -26,7 +26,7 @@ nor a SWORD module.
 | --- | --- | --- |
 | Biblical entities | [5,773 editable, corrected BSI records](data/entities/), [3 quarantined originals](data/quarantined/), [source lock](data/source.lock.json), [migration manifest](data/migration/acai-baseline-materialization.json) | [Entity index v0.1.0](https://github.com/icfmp/Bible-Resources/releases/tag/bsi-v0.1.0) |
 | UBS Greek lexical links | [Pinned bilingual source baseline and reviewed data](links/dictionaries/ubs-greek/) | [Identifier-only v0.1.0](https://github.com/icfmp/Bible-Resources/releases/tag/bsi-ubs-greek-v0.1.0) |
-| BRSI LSG index (derived from original Clear.Bible) | [Original source lock, correction ledger and BRSI-owned NT word/OT verse index builder](links/alignments/clear-bible-lsg/README.md); exact upstream original bytes verified | **Private index; OT French words remain unverified; not yet released or approved for Bible** |
+| BRSI LSG index (original Clear.Bible and authored LSG 1.0.2) | [Original alignment source lock, BRSI correction ledger, complete 722,596-word LSG inventory and NT/OT index generators](links/alignments/clear-bible-lsg/README.md) | **Private evidence only; target-word correspondence review and distribution still pending** |
 | UBS Hebrew lexical links | [Pinned bilingual source baseline and reviewed data](links/dictionaries/ubs-hebrew/) | [Lexical v1.0.0](https://github.com/icfmp/Bible-Resources/releases/tag/bsi-ubs-hebrew-v1.0.0) |
 
 **Current entity data are versioned directly in Git.** We imported and
