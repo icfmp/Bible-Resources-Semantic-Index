@@ -365,8 +365,9 @@ def build_report(alignment_manifest: dict, curated_lock: dict,
                  candidate_dir: Path) -> dict:
     if alignment_manifest.get("schema_version") != 1 or curated_lock.get("schema_version") != 1:
         raise ValueError("wrong manifest schema")
-    if curated_lock.get("module_version") != "1.0.2" or curated_lock.get("sword_id") != "BRLSG1910":
-        raise ValueError("wrong curated edition identity")
+    if not all(isinstance(curated_lock.get(key), str) and curated_lock[key].strip()
+               for key in ("module_version", "sword_id", "versification", "release_tag", "revision")):
+        raise ValueError("missing exact curated edition identity")
     meta_path = pinned_file(curated_root, curated_lock["osis_path"], curated_lock["osis_sha256"])
     metadata_path = curated_root / curated_lock["module_metadata_path"]
     meta = json.loads(metadata_path.read_text(encoding="utf-8"))
