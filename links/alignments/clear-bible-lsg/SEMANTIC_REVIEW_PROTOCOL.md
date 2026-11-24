@@ -177,6 +177,14 @@ dossier. Source identifiers and bilingual texts are private, never printed
 to CI logs or committed; the committed aggregate receipt contains only
 counts, pinned source identities and private-file SHA-256.
 
+The exact original Hebrew MACULA TSV contains **475,911** source rows, while
+our existing correspondence index currently includes **469,476** Hebrew
+source IDs. The 6,435 authentic extra source parts are retained as **context**,
+never silently added to the correspondence index or used as review gold
+identifiers. Every source token records whether it is already present in the
+BRSI correspondence index. A proposed gold original group containing any
+context-only extra part must fail pending source-identity reconciliation.
+
 The generator records the literal MACULA TSV source column used for original
 forms. If the exact pinned TSV has no suitable surface column, do not invent
 original-language text from lemma or English glosses.
