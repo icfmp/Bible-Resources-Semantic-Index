@@ -222,6 +222,11 @@ class CuratedLSGEditionTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "identity/versification mismatch"):
             self.compare()
 
+    def test_reject_curated_metadata_path_escape(self):
+        self.lock["module_metadata_path"] = "../../outside.json"
+        with self.assertRaisesRegex(ValueError, "unsafe curated module metadata path"):
+            self.compare()
+
     def test_fails_on_tampered_original_french_inventory(self):
         with (self.upstream / "nt.tsv").open("a") as stream:
             stream.write("40001001004\tinventé\n")
