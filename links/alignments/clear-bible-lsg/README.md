@@ -158,6 +158,34 @@ No Scripture text or word lists are committed as a product of this audit.
   OT French word identities are independently verified. The 920 differing
   source/target verse pairs still need independent versification witnesses.
 
+### Deterministic private word-position candidate
+
+The same pinned [curated audit workflow](../../../.github/workflows/pinned-curated-lsg-edition.yml)
+also regenerates a **private** compressed, source-ID-preserving coordinate
+candidate for the actual curated LSG v1.0.2. No generated corpus is committed,
+uploaded as a public GitHub Actions artifact, released or sent to the Bible app.
+Its full deterministic SHA-256 and byte size are protected by
+[curated-1.0.2-parity.lock.json](curated-1.0.2-parity.lock.json), with a separate
+readback/decompression and original-source record-count guard.
+
+- Of **104,807 original NT MACULA→Clear.Bible target selector records**,
+  **91,649** can be projected to a single unambiguous **diagnostic** curated
+  word position within their original same-verse character stream.
+  Their original MACULA token IDs, Clear.Bible target IDs and record order
+  remain in each private candidate row. Every row still says
+  `editorially_approved: false`.
+- **13,158** records explicitly abstain: **7,457** target punctuation/symbol
+  surfaces, **4,574** target surfaces splitting our diagnostic word
+  boundaries, **131** records in text-mismatching verses, and the original
+  **996** unattested upstream target IDs. No invented text, target selector,
+  French word, missing verse or automatic cross-verse rewrite fills these.
+- The matching criterion deliberately ignores punctuation and case: therefore
+  **even the 91,649 are not certified editorially accurate links**. A later
+  reviewed consumer projection must decide which word-boundary evidence is
+  sufficient, exclude exception cases and independently validate the
+  exact intended French word spans in our source OSIS. The compressed candidate
+  is evidence for that work, **not** a public resource.
+
 This comparison makes the edition/gap review **more precise**, not complete.
 Do not backfill missing target IDs from word positions, use raw eBible in place
 of this pinned curated edition, or expose French aligned words in the app based
