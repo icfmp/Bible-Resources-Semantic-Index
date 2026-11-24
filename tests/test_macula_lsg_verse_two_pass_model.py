@@ -95,6 +95,21 @@ class FakeLocalSemanticModel:
             clause["alignments"][0]["semantically_approved"] = True
         if self.mode == "forced_unpaired":
             clause["alignments"][1]["french_spans"] = [{"word_ids": targets[:1]}]
+        clause["french_only_constructions"] = []
+        if self.mode == "unexplained_french":
+            clause["alignments"][0]["french_spans"] = [
+                {"word_ids": targets[2:3]}]
+        if self.mode in {"explained_french", "conflict_french"}:
+            clause["alignments"][0]["french_spans"] = [
+                {"word_ids": targets[2:3]}]
+            clause["french_only_constructions"] = [{
+                "word_ids": targets[:2],
+                "function": "grammatical_restructuring",
+                "contextual_reason":
+                    "The target-language grammatical construction requires extra wording.",
+            }]
+            if self.mode == "conflict_french":
+                clause["french_only_constructions"][0]["word_ids"] = targets[2:3]
         return {"clauses": clauses}
 
 
@@ -125,6 +140,7 @@ class TwoPassWholeVerseModelTests(unittest.TestCase):
         self.assertEqual(report["analyzed_complete_verses"], 2)
         self.assertTrue(report["two_local_inference_passes_per_completed_verse"])
         self.assertEqual(report["original_parts_with_machine_disposition"], 20)
+        self.assertEqual(report["french_words_explained_as_target_only_grammar"], 0)
         self.assertEqual(report["dispositions_by_original_part"],
                          {"grammatical_unpaired": 2, "phrase_span": 18})
         self.assertFalse(report["independent_semantic_accuracy_measured"])
@@ -213,6 +229,30 @@ class TwoPassWholeVerseModelTests(unittest.TestCase):
         self.checkpoint.write_text(json.dumps(state))
         with self.assertRaisesRegex(ValueError, "unattested|cross-verse"):
             self.perform(limit=2)
+
+    def test_reverse_target_coverage_detects_unexplained_french_expression(self):
+        self.model.mode = "unexplained_french"
+        with self.assertRaisesRegex(ValueError, "unexplained"):
+            self.perform(limit=1)
+        self.assertFalse(self.checkpoint.exists())
+
+    def test_french_only_grammatical_expansion_kept_separate_from_source_link(self):
+        self.model.mode = "explained_french"
+        report, logs = self.perform(limit=1)
+        self.assertEqual(report["french_words_explained_as_target_only_grammar"], 2)
+        self.assertEqual(report["semantic_links_approved"], 0)
+        self.assertNotIn("contextual_reason", logs)
+        state = json.loads(self.checkpoint.read_text())
+        self.assertEqual(state["per_verse_private_provenance"][0][
+            "french_only_word_count"], 2)
+        self.assertEqual(len(state["per_verse_private_provenance"][0][
+            "private_french_only_constructions_by_clause"][0]), 1)
+
+    def test_target_only_phrase_cannot_also_claim_original_translation(self):
+        self.model.mode = "conflict_french"
+        with self.assertRaisesRegex(ValueError, "overlapping/conflicting"):
+            self.perform(limit=1)
+        self.assertFalse(self.checkpoint.exists())
 
     def test_refuse_network_egress_and_redirects(self):
         for bad in (
