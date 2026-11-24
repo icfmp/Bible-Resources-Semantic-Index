@@ -170,22 +170,67 @@ def read_target_tsv(path: Path, field: str = "text") -> tuple[dict[str, list[str
         sorted_entries = sorted(entries, key=lambda p: (p[0], p[1]))
         if len({(x[0], x[1]) for x in sorted_entries}) != len(sorted_entries):
             raise ValueError("conflicting target token ordinals in one verse")
-        result[verse] = [row[2] for row in sorted_entries]
+        result[verse] = [(verse + f"{word:03d}" + (str(part) if part else ""), text)
+                         for word, part, text in sorted_entries]
     return result, {"token_rows": total, "blank_token_surfaces": blank, "distinct_verses": len(result)}
 
 
-def compare_nt(osis_verses: dict[str, str], targets: dict[str, list[str]], census: dict[str, int]):
+def _nt_token_boundaries(source_text: str, targets: list[tuple[str, str]]):
+    """Compare only surface character spans; do not create word/ID links."""
+    words = word_stream(source_text)
+    boundaries = {0: 0}
+    cumulative = 0
+    for i, word in enumerate(words, 1):
+        cumulative += len(word)
+        boundaries[cumulative] = i
+    result = {}
+    offset = 0
+    for identifier, word in targets:
+        surface = character_stream(word)
+        end = offset + len(surface)
+        if not surface:
+            status = "punctuation_only"
+        elif offset in boundaries and end in boundaries:
+            count = boundaries[end] - boundaries[offset]
+            status = "whole_one_word" if count == 1 else "whole_multiple_words"
+        else:
+            status = "splits_curated_word_boundary"
+        result[identifier] = status
+        offset = end
+    if offset != cumulative:
+        raise ValueError("attempted span mapping across nonidentical character streams")
+    return result
+
+
+def compare_nt(osis_verses: dict[str, str], targets: dict[str, list[tuple[str, str]]],
+               census: dict[str, int], nt_candidate: dict):
     source = {k: v for k, v in osis_verses.items() if int(k[:2]) >= 40}
     by_book: dict[str, Counter] = defaultdict(Counter)
     kinds = Counter()
     diagnostic_word_order_equal = 0
+    surface_boundaries = Counter()
+    aligned_boundaries = Counter()
+    aligned_by_book: dict[str, Counter] = defaultdict(Counter)
+    mismatching_verses = []
+    if (nt_candidate.get("canon") != "nt" or
+            nt_candidate.get("format") != "brsi-translation-alignment-candidate"):
+        raise ValueError("not the original NT alignment candidate format")
+    if nt_candidate.get("coverage", {}).get("records") != len(nt_candidate.get("records", [])):
+        raise ValueError("NT alignment record census inconsistent")
+    aligned_target_ids = set()
+    for record in nt_candidate["records"]:
+        for token in record.get("target_lookup_ids", []):
+            if not isinstance(token, str) or not TARGET_RE.fullmatch(token):
+                raise ValueError("invalid aligned NT target ID")
+            aligned_target_ids.add(token)
+    observed_aligned_ids = set()
     for key in sorted(set(source) | set(targets)):
         if key not in source:
             status = "target_only_verse"
         elif key not in targets:
             status = "curated_only_verse"
         else:
-            target_text = " ".join(targets[key])
+            target_text = " ".join(text for _, text in targets[key])
             source_text = source[key]
             if readable(target_text) == readable(source_text):
                 status = "exact_nfc_whitespace_verse"
@@ -195,16 +240,53 @@ def compare_nt(osis_verses: dict[str, str], targets: dict[str, list[str]], censu
                 status = "different_alphanumeric_stream"
             if word_stream(target_text) == word_stream(source_text):
                 diagnostic_word_order_equal += 1
+            if status != "different_alphanumeric_stream":
+                classified = _nt_token_boundaries(source_text, targets[key])
+                for identifier, category in classified.items():
+                    surface_boundaries[category] += 1
+                    if identifier in aligned_target_ids:
+                        observed_aligned_ids.add(identifier)
+                        aligned_boundaries[category] += 1
+                        aligned_by_book[key[:2]][category] += 1
+            else:
+                mismatching_verses.append({
+                    "bcv": key,
+                    "curated_alphanumeric_characters": len(character_stream(source_text)),
+                    "target_alphanumeric_characters": len(character_stream(target_text)),
+                })
+                for identifier, _ in targets[key]:
+                    surface_boundaries["verse_text_mismatch"] += 1
+                    if identifier in aligned_target_ids:
+                        observed_aligned_ids.add(identifier)
+                        aligned_boundaries["verse_text_mismatch"] += 1
+                        aligned_by_book[key[:2]]["verse_text_mismatch"] += 1
         kinds[status] += 1
         by_book[key[:2]][status] += 1
     if sum(kinds.values()) != len(set(source) | set(targets)):
         raise ValueError("inconsistent NT verse universe")
+    if sum(surface_boundaries.values()) > census["token_rows"]:
+        raise ValueError("classified more target IDs than source TSV contains")
+    if sum(aligned_boundaries.values()) != len(observed_aligned_ids):
+        raise ValueError("aligned boundary census inconsistent")
+    target_inventory_ids = {identifier for rows in targets.values() for identifier, _ in rows}
+    missing_aligned = aligned_target_ids - target_inventory_ids
+    if len(missing_aligned) != nt_candidate["coverage"].get("problem_target_token_unattested", 0):
+        raise ValueError("unattested target count differs from original candidate")
     return {
         "curated_nt_verses": len(source),
         "clear_bible_target_nt_verses": len(targets),
         **census,
         "verse_content_comparison": dict(sorted(kinds.items())),
         "diagnostic_word_streams_equal_verses": diagnostic_word_order_equal,
+        "target_surface_boundary_classes": dict(sorted(surface_boundaries.items())),
+        "aligned_attested_target_boundary_classes": dict(sorted(aligned_boundaries.items())),
+        "aligned_attested_target_by_book": {
+            b: dict(sorted(c.items())) for b, c in sorted(aligned_by_book.items())
+        },
+        "original_aligned_target_ids": len(aligned_target_ids),
+        "original_unattested_target_ids": len(missing_aligned),
+        "diagnostic_text_mismatch_coordinates": mismatching_verses,
+        "automatic_missing_token_remaps": 0,
         "by_book": {b: dict(sorted(c.items())) for b, c in sorted(by_book.items())},
         "target_token_id_matches_certified": False,
     }
@@ -269,13 +351,13 @@ def build_report(alignment_manifest: dict, curated_lock: dict,
         path = candidate_dir / (canon + ".json")
         if sha256(path) != receipt["candidate_outputs"][canon]["sha256"]:
             raise ValueError("candidate differs from pinned receipt")
+    nt_candidate = json.loads((candidate_dir / "nt.json").read_text(encoding="utf-8"))
     ot_candidate = json.loads((candidate_dir / "ot.json").read_text(encoding="utf-8"))
-    if ot_candidate["upstream_revision"] != alignment_manifest["revision"]:
-        raise ValueError("OT candidate source differs from pinned revision")
+    if (nt_candidate["upstream_revision"] != alignment_manifest["revision"] or
+            ot_candidate["upstream_revision"] != alignment_manifest["revision"]):
+        raise ValueError("NT/OT candidate source differs from pinned revision")
     verses = read_osis(meta_path)
-    if set(verses) != set(k for k in verses):  # defensive explicit key census
-        raise ValueError("duplicate OSIS verse")
-    nt = compare_nt(verses, target, target_census)
+    nt = compare_nt(verses, target, target_census, nt_candidate)
     ot = compare_ot(verses, ot_candidate)
     return {
         "schema_version": 1,
