@@ -125,8 +125,8 @@ class CuratedLSGEditionTests(unittest.TestCase):
     def test_classifies_token_split_without_inventing_equivalence(self):
         path = self.upstream / "nt.tsv"
         path.write_text(
-            "id\\ttext\\n40001001001\\tU\\n40001001002\\tnebonne\\n"
-            "40001001003\\tnouvelle\\n40001002001\\tL'autre\\n40001002002\\tverset\\n",
+            "id\ttext\n40001001001\tU\n40001001002\tnebonne\n"
+            "40001001003\tnouvelle\n40001002001\tL'autre\n40001002002\tverset\n",
             encoding="utf-8")
         self.manifest["inputs"][0]["sha256"] = module.sha256(path)
         report = self.compare()
