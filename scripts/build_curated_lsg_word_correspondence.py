@@ -90,6 +90,65 @@ def unique_ordered_exact_locations(tokens: list[str],
     return matches
 
 
+def contiguous_original_target_trigrams(
+        original_tokens: list[tuple[str, str]],
+        authored_words: list[tuple[str, int, int]],
+        existing: dict[int, tuple[int, str]]) -> dict[int, tuple[int, str]]:
+    """Locate a repeated French word only using a unique, exact 3-word phrase.
+
+    Both three-word windows must be *contiguous*, occur exactly once in
+    their respective complete verse word inventories and have three
+    consecutive original Aquifer target selectors, all without subparts.
+    Existing stronger word-location proofs are inviolable. This is a
+    French surface-location proof only, not linguistic translation review.
+    """
+    original = [surface for _, surface in original_tokens]
+    authored = [surface for surface, _, _ in authored_words]
+    if len(original) < 3 or len(authored) < 3:
+        return {}
+    source_phrases = Counter(tuple(original[k:k + 3])
+                             for k in range(len(original) - 2))
+    authored_phrases = defaultdict(list)
+    for k in range(len(authored) - 2):
+        authored_phrases[tuple(authored[k:k + 3])].append(k)
+    proposals: dict[int, set[int]] = defaultdict(set)
+    for start in range(len(original) - 2):
+        triplet = original_tokens[start:start + 3]
+        selectors = [selector for selector, _ in triplet]
+        # Original target word selectors refer to the SAME verse and are
+        # consecutive whole-word IDs. Never bridge omitted original tokens,
+        # source word subparts or edition/versification boundaries.
+        if not all(len(selector) == 11 for selector in selectors):
+            continue
+        if len({selector[:8] for selector in selectors}) != 1:
+            continue
+        ordinal = [int(selector[8:]) for selector in selectors]
+        if not (ordinal[0] + 1 == ordinal[1] and
+                ordinal[1] + 1 == ordinal[2]):
+            continue
+        phrase = tuple(original[start:start + 3])
+        if source_phrases[phrase] != 1:
+            continue
+        if len(authored_phrases.get(phrase, [])) != 1:
+            continue
+        target_start = authored_phrases[phrase][0]
+        if any(existing[k][0] != target_start + k - start
+               for k in range(start, start + 3) if k in existing):
+            continue
+        for k in range(start, start + 3):
+            if k not in existing:
+                proposals[k].add(target_start + k - start)
+    used_targets = {j for j, _ in existing.values()}
+    proposed_targets = Counter(next(iter(js)) for js in proposals.values()
+                               if len(js) == 1)
+    return {
+        i: (next(iter(js)), "unique_exact_contiguous_original_target_trigram")
+        for i, js in sorted(proposals.items())
+        if len(js) == 1 and next(iter(js)) not in used_targets and
+        proposed_targets[next(iter(js))] == 1
+    }
+
+
 def locate_aquifer_words_with_proof(
         original_tokens: list[tuple[str, str]],
         authored_words: list[tuple[str, int, int]]
@@ -120,6 +179,11 @@ def locate_aquifer_words_with_proof(
             raise ValueError("incompatible exact-word target position proofs")
         result[i] = (j, "unique_exact_surface_without_order_proof")
         occupied.add(j)
+    for source_index, located in contiguous_original_target_trigrams(
+            original_tokens, authored_words, result).items():
+        if source_index in result:
+            raise ValueError("trigram proof cannot override earlier word locator")
+        result[source_index] = located
     if len({position for position, _ in result.values()}) != len(result):
         raise ValueError("original targets would duplicate authored word span")
     return result
