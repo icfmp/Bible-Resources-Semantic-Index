@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "first editorial pass complete; second pass pending",
+  "status": "two editorial passes complete against pinned LSG 1.0.4 and MACULA working corpus; publication verification pending",
   "scope": "Gen.14.1–24",
   "attribution": "MACULA Hebrew Linguistic Datasets, available at https://github.com/Clear-Bible/macula-hebrew/ © 2022–2024 Biblica, Inc., CC BY 4.0. Identifier-only alignment. LSG source: Bible Resources / eBible.org, Louis Segond 1910.",
   "sources": {
@@ -24,22 +24,22 @@
     "contextual": "grammatical/discourse attachment only"
   },
   "statistics": {
-    "relations": 576,
+    "relations": 579,
     "hebrew_units": 493,
     "french_units": 575,
     "lexical_content_units": 267,
     "lexical_content_translation": 267,
     "translation": {
-      "relations": 406,
-      "hebrew_units": 419,
-      "french_units": 447,
-      "single_original_relations": 393
+      "relations": 405,
+      "hebrew_units": 420,
+      "french_units": 453,
+      "single_original_relations": 389
     },
     "contextual": {
-      "relations": 170,
-      "hebrew_units": 170,
-      "french_units": 249,
-      "single_original_relations": 169
+      "relations": 174,
+      "hebrew_units": 174,
+      "french_units": 253,
+      "single_original_relations": 173
     }
   },
   "relations": [
@@ -4953,7 +4953,7 @@
       ]
     },
     {
-      "kind": "translation",
+      "kind": "contextual",
       "hebrew": [
         "o010140130152"
       ],
@@ -5292,6 +5292,12 @@
           20,
           105,
           111
+        ],
+        [
+          14,
+          21,
+          112,
+          122
         ]
       ]
     },
@@ -5591,7 +5597,7 @@
       ]
     },
     {
-      "kind": "translation",
+      "kind": "contextual",
       "hebrew": [
         "o010140150021"
       ],
@@ -7184,7 +7190,7 @@
       ]
     },
     {
-      "kind": "translation",
+      "kind": "contextual",
       "hebrew": [
         "o010140190013"
       ],
@@ -8368,7 +8374,7 @@
       ]
     },
     {
-      "kind": "translation",
+      "kind": "contextual",
       "hebrew": [
         "o010140230021"
       ],
@@ -9194,6 +9200,160 @@
           147
         ]
       ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010140230011",
+        "o010140230021",
+        "o010140230022",
+        "o010140230031",
+        "o010140230032",
+        "o010140230041",
+        "o010140230051"
+      ],
+      "french": [
+        [
+          23,
+          12,
+          46,
+          49
+        ],
+        [
+          23,
+          13,
+          50,
+          54
+        ],
+        [
+          23,
+          14,
+          55,
+          57
+        ],
+        [
+          23,
+          15,
+          58,
+          61
+        ],
+        [
+          23,
+          16,
+          63,
+          65
+        ],
+        [
+          23,
+          17,
+          66,
+          68
+        ],
+        [
+          23,
+          18,
+          69,
+          75
+        ],
+        [
+          23,
+          19,
+          76,
+          78
+        ],
+        [
+          23,
+          20,
+          79,
+          86
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010140230062",
+        "o010140230071"
+      ],
+      "french": [
+        [
+          23,
+          2,
+          3,
+          5
+        ],
+        [
+          23,
+          3,
+          6,
+          14
+        ],
+        [
+          23,
+          4,
+          15,
+          19
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010140150012",
+        "o010140150021",
+        "o010140150022"
+      ],
+      "french": [
+        [
+          15,
+          2,
+          3,
+          9
+        ],
+        [
+          15,
+          3,
+          10,
+          12
+        ],
+        [
+          15,
+          4,
+          13,
+          19
+        ],
+        [
+          15,
+          5,
+          21,
+          25
+        ],
+        [
+          15,
+          6,
+          26,
+          29
+        ],
+        [
+          15,
+          7,
+          30,
+          38
+        ]
+      ]
     }
-  ]
+  ],
+  "editorial_review": {
+    "passes": 2,
+    "scope": "All 24 verses reread in both pinned texts, including cross-verse correspondences.",
+    "notes": [
+      "Gen 14:1–2: opening event formula has its French equivalent in verse 2, not verse 1.",
+      "Gen 14:5–7: compound proper names preserve each original occurrence; the territory/object reordering is attached in context.",
+      "Gen 14:10: repeated noun for pits conveys intensity; one Hebrew king title corresponds to the two French expressions roi and celui.",
+      "Gen 14:14–15: numeric compound, supplied descriptors and divided troop expression are kept distinct from individual lexical equivalents.",
+      "Gen 14:18–20: compound name Melchizedek and expanded pronoun in the blessing retain their separate identities.",
+      "Gen 14:23–24: negative oath construction and the phrase 'Rien pour moi' cross the native verse boundary, preserving both original IDs."
+    ],
+    "limitations": "Both passes performed by the same editor; no independent dictionary-sense verification; publication checks deferred."
+  }
 }
