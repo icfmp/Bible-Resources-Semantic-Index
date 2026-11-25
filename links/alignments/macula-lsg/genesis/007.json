@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "first editorial pass complete; second pass pending",
+  "status": "two editorial passes complete against pinned LSG 1.0.4 and MACULA working corpus; publication verification pending",
   "scope": "Gen.7.1–24",
   "attribution": "MACULA Hebrew Linguistic Datasets, available at https://github.com/Clear-Bible/macula-hebrew/ © 2022–2024 Biblica, Inc., CC BY 4.0. Identifier-only alignment. LSG source: Bible Resources / eBible.org, Louis Segond 1910.",
   "sources": {
@@ -28,18 +28,18 @@
     "hebrew_units": 530,
     "french_units": 528,
     "lexical_content_units": 261,
-    "lexical_content_translation": 255,
+    "lexical_content_translation": 254,
     "translation": {
-      "relations": 435,
-      "hebrew_units": 447,
-      "french_units": 460,
-      "single_original_relations": 423
+      "relations": 433,
+      "hebrew_units": 445,
+      "french_units": 459,
+      "single_original_relations": 421
     },
     "contextual": {
-      "relations": 128,
-      "hebrew_units": 129,
-      "french_units": 219,
-      "single_original_relations": 127
+      "relations": 130,
+      "hebrew_units": 131,
+      "french_units": 221,
+      "single_original_relations": 129
     }
   },
   "relations": [
@@ -636,22 +636,16 @@
       ]
     },
     {
-      "kind": "contextual",
+      "kind": "translation",
       "hebrew": [
         "o010070020091"
       ],
       "french": [
         [
           2,
-          13,
-          65,
-          67
-        ],
-        [
-          2,
-          14,
-          68,
-          72
+          15,
+          73,
+          75
         ]
       ]
     },
@@ -868,22 +862,16 @@
       ]
     },
     {
-      "kind": "contextual",
+      "kind": "translation",
       "hebrew": [
         "o010070020181"
       ],
       "french": [
         [
           2,
-          27,
-          132,
-          134
-        ],
-        [
-          2,
-          28,
-          135,
-          139
+          29,
+          140,
+          142
         ]
       ]
     },
@@ -3124,7 +3112,7 @@
       ]
     },
     {
-      "kind": "translation",
+      "kind": "contextual",
       "hebrew": [
         "o010070090131"
       ],
@@ -3134,6 +3122,12 @@
           20,
           101,
           102
+        ],
+        [
+          9,
+          21,
+          103,
+          106
         ]
       ]
     },
@@ -5681,11 +5675,23 @@
       ]
     },
     {
-      "kind": "translation",
+      "kind": "contextual",
       "hebrew": [
         "o010070160013"
       ],
       "french": [
+        [
+          16,
+          1,
+          0,
+          2
+        ],
+        [
+          16,
+          2,
+          3,
+          5
+        ],
         [
           16,
           3,
@@ -5869,7 +5875,7 @@
       ]
     },
     {
-      "kind": "translation",
+      "kind": "contextual",
       "hebrew": [
         "o010070160091"
       ],
@@ -5879,11 +5885,17 @@
           14,
           73,
           74
+        ],
+        [
+          16,
+          15,
+          75,
+          78
         ]
       ]
     },
     {
-      "kind": "translation",
+      "kind": "contextual",
       "hebrew": [
         "o010070160092"
       ],
@@ -9174,5 +9186,20 @@
         ]
       ]
     }
-  ]
+  ],
+  "editorial_review": {
+    "passes": 2,
+    "scope": "All 24 verses reviewed against the two pinned texts.",
+    "notes": [
+      "Gen 7:2–3: distributive repetitions of seven correspond to French 'sept couples'; preserve both original numeral IDs. Coordinate the male and female with their actual conjunctions.",
+      "Gen 7:7: causal expression 'from before the waters' is rendered by purpose phrase 'pour échapper aux eaux'.",
+      "Gen 7:8–9: list and its governing verb span the verse boundary; contextual list attachments do not invent lexical equivalents.",
+      "Gen 7:11: reordered compound date and ordinal; preserve repeated original year expression.",
+      "Gen 7:16: repeated original entrance participle is absorbed into the French finite verb; explicit Noé is the referent of the pronominal suffix, not its lexical meaning. Added porte is contextual.",
+      "Gen 7:19: source phrase 'upon the earth' has no distinct French rendering and remains contextual, not translated.",
+      "Gen 7:20: suffix referring to the mountains attached to 'des montagnes'.",
+      "Gen 7:21–23: compressed flesh and swarm constructions and active/passive shifts retain source IDs."
+    ],
+    "limitations": "Same editor performed both passes; no certified dictionary sense; no automated tests. Publication checks remain separate."
+  }
 }
