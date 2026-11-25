@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "first editorial pass partial; second pass pending",
+  "status": "two editorial passes complete against pinned LSG 1.0.4 and MACULA working corpus; publication verification pending",
   "scope": "Gen.15.1–21",
   "attribution": "MACULA Hebrew Linguistic Datasets, available at https://github.com/Clear-Bible/macula-hebrew/ © 2022–2024 Biblica, Inc., CC BY 4.0. Identifier-only alignment. LSG source: Bible Resources / eBible.org, Louis Segond 1910.",
   "sources": {
@@ -24,22 +24,22 @@
     "contextual": "grammatical/discourse attachment only"
   },
   "statistics": {
-    "relations": 452,
+    "relations": 457,
     "hebrew_units": 403,
-    "french_units": 412,
+    "french_units": 415,
     "lexical_content_units": 175,
     "lexical_content_translation": 172,
     "translation": {
       "relations": 299,
       "hebrew_units": 306,
-      "french_units": 339,
-      "single_original_relations": 292
+      "french_units": 338,
+      "single_original_relations": 291
     },
     "contextual": {
-      "relations": 153,
-      "hebrew_units": 155,
-      "french_units": 190,
-      "single_original_relations": 150
+      "relations": 158,
+      "hebrew_units": 161,
+      "french_units": 193,
+      "single_original_relations": 153
     }
   },
   "relations": [
@@ -1319,7 +1319,7 @@
       ]
     },
     {
-      "kind": "translation",
+      "kind": "contextual",
       "hebrew": [
         "o010150040052"
       ],
@@ -1585,12 +1585,6 @@
         "o010150050012"
       ],
       "french": [
-        [
-          5,
-          3,
-          9,
-          16
-        ],
         [
           5,
           4,
@@ -2333,12 +2327,6 @@
         "o010150070012"
       ],
       "french": [
-        [
-          7,
-          1,
-          0,
-          9
-        ],
         [
           7,
           4,
@@ -7232,6 +7220,99 @@
           7
         ]
       ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010150040021",
+        "o010150040041",
+        "o010150040042"
+      ],
+      "french": [
+        [
+          4,
+          7,
+          33,
+          36
+        ],
+        [
+          4,
+          8,
+          37,
+          45
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010150130101",
+        "o010150130111",
+        "o010150130112"
+      ],
+      "french": [
+        [
+          13,
+          17,
+          89,
+          93
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010150070041"
+      ],
+      "french": [
+        [
+          7,
+          1,
+          0,
+          9
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010150170142"
+      ],
+      "french": [
+        [
+          17,
+          25,
+          136,
+          143
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010150130031",
+        "o010150130041"
+      ],
+      "french": [
+        [
+          13,
+          6,
+          26,
+          31
+        ]
+      ]
     }
-  ]
+  ],
+  "editorial_review": {
+    "passes": 2,
+    "scope": "All 21 verses reread in both pinned texts.",
+    "notes": [
+      "Gen 15:2: the difficult heir expression is retained as a group according to the LSG.",
+      "Gen 15:4: supplied passive speech formula is contextual; the Hebrew nominal construction has no separate equivalent for the added French verb.",
+      "Gen 15:6: faith, reckoning and righteousness retain their distinct source IDs; the supplied subject and relative connective are contextual.",
+      "Gen 15:13: emphatic infinitive absolute and finite verb are grouped; the supplied copula of the possessive clause is contextual.",
+      "Gen 15:17–19: nominal fire and cut-piece expressions, covenant-making idiom, and the supplied repetition of the land noun across the verse boundary remain documented."
+    ],
+    "limitations": "Both passes performed by the same editor; no independent dictionary-sense verification; publication checks deferred."
+  }
 }
