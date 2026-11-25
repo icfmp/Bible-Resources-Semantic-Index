@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "editorial alignment and second-pass review complete against supplied OSIS snapshot; publication verification pending",
+  "status": "two editorial passes complete; exact LSG 1.0.4 reading projection confirmed; publication verification pending",
   "scope": "Gen.1.1–31",
   "attribution": "MACULA Hebrew Linguistic Datasets, available at https://github.com/Clear-Bible/macula-hebrew/ © 2022–2024 Biblica, Inc., CC BY 4.0. New alignment decisions; no original Hebrew text, lexical annotations, dictionary prose or UBS sense assignments included. LSG source provenance: Bible Resources / eBible.org, Louis Segond 1910, public domain claim.",
   "sources": {
@@ -10,11 +10,11 @@
       "blob": "08829ff09c7c6b06f2ae01bc980fc182c1d1a4b8"
     },
     "lsg": {
-      "snapshot": "user-provided Bible Resources OSIS (30,527,268 bytes)",
+      "snapshot": "Pinned LSG 1.0.4 working corpus (OSIS 30,527,333 bytes)",
       "chapter_prose_sha256": "b52ac28f36a74f66adca7a3e245a66f180390dc0891eb85e47d73dc2e2f585f9",
       "expected_current_blob": "b1ac2146fb7517e5e08a25f5ca321670f5dcefb5",
       "expected_current_size": 30527333,
-      "verification": "Snapshot re-extracted; exact current blob not retrieved. Release 1.0.4 notes report no numbered prose changes; direct equality still required.",
+      "verification": "Exact released OSIS Git blob verified during source preparation; chapter reading-text digest and existing French offsets match the earlier supplied snapshot.",
       "expected_commit": "11a869427991297addc27ed42728fa213e55e720"
     }
   },
@@ -24,16 +24,16 @@
     "contextual": "grammatical/discourse attachment only"
   },
   "statistics": {
-    "relations": 792,
-    "hebrew_units": 690,
+    "relations": 803,
+    "hebrew_units": 701,
     "french_units": 782,
     "lexical_content_units": 360,
     "lexical_content_translation": 359,
     "translation": {
-      "relations": 574,
-      "hebrew_units": 585,
-      "french_units": 615,
-      "single_original_relations": 562
+      "relations": 585,
+      "hebrew_units": 596,
+      "french_units": 620,
+      "single_original_relations": 573
     },
     "contextual": {
       "relations": 218,
@@ -12614,12 +12614,171 @@
           132
         ]
       ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010010050031ה"
+      ],
+      "french": [
+        [
+          5,
+          3,
+          12,
+          14
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010010050052ה"
+      ],
+      "french": [
+        [
+          5,
+          9,
+          42,
+          45
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010010070101ה"
+      ],
+      "french": [
+        [
+          7,
+          14,
+          68,
+          77
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010010070151ה"
+      ],
+      "french": [
+        [
+          7,
+          22,
+          116,
+          125
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010010080031ה"
+      ],
+      "french": [
+        [
+          8,
+          3,
+          12,
+          21
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010010100031ה"
+      ],
+      "french": [
+        [
+          10,
+          3,
+          12,
+          14
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010010180021ה"
+      ],
+      "french": [
+        [
+          18,
+          3,
+          14,
+          16
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010010180032ה"
+      ],
+      "french": [
+        [
+          18,
+          7,
+          27,
+          29
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010010220101ה"
+      ],
+      "french": [
+        [
+          22,
+          13,
+          77,
+          80
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010010220131ה"
+      ],
+      "french": [
+        [
+          22,
+          21,
+          122,
+          124
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010010260122ה"
+      ],
+      "french": [
+        [
+          26,
+          27,
+          145,
+          147
+        ]
+      ]
     }
   ],
   "editorial_review": {
     "passes": 2,
     "scope": "All 31 verses; reviewed translation relations in their source and target contexts, with grammatical attachments retained separately.",
     "corrections": "Reclassify as contextual relative particles realized through the French participial 'ayant' in Gen 1:11,12,29,30, rather than a lexical equivalent. Preserve Gen 1:29–30 repetition of the original giving verb.",
-    "limitations": "Same editor performed both passes; exact LSG 1.0.4 source blob and independent dictionary-sense verification deferred to release. No automated tests run."
+    "limitations": "Same editor performed both passes; exact LSG 1.0.4 source blob and independent dictionary-sense verification deferred to release. No automated tests run.",
+    "source_materialization_followup": {
+      "additional_original_articles": 11,
+      "reason": "Empty-surface definite articles encoded as independent MACULA IDs after contracted prepositions were omitted by earlier XML extraction. Each is now linked to its corresponding French article or contraction.",
+      "remaining_original_ids": 0
+    }
   }
 }
