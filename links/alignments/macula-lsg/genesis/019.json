@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "first editorial pass complete; second pass pending",
+  "status": "two editorial passes complete against pinned LSG 1.0.4 and MACULA working corpus; publication verification pending",
   "scope": "Gen.19.1–38",
   "attribution": "MACULA Hebrew Linguistic Datasets, available at https://github.com/Clear-Bible/macula-hebrew/ © 2022–2024 Biblica, Inc., CC BY 4.0. Identifier-only alignment. LSG source: Bible Resources / eBible.org, Louis Segond 1910.",
   "sources": {
@@ -24,22 +24,22 @@
     "contextual": "grammatical/discourse attachment only"
   },
   "statistics": {
-    "relations": 1029,
+    "relations": 1039,
     "hebrew_units": 924,
     "french_units": 1005,
     "lexical_content_units": 409,
-    "lexical_content_translation": 396,
+    "lexical_content_translation": 398,
     "translation": {
-      "relations": 726,
-      "hebrew_units": 745,
-      "french_units": 825,
-      "single_original_relations": 707
+      "relations": 724,
+      "hebrew_units": 757,
+      "french_units": 832,
+      "single_original_relations": 696
     },
     "contextual": {
-      "relations": 303,
-      "hebrew_units": 306,
-      "french_units": 403,
-      "single_original_relations": 300
+      "relations": 315,
+      "hebrew_units": 318,
+      "french_units": 416,
+      "single_original_relations": 311
     }
   },
   "relations": [
@@ -2095,12 +2095,30 @@
       ]
     },
     {
-      "kind": "translation",
+      "kind": "contextual",
       "hebrew": [
         "o010190040151",
         "o010190040152"
       ],
       "french": [
+        [
+          4,
+          24,
+          143,
+          148
+        ],
+        [
+          4,
+          25,
+          149,
+          151
+        ],
+        [
+          4,
+          26,
+          152,
+          162
+        ],
         [
           4,
           27,
@@ -3253,7 +3271,7 @@
       ]
     },
     {
-      "kind": "translation",
+      "kind": "contextual",
       "hebrew": [
         "o010190080161"
       ],
@@ -3305,7 +3323,7 @@
       ]
     },
     {
-      "kind": "translation",
+      "kind": "contextual",
       "hebrew": [
         "o010190080162"
       ],
@@ -5650,7 +5668,7 @@
       ]
     },
     {
-      "kind": "translation",
+      "kind": "contextual",
       "hebrew": [
         "o010190130092"
       ],
@@ -6271,7 +6289,7 @@
       ]
     },
     {
-      "kind": "translation",
+      "kind": "contextual",
       "hebrew": [
         "o010190140201"
       ],
@@ -6457,11 +6475,17 @@
       ]
     },
     {
-      "kind": "translation",
+      "kind": "contextual",
       "hebrew": [
         "o010190150031"
       ],
       "french": [
+        [
+          15,
+          3,
+          11,
+          13
+        ],
         [
           15,
           4,
@@ -7349,7 +7373,7 @@
       ]
     },
     {
-      "kind": "translation",
+      "kind": "contextual",
       "hebrew": [
         "o010190160102"
       ],
@@ -8455,6 +8479,12 @@
       "french": [
         [
           19,
+          12,
+          53,
+          55
+        ],
+        [
+          19,
           13,
           56,
           64
@@ -9526,11 +9556,17 @@
       ]
     },
     {
-      "kind": "translation",
+      "kind": "contextual",
       "hebrew": [
         "o010190210041"
       ],
       "french": [
+        [
+          21,
+          6,
+          22,
+          24
+        ],
         [
           21,
           7,
@@ -9574,7 +9610,7 @@
       ]
     },
     {
-      "kind": "translation",
+      "kind": "contextual",
       "hebrew": [
         "o010190210052"
       ],
@@ -9636,7 +9672,7 @@
       ]
     },
     {
-      "kind": "translation",
+      "kind": "contextual",
       "hebrew": [
         "o010190210072"
       ],
@@ -12782,7 +12818,7 @@
       ]
     },
     {
-      "kind": "translation",
+      "kind": "contextual",
       "hebrew": [
         "o010190300012"
       ],
@@ -14788,7 +14824,7 @@
       ]
     },
     {
-      "kind": "translation",
+      "kind": "contextual",
       "hebrew": [
         "o010190340122"
       ],
@@ -16492,6 +16528,356 @@
           61
         ]
       ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010190080161",
+        "o010190080161ה",
+        "o010190080162",
+        "o010190080171",
+        "o010190080172",
+        "o010190080173"
+      ],
+      "french": [
+        [
+          8,
+          19,
+          103,
+          105
+        ],
+        [
+          8,
+          20,
+          106,
+          111
+        ],
+        [
+          8,
+          21,
+          112,
+          116
+        ],
+        [
+          8,
+          22,
+          117,
+          123
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010190130091",
+        "o010190130092"
+      ],
+      "french": [
+        [
+          13,
+          9,
+          44,
+          46
+        ],
+        [
+          13,
+          10,
+          47,
+          50
+        ],
+        [
+          13,
+          11,
+          51,
+          57
+        ],
+        [
+          13,
+          12,
+          58,
+          61
+        ],
+        [
+          13,
+          13,
+          62,
+          71
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010190140192",
+        "o010190140201",
+        "o010190140202"
+      ],
+      "french": [
+        [
+          14,
+          31,
+          170,
+          172
+        ],
+        [
+          14,
+          32,
+          173,
+          178
+        ],
+        [
+          14,
+          33,
+          179,
+          189
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010190150012",
+        "o010190150021",
+        "o010190150022",
+        "o010190150031"
+      ],
+      "french": [
+        [
+          15,
+          1,
+          0,
+          3
+        ],
+        [
+          15,
+          2,
+          4,
+          10
+        ],
+        [
+          15,
+          3,
+          11,
+          13
+        ],
+        [
+          15,
+          4,
+          14,
+          18
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010190160101",
+        "o010190160102",
+        "o010190160111",
+        "o010190160121",
+        "o010190160122"
+      ],
+      "french": [
+        [
+          16,
+          19,
+          92,
+          95
+        ],
+        [
+          16,
+          20,
+          96,
+          105
+        ],
+        [
+          16,
+          21,
+          106,
+          113
+        ],
+        [
+          16,
+          22,
+          114,
+          124
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010190190031",
+        "o010190190041",
+        "o010190190042"
+      ],
+      "french": [
+        [
+          19,
+          2,
+          7,
+          11
+        ],
+        [
+          19,
+          3,
+          12,
+          18
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010190190121",
+        "o010190190122",
+        "o010190190131",
+        "o010190190141",
+        "o010190190142"
+      ],
+      "french": [
+        [
+          19,
+          20,
+          96,
+          98
+        ],
+        [
+          19,
+          21,
+          99,
+          101
+        ],
+        [
+          19,
+          22,
+          102,
+          112
+        ],
+        [
+          19,
+          23,
+          113,
+          115
+        ],
+        [
+          19,
+          24,
+          116,
+          119
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010190210041",
+        "o010190210051",
+        "o010190210052",
+        "o010190210071",
+        "o010190210071ה",
+        "o010190210072",
+        "o010190210081",
+        "o010190210082"
+      ],
+      "french": [
+        [
+          21,
+          6,
+          22,
+          24
+        ],
+        [
+          21,
+          7,
+          25,
+          34
+        ],
+        [
+          21,
+          9,
+          42,
+          47
+        ],
+        [
+          21,
+          10,
+          48,
+          53
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010190300012",
+        "o010190300031",
+        "o010190300032"
+      ],
+      "french": [
+        [
+          30,
+          2,
+          4,
+          10
+        ],
+        [
+          30,
+          3,
+          11,
+          16
+        ],
+        [
+          30,
+          4,
+          17,
+          21
+        ],
+        [
+          30,
+          5,
+          22,
+          24
+        ],
+        [
+          30,
+          6,
+          25,
+          32
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010190340121",
+        "o010190340122"
+      ],
+      "french": [
+        [
+          34,
+          18,
+          94,
+          105
+        ],
+        [
+          34,
+          19,
+          106,
+          111
+        ]
+      ]
     }
-  ]
+  ],
+  "editorial_review": {
+    "passes": 2,
+    "scope": "All 38 verses reread in both pinned texts; corrected shifted mapping in the initial draft from verse 23 onward.",
+    "notes": [
+      "Gen 19:4: expression from the extremity of the population is contextual to the LSG gathering formulation.",
+      "Gen 19:8,13–16: grouped idiomatic clauses and repeated hand constructions; preserve untranslated source units.",
+      "Gen 19:19–21: servant/self reference and lifting the face idiom are aligned collectively, not as invented isolated senses.",
+      "Gen 19:23–38: corrected verse numbering shift in draft; reviewed place names, directional phrases, pronoun references, and repeated narrative clauses."
+    ],
+    "limitations": "Both passes performed by the same editor; no independent dictionary-sense verification; publication checks deferred."
+  }
 }
