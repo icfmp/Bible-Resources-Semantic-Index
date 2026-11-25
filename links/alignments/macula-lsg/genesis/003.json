@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "editorial alignment and second-pass review complete against supplied OSIS snapshot; publication verification pending",
+  "status": "two editorial passes complete; exact LSG 1.0.4 reading projection confirmed; publication verification pending",
   "scope": "Gen.3.1–24",
   "attribution": "MACULA Hebrew Linguistic Datasets, available at https://github.com/Clear-Bible/macula-hebrew/ © 2022–2024 Biblica, Inc., CC BY 4.0. Identifier-only alignment. LSG source: Bible Resources / eBible.org, Louis Segond 1910.",
   "sources": {
@@ -10,12 +10,12 @@
       "blob": "dbdb0402725660bca68251c6c6f92ad49f7df71a"
     },
     "lsg": {
-      "snapshot": "user-provided Bible Resources OSIS (30,527,268 bytes)",
+      "snapshot": "Pinned LSG 1.0.4 working corpus (OSIS 30,527,333 bytes)",
       "chapter_prose_sha256": "23e895f51de368740033c70a638d733896df23a9635fca2d1f4f939869ef82ed",
       "expected_current_blob": "b1ac2146fb7517e5e08a25f5ca321670f5dcefb5",
       "expected_commit": "11a869427991297addc27ed42728fa213e55e720",
       "expected_current_size": 30527333,
-      "verification": "Release notes report no numbered prose changes; exact 1.0.4 blob verification deferred to publication."
+      "verification": "Exact released OSIS Git blob verified during source preparation; chapter reading-text digest and existing French offsets match the earlier supplied snapshot."
     }
   },
   "french_tuple": "[verse number, 1-based token ordinal, 0-based Unicode code-point start, exclusive end] in verse reading text without notes/markup, trimmed. Apostrophes and internal hyphens retained.",
@@ -24,16 +24,16 @@
     "contextual": "grammatical/discourse attachment only"
   },
   "statistics": {
-    "relations": 662,
-    "hebrew_units": 545,
+    "relations": 666,
+    "hebrew_units": 549,
     "french_units": 636,
     "lexical_content_units": 259,
     "lexical_content_translation": 254,
     "translation": {
-      "relations": 465,
-      "hebrew_units": 474,
-      "french_units": 480,
-      "single_original_relations": 456
+      "relations": 469,
+      "hebrew_units": 478,
+      "french_units": 484,
+      "single_original_relations": 460
     },
     "contextual": {
       "relations": 197,
@@ -10160,6 +10160,62 @@
           109
         ]
       ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010030060101ה"
+      ],
+      "french": [
+        [
+          6,
+          13,
+          58,
+          60
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010030080071ה"
+      ],
+      "french": [
+        [
+          8,
+          11,
+          64,
+          66
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010030100051ה"
+      ],
+      "french": [
+        [
+          10,
+          8,
+          39,
+          41
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010030130041ה"
+      ],
+      "french": [
+        [
+          13,
+          6,
+          24,
+          26
+        ]
+      ]
     }
   ],
   "editorial_review": {
@@ -10173,6 +10229,11 @@
       "Gen 3:22: negative purpose clause recast as a French hortative; no invented Hebrew verb for empêcher.",
       "Gen 3:24: French relative clause makes cherubim the apparent subject whereas the Hebrew participle modifies the sword. Record translation shift without altering the source."
     ],
-    "limitations": "Same editor performed both passes. Exact published LSG comparison, independent dictionary-sense verification and automated tests remain publication gates."
+    "limitations": "Same editor performed both passes. Exact published LSG comparison, independent dictionary-sense verification and automated tests remain publication gates.",
+    "source_materialization_followup": {
+      "additional_original_articles": 4,
+      "reason": "Empty-surface definite articles encoded as independent MACULA IDs after contracted prepositions were omitted by earlier XML extraction. Each is now linked to its corresponding French article or contraction.",
+      "remaining_original_ids": 0
+    }
   }
 }
