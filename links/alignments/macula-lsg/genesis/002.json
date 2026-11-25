@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "first editorial pass complete; second pass pending; exact published LSG verification deferred",
+  "status": "editorial alignment and second-pass review complete against supplied OSIS snapshot; publication verification pending",
   "scope": "Gen.2.1–25",
   "attribution": "MACULA Hebrew Linguistic Datasets, available at https://github.com/Clear-Bible/macula-hebrew/ © 2022–2024 Biblica, Inc., CC BY 4.0. Identifier-only alignment. LSG source: Bible Resources / eBible.org, Louis Segond 1910.",
   "sources": {
@@ -30,16 +30,16 @@
     "lexical_content_units": 265,
     "lexical_content_translation": 258,
     "translation": {
-      "relations": 449,
-      "hebrew_units": 453,
+      "relations": 447,
+      "hebrew_units": 451,
       "french_units": 457,
-      "single_original_relations": 445
+      "single_original_relations": 443
     },
     "contextual": {
-      "relations": 151,
-      "hebrew_units": 151,
-      "french_units": 237,
-      "single_original_relations": 149
+      "relations": 153,
+      "hebrew_units": 153,
+      "french_units": 240,
+      "single_original_relations": 151
     }
   },
   "relations": [
@@ -3711,6 +3711,18 @@
       "french": [
         [
           10,
+          13,
+          61,
+          63
+        ],
+        [
+          10,
+          14,
+          64,
+          72
+        ],
+        [
+          10,
           15,
           73,
           75
@@ -5738,12 +5750,6 @@
         "o010020160101"
       ],
       "french": [
-        [
-          16,
-          8,
-          42,
-          44
-        ],
         [
           16,
           9,
@@ -8309,16 +8315,28 @@
       ]
     },
     {
-      "kind": "translation",
+      "kind": "contextual",
       "hebrew": [
         "o010020220101"
       ],
       "french": [
         [
           22,
-          6,
-          31,
-          33
+          3,
+          15,
+          20
+        ],
+        [
+          22,
+          4,
+          21,
+          24
+        ],
+        [
+          22,
+          5,
+          25,
+          30
         ]
       ]
     },
@@ -8725,7 +8743,7 @@
       ]
     },
     {
-      "kind": "translation",
+      "kind": "contextual",
       "hebrew": [
         "o010020230092"
       ],
@@ -9419,6 +9437,12 @@
       "french": [
         [
           25,
+          12,
+          55,
+          62
+        ],
+        [
+          25,
           14,
           69,
           74
@@ -9445,5 +9469,16 @@
         ]
       ]
     }
-  ]
+  ],
+  "editorial_review": {
+    "passes": 2,
+    "scope": "All 25 verses, source and translation reread; reviewed lexical relations and grammatical groups.",
+    "notes": [
+      "Gen 2:10: 'become four heads' is absorbed in the French 'se divisait en quatre bras'.",
+      "Gen 2:16–17: infinitive absolute constructions are attached to the finite verb expression; no invented extra French lexical equivalent.",
+      "Gen 2:22–23: directional and demonstrative morphology in the French reordered construction is contextual.",
+      "Gen 2:25: verbal idiom 'avoir honte' is linked to the original verb with discontinuous tokens."
+    ],
+    "limitations": "Same editor performed both passes. Exact published LSG comparison and automated tests deferred to publication. Dictionary sense assignments are not certified."
+  }
 }
