@@ -74,11 +74,13 @@ for undetermined, supply uncertainty_reason and null function.
 Every original group must have substantive contextual_reason, not a
 position/lemma-only assertion. Verify the reverse French-to-source direction:
 EVERY authored French word in the clause must be accounted for, either
-within a source-group phrase_span or within an EXPLICIT French-only
+within a source-group phrase_span, an explicit unresolved target span, or within an EXPLICIT French-only
 grammatical expression that does not have an individual original source
-token (e.g. an auxiliary or an existential construction). Do not label
-a French expression as target-only when already aligned to a source
-phrase. Such expression needs a substantive contextual_reason and a
+token (e.g. an auxiliary or an existential construction). If the target wording conflicts with the original source (including different
+persons or textual variants), or its relation cannot be established, record
+it in french_undetermined with an explicit uncertainty reason; do not disguise
+it as grammar. Do not label a French expression as target-only or unresolved
+when already aligned to a source phrase. Such expression needs a substantive contextual_reason and a
 function from grammatical_restructuring, existential_construction,
 discourse_cohesion, required_french_word, or other.
 Return ONLY JSON with this exact form:
@@ -89,8 +91,12 @@ Return ONLY JSON with this exact form:
 "contextual_reason":"...","grammatical_function":null,
 "uncertainty_reason":null}],
 "french_only_constructions":[{"word_ids":["..."],"function":
-"grammatical_restructuring","contextual_reason":"..."}]}]}.
-Use an EMPTY french_only_constructions list when none is needed.
+"grammatical_restructuring","contextual_reason":"..."}],
+"french_undetermined":[{"word_ids":["..."],"reason":"conflicting_sources",
+"contextual_reason":"..."}]}]}.
+Use EMPTY french_only_constructions and french_undetermined lists when none
+are needed. For french_undetermined use versification, missing_target,
+conflicting_sources, unclear_syntax, no_independent_evidence, or other.
 No model-signed approvals or markdown."""
 
 def digest(raw: bytes) -> str:
@@ -252,12 +258,16 @@ def two_pass_one_verse(task: dict, *, model: str, completion,
         raise ValueError("pass 2 changed original clause segmentation")
     french_only_word_count = 0
     private_french_only = []
+    private_french_undetermined = []
+    french_undetermined_word_count = 0
     cleaned_clauses = []
     for before, after in zip(first["clauses"], second["clauses"]):
         if not isinstance(after, dict) or {
                 k: after.get(k) for k in before} != before:
             raise ValueError("pass 2 rewrote pass 1 full-verse interpretation")
-        if set(after) != set(before) | {"alignments", "french_only_constructions"}:
+        required_fields = set(before) | {"alignments", "french_only_constructions"}
+        # Existing responses without the new field remain valid when complete.
+        if set(after) not in (required_fields, required_fields | {"french_undetermined"}):
             raise ValueError("pass 2 did not classify source and French clauses completely")
         clause_words = {w for part in before["french_spans"]
                         for w in part["word_ids"]}
@@ -293,8 +303,31 @@ def two_pass_one_verse(task: dict, *, model: str, completion,
                     not aligned_words.isdisjoint(extra["word_ids"])):
                 raise ValueError("French-only target has overlapping/conflicting source mapping")
             explained_words.update(extra["word_ids"])
-        if (aligned_words | explained_words) != clause_words:
+        unresolved = after.get("french_undetermined", [])
+        if not isinstance(unresolved, list):
+            raise ValueError("French unresolved expressions must be a list")
+        unresolved_words = set()
+        for extra in unresolved:
+            if not isinstance(extra, dict) or set(extra) != {
+                    "word_ids", "reason", "contextual_reason"}:
+                raise ValueError("French unresolved explanation has invalid fields")
+            if extra["reason"] not in {
+                    "versification", "missing_target", "conflicting_sources",
+                    "unclear_syntax", "no_independent_evidence", "other"}:
+                raise ValueError("unsupported French unresolved reason")
+            schema._rationale(extra["contextual_reason"],
+                              "French unresolved contextual reason")
+            schema._ordered_consecutive(extra["word_ids"], words,
+                                        "French unresolved exact target")
+            ids = set(extra["word_ids"])
+            if (not ids.issubset(clause_words) or
+                    not ids.isdisjoint(aligned_words | explained_words | unresolved_words)):
+                raise ValueError("French unresolved target has overlapping/conflicting or cross-clause mapping")
+            unresolved_words.update(ids)
+        if (aligned_words | explained_words | unresolved_words) != clause_words:
             raise ValueError("French clause includes unexplained or cross-clause target words")
+        french_undetermined_word_count += len(unresolved_words)
+        private_french_undetermined.append(unresolved)
         french_only_word_count += len(explained_words)
         private_french_only.append(after["french_only_constructions"])
         cleaned_clauses.append({k: after[k] for k in (
@@ -323,6 +356,8 @@ def two_pass_one_verse(task: dict, *, model: str, completion,
         "pass_count": 2,
         "french_only_word_count": french_only_word_count,
         "private_french_only_constructions_by_clause": private_french_only,
+        "french_undetermined_word_count": french_undetermined_word_count,
+        "private_french_undetermined_by_clause": private_french_undetermined,
     }
 
 def _envelope(pilot_sha: str, pilot_id: str, model: str,
@@ -419,6 +454,8 @@ def run(pilot: dict, pilot_sha: str, *, model: str,
         "french_words_explained_as_target_only_grammar":
             sum(p["french_only_word_count"]
                 for p in state["per_verse_private_provenance"]),
+        "french_words_undetermined": sum(p.get("french_undetermined_word_count", 0)
+            for p in state["per_verse_private_provenance"]),
         "two_local_inference_passes_per_completed_verse": True,
         "private_checkpoint_sha256": digest(checkpoint.read_bytes()),
         "independent_semantic_accuracy_measured": False,
