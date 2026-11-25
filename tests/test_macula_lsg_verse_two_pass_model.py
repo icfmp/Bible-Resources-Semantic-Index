@@ -110,6 +110,17 @@ class FakeLocalSemanticModel:
             }]
             if self.mode == "conflict_french":
                 clause["french_only_constructions"][0]["word_ids"] = targets[2:3]
+        if self.mode in {"uncertain_french", "overlap_uncertain_french", "bad_uncertain_reason"}:
+            clause["alignments"][0]["french_spans"] = [{"word_ids": targets[2:3]}]
+            clause["french_undetermined"] = [{
+                "word_ids": targets[:2],
+                "reason": "conflicting_sources",
+                "contextual_reason": "The target phrase differs in person from the original source.",
+            }]
+            if self.mode == "overlap_uncertain_french":
+                clause["french_undetermined"][0]["word_ids"] = targets[:3]
+            if self.mode == "bad_uncertain_reason":
+                clause["french_undetermined"][0]["reason"] = "invented"
         return {"clauses": clauses}
 
 
@@ -251,6 +262,27 @@ class TwoPassWholeVerseModelTests(unittest.TestCase):
     def test_target_only_phrase_cannot_also_claim_original_translation(self):
         self.model.mode = "conflict_french"
         with self.assertRaisesRegex(ValueError, "overlapping/conflicting"):
+            self.perform(limit=1)
+        self.assertFalse(self.checkpoint.exists())
+
+    def test_target_uncertainty_is_not_misclassified_as_grammar(self):
+        self.model.mode = "uncertain_french"
+        report, _ = self.perform(limit=1)
+        self.assertEqual(report["french_words_undetermined"], 2)
+        self.assertEqual(report["french_words_explained_as_target_only_grammar"], 0)
+        self.assertEqual(report["semantic_links_approved"], 0)
+        state = json.loads(self.checkpoint.read_text())
+        self.assertEqual(state["per_verse_private_provenance"][0]["french_undetermined_word_count"], 2)
+
+    def test_target_uncertainty_cannot_overlap_an_alignment(self):
+        self.model.mode = "overlap_uncertain_french"
+        with self.assertRaisesRegex(ValueError, "overlapping/conflicting"):
+            self.perform(limit=1)
+        self.assertFalse(self.checkpoint.exists())
+
+    def test_target_uncertainty_needs_a_supported_reason(self):
+        self.model.mode = "bad_uncertain_reason"
+        with self.assertRaisesRegex(ValueError, "unsupported French unresolved reason"):
             self.perform(limit=1)
         self.assertFalse(self.checkpoint.exists())
 
