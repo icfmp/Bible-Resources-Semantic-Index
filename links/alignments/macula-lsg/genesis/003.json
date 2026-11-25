@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "first editorial pass complete; second pass pending; exact published LSG verification deferred",
+  "status": "editorial alignment and second-pass review complete against supplied OSIS snapshot; publication verification pending",
   "scope": "Gen.3.1–24",
   "attribution": "MACULA Hebrew Linguistic Datasets, available at https://github.com/Clear-Bible/macula-hebrew/ © 2022–2024 Biblica, Inc., CC BY 4.0. Identifier-only alignment. LSG source: Bible Resources / eBible.org, Louis Segond 1910.",
   "sources": {
@@ -24,22 +24,22 @@
     "contextual": "grammatical/discourse attachment only"
   },
   "statistics": {
-    "relations": 664,
+    "relations": 662,
     "hebrew_units": 545,
     "french_units": 636,
     "lexical_content_units": 259,
-    "lexical_content_translation": 253,
+    "lexical_content_translation": 254,
     "translation": {
-      "relations": 468,
+      "relations": 465,
       "hebrew_units": 474,
       "french_units": 480,
-      "single_original_relations": 462
+      "single_original_relations": 456
     },
     "contextual": {
-      "relations": 196,
-      "hebrew_units": 198,
+      "relations": 197,
+      "hebrew_units": 199,
       "french_units": 264,
-      "single_original_relations": 189
+      "single_original_relations": 190
     }
   },
   "relations": [
@@ -2658,46 +2658,6 @@
       ]
     },
     {
-      "kind": "translation",
-      "hebrew": [
-        "o010030070031"
-      ],
-      "french": [
-        [
-          7,
-          4,
-          12,
-          16
-        ],
-        [
-          7,
-          7,
-          23,
-          30
-        ]
-      ]
-    },
-    {
-      "kind": "translation",
-      "hebrew": [
-        "o010030070032"
-      ],
-      "french": [
-        [
-          7,
-          3,
-          9,
-          11
-        ],
-        [
-          7,
-          6,
-          20,
-          22
-        ]
-      ]
-    },
-    {
       "kind": "contextual",
       "hebrew": [
         "o010030070031",
@@ -3277,20 +3237,6 @@
           14,
           79,
           81
-        ]
-      ]
-    },
-    {
-      "kind": "translation",
-      "hebrew": [
-        "o010030080092"
-      ],
-      "french": [
-        [
-          8,
-          15,
-          82,
-          86
         ]
       ]
     },
@@ -4327,20 +4273,6 @@
       ]
     },
     {
-      "kind": "translation",
-      "hebrew": [
-        "o010030110111"
-      ],
-      "french": [
-        [
-          11,
-          22,
-          102,
-          109
-        ]
-      ]
-    },
-    {
       "kind": "contextual",
       "hebrew": [
         "o010030110111"
@@ -4385,20 +4317,6 @@
           23,
           110,
           112
-        ]
-      ]
-    },
-    {
-      "kind": "translation",
-      "hebrew": [
-        "o010030110122"
-      ],
-      "french": [
-        [
-          11,
-          22,
-          102,
-          109
         ]
       ]
     },
@@ -9975,7 +9893,7 @@
       ]
     },
     {
-      "kind": "translation",
+      "kind": "contextual",
       "hebrew": [
         "o010030240121"
       ],
@@ -10173,6 +10091,88 @@
           156
         ]
       ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010030070031",
+        "o010030070032"
+      ],
+      "french": [
+        [
+          7,
+          3,
+          9,
+          11
+        ],
+        [
+          7,
+          4,
+          12,
+          16
+        ],
+        [
+          7,
+          5,
+          17,
+          19
+        ],
+        [
+          7,
+          6,
+          20,
+          22
+        ],
+        [
+          7,
+          7,
+          23,
+          30
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010030080082",
+        "o010030080092"
+      ],
+      "french": [
+        [
+          8,
+          15,
+          82,
+          86
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010030110111",
+        "o010030110122"
+      ],
+      "french": [
+        [
+          11,
+          22,
+          102,
+          109
+        ]
+      ]
     }
-  ]
+  ],
+  "editorial_review": {
+    "passes": 2,
+    "scope": "All 24 verses reread and lexical mappings reviewed.",
+    "notes": [
+      "Gen 3:7: both of them is a French discontinuous idiom.",
+      "Gen 3:8: the day-breeze expression corresponds collectively to 'soir', not the noun day alone.",
+      "Gen 3:11: commanded + negative infinitive rendered as 'défendu'.",
+      "Gen 3:16: emphatic infinitive absolute and implied children remain attached to the French verb construction.",
+      "Gen 3:22: negative purpose clause recast as a French hortative; no invented Hebrew verb for empêcher.",
+      "Gen 3:24: French relative clause makes cherubim the apparent subject whereas the Hebrew participle modifies the sword. Record translation shift without altering the source."
+    ],
+    "limitations": "Same editor performed both passes. Exact published LSG comparison, independent dictionary-sense verification and automated tests remain publication gates."
+  }
 }
