@@ -13,13 +13,6 @@ approval or a replacement for source-specific license notices.
   Edited BSI entity records remain adaptations subject to the same
   attribution and share-alike obligations. Their `bsi.source_id`,
   `bsi.source_sha256` and editorial decisions retain traceability.
-- The separate [Clear.Bible LSG word-alignment candidate](../links/alignments/clear-bible-lsg/README.md)
-  is pinned to Clear-Bible/Alignments source bytes (upstream data CC BY 4.0);
-  the accompanying source, translation and third-party annotations may have
-  different rights. Its generated token-selector index is **not** approved for
-  public release. The upstream OT French target token file contains no token
-  rows, so its membership remains unverified; edition parity with the Bible
-  application and SWORD LSG is also unverified.
 - Exact original-language word identifiers refer to pinned MACULA WLC/SBLGNT
   editions. Those identifiers do **not** confer redistribution permission for
   the underlying manuscript text, token annotations or full source TSVs.
