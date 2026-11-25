@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "first editorial pass partial; second pass pending",
+  "status": "two editorial passes complete against pinned LSG 1.0.4 and MACULA working corpus; publication verification pending",
   "scope": "Gen.6.1–22",
   "attribution": "MACULA Hebrew Linguistic Datasets, available at https://github.com/Clear-Bible/macula-hebrew/ © 2022–2024 Biblica, Inc., CC BY 4.0. Identifier-only alignment. LSG source: Bible Resources / eBible.org, Louis Segond 1910.",
   "sources": {
@@ -26,20 +26,20 @@
   "statistics": {
     "relations": 536,
     "hebrew_units": 478,
-    "french_units": 520,
+    "french_units": 521,
     "lexical_content_units": 228,
     "lexical_content_translation": 224,
     "translation": {
-      "relations": 395,
-      "hebrew_units": 408,
-      "french_units": 420,
-      "single_original_relations": 385
+      "relations": 393,
+      "hebrew_units": 406,
+      "french_units": 418,
+      "single_original_relations": 383
     },
     "contextual": {
-      "relations": 141,
-      "hebrew_units": 143,
-      "french_units": 196,
-      "single_original_relations": 139
+      "relations": 143,
+      "hebrew_units": 145,
+      "french_units": 205,
+      "single_original_relations": 141
     }
   },
   "relations": [
@@ -4618,7 +4618,7 @@
       ]
     },
     {
-      "kind": "translation",
+      "kind": "contextual",
       "hebrew": [
         "o010060140091"
       ],
@@ -7267,6 +7267,36 @@
           7,
           34,
           40
+        ],
+        [
+          20,
+          11,
+          59,
+          61
+        ],
+        [
+          20,
+          12,
+          62,
+          64
+        ],
+        [
+          20,
+          13,
+          65,
+          69
+        ],
+        [
+          20,
+          14,
+          70,
+          73
+        ],
+        [
+          20,
+          15,
+          74,
+          82
         ]
       ]
     },
@@ -7993,7 +8023,7 @@
       ]
     },
     {
-      "kind": "translation",
+      "kind": "contextual",
       "hebrew": [
         "o010060210121"
       ],
@@ -8129,28 +8159,34 @@
       ]
     },
     {
-      "kind": "translation",
+      "kind": "contextual",
       "hebrew": [
         "o010060220031"
       ],
       "french": [
         [
           22,
-          1,
-          0,
-          5
+          7,
+          25,
+          32
         ],
         [
           22,
-          2,
-          6,
-          8
+          8,
+          33,
+          37
         ],
         [
           22,
-          3,
           9,
-          12
+          38,
+          40
+        ],
+        [
+          22,
+          10,
+          41,
+          44
         ]
       ]
     },
@@ -8259,7 +8295,7 @@
       ]
     },
     {
-      "kind": "contextual",
+      "kind": "translation",
       "hebrew": [
         "o010060220081"
       ],
@@ -8312,5 +8348,19 @@
         ]
       ]
     }
-  ]
+  ],
+  "editorial_review": {
+    "passes": 2,
+    "scope": "All 22 verses reviewed against the two pinned texts.",
+    "notes": [
+      "Gen 6:4: the Hebrew 'also afterward' is compressed in the French subordinate clause; retain the connective and demonstrative contextually.",
+      "Gen 6:5: disposition of thoughts is expressed by the French verbal construction, not a standalone lexical sense.",
+      "Gen 6:13: passive/source-causal construction about the earth filled with violence becomes an active French predicate; retain original identities.",
+      "Gen 6:14: definite article rendered by French demonstrative remains contextual.",
+      "Gen 6:16: uncertain technical vocabulary of the ark is linked to the actual LSG rendering, not promoted as an independently verified dictionary sense.",
+      "Gen 6:20: shifted enumerative conjunction attaches to the coordinated list, filling the missing French token without inventing a lexical equivalent.",
+      "Gen 6:22: the Hebrew comparison and resumptive 'thus' are distinguished in the reordered French sentence."
+    ],
+    "limitations": "Same editor performed both passes; no certified dictionary sense; no automated tests. Publication checks remain separate."
+  }
 }
