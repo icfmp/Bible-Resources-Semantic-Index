@@ -1,0 +1,9324 @@
+{
+  "schema_version": 1,
+  "status": "first editorial pass partial; second pass pending",
+  "scope": "Gen.8.1–22",
+  "attribution": "MACULA Hebrew Linguistic Datasets, available at https://github.com/Clear-Bible/macula-hebrew/ © 2022–2024 Biblica, Inc., CC BY 4.0. Identifier-only alignment. LSG source: Bible Resources / eBible.org, Louis Segond 1910.",
+  "sources": {
+    "macula": {
+      "commit": "47db250bd55d0d8577f2a94fba114ef16c35b23c",
+      "path": "WLC/lowfat/01-Gen-008-lowfat.xml",
+      "blob": "7e2e012e0aa153e7279fd4261c1089abeee7121c"
+    },
+    "lsg": {
+      "snapshot": "Pinned LSG 1.0.4 working corpus (OSIS 30,527,333 bytes)",
+      "chapter_prose_sha256": "98cb89d6bee1c9138c15be4f5b5ff89b8261fde2f43195a67f65340f84b57bb2",
+      "expected_current_blob": "b1ac2146fb7517e5e08a25f5ca321670f5dcefb5",
+      "expected_commit": "11a869427991297addc27ed42728fa213e55e720",
+      "expected_current_size": 30527333,
+      "verification": "Exact released OSIS Git blob verified during source preparation; offsets derived from pinned chapter projection."
+    }
+  },
+  "french_tuple": "[verse number, 1-based token ordinal, 0-based Unicode code-point start, exclusive end] in verse reading text without notes/markup, trimmed. Apostrophes and internal hyphens retained.",
+  "relation_kinds": {
+    "translation": "proposed translation correspondence; not a certified dictionary sense",
+    "contextual": "grammatical/discourse attachment only"
+  },
+  "statistics": {
+    "relations": 579,
+    "hebrew_units": 516,
+    "french_units": 523,
+    "lexical_content_units": 249,
+    "lexical_content_translation": 241,
+    "translation": {
+      "relations": 426,
+      "hebrew_units": 430,
+      "french_units": 432,
+      "single_original_relations": 423
+    },
+    "contextual": {
+      "relations": 153,
+      "hebrew_units": 156,
+      "french_units": 234,
+      "single_original_relations": 151
+    }
+  },
+  "relations": [
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080010011"
+      ],
+      "french": [
+        [
+          1,
+          1,
+          0,
+          4
+        ],
+        [
+          1,
+          2,
+          5,
+          7
+        ],
+        [
+          1,
+          3,
+          8,
+          15
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080010012"
+      ],
+      "french": [
+        [
+          1,
+          2,
+          5,
+          7
+        ],
+        [
+          1,
+          3,
+          8,
+          15
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080010021"
+      ],
+      "french": [
+        [
+          1,
+          1,
+          0,
+          4
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080010031"
+      ],
+      "french": [
+        [
+          1,
+          4,
+          16,
+          18
+        ],
+        [
+          1,
+          5,
+          19,
+          22
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080010041"
+      ],
+      "french": [
+        [
+          1,
+          5,
+          19,
+          22
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080010041"
+      ],
+      "french": [
+        [
+          1,
+          4,
+          16,
+          18
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080010051"
+      ],
+      "french": [
+        [
+          1,
+          6,
+          24,
+          26
+        ],
+        [
+          1,
+          7,
+          27,
+          31
+        ],
+        [
+          1,
+          8,
+          32,
+          35
+        ],
+        [
+          1,
+          9,
+          36,
+          43
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080010052"
+      ],
+      "french": [
+        [
+          1,
+          6,
+          24,
+          26
+        ],
+        [
+          1,
+          7,
+          27,
+          31
+        ],
+        [
+          1,
+          8,
+          32,
+          35
+        ],
+        [
+          1,
+          9,
+          36,
+          43
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080010061"
+      ],
+      "french": [
+        [
+          1,
+          7,
+          27,
+          31
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080010071"
+      ],
+      "french": [
+        [
+          1,
+          8,
+          32,
+          35
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080010072"
+      ],
+      "french": [
+        [
+          1,
+          9,
+          36,
+          43
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080010081"
+      ],
+      "french": [
+        [
+          1,
+          10,
+          44,
+          46
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080010082"
+      ],
+      "french": [
+        [
+          1,
+          11,
+          47,
+          49
+        ],
+        [
+          1,
+          12,
+          50,
+          54
+        ],
+        [
+          1,
+          13,
+          55,
+          57
+        ],
+        [
+          1,
+          14,
+          58,
+          64
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080010091"
+      ],
+      "french": [
+        [
+          1,
+          12,
+          50,
+          54
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080010101"
+      ],
+      "french": [
+        [
+          1,
+          13,
+          55,
+          57
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080010102"
+      ],
+      "french": [
+        [
+          1,
+          14,
+          58,
+          64
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080010102"
+      ],
+      "french": [
+        [
+          1,
+          11,
+          47,
+          49
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080010111"
+      ],
+      "french": [
+        [
+          1,
+          15,
+          65,
+          68
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080010111"
+      ],
+      "french": [
+        [
+          1,
+          16,
+          69,
+          76
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080010121"
+      ],
+      "french": [
+        [
+          1,
+          17,
+          77,
+          81
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080010122"
+      ],
+      "french": [
+        [
+          1,
+          18,
+          82,
+          85
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080010131"
+      ],
+      "french": [
+        [
+          1,
+          19,
+          86,
+          90
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080010131ה"
+      ],
+      "french": [
+        [
+          1,
+          20,
+          91,
+          98
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080010132"
+      ],
+      "french": [
+        [
+          1,
+          20,
+          91,
+          98
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080010141"
+      ],
+      "french": [
+        [
+          1,
+          21,
+          100,
+          102
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080010142"
+      ],
+      "french": [
+        [
+          1,
+          23,
+          108,
+          111
+        ],
+        [
+          1,
+          24,
+          112,
+          118
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080010151"
+      ],
+      "french": [
+        [
+          1,
+          22,
+          103,
+          107
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080010161"
+      ],
+      "french": [
+        [
+          1,
+          26,
+          122,
+          126
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080010161"
+      ],
+      "french": [
+        [
+          1,
+          25,
+          119,
+          121
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080010171"
+      ],
+      "french": [
+        [
+          1,
+          27,
+          127,
+          130
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080010181"
+      ],
+      "french": [
+        [
+          1,
+          28,
+          131,
+          133
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080010182"
+      ],
+      "french": [
+        [
+          1,
+          29,
+          134,
+          139
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080010191"
+      ],
+      "french": [
+        [
+          1,
+          30,
+          141,
+          143
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080010192"
+      ],
+      "french": [
+        [
+          1,
+          33,
+          153,
+          165
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080010201"
+      ],
+      "french": [
+        [
+          1,
+          31,
+          144,
+          147
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080010202"
+      ],
+      "french": [
+        [
+          1,
+          32,
+          148,
+          152
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080020011"
+      ],
+      "french": [
+        [
+          2,
+          1,
+          0,
+          3
+        ],
+        [
+          2,
+          2,
+          4,
+          11
+        ],
+        [
+          2,
+          3,
+          12,
+          14
+        ],
+        [
+          2,
+          4,
+          15,
+          22
+        ],
+        [
+          2,
+          5,
+          23,
+          25
+        ],
+        [
+          2,
+          6,
+          26,
+          29
+        ],
+        [
+          2,
+          7,
+          30,
+          37
+        ],
+        [
+          2,
+          8,
+          38,
+          41
+        ],
+        [
+          2,
+          9,
+          42,
+          47
+        ],
+        [
+          2,
+          10,
+          48,
+          54
+        ],
+        [
+          2,
+          11,
+          55,
+          62
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080020012"
+      ],
+      "french": [
+        [
+          2,
+          10,
+          48,
+          54
+        ],
+        [
+          2,
+          11,
+          55,
+          62
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080020021"
+      ],
+      "french": [
+        [
+          2,
+          2,
+          4,
+          11
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080020021"
+      ],
+      "french": [
+        [
+          2,
+          1,
+          0,
+          3
+        ],
+        [
+          2,
+          3,
+          12,
+          14
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080020031"
+      ],
+      "french": [
+        [
+          2,
+          4,
+          15,
+          22
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080020041"
+      ],
+      "french": [
+        [
+          2,
+          5,
+          23,
+          25
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080020042"
+      ],
+      "french": [
+        [
+          2,
+          7,
+          30,
+          37
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080020042"
+      ],
+      "french": [
+        [
+          2,
+          6,
+          26,
+          29
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080020051"
+      ],
+      "french": [
+        [
+          2,
+          8,
+          38,
+          41
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080020052"
+      ],
+      "french": [
+        [
+          2,
+          9,
+          42,
+          47
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080020061"
+      ],
+      "french": [
+        [
+          2,
+          12,
+          64,
+          66
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080020062"
+      ],
+      "french": [
+        [
+          2,
+          15,
+          76,
+          78
+        ],
+        [
+          2,
+          16,
+          79,
+          84
+        ],
+        [
+          2,
+          17,
+          85,
+          89
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080020071"
+      ],
+      "french": [
+        [
+          2,
+          13,
+          67,
+          69
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080020072"
+      ],
+      "french": [
+        [
+          2,
+          14,
+          70,
+          75
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080020081"
+      ],
+      "french": [
+        [
+          2,
+          18,
+          90,
+          92
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080020091"
+      ],
+      "french": [
+        [
+          2,
+          18,
+          90,
+          92
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080020092"
+      ],
+      "french": [
+        [
+          2,
+          19,
+          93,
+          97
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080030011"
+      ],
+      "french": [
+        [
+          3,
+          1,
+          0,
+          3
+        ],
+        [
+          3,
+          2,
+          4,
+          8
+        ],
+        [
+          3,
+          3,
+          9,
+          11
+        ],
+        [
+          3,
+          4,
+          12,
+          22
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080030012"
+      ],
+      "french": [
+        [
+          3,
+          3,
+          9,
+          11
+        ],
+        [
+          3,
+          4,
+          12,
+          22
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080030021"
+      ],
+      "french": [
+        [
+          3,
+          1,
+          0,
+          3
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080030022"
+      ],
+      "french": [
+        [
+          3,
+          2,
+          4,
+          8
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080030031"
+      ],
+      "french": [
+        [
+          3,
+          5,
+          23,
+          25
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080030032"
+      ],
+      "french": [
+        [
+          3,
+          6,
+          26,
+          32
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080030041"
+      ],
+      "french": [
+        [
+          3,
+          7,
+          33,
+          35
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080030042"
+      ],
+      "french": [
+        [
+          3,
+          8,
+          36,
+          41
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080030051"
+      ],
+      "french": [
+        [
+          3,
+          9,
+          43,
+          47
+        ],
+        [
+          3,
+          10,
+          48,
+          54
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080030061"
+      ],
+      "french": [
+        [
+          3,
+          11,
+          55,
+          57
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080030062"
+      ],
+      "french": [
+        [
+          3,
+          12,
+          58,
+          69
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080030071"
+      ],
+      "french": [
+        [
+          3,
+          13,
+          71,
+          73
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080030072"
+      ],
+      "french": [
+        [
+          3,
+          16,
+          83,
+          94
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080030081"
+      ],
+      "french": [
+        [
+          3,
+          14,
+          74,
+          77
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080030082"
+      ],
+      "french": [
+        [
+          3,
+          15,
+          78,
+          82
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080030091"
+      ],
+      "french": [
+        [
+          3,
+          17,
+          95,
+          97
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080030092"
+      ],
+      "french": [
+        [
+          3,
+          18,
+          98,
+          102
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080030092"
+      ],
+      "french": [
+        [
+          3,
+          19,
+          103,
+          105
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080030101"
+      ],
+      "french": [
+        [
+          3,
+          21,
+          111,
+          120
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080030111"
+      ],
+      "french": [
+        [
+          3,
+          20,
+          106,
+          110
+        ],
+        [
+          3,
+          21,
+          111,
+          120
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080030112"
+      ],
+      "french": [
+        [
+          3,
+          20,
+          106,
+          110
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080030121"
+      ],
+      "french": [
+        [
+          3,
+          22,
+          121,
+          126
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080040011"
+      ],
+      "french": [
+        [
+          4,
+          1,
+          0,
+          2
+        ],
+        [
+          4,
+          2,
+          3,
+          11
+        ],
+        [
+          4,
+          3,
+          12,
+          16
+        ],
+        [
+          4,
+          4,
+          18,
+          20
+        ],
+        [
+          4,
+          5,
+          21,
+          33
+        ],
+        [
+          4,
+          6,
+          34,
+          38
+        ],
+        [
+          4,
+          7,
+          39,
+          41
+        ],
+        [
+          4,
+          8,
+          42,
+          46
+        ],
+        [
+          4,
+          9,
+          48,
+          55
+        ],
+        [
+          4,
+          10,
+          56,
+          64
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080040012"
+      ],
+      "french": [
+        [
+          4,
+          10,
+          56,
+          64
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080040021"
+      ],
+      "french": [
+        [
+          4,
+          9,
+          48,
+          55
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080040022"
+      ],
+      "french": [
+        [
+          4,
+          9,
+          48,
+          55
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080040031"
+      ],
+      "french": [
+        [
+          4,
+          1,
+          0,
+          2
+        ],
+        [
+          4,
+          2,
+          3,
+          11
+        ],
+        [
+          4,
+          3,
+          12,
+          16
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080040031ה"
+      ],
+      "french": [
+        [
+          4,
+          1,
+          0,
+          2
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080040032"
+      ],
+      "french": [
+        [
+          4,
+          3,
+          12,
+          16
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080040041"
+      ],
+      "french": [
+        [
+          4,
+          2,
+          3,
+          11
+        ],
+        [
+          4,
+          3,
+          12,
+          16
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080040042"
+      ],
+      "french": [
+        [
+          4,
+          2,
+          3,
+          11
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080040051"
+      ],
+      "french": [
+        [
+          4,
+          4,
+          18,
+          20
+        ],
+        [
+          4,
+          5,
+          21,
+          33
+        ],
+        [
+          4,
+          6,
+          34,
+          38
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080040052",
+        "o010080040061"
+      ],
+      "french": [
+        [
+          4,
+          5,
+          21,
+          33
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080040071"
+      ],
+      "french": [
+        [
+          4,
+          6,
+          34,
+          38
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080040081"
+      ],
+      "french": [
+        [
+          4,
+          7,
+          39,
+          41
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080040081ה"
+      ],
+      "french": [
+        [
+          4,
+          7,
+          39,
+          41
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080040082"
+      ],
+      "french": [
+        [
+          4,
+          8,
+          42,
+          46
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080040091"
+      ],
+      "french": [
+        [
+          4,
+          11,
+          65,
+          68
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080040101"
+      ],
+      "french": [
+        [
+          4,
+          13,
+          73,
+          82
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080040101"
+      ],
+      "french": [
+        [
+          4,
+          12,
+          69,
+          72
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080040111"
+      ],
+      "french": [
+        [
+          4,
+          14,
+          83,
+          91
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080050011"
+      ],
+      "french": [
+        [
+          5,
+          1,
+          0,
+          3
+        ],
+        [
+          5,
+          2,
+          4,
+          8
+        ],
+        [
+          5,
+          3,
+          9,
+          17
+        ],
+        [
+          5,
+          4,
+          18,
+          20
+        ],
+        [
+          5,
+          5,
+          21,
+          30
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080050012"
+      ],
+      "french": [
+        [
+          5,
+          1,
+          0,
+          3
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080050013"
+      ],
+      "french": [
+        [
+          5,
+          2,
+          4,
+          8
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080050021"
+      ],
+      "french": [
+        [
+          5,
+          3,
+          9,
+          17
+        ],
+        [
+          5,
+          4,
+          18,
+          20
+        ],
+        [
+          5,
+          5,
+          21,
+          30
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080050031"
+      ],
+      "french": [
+        [
+          5,
+          3,
+          9,
+          17
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080050041"
+      ],
+      "french": [
+        [
+          5,
+          4,
+          18,
+          20
+        ],
+        [
+          5,
+          5,
+          21,
+          30
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080050042"
+      ],
+      "french": [
+        [
+          5,
+          5,
+          21,
+          30
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080050051"
+      ],
+      "french": [
+        [
+          5,
+          6,
+          31,
+          39
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080050061"
+      ],
+      "french": [
+        [
+          5,
+          6,
+          31,
+          39
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080050062"
+      ],
+      "french": [
+        [
+          5,
+          8,
+          48,
+          52
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080050071"
+      ],
+      "french": [
+        [
+          5,
+          7,
+          40,
+          47
+        ],
+        [
+          5,
+          8,
+          48,
+          52
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080050072"
+      ],
+      "french": [
+        [
+          5,
+          7,
+          40,
+          47
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080050081"
+      ],
+      "french": [
+        [
+          5,
+          9,
+          54,
+          56
+        ],
+        [
+          5,
+          10,
+          57,
+          64
+        ],
+        [
+          5,
+          11,
+          65,
+          69
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080050081ה"
+      ],
+      "french": [
+        [
+          5,
+          9,
+          54,
+          56
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080050082"
+      ],
+      "french": [
+        [
+          5,
+          10,
+          57,
+          64
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080050082"
+      ],
+      "french": [
+        [
+          5,
+          11,
+          65,
+          69
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080050091"
+      ],
+      "french": [
+        [
+          5,
+          12,
+          71,
+          73
+        ],
+        [
+          5,
+          13,
+          74,
+          81
+        ],
+        [
+          5,
+          14,
+          82,
+          86
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080050092"
+      ],
+      "french": [
+        [
+          5,
+          13,
+          74,
+          81
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080050092"
+      ],
+      "french": [
+        [
+          5,
+          12,
+          71,
+          73
+        ],
+        [
+          5,
+          14,
+          82,
+          86
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080050101"
+      ],
+      "french": [
+        [
+          5,
+          15,
+          87,
+          89
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080050101ה"
+      ],
+      "french": [
+        [
+          5,
+          15,
+          87,
+          89
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080050102"
+      ],
+      "french": [
+        [
+          5,
+          16,
+          90,
+          94
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080050111"
+      ],
+      "french": [
+        [
+          5,
+          17,
+          96,
+          106
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080050121"
+      ],
+      "french": [
+        [
+          5,
+          19,
+          111,
+          118
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080050121"
+      ],
+      "french": [
+        [
+          5,
+          18,
+          107,
+          110
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080050131"
+      ],
+      "french": [
+        [
+          5,
+          20,
+          119,
+          122
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080050132"
+      ],
+      "french": [
+        [
+          5,
+          21,
+          123,
+          132
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080060011"
+      ],
+      "french": [
+        [
+          6,
+          1,
+          0,
+          2
+        ],
+        [
+          6,
+          2,
+          3,
+          7
+        ],
+        [
+          6,
+          3,
+          8,
+          10
+        ],
+        [
+          6,
+          4,
+          11,
+          19
+        ],
+        [
+          6,
+          5,
+          20,
+          25
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080060012"
+      ],
+      "french": [
+        [
+          6,
+          1,
+          0,
+          2
+        ],
+        [
+          6,
+          2,
+          3,
+          7
+        ],
+        [
+          6,
+          3,
+          8,
+          10
+        ],
+        [
+          6,
+          4,
+          11,
+          19
+        ],
+        [
+          6,
+          5,
+          20,
+          25
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080060021"
+      ],
+      "french": [
+        [
+          6,
+          1,
+          0,
+          2
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080060022"
+      ],
+      "french": [
+        [
+          6,
+          2,
+          3,
+          7
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080060022"
+      ],
+      "french": [
+        [
+          6,
+          3,
+          8,
+          10
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080060031"
+      ],
+      "french": [
+        [
+          6,
+          4,
+          11,
+          19
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080060041"
+      ],
+      "french": [
+        [
+          6,
+          5,
+          20,
+          25
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080060051"
+      ],
+      "french": [
+        [
+          6,
+          6,
+          27,
+          30
+        ],
+        [
+          6,
+          7,
+          31,
+          37
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080060052"
+      ],
+      "french": [
+        [
+          6,
+          7,
+          31,
+          37
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080060061"
+      ],
+      "french": [
+        [
+          6,
+          6,
+          27,
+          30
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080060071"
+      ],
+      "french": [
+        [
+          6,
+          8,
+          38,
+          40
+        ],
+        [
+          6,
+          9,
+          41,
+          48
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080060081"
+      ],
+      "french": [
+        [
+          6,
+          9,
+          41,
+          48
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080060081"
+      ],
+      "french": [
+        [
+          6,
+          8,
+          38,
+          40
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080060091"
+      ],
+      "french": [
+        [
+          6,
+          14,
+          69,
+          76
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080060092"
+      ],
+      "french": [
+        [
+          6,
+          14,
+          69,
+          76
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080060092"
+      ],
+      "french": [
+        [
+          6,
+          13,
+          67,
+          68
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080060101"
+      ],
+      "french": [
+        [
+          6,
+          10,
+          49,
+          54
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080060111"
+      ],
+      "french": [
+        [
+          6,
+          12,
+          61,
+          66
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080060111"
+      ],
+      "french": [
+        [
+          6,
+          11,
+          55,
+          60
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080070011"
+      ],
+      "french": [
+        [
+          7,
+          1,
+          0,
+          2
+        ],
+        [
+          7,
+          2,
+          3,
+          8
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080070012"
+      ],
+      "french": [
+        [
+          7,
+          2,
+          3,
+          8
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080070012"
+      ],
+      "french": [
+        [
+          7,
+          1,
+          0,
+          2
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080070021"
+      ],
+      "french": [
+        [
+          7,
+          3,
+          9,
+          11
+        ],
+        [
+          7,
+          4,
+          12,
+          19
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080070031"
+      ],
+      "french": [
+        [
+          7,
+          3,
+          9,
+          11
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080070032"
+      ],
+      "french": [
+        [
+          7,
+          4,
+          12,
+          19
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080070041"
+      ],
+      "french": [
+        [
+          7,
+          5,
+          21,
+          24
+        ],
+        [
+          7,
+          6,
+          25,
+          31
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080070042"
+      ],
+      "french": [
+        [
+          7,
+          6,
+          25,
+          31
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080070042"
+      ],
+      "french": [
+        [
+          7,
+          5,
+          21,
+          24
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080070051"
+      ],
+      "french": [
+        [
+          7,
+          7,
+          33,
+          40
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080070061"
+      ],
+      "french": [
+        [
+          7,
+          8,
+          41,
+          43
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080070062"
+      ],
+      "french": [
+        [
+          7,
+          9,
+          44,
+          52
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080070071"
+      ],
+      "french": [
+        [
+          7,
+          10,
+          54,
+          61
+        ],
+        [
+          7,
+          11,
+          62,
+          64
+        ],
+        [
+          7,
+          12,
+          65,
+          68
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080070081"
+      ],
+      "french": [
+        [
+          7,
+          16,
+          86,
+          91
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080070081"
+      ],
+      "french": [
+        [
+          7,
+          15,
+          78,
+          85
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080070091"
+      ],
+      "french": [
+        [
+          7,
+          13,
+          69,
+          72
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080070092"
+      ],
+      "french": [
+        [
+          7,
+          14,
+          73,
+          77
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080070101"
+      ],
+      "french": [
+        [
+          7,
+          17,
+          92,
+          95
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080070102"
+      ],
+      "french": [
+        [
+          7,
+          17,
+          92,
+          95
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080070111"
+      ],
+      "french": [
+        [
+          7,
+          18,
+          96,
+          98
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080070112"
+      ],
+      "french": [
+        [
+          7,
+          19,
+          99,
+          104
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080080011"
+      ],
+      "french": [
+        [
+          8,
+          1,
+          0,
+          2
+        ],
+        [
+          8,
+          2,
+          3,
+          8
+        ],
+        [
+          8,
+          3,
+          9,
+          14
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080080012"
+      ],
+      "french": [
+        [
+          8,
+          2,
+          3,
+          8
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080080012"
+      ],
+      "french": [
+        [
+          8,
+          1,
+          0,
+          2
+        ],
+        [
+          8,
+          3,
+          9,
+          14
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080080021"
+      ],
+      "french": [
+        [
+          8,
+          4,
+          15,
+          17
+        ],
+        [
+          8,
+          5,
+          18,
+          25
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080080031"
+      ],
+      "french": [
+        [
+          8,
+          4,
+          15,
+          17
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080080032"
+      ],
+      "french": [
+        [
+          8,
+          5,
+          18,
+          25
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080080041",
+        "o010080080042",
+        "o010080080043"
+      ],
+      "french": [
+        [
+          8,
+          1,
+          0,
+          2
+        ],
+        [
+          8,
+          2,
+          3,
+          8
+        ],
+        [
+          8,
+          3,
+          9,
+          14
+        ],
+        [
+          8,
+          4,
+          15,
+          17
+        ],
+        [
+          8,
+          5,
+          18,
+          25
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080080051"
+      ],
+      "french": [
+        [
+          8,
+          6,
+          27,
+          31
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080080052"
+      ],
+      "french": [
+        [
+          8,
+          7,
+          32,
+          36
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080080061"
+      ],
+      "french": [
+        [
+          8,
+          8,
+          37,
+          39
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080080062"
+      ],
+      "french": [
+        [
+          8,
+          12,
+          57,
+          64
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080080062"
+      ],
+      "french": [
+        [
+          8,
+          11,
+          49,
+          56
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080080071"
+      ],
+      "french": [
+        [
+          8,
+          9,
+          40,
+          43
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080080072"
+      ],
+      "french": [
+        [
+          8,
+          10,
+          44,
+          48
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080080081",
+        "o010080080082"
+      ],
+      "french": [
+        [
+          8,
+          13,
+          65,
+          66
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080080091"
+      ],
+      "french": [
+        [
+          8,
+          15,
+          70,
+          77
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080080091"
+      ],
+      "french": [
+        [
+          8,
+          14,
+          67,
+          69
+        ],
+        [
+          8,
+          16,
+          78,
+          80
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080080101"
+      ],
+      "french": [
+        [
+          8,
+          17,
+          81,
+          83
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080080102"
+      ],
+      "french": [
+        [
+          8,
+          18,
+          84,
+          89
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080090011"
+      ],
+      "french": [
+        [
+          9,
+          1,
+          0,
+          4
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080090012"
+      ],
+      "french": [
+        [
+          9,
+          4,
+          16,
+          18
+        ],
+        [
+          9,
+          6,
+          26,
+          31
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080090021"
+      ],
+      "french": [
+        [
+          9,
+          5,
+          19,
+          25
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080090031"
+      ],
+      "french": [
+        [
+          9,
+          2,
+          5,
+          7
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080090032"
+      ],
+      "french": [
+        [
+          9,
+          3,
+          8,
+          15
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080090041"
+      ],
+      "french": [
+        [
+          9,
+          7,
+          32,
+          36
+        ],
+        [
+          9,
+          8,
+          37,
+          41
+        ],
+        [
+          9,
+          9,
+          42,
+          47
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080090041"
+      ],
+      "french": [
+        [
+          9,
+          6,
+          26,
+          31
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080090051"
+      ],
+      "french": [
+        [
+          9,
+          8,
+          37,
+          41
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080090052"
+      ],
+      "french": [
+        [
+          9,
+          11,
+          51,
+          57
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080090052"
+      ],
+      "french": [
+        [
+          9,
+          10,
+          48,
+          50
+        ],
+        [
+          9,
+          12,
+          58,
+          60
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080090061"
+      ],
+      "french": [
+        [
+          9,
+          14,
+          65,
+          69
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080090062"
+      ],
+      "french": [
+        [
+          9,
+          13,
+          61,
+          64
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080090071"
+      ],
+      "french": [
+        [
+          9,
+          15,
+          71,
+          73
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080090072"
+      ],
+      "french": [
+        [
+          9,
+          17,
+          79,
+          85
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080090072"
+      ],
+      "french": [
+        [
+          9,
+          16,
+          74,
+          78
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080090081"
+      ],
+      "french": [
+        [
+          9,
+          18,
+          86,
+          87
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080090082"
+      ],
+      "french": [
+        [
+          9,
+          19,
+          88,
+          91
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080090091"
+      ],
+      "french": [
+        [
+          9,
+          20,
+          92,
+          96
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080090101"
+      ],
+      "french": [
+        [
+          9,
+          21,
+          97,
+          104
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080090102"
+      ],
+      "french": [
+        [
+          9,
+          21,
+          97,
+          104
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080090111"
+      ],
+      "french": [
+        [
+          9,
+          22,
+          106,
+          109
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080090121"
+      ],
+      "french": [
+        [
+          9,
+          27,
+          125,
+          129
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080090121"
+      ],
+      "french": [
+        [
+          9,
+          23,
+          110,
+          112
+        ],
+        [
+          9,
+          24,
+          113,
+          114
+        ],
+        [
+          9,
+          25,
+          115,
+          120
+        ],
+        [
+          9,
+          26,
+          121,
+          124
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080090131"
+      ],
+      "french": [
+        [
+          9,
+          28,
+          130,
+          131
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080090141"
+      ],
+      "french": [
+        [
+          9,
+          30,
+          135,
+          142
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080090141"
+      ],
+      "french": [
+        [
+          9,
+          29,
+          132,
+          134
+        ],
+        [
+          9,
+          31,
+          143,
+          145
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080090151"
+      ],
+      "french": [
+        [
+          9,
+          32,
+          146,
+          151
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080090161"
+      ],
+      "french": [
+        [
+          9,
+          33,
+          152,
+          154
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080090162"
+      ],
+      "french": [
+        [
+          9,
+          34,
+          155,
+          160
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080090171"
+      ],
+      "french": [
+        [
+          9,
+          35,
+          162,
+          164
+        ],
+        [
+          9,
+          36,
+          165,
+          171
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080090172"
+      ],
+      "french": [
+        [
+          9,
+          36,
+          165,
+          171
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080090172"
+      ],
+      "french": [
+        [
+          9,
+          35,
+          162,
+          164
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080090181"
+      ],
+      "french": [
+        [
+          9,
+          38,
+          175,
+          179
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080090181"
+      ],
+      "french": [
+        [
+          9,
+          37,
+          172,
+          174
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080090182"
+      ],
+      "french": [
+        [
+          9,
+          37,
+          172,
+          174
+        ],
+        [
+          9,
+          38,
+          175,
+          179
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080090191"
+      ],
+      "french": [
+        [
+          9,
+          39,
+          181,
+          183
+        ],
+        [
+          9,
+          40,
+          184,
+          188
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080090192"
+      ],
+      "french": [
+        [
+          9,
+          40,
+          184,
+          188
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080090193"
+      ],
+      "french": [
+        [
+          9,
+          39,
+          181,
+          183
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080090201"
+      ],
+      "french": [
+        [
+          9,
+          41,
+          190,
+          192
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080090202"
+      ],
+      "french": [
+        [
+          9,
+          43,
+          196,
+          199
+        ],
+        [
+          9,
+          44,
+          200,
+          207
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080090211"
+      ],
+      "french": [
+        [
+          9,
+          42,
+          193,
+          195
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080090212"
+      ],
+      "french": [
+        [
+          9,
+          42,
+          193,
+          195
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080090221"
+      ],
+      "french": [
+        [
+          9,
+          45,
+          208,
+          214
+        ],
+        [
+          9,
+          46,
+          215,
+          217
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080090222"
+      ],
+      "french": [
+        [
+          9,
+          47,
+          218,
+          221
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080090231"
+      ],
+      "french": [
+        [
+          9,
+          48,
+          222,
+          226
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080090241"
+      ],
+      "french": [
+        [
+          9,
+          49,
+          227,
+          234
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080090242"
+      ],
+      "french": [
+        [
+          9,
+          49,
+          227,
+          234
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080100011"
+      ],
+      "french": [
+        [
+          10,
+          1,
+          0,
+          2
+        ],
+        [
+          10,
+          2,
+          3,
+          11
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080100012"
+      ],
+      "french": [
+        [
+          10,
+          2,
+          3,
+          11
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080100012"
+      ],
+      "french": [
+        [
+          10,
+          1,
+          0,
+          2
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080100021"
+      ],
+      "french": [
+        [
+          10,
+          3,
+          12,
+          18
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080100031"
+      ],
+      "french": [
+        [
+          10,
+          4,
+          19,
+          23
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080100041"
+      ],
+      "french": [
+        [
+          10,
+          6,
+          31,
+          36
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080100051"
+      ],
+      "french": [
+        [
+          10,
+          5,
+          24,
+          30
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080100061"
+      ],
+      "french": [
+        [
+          10,
+          7,
+          38,
+          40
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080100062"
+      ],
+      "french": [
+        [
+          10,
+          10,
+          50,
+          52
+        ],
+        [
+          10,
+          11,
+          53,
+          60
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080100071"
+      ],
+      "french": [
+        [
+          10,
+          9,
+          44,
+          49
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080100071"
+      ],
+      "french": [
+        [
+          10,
+          8,
+          41,
+          43
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080100081"
+      ],
+      "french": [
+        [
+          10,
+          12,
+          61,
+          63
+        ],
+        [
+          10,
+          13,
+          64,
+          71
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080100091"
+      ],
+      "french": [
+        [
+          10,
+          12,
+          61,
+          63
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080100092"
+      ],
+      "french": [
+        [
+          10,
+          13,
+          64,
+          71
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080100101"
+      ],
+      "french": [
+        [
+          10,
+          14,
+          72,
+          76
+        ],
+        [
+          10,
+          15,
+          77,
+          79
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080100111"
+      ],
+      "french": [
+        [
+          10,
+          16,
+          80,
+          87
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080100112"
+      ],
+      "french": [
+        [
+          10,
+          16,
+          80,
+          87
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080110011"
+      ],
+      "french": [
+        [
+          11,
+          1,
+          0,
+          2
+        ],
+        [
+          11,
+          2,
+          3,
+          10
+        ],
+        [
+          11,
+          3,
+          11,
+          17
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080110012"
+      ],
+      "french": [
+        [
+          11,
+          3,
+          11,
+          17
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080110021"
+      ],
+      "french": [
+        [
+          11,
+          4,
+          18,
+          19
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080110022"
+      ],
+      "french": [
+        [
+          11,
+          5,
+          20,
+          23
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080110031"
+      ],
+      "french": [
+        [
+          11,
+          1,
+          0,
+          2
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080110032"
+      ],
+      "french": [
+        [
+          11,
+          2,
+          3,
+          10
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080110041"
+      ],
+      "french": [
+        [
+          11,
+          6,
+          24,
+          27
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080110042"
+      ],
+      "french": [
+        [
+          11,
+          6,
+          24,
+          27
+        ],
+        [
+          11,
+          7,
+          28,
+          30
+        ],
+        [
+          11,
+          8,
+          31,
+          35
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080110051"
+      ],
+      "french": [
+        [
+          11,
+          8,
+          31,
+          35
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080110051"
+      ],
+      "french": [
+        [
+          11,
+          7,
+          28,
+          30
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080110061"
+      ],
+      "french": [
+        [
+          11,
+          9,
+          37,
+          39
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080110062"
+      ],
+      "french": [
+        [
+          11,
+          10,
+          40,
+          45
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080110071"
+      ],
+      "french": [
+        [
+          11,
+          12,
+          51,
+          58
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080110071"
+      ],
+      "french": [
+        [
+          11,
+          11,
+          47,
+          50
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080110081"
+      ],
+      "french": [
+        [
+          11,
+          13,
+          59,
+          68
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080110091"
+      ],
+      "french": [
+        [
+          11,
+          14,
+          69,
+          77
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080110101"
+      ],
+      "french": [
+        [
+          11,
+          16,
+          84,
+          88
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080110102"
+      ],
+      "french": [
+        [
+          11,
+          18,
+          93,
+          96
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080110102"
+      ],
+      "french": [
+        [
+          11,
+          15,
+          78,
+          83
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080110103"
+      ],
+      "french": [
+        [
+          11,
+          17,
+          89,
+          92
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080110111"
+      ],
+      "french": [
+        [
+          11,
+          19,
+          98,
+          101
+        ],
+        [
+          11,
+          20,
+          102,
+          108
+        ],
+        [
+          11,
+          21,
+          109,
+          114
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080110112"
+      ],
+      "french": [
+        [
+          11,
+          20,
+          102,
+          108
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080110112"
+      ],
+      "french": [
+        [
+          11,
+          21,
+          109,
+          114
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080110121"
+      ],
+      "french": [
+        [
+          11,
+          19,
+          98,
+          101
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080110131"
+      ],
+      "french": [
+        [
+          11,
+          22,
+          115,
+          118
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080110141"
+      ],
+      "french": [
+        [
+          11,
+          26,
+          136,
+          143
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080110141"
+      ],
+      "french": [
+        [
+          11,
+          25,
+          128,
+          135
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080110151"
+      ],
+      "french": [
+        [
+          11,
+          23,
+          119,
+          122
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080110152"
+      ],
+      "french": [
+        [
+          11,
+          24,
+          123,
+          127
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080110161"
+      ],
+      "french": [
+        [
+          11,
+          27,
+          144,
+          147
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080110162"
+      ],
+      "french": [
+        [
+          11,
+          27,
+          144,
+          147
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080110171"
+      ],
+      "french": [
+        [
+          11,
+          28,
+          148,
+          150
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080110172"
+      ],
+      "french": [
+        [
+          11,
+          29,
+          151,
+          156
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080120011"
+      ],
+      "french": [
+        [
+          12,
+          1,
+          0,
+          2
+        ],
+        [
+          12,
+          2,
+          3,
+          11
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080120012"
+      ],
+      "french": [
+        [
+          12,
+          2,
+          3,
+          11
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080120012"
+      ],
+      "french": [
+        [
+          12,
+          1,
+          0,
+          2
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080120021"
+      ],
+      "french": [
+        [
+          12,
+          3,
+          12,
+          18
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080120031"
+      ],
+      "french": [
+        [
+          12,
+          4,
+          19,
+          23
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080120041"
+      ],
+      "french": [
+        [
+          12,
+          6,
+          31,
+          36
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080120051"
+      ],
+      "french": [
+        [
+          12,
+          5,
+          24,
+          30
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080120061"
+      ],
+      "french": [
+        [
+          12,
+          7,
+          38,
+          40
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080120062"
+      ],
+      "french": [
+        [
+          12,
+          9,
+          44,
+          49
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080120062"
+      ],
+      "french": [
+        [
+          12,
+          8,
+          41,
+          43
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080120071"
+      ],
+      "french": [
+        [
+          12,
+          10,
+          50,
+          52
+        ],
+        [
+          12,
+          11,
+          53,
+          60
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080120081"
+      ],
+      "french": [
+        [
+          12,
+          10,
+          50,
+          52
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080120082"
+      ],
+      "french": [
+        [
+          12,
+          11,
+          53,
+          60
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080120091"
+      ],
+      "french": [
+        [
+          12,
+          12,
+          62,
+          66
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080120092"
+      ],
+      "french": [
+        [
+          12,
+          14,
+          72,
+          74
+        ],
+        [
+          12,
+          16,
+          82,
+          86
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080120101"
+      ],
+      "french": [
+        [
+          12,
+          15,
+          75,
+          81
+        ],
+        [
+          12,
+          16,
+          82,
+          86
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080120111"
+      ],
+      "french": [
+        [
+          12,
+          15,
+          75,
+          81
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080120111"
+      ],
+      "french": [
+        [
+          12,
+          13,
+          67,
+          71
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080120121"
+      ],
+      "french": [
+        [
+          12,
+          17,
+          87,
+          88
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080120122"
+      ],
+      "french": [
+        [
+          12,
+          18,
+          89,
+          92
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080120131"
+      ],
+      "french": [
+        [
+          12,
+          16,
+          82,
+          86
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080130011"
+      ],
+      "french": [
+        [
+          13,
+          1,
+          0,
+          4
+        ],
+        [
+          13,
+          2,
+          5,
+          8
+        ],
+        [
+          13,
+          3,
+          9,
+          13
+        ],
+        [
+          13,
+          4,
+          14,
+          16
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080130012"
+      ],
+      "french": [
+        [
+          13,
+          1,
+          0,
+          4
+        ],
+        [
+          13,
+          2,
+          5,
+          8
+        ],
+        [
+          13,
+          3,
+          9,
+          13
+        ],
+        [
+          13,
+          4,
+          14,
+          16
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080130021"
+      ],
+      "french": [
+        [
+          13,
+          1,
+          0,
+          4
+        ],
+        [
+          13,
+          2,
+          5,
+          8
+        ],
+        [
+          13,
+          3,
+          9,
+          13
+        ],
+        [
+          13,
+          4,
+          14,
+          16
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080130022"
+      ],
+      "french": [
+        [
+          13,
+          4,
+          14,
+          16
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080130031"
+      ],
+      "french": [
+        [
+          13,
+          2,
+          5,
+          8
+        ],
+        [
+          13,
+          3,
+          9,
+          13
+        ],
+        [
+          13,
+          4,
+          14,
+          16
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080130032"
+      ],
+      "french": [
+        [
+          13,
+          2,
+          5,
+          8
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080130041"
+      ],
+      "french": [
+        [
+          13,
+          3,
+          9,
+          13
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080130051"
+      ],
+      "french": [
+        [
+          13,
+          1,
+          0,
+          4
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080130061"
+      ],
+      "french": [
+        [
+          13,
+          5,
+          18,
+          20
+        ],
+        [
+          13,
+          6,
+          21,
+          28
+        ],
+        [
+          13,
+          7,
+          29,
+          33
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080130061ה"
+      ],
+      "french": [
+        [
+          13,
+          5,
+          18,
+          20
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080130062"
+      ],
+      "french": [
+        [
+          13,
+          6,
+          21,
+          28
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080130062"
+      ],
+      "french": [
+        [
+          13,
+          7,
+          29,
+          33
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080130071"
+      ],
+      "french": [
+        [
+          13,
+          8,
+          35,
+          37
+        ],
+        [
+          13,
+          9,
+          38,
+          45
+        ],
+        [
+          13,
+          10,
+          46,
+          50
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080130072"
+      ],
+      "french": [
+        [
+          13,
+          9,
+          38,
+          45
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080130072"
+      ],
+      "french": [
+        [
+          13,
+          8,
+          35,
+          37
+        ],
+        [
+          13,
+          10,
+          46,
+          50
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080130081"
+      ],
+      "french": [
+        [
+          13,
+          11,
+          51,
+          53
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080130081ה"
+      ],
+      "french": [
+        [
+          13,
+          11,
+          51,
+          53
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080130082"
+      ],
+      "french": [
+        [
+          13,
+          12,
+          54,
+          58
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080130091"
+      ],
+      "french": [
+        [
+          13,
+          16,
+          77,
+          82
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080130091"
+      ],
+      "french": [
+        [
+          13,
+          15,
+          69,
+          76
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080130101"
+      ],
+      "french": [
+        [
+          13,
+          13,
+          60,
+          63
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080130102"
+      ],
+      "french": [
+        [
+          13,
+          14,
+          64,
+          68
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080130111"
+      ],
+      "french": [
+        [
+          13,
+          17,
+          83,
+          86
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080130112"
+      ],
+      "french": [
+        [
+          13,
+          17,
+          83,
+          86
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080130121"
+      ],
+      "french": [
+        [
+          13,
+          18,
+          87,
+          89
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080130122"
+      ],
+      "french": [
+        [
+          13,
+          19,
+          90,
+          95
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080130131"
+      ],
+      "french": [
+        [
+          13,
+          20,
+          97,
+          100
+        ],
+        [
+          13,
+          21,
+          101,
+          104
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080130132"
+      ],
+      "french": [
+        [
+          13,
+          21,
+          101,
+          104
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080130141"
+      ],
+      "french": [
+        [
+          13,
+          20,
+          97,
+          100
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080130151"
+      ],
+      "french": [
+        [
+          13,
+          22,
+          105,
+          107
+        ],
+        [
+          13,
+          23,
+          108,
+          118
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080130161"
+      ],
+      "french": [
+        [
+          13,
+          23,
+          108,
+          118
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080130161"
+      ],
+      "french": [
+        [
+          13,
+          22,
+          105,
+          107
+        ],
+        [
+          13,
+          24,
+          119,
+          121
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080130171"
+      ],
+      "french": [
+        [
+          13,
+          25,
+          122,
+          129
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080130172"
+      ],
+      "french": [
+        [
+          13,
+          25,
+          122,
+          129
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080130181"
+      ],
+      "french": [
+        [
+          13,
+          26,
+          131,
+          133
+        ],
+        [
+          13,
+          27,
+          134,
+          141
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080130182"
+      ],
+      "french": [
+        [
+          13,
+          27,
+          134,
+          141
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080130182"
+      ],
+      "french": [
+        [
+          13,
+          26,
+          131,
+          133
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080130191"
+      ],
+      "french": [
+        [
+          13,
+          28,
+          143,
+          145
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080130192"
+      ],
+      "french": [
+        [
+          13,
+          29,
+          146,
+          151
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080130201"
+      ],
+      "french": [
+        [
+          13,
+          36,
+          182,
+          187
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080130201"
+      ],
+      "french": [
+        [
+          13,
+          35,
+          176,
+          181
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080130211"
+      ],
+      "french": [
+        [
+          13,
+          31,
+          156,
+          163
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080130211"
+      ],
+      "french": [
+        [
+          13,
+          30,
+          153,
+          155
+        ],
+        [
+          13,
+          32,
+          164,
+          166
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080130221"
+      ],
+      "french": [
+        [
+          13,
+          33,
+          167,
+          169
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080130222"
+      ],
+      "french": [
+        [
+          13,
+          34,
+          170,
+          175
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080140011"
+      ],
+      "french": [
+        [
+          14,
+          1,
+          0,
+          2
+        ],
+        [
+          14,
+          2,
+          3,
+          9
+        ],
+        [
+          14,
+          3,
+          10,
+          14
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080140012"
+      ],
+      "french": [
+        [
+          14,
+          1,
+          0,
+          2
+        ],
+        [
+          14,
+          2,
+          3,
+          9
+        ],
+        [
+          14,
+          3,
+          10,
+          14
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080140012ה"
+      ],
+      "french": [
+        [
+          14,
+          1,
+          0,
+          2
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080140013"
+      ],
+      "french": [
+        [
+          14,
+          3,
+          10,
+          14
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080140021"
+      ],
+      "french": [
+        [
+          14,
+          2,
+          3,
+          9
+        ],
+        [
+          14,
+          3,
+          10,
+          14
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080140022"
+      ],
+      "french": [
+        [
+          14,
+          2,
+          3,
+          9
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080140031"
+      ],
+      "french": [
+        [
+          14,
+          4,
+          16,
+          18
+        ],
+        [
+          14,
+          5,
+          19,
+          33
+        ],
+        [
+          14,
+          6,
+          34,
+          38
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080140032",
+        "o010080140041",
+        "o010080140042"
+      ],
+      "french": [
+        [
+          14,
+          5,
+          19,
+          33
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080140051"
+      ],
+      "french": [
+        [
+          14,
+          6,
+          34,
+          38
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080140051"
+      ],
+      "french": [
+        [
+          14,
+          4,
+          16,
+          18
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080140061"
+      ],
+      "french": [
+        [
+          14,
+          7,
+          39,
+          41
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080140061ה"
+      ],
+      "french": [
+        [
+          14,
+          7,
+          39,
+          41
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080140062"
+      ],
+      "french": [
+        [
+          14,
+          8,
+          42,
+          46
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080140071"
+      ],
+      "french": [
+        [
+          14,
+          11,
+          57,
+          60
+        ],
+        [
+          14,
+          12,
+          61,
+          66
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080140081"
+      ],
+      "french": [
+        [
+          14,
+          9,
+          48,
+          50
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080140082"
+      ],
+      "french": [
+        [
+          14,
+          10,
+          51,
+          56
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080150011"
+      ],
+      "french": [
+        [
+          15,
+          1,
+          0,
+          5
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080150012"
+      ],
+      "french": [
+        [
+          15,
+          3,
+          11,
+          16
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080150021"
+      ],
+      "french": [
+        [
+          15,
+          2,
+          6,
+          10
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080150031"
+      ],
+      "french": [
+        [
+          15,
+          4,
+          17,
+          18
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080150041"
+      ],
+      "french": [
+        [
+          15,
+          5,
+          19,
+          22
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080150051"
+      ],
+      "french": [
+        [
+          15,
+          6,
+          24,
+          26
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080150052"
+      ],
+      "french": [
+        [
+          15,
+          7,
+          27,
+          33
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080160011"
+      ],
+      "french": [
+        [
+          16,
+          1,
+          0,
+          4
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080160021"
+      ],
+      "french": [
+        [
+          16,
+          2,
+          5,
+          7
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080160031"
+      ],
+      "french": [
+        [
+          16,
+          3,
+          8,
+          15
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080160032"
+      ],
+      "french": [
+        [
+          16,
+          3,
+          8,
+          15
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080160041"
+      ],
+      "french": [
+        [
+          16,
+          4,
+          17,
+          20
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080160051"
+      ],
+      "french": [
+        [
+          16,
+          5,
+          21,
+          23
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080160052"
+      ],
+      "french": [
+        [
+          16,
+          7,
+          27,
+          32
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080160053"
+      ],
+      "french": [
+        [
+          16,
+          6,
+          24,
+          26
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080160061"
+      ],
+      "french": [
+        [
+          16,
+          8,
+          34,
+          37
+        ],
+        [
+          16,
+          9,
+          38,
+          42
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080160062"
+      ],
+      "french": [
+        [
+          16,
+          9,
+          38,
+          42
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080160063"
+      ],
+      "french": [
+        [
+          16,
+          8,
+          34,
+          37
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080160071"
+      ],
+      "french": [
+        [
+          16,
+          10,
+          43,
+          45
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080160072"
+      ],
+      "french": [
+        [
+          16,
+          12,
+          50,
+          56
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080160072"
+      ],
+      "french": [
+        [
+          16,
+          11,
+          46,
+          49
+        ],
+        [
+          16,
+          13,
+          57,
+          59
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080160081"
+      ],
+      "french": [
+        [
+          16,
+          15,
+          64,
+          68
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080160082"
+      ],
+      "french": [
+        [
+          16,
+          14,
+          60,
+          63
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080160091"
+      ],
+      "french": [
+        [
+          16,
+          16,
+          69,
+          73
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080160092"
+      ],
+      "french": [
+        [
+          16,
+          17,
+          74,
+          77
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080170011"
+      ],
+      "french": [
+        [
+          17,
+          5,
+          21,
+          25
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080170021"
+      ],
+      "french": [
+        [
+          17,
+          6,
+          26,
+          29
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080170022"
+      ],
+      "french": [
+        [
+          17,
+          7,
+          30,
+          37
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080170031"
+      ],
+      "french": [
+        [
+          17,
+          11,
+          53,
+          56
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080170031"
+      ],
+      "french": [
+        [
+          17,
+          12,
+          57,
+          61
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080170041"
+      ],
+      "french": [
+        [
+          17,
+          13,
+          62,
+          66
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080170042"
+      ],
+      "french": [
+        [
+          17,
+          14,
+          67,
+          70
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080170051"
+      ],
+      "french": [
+        [
+          17,
+          8,
+          38,
+          40
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080170052"
+      ],
+      "french": [
+        [
+          17,
+          9,
+          41,
+          46
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080170061"
+      ],
+      "french": [
+        [
+          17,
+          10,
+          47,
+          52
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080170071"
+      ],
+      "french": [
+        [
+          17,
+          15,
+          72,
+          76
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080170071ה"
+      ],
+      "french": [
+        [
+          17,
+          16,
+          77,
+          80
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080170072"
+      ],
+      "french": [
+        [
+          17,
+          17,
+          81,
+          88
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080170081"
+      ],
+      "french": [
+        [
+          17,
+          18,
+          89,
+          92
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080170082"
+      ],
+      "french": [
+        [
+          17,
+          18,
+          89,
+          92
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080170082ה"
+      ],
+      "french": [
+        [
+          17,
+          19,
+          93,
+          95
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080170083"
+      ],
+      "french": [
+        [
+          17,
+          20,
+          96,
+          102
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080170091"
+      ],
+      "french": [
+        [
+          17,
+          21,
+          103,
+          105
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080170092"
+      ],
+      "french": [
+        [
+          17,
+          22,
+          106,
+          110
+        ],
+        [
+          17,
+          23,
+          111,
+          114
+        ],
+        [
+          17,
+          24,
+          115,
+          123
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080170093"
+      ],
+      "french": [
+        [
+          17,
+          22,
+          106,
+          110
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080170101"
+      ],
+      "french": [
+        [
+          17,
+          23,
+          111,
+          114
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080170102"
+      ],
+      "french": [
+        [
+          17,
+          24,
+          115,
+          123
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080170111"
+      ],
+      "french": [
+        [
+          17,
+          25,
+          124,
+          127
+        ],
+        [
+          17,
+          26,
+          128,
+          135
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080170112"
+      ],
+      "french": [
+        [
+          17,
+          26,
+          128,
+          135
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080170112"
+      ],
+      "french": [
+        [
+          17,
+          25,
+          124,
+          127
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080170121"
+      ],
+      "french": [
+        [
+          17,
+          27,
+          136,
+          139
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080170131"
+      ],
+      "french": [
+        [
+          17,
+          28,
+          140,
+          142
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080170132"
+      ],
+      "french": [
+        [
+          17,
+          29,
+          143,
+          148
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080170151"
+      ],
+      "french": [
+        [
+          17,
+          1,
+          0,
+          4
+        ],
+        [
+          17,
+          2,
+          5,
+          11
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080170161"
+      ],
+      "french": [
+        [
+          17,
+          3,
+          12,
+          16
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080170162"
+      ],
+      "french": [
+        [
+          17,
+          4,
+          17,
+          20
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080170171"
+      ],
+      "french": [
+        [
+          17,
+          30,
+          150,
+          156
+        ],
+        [
+          17,
+          31,
+          157,
+          159
+        ],
+        [
+          17,
+          32,
+          160,
+          169
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080170172"
+      ],
+      "french": [
+        [
+          17,
+          31,
+          157,
+          159
+        ],
+        [
+          17,
+          32,
+          160,
+          169
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080170172"
+      ],
+      "french": [
+        [
+          17,
+          30,
+          150,
+          156
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080170181"
+      ],
+      "french": [
+        [
+          17,
+          33,
+          170,
+          173
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080170181ה"
+      ],
+      "french": [
+        [
+          17,
+          34,
+          174,
+          176
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080170182"
+      ],
+      "french": [
+        [
+          17,
+          35,
+          177,
+          182
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080170191"
+      ],
+      "french": [
+        [
+          17,
+          36,
+          184,
+          190
+        ],
+        [
+          17,
+          37,
+          191,
+          197
+        ],
+        [
+          17,
+          38,
+          198,
+          205
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080170192"
+      ],
+      "french": [
+        [
+          17,
+          37,
+          191,
+          197
+        ],
+        [
+          17,
+          38,
+          198,
+          205
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080170192"
+      ],
+      "french": [
+        [
+          17,
+          36,
+          184,
+          190
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080170201"
+      ],
+      "french": [
+        [
+          17,
+          39,
+          206,
+          208
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080170202"
+      ],
+      "french": [
+        [
+          17,
+          40,
+          209,
+          220
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080170211"
+      ],
+      "french": [
+        [
+          17,
+          41,
+          221,
+          224
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080170221"
+      ],
+      "french": [
+        [
+          17,
+          42,
+          225,
+          227
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080170222"
+      ],
+      "french": [
+        [
+          17,
+          43,
+          228,
+          233
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080180011"
+      ],
+      "french": [
+        [
+          18,
+          1,
+          0,
+          2
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080180012"
+      ],
+      "french": [
+        [
+          18,
+          3,
+          7,
+          13
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080180021"
+      ],
+      "french": [
+        [
+          18,
+          2,
+          3,
+          6
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080180031"
+      ],
+      "french": [
+        [
+          18,
+          4,
+          15,
+          19
+        ],
+        [
+          18,
+          5,
+          20,
+          23
+        ],
+        [
+          18,
+          6,
+          24,
+          28
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080180032"
+      ],
+      "french": [
+        [
+          18,
+          6,
+          24,
+          28
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080180033"
+      ],
+      "french": [
+        [
+          18,
+          5,
+          20,
+          23
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080180041"
+      ],
+      "french": [
+        [
+          18,
+          7,
+          30,
+          32
+        ],
+        [
+          18,
+          8,
+          33,
+          38
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080180042"
+      ],
+      "french": [
+        [
+          18,
+          8,
+          33,
+          38
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080180043"
+      ],
+      "french": [
+        [
+          18,
+          7,
+          30,
+          32
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080180051"
+      ],
+      "french": [
+        [
+          18,
+          9,
+          40,
+          42
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080180052"
+      ],
+      "french": [
+        [
+          18,
+          11,
+          47,
+          53
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080180052"
+      ],
+      "french": [
+        [
+          18,
+          10,
+          43,
+          46
+        ],
+        [
+          18,
+          12,
+          54,
+          56
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080180061"
+      ],
+      "french": [
+        [
+          18,
+          14,
+          61,
+          65
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080180062"
+      ],
+      "french": [
+        [
+          18,
+          13,
+          57,
+          60
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080180071"
+      ],
+      "french": [
+        [
+          18,
+          4,
+          15,
+          19
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080180072"
+      ],
+      "french": [
+        [
+          18,
+          4,
+          15,
+          19
+        ],
+        [
+          18,
+          5,
+          20,
+          23
+        ],
+        [
+          18,
+          6,
+          24,
+          28
+        ],
+        [
+          18,
+          7,
+          30,
+          32
+        ],
+        [
+          18,
+          8,
+          33,
+          38
+        ],
+        [
+          18,
+          9,
+          40,
+          42
+        ],
+        [
+          18,
+          10,
+          43,
+          46
+        ],
+        [
+          18,
+          11,
+          47,
+          53
+        ],
+        [
+          18,
+          12,
+          54,
+          56
+        ],
+        [
+          18,
+          13,
+          57,
+          60
+        ],
+        [
+          18,
+          14,
+          61,
+          65
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080190011"
+      ],
+      "french": [
+        [
+          19,
+          1,
+          0,
+          4
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080190021"
+      ],
+      "french": [
+        [
+          19,
+          2,
+          5,
+          8
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080190022"
+      ],
+      "french": [
+        [
+          19,
+          3,
+          9,
+          16
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080190031"
+      ],
+      "french": [
+        [
+          19,
+          4,
+          18,
+          22
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080190041"
+      ],
+      "french": [
+        [
+          19,
+          5,
+          23,
+          26
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080190042"
+      ],
+      "french": [
+        [
+          19,
+          6,
+          27,
+          35
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080190051"
+      ],
+      "french": [
+        [
+          19,
+          7,
+          37,
+          41
+        ],
+        [
+          19,
+          8,
+          42,
+          45
+        ],
+        [
+          19,
+          9,
+          46,
+          53
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080190052"
+      ],
+      "french": [
+        [
+          19,
+          7,
+          37,
+          41
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080190061"
+      ],
+      "french": [
+        [
+          19,
+          8,
+          42,
+          45
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080190062"
+      ],
+      "french": [
+        [
+          19,
+          9,
+          46,
+          53
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080190071"
+      ],
+      "french": [
+        [
+          19,
+          10,
+          55,
+          59
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080190081"
+      ],
+      "french": [
+        [
+          19,
+          13,
+          67,
+          69
+        ],
+        [
+          19,
+          14,
+          70,
+          74
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080190081"
+      ],
+      "french": [
+        [
+          19,
+          11,
+          60,
+          62
+        ],
+        [
+          19,
+          12,
+          63,
+          66
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080190091"
+      ],
+      "french": [
+        [
+          19,
+          15,
+          75,
+          78
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080190101"
+      ],
+      "french": [
+        [
+          19,
+          16,
+          79,
+          81
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080190102"
+      ],
+      "french": [
+        [
+          19,
+          17,
+          82,
+          87
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080190111"
+      ],
+      "french": [
+        [
+          19,
+          18,
+          89,
+          94
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080190112"
+      ],
+      "french": [
+        [
+          19,
+          20,
+          101,
+          108
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080190113"
+      ],
+      "french": [
+        [
+          19,
+          19,
+          95,
+          100
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080190121"
+      ],
+      "french": [
+        [
+          19,
+          21,
+          110,
+          119
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080190131"
+      ],
+      "french": [
+        [
+          19,
+          22,
+          120,
+          122
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080190141"
+      ],
+      "french": [
+        [
+          19,
+          23,
+          123,
+          130
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080190142"
+      ],
+      "french": [
+        [
+          19,
+          23,
+          123,
+          130
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080200011"
+      ],
+      "french": [
+        [
+          20,
+          1,
+          0,
+          3
+        ],
+        [
+          20,
+          2,
+          4,
+          9
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080200012"
+      ],
+      "french": [
+        [
+          20,
+          2,
+          4,
+          9
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080200021"
+      ],
+      "french": [
+        [
+          20,
+          1,
+          0,
+          3
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080200031"
+      ],
+      "french": [
+        [
+          20,
+          4,
+          13,
+          18
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080200031"
+      ],
+      "french": [
+        [
+          20,
+          3,
+          10,
+          12
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080200041"
+      ],
+      "french": [
+        [
+          20,
+          5,
+          19,
+          20
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080200042"
+      ],
+      "french": [
+        [
+          20,
+          6,
+          21,
+          30
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080200051"
+      ],
+      "french": [
+        [
+          20,
+          7,
+          32,
+          34
+        ],
+        [
+          20,
+          8,
+          35,
+          39
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080200052"
+      ],
+      "french": [
+        [
+          20,
+          8,
+          35,
+          39
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080200052"
+      ],
+      "french": [
+        [
+          20,
+          7,
+          32,
+          34
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080200061"
+      ],
+      "french": [
+        [
+          20,
+          9,
+          40,
+          42
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080200062"
+      ],
+      "french": [
+        [
+          20,
+          10,
+          43,
+          49
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080200071"
+      ],
+      "french": [
+        [
+          20,
+          11,
+          50,
+          53
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080200072"
+      ],
+      "french": [
+        [
+          20,
+          12,
+          54,
+          59
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080200081"
+      ],
+      "french": [
+        [
+          20,
+          13,
+          60,
+          65
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080200082"
+      ],
+      "french": [
+        [
+          20,
+          13,
+          60,
+          65
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080200091"
+      ],
+      "french": [
+        [
+          20,
+          14,
+          66,
+          68
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080200092"
+      ],
+      "french": [
+        [
+          20,
+          15,
+          69,
+          71
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080200093"
+      ],
+      "french": [
+        [
+          20,
+          16,
+          72,
+          76
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080200101"
+      ],
+      "french": [
+        [
+          20,
+          17,
+          77,
+          80
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080200102"
+      ],
+      "french": [
+        [
+          20,
+          18,
+          81,
+          88
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080200111"
+      ],
+      "french": [
+        [
+          20,
+          19,
+          89,
+          93
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080200112"
+      ],
+      "french": [
+        [
+          20,
+          19,
+          89,
+          93
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080200121"
+      ],
+      "french": [
+        [
+          20,
+          20,
+          95,
+          97
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080200122"
+      ],
+      "french": [
+        [
+          20,
+          22,
+          101,
+          107
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080200122"
+      ],
+      "french": [
+        [
+          20,
+          21,
+          98,
+          100
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080200131"
+      ],
+      "french": [
+        [
+          20,
+          24,
+          112,
+          123
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080200131"
+      ],
+      "french": [
+        [
+          20,
+          23,
+          108,
+          111
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080200141"
+      ],
+      "french": [
+        [
+          20,
+          25,
+          124,
+          127
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080200141ה"
+      ],
+      "french": [
+        [
+          20,
+          26,
+          128,
+          135
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080200142"
+      ],
+      "french": [
+        [
+          20,
+          26,
+          128,
+          135
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080210011"
+      ],
+      "french": [
+        [
+          21,
+          1,
+          0,
+          9
+        ],
+        [
+          21,
+          2,
+          10,
+          16
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080210012"
+      ],
+      "french": [
+        [
+          21,
+          2,
+          10,
+          16
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080210021"
+      ],
+      "french": [
+        [
+          21,
+          1,
+          0,
+          9
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080210031"
+      ],
+      "french": [
+        [
+          21,
+          3,
+          17,
+          20
+        ],
+        [
+          21,
+          4,
+          21,
+          26
+        ],
+        [
+          21,
+          5,
+          27,
+          35
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080210041"
+      ],
+      "french": [
+        [
+          21,
+          4,
+          21,
+          26
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080210051"
+      ],
+      "french": [
+        [
+          21,
+          3,
+          17,
+          20
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080210052"
+      ],
+      "french": [
+        [
+          21,
+          5,
+          27,
+          35
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080210061"
+      ],
+      "french": [
+        [
+          21,
+          6,
+          37,
+          39
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080210062"
+      ],
+      "french": [
+        [
+          21,
+          8,
+          50,
+          53
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080210071"
+      ],
+      "french": [
+        [
+          21,
+          7,
+          40,
+          49
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080210081"
+      ],
+      "french": [
+        [
+          21,
+          9,
+          54,
+          56
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080210091"
+      ],
+      "french": [
+        [
+          21,
+          11,
+          61,
+          65
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080210092"
+      ],
+      "french": [
+        [
+          21,
+          10,
+          57,
+          60
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080210101"
+      ],
+      "french": [
+        [
+          21,
+          13,
+          70,
+          72
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080210101"
+      ],
+      "french": [
+        [
+          21,
+          12,
+          67,
+          69
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080210111"
+      ],
+      "french": [
+        [
+          21,
+          15,
+          82,
+          86
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080210121"
+      ],
+      "french": [
+        [
+          21,
+          14,
+          73,
+          81
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080210122"
+      ],
+      "french": [
+        [
+          21,
+          14,
+          73,
+          81
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080210131"
+      ],
+      "french": [
+        [
+          21,
+          15,
+          82,
+          86
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080210141"
+      ],
+      "french": [
+        [
+          21,
+          16,
+          87,
+          89
+        ],
+        [
+          21,
+          17,
+          90,
+          95
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080210151"
+      ],
+      "french": [
+        [
+          21,
+          16,
+          87,
+          89
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080210152"
+      ],
+      "french": [
+        [
+          21,
+          17,
+          90,
+          95
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080210161"
+      ],
+      "french": [
+        [
+          21,
+          18,
+          97,
+          98
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080210162"
+      ],
+      "french": [
+        [
+          21,
+          19,
+          99,
+          104
+        ],
+        [
+          21,
+          20,
+          105,
+          107
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080210171"
+      ],
+      "french": [
+        [
+          21,
+          21,
+          108,
+          115
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080210172"
+      ],
+      "french": [
+        [
+          21,
+          21,
+          108,
+          115
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080210181"
+      ],
+      "french": [
+        [
+          21,
+          22,
+          117,
+          122
+        ],
+        [
+          21,
+          23,
+          123,
+          126
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080210191"
+      ],
+      "french": [
+        [
+          21,
+          25,
+          131,
+          138
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080210191"
+      ],
+      "french": [
+        [
+          21,
+          24,
+          127,
+          130
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080210201"
+      ],
+      "french": [
+        [
+          21,
+          27,
+          142,
+          146
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080210211"
+      ],
+      "french": [
+        [
+          21,
+          28,
+          147,
+          149
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080210212"
+      ],
+      "french": [
+        [
+          21,
+          29,
+          150,
+          157
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080210221"
+      ],
+      "french": [
+        [
+          21,
+          31,
+          163,
+          172
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080210221"
+      ],
+      "french": [
+        [
+          21,
+          30,
+          158,
+          162
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080210231"
+      ],
+      "french": [
+        [
+          21,
+          32,
+          173,
+          176
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080210232"
+      ],
+      "french": [
+        [
+          21,
+          34,
+          180,
+          188
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080210233"
+      ],
+      "french": [
+        [
+          21,
+          33,
+          177,
+          179
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080210241"
+      ],
+      "french": [
+        [
+          21,
+          35,
+          190,
+          192
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080210242"
+      ],
+      "french": [
+        [
+          21,
+          37,
+          196,
+          198
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080210251"
+      ],
+      "french": [
+        [
+          21,
+          39,
+          209,
+          213
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080210261"
+      ],
+      "french": [
+        [
+          21,
+          39,
+          209,
+          213
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080210271"
+      ],
+      "french": [
+        [
+          21,
+          38,
+          199,
+          208
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080210272"
+      ],
+      "french": [
+        [
+          21,
+          38,
+          199,
+          208
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080210272"
+      ],
+      "french": [
+        [
+          21,
+          36,
+          193,
+          195
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080210281"
+      ],
+      "french": [
+        [
+          21,
+          40,
+          214,
+          218
+        ],
+        [
+          21,
+          41,
+          219,
+          221
+        ],
+        [
+          21,
+          42,
+          222,
+          225
+        ],
+        [
+          21,
+          43,
+          226,
+          229
+        ],
+        [
+          21,
+          44,
+          230,
+          236
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080210291"
+      ],
+      "french": [
+        [
+          21,
+          40,
+          214,
+          218
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080210301"
+      ],
+      "french": [
+        [
+          21,
+          44,
+          230,
+          236
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080210301"
+      ],
+      "french": [
+        [
+          21,
+          41,
+          219,
+          221
+        ],
+        [
+          21,
+          42,
+          222,
+          225
+        ],
+        [
+          21,
+          43,
+          226,
+          229
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080210311"
+      ],
+      "french": [
+        [
+          21,
+          45,
+          238,
+          243
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080210312"
+      ],
+      "french": [
+        [
+          21,
+          45,
+          238,
+          243
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080210321"
+      ],
+      "french": [
+        [
+          21,
+          48,
+          252,
+          256
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080210321"
+      ],
+      "french": [
+        [
+          21,
+          46,
+          244,
+          246
+        ],
+        [
+          21,
+          47,
+          247,
+          251
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080220011"
+      ],
+      "french": [
+        [
+          22,
+          1,
+          0,
+          4
+        ],
+        [
+          22,
+          2,
+          5,
+          8
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080220021",
+        "o010080220031"
+      ],
+      "french": [
+        [
+          22,
+          1,
+          0,
+          4
+        ],
+        [
+          22,
+          2,
+          5,
+          8
+        ],
+        [
+          22,
+          3,
+          9,
+          11
+        ],
+        [
+          22,
+          4,
+          12,
+          17
+        ],
+        [
+          22,
+          5,
+          18,
+          28
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080220041"
+      ],
+      "french": [
+        [
+          22,
+          3,
+          9,
+          11
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080220042"
+      ],
+      "french": [
+        [
+          22,
+          4,
+          12,
+          17
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080220042"
+      ],
+      "french": [
+        [
+          22,
+          5,
+          18,
+          28
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080220051"
+      ],
+      "french": [
+        [
+          22,
+          7,
+          34,
+          43
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080220051"
+      ],
+      "french": [
+        [
+          22,
+          6,
+          30,
+          33
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080220061"
+      ],
+      "french": [
+        [
+          22,
+          8,
+          44,
+          46
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080220062"
+      ],
+      "french": [
+        [
+          22,
+          10,
+          50,
+          57
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080220062"
+      ],
+      "french": [
+        [
+          22,
+          9,
+          47,
+          49
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080220071"
+      ],
+      "french": [
+        [
+          22,
+          11,
+          59,
+          61
+        ],
+        [
+          22,
+          12,
+          62,
+          67
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080220072"
+      ],
+      "french": [
+        [
+          22,
+          12,
+          62,
+          67
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080220072"
+      ],
+      "french": [
+        [
+          22,
+          11,
+          59,
+          61
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080220081"
+      ],
+      "french": [
+        [
+          22,
+          13,
+          68,
+          70
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080220082"
+      ],
+      "french": [
+        [
+          22,
+          15,
+          74,
+          81
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080220082"
+      ],
+      "french": [
+        [
+          22,
+          14,
+          71,
+          73
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080220091"
+      ],
+      "french": [
+        [
+          22,
+          16,
+          83,
+          88
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080220092"
+      ],
+      "french": [
+        [
+          22,
+          16,
+          83,
+          88
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080220101"
+      ],
+      "french": [
+        [
+          22,
+          17,
+          89,
+          91
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080220102"
+      ],
+      "french": [
+        [
+          22,
+          18,
+          92,
+          99
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080220111"
+      ],
+      "french": [
+        [
+          22,
+          19,
+          101,
+          103
+        ],
+        [
+          22,
+          20,
+          104,
+          108
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080220112"
+      ],
+      "french": [
+        [
+          22,
+          20,
+          104,
+          108
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080220112"
+      ],
+      "french": [
+        [
+          22,
+          19,
+          101,
+          103
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080220121"
+      ],
+      "french": [
+        [
+          22,
+          21,
+          109,
+          111
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080220122"
+      ],
+      "french": [
+        [
+          22,
+          23,
+          115,
+          119
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080220122"
+      ],
+      "french": [
+        [
+          22,
+          22,
+          112,
+          114
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080220131"
+      ],
+      "french": [
+        [
+          22,
+          24,
+          120,
+          122
+        ],
+        [
+          22,
+          26,
+          133,
+          138
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010080220141"
+      ],
+      "french": [
+        [
+          22,
+          25,
+          123,
+          132
+        ]
+      ]
+    }
+  ]
+}
