@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "first editorial pass complete; second pass pending",
+  "status": "two editorial passes complete against pinned LSG 1.0.4 and MACULA working corpus; publication verification pending",
   "scope": "Gen.16.1–16",
   "attribution": "MACULA Hebrew Linguistic Datasets, available at https://github.com/Clear-Bible/macula-hebrew/ © 2022–2024 Biblica, Inc., CC BY 4.0. Identifier-only alignment. LSG source: Bible Resources / eBible.org, Louis Segond 1910.",
   "sources": {
@@ -24,22 +24,22 @@
     "contextual": "grammatical/discourse attachment only"
   },
   "statistics": {
-    "relations": 367,
+    "relations": 374,
     "hebrew_units": 335,
     "french_units": 361,
     "lexical_content_units": 170,
-    "lexical_content_translation": 165,
+    "lexical_content_translation": 169,
     "translation": {
-      "relations": 261,
-      "hebrew_units": 275,
-      "french_units": 281,
-      "single_original_relations": 250
+      "relations": 262,
+      "hebrew_units": 284,
+      "french_units": 287,
+      "single_original_relations": 244
     },
     "contextual": {
-      "relations": 106,
-      "hebrew_units": 113,
+      "relations": 112,
+      "hebrew_units": 115,
       "french_units": 167,
-      "single_original_relations": 101
+      "single_original_relations": 107
     }
   },
   "relations": [
@@ -437,7 +437,7 @@
       ]
     },
     {
-      "kind": "translation",
+      "kind": "contextual",
       "hebrew": [
         "o010160020071"
       ],
@@ -1534,7 +1534,7 @@
       ]
     },
     {
-      "kind": "translation",
+      "kind": "contextual",
       "hebrew": [
         "o010160040082"
       ],
@@ -2002,7 +2002,7 @@
       ]
     },
     {
-      "kind": "translation",
+      "kind": "contextual",
       "hebrew": [
         "o010160050142"
       ],
@@ -2012,6 +2012,12 @@
           30,
           153,
           161
+        ],
+        [
+          5,
+          31,
+          162,
+          166
         ],
         [
           5,
@@ -4476,7 +4482,7 @@
       ]
     },
     {
-      "kind": "translation",
+      "kind": "contextual",
       "hebrew": [
         "o010160120031"
       ],
@@ -5103,7 +5109,7 @@
       ]
     },
     {
-      "kind": "translation",
+      "kind": "contextual",
       "hebrew": [
         "o010160130112"
       ],
@@ -5819,7 +5825,7 @@
       ]
     },
     {
-      "kind": "translation",
+      "kind": "contextual",
       "hebrew": [
         "o010160160021"
       ],
@@ -5829,6 +5835,12 @@
           3,
           12,
           15
+        ],
+        [
+          16,
+          4,
+          16,
+          18
         ]
       ]
     },
@@ -5993,6 +6005,228 @@
           74
         ]
       ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010160020071",
+        "o010160020091",
+        "o010160020092"
+      ],
+      "french": [
+        [
+          2,
+          9,
+          43,
+          49
+        ],
+        [
+          2,
+          10,
+          50,
+          57
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010160040082",
+        "o010160040101",
+        "o010160040102",
+        "o010160040103"
+      ],
+      "french": [
+        [
+          4,
+          15,
+          77,
+          84
+        ],
+        [
+          4,
+          18,
+          98,
+          102
+        ],
+        [
+          4,
+          19,
+          103,
+          109
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010160050142",
+        "o010160050151",
+        "o010160050152",
+        "o010160050153"
+      ],
+      "french": [
+        [
+          5,
+          30,
+          153,
+          161
+        ],
+        [
+          5,
+          31,
+          162,
+          166
+        ],
+        [
+          5,
+          32,
+          167,
+          173
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010160100092",
+        "o010160100101"
+      ],
+      "french": [
+        [
+          10,
+          16,
+          91,
+          93
+        ],
+        [
+          10,
+          17,
+          94,
+          100
+        ],
+        [
+          10,
+          19,
+          104,
+          111
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010160120031",
+        "o010160120041"
+      ],
+      "french": [
+        [
+          12,
+          3,
+          8,
+          13
+        ],
+        [
+          12,
+          4,
+          14,
+          16
+        ],
+        [
+          12,
+          5,
+          17,
+          20
+        ],
+        [
+          12,
+          6,
+          21,
+          28
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010160130112",
+        "o010160130131"
+      ],
+      "french": [
+        [
+          13,
+          15,
+          79,
+          84
+        ],
+        [
+          13,
+          16,
+          85,
+          89
+        ],
+        [
+          13,
+          17,
+          90,
+          92
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010160160021",
+        "o010160160031",
+        "o010160160041",
+        "o010160160051",
+        "o010160160052",
+        "o010160160061"
+      ],
+      "french": [
+        [
+          16,
+          2,
+          6,
+          11
+        ],
+        [
+          16,
+          3,
+          12,
+          15
+        ],
+        [
+          16,
+          4,
+          16,
+          18
+        ],
+        [
+          16,
+          5,
+          19,
+          35
+        ],
+        [
+          16,
+          6,
+          36,
+          39
+        ]
+      ]
     }
-  ]
+  ],
+  "editorial_review": {
+    "passes": 2,
+    "scope": "All 16 verses reread in both pinned texts.",
+    "notes": [
+      "Gen 16:2: restraint from bearing is rendered as sterility; retain both governing source verbs in the idiom.",
+      "Gen 16:4–5: being light in the eyes of another becomes regarding with contempt; keep the grammatical group rather than a false individual sense.",
+      "Gen 16:10: emphatic verb repetition and inability to count retain their separate source occurrences.",
+      "Gen 16:12–14: wild-ass-of-a-man expression and difficult seeing/name formulas align to the LSG reading without harmonizing other translations.",
+      "Gen 16:16: nominal age construction and repeated year units preserved."
+    ],
+    "limitations": "Both passes performed by the same editor; no independent dictionary-sense verification; publication checks deferred."
+  }
 }
