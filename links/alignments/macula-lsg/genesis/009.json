@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "first editorial pass complete; second pass pending",
+  "status": "two editorial passes complete against pinned LSG 1.0.4 and MACULA working corpus; publication verification pending",
   "scope": "Gen.9.1–29",
   "attribution": "MACULA Hebrew Linguistic Datasets, available at https://github.com/Clear-Bible/macula-hebrew/ © 2022–2024 Biblica, Inc., CC BY 4.0. Identifier-only alignment. LSG source: Bible Resources / eBible.org, Louis Segond 1910.",
   "sources": {
@@ -24,22 +24,22 @@
     "contextual": "grammatical/discourse attachment only"
   },
   "statistics": {
-    "relations": 637,
+    "relations": 638,
     "hebrew_units": 553,
     "french_units": 596,
     "lexical_content_units": 271,
-    "lexical_content_translation": 268,
+    "lexical_content_translation": 267,
     "translation": {
-      "relations": 471,
-      "hebrew_units": 474,
-      "french_units": 487,
-      "single_original_relations": 468
+      "relations": 465,
+      "hebrew_units": 468,
+      "french_units": 479,
+      "single_original_relations": 461
     },
     "contextual": {
-      "relations": 166,
-      "hebrew_units": 166,
-      "french_units": 248,
-      "single_original_relations": 166
+      "relations": 173,
+      "hebrew_units": 172,
+      "french_units": 255,
+      "single_original_relations": 173
     }
   },
   "relations": [
@@ -422,7 +422,7 @@
       ]
     },
     {
-      "kind": "translation",
+      "kind": "contextual",
       "hebrew": [
         "o010090020013"
       ],
@@ -1498,11 +1498,17 @@
       ]
     },
     {
-      "kind": "translation",
+      "kind": "contextual",
       "hebrew": [
         "o010090050012"
       ],
       "french": [
+        [
+          5,
+          1,
+          0,
+          9
+        ],
         [
           5,
           2,
@@ -3141,7 +3147,7 @@
       ]
     },
     {
-      "kind": "translation",
+      "kind": "contextual",
       "hebrew": [
         "o010090100071"
       ],
@@ -3151,6 +3157,12 @@
           10,
           48,
           52
+        ],
+        [
+          10,
+          13,
+          65,
+          68
         ]
       ]
     },
@@ -3183,11 +3195,17 @@
       ]
     },
     {
-      "kind": "translation",
+      "kind": "contextual",
       "hebrew": [
         "o010090100081"
       ],
       "french": [
+        [
+          10,
+          10,
+          48,
+          52
+        ],
         [
           10,
           13,
@@ -6977,7 +6995,7 @@
       ]
     },
     {
-      "kind": "translation",
+      "kind": "contextual",
       "hebrew": [
         "o010090190052"
       ],
@@ -6999,6 +7017,12 @@
           12,
           48,
           57
+        ],
+        [
+          19,
+          13,
+          58,
+          61
         ]
       ]
     },
@@ -7155,7 +7179,7 @@
       ]
     },
     {
-      "kind": "translation",
+      "kind": "contextual",
       "hebrew": [
         "o010090200031"
       ],
@@ -7165,6 +7189,18 @@
           4,
           15,
           23
+        ],
+        [
+          20,
+          5,
+          24,
+          26
+        ],
+        [
+          20,
+          6,
+          27,
+          32
         ]
       ]
     },
@@ -8419,7 +8455,7 @@
       ]
     },
     {
-      "kind": "translation",
+      "kind": "contextual",
       "hebrew": [
         "o010090240011"
       ],
@@ -9905,6 +9941,47 @@
           64
         ]
       ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010090200031",
+        "o010090200041",
+        "o010090200042"
+      ],
+      "french": [
+        [
+          20,
+          4,
+          15,
+          23
+        ],
+        [
+          20,
+          5,
+          24,
+          26
+        ],
+        [
+          20,
+          6,
+          27,
+          32
+        ]
+      ]
     }
-  ]
+  ],
+  "editorial_review": {
+    "passes": 2,
+    "scope": "All 29 verses reviewed against the two pinned texts.",
+    "notes": [
+      "Gen 9:2: Hebrew possessive fear of you becomes the French subject; do not equate the pronoun with a new lexical sense.",
+      "Gen 9:5: the added exhortation 'Sachez-le' is contextual; repeated idiom 'from the hand of' is represented by the French preposition.",
+      "Gen 9:10–17: repeated alliance partners and prepositions are compressed and the enumeration rearranged; preserve each original ID.",
+      "Gen 9:19: the source expression from these is expanded in the French as their posterity; preserve the contextual link without assigning a lexical sense of posterity to the preposition.",
+      "Gen 9:20: the idiom man of the soil is rendered as cultivate the soil; preserve the group, not an individual lexical sense of cultivate for man.",
+      "Gen 9:24–29: temporal conjunction, optative idiom, pronominal and compound-number expressions retain the source occurrences."
+    ],
+    "limitations": "Same editor performed both passes; no certified dictionary sense; no automated tests. Publication checks remain separate."
+  }
 }
