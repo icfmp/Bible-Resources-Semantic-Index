@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "working draft; not approved; latest LSG blob still to be verified",
+  "status": "editorial alignment and second-pass review complete against supplied OSIS snapshot; publication verification pending",
   "scope": "Gen.1.1–31",
   "attribution": "MACULA Hebrew Linguistic Datasets, available at https://github.com/Clear-Bible/macula-hebrew/ © 2022–2024 Biblica, Inc., CC BY 4.0. New alignment decisions; no original Hebrew text, lexical annotations, dictionary prose or UBS sense assignments included. LSG source provenance: Bible Resources / eBible.org, Louis Segond 1910, public domain claim.",
   "sources": {
@@ -14,7 +14,8 @@
       "chapter_prose_sha256": "b52ac28f36a74f66adca7a3e245a66f180390dc0891eb85e47d73dc2e2f585f9",
       "expected_current_blob": "b1ac2146fb7517e5e08a25f5ca321670f5dcefb5",
       "expected_current_size": 30527333,
-      "verification": "Snapshot re-extracted; exact current blob not retrieved. Release 1.0.4 notes report no numbered prose changes; direct equality still required."
+      "verification": "Snapshot re-extracted; exact current blob not retrieved. Release 1.0.4 notes report no numbered prose changes; direct equality still required.",
+      "expected_commit": "11a869427991297addc27ed42728fa213e55e720"
     }
   },
   "french_tuple": "[verse number in Genesis 1, 1-based token ordinal, 0-based Unicode code-point start, exclusive end] in verse reading text without notes/markup, trimmed. Apostrophes and internal hyphens retained.",
@@ -29,16 +30,16 @@
     "lexical_content_units": 360,
     "lexical_content_translation": 359,
     "translation": {
-      "relations": 578,
-      "hebrew_units": 589,
-      "french_units": 621,
-      "single_original_relations": 566
+      "relations": 574,
+      "hebrew_units": 585,
+      "french_units": 615,
+      "single_original_relations": 562
     },
     "contextual": {
-      "relations": 214,
-      "hebrew_units": 221,
-      "french_units": 357,
-      "single_original_relations": 206
+      "relations": 218,
+      "hebrew_units": 225,
+      "french_units": 362,
+      "single_original_relations": 210
     }
   },
   "relations": [
@@ -3390,7 +3391,7 @@
       ]
     },
     {
-      "kind": "translation",
+      "kind": "contextual",
       "hebrew": [
         "o010010110141"
       ],
@@ -3868,7 +3869,7 @@
       ]
     },
     {
-      "kind": "translation",
+      "kind": "contextual",
       "hebrew": [
         "o010010120111"
       ],
@@ -11366,7 +11367,7 @@
       ]
     },
     {
-      "kind": "translation",
+      "kind": "contextual",
       "hebrew": [
         "o010010290191"
       ],
@@ -11926,7 +11927,7 @@
       ]
     },
     {
-      "kind": "translation",
+      "kind": "contextual",
       "hebrew": [
         "o010010300111"
       ],
@@ -12614,5 +12615,11 @@
         ]
       ]
     }
-  ]
+  ],
+  "editorial_review": {
+    "passes": 2,
+    "scope": "All 31 verses; reviewed translation relations in their source and target contexts, with grammatical attachments retained separately.",
+    "corrections": "Reclassify as contextual relative particles realized through the French participial 'ayant' in Gen 1:11,12,29,30, rather than a lexical equivalent. Preserve Gen 1:29–30 repetition of the original giving verb.",
+    "limitations": "Same editor performed both passes; exact LSG 1.0.4 source blob and independent dictionary-sense verification deferred to release. No automated tests run."
+  }
 }
