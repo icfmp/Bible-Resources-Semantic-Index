@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "first editorial pass complete; second pass pending",
+  "status": "two editorial passes complete against pinned LSG 1.0.4 and MACULA working corpus; publication verification pending",
   "scope": "Gen.11.1–32",
   "attribution": "MACULA Hebrew Linguistic Datasets, available at https://github.com/Clear-Bible/macula-hebrew/ © 2022–2024 Biblica, Inc., CC BY 4.0. Identifier-only alignment. LSG source: Bible Resources / eBible.org, Louis Segond 1910.",
   "sources": {
@@ -24,22 +24,22 @@
     "contextual": "grammatical/discourse attachment only"
   },
   "statistics": {
-    "relations": 627,
+    "relations": 632,
     "hebrew_units": 554,
     "french_units": 564,
     "lexical_content_units": 326,
     "lexical_content_translation": 324,
     "translation": {
-      "relations": 434,
-      "hebrew_units": 449,
-      "french_units": 447,
-      "single_original_relations": 423
+      "relations": 433,
+      "hebrew_units": 448,
+      "french_units": 445,
+      "single_original_relations": 420
     },
     "contextual": {
-      "relations": 193,
-      "hebrew_units": 193,
-      "french_units": 268,
-      "single_original_relations": 193
+      "relations": 199,
+      "hebrew_units": 198,
+      "french_units": 272,
+      "single_original_relations": 197
     }
   },
   "relations": [
@@ -1457,21 +1457,9 @@
         ],
         [
           4,
-          23,
-          128,
-          132
-        ],
-        [
-          4,
           24,
           133,
           135
-        ],
-        [
-          4,
-          25,
-          136,
-          142
         ],
         [
           4,
@@ -2109,6 +2097,12 @@
       "french": [
         [
           6,
+          21,
+          103,
+          106
+        ],
+        [
+          6,
           22,
           107,
           116
@@ -2210,17 +2204,11 @@
       ]
     },
     {
-      "kind": "translation",
+      "kind": "contextual",
       "hebrew": [
         "o010110060131"
       ],
       "french": [
-        [
-          6,
-          24,
-          129,
-          133
-        ],
         [
           6,
           25,
@@ -2491,12 +2479,6 @@
           10,
           63,
           74
-        ],
-        [
-          7,
-          11,
-          75,
-          79
         ]
       ]
     },
@@ -2596,18 +2578,6 @@
         "o010110070112"
       ],
       "french": [
-        [
-          7,
-          14,
-          91,
-          94
-        ],
-        [
-          7,
-          15,
-          95,
-          98
-        ],
         [
           7,
           16,
@@ -3448,7 +3418,7 @@
       ]
     },
     {
-      "kind": "translation",
+      "kind": "contextual",
       "hebrew": [
         "o010110100051"
       ],
@@ -3458,6 +3428,12 @@
           7,
           32,
           35
+        ],
+        [
+          10,
+          8,
+          36,
+          38
         ]
       ]
     },
@@ -8752,7 +8728,7 @@
       ]
     },
     {
-      "kind": "translation",
+      "kind": "contextual",
       "hebrew": [
         "o010110300052"
       ],
@@ -9753,6 +9729,148 @@
           75
         ]
       ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010110060131",
+        "o010110060141"
+      ],
+      "french": [
+        [
+          6,
+          24,
+          129,
+          133
+        ],
+        [
+          6,
+          25,
+          134,
+          136
+        ],
+        [
+          6,
+          27,
+          141,
+          152
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010110070071",
+        "o010110070081"
+      ],
+      "french": [
+        [
+          7,
+          10,
+          63,
+          74
+        ],
+        [
+          7,
+          11,
+          75,
+          79
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010110100051",
+        "o010110100061",
+        "o010110100071"
+      ],
+      "french": [
+        [
+          10,
+          7,
+          32,
+          35
+        ],
+        [
+          10,
+          8,
+          36,
+          38
+        ],
+        [
+          10,
+          9,
+          39,
+          43
+        ],
+        [
+          10,
+          10,
+          44,
+          47
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010110040131"
+      ],
+      "french": [
+        [
+          4,
+          23,
+          128,
+          132
+        ],
+        [
+          4,
+          25,
+          136,
+          142
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010110060111",
+        "o010110060112"
+      ],
+      "french": [
+        [
+          6,
+          20,
+          96,
+          102
+        ],
+        [
+          6,
+          21,
+          103,
+          106
+        ],
+        [
+          6,
+          22,
+          107,
+          116
+        ]
+      ]
     }
-  ]
+  ],
+  "editorial_review": {
+    "passes": 2,
+    "scope": "All 32 verses reread in both pinned texts.",
+    "notes": [
+      "Gen 11:3: denominative brick-making verb and cognate object retained separately; intensifying burning construction preserved.",
+      "Gen 11:4: negative purpose expression and passive dispersion separated from French support pronoun and auxiliary.",
+      "Gen 11:6–7: negative impossibility construction and implicit reciprocal language reference distinguish grammatical expansion from lexical meaning.",
+      "Gen 11:9: Babel and the separate verb confuse remain distinct despite the name wordplay.",
+      "Gen 11:10–26: genealogical age, repeated year terms and compound numerals retain individual source identities.",
+      "Gen 11:30–31: possessive existence construction and the comitative expression are linked to the LSG rendering without changing the source."
+    ],
+    "limitations": "Both passes performed by the same editor; no independent dictionary-sense verification; publication checks deferred."
+  }
 }
