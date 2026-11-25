@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "first editorial pass complete; second pass pending",
+  "status": "two editorial passes complete against pinned LSG 1.0.4 and MACULA working corpus; publication verification pending",
   "scope": "Gen.10.1–32",
   "attribution": "MACULA Hebrew Linguistic Datasets, available at https://github.com/Clear-Bible/macula-hebrew/ © 2022–2024 Biblica, Inc., CC BY 4.0. Identifier-only alignment. LSG source: Bible Resources / eBible.org, Louis Segond 1910.",
   "sources": {
@@ -24,22 +24,22 @@
     "contextual": "grammatical/discourse attachment only"
   },
   "statistics": {
-    "relations": 503,
+    "relations": 508,
     "hebrew_units": 454,
     "french_units": 424,
     "lexical_content_units": 224,
-    "lexical_content_translation": 222,
+    "lexical_content_translation": 224,
     "translation": {
-      "relations": 332,
-      "hebrew_units": 339,
-      "french_units": 350,
-      "single_original_relations": 325
+      "relations": 329,
+      "hebrew_units": 338,
+      "french_units": 347,
+      "single_original_relations": 320
     },
     "contextual": {
-      "relations": 171,
-      "hebrew_units": 171,
-      "french_units": 202,
-      "single_original_relations": 171
+      "relations": 179,
+      "hebrew_units": 176,
+      "french_units": 203,
+      "single_original_relations": 179
     }
   },
   "relations": [
@@ -437,9 +437,9 @@
       "french": [
         [
           2,
-          5,
-          19,
-          25
+          6,
+          27,
+          32
         ]
       ]
     },
@@ -1379,9 +1379,9 @@
       "french": [
         [
           6,
-          5,
-          17,
-          23
+          6,
+          25,
+          30
         ]
       ]
     },
@@ -1804,7 +1804,7 @@
       ]
     },
     {
-      "kind": "translation",
+      "kind": "contextual",
       "hebrew": [
         "o010100080011"
       ],
@@ -2297,7 +2297,7 @@
       ]
     },
     {
-      "kind": "translation",
+      "kind": "contextual",
       "hebrew": [
         "o010100100031"
       ],
@@ -2311,7 +2311,7 @@
       ]
     },
     {
-      "kind": "translation",
+      "kind": "contextual",
       "hebrew": [
         "o010100100032"
       ],
@@ -5611,9 +5611,9 @@
       "french": [
         [
           22,
-          5,
-          16,
-          22
+          6,
+          24,
+          28
         ]
       ]
     },
@@ -7210,7 +7210,7 @@
       ]
     },
     {
-      "kind": "translation",
+      "kind": "contextual",
       "hebrew": [
         "o010100300021"
       ],
@@ -7224,7 +7224,7 @@
       ]
     },
     {
-      "kind": "translation",
+      "kind": "contextual",
       "hebrew": [
         "o010100300022"
       ],
@@ -8045,6 +8045,93 @@
           182
         ]
       ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010100100012",
+        "o010100100031"
+      ],
+      "french": [
+        [
+          10,
+          2,
+          3,
+          8
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010100300012",
+        "o010100300021"
+      ],
+      "french": [
+        [
+          30,
+          2,
+          4,
+          14
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010100020011"
+      ],
+      "french": [
+        [
+          2,
+          5,
+          19,
+          25
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010100060012"
+      ],
+      "french": [
+        [
+          6,
+          5,
+          17,
+          23
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010100220011"
+      ],
+      "french": [
+        [
+          22,
+          5,
+          16,
+          22
+        ]
+      ]
     }
-  ]
+  ],
+  "editorial_review": {
+    "passes": 2,
+    "scope": "All 32 verses reviewed against both pinned texts; all names and repeated occurrences kept distinct.",
+    "notes": [
+      "Gen 10:2,6,22: supplied copula in French belongs to the genealogy formula, not to the first proper name.",
+      "Gen 10:10: Hebrew nominal kingdom construction becomes the French verb régna; both governing source units retained, possessive suffix contextual.",
+      "Gen 10:11–12: name forms and the two components of Rehoboth Hir preserved exactly, without harmonizing other editions.",
+      "Gen 10:19: directional suffixes and idiomatic geographic boundary expressions retained; no place identity inferred beyond the source text.",
+      "Gen 10:21: the possible syntactic ambiguity of the elder brother is not resolved by the alignment; link the epithet to the actual LSG phrase.",
+      "Gen 10:25: Peleg and the separate verb for division remain distinct despite the name wordplay.",
+      "Gen 10:30: nominal dwelling construction becomes French habitèrent; the underlying possessive is contextual.",
+      "Gen 10:32: one original verb has a discontinuous French expansion; both expressions retain the same MACULA occurrence."
+    ],
+    "limitations": "Same editor performed both passes; no certified dictionary sense; no automated tests. Publication checks remain separate."
+  }
 }
