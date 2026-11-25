@@ -1,0 +1,22 @@
+name: MACULA LSG source validation
+on:
+  pull_request:
+    paths:
+      - 'links/alignments/macula-lsg/**'
+      - '.github/workflows/macula-lsg-source-validation.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  genesis-1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Negative and positive regression tests
+        run: python3 -I links/alignments/macula-lsg/test_validate_chapter.py
+      - name: Fetch exact public source bytes
+        run: |
+          curl --fail --location --retry 3 'https://raw.githubusercontent.com/Clear-Bible/macula-hebrew/47db250bd55d0d8577f2a94fba114ef16c35b23c/WLC/lowfat/01-Gen-001-lowfat.xml' -o "$RUNNER_TEMP/macula-gen-1.xml"
+          curl --fail --location --retry 3 'https://raw.githubusercontent.com/icfmp/Bible-Resources/11a869427991297addc27ed42728fa213e55e720/sources/cleaned/bibles/fr/lsg-1910/lsg-1910.osis.xml' -o "$RUNNER_TEMP/lsg.xml"
+      - name: Check source identity and all chapter relationships
+        run: python3 -I links/alignments/macula-lsg/validate_chapter.py links/alignments/macula-lsg/genesis/001.json "$RUNNER_TEMP/macula-gen-1.xml" "$RUNNER_TEMP/lsg.xml"
