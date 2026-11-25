@@ -1,0 +1,66 @@
+name: Census LSG editorial projection content once
+on:
+  push:
+    branches: [alignment/macula-lsg-genesis-1]
+    paths: ['.github/workflows/census-lsg-editorial-projection.yml']
+permissions:
+  contents: write
+concurrency:
+  group: census-lsg-editorial-projection
+  cancel-in-progress: false
+jobs:
+  census:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: alignment/macula-lsg-genesis-1
+      - name: Inspect immutable OSIS and record editorial-element census
+        run: |
+          python3 - <<'PY'
+          import collections, hashlib, json, re, urllib.request
+          from pathlib import Path
+          root = Path("links/alignments/macula-lsg/sources/lsg")
+          manifest = json.loads((root / "manifest.json").read_text())
+          url = f"https://raw.githubusercontent.com/icfmp/Bible-Resources/{manifest['commit']}/{manifest['path']}"
+          with urllib.request.urlopen(url, timeout=120) as response:
+              raw = response.read()
+          if hashlib.sha1(b"blob "+str(len(raw)).encode()+b"\0"+raw).hexdigest() != manifest["git_blob"]:
+              raise ValueError("Source identity mismatch")
+          if hashlib.sha256(raw).hexdigest() != manifest["sha256"]:
+              raise ValueError("Source digest mismatch")
+          tags = re.compile(r"<(title|reference|note|div)\b([^>]*?)(?:/?>)", re.S)
+          title = re.compile(r"<title\b([^>]*)>(.*?)</title>", re.S)
+          strip_note = re.compile(r"<note\b[^>]*>.*?</note>", re.S)
+          strip_tags = re.compile(r"<[^>]+>")
+          tokens = re.compile(r"[^\W\d_]+(?:[’'\-][^\W\d_]+)*")
+          counts = collections.Counter()
+          samples = {}
+          affected = []
+          verses = 0
+          for m in re.finditer(r'<verse\b[^>]*\bsID="([^"]+)"[^>]*/>(.*?)<verse\b[^>]*\beID="\1"[^>]*/>', raw.decode("utf-8"), re.S):
+              ref, content = m.groups()
+              verses += 1
+              prose = strip_note.sub("", content)
+              for t in tags.finditer(prose):
+                  tag, attrs = t.groups()
+                  types = re.findall(r'\b(?:type|subType|canonical)="[^"]*"', attrs)
+                  key = tag + " " + " ".join(types)
+                  counts[key] += 1
+                  samples.setdefault(key, {"ref": ref, "opening_tag": t.group(0), "excerpt": prose[max(0,t.start()-80):t.end()+150]})
+              titles = []
+              for t in title.finditer(prose):
+                  attrs, body = t.groups()
+                  titles.append({"attributes": attrs, "text": strip_tags.sub("", body).strip()})
+              if titles:
+                  affected.append({"ref": ref, "titles": titles})
+          if verses != manifest["verse_slots"]:
+              raise ValueError(f"Unexpected verse census: {verses}")
+          report = {"source_commit": manifest["commit"], "source_blob": manifest["git_blob"], "verse_slots": verses, "inside_verse_element_counts": dict(counts), "samples": samples, "verses_with_titles": affected, "limitations": "Census only. No source projections or alignment ledgers modified; review title types and canonical status before defining exclusions. Not a test or release workflow."}
+          path = Path("work/lsg-editorial-projection-census.json")
+          path.write_text(json.dumps(report, ensure_ascii=False, indent=2)+"\n", encoding="utf-8")
+          print("Verse slots:", verses, "Title-bearing verses:", len(affected), "Element types:", dict(counts))
+          PY
+          git add work/lsg-editorial-projection-census.json
+          git -c user.name="BRSI source preparation" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" commit -m "Record pinned LSG editorial-element census for #202"
+          git push origin HEAD:alignment/macula-lsg-genesis-1
