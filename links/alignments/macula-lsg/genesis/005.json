@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "first editorial pass complete; second pass pending",
+  "status": "two editorial passes complete against pinned LSG 1.0.4 and MACULA working corpus; publication verification pending",
   "scope": "Gen.5.1–32",
   "attribution": "MACULA Hebrew Linguistic Datasets, available at https://github.com/Clear-Bible/macula-hebrew/ © 2022–2024 Biblica, Inc., CC BY 4.0. Identifier-only alignment. LSG source: Bible Resources / eBible.org, Louis Segond 1910.",
   "sources": {
@@ -28,18 +28,18 @@
     "hebrew_units": 505,
     "french_units": 470,
     "lexical_content_units": 322,
-    "lexical_content_translation": 320,
+    "lexical_content_translation": 321,
     "translation": {
-      "relations": 375,
+      "relations": 374,
       "hebrew_units": 401,
       "french_units": 358,
-      "single_original_relations": 360
+      "single_original_relations": 358
     },
     "contextual": {
-      "relations": 195,
-      "hebrew_units": 195,
-      "french_units": 299,
-      "single_original_relations": 195
+      "relations": 196,
+      "hebrew_units": 196,
+      "french_units": 300,
+      "single_original_relations": 196
     }
   },
   "relations": [
@@ -8038,7 +8038,7 @@
       ]
     },
     {
-      "kind": "translation",
+      "kind": "contextual",
       "hebrew": [
         "o010050290121"
       ],
@@ -8836,20 +8836,6 @@
     {
       "kind": "translation",
       "hebrew": [
-        "o010050320012"
-      ],
-      "french": [
-        [
-          32,
-          2,
-          5,
-          8
-        ]
-      ]
-    },
-    {
-      "kind": "translation",
-      "hebrew": [
         "o010050320021"
       ],
       "french": [
@@ -9068,6 +9054,39 @@
           56
         ]
       ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010050320012",
+        "o010050320031"
+      ],
+      "french": [
+        [
+          32,
+          2,
+          5,
+          8
+        ],
+        [
+          32,
+          3,
+          9,
+          11
+        ]
+      ]
     }
-  ]
+  ],
+  "editorial_review": {
+    "passes": 2,
+    "scope": "All 32 verses reviewed against both texts, including every age, total lifespan, repeated genealogy formula and reordered French numeral.",
+    "notes": [
+      "Gen 5:2: the object suffix of created is absorbed by the explicitly named male and female pair.",
+      "Gen 5:3–31: age and total-life formulae retain each original numeral and year occurrence even where French has a single word or omits a repeated year.",
+      "Gen 5:22–24: Enoch's walking-with-God formula and absence/death contrast retain their distinct original verbs.",
+      "Gen 5:29: the name Noah is not conflated with the separate verb for comfort; the demonstrative in the French rendering of the definite article is contextual.",
+      "Gen 5:32: the idiom 'son of five hundred years' is linked collectively to the French age construction; the repeated original subject is contextual."
+    ],
+    "limitations": "Same editor performed both passes; no certified dictionary sense; no automated tests. Publication checks remain separate."
+  }
 }
