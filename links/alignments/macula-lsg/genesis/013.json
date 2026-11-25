@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "first editorial pass complete; second pass pending",
+  "status": "two editorial passes complete against pinned LSG 1.0.4 and MACULA working corpus; publication verification pending",
   "scope": "Gen.13.1–18",
   "attribution": "MACULA Hebrew Linguistic Datasets, available at https://github.com/Clear-Bible/macula-hebrew/ © 2022–2024 Biblica, Inc., CC BY 4.0. Identifier-only alignment. LSG source: Bible Resources / eBible.org, Louis Segond 1910.",
   "sources": {
@@ -24,22 +24,22 @@
     "contextual": "grammatical/discourse attachment only"
   },
   "statistics": {
-    "relations": 415,
+    "relations": 418,
     "hebrew_units": 382,
     "french_units": 391,
     "lexical_content_units": 178,
     "lexical_content_translation": 173,
     "translation": {
-      "relations": 308,
-      "hebrew_units": 318,
+      "relations": 307,
+      "hebrew_units": 319,
       "french_units": 329,
-      "single_original_relations": 298
+      "single_original_relations": 295
     },
     "contextual": {
-      "relations": 107,
-      "hebrew_units": 107,
-      "french_units": 174,
-      "single_original_relations": 107
+      "relations": 111,
+      "hebrew_units": 110,
+      "french_units": 177,
+      "single_original_relations": 111
     }
   },
   "relations": [
@@ -1105,6 +1105,12 @@
           4,
           11,
           16
+        ],
+        [
+          4,
+          5,
+          17,
+          24
         ]
       ]
     },
@@ -1171,7 +1177,7 @@
       ]
     },
     {
-      "kind": "translation",
+      "kind": "contextual",
       "hebrew": [
         "o010130040071"
       ],
@@ -1473,7 +1479,7 @@
       ]
     },
     {
-      "kind": "translation",
+      "kind": "contextual",
       "hebrew": [
         "o010130050061"
       ],
@@ -4231,7 +4237,7 @@
       ]
     },
     {
-      "kind": "translation",
+      "kind": "contextual",
       "hebrew": [
         "o010130110141"
       ],
@@ -5189,6 +5195,18 @@
       "french": [
         [
           14,
+          23,
+          104,
+          108
+        ],
+        [
+          14,
+          26,
+          117,
+          119
+        ],
+        [
+          14,
           27,
           120,
           122
@@ -5283,6 +5301,12 @@
         "o010130140213"
       ],
       "french": [
+        [
+          14,
+          29,
+          129,
+          133
+        ],
         [
           14,
           31,
@@ -6624,6 +6648,84 @@
           125
         ]
       ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010130050021",
+        "o010130050022",
+        "o010130050061"
+      ],
+      "french": [
+        [
+          5,
+          1,
+          0,
+          3
+        ],
+        [
+          5,
+          6,
+          31,
+          36
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010130110121",
+        "o010130110131",
+        "o010130110132",
+        "o010130110141",
+        "o010130110142"
+      ],
+      "french": [
+        [
+          11,
+          20,
+          113,
+          117
+        ],
+        [
+          11,
+          21,
+          118,
+          120
+        ],
+        [
+          11,
+          22,
+          121,
+          128
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010130180012"
+      ],
+      "french": [
+        [
+          18,
+          3,
+          11,
+          14
+        ]
+      ]
     }
-  ]
+  ],
+  "editorial_review": {
+    "passes": 2,
+    "scope": "All 18 verses reread in both pinned texts.",
+    "notes": [
+      "Gen 13:3–4: the resumed destination construction across the verse boundary is retained; supplied copula belongs to the construct phrase contextually.",
+      "Gen 13:5–6: the possessive existence construction and inability of the land to bear the group correspond to French idioms.",
+      "Gen 13:9–11: elliptical conditional motion and separation from one another are kept distinct from lexical meanings of left, right and brother.",
+      "Gen 13:14: directional suffixes are associated with the coordinated French directional expressions.",
+      "Gen 13:17–18: direct object in French replaces Hebrew preposition, and verbal tent idiom retains an implicit possessive attachment."
+    ],
+    "limitations": "Both passes performed by the same editor; no independent dictionary-sense verification; publication checks deferred."
+  }
 }
