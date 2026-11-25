@@ -1,0 +1,88 @@
+name: Rebuild editorial-aware LSG projection once
+on:
+  push:
+    branches: [alignment/macula-lsg-genesis-1]
+    paths: ['.github/workflows/rebuild-lsg-editorial-projection.yml']
+permissions:
+  contents: write
+concurrency:
+  group: rebuild-lsg-editorial-projection
+  cancel-in-progress: false
+jobs:
+  materialize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: alignment/macula-lsg-genesis-1
+      - name: Materialize corrected reading-text projections
+        run: |
+          python3 - <<'PY'
+          import collections, hashlib, json, re, sys, urllib.request
+          from pathlib import Path
+          base = Path("links/alignments/macula-lsg")
+          root = base / "sources/lsg"
+          sys.path.insert(0, str(base))
+          from reading_text import reading_prose, legacy_prose
+          mf = root / "manifest.json"
+          manifest = json.loads(mf.read_text())
+          url = f"https://raw.githubusercontent.com/icfmp/Bible-Resources/{manifest['commit']}/{manifest['path']}"
+          with urllib.request.urlopen(url, timeout=120) as response:
+              raw = response.read()
+          if hashlib.sha1(b"blob "+str(len(raw)).encode()+b"\0"+raw).hexdigest() != manifest["git_blob"] or hashlib.sha256(raw).hexdigest() != manifest["sha256"]:
+              raise ValueError("Source identity mismatch")
+          old, new = collections.defaultdict(dict), collections.defaultdict(dict)
+          for m in re.finditer(r'<verse\b[^>]*\bsID="([^"]+)"[^>]*/>(.*?)<verse\b[^>]*\beID="\1"[^>]*/>', raw.decode("utf-8"), re.S):
+              ref, fragment = m.groups()
+              b, c, v = ref.split(".")
+              key = b, int(c)
+              if v in old[key]:
+                  raise ValueError(f"Duplicate reference {ref}")
+              old[key][v] = legacy_prose(fragment)
+              new[key][v] = reading_prose(fragment)
+          if len(old) != manifest["chapters"] or sum(map(len,old.values())) != manifest["verse_slots"]:
+              raise ValueError("Incomplete source inventory")
+          changed, pending = [], []
+          for (b,c), verses in new.items():
+              p = root / b / f"{c:03}.json"
+              obj = json.loads(p.read_text())
+              if obj["verses"] != old[b,c]:
+                  raise ValueError(f"Old projection mismatch at {b}.{c}")
+              refs = [v for v, txt in verses.items() if txt != old[b,c][v]]
+              if not refs:
+                  continue
+              changed.extend(f"{b}.{c}.{v}" for v in refs)
+              pending.append((p, obj, verses))
+          census = json.loads(Path("work/lsg-editorial-projection-census.json").read_text())
+          expected = {x["ref"] for x in census["verses_with_titles"]}
+          if set(changed) != expected:
+              raise ValueError("Changed verse inventory differs from observed editorial titles")
+          for p in (base/"genesis").glob("*.json"):
+              obj = json.loads(p.read_text())
+              scope = obj["scope"].split(".")
+              if any(ref.startswith(f"{scope[0]}.{scope[1]}.") for ref in changed):
+                  raise ValueError(f"Existing ledger needs explicit migration: {p}")
+          for p, obj, verses in pending:
+              obj["verses"] = verses
+              obj["reading_text_sha256"] = hashlib.sha256("\n".join(verses.values()).encode()).hexdigest()
+              p.write_text(json.dumps(obj, ensure_ascii=False, separators=(",",":"))+"\n", encoding="utf-8")
+          manifest["projection"] = "Native OSIS milestone content; remove notes and complete noncanonical editorial titles (plain section titles and parallel-reference titles) before stripping markup. Retain punctuation and interior whitespace, strip outer whitespace. Canonical titles retained; unknown title classifications fail closed. Original OSIS remains immutable upstream."
+          manifest["projection_revision"] = 2
+          mf.write_text(json.dumps(manifest, ensure_ascii=False, separators=(",",":"))+"\n", encoding="utf-8")
+          validator = base/"validate_chapter.py"
+          code = validator.read_text()
+          if "from reading_text import reading_prose" not in code:
+              code = code.replace("from pathlib import Path", "from pathlib import Path\nfrom reading_text import reading_prose")
+              code, n = re.subn(r'        prose = re\.sub\(r"<note[^\n]+\n        verses\[number\] = re\.sub[^\n]+', '        verses[number] = reading_prose(matches[0])', code)
+              if n != 1:
+                  raise ValueError("Validator projection location mismatch")
+              validator.write_text(code, encoding="utf-8")
+          readme = base/"sources/README.md"
+          readme.write_text(readme.read_text().rstrip()+"\n\nLSG projection revision 2 excludes complete editorial section and parallel-reference title elements from alignment text. See #202 and the migration receipt in work/. Existing unchanged chapter offsets remain valid; the raw OSIS is unchanged.\n", encoding="utf-8")
+          receipt = {"source_blob":manifest["git_blob"],"projection_revision":2,"verse_slots":manifest["verse_slots"],"changed_verses":changed,"changed_chapters":len(pending),"existing_completed_ledgers_affected":0,"note":"Source materialization only. No publication tests executed."}
+          Path("work/lsg-editorial-projection-migration.json").write_text(json.dumps(receipt, indent=2)+"\n", encoding="utf-8")
+          print("Changed verses:",len(changed),"Changed chapters:",len(pending))
+          PY
+          git add links/alignments/macula-lsg/sources/lsg links/alignments/macula-lsg/sources/README.md links/alignments/macula-lsg/validate_chapter.py work/lsg-editorial-projection-migration.json
+          git -c user.name="BRSI source preparation" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" commit -m "Materialize editorial-aware LSG reading text and record migration (#202)"
+          git push origin HEAD:alignment/macula-lsg-genesis-1
