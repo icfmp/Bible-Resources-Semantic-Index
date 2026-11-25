@@ -1,0 +1,3 @@
+# Pinned working corpus
+
+Development-only chapter projections, not a release or an edition of Scripture. The exact source bytes remain upstream; manifests identify their revisions and Git blobs. Read the JSON chapter files directly for editorial alignment. Do not edit this corpus to resolve alignment issues. LSG is the reading-text projection of the published 1.0.4 OSIS; MACULA Hebrew includes only the allowed text, occurrence identity and morphology fields. No dictionary prose or permission-only semantic annotations are included. Greek materialization remains separate until the underlying SBLGNT text license is confirmed. Publication checks and approval remain separate under #62.
