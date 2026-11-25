@@ -1,4 +1,4 @@
-name: Prepare pinned MACULA–LSG working corpus
+name: Prepare pinned MACULA Greek working corpus
 on:
   push:
     branches:
@@ -13,12 +13,12 @@ concurrency:
 jobs:
   prepare:
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
         with:
           ref: alignment/macula-lsg-genesis-1
-      - name: Prepare source projections and commit directly to working branch
+      - name: Materialize the pinned Greek working corpus
         shell: bash
         run: |
           python3 - <<'PY'
@@ -34,12 +34,11 @@ jobs:
           from pathlib import Path
 
           ROOT = Path("links/alignments/macula-lsg/sources")
-          LSG_COMMIT = "11a869427991297addc27ed42728fa213e55e720"
-          LSG_PATH = "sources/cleaned/bibles/fr/lsg-1910/lsg-1910.osis.xml"
-          LSG_BLOB = "b1ac2146fb7517e5e08a25f5ca321670f5dcefb5"
-          H_COMMIT = "47db250bd55d0d8577f2a94fba114ef16c35b23c"
-          H_REPO = "Clear-Bible/macula-hebrew"
-          H_ATTRIBUTION = "MACULA Hebrew Linguistic Datasets, available at https://github.com/Clear-Bible/macula-hebrew/ © 2022–2024 Biblica, Inc., CC BY 4.0; Westminster Leningrad Codex text unrestricted; OpenScriptures Hebrew Bible and Groves Center morphology/syntax CC BY 4.0. See pinned LICENSE.md."
+          OUT = ROOT / "macula-greek"
+          REPO = "Clear-Bible/macula-greek"
+          COMMIT = "8423afe47b9e8f24b7772e808af45c7159a6fe7e"
+          SBL_COMMIT = "736fdc76158950c3d04b949b7e013ca05145a"
+          XML_ID = "{http://www.w3.org/XML/1998/namespace}id"
 
           def fetch(url):
               for attempt in range(5):
@@ -59,101 +58,53 @@ jobs:
               path.parent.mkdir(parents=True, exist_ok=True)
               path.write_text(json.dumps(obj, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
 
-          def commit(message):
-              subprocess.run(["git", "add", str(ROOT)], check=True)
-              if subprocess.run(["git", "diff", "--cached", "--quiet"]).returncode:
-                  subprocess.run(["git", "-c", "user.name=BRSI source preparation", "-c", "user.email=41898282+github-actions[bot]@users.noreply.github.com", "commit", "-m", message], check=True)
-                  subprocess.run(["git", "push", "origin", "HEAD:alignment/macula-lsg-genesis-1"], check=True)
+          tree = json.loads(fetch(f"https://api.github.com/repos/{REPO}/git/trees/{COMMIT}?recursive=1"))
+          entries = [e for e in tree["tree"] if re.fullmatch(r"SBLGNT/lowfat/\d+-[^/]+\.xml", e["path"])]
+          if tree["truncated"] or len(entries) != 27:
+              raise ValueError("Incomplete Greek book inventory")
 
-          raw = fetch(f"https://raw.githubusercontent.com/icfmp/Bible-Resources/{LSG_COMMIT}/{LSG_PATH}")
-          if blob(raw) != LSG_BLOB:
-              raise ValueError("LSG source blob mismatch")
-          raw_text = raw.decode("utf-8")
-          chapters = defaultdict(dict)
-          for m in re.finditer(r'<verse\b[^>]*\bsID="([^"]+)"[^>]*/>(.*?)<verse\b[^>]*\beID="\1"[^>]*/>', raw_text, re.S):
-              ref, content = m.groups()
-              parts = ref.split(".")
-              if len(parts) != 3 or not parts[1].isdigit():
-                  raise ValueError(f"Unsupported native OSIS reference: {ref}")
-              book, chapter, verse = parts
-              prose = re.sub(r"<note\b[^>]*>.*?</note>", "", content, flags=re.S)
-              prose = re.sub(r"<[^>]+>", "", prose).strip()
-              if verse in chapters[book, chapter]:
-                  raise ValueError(f"Duplicate OSIS reference: {ref}")
-              chapters[book, chapter][verse] = prose
-          if not chapters:
-              raise ValueError("No LSG milestones found")
-          for (book, chapter), verses in chapters.items():
-              save(ROOT / "lsg" / book / f"{int(chapter):03}.json", {
-                  "book": book, "chapter": int(chapter), "verses": verses,
-                  "reading_text_sha256": hashlib.sha256("\n".join(verses.values()).encode()).hexdigest()
-              })
-          lsg_manifest = {
-              "repository": "icfmp/Bible-Resources", "tag": "lsg-1.0.4", "commit": LSG_COMMIT,
-              "path": LSG_PATH, "git_blob": LSG_BLOB, "sha256": hashlib.sha256(raw).hexdigest(),
-              "bytes": len(raw), "chapters": len(chapters), "verse_slots": sum(map(len, chapters.values())),
-              "license": "Louis Segond 1910 reading text, public domain; Bible Resources / eBible.org.",
-              "projection": "Native OSIS milestone content; remove notes and markup only, retain punctuation and interior whitespace, strip outer whitespace. No Strong annotations or note content. Original OSIS remains immutable upstream."
-          }
-          save(ROOT / "lsg" / "manifest.json", lsg_manifest)
-          print("LSG:", lsg_manifest, flush=True)
-
-          tree = json.loads(fetch(f"https://api.github.com/repos/{H_REPO}/git/trees/{H_COMMIT}?recursive=1"))
-          entries = [entry for entry in tree["tree"] if re.fullmatch(r"WLC/lowfat/\d+-[A-Za-z0-9]+-\d+-lowfat\.xml", entry["path"])]
-          if tree["truncated"] or len(entries) != 929:
-              raise ValueError("Incomplete pinned WLC chapter inventory")
-          XML_ID = "{http://www.w3.org/XML/1998/namespace}id"
-          def hebrew(entry):
+          def book(entry):
               path = entry["path"]
-              data = fetch(f"https://raw.githubusercontent.com/{H_REPO}/{H_COMMIT}/{path}")
+              data = fetch(f"https://raw.githubusercontent.com/{REPO}/{COMMIT}/{path}")
               if blob(data) != entry["sha"]:
-                  raise ValueError(f"WLC blob mismatch: {path}")
-              m = re.fullmatch(r"WLC/lowfat/(\d+)-([A-Za-z0-9]+)-(\d+)-lowfat\.xml", path)
-              _, book, chapter = m.groups()
-              words = []
-              for word in ET.fromstring(data).iter("w"):
-                  # Explicit field allowlist: no dictionaries, senses, glosses, or third-party annotations.
-                  if not word.get(XML_ID) or not word.get("ref"):
-                      raise ValueError(f"Missing ID or reference in {path}")
-                  words.append([word.get(XML_ID), word.get("ref"), word.text or "", word.get("lemma"), word.get("pos"), word.get("morph"), word.get("lang")])
-              if not words:
-                  raise ValueError(f"No original words: {path}")
-              save(ROOT / "macula-hebrew" / book / f"{int(chapter):03}.json", {
-                  "source_path": path, "git_blob": entry["sha"], "words": words
-              })
-              return len(words)
+                  raise ValueError(f"Greek blob mismatch: {path}")
+              root = ET.fromstring(data)
+              chapters = defaultdict(list)
+              for word in root.iter("w"):
+                  ref = word.get("ref", "")
+                  match = re.fullmatch(r"(\S+) (\d+):(\d+[a-z]?)!(\d+)", ref)
+                  if not match or not word.get(XML_ID):
+                      raise ValueError(f"Unsupported source word identity: {path}: {ref}")
+                  b, chapter, verse, ordinal = match.groups()
+                  # Explicit field allowlist, no permission-only LN/domain, gloss, sense or other data.
+                  chapters[b, int(chapter)].append([word.get(XML_ID), ref, word.text or "", word.get("lemma"), word.get("class"), word.get("morph"), word.get("after")])
+              for (b, chapter), words in chapters.items():
+                  save(OUT / b / f"{chapter:03}.json", {
+                      "source_path": path, "git_blob": entry["sha"], "words": words
+                  })
+              return len(chapters), sum(map(len, chapters.values()))
 
-          first = [e for e in entries if re.fullmatch(r"WLC/lowfat/01-Gen-0(0[1-9]|10)-lowfat\.xml", e["path"])]
-          rest = [e for e in entries if e not in first]
-          if len(first) != 10:
-              raise ValueError("Genesis starter inventory mismatch")
-          def batch(items):
-              with concurrent.futures.ThreadPoolExecutor(max_workers=8) as executor:
-                  return sum(executor.map(hebrew, items))
-          first_words = batch(first)
-          h_manifest = {
-              "repository": H_REPO, "commit": H_COMMIT,
-              "attribution": H_ATTRIBUTION, "license_url": f"https://github.com/{H_REPO}/blob/{H_COMMIT}/LICENSE.md",
-              "tuple": ["xml:id", "ref", "surface", "lemma", "pos", "morph", "lang"],
-              "source_chapter_count": 929, "materialized_chapters": 10,
-              "materialized_morphs": first_words,
-              "exclusions": "All glosses, Strong associations, semantic domains, contextual senses, participant references, frames, English alignment and other unreviewed fields."
+          with concurrent.futures.ThreadPoolExecutor(max_workers=6) as executor:
+              results = list(executor.map(book, entries))
+          manifest = {
+              "repository": REPO, "commit": COMMIT, "edition": "SBLGNT",
+              "underlying_text": {"repository": "Faithlife/SBLGNT", "commit": SBL_COMMIT,
+                  "attribution": "SBL Greek New Testament © 2010 Society of Biblical Literature and Logos Bible Software, CC BY 4.0",
+                  "license_witness": f"https://github.com/Faithlife/SBLGNT/blob/{SBL_COMMIT}/README.md"},
+              "attribution": "MACULA Greek Linguistic Datasets, available at https://github.com/Clear-Bible/macula-greek/ © 2022–2024 Biblica, Inc., CC BY 4.0",
+              "license_url": f"https://github.com/{REPO}/blob/{COMMIT}/LICENSE.md",
+              "tuple": ["xml:id", "ref", "surface", "lemma", "class", "morph", "after"],
+              "books": len(entries), "chapters": sum(a for a, _ in results), "words": sum(b for _, b in results),
+              "projection": "Preserve native references and source tree traversal order; use the original reference ordinal for reading order. No text editing. Exclude Strong, glosses, LN, domains, senses and all other fields.",
+              "license": "CC BY 4.0; see both pinned notices. Development-only working projection, not a release."
           }
-          save(ROOT / "macula-hebrew" / "manifest.json", h_manifest)
-          (ROOT / "README.md").write_text(
-              "# Pinned working corpus\n\nDevelopment-only chapter projections, not a release or an edition of Scripture. "
-              "The exact source bytes remain upstream; manifests identify their revisions and Git blobs. "
-              "Read the JSON chapter files directly for editorial alignment. Do not edit this corpus to resolve alignment issues. "
-              "LSG is the reading-text projection of the published 1.0.4 OSIS; MACULA Hebrew includes only the allowed text, occurrence identity and morphology fields. "
-              "No dictionary prose or permission-only semantic annotations are included. "
-              "Greek materialization remains separate until the underlying SBLGNT text license is confirmed. "
-              "Publication checks and approval remain separate under #62.\n", encoding="utf-8")
-          commit("Materialize pinned LSG and Genesis 1–10 working sources")
-          print("First ten Hebrew chapters committed:", first_words, flush=True)
-
-          total_words = first_words + batch(rest)
-          h_manifest.update(materialized_chapters=len(entries), materialized_morphs=total_words)
-          save(ROOT / "macula-hebrew" / "manifest.json", h_manifest)
-          commit("Materialize remaining pinned MACULA Hebrew working chapters")
-          print("Hebrew:", h_manifest, flush=True)
+          save(OUT / "manifest.json", manifest)
+          readme = ROOT / "README.md"
+          readme.write_text(readme.read_text(encoding="utf-8").replace(
+              "Greek materialization remains separate until the underlying SBLGNT text license is confirmed.",
+              "MACULA Greek is similarly projected from the pinned SBLGNT source. Both the MACULA Greek data and the underlying SBLGNT text have verified CC BY 4.0 notices; permission-only LN/domain fields are excluded."), encoding="utf-8")
+          subprocess.run(["git", "add", str(ROOT)], check=True)
+          subprocess.run(["git", "-c", "user.name=BRSI source preparation", "-c", "user.email=41898282+github-actions[bot]@users.noreply.github.com", "commit", "-m", "Materialize complete pinned MACULA Greek working corpus"], check=True)
+          subprocess.run(["git", "push", "origin", "HEAD:alignment/macula-lsg-genesis-1"], check=True)
+          print(manifest, flush=True)
           PY
