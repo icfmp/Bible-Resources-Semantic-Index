@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "editorial alignment and second-pass review complete against supplied OSIS snapshot; publication verification pending",
+  "status": "two editorial passes complete; exact LSG 1.0.4 reading projection confirmed; publication verification pending",
   "scope": "Gen.2.1–25",
   "attribution": "MACULA Hebrew Linguistic Datasets, available at https://github.com/Clear-Bible/macula-hebrew/ © 2022–2024 Biblica, Inc., CC BY 4.0. Identifier-only alignment. LSG source: Bible Resources / eBible.org, Louis Segond 1910.",
   "sources": {
@@ -10,12 +10,12 @@
       "blob": "84b6d1af7732acd572ac823a2acd325707e67709"
     },
     "lsg": {
-      "snapshot": "user-provided Bible Resources OSIS (30,527,268 bytes)",
+      "snapshot": "Pinned LSG 1.0.4 working corpus (OSIS 30,527,333 bytes)",
       "chapter_prose_sha256": "6604c9237037951bc0347b0369fae6de677fd2c09d9246776c8042b1c82d915e",
       "expected_current_blob": "b1ac2146fb7517e5e08a25f5ca321670f5dcefb5",
       "expected_commit": "11a869427991297addc27ed42728fa213e55e720",
       "expected_current_size": 30527333,
-      "verification": "Release notes report no numbered prose changes; exact 1.0.4 blob verification deferred to publication."
+      "verification": "Exact released OSIS Git blob verified during source preparation; chapter reading-text digest and existing French offsets match the earlier supplied snapshot."
     }
   },
   "french_tuple": "[verse number, 1-based token ordinal, 0-based Unicode code-point start, exclusive end] in verse reading text without notes/markup, trimmed. Apostrophes and internal hyphens retained.",
@@ -24,16 +24,16 @@
     "contextual": "grammatical/discourse attachment only"
   },
   "statistics": {
-    "relations": 600,
-    "hebrew_units": 522,
+    "relations": 603,
+    "hebrew_units": 525,
     "french_units": 560,
     "lexical_content_units": 265,
     "lexical_content_translation": 258,
     "translation": {
-      "relations": 447,
-      "hebrew_units": 451,
-      "french_units": 457,
-      "single_original_relations": 443
+      "relations": 450,
+      "hebrew_units": 454,
+      "french_units": 458,
+      "single_original_relations": 446
     },
     "contextual": {
       "relations": 153,
@@ -9468,6 +9468,48 @@
           62
         ]
       ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010020020031ה"
+      ],
+      "french": [
+        [
+          2,
+          3,
+          12,
+          14
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010020020091ה"
+      ],
+      "french": [
+        [
+          2,
+          15,
+          75,
+          77
+        ]
+      ]
+    },
+    {
+      "kind": "translation",
+      "hebrew": [
+        "o010020050061ה"
+      ],
+      "french": [
+        [
+          5,
+          8,
+          44,
+          46
+        ]
+      ]
     }
   ],
   "editorial_review": {
@@ -9479,6 +9521,11 @@
       "Gen 2:22–23: directional and demonstrative morphology in the French reordered construction is contextual.",
       "Gen 2:25: verbal idiom 'avoir honte' is linked to the original verb with discontinuous tokens."
     ],
-    "limitations": "Same editor performed both passes. Exact published LSG comparison and automated tests deferred to publication. Dictionary sense assignments are not certified."
+    "limitations": "Same editor performed both passes. Exact published LSG comparison and automated tests deferred to publication. Dictionary sense assignments are not certified.",
+    "source_materialization_followup": {
+      "additional_original_articles": 3,
+      "reason": "Empty-surface definite articles encoded as independent MACULA IDs after contracted prepositions were omitted by earlier XML extraction. Each is now linked to its corresponding French article or contraction.",
+      "remaining_original_ids": 0
+    }
   }
 }
