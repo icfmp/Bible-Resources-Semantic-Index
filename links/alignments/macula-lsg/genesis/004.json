@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "first editorial pass complete; second pass pending",
+  "status": "two editorial passes complete against pinned LSG 1.0.4 and MACULA working corpus; publication verification pending",
   "scope": "Gen.4.1–26",
   "attribution": "MACULA Hebrew Linguistic Datasets, available at https://github.com/Clear-Bible/macula-hebrew/ © 2022–2024 Biblica, Inc., CC BY 4.0. Identifier-only alignment. LSG source: Bible Resources / eBible.org, Louis Segond 1910.",
   "sources": {
@@ -24,22 +24,22 @@
     "contextual": "grammatical/discourse attachment only"
   },
   "statistics": {
-    "relations": 568,
+    "relations": 569,
     "hebrew_units": 505,
     "french_units": 551,
     "lexical_content_units": 271,
-    "lexical_content_translation": 264,
+    "lexical_content_translation": 263,
     "translation": {
-      "relations": 414,
-      "hebrew_units": 427,
-      "french_units": 445,
-      "single_original_relations": 402
+      "relations": 408,
+      "hebrew_units": 421,
+      "french_units": 443,
+      "single_original_relations": 396
     },
     "contextual": {
-      "relations": 154,
-      "hebrew_units": 157,
-      "french_units": 240,
-      "single_original_relations": 152
+      "relations": 161,
+      "hebrew_units": 164,
+      "french_units": 246,
+      "single_original_relations": 159
     }
   },
   "relations": [
@@ -1860,7 +1860,7 @@
       ]
     },
     {
-      "kind": "translation",
+      "kind": "contextual",
       "hebrew": [
         "o010040060072"
       ],
@@ -4186,6 +4186,12 @@
       "french": [
         [
           13,
+          8,
+          40,
+          44
+        ],
+        [
+          13,
           10,
           51,
           55
@@ -4283,7 +4289,7 @@
       ]
     },
     {
-      "kind": "translation",
+      "kind": "contextual",
       "hebrew": [
         "o010040140041"
       ],
@@ -5841,7 +5847,7 @@
       ]
     },
     {
-      "kind": "translation",
+      "kind": "contextual",
       "hebrew": [
         "o010040170141"
       ],
@@ -7269,7 +7275,7 @@
       ]
     },
     {
-      "kind": "translation",
+      "kind": "contextual",
       "hebrew": [
         "o010040220101"
       ],
@@ -8362,7 +8368,7 @@
       ]
     },
     {
-      "kind": "translation",
+      "kind": "contextual",
       "hebrew": [
         "o010040250102"
       ],
@@ -8372,6 +8378,24 @@
           11,
           54,
           62
+        ],
+        [
+          25,
+          12,
+          63,
+          65
+        ],
+        [
+          25,
+          13,
+          66,
+          69
+        ],
+        [
+          25,
+          14,
+          70,
+          72
         ]
       ]
     },
@@ -8882,7 +8906,7 @@
       ]
     },
     {
-      "kind": "translation",
+      "kind": "contextual",
       "hebrew": [
         "o010040260082"
       ],
@@ -8892,6 +8916,18 @@
           8,
           30,
           38
+        ],
+        [
+          26,
+          9,
+          39,
+          41
+        ],
+        [
+          26,
+          10,
+          42,
+          45
         ]
       ]
     },
@@ -9060,6 +9096,46 @@
           116
         ]
       ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010040240031"
+      ],
+      "french": [
+        [
+          24,
+          7,
+          38,
+          43
+        ],
+        [
+          24,
+          8,
+          44,
+          61
+        ],
+        [
+          24,
+          9,
+          62,
+          66
+        ]
+      ]
     }
-  ]
+  ],
+  "editorial_review": {
+    "passes": 2,
+    "scope": "All 26 verses reviewed in context.",
+    "notes": [
+      "Gen 4:2: shepherd of sheep and worker of soil each correspond to a single French occupational noun.",
+      "Gen 4:7: nominal lifting and supplied face are kept distinct; negative doing well is rendered as doing badly.",
+      "Gen 4:13: comparative preposition is expressed in the discontinuous 'trop ... pour' construction.",
+      "Gen 4:18: passive birth construction is rendered as active begetting; source identity unchanged.",
+      "Gen 4:22: the disputed craftsman/implement construction is not certified as a dictionary sense.",
+      "Gen 4:24: numerical compound 77 and ellipsis of the repeated vengeance verb are retained.",
+      "Gen 4:25–26: possessive suffix in naming formula attaches contextually to French naming expression."
+    ],
+    "limitations": "Same editor performed both passes; no certified dictionary sense, no automated tests. Publication checks remain separate."
+  }
 }
