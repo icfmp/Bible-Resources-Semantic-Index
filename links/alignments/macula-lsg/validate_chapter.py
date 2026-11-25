@@ -6,6 +6,7 @@ import json
 import re
 import xml.etree.ElementTree as ET
 from pathlib import Path
+from reading_text import reading_prose
 
 XML_ID = "{http://www.w3.org/XML/1998/namespace}id"
 TOKEN = re.compile(r"[^\W\d_]+(?:[’'\-][^\W\d_]+)*")
@@ -27,8 +28,7 @@ def reading_text(data, book, chapter, first, last):
         pattern = rf'<verse\b[^>]*\bsID="{ref}"[^>]*/>(.*?)<verse\b[^>]*\beID="{ref}"[^>]*/>'
         matches = re.findall(pattern, text, re.S)
         require(len(matches) == 1, f"Missing or ambiguous OSIS milestone: {ref}")
-        prose = re.sub(r"<note\b[^>]*>.*?</note>", "", matches[0], flags=re.S)
-        verses[number] = re.sub(r"<[^>]+>", "", prose).strip()
+        verses[number] = reading_prose(matches[0])
     return verses
 
 def validate(ledger, hebrew, french):
