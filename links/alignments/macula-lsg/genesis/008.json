@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "first editorial pass partial; second pass pending",
+  "status": "two editorial passes complete against pinned LSG 1.0.4 and MACULA working corpus; publication verification pending",
   "scope": "Gen.8.1–22",
   "attribution": "MACULA Hebrew Linguistic Datasets, available at https://github.com/Clear-Bible/macula-hebrew/ © 2022–2024 Biblica, Inc., CC BY 4.0. Identifier-only alignment. LSG source: Bible Resources / eBible.org, Louis Segond 1910.",
   "sources": {
@@ -24,22 +24,22 @@
     "contextual": "grammatical/discourse attachment only"
   },
   "statistics": {
-    "relations": 579,
+    "relations": 581,
     "hebrew_units": 516,
-    "french_units": 523,
+    "french_units": 524,
     "lexical_content_units": 249,
     "lexical_content_translation": 241,
     "translation": {
-      "relations": 426,
-      "hebrew_units": 430,
-      "french_units": 432,
-      "single_original_relations": 423
+      "relations": 425,
+      "hebrew_units": 429,
+      "french_units": 430,
+      "single_original_relations": 422
     },
     "contextual": {
-      "relations": 153,
-      "hebrew_units": 156,
-      "french_units": 234,
-      "single_original_relations": 151
+      "relations": 156,
+      "hebrew_units": 159,
+      "french_units": 237,
+      "single_original_relations": 154
     }
   },
   "relations": [
@@ -3164,12 +3164,6 @@
           7,
           32,
           36
-        ],
-        [
-          9,
-          8,
-          37,
-          41
         ],
         [
           9,
@@ -6466,11 +6460,17 @@
       ]
     },
     {
-      "kind": "translation",
+      "kind": "contextual",
       "hebrew": [
         "o010080170081"
       ],
       "french": [
+        [
+          17,
+          15,
+          72,
+          76
+        ],
         [
           17,
           18,
@@ -8537,9 +8537,9 @@
       "french": [
         [
           21,
-          28,
-          147,
-          149
+          29,
+          150,
+          157
         ]
       ]
     },
@@ -9319,6 +9319,47 @@
           132
         ]
       ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080210201"
+      ],
+      "french": [
+        [
+          21,
+          26,
+          139,
+          141
+        ]
+      ]
+    },
+    {
+      "kind": "contextual",
+      "hebrew": [
+        "o010080210212"
+      ],
+      "french": [
+        [
+          21,
+          28,
+          147,
+          149
+        ]
+      ]
     }
-  ]
+  ],
+  "editorial_review": {
+    "passes": 2,
+    "scope": "All 22 verses reviewed against the two pinned texts.",
+    "notes": [
+      "Gen 8:6: French moves the ark relation after the relative clause; original construct preserved.",
+      "Gen 8:9: resting-place idiom and implicit possessive retain distinct original IDs.",
+      "Gen 8:12: repeated negated continuation and temporal adverb are not independent French lexical equivalents.",
+      "Gen 8:17–18: coordinated list and implicit comitative suffix preserve all source identities.",
+      "Gen 8:21: French genitival connectors and the elided article are explicitly distinguished; complete target coverage restored.",
+      "Gen 8:22: duration of all the days of the earth rendered by the French subsistence clause; contextual attachment is not a lexical equivalence."
+    ],
+    "limitations": "Same editor performed both passes; no certified dictionary sense; no automated tests. Publication checks remain separate."
+  }
 }
