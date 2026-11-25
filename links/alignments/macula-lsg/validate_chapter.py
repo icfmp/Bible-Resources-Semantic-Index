@@ -31,7 +31,7 @@ def reading_text(data, book, chapter, first, last):
         verses[number] = reading_prose(matches[0])
     return verses
 
-def validate(ledger, hebrew, french):
+def validate(ledger, hebrew, french, macula_extra=()):
     sources = ledger["sources"]
     require(git_blob(hebrew) == sources["macula"]["blob"], "MACULA blob mismatch")
     require(git_blob(french) == sources["lsg"]["expected_current_blob"], "LSG blob mismatch")
@@ -39,15 +39,35 @@ def validate(ledger, hebrew, french):
     require(scope is not None, "Invalid scope")
     book, chapter, first, last = scope.groups()
     first, last = int(first), int(last)
-    root = ET.fromstring(hebrew)
     original = {}
-    for node in root.iter("w"):
-        ref = node.get("ref", "")
-        m = re.search(r" (\d+):(\d+)!", ref)
-        if m and m.group(1) == chapter and first <= int(m.group(2)) <= last:
-            key = node.get(XML_ID)
-            require(key and key not in original, "Invalid/duplicate source identifier")
-            original[key] = node.get("pos")
+    segments = sources["macula"].get("segments")
+    if segments is None:
+        require(not macula_extra, "Unexpected supplemental MACULA source")
+        segments = [{"blob": sources["macula"]["blob"], "native_chapter": int(chapter),
+                     "native_first": first, "native_last": last,
+                     "lsg_first": first, "lsg_last": last}]
+    require(len(segments) == 1 + len(macula_extra), "MACULA segment count mismatch")
+    require(segments[0]["blob"] == sources["macula"]["blob"], "Primary MACULA lock mismatch")
+    covered = []
+    for segment, data in zip(segments, (hebrew, *macula_extra)):
+        require(git_blob(data) == segment["blob"], "MACULA segment blob mismatch")
+        nc = segment["native_chapter"]
+        nf, nl = segment["native_first"], segment["native_last"]
+        lf, ll = segment["lsg_first"], segment["lsg_last"]
+        require(1 <= nf <= nl and first <= lf <= ll <= last, "Invalid segment bounds")
+        covered.extend(range(lf, ll + 1))
+        native_verses = set()
+        root = ET.fromstring(data)
+        for node in root.iter("w"):
+            ref = node.get("ref", "")
+            m = re.search(r" (\d+):(\d+)!", ref)
+            if m and int(m.group(1)) == nc and nf <= int(m.group(2)) <= nl:
+                key = node.get(XML_ID)
+                require(key and key not in original, "Invalid/duplicate source identifier")
+                original[key] = node.get("pos")
+                native_verses.add(int(m.group(2)))
+        require(native_verses == set(range(nf, nl + 1)), "Incomplete native segment")
+    require(covered == list(range(first, last + 1)), "Target segment inventory mismatch")
     require(bool(original), "No source words")
     prose = reading_text(french, book, chapter, first, last)
     digest = hashlib.sha256("\n".join(prose.values()).encode()).hexdigest()
@@ -98,9 +118,11 @@ def main():
     p.add_argument("ledger", type=Path)
     p.add_argument("macula", type=Path)
     p.add_argument("lsg", type=Path)
+    p.add_argument("--macula-extra", type=Path, action="append", default=[], help="Supplemental MACULA source XML, in declared segment order")
     args = p.parse_args()
     print(json.dumps(validate(json.loads(args.ledger.read_text(encoding="utf-8")),
-                              args.macula.read_bytes(), args.lsg.read_bytes()), indent=2))
+                              args.macula.read_bytes(), args.lsg.read_bytes(),
+                              tuple(p.read_bytes() for p in args.macula_extra)), indent=2))
 
 if __name__ == "__main__":
     main()
