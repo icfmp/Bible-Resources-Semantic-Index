@@ -1,0 +1,25 @@
+{
+  "status": "partial_cohort_first_pass",
+  "scope": "Numbers 21–36 and Deuteronomy 1–4",
+  "parent_commit": "c3d30db8832b7b5e67b165b560e083d8d177cab9",
+  "previous_progress": "work/macula-lsg-numbers-021-deuteronomy-004-compact-progress-03.json",
+  "new_overlay": "work/macula-lsg-numbers-025-027-compact-overlay-04.json",
+  "new_chapter_scopes": [
+    "Num.25",
+    "Num.27"
+  ],
+  "new_verse_entries": 37,
+  "new_relations": 725,
+  "new_unresolved_hebrew": 0,
+  "new_unresolved_french": 11,
+  "cumulative_verse_entries_touched": 103,
+  "cumulative_manual_relations": 2133,
+  "cohort_verse_entries": 713,
+  "chapters_with_drafts_for_all_lsg_verses": [
+    "Num.25",
+    "Num.27",
+    "Num.30",
+    "Num.36"
+  ],
+  "notes": "Remaining LSG verses 3–18 of Num 25 and 3–23 of Num 27 drafted against pinned native Hebrew projections. Native Num 25:19 belongs to LSG 26:1 and remains a cross-chapter reconciliation item. Earlier Num 27:1/2 boundary unchanged. Eleven French token attachments unresolved. Ordinal reconstruction in memory checked bounds and per-verse occurrence accounting; no independent semantic audit or canonical ledger reconciliation. No publication validation, checkbox changes, source changes or release. Continue same twenty-chapter cohort."
+}
