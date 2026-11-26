@@ -25,6 +25,20 @@ class ValidateChapterTest(unittest.TestCase):
                                  "contextual": {"relations": 0, "hebrew_units": 0, "french_units": 0, "single_original_relations": 0}}}
     def test_valid(self):
         self.assertEqual(module.validate(self.d, self.h, self.f), self.d["statistics"])
+    def test_shared_target_boundary(self):
+        extra = b'<chapter><w xml:id="b" ref="GEN 2:1!1" pos="noun">y</w></chapter>'
+        self.d["sources"]["macula"]["segments"] = [
+            {"blob": module.git_blob(self.h), "native_chapter": 1,
+             "native_first": 1, "native_last": 1, "lsg_first": 1, "lsg_last": 1},
+            {"blob": module.git_blob(extra), "native_chapter": 2,
+             "native_first": 1, "native_last": 1, "lsg_first": 1, "lsg_last": 1}]
+        self.d["relations"][0]["hebrew"].append("b")
+        self.d["statistics"].update(hebrew_units=2, lexical_content_units=2,
+                                    lexical_content_translation=2)
+        self.d["statistics"]["translation"].update(hebrew_units=2, single_original_relations=0)
+        self.assertEqual(module.validate(self.d, self.h, self.f, (extra,)),
+                         self.d["statistics"])
+
     def test_bad_offset(self):
         self.d["relations"][0]["french"][0][3] = 2
         with self.assertRaisesRegex(ValueError, "offset"):

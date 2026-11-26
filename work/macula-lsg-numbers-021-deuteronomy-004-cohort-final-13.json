@@ -1,0 +1,586 @@
+{
+  "schema_version": 1,
+  "status": "two_editorial_passes_complete_same_editor_against_pinned_projections",
+  "scope": "Numbers 21–36 and Deuteronomy 1–4",
+  "parent_commit": "2faf737a6e1dd06c5136f05a408604abd65b87cc",
+  "reconciliation": "work/macula-lsg-numbers-021-deuteronomy-004-reconciliation-08.json",
+  "review_records": [
+    "work/macula-lsg-numbers-028-029-semantic-review-09.json",
+    "work/macula-lsg-numbers-025-033-034-036-semantic-review-10.json",
+    "work/macula-lsg-numbers-021-023-024-030-semantic-review-11.json",
+    "work/macula-lsg-numbers-021-deuteronomy-004-semantic-review-deltas-12.json"
+  ],
+  "integrity_report": "work/macula-lsg-numbers-021-deuteronomy-004-integrity-13.json",
+  "totals": {
+    "chapters": 20,
+    "verses": 713,
+    "relations": 13915,
+    "hebrew_units": 14510,
+    "french_units": 15842,
+    "lexical_content_units": 7258,
+    "lexical_content_translation": 7164,
+    "review_operations": 696,
+    "projection_omissions": 8,
+    "unaccounted_french": 0
+  },
+  "lexical_coverage": 0.9870487737668779,
+  "minimum_chapter_coverage": 0.96875,
+  "chapters": [
+    {
+      "scope": "Num.21",
+      "path": "links/alignments/macula-lsg/numbers/021.json",
+      "verses": 35,
+      "statistics": {
+        "relations": 700,
+        "hebrew_units": 732,
+        "french_units": 813,
+        "lexical_content_units": 371,
+        "lexical_content_translation": 366,
+        "translation": {
+          "relations": 579,
+          "hebrew_units": 619,
+          "french_units": 795,
+          "single_original_relations": 552
+        },
+        "contextual": {
+          "relations": 121,
+          "hebrew_units": 140,
+          "french_units": 121,
+          "single_original_relations": 111
+        }
+      },
+      "coverage": 0.9865229110512129,
+      "omissions": 0,
+      "corrections": 36
+    },
+    {
+      "scope": "Num.22",
+      "path": "links/alignments/macula-lsg/numbers/022.json",
+      "verses": 41,
+      "statistics": {
+        "relations": 957,
+        "hebrew_units": 971,
+        "french_units": 1032,
+        "lexical_content_units": 462,
+        "lexical_content_translation": 456,
+        "translation": {
+          "relations": 765,
+          "hebrew_units": 794,
+          "french_units": 1003,
+          "single_original_relations": 748
+        },
+        "contextual": {
+          "relations": 192,
+          "hebrew_units": 209,
+          "french_units": 173,
+          "single_original_relations": 180
+        }
+      },
+      "coverage": 0.987012987012987,
+      "omissions": 0,
+      "corrections": 30
+    },
+    {
+      "scope": "Num.23",
+      "path": "links/alignments/macula-lsg/numbers/023.json",
+      "verses": 30,
+      "statistics": {
+        "relations": 560,
+        "hebrew_units": 586,
+        "french_units": 662,
+        "lexical_content_units": 292,
+        "lexical_content_translation": 291,
+        "translation": {
+          "relations": 466,
+          "hebrew_units": 504,
+          "french_units": 643,
+          "single_original_relations": 444
+        },
+        "contextual": {
+          "relations": 94,
+          "hebrew_units": 117,
+          "french_units": 91,
+          "single_original_relations": 85
+        }
+      },
+      "coverage": 0.9965753424657534,
+      "omissions": 0,
+      "corrections": 30
+    },
+    {
+      "scope": "Num.24",
+      "path": "links/alignments/macula-lsg/numbers/024.json",
+      "verses": 25,
+      "statistics": {
+        "relations": 437,
+        "hebrew_units": 465,
+        "french_units": 555,
+        "lexical_content_units": 253,
+        "lexical_content_translation": 251,
+        "translation": {
+          "relations": 374,
+          "hebrew_units": 407,
+          "french_units": 534,
+          "single_original_relations": 350
+        },
+        "contextual": {
+          "relations": 63,
+          "hebrew_units": 82,
+          "french_units": 100,
+          "single_original_relations": 56
+        }
+      },
+      "coverage": 0.9920948616600791,
+      "omissions": 0,
+      "corrections": 24
+    },
+    {
+      "scope": "Num.25",
+      "path": "links/alignments/macula-lsg/numbers/025.json",
+      "verses": 18,
+      "statistics": {
+        "relations": 323,
+        "hebrew_units": 343,
+        "french_units": 389,
+        "lexical_content_units": 182,
+        "lexical_content_translation": 182,
+        "translation": {
+          "relations": 276,
+          "hebrew_units": 297,
+          "french_units": 381,
+          "single_original_relations": 257
+        },
+        "contextual": {
+          "relations": 47,
+          "hebrew_units": 52,
+          "french_units": 73,
+          "single_original_relations": 44
+        }
+      },
+      "coverage": 1,
+      "omissions": 0,
+      "corrections": 13
+    },
+    {
+      "scope": "Num.26",
+      "path": "links/alignments/macula-lsg/numbers/026.json",
+      "verses": 65,
+      "statistics": {
+        "relations": 1007,
+        "hebrew_units": 1016,
+        "french_units": 1245,
+        "lexical_content_units": 599,
+        "lexical_content_translation": 597,
+        "translation": {
+          "relations": 884,
+          "hebrew_units": 920,
+          "french_units": 1190,
+          "single_original_relations": 864
+        },
+        "contextual": {
+          "relations": 123,
+          "hebrew_units": 170,
+          "french_units": 148,
+          "single_original_relations": 93
+        }
+      },
+      "coverage": 0.996661101836394,
+      "omissions": 0,
+      "corrections": 69
+    },
+    {
+      "scope": "Num.27",
+      "path": "links/alignments/macula-lsg/numbers/027.json",
+      "verses": 23,
+      "statistics": {
+        "relations": 473,
+        "hebrew_units": 501,
+        "french_units": 533,
+        "lexical_content_units": 237,
+        "lexical_content_translation": 235,
+        "translation": {
+          "relations": 385,
+          "hebrew_units": 414,
+          "french_units": 518,
+          "single_original_relations": 357
+        },
+        "contextual": {
+          "relations": 88,
+          "hebrew_units": 99,
+          "french_units": 112,
+          "single_original_relations": 80
+        }
+      },
+      "coverage": 0.9915611814345991,
+      "omissions": 0,
+      "corrections": 13
+    },
+    {
+      "scope": "Num.28",
+      "path": "links/alignments/macula-lsg/numbers/028.json",
+      "verses": 31,
+      "statistics": {
+        "relations": 536,
+        "hebrew_units": 554,
+        "french_units": 631,
+        "lexical_content_units": 317,
+        "lexical_content_translation": 310,
+        "translation": {
+          "relations": 417,
+          "hebrew_units": 444,
+          "french_units": 599,
+          "single_original_relations": 396
+        },
+        "contextual": {
+          "relations": 119,
+          "hebrew_units": 132,
+          "french_units": 125,
+          "single_original_relations": 111
+        }
+      },
+      "coverage": 0.9779179810725552,
+      "omissions": 1,
+      "corrections": 31
+    },
+    {
+      "scope": "Num.29",
+      "path": "links/alignments/macula-lsg/numbers/029.json",
+      "verses": 39,
+      "statistics": {
+        "relations": 702,
+        "hebrew_units": 740,
+        "french_units": 732,
+        "lexical_content_units": 406,
+        "lexical_content_translation": 403,
+        "translation": {
+          "relations": 519,
+          "hebrew_units": 577,
+          "french_units": 659,
+          "single_original_relations": 472
+        },
+        "contextual": {
+          "relations": 183,
+          "hebrew_units": 202,
+          "french_units": 203,
+          "single_original_relations": 167
+        }
+      },
+      "coverage": 0.9926108374384236,
+      "omissions": 0,
+      "corrections": 62
+    },
+    {
+      "scope": "Num.30",
+      "path": "links/alignments/macula-lsg/numbers/030.json",
+      "verses": 17,
+      "statistics": {
+        "relations": 363,
+        "hebrew_units": 405,
+        "french_units": 483,
+        "lexical_content_units": 186,
+        "lexical_content_translation": 185,
+        "translation": {
+          "relations": 296,
+          "hebrew_units": 352,
+          "french_units": 460,
+          "single_original_relations": 270
+        },
+        "contextual": {
+          "relations": 67,
+          "hebrew_units": 89,
+          "french_units": 74,
+          "single_original_relations": 54
+        }
+      },
+      "coverage": 0.9946236559139785,
+      "omissions": 0,
+      "corrections": 38
+    },
+    {
+      "scope": "Num.31",
+      "path": "links/alignments/macula-lsg/numbers/031.json",
+      "verses": 54,
+      "statistics": {
+        "relations": 967,
+        "hebrew_units": 1043,
+        "french_units": 1012,
+        "lexical_content_units": 553,
+        "lexical_content_translation": 538,
+        "translation": {
+          "relations": 749,
+          "hebrew_units": 832,
+          "french_units": 999,
+          "single_original_relations": 712
+        },
+        "contextual": {
+          "relations": 218,
+          "hebrew_units": 228,
+          "french_units": 178,
+          "single_original_relations": 213
+        }
+      },
+      "coverage": 0.972875226039783,
+      "omissions": 0,
+      "corrections": 42
+    },
+    {
+      "scope": "Num.32",
+      "path": "links/alignments/macula-lsg/numbers/032.json",
+      "verses": 42,
+      "statistics": {
+        "relations": 819,
+        "hebrew_units": 862,
+        "french_units": 917,
+        "lexical_content_units": 424,
+        "lexical_content_translation": 419,
+        "translation": {
+          "relations": 665,
+          "hebrew_units": 714,
+          "french_units": 902,
+          "single_original_relations": 628
+        },
+        "contextual": {
+          "relations": 154,
+          "hebrew_units": 160,
+          "french_units": 134,
+          "single_original_relations": 148
+        }
+      },
+      "coverage": 0.9882075471698113,
+      "omissions": 0,
+      "corrections": 42
+    },
+    {
+      "scope": "Num.33",
+      "path": "links/alignments/macula-lsg/numbers/033.json",
+      "verses": 56,
+      "statistics": {
+        "relations": 730,
+        "hebrew_units": 782,
+        "french_units": 822,
+        "lexical_content_units": 405,
+        "lexical_content_translation": 404,
+        "translation": {
+          "relations": 614,
+          "hebrew_units": 668,
+          "french_units": 806,
+          "single_original_relations": 571
+        },
+        "contextual": {
+          "relations": 116,
+          "hebrew_units": 118,
+          "french_units": 127,
+          "single_original_relations": 115
+        }
+      },
+      "coverage": 0.9975308641975309,
+      "omissions": 0,
+      "corrections": 46
+    },
+    {
+      "scope": "Num.34",
+      "path": "links/alignments/macula-lsg/numbers/034.json",
+      "verses": 29,
+      "statistics": {
+        "relations": 427,
+        "hebrew_units": 454,
+        "french_units": 479,
+        "lexical_content_units": 261,
+        "lexical_content_translation": 259,
+        "translation": {
+          "relations": 339,
+          "hebrew_units": 369,
+          "french_units": 465,
+          "single_original_relations": 319
+        },
+        "contextual": {
+          "relations": 88,
+          "hebrew_units": 105,
+          "french_units": 118,
+          "single_original_relations": 80
+        }
+      },
+      "coverage": 0.9923371647509579,
+      "omissions": 0,
+      "corrections": 24
+    },
+    {
+      "scope": "Num.35",
+      "path": "links/alignments/macula-lsg/numbers/035.json",
+      "verses": 34,
+      "statistics": {
+        "relations": 730,
+        "hebrew_units": 766,
+        "french_units": 889,
+        "lexical_content_units": 352,
+        "lexical_content_translation": 341,
+        "translation": {
+          "relations": 568,
+          "hebrew_units": 613,
+          "french_units": 861,
+          "single_original_relations": 541
+        },
+        "contextual": {
+          "relations": 162,
+          "hebrew_units": 172,
+          "french_units": 152,
+          "single_original_relations": 153
+        }
+      },
+      "coverage": 0.96875,
+      "omissions": 0,
+      "corrections": 36
+    },
+    {
+      "scope": "Num.36",
+      "path": "links/alignments/macula-lsg/numbers/036.json",
+      "verses": 13,
+      "statistics": {
+        "relations": 278,
+        "hebrew_units": 309,
+        "french_units": 368,
+        "lexical_content_units": 182,
+        "lexical_content_translation": 180,
+        "translation": {
+          "relations": 255,
+          "hebrew_units": 286,
+          "french_units": 360,
+          "single_original_relations": 237
+        },
+        "contextual": {
+          "relations": 23,
+          "hebrew_units": 26,
+          "french_units": 32,
+          "single_original_relations": 21
+        }
+      },
+      "coverage": 0.989010989010989,
+      "omissions": 0,
+      "corrections": 15
+    },
+    {
+      "scope": "Deut.1",
+      "path": "links/alignments/macula-lsg/deuteronomy/001.json",
+      "verses": 46,
+      "statistics": {
+        "relations": 1058,
+        "hebrew_units": 1093,
+        "french_units": 1145,
+        "lexical_content_units": 473,
+        "lexical_content_translation": 469,
+        "translation": {
+          "relations": 873,
+          "hebrew_units": 916,
+          "french_units": 1124,
+          "single_original_relations": 840
+        },
+        "contextual": {
+          "relations": 185,
+          "hebrew_units": 198,
+          "french_units": 170,
+          "single_original_relations": 176
+        }
+      },
+      "coverage": 0.9915433403805497,
+      "omissions": 0,
+      "corrections": 40
+    },
+    {
+      "scope": "Deut.2",
+      "path": "links/alignments/macula-lsg/deuteronomy/002.json",
+      "verses": 37,
+      "statistics": {
+        "relations": 811,
+        "hebrew_units": 832,
+        "french_units": 921,
+        "lexical_content_units": 392,
+        "lexical_content_translation": 381,
+        "translation": {
+          "relations": 669,
+          "hebrew_units": 698,
+          "french_units": 897,
+          "single_original_relations": 646
+        },
+        "contextual": {
+          "relations": 142,
+          "hebrew_units": 162,
+          "french_units": 128,
+          "single_original_relations": 128
+        }
+      },
+      "coverage": 0.9719387755102041,
+      "omissions": 7,
+      "corrections": 36
+    },
+    {
+      "scope": "Deut.3",
+      "path": "links/alignments/macula-lsg/deuteronomy/003.json",
+      "verses": 29,
+      "statistics": {
+        "relations": 740,
+        "hebrew_units": 743,
+        "french_units": 770,
+        "lexical_content_units": 338,
+        "lexical_content_translation": 335,
+        "translation": {
+          "relations": 572,
+          "hebrew_units": 590,
+          "french_units": 740,
+          "single_original_relations": 558
+        },
+        "contextual": {
+          "relations": 168,
+          "hebrew_units": 188,
+          "french_units": 159,
+          "single_original_relations": 154
+        }
+      },
+      "coverage": 0.9911242603550295,
+      "omissions": 0,
+      "corrections": 27
+    },
+    {
+      "scope": "Deut.4",
+      "path": "links/alignments/macula-lsg/deuteronomy/004.json",
+      "verses": 49,
+      "statistics": {
+        "relations": 1297,
+        "hebrew_units": 1313,
+        "french_units": 1444,
+        "lexical_content_units": 573,
+        "lexical_content_translation": 562,
+        "translation": {
+          "relations": 1063,
+          "hebrew_units": 1096,
+          "french_units": 1395,
+          "single_original_relations": 1040
+        },
+        "contextual": {
+          "relations": 234,
+          "hebrew_units": 271,
+          "french_units": 217,
+          "single_original_relations": 216
+        }
+      },
+      "coverage": 0.9808027923211169,
+      "omissions": 0,
+      "corrections": 42
+    }
+  ],
+  "integrity": {
+    "all_review_operations_replayed": true,
+    "all_projected_french_tuples_exact": true,
+    "all_native_ids_accounted_including_projection_omissions": true,
+    "duplicate_relation_signatures": 0,
+    "source_changes": false,
+    "validator_shared_boundary_support_added": true,
+    "regression_fixture_added_not_executed": true,
+    "publication_validation_executed": false
+  },
+  "limitations": [
+    "Same-editor editorial acceptance is restricted to pinned working projections under issue #200; no independent semantic certification.",
+    "Exact upstream OSIS byte verification of the two projection omissions and individual UBS index checks remain open for publication; both files exceed connector read limits. Dictionary bridge pinned revision is confirmed, no new dictionary assignments.",
+    "Generic shared-target-boundary validator change has not been executed against actual source bytes or automated tests, per owner instruction to defer publication tests. No release authorized."
+  ],
+  "next": "Deuteronomy 5 onward; retain compact cohort representation and one final integration commit per cohort."
+}

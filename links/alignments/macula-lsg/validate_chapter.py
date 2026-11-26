@@ -48,14 +48,18 @@ def validate(ledger, hebrew, french, macula_extra=()):
                      "lsg_first": first, "lsg_last": last}]
     require(len(segments) == 1 + len(macula_extra), "MACULA segment count mismatch")
     require(segments[0]["blob"] == sources["macula"]["blob"], "Primary MACULA lock mismatch")
-    covered = []
+    covered = set()
     for segment, data in zip(segments, (hebrew, *macula_extra)):
         require(git_blob(data) == segment["blob"], "MACULA segment blob mismatch")
         nc = segment["native_chapter"]
         nf, nl = segment["native_first"], segment["native_last"]
         lf, ll = segment["lsg_first"], segment["lsg_last"]
         require(1 <= nf <= nl and first <= lf <= ll <= last, "Invalid segment bounds")
-        covered.extend(range(lf, ll + 1))
+        # Adjacent native source segments may contribute to the same target
+        # boundary verse, while still covering the target inventory in order.
+        require(not covered or lf in {max(covered), max(covered) + 1},
+                "Disordered or gapped target segments")
+        covered.update(range(lf, ll + 1))
         native_verses = set()
         root = ET.fromstring(data)
         for node in root.iter("w"):
@@ -67,7 +71,7 @@ def validate(ledger, hebrew, french, macula_extra=()):
                 original[key] = node.get("pos")
                 native_verses.add(int(m.group(2)))
         require(native_verses == set(range(nf, nl + 1)), "Incomplete native segment")
-    require(covered == list(range(first, last + 1)), "Target segment inventory mismatch")
+    require(covered == set(range(first, last + 1)), "Target segment inventory mismatch")
     require(bool(original), "No source words")
     prose = reading_text(french, book, chapter, first, last)
     digest = hashlib.sha256("\n".join(prose.values()).encode()).hexdigest()
