@@ -1,0 +1,486 @@
+{
+  "schema_version": 1,
+  "status": "partial_second_pass_not_certified",
+  "scope": "Numbers 11–20 simultaneous cohort",
+  "base_commit": "e19036e731c0a38c5656a8f7df8217d24e6801e2",
+  "first_pass_files": "work/macula-lsg-numbers-{011..020}-candidates.json",
+  "observations": {
+    "chapters": 10,
+    "verse_entries": 316,
+    "provisional_relations": 6775,
+    "original_ids_accounted_for": 6909,
+    "unknown_original_ids_observed": 0,
+    "out_of_bounds_french_spans_observed": 0,
+    "source_macula_blob_matches": 10,
+    "limitations": "Integrity observations only: original ID membership/accounting, candidate source blob labels and span bounds checked against committed projections; exact token ordinal validation, bidirectionality, dictionary linkage, and full semantic review remain open. No automated publication validation."
+  },
+  "reviewed_passages": [
+    "Num 11:1–2",
+    "Num 11:10–12",
+    "Num 12:1",
+    "Num 13:1",
+    "Num 14:1",
+    "Num 14:44",
+    "Num 15:1",
+    "Num 16:1",
+    "Num 17:1",
+    "Num 18:1",
+    "Num 19:1",
+    "Num 20:1"
+  ],
+  "review_notes": [
+    "Num 11:10–11: five original IDs in the last clause of Hebrew 11:10 correctly reach French 11:11 opening; the following Hebrew Moses is represented by the pronoun il. Retain the cross-verse links.",
+    "Num 13:1, 15:1, 17:1 and 19:1: opening speech formula; French conjunction before dit reflects the Hebrew infinitival speech introduction; retain contextual distinction.",
+    "Num 16:1: se révolta is an interpretive rendering of the opening laqach in context; tous trois is French explicitation of the named persons, not a Hebrew numeral. Retain contextual status for the expansion.",
+    "Num 18:1: idiomatic rendering of bearing guilt includes the contextual French commises; do not identify it as a separate Hebrew lexical item.",
+    "Num 20:1: Hebrew repeated locative is condensed in French."
+  ],
+  "omission_review": [
+    {
+      "reference": "Num 11:12",
+      "id": "o040110120041",
+      "status": "confirmed_not_explicit_in_pinned_projection",
+      "note": "Hebrew kol occurs before this people; French ce peuple has no explicit tout. Do not invent a lexical match. Exact release-byte verification remains a separate publication gate."
+    },
+    {
+      "reference": "Num 14:44",
+      "id": "o040140440081",
+      "status": "confirmed_not_explicit_in_pinned_projection",
+      "note": "The Hebrew divine name follows covenant; French l’arche de l’alliance has no explicit divine name. Do not supply one. Exact release-byte verification remains a separate publication gate."
+    }
+  ],
+  "correction_operations": [
+    {
+      "chapter": 11,
+      "verse": 1,
+      "before": [
+        {
+          "hebrew": [
+            "o040110010011"
+          ],
+          "french": [
+            [
+              1,
+              1,
+              0,
+              2
+            ]
+          ],
+          "kind": "contextual",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040110010011"
+          ],
+          "french": [
+            [
+              1,
+              3,
+              10,
+              17
+            ]
+          ],
+          "kind": "contextual",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "Initial waw is an implicit discourse link to the predicate, not the French definite article."
+    },
+    {
+      "chapter": 11,
+      "verse": 1,
+      "before": [
+        {
+          "hebrew": [
+            "o040110010091"
+          ],
+          "french": [
+            [
+              1,
+              14,
+              90,
+              92
+            ]
+          ],
+          "kind": "contextual",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040110010091"
+          ],
+          "french": [
+            [
+              1,
+              16,
+              100,
+              110
+            ]
+          ],
+          "kind": "contextual",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "Waw introduces the anger predicate; it does not correspond to the possessive sa."
+    },
+    {
+      "chapter": 11,
+      "verse": 1,
+      "before": [
+        {
+          "hebrew": [
+            "o040110010111"
+          ],
+          "french": [
+            [
+              1,
+              17,
+              112,
+              114
+            ]
+          ],
+          "kind": "contextual",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040110010111"
+          ],
+          "french": [
+            [
+              1,
+              21,
+              132,
+              140
+            ]
+          ],
+          "kind": "contextual",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "Waw introduces the burning predicate; it does not correspond to the definite article le."
+    },
+    {
+      "chapter": 11,
+      "verse": 2,
+      "before": [
+        {
+          "hebrew": [
+            "o040110020011"
+          ],
+          "french": [
+            [
+              2,
+              1,
+              0,
+              2
+            ]
+          ],
+          "kind": "contextual",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040110020011"
+          ],
+          "french": [
+            [
+              2,
+              3,
+              10,
+              14
+            ]
+          ],
+          "kind": "contextual",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "Initial waw attaches to the cry event, not to the French article."
+    },
+    {
+      "chapter": 11,
+      "verse": 2,
+      "before": [
+        {
+          "hebrew": [
+            "o040110020051"
+          ],
+          "french": [
+            [
+              2,
+              6,
+              24,
+              29
+            ]
+          ],
+          "kind": "contextual",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040110020051"
+          ],
+          "french": [
+            [
+              2,
+              7,
+              30,
+              34
+            ]
+          ],
+          "kind": "contextual",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "Implicit coordination introduces the prayer event, not the name Moses."
+    },
+    {
+      "chapter": 12,
+      "verse": 1,
+      "before": [
+        {
+          "hebrew": [
+            "o040120010051"
+          ],
+          "french": [
+            [
+              1,
+              7,
+              38,
+              40
+            ]
+          ],
+          "kind": "translation",
+          "status": "manual_first_pass_pending_audit"
+        },
+        {
+          "hebrew": [
+            "o040120010061"
+          ],
+          "french": [
+            [
+              1,
+              8,
+              41,
+              46
+            ],
+            [
+              1,
+              9,
+              47,
+              49
+            ]
+          ],
+          "kind": "translation",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040120010051",
+            "o040120010061"
+          ],
+          "french": [
+            [
+              1,
+              7,
+              38,
+              40
+            ],
+            [
+              1,
+              8,
+              41,
+              46
+            ],
+            [
+              1,
+              9,
+              47,
+              49
+            ]
+          ],
+          "kind": "translation",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "The compound expression al odot corresponds to the complete French expression au sujet de; neither component alone conveys the whole construction."
+    },
+    {
+      "chapter": 14,
+      "verse": 1,
+      "before": [
+        {
+          "hebrew": [
+            "o040140010051"
+          ],
+          "french": [
+            [
+              1,
+              9,
+              46,
+              50
+            ]
+          ],
+          "kind": "contextual",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040140010051"
+          ],
+          "french": [
+            [
+              1,
+              4,
+              24,
+              26
+            ],
+            [
+              1,
+              5,
+              27,
+              31
+            ],
+            [
+              1,
+              8,
+              42,
+              45
+            ],
+            [
+              1,
+              9,
+              46,
+              50
+            ]
+          ],
+          "kind": "contextual",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "The object marker governs the Hebrew voice expression rendered by both French voice and cries, not only cris."
+    },
+    {
+      "chapter": 20,
+      "verse": 1,
+      "before": [
+        {
+          "hebrew": [
+            "o040200010171"
+          ],
+          "french": [
+            [
+              1,
+              29,
+              159,
+              167
+            ]
+          ],
+          "kind": "contextual",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040200010171"
+          ],
+          "french": [
+            [
+              1,
+              22,
+              123,
+              125
+            ],
+            [
+              1,
+              29,
+              159,
+              167
+            ]
+          ],
+          "kind": "contextual",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "The second sham is not repeated in French: the shared locative là also scopes over the burial; keep the burial anchor as context."
+    },
+    {
+      "chapter": 18,
+      "verse": 1,
+      "before": [
+        {
+          "hebrew": [
+            "o040180010131"
+          ],
+          "french": [
+            [
+              1,
+              24,
+              121,
+              125
+            ],
+            [
+              1,
+              25,
+              126,
+              128
+            ]
+          ],
+          "kind": "translation",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040180010131"
+          ],
+          "french": [
+            [
+              1,
+              25,
+              126,
+              128
+            ]
+          ],
+          "kind": "translation",
+          "status": "editorial_review_corrected"
+        },
+        {
+          "hebrew": [
+            "o040180010131",
+            "o040180010132"
+          ],
+          "french": [
+            [
+              1,
+              24,
+              121,
+              125
+            ]
+          ],
+          "kind": "contextual",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "The Hebrew article corresponds to le, not dans; the latter expresses the contextual relationship of the sanctuary to the iniquities."
+    }
+  ],
+  "next": "Apply the recorded replacements when materializing chapter review files; reread remaining 301 verse entries and resolve all outstanding semantic and exact-offset issues before checking any Audit boxes. No canonical ledgers, publication tests, source changes, or independent certification."
+}
