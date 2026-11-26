@@ -1,0 +1,61 @@
+{
+  "status": "all_713_verse_rows_reviewed_pending_dictionary_and_final_audit",
+  "scope": "Numbers 21–36 and Deuteronomy 1–4",
+  "base_commit": "5b1dd50af391178f3c10b965bd8863f7dd409ea0",
+  "reconciliation": "work/macula-lsg-numbers-021-deuteronomy-004-reconciliation-08.json",
+  "previous_progress": "work/macula-lsg-numbers-021-deuteronomy-004-review-progress-11.json",
+  "new_review": "work/macula-lsg-numbers-021-deuteronomy-004-semantic-review-deltas-12.json",
+  "review_delta_blob": "8ab49c4dfcada2c6cc48bf4259fed22e30488219",
+  "new_review_statistics": {
+    "reviewed_verses": 420,
+    "corrections": 377,
+    "relations_before": 9082,
+    "relations_after": 8859,
+    "french_remaining_before": 147,
+    "french_remaining_after": 0
+  },
+  "cumulative": {
+    "reviewed_verses": 713,
+    "expected_verses": 713,
+    "reviewed_chapters": [
+      "Num.21",
+      "Num.23",
+      "Num.24",
+      "Num.25",
+      "Num.28",
+      "Num.29",
+      "Num.30",
+      "Num.33",
+      "Num.34",
+      "Num.36",
+      "Num.22",
+      "Num.26",
+      "Num.27",
+      "Num.31",
+      "Num.32",
+      "Num.35",
+      "Deut.1",
+      "Deut.2",
+      "Deut.3",
+      "Deut.4"
+    ],
+    "review_operations": 696,
+    "provisional_relations": 13915,
+    "unresolved_french": 0,
+    "unresolved_hebrew_cohort": 8,
+    "final_audit_complete": 0,
+    "completed_bible_chapters": 137
+  },
+  "checks": [
+    "All 420 remaining verse rows displayed with pinned Hebrew/French projections and reviewed against draft relations; compact correction vectors expanded into one delta artifact.",
+    "Replayed all 377 changes against locked reconciled blobs; verified preimages, no duplicate added relations, exact occurrence membership, no lost previously accounted Hebrew IDs, and recomputed relation and French coverage counts.",
+    "Contextual coverage is not lexical equivalence or final semantic certification."
+  ],
+  "limitations": [
+    "Dictionary linkage and final editorial acceptance remain open. No chapter checkbox changed.",
+    "The eight unmatched Hebrew units in Num 28:26 and Deut 2:31 still require exact upstream OSIS verification; no invented equivalent or source modification.",
+    "Replaying the delta requires applying each before/after record in stored order to the corresponding immutable reconciled chapter blob; final canonical ledger integration is pending.",
+    "No publication tests or release."
+  ],
+  "next": "Verify dictionary linkage, resolve or explicitly document the eight unmatched native units against the pinned upstream source, integrate reviewed relations into final ledgers and complete final acceptance before checking chapter boxes."
+}
