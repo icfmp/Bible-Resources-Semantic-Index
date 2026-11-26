@@ -10,43 +10,169 @@
   "reports": [
     {
       "ch": "006",
-      "verses": 27,
       "mappedVerses": 27,
       "unresolvedH": 0,
-      "unresolvedF": 9,
-      "errors": []
+      "unresolvedF": 0,
+      "errors": [],
+      "remaining": []
     },
     {
       "ch": "007",
-      "verses": 89,
-      "mappedVerses": 88,
-      "unresolvedH": 29,
-      "unresolvedF": 62,
-      "errors": []
+      "mappedVerses": 89,
+      "unresolvedH": 0,
+      "unresolvedF": 0,
+      "errors": [],
+      "remaining": []
     },
     {
       "ch": "008",
-      "verses": 26,
-      "mappedVerses": 8,
-      "unresolvedH": 418,
-      "unresolvedF": 489,
-      "errors": []
+      "mappedVerses": 25,
+      "unresolvedH": 2,
+      "unresolvedF": 4,
+      "errors": [],
+      "remaining": [
+        {
+          "v": "8",
+          "H": 0,
+          "F": [
+            [
+              4,
+              "un"
+            ]
+          ]
+        },
+        {
+          "v": "12",
+          "H": 2,
+          "F": []
+        },
+        {
+          "v": "15",
+          "H": 0,
+          "F": [
+            [
+              14,
+              "ainsi"
+            ],
+            [
+              15,
+              "que"
+            ]
+          ]
+        },
+        {
+          "v": "16",
+          "H": 0,
+          "F": [
+            [
+              23,
+              "de"
+            ]
+          ]
+        }
+      ]
     },
     {
       "ch": "009",
-      "verses": 23,
-      "mappedVerses": 7,
-      "unresolvedH": 371,
-      "unresolvedF": 400,
-      "errors": []
+      "mappedVerses": 23,
+      "unresolvedH": 0,
+      "unresolvedF": 4,
+      "errors": [],
+      "remaining": [
+        {
+          "v": "10",
+          "H": 0,
+          "F": [
+            [
+              22,
+              "est"
+            ]
+          ]
+        },
+        {
+          "v": "13",
+          "H": 0,
+          "F": [
+            [
+              7,
+              "qui"
+            ]
+          ]
+        },
+        {
+          "v": "16",
+          "H": 0,
+          "F": [
+            [
+              12,
+              "elle"
+            ],
+            [
+              13,
+              "avait"
+            ]
+          ]
+        }
+      ]
     },
     {
       "ch": "010",
-      "verses": 36,
-      "mappedVerses": 7,
-      "unresolvedH": 491,
-      "unresolvedF": 606,
-      "errors": []
+      "mappedVerses": 36,
+      "unresolvedH": 0,
+      "unresolvedF": 5,
+      "errors": [],
+      "remaining": [
+        {
+          "v": "8",
+          "H": 0,
+          "F": [
+            [
+              16,
+              "et"
+            ]
+          ]
+        },
+        {
+          "v": "31",
+          "H": 0,
+          "F": [
+            [
+              2,
+              "Moïse"
+            ]
+          ]
+        },
+        {
+          "v": "34",
+          "H": 0,
+          "F": [
+            [
+              5,
+              "était"
+            ]
+          ]
+        },
+        {
+          "v": "35",
+          "H": 0,
+          "F": [
+            [
+              9,
+              "que"
+            ]
+          ]
+        },
+        {
+          "v": "36",
+          "H": 0,
+          "F": [
+            [
+              3,
+              "on"
+            ]
+          ]
+        }
+      ]
     }
   ]
 }
