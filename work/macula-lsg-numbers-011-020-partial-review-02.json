@@ -1,0 +1,3049 @@
+{
+  "schema_version": 1,
+  "status": "partial_second_pass_not_certified",
+  "scope": "Numbers 11–20 simultaneous cohort",
+  "base_commit": "0e82543e4baf326000b36481f745556f9e810d38",
+  "draft_base_commit": "e19036e731c0a38c5656a8f7df8217d24e6801e2",
+  "prior_review": "work/macula-lsg-numbers-011-020-partial-review.json",
+  "reviewed_passages": [
+    "Num 11:3–9",
+    "Num 12:2–7",
+    "Num 13:2–7",
+    "Num 14:2–6",
+    "Num 15:2–6",
+    "Num 16:2–6",
+    "Num 17:2–6",
+    "Num 18:2–6",
+    "Num 19:2–6",
+    "Num 20:2–6"
+  ],
+  "reviewed_verse_entries_this_pass": 54,
+  "cumulative_reviewed_verse_entries": 69,
+  "remaining_verse_entries": 247,
+  "review_notes": [
+    "Numbers 12:2–3: the Lord hearing the complaint in native verse 2 maps to the beginning of French verse 3; retain cross-verse links.",
+    "Numbers 17:2–3: native 17:17 ending on writing each name maps to opening of LSG 17:3; preserve native chapter and verse identifiers.",
+    "Numbers 13:4–7: tribal list parallel structures are retained with distinct occurrence IDs.",
+    "Numbers 15:4–6: offering terminology and quantities reread in context; preserve unit hin and distinction between grain offering and libation.",
+    "This pass is a contextual reread of the specified entries, not a complete semantic audit; unresolved exact-offset checks, dictionary linkage, and final bidirectional ledger remain open."
+  ],
+  "correction_operations": [
+    {
+      "chapter": 11,
+      "verse": 3,
+      "before": [
+        {
+          "hebrew": [
+            "o040110030011"
+          ],
+          "french": [
+            [
+              3,
+              1,
+              0,
+              2
+            ]
+          ],
+          "kind": "contextual",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040110030011"
+          ],
+          "french": [
+            [
+              3,
+              2,
+              3,
+              8
+            ]
+          ],
+          "kind": "contextual",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "Unexpressed narrative waw attaches to the naming event."
+    },
+    {
+      "chapter": 11,
+      "verse": 4,
+      "before": [
+        {
+          "hebrew": [
+            "o040110040011"
+          ],
+          "french": [
+            [
+              4,
+              1,
+              0,
+              2
+            ]
+          ],
+          "kind": "contextual",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040110040011"
+          ],
+          "french": [
+            [
+              4,
+              11,
+              57,
+              60
+            ],
+            [
+              4,
+              12,
+              61,
+              66
+            ]
+          ],
+          "kind": "contextual",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "Initial narrative waw attaches to the main event rather than the article."
+    },
+    {
+      "chapter": 11,
+      "verse": 6,
+      "before": [
+        {
+          "hebrew": [
+            "o040110060041"
+          ],
+          "french": [
+            [
+              6,
+              6,
+              37,
+              41
+            ],
+            [
+              6,
+              7,
+              42,
+              46
+            ]
+          ],
+          "kind": "translation",
+          "status": "manual_first_pass_pending_audit"
+        },
+        {
+          "hebrew": [
+            "o040110060051"
+          ],
+          "french": [
+            [
+              6,
+              7,
+              42,
+              46
+            ]
+          ],
+          "kind": "translation",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040110060041",
+            "o040110060051"
+          ],
+          "french": [
+            [
+              6,
+              6,
+              37,
+              41
+            ],
+            [
+              6,
+              7,
+              42,
+              46
+            ]
+          ],
+          "kind": "translation",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "Negative existential and totality jointly yield the idiomatic plus rien; do not identify kol alone with rien."
+    },
+    {
+      "chapter": 11,
+      "verse": 7,
+      "before": [
+        {
+          "hebrew": [
+            "o040110070011"
+          ],
+          "french": [
+            [
+              7,
+              1,
+              0,
+              2
+            ]
+          ],
+          "kind": "contextual",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040110070011"
+          ],
+          "french": [
+            [
+              7,
+              3,
+              9,
+              20
+            ],
+            [
+              7,
+              4,
+              21,
+              22
+            ]
+          ],
+          "kind": "contextual",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "Unexpressed conjunction anchors the comparison rather than the article."
+    },
+    {
+      "chapter": 11,
+      "verse": 7,
+      "before": [
+        {
+          "hebrew": [
+            "o040110070052"
+          ],
+          "french": [
+            [
+              7,
+              12,
+              59,
+              70
+            ]
+          ],
+          "kind": "translation",
+          "status": "manual_first_pass_pending_audit"
+        },
+        {
+          "hebrew": [
+            "o040110070053"
+          ],
+          "french": [
+            [
+              7,
+              11,
+              53,
+              58
+            ]
+          ],
+          "kind": "translation",
+          "status": "manual_first_pass_pending_audit"
+        },
+        {
+          "hebrew": [
+            "o040110070061"
+          ],
+          "french": [
+            [
+              7,
+              13,
+              71,
+              73
+            ]
+          ],
+          "kind": "translation",
+          "status": "manual_first_pass_pending_audit"
+        },
+        {
+          "hebrew": [
+            "o040110070062"
+          ],
+          "french": [
+            [
+              7,
+              12,
+              59,
+              70
+            ]
+          ],
+          "kind": "translation",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040110070052",
+            "o040110070053",
+            "o040110070061",
+            "o040110070062"
+          ],
+          "french": [
+            [
+              7,
+              11,
+              53,
+              58
+            ],
+            [
+              7,
+              12,
+              59,
+              70
+            ],
+            [
+              7,
+              13,
+              71,
+              73
+            ]
+          ],
+          "kind": "translation",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "The two appearance nouns, possessive and comparison preposition are compressed into a single French comparison construction."
+    },
+    {
+      "chapter": 11,
+      "verse": 8,
+      "before": [
+        {
+          "hebrew": [
+            "o040110080041"
+          ],
+          "french": [
+            [
+              8,
+              8,
+              42,
+              44
+            ]
+          ],
+          "kind": "contextual",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040110080041"
+          ],
+          "french": [
+            [
+              8,
+              10,
+              48,
+              55
+            ]
+          ],
+          "kind": "contextual",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "Implicit coordination attaches to the grinding event rather than the subject pronoun."
+    },
+    {
+      "chapter": 11,
+      "verse": 8,
+      "before": [
+        {
+          "hebrew": [
+            "o040110080091"
+          ],
+          "french": [
+            [
+              8,
+              20,
+              103,
+              105
+            ]
+          ],
+          "kind": "contextual",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040110080091"
+          ],
+          "french": [
+            [
+              8,
+              22,
+              109,
+              116
+            ]
+          ],
+          "kind": "contextual",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "Implicit coordination attaches to the cooking event rather than the subject pronoun."
+    },
+    {
+      "chapter": 11,
+      "verse": 8,
+      "before": [
+        {
+          "hebrew": [
+            "o040110080151"
+          ],
+          "french": [
+            [
+              8,
+              32,
+              163,
+              165
+            ],
+            [
+              8,
+              33,
+              166,
+              170
+            ]
+          ],
+          "kind": "translation",
+          "status": "manual_first_pass_pending_audit"
+        },
+        {
+          "hebrew": [
+            "o040110080162"
+          ],
+          "french": [
+            [
+              8,
+              33,
+              166,
+              170
+            ]
+          ],
+          "kind": "translation",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040110080151",
+            "o040110080162"
+          ],
+          "french": [
+            [
+              8,
+              32,
+              163,
+              165
+            ],
+            [
+              8,
+              33,
+              166,
+              170
+            ]
+          ],
+          "kind": "translation",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "The repeated Hebrew taste noun has a single French realization; the second occurrence is not an independent French word."
+    },
+    {
+      "chapter": 12,
+      "verse": 2,
+      "before": [
+        {
+          "hebrew": [
+            "o040120020011"
+          ],
+          "french": [
+            [
+              2,
+              1,
+              0,
+              3
+            ]
+          ],
+          "kind": "contextual",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040120020011"
+          ],
+          "french": [
+            [
+              2,
+              2,
+              4,
+              10
+            ]
+          ],
+          "kind": "contextual",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "Unexpressed initial waw attaches to the reporting predicate."
+    },
+    {
+      "chapter": 12,
+      "verse": 4,
+      "before": [
+        {
+          "hebrew": [
+            "o040120040011"
+          ],
+          "french": [
+            [
+              4,
+              1,
+              0,
+              7
+            ]
+          ],
+          "kind": "contextual",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040120040011"
+          ],
+          "french": [
+            [
+              4,
+              3,
+              18,
+              21
+            ]
+          ],
+          "kind": "contextual",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "Initial waw introduces the speech event, not the adverb sudden."
+    },
+    {
+      "chapter": 12,
+      "verse": 5,
+      "before": [
+        {
+          "hebrew": [
+            "o040120050011"
+          ],
+          "french": [
+            [
+              5,
+              1,
+              0,
+              9
+            ]
+          ],
+          "kind": "contextual",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040120050011"
+          ],
+          "french": [
+            [
+              5,
+              2,
+              10,
+              19
+            ]
+          ],
+          "kind": "contextual",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "Implicit narrative coordination attaches to the descent."
+    },
+    {
+      "chapter": 12,
+      "verse": 5,
+      "before": [
+        {
+          "hebrew": [
+            "o040120050081"
+          ],
+          "french": [
+            [
+              5,
+              17,
+              83,
+              85
+            ]
+          ],
+          "kind": "contextual",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040120050081"
+          ],
+          "french": [
+            [
+              5,
+              18,
+              86,
+              92
+            ]
+          ],
+          "kind": "contextual",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "Implicit narrative coordination attaches to the calling event."
+    },
+    {
+      "chapter": 12,
+      "verse": 5,
+      "before": [
+        {
+          "hebrew": [
+            "o040120050121"
+          ],
+          "french": [
+            [
+              5,
+              24,
+              126,
+              130
+            ],
+            [
+              5,
+              25,
+              131,
+              134
+            ],
+            [
+              5,
+              26,
+              135,
+              139
+            ]
+          ],
+          "kind": "translation",
+          "status": "manual_first_pass_pending_audit"
+        },
+        {
+          "hebrew": [
+            "o040120050122"
+          ],
+          "french": [
+            [
+              5,
+              22,
+              109,
+              112
+            ]
+          ],
+          "kind": "contextual",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040120050121",
+            "o040120050122"
+          ],
+          "french": [
+            [
+              5,
+              24,
+              126,
+              130
+            ],
+            [
+              5,
+              25,
+              131,
+              134
+            ],
+            [
+              5,
+              26,
+              135,
+              139
+            ]
+          ],
+          "kind": "translation",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "The numeral with its pronominal suffix is rendered by tous les deux, not the relative pronoun qui."
+    },
+    {
+      "chapter": 12,
+      "verse": 7,
+      "before": [
+        {
+          "hebrew": [
+            "o040120070081"
+          ],
+          "french": [
+            [
+              7,
+              10,
+              46,
+              48
+            ],
+            [
+              7,
+              11,
+              49,
+              52
+            ]
+          ],
+          "kind": "translation",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040120070081"
+          ],
+          "french": [
+            [
+              7,
+              10,
+              46,
+              48
+            ]
+          ],
+          "kind": "translation",
+          "status": "editorial_review_corrected"
+        },
+        {
+          "hebrew": [
+            "o040120070081"
+          ],
+          "french": [
+            [
+              7,
+              11,
+              49,
+              52
+            ]
+          ],
+          "kind": "contextual",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "The independent pronoun corresponds to Il; the copula is supplied by French nominal predication."
+    },
+    {
+      "chapter": 13,
+      "verse": 2,
+      "before": [
+        {
+          "hebrew": [
+            "o040130020131"
+          ],
+          "french": [
+            [
+              2,
+              18,
+              98,
+              100
+            ],
+            [
+              2,
+              19,
+              101,
+              106
+            ]
+          ],
+          "kind": "translation",
+          "status": "manual_first_pass_pending_audit"
+        },
+        {
+          "hebrew": [
+            "o040130020141"
+          ],
+          "french": [
+            [
+              2,
+              18,
+              98,
+              100
+            ]
+          ],
+          "kind": "translation",
+          "status": "manual_first_pass_pending_audit"
+        },
+        {
+          "hebrew": [
+            "o040130020151"
+          ],
+          "french": [
+            [
+              2,
+              21,
+              110,
+              117
+            ]
+          ],
+          "kind": "translation",
+          "status": "manual_first_pass_pending_audit"
+        },
+        {
+          "hebrew": [
+            "o040130020161"
+          ],
+          "french": [
+            [
+              2,
+              21,
+              110,
+              117
+            ]
+          ],
+          "kind": "contextual",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040130020131",
+            "o040130020141",
+            "o040130020151",
+            "o040130020161"
+          ],
+          "french": [
+            [
+              2,
+              18,
+              98,
+              100
+            ],
+            [
+              2,
+              19,
+              101,
+              106
+            ],
+            [
+              2,
+              21,
+              110,
+              117
+            ]
+          ],
+          "kind": "translation",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "Distributive repetition ish echad ish echad is rendered by un homme ... chacune; preserve the joint, discontinuous relation."
+    },
+    {
+      "chapter": 13,
+      "verse": 3,
+      "before": [
+        {
+          "hebrew": [
+            "o040130030011"
+          ],
+          "french": [
+            [
+              3,
+              1,
+              0,
+              5
+            ]
+          ],
+          "kind": "contextual",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040130030011"
+          ],
+          "french": [
+            [
+              3,
+              3,
+              10,
+              16
+            ]
+          ],
+          "kind": "contextual",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "Narrative waw anchors the sending predicate."
+    },
+    {
+      "chapter": 13,
+      "verse": 3,
+      "before": [
+        {
+          "hebrew": [
+            "o040130030061"
+          ],
+          "french": [
+            [
+              3,
+              8,
+              37,
+              44
+            ]
+          ],
+          "kind": "translation",
+          "status": "manual_first_pass_pending_audit"
+        },
+        {
+          "hebrew": [
+            "o040130030071"
+          ],
+          "french": [
+            [
+              3,
+              9,
+              45,
+              52
+            ],
+            [
+              3,
+              10,
+              53,
+              55
+            ]
+          ],
+          "kind": "translation",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040130030061",
+            "o040130030071"
+          ],
+          "french": [
+            [
+              3,
+              8,
+              37,
+              44
+            ],
+            [
+              3,
+              9,
+              45,
+              52
+            ],
+            [
+              3,
+              10,
+              53,
+              55
+            ]
+          ],
+          "kind": "translation",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "Al pi is a compound idiom, rendered d’après l’ordre de."
+    },
+    {
+      "chapter": 14,
+      "verse": 2,
+      "before": [
+        {
+          "hebrew": [
+            "o040140020011"
+          ],
+          "french": [
+            [
+              2,
+              1,
+              0,
+              4
+            ]
+          ],
+          "kind": "contextual",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040140020011"
+          ],
+          "french": [
+            [
+              2,
+              5,
+              26,
+              37
+            ]
+          ],
+          "kind": "contextual",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "Implicit narrative waw anchors the murmuring event."
+    },
+    {
+      "chapter": 14,
+      "verse": 2,
+      "before": [
+        {
+          "hebrew": [
+            "o040140020042"
+          ],
+          "french": [
+            [
+              2,
+              9,
+              54,
+              59
+            ]
+          ],
+          "kind": "contextual",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040140020042"
+          ],
+          "french": [
+            [
+              2,
+              6,
+              38,
+              44
+            ],
+            [
+              2,
+              9,
+              54,
+              59
+            ]
+          ],
+          "kind": "contextual",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "The repeated Hebrew preposition is shared by the two French coordinated names."
+    },
+    {
+      "chapter": 14,
+      "verse": 3,
+      "before": [
+        {
+          "hebrew": [
+            "o040140030131"
+          ],
+          "french": [
+            [
+              3,
+              22,
+              130,
+              133
+            ]
+          ],
+          "kind": "translation",
+          "status": "manual_first_pass_pending_audit"
+        },
+        {
+          "hebrew": [
+            "o040140030132"
+          ],
+          "french": [
+            [
+              3,
+              23,
+              134,
+              139
+            ]
+          ],
+          "kind": "translation",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040140030131",
+            "o040140030132"
+          ],
+          "french": [
+            [
+              3,
+              22,
+              130,
+              133
+            ],
+            [
+              3,
+              23,
+              134,
+              139
+            ]
+          ],
+          "kind": "translation",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "Predicative lamed and noun jointly render une proie; lamed alone does not mean une."
+    },
+    {
+      "chapter": 14,
+      "verse": 5,
+      "before": [
+        {
+          "hebrew": [
+            "o040140050011"
+          ],
+          "french": [
+            [
+              5,
+              1,
+              0,
+              5
+            ]
+          ],
+          "kind": "contextual",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040140050011"
+          ],
+          "french": [
+            [
+              5,
+              4,
+              15,
+              24
+            ]
+          ],
+          "kind": "contextual",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "Initial waw anchors the falling event rather than the name."
+    },
+    {
+      "chapter": 14,
+      "verse": 5,
+      "before": [
+        {
+          "hebrew": [
+            "o040140050061"
+          ],
+          "french": [
+            [
+              5,
+              8,
+              42,
+              44
+            ]
+          ],
+          "kind": "translation",
+          "status": "manual_first_pass_pending_audit"
+        },
+        {
+          "hebrew": [
+            "o040140050062"
+          ],
+          "french": [
+            [
+              5,
+              9,
+              45,
+              53
+            ],
+            [
+              5,
+              10,
+              54,
+              56
+            ]
+          ],
+          "kind": "translation",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040140050061",
+            "o040140050062"
+          ],
+          "french": [
+            [
+              5,
+              8,
+              42,
+              44
+            ],
+            [
+              5,
+              9,
+              45,
+              53
+            ],
+            [
+              5,
+              10,
+              54,
+              56
+            ]
+          ],
+          "kind": "translation",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "Lifne is the compound expression en présence de."
+    },
+    {
+      "chapter": 15,
+      "verse": 2,
+      "before": [
+        {
+          "hebrew": [
+            "o040150020061",
+            "o040150020062"
+          ],
+          "french": [
+            [
+              2,
+              6,
+              31,
+              39
+            ]
+          ],
+          "kind": "contextual",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040150020061",
+            "o040150020062"
+          ],
+          "french": [
+            [
+              2,
+              6,
+              31,
+              39
+            ]
+          ],
+          "kind": "translation",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "The directional preposition and suffix are explicitly expressed in the clitic leur within dis-leur."
+    },
+    {
+      "chapter": 15,
+      "verse": 3,
+      "before": [
+        {
+          "hebrew": [
+            "o040150030182"
+          ],
+          "french": [
+            [
+              3,
+              35,
+              202,
+              207
+            ],
+            [
+              3,
+              36,
+              208,
+              212
+            ],
+            [
+              3,
+              37,
+              213,
+              215
+            ]
+          ],
+          "kind": "translation",
+          "status": "manual_first_pass_pending_audit"
+        },
+        {
+          "hebrew": [
+            "o040150030201"
+          ],
+          "french": [
+            [
+              3,
+              38,
+              216,
+              221
+            ]
+          ],
+          "kind": "translation",
+          "status": "manual_first_pass_pending_audit"
+        },
+        {
+          "hebrew": [
+            "o040150030212"
+          ],
+          "french": [
+            [
+              3,
+              39,
+              222,
+              226
+            ],
+            [
+              3,
+              40,
+              227,
+              233
+            ]
+          ],
+          "kind": "translation",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040150030182"
+          ],
+          "french": [
+            [
+              3,
+              36,
+              208,
+              212
+            ],
+            [
+              3,
+              40,
+              227,
+              233
+            ]
+          ],
+          "kind": "translation",
+          "status": "editorial_review_corrected"
+        },
+        {
+          "hebrew": [
+            "o040150030201"
+          ],
+          "french": [
+            [
+              3,
+              34,
+              197,
+              201
+            ],
+            [
+              3,
+              38,
+              216,
+              221
+            ]
+          ],
+          "kind": "contextual",
+          "status": "editorial_review_corrected"
+        },
+        {
+          "hebrew": [
+            "o040150030212"
+          ],
+          "french": [
+            [
+              3,
+              39,
+              222,
+              226
+            ],
+            [
+              3,
+              40,
+              227,
+              233
+            ]
+          ],
+          "kind": "translation",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "Baq ar and tson share the French head bétail, with gros and menu as differentiators; the repeated min is implicit in the shared avec, not lexical votre."
+    },
+    {
+      "chapter": 15,
+      "verse": 4,
+      "before": [
+        {
+          "hebrew": [
+            "o040150040011"
+          ],
+          "french": [
+            [
+              4,
+              1,
+              0,
+              5
+            ]
+          ],
+          "kind": "contextual",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040150040011"
+          ],
+          "french": [
+            [
+              4,
+              8,
+              40,
+              50
+            ]
+          ],
+          "kind": "contextual",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "Implicit waw attaches to the presentation predicate rather than the subject demonstrative."
+    },
+    {
+      "chapter": 15,
+      "verse": 6,
+      "before": [
+        {
+          "hebrew": [
+            "o040150060011"
+          ],
+          "french": [
+            [
+              6,
+              1,
+              0,
+              4
+            ]
+          ],
+          "kind": "contextual",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040150060011"
+          ],
+          "french": [
+            [
+              6,
+              3,
+              8,
+              14
+            ]
+          ],
+          "kind": "contextual",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "The implicit alternative marker anchors the contrasting ram offering rather than translating pour."
+    },
+    {
+      "chapter": 16,
+      "verse": 2,
+      "before": [
+        {
+          "hebrew": [
+            "o040160020011"
+          ],
+          "french": [
+            [
+              2,
+              1,
+              0,
+              3
+            ]
+          ],
+          "kind": "contextual",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040160020011"
+          ],
+          "french": [
+            [
+              2,
+              2,
+              4,
+              6
+            ],
+            [
+              2,
+              3,
+              7,
+              18
+            ]
+          ],
+          "kind": "contextual",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "Implicit initial coordination anchors the uprising."
+    },
+    {
+      "chapter": 16,
+      "verse": 2,
+      "before": [
+        {
+          "hebrew": [
+            "o040160020071"
+          ],
+          "french": [
+            [
+              2,
+              9,
+              48,
+              57
+            ]
+          ],
+          "kind": "translation",
+          "status": "manual_first_pass_pending_audit"
+        },
+        {
+          "hebrew": [
+            "o040160020081"
+          ],
+          "french": [
+            [
+              2,
+              9,
+              48,
+              57
+            ]
+          ],
+          "kind": "contextual",
+          "status": "manual_first_pass_pending_audit"
+        },
+        {
+          "hebrew": [
+            "o040160020082"
+          ],
+          "french": [
+            [
+              2,
+              7,
+              38,
+              42
+            ],
+            [
+              2,
+              8,
+              43,
+              47
+            ]
+          ],
+          "kind": "translation",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040160020071",
+            "o040160020081",
+            "o040160020082"
+          ],
+          "french": [
+            [
+              2,
+              7,
+              38,
+              42
+            ],
+            [
+              2,
+              8,
+              43,
+              47
+            ],
+            [
+              2,
+              9,
+              48,
+              57
+            ]
+          ],
+          "kind": "translation",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "The Hebrew coordinated numeral is expressed by the full French numeral in reversed order."
+    },
+    {
+      "chapter": 16,
+      "verse": 3,
+      "before": [
+        {
+          "hebrew": [
+            "o040160030042"
+          ],
+          "french": [
+            [
+              3,
+              6,
+              35,
+              40
+            ]
+          ],
+          "kind": "contextual",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040160030042"
+          ],
+          "french": [
+            [
+              3,
+              3,
+              19,
+              25
+            ],
+            [
+              3,
+              6,
+              35,
+              40
+            ]
+          ],
+          "kind": "contextual",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "Repeated al is shared by the French preposition contre and its coordinated object."
+    },
+    {
+      "chapter": 16,
+      "verse": 3,
+      "before": [
+        {
+          "hebrew": [
+            "o040160030132"
+          ],
+          "french": [
+            [
+              3,
+              17,
+              102,
+              106
+            ]
+          ],
+          "kind": "contextual",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040160030132"
+          ],
+          "french": [
+            [
+              3,
+              16,
+              97,
+              101
+            ]
+          ],
+          "kind": "contextual",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "The pronominal suffix belongs to the totality expression tous, not the copula sont."
+    },
+    {
+      "chapter": 16,
+      "verse": 3,
+      "before": [
+        {
+          "hebrew": [
+            "o040160030161"
+          ],
+          "french": [
+            [
+              3,
+              20,
+              118,
+              127
+            ],
+            [
+              3,
+              21,
+              128,
+              131
+            ]
+          ],
+          "kind": "translation",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040160030161"
+          ],
+          "french": [
+            [
+              3,
+              20,
+              118,
+              127
+            ]
+          ],
+          "kind": "translation",
+          "status": "editorial_review_corrected"
+        },
+        {
+          "hebrew": [
+            "o040160030161"
+          ],
+          "french": [
+            [
+              3,
+              21,
+              128,
+              131
+            ]
+          ],
+          "kind": "contextual",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "The divine name corresponds to l’Éternel; French supplies the copula."
+    },
+    {
+      "chapter": 16,
+      "verse": 4,
+      "before": [
+        {
+          "hebrew": [
+            "o040160040031"
+          ],
+          "french": [
+            [
+              4,
+              6,
+              30,
+              32
+            ]
+          ],
+          "kind": "contextual",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040160040031"
+          ],
+          "french": [
+            [
+              4,
+              7,
+              33,
+              38
+            ]
+          ],
+          "kind": "contextual",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "Implicit sequential coordination anchors the falling event."
+    },
+    {
+      "chapter": 16,
+      "verse": 5,
+      "before": [
+        {
+          "hebrew": [
+            "o040160050011"
+          ],
+          "french": [
+            [
+              5,
+              1,
+              0,
+              2
+            ]
+          ],
+          "kind": "contextual",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040160050011"
+          ],
+          "french": [
+            [
+              5,
+              2,
+              3,
+              8
+            ]
+          ],
+          "kind": "contextual",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "Implicit narrative waw anchors the speaking predicate."
+    },
+    {
+      "chapter": 16,
+      "verse": 5,
+      "before": [
+        {
+          "hebrew": [
+            "o040160050091"
+          ],
+          "french": [
+            [
+              5,
+              13,
+              57,
+              66
+            ]
+          ],
+          "kind": "contextual",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040160050091"
+          ],
+          "french": [
+            [
+              5,
+              14,
+              67,
+              71
+            ],
+            [
+              5,
+              15,
+              72,
+              81
+            ]
+          ],
+          "kind": "contextual",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "Implicit waw introduces the act of making known rather than the divine name."
+    },
+    {
+      "chapter": 16,
+      "verse": 5,
+      "before": [
+        {
+          "hebrew": [
+            "o040160050181"
+          ],
+          "french": [
+            [
+              5,
+              31,
+              146,
+              148
+            ]
+          ],
+          "kind": "contextual",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040160050181"
+          ],
+          "french": [
+            [
+              5,
+              32,
+              149,
+              153
+            ],
+            [
+              5,
+              33,
+              154,
+              163
+            ]
+          ],
+          "kind": "contextual",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "The conjunction anchors the repeated approach predicate rather than the pronoun."
+    },
+    {
+      "chapter": 17,
+      "verse": 2,
+      "before": [
+        {
+          "hebrew": [
+            "o040170170061"
+          ],
+          "french": [
+            [
+              2,
+              7,
+              38,
+              43
+            ]
+          ],
+          "kind": "translation",
+          "status": "manual_first_pass_pending_audit"
+        },
+        {
+          "hebrew": [
+            "o040170170062",
+            "o040170170063"
+          ],
+          "french": [
+            [
+              2,
+              7,
+              38,
+              43
+            ]
+          ],
+          "kind": "contextual",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040170170061",
+            "o040170170062",
+            "o040170170063"
+          ],
+          "french": [
+            [
+              2,
+              7,
+              38,
+              43
+            ]
+          ],
+          "kind": "translation",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "The compound source expression me'ittam jointly corresponds to d’eux."
+    },
+    {
+      "chapter": 17,
+      "verse": 4,
+      "before": [
+        {
+          "hebrew": [
+            "o040170190011"
+          ],
+          "french": [
+            [
+              4,
+              1,
+              0,
+              2
+            ]
+          ],
+          "kind": "contextual",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040170190011"
+          ],
+          "french": [
+            [
+              4,
+              3,
+              7,
+              16
+            ]
+          ],
+          "kind": "contextual",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "Initial waw anchors the deposition action."
+    },
+    {
+      "chapter": 17,
+      "verse": 5,
+      "before": [
+        {
+          "hebrew": [
+            "o040170200062"
+          ],
+          "french": [
+            [
+              5,
+              7,
+              36,
+              40
+            ]
+          ],
+          "kind": "contextual",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040170200062"
+          ],
+          "french": [
+            [
+              5,
+              7,
+              36,
+              40
+            ]
+          ],
+          "kind": "translation",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "The possessive suffix is explicitly expressed by the relative dont."
+    },
+    {
+      "chapter": 17,
+      "verse": 6,
+      "before": [
+        {
+          "hebrew": [
+            "o040170210011"
+          ],
+          "french": [
+            [
+              6,
+              1,
+              0,
+              5
+            ]
+          ],
+          "kind": "contextual",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040170210011"
+          ],
+          "french": [
+            [
+              6,
+              2,
+              6,
+              11
+            ]
+          ],
+          "kind": "contextual",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "Initial waw anchors the speaking event."
+    },
+    {
+      "chapter": 17,
+      "verse": 6,
+      "before": [
+        {
+          "hebrew": [
+            "o040170210211"
+          ],
+          "french": [
+            [
+              6,
+              27,
+              159,
+              161
+            ]
+          ],
+          "kind": "contextual",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040170210211"
+          ],
+          "french": [
+            [
+              6,
+              30,
+              176,
+              181
+            ],
+            [
+              6,
+              31,
+              182,
+              184
+            ],
+            [
+              6,
+              32,
+              185,
+              191
+            ]
+          ],
+          "kind": "contextual",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "Implicit waw introduces the final locative predication, not the article."
+    },
+    {
+      "chapter": 18,
+      "verse": 3,
+      "before": [
+        {
+          "hebrew": [
+            "o040180030071"
+          ],
+          "french": [
+            [
+              3,
+              19,
+              104,
+              106
+            ],
+            [
+              3,
+              20,
+              107,
+              110
+            ]
+          ],
+          "kind": "translation",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040180030071"
+          ],
+          "french": [
+            [
+              3,
+              20,
+              107,
+              110
+            ]
+          ],
+          "kind": "translation",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "Preposition el corresponds to des after approach; the first ni is expressed by the negator."
+    },
+    {
+      "chapter": 18,
+      "verse": 4,
+      "before": [
+        {
+          "hebrew": [
+            "o040180040011"
+          ],
+          "french": [
+            [
+              4,
+              1,
+              0,
+              3
+            ]
+          ],
+          "kind": "contextual",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040180040011"
+          ],
+          "french": [
+            [
+              4,
+              3,
+              7,
+              13
+            ],
+            [
+              4,
+              4,
+              14,
+              22
+            ]
+          ],
+          "kind": "contextual",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "Implicit waw anchors attachment rather than the subject pronoun."
+    },
+    {
+      "chapter": 18,
+      "verse": 5,
+      "before": [
+        {
+          "hebrew": [
+            "o040180050011"
+          ],
+          "french": [
+            [
+              5,
+              1,
+              0,
+              4
+            ]
+          ],
+          "kind": "contextual",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040180050011"
+          ],
+          "french": [
+            [
+              5,
+              2,
+              5,
+              15
+            ]
+          ],
+          "kind": "contextual",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "Initial waw anchors the observance predicate."
+    },
+    {
+      "chapter": 18,
+      "verse": 6,
+      "before": [
+        {
+          "hebrew": [
+            "o040180060121"
+          ],
+          "french": [
+            [
+              6,
+              18,
+              101,
+              105
+            ],
+            [
+              6,
+              19,
+              106,
+              111
+            ]
+          ],
+          "kind": "translation",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040180060121"
+          ],
+          "french": [
+            [
+              6,
+              13,
+              72,
+              78
+            ],
+            [
+              6,
+              18,
+              101,
+              105
+            ],
+            [
+              6,
+              19,
+              106,
+              111
+            ]
+          ],
+          "kind": "translation",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "The single participle is rendered twice in French, donnés and sont remis; preserve the shared source relation."
+    },
+    {
+      "chapter": 19,
+      "verse": 2,
+      "before": [
+        {
+          "hebrew": [
+            "o040190020231"
+          ],
+          "french": [
+            [
+              2,
+              34,
+              193,
+              198
+            ]
+          ],
+          "kind": "translation",
+          "status": "manual_first_pass_pending_audit"
+        },
+        {
+          "hebrew": [
+            "o040190020241"
+          ],
+          "french": [
+            [
+              2,
+              35,
+              199,
+              201
+            ]
+          ],
+          "kind": "contextual",
+          "status": "manual_first_pass_pending_audit"
+        },
+        {
+          "hebrew": [
+            "o040190020242"
+          ],
+          "french": [
+            [
+              2,
+              34,
+              193,
+              198
+            ]
+          ],
+          "kind": "contextual",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040190020231",
+            "o040190020241",
+            "o040190020242"
+          ],
+          "french": [
+            [
+              2,
+              34,
+              193,
+              198
+            ]
+          ],
+          "kind": "translation",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "Alah plus al with pronominal suffix forms the idiom rendered porté; al is not the article le."
+    },
+    {
+      "chapter": 19,
+      "verse": 3,
+      "before": [
+        {
+          "hebrew": [
+            "o040190030011"
+          ],
+          "french": [
+            [
+              3,
+              1,
+              0,
+              4
+            ]
+          ],
+          "kind": "contextual",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040190030011"
+          ],
+          "french": [
+            [
+              3,
+              3,
+              8,
+              17
+            ]
+          ],
+          "kind": "contextual",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "Implicit initial conjunction anchors the handing-over action."
+    },
+    {
+      "chapter": 19,
+      "verse": 4,
+      "before": [
+        {
+          "hebrew": [
+            "o040190040011"
+          ],
+          "french": [
+            [
+              4,
+              1,
+              0,
+              2
+            ]
+          ],
+          "kind": "contextual",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040190040011"
+          ],
+          "french": [
+            [
+              4,
+              4,
+              25,
+              32
+            ]
+          ],
+          "kind": "contextual",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "Implicit initial conjunction anchors the taking action."
+    },
+    {
+      "chapter": 19,
+      "verse": 5,
+      "before": [
+        {
+          "hebrew": [
+            "o040190050011"
+          ],
+          "french": [
+            [
+              5,
+              1,
+              0,
+              2
+            ]
+          ],
+          "kind": "contextual",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040190050011"
+          ],
+          "french": [
+            [
+              5,
+              2,
+              3,
+              10
+            ]
+          ],
+          "kind": "contextual",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "Implicit initial conjunction anchors the burning action."
+    },
+    {
+      "chapter": 19,
+      "verse": 5,
+      "before": [
+        {
+          "hebrew": [
+            "o040190050071"
+          ],
+          "french": [
+            [
+              5,
+              12,
+              55,
+              57
+            ]
+          ],
+          "kind": "contextual",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040190050071"
+          ],
+          "french": [
+            [
+              5,
+              13,
+              58,
+              63
+            ]
+          ],
+          "kind": "contextual",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "Unexpressed list coordination anchors chair, not the possessive sa."
+    },
+    {
+      "chapter": 19,
+      "verse": 6,
+      "before": [
+        {
+          "hebrew": [
+            "o040190060011"
+          ],
+          "french": [
+            [
+              6,
+              1,
+              0,
+              2
+            ]
+          ],
+          "kind": "contextual",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040190060011"
+          ],
+          "french": [
+            [
+              6,
+              3,
+              17,
+              24
+            ]
+          ],
+          "kind": "contextual",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "Implicit initial conjunction anchors the taking action."
+    },
+    {
+      "chapter": 19,
+      "verse": 6,
+      "before": [
+        {
+          "hebrew": [
+            "o040190060062"
+          ],
+          "french": [
+            [
+              6,
+              11,
+              58,
+              60
+            ],
+            [
+              6,
+              12,
+              61,
+              69
+            ]
+          ],
+          "kind": "translation",
+          "status": "manual_first_pass_pending_audit"
+        },
+        {
+          "hebrew": [
+            "o040190060071"
+          ],
+          "french": [
+            [
+              6,
+              12,
+              61,
+              69
+            ]
+          ],
+          "kind": "translation",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040190060062",
+            "o040190060071"
+          ],
+          "french": [
+            [
+              6,
+              11,
+              58,
+              60
+            ],
+            [
+              6,
+              12,
+              61,
+              69
+            ]
+          ],
+          "kind": "translation",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "Sheni tolaat is a compound color expression, rendered du cramoisi."
+    },
+    {
+      "chapter": 20,
+      "verse": 2,
+      "before": [
+        {
+          "hebrew": [
+            "o040200020011"
+          ],
+          "french": [
+            [
+              2,
+              1,
+              0,
+              2
+            ]
+          ],
+          "kind": "contextual",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040200020011"
+          ],
+          "french": [
+            [
+              2,
+              3,
+              7,
+              12
+            ]
+          ],
+          "kind": "contextual",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "Initial waw attaches to the existential predication."
+    },
+    {
+      "chapter": 20,
+      "verse": 2,
+      "before": [
+        {
+          "hebrew": [
+            "o040200020082"
+          ],
+          "french": [
+            [
+              2,
+              15,
+              78,
+              83
+            ]
+          ],
+          "kind": "contextual",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040200020082"
+          ],
+          "french": [
+            [
+              2,
+              12,
+              62,
+              68
+            ],
+            [
+              2,
+              15,
+              78,
+              83
+            ]
+          ],
+          "kind": "contextual",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "Repeated al is shared by the French contre and coordinated object."
+    },
+    {
+      "chapter": 20,
+      "verse": 3,
+      "before": [
+        {
+          "hebrew": [
+            "o040200030011"
+          ],
+          "french": [
+            [
+              3,
+              1,
+              0,
+              2
+            ]
+          ],
+          "kind": "contextual",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040200030011"
+          ],
+          "french": [
+            [
+              3,
+              3,
+              10,
+              17
+            ],
+            [
+              3,
+              4,
+              18,
+              26
+            ]
+          ],
+          "kind": "contextual",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "Initial waw anchors the dispute event rather than the article."
+    },
+    {
+      "chapter": 20,
+      "verse": 3,
+      "before": [
+        {
+          "hebrew": [
+            "o040200030051"
+          ],
+          "french": [
+            [
+              3,
+              7,
+              36,
+              39
+            ]
+          ],
+          "kind": "contextual",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040200030051"
+          ],
+          "french": [
+            [
+              3,
+              8,
+              40,
+              46
+            ]
+          ],
+          "kind": "contextual",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "Implicit waw anchors the reporting predicate."
+    },
+    {
+      "chapter": 20,
+      "verse": 5,
+      "before": [
+        {
+          "hebrew": [
+            "o040200050141"
+          ],
+          "french": [
+            [
+              5,
+              28,
+              145,
+              147
+            ],
+            [
+              5,
+              30,
+              157,
+              159
+            ]
+          ],
+          "kind": "translation",
+          "status": "manual_first_pass_pending_audit"
+        },
+        {
+          "hebrew": [
+            "o040200050171"
+          ],
+          "french": [
+            [
+              5,
+              25,
+              136,
+              138
+            ],
+            [
+              5,
+              26,
+              139,
+              142
+            ],
+            [
+              5,
+              27,
+              143,
+              144
+            ]
+          ],
+          "kind": "translation",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040200050141"
+          ],
+          "french": [
+            [
+              5,
+              30,
+              157,
+              159
+            ]
+          ],
+          "kind": "translation",
+          "status": "editorial_review_corrected"
+        },
+        {
+          "hebrew": [
+            "o040200050171"
+          ],
+          "french": [
+            [
+              5,
+              25,
+              136,
+              138
+            ],
+            [
+              5,
+              26,
+              139,
+              142
+            ],
+            [
+              5,
+              27,
+              143,
+              144
+            ],
+            [
+              5,
+              28,
+              145,
+              147
+            ]
+          ],
+          "kind": "translation",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "The first ni belongs to the French negative existential list, not the waw preceding the second item."
+    },
+    {
+      "chapter": 20,
+      "verse": 6,
+      "before": [
+        {
+          "hebrew": [
+            "o040200060011"
+          ],
+          "french": [
+            [
+              6,
+              1,
+              0,
+              5
+            ]
+          ],
+          "kind": "contextual",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040200060011"
+          ],
+          "french": [
+            [
+              6,
+              4,
+              15,
+              28
+            ],
+            [
+              6,
+              7,
+              44,
+              48
+            ],
+            [
+              6,
+              8,
+              49,
+              54
+            ]
+          ],
+          "kind": "contextual",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "Implicit narrative waw anchors the movement event rather than the name."
+    },
+    {
+      "chapter": 20,
+      "verse": 6,
+      "before": [
+        {
+          "hebrew": [
+            "o040200060101"
+          ],
+          "french": [
+            [
+              6,
+              15,
+              93,
+              96
+            ]
+          ],
+          "kind": "contextual",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040200060101"
+          ],
+          "french": [
+            [
+              6,
+              16,
+              97,
+              106
+            ]
+          ],
+          "kind": "contextual",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "Implicit narrative waw anchors the falling event."
+    }
+  ],
+  "next": "Apply both partial review files to original candidates when materializing chapter review files. Continue remaining 247 verse entries; no chapter Audit checkbox or canonical ledger claimed."
+}
