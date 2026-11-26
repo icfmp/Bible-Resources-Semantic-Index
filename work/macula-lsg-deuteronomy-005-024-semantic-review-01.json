@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "status": "partial_semantic_review_not_canonical_not_independent",
+  "scope": "Deuteronomy 5–24",
+  "base_commit": "7aa7dd5f7f8f304da8fb7cdff18e8964faf6ed92",
+  "first_pass_manifest": "work/macula-lsg-deuteronomy-005-024-cohort-01.json",
+  "audit_packet": "work/macula-lsg-audit-packet.js",
+  "chapters": [
+    {
+      "scope": "Deut.5",
+      "source_lsg_projection_blob": "a1ca54c88389488bcd125d1a5ca412ce75d78a82",
+      "source_macula_projection_blob": "ac394015c9c5f338a0e183ef337ed830b6b5cf56",
+      "reviewed_verse_rows": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "changes": [
+        {
+          "verse": 9,
+          "before": [
+            "10:15,19-20"
+          ],
+          "after": [
+            "10:15,19",
+            "10~20"
+          ],
+          "note": "The Hebrew independent pronoun represents moi/je; the present copula suis is supplied by the French nominal clause."
+        },
+        {
+          "verse": 15,
+          "before": [
+            "31:35",
+            "32:35"
+          ],
+          "after": [
+            "31-32:35"
+          ],
+          "note": "The infinitive marker and the verb form the indivisible French token d’observer; preserve both native IDs in the single smallest translation group."
+        }
+      ]
+    }
+  ],
+  "omission_review": [
+    {
+      "native_reference": "Deu 12:21",
+      "ordinals": [
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "observation": "Relative clause identifying the livestock as given by YHWH to the addressee is absent from the pinned French reading text; adjacent verses do not supply this clause."
+    },
+    {
+      "native_reference": "Deu 18:22",
+      "ordinals": [
+        5,
+        6,
+        7
+      ],
+      "observation": "The phrase specifying that the prophet speaks in YHWH's name is absent from the pinned French reading text. The later occurrence of YHWH is a different clause."
+    },
+    {
+      "native_reference": "Deu 19:21",
+      "ordinals": [
+        6,
+        7,
+        8
+      ],
+      "observation": "The life-for-life formula is absent from the pinned French reading text; the following eye-for-eye formula has its own separate native ordinals."
+    }
+  ],
+  "omission_status": "projection_only_confirmed; maintained OSIS byte check outstanding; no source text modified",
+  "development_observations": {
+    "rendered_rows": 33,
+    "rendered_relations": 751,
+    "rows_with_unlinked_hebrew": 0,
+    "rows_with_unlinked_default_french": 0,
+    "reviewed_rows": 21,
+    "proposed_delta_operations": 2,
+    "checks": "Direct connector JS execution on chapter 5; both deltas replayed with unchanged unresolved-ordinal lists. Cross-chapter handling not yet exercised; no publication tests or independent audit.",
+    "timing": "No measured editor time gain. Rendering avoids repeated manual ordinal lookup; flags prioritize but never approve relations."
+  },
+  "next": "Review Deut 5:22–33 and remaining cohort rows; resolve source-level omissions against maintained LSG OSIS; reconcile canonical cross-chapter targets; no chapter checkboxes yet."
+}
