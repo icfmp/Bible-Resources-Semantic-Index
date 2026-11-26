@@ -1,0 +1,37 @@
+{
+  "status": "partial_first_pass_continuation",
+  "scope": "Numbers 21–36 and Deuteronomy 1–4",
+  "base_commit": "100cb592164498d739b1799d12487433e448fc04",
+  "files": [
+    {
+      "path": "work/macula-lsg-numbers-021-024-manual-overlay-02.json",
+      "blob": "f4903bb23cf301c96786a788a8f12c1edec60ba2"
+    },
+    {
+      "path": "work/macula-lsg-numbers-025-028-manual-overlay-02.json",
+      "blob": "390ec14e8ac7afbb26d1401a003cf2877c11b8e6"
+    },
+    {
+      "path": "work/macula-lsg-numbers-029-032-manual-overlay-02.json",
+      "blob": "fc797858ae72715b28adf8027b78f33ab374d7d0"
+    },
+    {
+      "path": "work/macula-lsg-numbers-033-036-manual-overlay-02.json",
+      "blob": "f7351e5625891ad76e6f47ba9cd083e6923ede76"
+    },
+    {
+      "path": "work/macula-lsg-deuteronomy-001-004-manual-overlay-02.json",
+      "blob": "74ac3ea8453055ad51dae63692a2a02f1ab2c06b"
+    }
+  ],
+  "new_verse_entries": 20,
+  "new_manual_relations": 416,
+  "new_unresolved_hebrew": 0,
+  "new_unresolved_french": 8,
+  "previous_manual_verse_entries": 20,
+  "previous_manual_relations": 390,
+  "manual_verse_entries_touched_total": 40,
+  "manual_relations_recorded_total": 806,
+  "verse_entries_total": 713,
+  "notes": "Manual ordinal selections against pinned Hebrew and French verse 2 source projections, materialized as exact source IDs and Unicode token tuples. Existing candidate records preserved; overlays supersede unreviewed candidates for their respective verses only after reconciliation. No claim of semantic certification, full first-pass completion or second-pass audit. Num 27 and 28 existing cross-verse links preserved; eight French tokens explicitly remain unresolved pending contextual attachment. No publication validation or source modification. Continue same twenty-chapter cohort."
+}
