@@ -97,7 +97,18 @@ def validate(ledger, hebrew, french, macula_extra=()):
             require(i in h_reverse[key], "Hebrew reverse lookup mismatch")
         for v, ordinal, _, _ in f:
             require(i in f_reverse[v, ordinal], "French reverse lookup mismatch")
-    require(set(h_reverse) == set(original), "Incomplete Hebrew coverage")
+    # Explicit source omissions account for original IDs without inventing target tokens.
+    omitted = set()
+    for entry in ledger.get("omissions", []):
+        ids = entry["hebrew"]
+        require(entry["reason"] == "omitted_in_target", "Unknown omission reason")
+        require(isinstance(entry.get("note"), str) and entry["note"].strip(), "Missing omission evidence")
+        require(isinstance(ids, list) and ids and len(ids) == len(set(ids)), "Invalid omission IDs")
+        for key in ids:
+            require(key in original and key not in omitted and key not in h_reverse,
+                    f"Invalid or overlapping omission: {key}")
+            omitted.add(key)
+    require(set(h_reverse) | omitted == set(original), "Incomplete Hebrew coverage")
     require(set(f_reverse) == set(tokens), "Incomplete French coverage")
     for kind in ("translation", "contextual"):
         rows = [r for r in ledger["relations"] if r["kind"] == kind]
