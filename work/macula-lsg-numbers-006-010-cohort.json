@@ -6,173 +6,48 @@
     9,
     10
   ],
-  "status": "first_pass_in_progress",
+  "status": "first_pass_draft_complete_pending_semantic_audit",
   "reports": [
     {
       "ch": "006",
-      "mappedVerses": 27,
-      "unresolvedH": 0,
-      "unresolvedF": 0,
-      "errors": [],
-      "remaining": []
+      "verses": 27,
+      "H": 547,
+      "F": 668,
+      "R": 539,
+      "omitted": 0
     },
     {
       "ch": "007",
-      "mappedVerses": 89,
-      "unresolvedH": 0,
-      "unresolvedF": 0,
-      "errors": [],
-      "remaining": []
+      "verses": 89,
+      "H": 1435,
+      "F": 1565,
+      "R": 1417,
+      "omitted": 0
     },
     {
       "ch": "008",
-      "mappedVerses": 25,
-      "unresolvedH": 2,
-      "unresolvedF": 4,
-      "errors": [],
-      "remaining": [
-        {
-          "v": "8",
-          "H": 0,
-          "F": [
-            [
-              4,
-              "un"
-            ]
-          ]
-        },
-        {
-          "v": "12",
-          "H": 2,
-          "F": []
-        },
-        {
-          "v": "15",
-          "H": 0,
-          "F": [
-            [
-              14,
-              "ainsi"
-            ],
-            [
-              15,
-              "que"
-            ]
-          ]
-        },
-        {
-          "v": "16",
-          "H": 0,
-          "F": [
-            [
-              23,
-              "de"
-            ]
-          ]
-        }
-      ]
+      "verses": 26,
+      "H": 545,
+      "F": 613,
+      "R": 521,
+      "omitted": 2
     },
     {
       "ch": "009",
-      "mappedVerses": 23,
-      "unresolvedH": 0,
-      "unresolvedF": 4,
-      "errors": [],
-      "remaining": [
-        {
-          "v": "10",
-          "H": 0,
-          "F": [
-            [
-              22,
-              "est"
-            ]
-          ]
-        },
-        {
-          "v": "13",
-          "H": 0,
-          "F": [
-            [
-              7,
-              "qui"
-            ]
-          ]
-        },
-        {
-          "v": "16",
-          "H": 0,
-          "F": [
-            [
-              12,
-              "elle"
-            ],
-            [
-              13,
-              "avait"
-            ]
-          ]
-        }
-      ]
+      "verses": 23,
+      "H": 543,
+      "F": 569,
+      "R": 525,
+      "omitted": 0
     },
     {
       "ch": "010",
-      "mappedVerses": 36,
-      "unresolvedH": 0,
-      "unresolvedF": 5,
-      "errors": [],
-      "remaining": [
-        {
-          "v": "8",
-          "H": 0,
-          "F": [
-            [
-              16,
-              "et"
-            ]
-          ]
-        },
-        {
-          "v": "31",
-          "H": 0,
-          "F": [
-            [
-              2,
-              "Moïse"
-            ]
-          ]
-        },
-        {
-          "v": "34",
-          "H": 0,
-          "F": [
-            [
-              5,
-              "était"
-            ]
-          ]
-        },
-        {
-          "v": "35",
-          "H": 0,
-          "F": [
-            [
-              9,
-              "que"
-            ]
-          ]
-        },
-        {
-          "v": "36",
-          "H": 0,
-          "F": [
-            [
-              3,
-              "on"
-            ]
-          ]
-        }
-      ]
+      "verses": 36,
+      "H": 589,
+      "F": 717,
+      "R": 573,
+      "omitted": 0
     }
-  ]
+  ],
+  "notes": "All five first-pass drafts saved together. No canonical ledger or second-pass certification yet."
 }
