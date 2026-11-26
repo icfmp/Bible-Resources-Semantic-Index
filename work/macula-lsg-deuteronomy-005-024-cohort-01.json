@@ -65,6 +65,22 @@
     {
       "path": "work/macula-lsg-deuteronomy-020-024-compact-manual-04.json",
       "sha": "40c6561ea062d9b7ce20c11b8f188e6d519fbe33"
+    },
+    {
+      "path": "work/macula-lsg-deuteronomy-005-009-compact-manual-05.json",
+      "sha": "a0aa49921ea0dbadb2c026fa43d580db41338c45"
+    },
+    {
+      "path": "work/macula-lsg-deuteronomy-010-014-compact-manual-05.json",
+      "sha": "4f220de32c742c201f2f90f70735bac933dd5a6d"
+    },
+    {
+      "path": "work/macula-lsg-deuteronomy-015-019-compact-manual-05.json",
+      "sha": "f7779b23701dd9f8d76713e3a2d637910415d4e7"
+    },
+    {
+      "path": "work/macula-lsg-deuteronomy-020-024-compact-manual-05.json",
+      "sha": "870055a329eeb7c026848695a830751fa78b347c"
     }
   ],
   "candidate_bank": {
@@ -82,16 +98,16 @@
     "french_verses": 494,
     "hebrew_units": 12160,
     "french_units": 13626,
-    "manual_rows": 320,
-    "manual_relations": 7651,
-    "manual_hebrew": 7890,
-    "manual_french": 8825,
-    "unresolved_hebrew": 0,
+    "manual_rows": 415,
+    "manual_relations": 9844,
+    "manual_hebrew": 10120,
+    "manual_french": 11371,
+    "unresolved_hebrew": 8,
     "unresolved_french": 0,
     "initial_proposals": 5353,
-    "remaining_proposals": 1930,
-    "remaining_rows_with_proposals": 171,
-    "remaining_manual_rows": 174
+    "remaining_proposals": 888,
+    "remaining_rows_with_proposals": 78,
+    "remaining_manual_rows": 79
   },
   "chapters": [
     {
@@ -117,14 +133,14 @@
         13,
         14,
         15,
-        16
-      ],
-      "remaining_native_verses": [
+        16,
         17,
         18,
         19,
         20,
-        21,
+        21
+      ],
+      "remaining_native_verses": [
         22,
         23,
         24,
@@ -162,14 +178,14 @@
         13,
         14,
         15,
-        16
-      ],
-      "remaining_native_verses": [
+        16,
         17,
         18,
         19,
         20,
-        21,
+        21
+      ],
+      "remaining_native_verses": [
         22,
         23,
         24,
@@ -199,14 +215,14 @@
         13,
         14,
         15,
-        16
-      ],
-      "remaining_native_verses": [
+        16,
         17,
         18,
         19,
         20,
-        21,
+        21
+      ],
+      "remaining_native_verses": [
         22,
         23,
         24,
@@ -237,14 +253,13 @@
         13,
         14,
         15,
-        16
-      ],
-      "remaining_native_verses": [
+        16,
         17,
         18,
         19,
         20
-      ]
+      ],
+      "remaining_native_verses": []
     },
     {
       "scope": "Deut.9",
@@ -269,14 +284,14 @@
         13,
         14,
         15,
-        16
-      ],
-      "remaining_native_verses": [
+        16,
         17,
         18,
         19,
         20,
-        21,
+        21
+      ],
+      "remaining_native_verses": [
         22,
         23,
         24,
@@ -310,14 +325,14 @@
         13,
         14,
         15,
-        16
-      ],
-      "remaining_native_verses": [
+        16,
         17,
         18,
         19,
         20,
-        21,
+        21
+      ],
+      "remaining_native_verses": [
         22
       ]
     },
@@ -344,14 +359,14 @@
         13,
         14,
         15,
-        16
-      ],
-      "remaining_native_verses": [
+        16,
         17,
         18,
         19,
         20,
-        21,
+        21
+      ],
+      "remaining_native_verses": [
         22,
         23,
         24,
@@ -388,14 +403,14 @@
         13,
         14,
         15,
-        16
-      ],
-      "remaining_native_verses": [
+        16,
         17,
         18,
         19,
         20,
-        21,
+        21
+      ],
+      "remaining_native_verses": [
         22,
         23,
         24,
@@ -431,13 +446,12 @@
         13,
         14,
         15,
-        16
-      ],
-      "remaining_native_verses": [
+        16,
         17,
         18,
         19
-      ]
+      ],
+      "remaining_native_verses": []
     },
     {
       "scope": "Deut.14",
@@ -462,14 +476,14 @@
         13,
         14,
         15,
-        16
-      ],
-      "remaining_native_verses": [
+        16,
         17,
         18,
         19,
         20,
-        21,
+        21
+      ],
+      "remaining_native_verses": [
         22,
         23,
         24,
@@ -503,14 +517,14 @@
         13,
         14,
         15,
-        16
-      ],
-      "remaining_native_verses": [
+        16,
         17,
         18,
         19,
         20,
-        21,
+        21
+      ],
+      "remaining_native_verses": [
         22,
         23
       ]
@@ -538,14 +552,14 @@
         13,
         14,
         15,
-        16
-      ],
-      "remaining_native_verses": [
+        16,
         17,
         18,
         19,
         20,
-        21,
+        21
+      ],
+      "remaining_native_verses": [
         22
       ]
     },
@@ -572,14 +586,13 @@
         13,
         14,
         15,
-        16
-      ],
-      "remaining_native_verses": [
+        16,
         17,
         18,
         19,
         20
-      ]
+      ],
+      "remaining_native_verses": []
     },
     {
       "scope": "Deut.18",
@@ -604,14 +617,14 @@
         13,
         14,
         15,
-        16
-      ],
-      "remaining_native_verses": [
+        16,
         17,
         18,
         19,
         20,
-        21,
+        21
+      ],
+      "remaining_native_verses": [
         22
       ]
     },
@@ -638,15 +651,14 @@
         13,
         14,
         15,
-        16
-      ],
-      "remaining_native_verses": [
+        16,
         17,
         18,
         19,
         20,
         21
-      ]
+      ],
+      "remaining_native_verses": []
     },
     {
       "scope": "Deut.20",
@@ -671,14 +683,13 @@
         13,
         14,
         15,
-        16
-      ],
-      "remaining_native_verses": [
+        16,
         17,
         18,
         19,
         20
-      ]
+      ],
+      "remaining_native_verses": []
     },
     {
       "scope": "Deut.21",
@@ -703,14 +714,14 @@
         13,
         14,
         15,
-        16
-      ],
-      "remaining_native_verses": [
+        16,
         17,
         18,
         19,
         20,
-        21,
+        21
+      ],
+      "remaining_native_verses": [
         22,
         23
       ]
@@ -738,14 +749,14 @@
         13,
         14,
         15,
-        16
-      ],
-      "remaining_native_verses": [
+        16,
         17,
         18,
         19,
         20,
-        21,
+        21
+      ],
+      "remaining_native_verses": [
         22,
         23,
         24,
@@ -779,14 +790,14 @@
         13,
         14,
         15,
-        16
-      ],
-      "remaining_native_verses": [
+        16,
         17,
         18,
         19,
         20,
-        21,
+        21
+      ],
+      "remaining_native_verses": [
         22,
         23,
         24,
@@ -817,14 +828,14 @@
         13,
         14,
         15,
-        16
-      ],
-      "remaining_native_verses": [
+        16,
         17,
         18,
         19,
         20,
-        21,
+        21
+      ],
+      "remaining_native_verses": [
         22
       ]
     }
@@ -835,10 +846,11 @@
     "Deut 6:11 final native eating/satiety clause maps to LSG 6:12 ordinals 1–6. Native 6:12 explicitly accounts for them as covered by the preceding row; they are not double-counted.",
     "Cross-chapter targets require reconstruction support; the current compact rebuild script is chapter-local.",
     "Canonical offset ledgers have not been reconstructed. No automated publication validation or release.",
-    "No completed chapters credited."
+    "No completed chapters credited.",
+    "Possible omissions in the pinned French projection: native Deu 12:21 ordinals 26–30 (relative clause) and 19:21 ordinals 6–8 (life for life) left explicitly unresolved. Exact published OSIS verification required."
   ],
-  "next": "Continue the same 20-chapter cohort from native verse 17 onward in each chapter; then reread and correct the full cohort before reconstructing canonical ledgers.",
-  "checkpoint_parent": "31bd7919ad822d08eb23142da1c44ae8477b51bd",
+  "next": "Complete remaining native verse 22 onward in the 20-chapter cohort, then perform second-pass semantic audit, handle omissions and reconstruct canonical ledgers.",
+  "checkpoint_parent": "68b4fb535b0d7b62f023beacd550c499df1d0262",
   "first_pass_repairs": [
     {
       "path": "work/macula-lsg-deuteronomy-005-024-compact-repairs-03.json",
