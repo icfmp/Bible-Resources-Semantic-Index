@@ -1,0 +1,27 @@
+{
+  "status": "partial_cohort_first_pass",
+  "scope": "Numbers 21–36 and Deuteronomy 1–4",
+  "parent_commit": "27306a4032f7fc14b7f5b721d33534265adb9fc8",
+  "previous_progress": "work/macula-lsg-numbers-021-deuteronomy-004-compact-progress-04.json",
+  "new_overlay": "work/macula-lsg-numbers-024-034-compact-overlay-05.json",
+  "new_chapter_scopes": [
+    "Num.24",
+    "Num.34"
+  ],
+  "new_verse_entries": 50,
+  "new_relations": 823,
+  "new_unresolved_hebrew": 0,
+  "new_unresolved_french": 10,
+  "cumulative_verse_entries_touched": 153,
+  "cumulative_manual_relations": 2956,
+  "cohort_verse_entries": 713,
+  "chapters_with_drafts_for_all_lsg_verses": [
+    "Num.24",
+    "Num.25",
+    "Num.27",
+    "Num.30",
+    "Num.34",
+    "Num.36"
+  ],
+  "notes": "Remaining LSG verses 3–25 of Num 24 and 3–29 of Num 34 drafted directly from pinned source projections. Ten French token attachments unresolved. Ordinal reconstruction in memory checked bounds and per-verse occurrence accounting; no independent semantic audit or canonical reconciliation. No publication validation, checkbox changes, source changes or release. Continue same twenty-chapter cohort."
+}
