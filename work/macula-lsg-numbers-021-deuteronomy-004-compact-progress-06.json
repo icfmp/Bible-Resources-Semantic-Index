@@ -1,0 +1,38 @@
+{
+  "status": "partial_cohort_first_pass",
+  "scope": "Numbers 21–36 and Deuteronomy 1–4",
+  "parent_commit": "97c72be59d47c2b75b7d96696d4783510c046080",
+  "previous_progress": "work/macula-lsg-numbers-021-deuteronomy-004-compact-progress-05.json",
+  "new_overlays": [
+    "work/macula-lsg-numbers-021-023-compact-overlay-06.json",
+    "work/macula-lsg-numbers-033-compact-overlay-06.json",
+    "work/macula-lsg-numbers-022-033-035-compact-overlay-06.json"
+  ],
+  "new_verse_entries": 150,
+  "new_relations": 2793,
+  "new_unresolved_hebrew": 0,
+  "new_unresolved_french": 43,
+  "verses_by_chapter": {
+    "Num.21": 33,
+    "Num.23": 28,
+    "Num.33": 54,
+    "Num.22": 3,
+    "Num.35": 32
+  },
+  "cumulative_verse_entries_touched": 303,
+  "cumulative_manual_relations": 5749,
+  "cohort_verse_entries": 713,
+  "chapters_with_drafts_for_all_lsg_verses": [
+    "Num.21",
+    "Num.23",
+    "Num.24",
+    "Num.25",
+    "Num.27",
+    "Num.30",
+    "Num.33",
+    "Num.34",
+    "Num.35",
+    "Num.36"
+  ],
+  "notes": "Direct compact first-pass ordinal maps, generated from pinned source projections. All 150 new entries reconstructed; counting and ordinal bounds checked, semantic correctness not established. Num 21:18 includes explicit targets in LSG 21:19; per-entry unresolved counts are before cross-verse reconciliation. Num 33:38 initially rejected for cardinality and subsequently reconstructed with corrected positions in separate overlay. Compact vector format is interpreted by in-memory JavaScript, not yet integrated into or tested with Python helper. No independent audit, canonical reconciliation, checkbox changes, source changes, publication tests or release. Continue same twenty-chapter cohort."
+}
