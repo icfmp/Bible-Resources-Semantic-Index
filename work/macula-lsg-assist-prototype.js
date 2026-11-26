@@ -7,13 +7,17 @@
  const content=s=>["noun","verb","adjective","adverb"].includes(JSON.parse(s)[2]);
  const stop=new Set("a à au aux ce ces cet cette de des du en et il ils je la le les leur leurs lui ma mais me mes mon ne ni nos notre nous on ou par pas pour qu que qui sa se ses si son sur ta te tes toi ton tu un une vos votre vous y est sont était étaient être avoir ont avait tout tous toute toutes".split(" "));
  function prepare(c,requireGold=true){
-  if(requireGold&&(c.g?.editorial_review?.passes!==2||c.g.sources.macula.blob!==c.h.git_blob||c.g.sources.lsg.chapter_prose_sha256!==c.f.reading_text_sha256))throw Error("Missing audited ledger or source lock mismatch "+c.scope);
+  if(requireGold){
+ const chapter=Number(c.scope.split(".").at(-1)),m=c.g?.sources?.macula,segments=m?.segments??[];
+ const own=segments.filter(s=>s.native_chapter===chapter);
+ if(c.g?.editorial_review?.passes!==2||(!own.length?m?.blob!==c.h.git_blob:!own.every(s=>s.blob===c.h.git_blob))||c.g.sources.lsg.chapter_prose_sha256!==c.f.reading_text_sha256)throw Error("Missing audited ledger or source lock mismatch "+c.scope);
+}
   const groups=new Map(),ids=new Map(),french=new Map(Object.entries(c.f.verses).map(([v,s])=>[+v,ft(s)]));
   for(const w of c.h.words){let v=+w[1].split("!")[0].split(":").at(-1),a=groups.get(v)??[];if(ids.has(w[0]))throw Error("Duplicate source ID "+c.scope);ids.set(w[0],{v,i:a.length,w});a.push(w);groups.set(v,a)}
   return{groups,ids,french};
  }
  function buildEvidence(chapters,seed=null){
-  const exact=new Map(),lemma=new Map(),scopes=new Set();
+  const exact=new Map(),lemma=new Map(),scopes=new Set(),skipped={foreignSegment:0,nonContiguous:0,otherVerse:0};
   function add(h,f,refs){
    if(!h.length||!f.length)return;
    for(const [idx,hs] of [[exact,h],...(h.length===1&&content(h[0])?[[lemma,h.map(general)]]:[])]){
@@ -22,8 +26,22 @@
    }
   }
   if(seed)for(const e of seed.entries)add(e.h,e.f.map(s=>s.toLowerCase().replace(/’/g,"'").normalize("NFC")),e.examples);
-  for(const c of chapters){if(scopes.has(c.scope))throw Error("Repeated training chapter "+c.scope);let p=prepare(c);scopes.add(c.scope);for(const rel of c.g.relations){if(rel.kind!=="translation")continue;let hs=rel.hebrew.map(id=>p.ids.get(id));if(!hs.length||hs.some(x=>!x))throw Error("Unknown original ID "+c.scope);hs.sort((a,b)=>a.i-b.i);let vs=hs[0].v;if(hs.some((x,i)=>x.v!==vs||x.i!==hs[0].i+i))continue;let fs=rel.french.slice().sort((a,b)=>a[1]-b[1]);if(!fs.length||fs.some((x,i)=>x[0]!==vs||x[1]!==fs[0][1]+i))continue;const tokens=p.french.get(vs);if(fs.some(t=>!tokens?.[t[1]-1]||tokens[t[1]-1].start!==t[2]||tokens[t[1]-1].end!==t[3]))throw Error("French offset mismatch "+c.scope);add(hs.map(x=>hk(x.w)),fs.map(t=>tokens[t[1]-1].word),[`${c.scope}.${vs}`]);}}
-  return{exact,lemma,scopes};
+  for(const c of chapters){if(scopes.has(c.scope))throw Error("Repeated training chapter "+c.scope);let p=prepare(c);scopes.add(c.scope);for(const rel of c.g.relations){if(rel.kind!=="translation")continue;let hs=rel.hebrew.map(id=>p.ids.get(id));if(!hs.length||hs.some(x=>!x)){
+ const chapter=Number(c.scope.split(".").at(-1)),prefix=c.h.words[0]?.[0]?.slice(0,3);
+ const unknown=rel.hebrew.filter(id=>!p.ids.has(id));
+ const segments=(c.g.sources.macula.segments??[]).filter(s=>s.native_chapter!==chapter);
+ // Declared foreign segments are excluded from this same-native-verse experiment,
+ // not accepted as validated source IDs. All unknown IDs must be covered by an
+ // explicit foreign segment and all French targets must belong to that segment.
+ const declared=unknown.length&&unknown.every(id=>{
+  if(typeof id!=="string"||!id.startsWith(prefix)||!/^o\d{11,}/.test(id))return false;
+  const nc=Number(id.slice(3,6)),nv=Number(id.slice(6,9));
+  return segments.some(s=>s.blob&&s.native_chapter===nc&&nv>=s.native_first&&nv<=s.native_last&&rel.french.every(t=>t[0]>=s.lsg_first&&t[0]<=s.lsg_last));
+ });
+ if(declared){skipped.foreignSegment++;continue;}
+ throw Error("Unknown original ID "+c.scope+" "+unknown.join(","));
+}hs.sort((a,b)=>a.i-b.i);let vs=hs[0].v;if(hs.some((x,i)=>x.v!==vs||x.i!==hs[0].i+i)){skipped.nonContiguous++;continue;}let fs=rel.french.slice().sort((a,b)=>a[1]-b[1]);if(!fs.length||fs.some((x,i)=>x[0]!==vs||x[1]!==fs[0][1]+i)){skipped.otherVerse++;continue;}const tokens=p.french.get(vs);if(fs.some(t=>!tokens?.[t[1]-1]||tokens[t[1]-1].start!==t[2]||tokens[t[1]-1].end!==t[3]))throw Error("French offset mismatch "+c.scope);add(hs.map(x=>hk(x.w)),fs.map(t=>tokens[t[1]-1].word),[`${c.scope}.${vs}`]);}}
+  return{exact,lemma,scopes,skipped};
  }
  const hits=(arr,sub)=>{let o=[];for(let i=0;i+sub.length<=arr.length;i++)if(sub.every((x,j)=>x===arr[i+j]))o.push(i);return o};
  const chapterSupport=e=>new Set([...e.refs].map(s=>s.split(".").slice(0,2).join("."))).size;

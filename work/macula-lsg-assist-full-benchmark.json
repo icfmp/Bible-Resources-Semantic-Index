@@ -1,0 +1,2157 @@
+{
+  "schema_version": 1,
+  "status": "full_corpus_holdout_agreement_not_semantic_certification",
+  "source_commit": "afef11cdb23707b9b006b45e87ebc4ce9bfe4642",
+  "streaming_engine_blob": "15915e0af7cf9601851f68f9214e64a10f65438e",
+  "statistics_blob": "caf68bec492822179eceec49339d0d3e511b4b56",
+  "training_count": 153,
+  "training": [
+    {
+      "scope": "Gen.1",
+      "locks": [
+        "2272449c7af04eb6224f6ffc2c7bea9d60b11a51",
+        "b2c9cb75cafa0d40dce95690595e2930162b5287",
+        "5af403ec50c6750ac6300e2fc7fd4df88a973732"
+      ],
+      "skipped": {
+        "nonContiguous": 5,
+        "otherVerse": 4,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Gen.2",
+      "locks": [
+        "9e0401b1d53f7984dde626864ce43ce962793310",
+        "51500cdf5de0537defe59f9cd16576e962508e62",
+        "7180633ccdc2ae07577d813a836d2962700bba87"
+      ],
+      "skipped": {
+        "nonContiguous": 0,
+        "otherVerse": 4,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Gen.3",
+      "locks": [
+        "94a85939054affb619fc2dbb0057028ab158fa25",
+        "c2978bdc1782f55842de3ef523165da1206a6e43",
+        "d5a1ba425f54bf736c2641c238721258066909d2"
+      ],
+      "skipped": {
+        "nonContiguous": 2,
+        "otherVerse": 8,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Gen.4",
+      "locks": [
+        "3015f18adfb4e7c0a4895f0381cf7b415b818757",
+        "b0abcfd7108a428d56f99c6b56790bd9388fea4c",
+        "70c3c836ffc822193820e3f339f8279b010a2596"
+      ],
+      "skipped": {
+        "nonContiguous": 0,
+        "otherVerse": 5,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Gen.5",
+      "locks": [
+        "14c4332757e2164400e7e6a8333a1702ad9d8eb8",
+        "b6d32d74bb393360c519c8bb961198d4fc163843",
+        "537aee15a3b92dbcd350df587103aab2092f0760"
+      ],
+      "skipped": {
+        "nonContiguous": 2,
+        "otherVerse": 0,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Gen.6",
+      "locks": [
+        "f16283545ed3b7990f54636e5e450642987589c6",
+        "da81d2f2f594dc472dc082a8548cf5fff5ae578c",
+        "c6261cc96ca8fcbd8953a72e77f686b9113b1181"
+      ],
+      "skipped": {
+        "nonContiguous": 0,
+        "otherVerse": 5,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Gen.7",
+      "locks": [
+        "0803e9b7075965a1473dc1834c2289f5b9b27946",
+        "3fd8f44ffedbdfab731bc307daa13b81440368fb",
+        "3dd09960d2fe4d09b2e469602fcce1abc1a64205"
+      ],
+      "skipped": {
+        "nonContiguous": 0,
+        "otherVerse": 4,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Gen.8",
+      "locks": [
+        "5cb92341d12db1892274dfc2a93a361eb20a3edc",
+        "46759f3894401e3f67d22b06301452b8245e2e5a",
+        "26336f80b69dac520985e0054db5ad0193aae98b"
+      ],
+      "skipped": {
+        "nonContiguous": 0,
+        "otherVerse": 4,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Gen.9",
+      "locks": [
+        "5b7f2ca26cffb44b4912a2505583fb3a1bf72894",
+        "6950369fe9bb5a2a35f7ba2ee5b869a9f420e98b",
+        "b3c9db53220da981f3357c1411109de1c7d0228c"
+      ],
+      "skipped": {
+        "nonContiguous": 0,
+        "otherVerse": 5,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Gen.10",
+      "locks": [
+        "dbf126ea582b08e38fd6c9673ce44fb07749141e",
+        "5bd687a4bf6b0efd6e59b85faf11d771745199f7",
+        "49b50eb8ad84c8ec3ef0d6134cdefb3e915515bc"
+      ],
+      "skipped": {
+        "nonContiguous": 1,
+        "otherVerse": 1,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Gen.11",
+      "locks": [
+        "68078e9c484222ce234024cf2bed4104ff3a892b",
+        "b20e2d6620f593ccd91f0f84352edc92aa58b2e1",
+        "b7f999ed1d2a5fa6a67f20d1d770f86b6b42c224"
+      ],
+      "skipped": {
+        "nonContiguous": 0,
+        "otherVerse": 2,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Gen.12",
+      "locks": [
+        "5da10e9d249c0e49432eaae287b7672f1eb249b5",
+        "7f0e179c02402d7b031d0b1cfbd7cad81e2cdc13",
+        "8b6649aab5bb99d78f87243a1f62ff7155a5ba3f"
+      ],
+      "skipped": {
+        "nonContiguous": 1,
+        "otherVerse": 7,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Gen.13",
+      "locks": [
+        "3a7e74f10ebc3505993dd5dfc4b594aa4f3ce87a",
+        "f6a38b5ffc63b5cba1c3d85ca76d5a2aef17d567",
+        "83d9a73574b1ea5952c414d0c1d37008cd5eea30"
+      ],
+      "skipped": {
+        "nonContiguous": 1,
+        "otherVerse": 4,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Gen.14",
+      "locks": [
+        "9bdd1bf346cdb300592240ce70f15787d4d9b062",
+        "a719630c31b60a098c353c4675cae52ab7b1c1d5",
+        "e51a6df71603b86def118d93167084782ee6bbfa"
+      ],
+      "skipped": {
+        "nonContiguous": 0,
+        "otherVerse": 5,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Gen.16",
+      "locks": [
+        "0c5b6b41ac849dfc7f0529717b2ae5ff468d3f65",
+        "b990731252dd7278b745cebe089b17ab0a1020f0",
+        "798e2a168c6078855a964b7bc1bfe28e568a82d2"
+      ],
+      "skipped": {
+        "nonContiguous": 4,
+        "otherVerse": 4,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Gen.17",
+      "locks": [
+        "45441107140ef188743f66ae21417ac3f91a2a83",
+        "7ba6a45e7b5344aae273bc92b0825cdc92be4c9d",
+        "0039e0ad13739d6e6f2fb243c14f738d5c088d6a"
+      ],
+      "skipped": {
+        "nonContiguous": 2,
+        "otherVerse": 0,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Gen.18",
+      "locks": [
+        "2a28a1286c6a45bb8ff9885848ca3f2cf416a90f",
+        "0d8fc8e69f14959d7ed735929cfca00d91295e7f",
+        "485d1e858bdac0edef683748fbecb50e07df27fa"
+      ],
+      "skipped": {
+        "nonContiguous": 1,
+        "otherVerse": 12,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Gen.19",
+      "locks": [
+        "16336a83a18a15f903b1d23eb4572462b2896e0e",
+        "1d7b981b95cd40b33cf501defb1677942834ba07",
+        "2246d6c5a700ec4f598547d0ae8eb64ce6d8b25a"
+      ],
+      "skipped": {
+        "nonContiguous": 2,
+        "otherVerse": 13,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Gen.20",
+      "locks": [
+        "e780cce07cd901015a0e87328cf79c7ff6e59491",
+        "f14c51da6fac2d627f89743ae6a616164280a703",
+        "bac12a0dad5b6bd454525a33ed7ff938d7b75009"
+      ],
+      "skipped": {
+        "nonContiguous": 2,
+        "otherVerse": 7,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Gen.21",
+      "locks": [
+        "a60dbc14a3d7a35e7cb4c9fcf1af350e9e94fd8d",
+        "cc7063804414a53f81869a1d57b113835918bb95",
+        "2041ae9e8704bda4c3838b0bab7fff8aac4f6c9c"
+      ],
+      "skipped": {
+        "nonContiguous": 1,
+        "otherVerse": 10,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Gen.23",
+      "locks": [
+        "6974e8459c8aba4a273a2cd15b323d85bbb08df7",
+        "9056f7f0e1b3041edf8084b66adc470ea655b4d7",
+        "dc1ab6af92679d67e8160e7d5cfaec980150e455"
+      ],
+      "skipped": {
+        "nonContiguous": 3,
+        "otherVerse": 2,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Gen.24",
+      "locks": [
+        "053dcb94d83dec3e99345a96532cd66e836882cd",
+        "bcad7a54b69ce018d98bceb5346cd1ce92ef3e19",
+        "27754e4a6dd775de39561ddc8c31e719057904f9"
+      ],
+      "skipped": {
+        "nonContiguous": 3,
+        "otherVerse": 15,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Gen.25",
+      "locks": [
+        "c83da3226572c4a57794dccbb8f692ee698a9e2d",
+        "f7a8a46f52ccb3ff4e7173228703f618cae72493",
+        "0e1df288ca20fbc40c1342ec88323bb1677a4aed"
+      ],
+      "skipped": {
+        "nonContiguous": 2,
+        "otherVerse": 5,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Gen.26",
+      "locks": [
+        "2b40833345bcf258fe3cf307ca39af22178e9065",
+        "ec8d2cb596a8fc1f9da615d2ebbaab28762d37cf",
+        "0d079bf4300c3175f14f54a45c318d50e9707fcb"
+      ],
+      "skipped": {
+        "nonContiguous": 0,
+        "otherVerse": 28,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Gen.27",
+      "locks": [
+        "491725daf6aea2e188653401a12c4604a43d6199",
+        "e45a65179d3bbac3cc40306f8c843a3118d791ad",
+        "aae2d7f0a0892005991ab6d1da297667b3baed6d"
+      ],
+      "skipped": {
+        "nonContiguous": 0,
+        "otherVerse": 32,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Gen.28",
+      "locks": [
+        "050aa09d2e12eae85c12f3a6453576c724694521",
+        "c99e84c6fd2e101ee2a719ff0dffd970b17aea4c",
+        "5241232e3f78a7d94d34aa1f96537cf70936b5f3"
+      ],
+      "skipped": {
+        "nonContiguous": 1,
+        "otherVerse": 22,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Gen.29",
+      "locks": [
+        "f77e72943e32ea0122f1aa96c507d2151d3e76c2",
+        "330b3b8295584d5284fadbe246b854620d263367",
+        "67491627fde1f29ac392b44d892af2499b2eda87"
+      ],
+      "skipped": {
+        "nonContiguous": 3,
+        "otherVerse": 17,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Gen.30",
+      "locks": [
+        "3bd1a94a448bdfe83b4a5453bde6417714965695",
+        "e2ea40e91a4b90d98473dd585ed1ec7907a79551",
+        "24e71dc8b364b23bee1aaeb4678c1dc32d56ba65"
+      ],
+      "skipped": {
+        "nonContiguous": 4,
+        "otherVerse": 40,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Gen.32",
+      "locks": [
+        "f5e4504d8867aff5ea522d7cdddba2ce7b9c05a6",
+        "cca83ff847c47befe948277147add567115b6f1a",
+        "622591ce6332b6f7353758f7f864bd8e004427a7"
+      ],
+      "skipped": {
+        "nonContiguous": 1,
+        "otherVerse": 538,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Gen.33",
+      "locks": [
+        "2ec5724cdc5abac5e1b540e3006ead306d9c8c7b",
+        "0143906e90587b9a290155067a7bb514f1d83eb5",
+        "8732f51d95786a13e21a71ab59452c111f8d3edf"
+      ],
+      "skipped": {
+        "nonContiguous": 2,
+        "otherVerse": 3,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Gen.34",
+      "locks": [
+        "dac58a60f69b57ca98e842b1947e395808e3c560",
+        "b5e1625287799cc6fb9308f4ad13264f5ae52bd9",
+        "79b1cd6d939ccda87053936154468afaa0c87333"
+      ],
+      "skipped": {
+        "nonContiguous": 4,
+        "otherVerse": 28,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Gen.31",
+      "locks": [
+        "ba18802174c0916b7ad5346fa8f601e09169ed58",
+        "3619c251768b8c24adfe319209a0c94a80fca558",
+        "b657f719236158c54fd39a28f2bbad03ede337b5"
+      ],
+      "skipped": {
+        "nonContiguous": 5,
+        "otherVerse": 42,
+        "unknownOriginal": 18
+      }
+    },
+    {
+      "scope": "Gen.35",
+      "locks": [
+        "8c16753aa30fecdf0f7521cf5a3058fe79415c80",
+        "4fdb16fe178866e748f82c1f9a17921f32d47b9a",
+        "6f30dfcbeaa8569b8b6dd47149d2d32563b92d0a"
+      ],
+      "skipped": {
+        "nonContiguous": 2,
+        "otherVerse": 10,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Gen.36",
+      "locks": [
+        "65b82e4912d4b62951339dd1e1b94a075c18bf08",
+        "4f990190e56c67de16405389661e0d59940db0f9",
+        "c9098844b26a30a47283d9d285621303cfb47512"
+      ],
+      "skipped": {
+        "nonContiguous": 0,
+        "otherVerse": 9,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Gen.37",
+      "locks": [
+        "7f10a9ba6106afc351473ddd1f823fa25d0b2695",
+        "6e5fe7ff53350da57508eb641a7c200c6f0226ea",
+        "ac097027fa8e8b36df8af16869b1a9a150f86631"
+      ],
+      "skipped": {
+        "nonContiguous": 5,
+        "otherVerse": 23,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Gen.38",
+      "locks": [
+        "24217914e7d232be85fc8bbc42abc2fb98e01256",
+        "8902bed12552417409448d4edd4cdb4d4a25b6a6",
+        "fa9763d27fbc31f55afc71405cf1a5cd06228d0c"
+      ],
+      "skipped": {
+        "nonContiguous": 0,
+        "otherVerse": 21,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Gen.39",
+      "locks": [
+        "abf216486cfbac294eb21de2d0bff52d72b8eb33",
+        "9265d0cb66385144de75d02ec000776c88824381",
+        "d80f380c6fe04f913dee01c9904fb29dea2f9b97"
+      ],
+      "skipped": {
+        "nonContiguous": 1,
+        "otherVerse": 13,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Gen.40",
+      "locks": [
+        "df18db3c527edee5e3f455721c524f285ff6d6e8",
+        "974306d7ab9561441527a30545a9083b8e575af4",
+        "c58a2e7656c151b59817f10aaeb51ee4ff54d556"
+      ],
+      "skipped": {
+        "nonContiguous": 3,
+        "otherVerse": 8,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Gen.41",
+      "locks": [
+        "3cd937b8f74e6bc086dff027e42a01c51bfa33e6",
+        "593a8bd47093984ea34a53402f6ba7daa1b6ab8a",
+        "bfdfddd400b84b022ea27e7d2b396d9e2df3c905"
+      ],
+      "skipped": {
+        "nonContiguous": 8,
+        "otherVerse": 25,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Gen.42",
+      "locks": [
+        "1a28068ea804f1dd0cbb61480ced8ade84ae4445",
+        "6f24cd2bd5aa6964fb4583bacc940f8354aee704",
+        "965321c3c665ada070bedcf1f43294a95f45dbce"
+      ],
+      "skipped": {
+        "nonContiguous": 3,
+        "otherVerse": 42,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Gen.43",
+      "locks": [
+        "41b7d7eac9ef9070f840e01e8e1ca42236f86bac",
+        "7f9eb1bf25e11416bd0d2bf64b23482df6d2bffd",
+        "f374dd836cf84a7af0efd3a980dd88b7c15ad255"
+      ],
+      "skipped": {
+        "nonContiguous": 1,
+        "otherVerse": 33,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Gen.44",
+      "locks": [
+        "bbb64714afcd1e4c24fa151d0df2b6f910ef1307",
+        "ab3df0f9c098f393a2855e1814b3cbd8f5c4fbaf",
+        "8db45adb72e3e94784807f6797bb18b78e598514"
+      ],
+      "skipped": {
+        "nonContiguous": 4,
+        "otherVerse": 35,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Gen.45",
+      "locks": [
+        "b97cb66ec5b422d720b5135bf4365724642b0b9f",
+        "81b61ab11510219bdf19c7568a24bfbf174b2073",
+        "d53c4450f6db69de2834d5007da0f2ed5c49f888"
+      ],
+      "skipped": {
+        "nonContiguous": 2,
+        "otherVerse": 22,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Gen.46",
+      "locks": [
+        "b334d9ad8368ad6b264eefe160892e32ce7c1cd9",
+        "9056f8ab2b83861fd1e95bf19d4e62cbb69d948e",
+        "1eec2fb740e25e428be65647ea0805fde8b5dbfa"
+      ],
+      "skipped": {
+        "nonContiguous": 4,
+        "otherVerse": 10,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Gen.47",
+      "locks": [
+        "337884d8b861fb080828c6587a0305665bcf6b87",
+        "494d119d894786191fdab4b64bd91c2f0cf908ab",
+        "f7bce3c55e90fc8939560fce05dd3b328d7d7ad3"
+      ],
+      "skipped": {
+        "nonContiguous": 4,
+        "otherVerse": 28,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Gen.48",
+      "locks": [
+        "e80dfe765ca2b4efb357564d6bbdbcac2e10f0f9",
+        "d3618a44c74636b960216515b151975f59d047e8",
+        "396b745a8ec7c9a00a7010ab57f9db5d04d51315"
+      ],
+      "skipped": {
+        "nonContiguous": 0,
+        "otherVerse": 17,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Gen.49",
+      "locks": [
+        "672fc75ae8bb3485c742b8156aabbd527a31b823",
+        "6ba3ab5f35cd8e18b916f9706fcaca9fb2f30011",
+        "e4c26e2216e5581e48fd7ad302697d2e30841652"
+      ],
+      "skipped": {
+        "nonContiguous": 0,
+        "otherVerse": 20,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Gen.50",
+      "locks": [
+        "ea4ecca796f26a49dec316a008dca68839b422fb",
+        "f02c01eb5bb6169284eb92d706d79c228cf4c0c0",
+        "fc48709b74587645643de53e32648507b7cdb3aa"
+      ],
+      "skipped": {
+        "nonContiguous": 1,
+        "otherVerse": 17,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Exod.1",
+      "locks": [
+        "71e7ce3b153fa7212b9b0819a8aca1850fedd0f7",
+        "0769fa84bb7286faa12e777f03f4491fd42367c8",
+        "9f01b03bb14d1d1cdaea5bf147ee086d01a01ae7"
+      ],
+      "skipped": {
+        "nonContiguous": 2,
+        "otherVerse": 7,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Exod.2",
+      "locks": [
+        "2b8b33117efe13fb0281b3aae25596142e0e8189",
+        "760d3f960d01a361065c4340d03656711cc9b191",
+        "96140a1204b385e65ccca41c24bc6ad324b244ea"
+      ],
+      "skipped": {
+        "nonContiguous": 1,
+        "otherVerse": 2,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Exod.3",
+      "locks": [
+        "16906902b005ccedad3f49c28e91574a795096cb",
+        "14e67ee019a41aaa40f3166bbc821b1ecf0c65ef",
+        "5ce764f4ec415600043191132a2b562bab004a71"
+      ],
+      "skipped": {
+        "nonContiguous": 0,
+        "otherVerse": 14,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Exod.4",
+      "locks": [
+        "0c69cc27e8ca3aef80b18749ec1807bed9a71ffd",
+        "1f33d2fdd6d378d08d8f64d463d549a3ba70a833",
+        "c405d30956ead78c33668c5380d758a61d442bc3"
+      ],
+      "skipped": {
+        "nonContiguous": 2,
+        "otherVerse": 21,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Exod.5",
+      "locks": [
+        "6570cb5a12194bb31a004ff2ff6de0ca5883d1cc",
+        "6922bdc056d8f2a71b9f9d1666a72ff8ce6b42d8",
+        "1fd2f3f4e3bbbf39700b8c6752f39c682efccbcd"
+      ],
+      "skipped": {
+        "nonContiguous": 2,
+        "otherVerse": 23,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Exod.6",
+      "locks": [
+        "3e2b9183082d4c5788268445ef7100339301c7ea",
+        "635cd7b68d4c560e25404197ba71d32a3abde28a",
+        "036799fc1a4f92f8dd3dc4b162ac1948041f6ca3"
+      ],
+      "skipped": {
+        "nonContiguous": 2,
+        "otherVerse": 14,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Exod.7",
+      "locks": [
+        "a54476e3aff9177eeb2319f08c14da6430e2db3d",
+        "7143fe0248865f551b8536e972aa536ed948d8ff",
+        "216d2a9e651a549ea09aad14fa57f2f2804a5565"
+      ],
+      "skipped": {
+        "nonContiguous": 1,
+        "otherVerse": 10,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Exod.8",
+      "locks": [
+        "1c497583b1c3ccc95f5e92b07c3ef26f623f08db",
+        "a684c58fcaa1396602a6287ea7e84b8bbb86be84",
+        "7400986d6d9fc9ad78df5b20909af0e9d31088d0"
+      ],
+      "skipped": {
+        "nonContiguous": 1,
+        "otherVerse": 11,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Exod.9",
+      "locks": [
+        "580a0724bb13e81a7f858392bf174b2ffc69e129",
+        "ca5cde7dd766a5b82a3ae39c2bf502d9c9cd518b",
+        "12719501f455760d405d02c0a1602439f5e9ced4"
+      ],
+      "skipped": {
+        "nonContiguous": 2,
+        "otherVerse": 16,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Exod.10",
+      "locks": [
+        "b16ced1210aae9672f8ca7006b1f50243167155e",
+        "87950b819c7bc35e272c6aad25a586d382385e9e",
+        "16320ae21d9fbcb2344c262389c38121a3e29733"
+      ],
+      "skipped": {
+        "nonContiguous": 1,
+        "otherVerse": 21,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Exod.11",
+      "locks": [
+        "a6679835092e28c3caac4f6d5b0dd2ce4b251c2f",
+        "a79399645b79ddff54b0ed4b575fcd934095fa29",
+        "383ea3179a2a7be8e5664a13d6147b0b7d1216ac"
+      ],
+      "skipped": {
+        "nonContiguous": 1,
+        "otherVerse": 9,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Exod.13",
+      "locks": [
+        "d87d60b045b3f4a0e9d66ab99663d196715a8df0",
+        "e3f55cd3409f2fcacd8e58c23d3e0eb1348bb7a9",
+        "d9fb3f0aa28684a4ccd43503dbfc5ab517429775"
+      ],
+      "skipped": {
+        "nonContiguous": 1,
+        "otherVerse": 14,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Exod.14",
+      "locks": [
+        "cc72bd007d73a3ac17227966825ad47b48edc07e",
+        "04e7a96dfce4508c8036783d5e284ee4c7bc8845",
+        "ccd9c00c612d0be5f0a0d532d5b44665b257f5db"
+      ],
+      "skipped": {
+        "nonContiguous": 0,
+        "otherVerse": 6,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Exod.15",
+      "locks": [
+        "e44991544d9f5b796903bc5bddc0169d60878d94",
+        "d92dbc3aea1d4dcd9e6d34b97d2ff0f02d4c6b01",
+        "6af7f0e6deefb95079e3c0045a5926a26d128566"
+      ],
+      "skipped": {
+        "nonContiguous": 0,
+        "otherVerse": 16,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Exod.16",
+      "locks": [
+        "fa91ffadc58e0c11d493dd0100fcb737dd7cd1e0",
+        "d3f4549ffbb3d66b28adee323984321342f90cb8",
+        "0277aa557f038210bb69eac292b92d10aec50b3f"
+      ],
+      "skipped": {
+        "nonContiguous": 0,
+        "otherVerse": 22,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Exod.17",
+      "locks": [
+        "fb7d8190e9bf78a2d53c93dc529a1b2bf99b5c99",
+        "42a73e0ee37bea18c731392ffa0bc7e280c5ca2d",
+        "4f4a862f1c5524489c576cef0ed1a56196af766c"
+      ],
+      "skipped": {
+        "nonContiguous": 2,
+        "otherVerse": 5,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Exod.18",
+      "locks": [
+        "33db8174bb602f69cea921677f8caff83a222cbc",
+        "d43039138f65de3d4bf16e2eb69265f62d530a2f",
+        "3fc204ae2a6b4e4960d8972b7ae75678c6fe7f03"
+      ],
+      "skipped": {
+        "nonContiguous": 0,
+        "otherVerse": 11,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Exod.19",
+      "locks": [
+        "477105c544db6e68dd0c2631470519abe7a06ce8",
+        "053ecf238dbda00f58734bd354d9099018fc504b",
+        "d4baa79be1ef82726b17680bc98ee54ffe3bde08"
+      ],
+      "skipped": {
+        "nonContiguous": 2,
+        "otherVerse": 11,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Exod.20",
+      "locks": [
+        "95b13aa9aad694969801d57298bbb879f9ac949f",
+        "7b55bda8b0f4fbe7029f82b51ac0c10fe2fcb8d2",
+        "c710a23106aa5ae2af32633fa7bf1783a1ea177d"
+      ],
+      "skipped": {
+        "nonContiguous": 2,
+        "otherVerse": 37,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Exod.21",
+      "locks": [
+        "26f6c871700746af40b0b048ad12b78997014cdd",
+        "1a5fc72224246e5a208d2a4594788ba6bbb79f06",
+        "13e08d3076a92dd83b6acd5a295fd64ebc63dcbf"
+      ],
+      "skipped": {
+        "nonContiguous": 0,
+        "otherVerse": 28,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Exod.22",
+      "locks": [
+        "1627782e5a6198149468e37bbefef4e419dff479",
+        "84adaa54f48de725e7e8fa64614e886b499da6e1",
+        "29536d8f7cfc3ab1b1c071162342eb9d022af2bb"
+      ],
+      "skipped": {
+        "nonContiguous": 2,
+        "otherVerse": 389,
+        "unknownOriginal": 22
+      }
+    },
+    {
+      "scope": "Exod.23",
+      "locks": [
+        "3b40aba7e010ad99ca228d1f96c04a5022300929",
+        "1161f26ed5dcbf327f11134c0b2d9a4546611900",
+        "6bdd6b54276503471c40a9ba01323dc25605b3df"
+      ],
+      "skipped": {
+        "nonContiguous": 2,
+        "otherVerse": 56,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Exod.24",
+      "locks": [
+        "d93cbe65d4113eecd33bfb390fe8430b414ea181",
+        "53c5220a82e6cd0c60dfdcb484a9096fae470700",
+        "82b79d73c14149601774df8922769967e9c0e77c"
+      ],
+      "skipped": {
+        "nonContiguous": 1,
+        "otherVerse": 5,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Exod.25",
+      "locks": [
+        "61f6dd7c52c03a69626e598ad9be23e4be7cb7ed",
+        "f222a99ec9ef9ce392535cc15db5547c90c5c1ac",
+        "4c2266de624b1d1d9e956b6e480bd05df092a615"
+      ],
+      "skipped": {
+        "nonContiguous": 2,
+        "otherVerse": 23,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Exod.26",
+      "locks": [
+        "e98343f09159215125d61f7257faa982e436f8bd",
+        "3727dba13ed86c713aef432109839f9ded7cda38",
+        "639b6be89220cf21f57ed84ed5f829eec5771bb1"
+      ],
+      "skipped": {
+        "nonContiguous": 1,
+        "otherVerse": 15,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Exod.27",
+      "locks": [
+        "1f046b820db3215fa1b6804ce04feaa3160f6b48",
+        "956d48a973a90a31cad0d5832f8df483edbbcd2b",
+        "8de1c2537635107186bce97c18d70d55570d87d9"
+      ],
+      "skipped": {
+        "nonContiguous": 2,
+        "otherVerse": 5,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Exod.28",
+      "locks": [
+        "53ed4e5aa99883129318e812ce4586559e48244d",
+        "94da20f667985401c002de17b8dae99658fe4604",
+        "d5d4540a0280d6d56ece10d512f4311b7a89ecbd"
+      ],
+      "skipped": {
+        "nonContiguous": 1,
+        "otherVerse": 15,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Exod.29",
+      "locks": [
+        "a8d1f22bd27d26f1e25e1b22209bfd2d804db766",
+        "fd2bc2aa08d3b2f162f5bd23b5eff41c1c8af95c",
+        "fd33ec8472ba875d449c4456b0b1c970d4b1dfec"
+      ],
+      "skipped": {
+        "nonContiguous": 1,
+        "otherVerse": 27,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Exod.30",
+      "locks": [
+        "936ef3f15e7fa2318f0e75221637489f22d54e45",
+        "2f53e1e6a9eaa84154a8651af231a7aa32ef4489",
+        "0930942181f80739a26eb7f4fa3bc4890f1f35d6"
+      ],
+      "skipped": {
+        "nonContiguous": 2,
+        "otherVerse": 26,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Exod.31",
+      "locks": [
+        "8c5918e36242ad5f7d45a733331fdb7d2d2e3cf1",
+        "960a96bedcfe415061b12312dc711eec14df6555",
+        "b43808f38212b360fd39aff4254166cf806b19f8"
+      ],
+      "skipped": {
+        "nonContiguous": 1,
+        "otherVerse": 7,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Exod.32",
+      "locks": [
+        "cba9eb6936e0a1c9dd44009c9cee25ce1bb1fafa",
+        "be6c586398a0eb31c359be2a229f529b3874171c",
+        "f7d30429a2dd0d08c6fd0e7bbe58bcb68208192c"
+      ],
+      "skipped": {
+        "nonContiguous": 1,
+        "otherVerse": 33,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Exod.33",
+      "locks": [
+        "de7728f0fab4689434900f2562950ba46b6a860a",
+        "234295b0e17b47125be4d9034dfed6f4475306ad",
+        "f8f27c97995f53a2eee0b56e1911c06a5b92c35e"
+      ],
+      "skipped": {
+        "nonContiguous": 0,
+        "otherVerse": 26,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Exod.34",
+      "locks": [
+        "aa8cda0958dbda559413919ca64bd7fa413955ba",
+        "fe51fd262a8372de6a38a808186340b9f6e71eec",
+        "05ce7088f532083b9e623829d9ae15505c30d92a"
+      ],
+      "skipped": {
+        "nonContiguous": 0,
+        "otherVerse": 25,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Exod.35",
+      "locks": [
+        "730d3794641f4505feac56e4f18ebd88a7edbfc6",
+        "74a7a448156f3232b14d9fb54289cfb6f3b59757",
+        "503d22778b084b755ff14a9c92a276ae4f1415e9"
+      ],
+      "skipped": {
+        "nonContiguous": 1,
+        "otherVerse": 7,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Exod.36",
+      "locks": [
+        "24be5b359b091b0fe4f40bd7a0a3124a250b8df4",
+        "79d96e9814d80185e717f7a67d686bbf663e7560",
+        "abd2adc89dd1390da595e3ebb3746299e5d1e60e"
+      ],
+      "skipped": {
+        "nonContiguous": 3,
+        "otherVerse": 17,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Exod.37",
+      "locks": [
+        "c5a363c1d9cb84792062ab0526ff02c450959d27",
+        "b2d4c6ac2a69e4b7f1d531154d3e681c2a076fa5",
+        "ad76e268187d62ddcc3e5103a857b1c80ce8dde1"
+      ],
+      "skipped": {
+        "nonContiguous": 1,
+        "otherVerse": 11,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Exod.38",
+      "locks": [
+        "c6456754b58ebfcf38c8ac991e60b86b1677dfc4",
+        "ffd33a50761b0fc4412a49ec5e6519a47f328547",
+        "7086aff8f8c51bb8e6f737734fb3cc1c4912d3be"
+      ],
+      "skipped": {
+        "nonContiguous": 0,
+        "otherVerse": 5,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Exod.39",
+      "locks": [
+        "6c31997a850499451779b076af65f0862837389b",
+        "2e639dbb0a7daad22ec3891762bed50d138ca3b2",
+        "4712177fcae63e85d3a20f3c8d2f5500e4556d9e"
+      ],
+      "skipped": {
+        "nonContiguous": 0,
+        "otherVerse": 11,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Exod.40",
+      "locks": [
+        "e7f8df4a73265633c05b807fb542da5d6e41f984",
+        "6da29b8af913e353ea9c5a40ea7dcb373a33f6b7",
+        "ae757ff037462fecfd47c21528d6831ebe98b2b4"
+      ],
+      "skipped": {
+        "nonContiguous": 3,
+        "otherVerse": 22,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Lev.1",
+      "locks": [
+        "452650c6ab8e2fbe30f41883eab557dc40cf2d25",
+        "bec76d036b2318cc8ee8cc49b7084730b77cda8f",
+        "df6883307b3c63987b7a08ca0f82da7917bca362"
+      ],
+      "skipped": {
+        "nonContiguous": 0,
+        "otherVerse": 7,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Lev.2",
+      "locks": [
+        "05b3b2d3728527fcebcc345b87c090d30aa34d6d",
+        "e317a5aa8504c51609aa8fde5121d5752cf55411",
+        "0cb106ccf7db8e0fc72a03b0d47beaf85ba17958"
+      ],
+      "skipped": {
+        "nonContiguous": 1,
+        "otherVerse": 10,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Lev.3",
+      "locks": [
+        "d2c79bc8e4574dcca5277887ff1fa1e9793a2872",
+        "0e93d405fe25b7c2538cb59fd49e68d12ca72c35",
+        "ab8ba86c8dbd02654373e0ecab150bee0c6b1a63"
+      ],
+      "skipped": {
+        "nonContiguous": 0,
+        "otherVerse": 5,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Lev.4",
+      "locks": [
+        "2495c31146ad1319c32462e0cd27c56965883b40",
+        "71a4a17c3636e5fc761e30e0aeea700bb9e80b1b",
+        "7432a20538ee5a5bc7b5d6b13b945c402da2c490"
+      ],
+      "skipped": {
+        "nonContiguous": 2,
+        "otherVerse": 27,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Lev.5",
+      "locks": [
+        "f92b354b895682d8d0ab6a827772891efe0a3207",
+        "0e7ea5a8239da75ef54141ac6aad018406fee564",
+        "1cb444a596e9ecd0b879df842881853365ec06a6"
+      ],
+      "skipped": {
+        "nonContiguous": 0,
+        "otherVerse": 27,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Lev.6",
+      "locks": [
+        "6c43badd7fa3991c7f815669a3a8c6db5a18ae1b",
+        "0cfaa518bb6d4504f0838947e87f415770de7039",
+        "9030edddad4c7b8f42f9ecccdae71e740d19d60d"
+      ],
+      "skipped": {
+        "nonContiguous": 1,
+        "otherVerse": 13,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Lev.7",
+      "locks": [
+        "8944f1fb71004101482222025ef01e7cdf62eae1",
+        "d252cf2d3c06d4735a8c244fdf8ae59c5b3088e4",
+        "8bb9b2286b595affed1d13dc6a0f8406831f27ab"
+      ],
+      "skipped": {
+        "nonContiguous": 0,
+        "otherVerse": 21,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Lev.8",
+      "locks": [
+        "4c53f4891e944dcb3bb7a79c8e08bd57b9a398a4",
+        "0a9926ca6d274405dfd7b76e4a6c9e5279d5f112",
+        "cb6c2e1290c72140e423a8d4fd91cce4a0d16d18"
+      ],
+      "skipped": {
+        "nonContiguous": 3,
+        "otherVerse": 22,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Lev.9",
+      "locks": [
+        "1df6fa6f4893d20a23127bf1ee3008e3e40608ad",
+        "9dc6b2184cf6c3ee28c6e9455cd6d49f0878f268",
+        "75ac1299c0a6941389bec908441c92c52106fcc1"
+      ],
+      "skipped": {
+        "nonContiguous": 1,
+        "otherVerse": 5,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Lev.10",
+      "locks": [
+        "5d457df2242a76e3a35826fa421870849ffd7bd3",
+        "8195de94b10b955ed2f65879ec8269e1f2a048ca",
+        "b95efc7d1668e25d382c0b020eb15b267c71ff7c"
+      ],
+      "skipped": {
+        "nonContiguous": 3,
+        "otherVerse": 23,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Lev.11",
+      "locks": [
+        "16ce40f78dab95b3ea74b0ee7c8a739d8ad034a0",
+        "c99cbceabbfb1802f1543ebc3a182dbcb2472e89",
+        "badbccc05c839cff2652db0e3fbd1355c5839db0"
+      ],
+      "skipped": {
+        "nonContiguous": 1,
+        "otherVerse": 29,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Lev.12",
+      "locks": [
+        "3208fba1f7de45c797a3e5081b0a4527198420c2",
+        "9385fbc6b6b5e0867e61df8066cd804e9367044d",
+        "235b43d5b9a3a2bef712f4b49049c8275aa8b469"
+      ],
+      "skipped": {
+        "nonContiguous": 4,
+        "otherVerse": 9,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Lev.13",
+      "locks": [
+        "5e6f7621413a338bf47a40ea1512405a7f0874db",
+        "2500123c947da55f343f7c16c5d8f379c8c4c8ce",
+        "57e9aacfc5db87d971aaf1caecfe4b235f60a123"
+      ],
+      "skipped": {
+        "nonContiguous": 4,
+        "otherVerse": 56,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Lev.14",
+      "locks": [
+        "116f88bc64254105004a1cb58cd07747077b43dd",
+        "aae44f967325294898a96cb024e3afae2a02d8e0",
+        "3a37243e7b7adc27952d76b03a952662e50127ab"
+      ],
+      "skipped": {
+        "nonContiguous": 2,
+        "otherVerse": 36,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Lev.15",
+      "locks": [
+        "10da3dbaaecd0bf0fe0fc209010a643b2a77c3b0",
+        "b70767004d2367facdadfc119f33e8ad614497fb",
+        "0fb88ec846974b6f26ef8f3bf74fc3e2ecbcb234"
+      ],
+      "skipped": {
+        "nonContiguous": 12,
+        "otherVerse": 13,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Lev.16",
+      "locks": [
+        "115f91f682f68c990a1d391e2c04fffa8334f9f9",
+        "0fd8e4f72ba33ff5bd4107838d63b9c5f69ebd6c",
+        "455e1b7d777c85f7efbde7a4c62acce950c64480"
+      ],
+      "skipped": {
+        "nonContiguous": 2,
+        "otherVerse": 15,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Lev.17",
+      "locks": [
+        "63ea1510a33544b53291f0176cc5ec18452d0cf1",
+        "5a0caa00693ffbd764d4ea988f090b9b3cfa6482",
+        "27463c92ce32d913b99526ce0ac0c41a5c28c0f6"
+      ],
+      "skipped": {
+        "nonContiguous": 5,
+        "otherVerse": 16,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Lev.18",
+      "locks": [
+        "4a9be6e7c35756ed49d9933a947a2099b787d54d",
+        "a903d048b8a10a349b651bffb0f5428f32036451",
+        "a7dcbcc87545a53dade4df985b19810ccbdefd67"
+      ],
+      "skipped": {
+        "nonContiguous": 3,
+        "otherVerse": 82,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Lev.19",
+      "locks": [
+        "8f6bfdf534b596e4fd30610ec1820963eea19c6a",
+        "17f76fbd90f934516087bb0a29dc75877c85f642",
+        "8f7509ba5df68021ee24464c1ee46e322ccec76c"
+      ],
+      "skipped": {
+        "nonContiguous": 2,
+        "otherVerse": 72,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Lev.20",
+      "locks": [
+        "9264e26131eb00e54af7bc1d777e312b2faff017",
+        "2da4beecd40143bd519091a43293fbad85b66949",
+        "cad79e4ff06cc2d826608eadd4673c3fe31aa3c5"
+      ],
+      "skipped": {
+        "nonContiguous": 4,
+        "otherVerse": 42,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Lev.21",
+      "locks": [
+        "855958572475dfee65b74c8c5f5114f188bdc597",
+        "a47c012ec6181147cdeeec448d230e6acc301652",
+        "48535189d5c9cb15f44bba5c8e7aa87a2c9d4d88"
+      ],
+      "skipped": {
+        "nonContiguous": 1,
+        "otherVerse": 50,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Lev.22",
+      "locks": [
+        "eab9c6578974d2db5e83124db59eefa145bbc652",
+        "b6edf32a6e3acc566fda5d27d83f6fe533cacbac",
+        "15e27525ab78b7044974b0d232e360403eb33688"
+      ],
+      "skipped": {
+        "nonContiguous": 4,
+        "otherVerse": 35,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Lev.23",
+      "locks": [
+        "d088494af8c6ee29f0e31f8c96de9053f4d1e23c",
+        "f2f16110c9d897efaed99d177f1e4f6046bb240e",
+        "9fd0e3b2f66b1c5e1c08b9721152471522b862e5"
+      ],
+      "skipped": {
+        "nonContiguous": 1,
+        "otherVerse": 38,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Lev.24",
+      "locks": [
+        "75e46f11d69fb558d70555948d2567bec4186f22",
+        "4e3da70494b09eee3ddf5107de8f534bf79453be",
+        "4726c1d723b908e79575084f7de7d9964674f736"
+      ],
+      "skipped": {
+        "nonContiguous": 0,
+        "otherVerse": 12,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Lev.25",
+      "locks": [
+        "6467c3409937a5b9208484e145bb8f8a84d32c22",
+        "cd26f49561700074fd46a88eda670a9a760e076a",
+        "765fd3af7a56426537040527fb875a6a58c24839"
+      ],
+      "skipped": {
+        "nonContiguous": 1,
+        "otherVerse": 51,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Lev.26",
+      "locks": [
+        "28a153080e9b61979d18c0083d3016b2dcffbe79",
+        "c89efb3b420f9177577afaf34c8b04bca63498cc",
+        "9c2e6f58184a52ca02a62b22fa1c28b4d65d67f6"
+      ],
+      "skipped": {
+        "nonContiguous": 3,
+        "otherVerse": 62,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Lev.27",
+      "locks": [
+        "496f74484227e9f6a5ea4416c075166c57474b8d",
+        "eeee56bd5c0e69018512314e931c04a2e75aa065",
+        "e6f475fa6a5edb6ede689f83e78364318feab162"
+      ],
+      "skipped": {
+        "nonContiguous": 1,
+        "otherVerse": 22,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Num.1",
+      "locks": [
+        "346cb92cd3196476e14b75d20e16f0adeacd8537",
+        "3bbe777dfc2505ec959c8c3914457240ef72b40f",
+        "75dbfb02a30215e646f5cc74660d2f08b59060a7"
+      ],
+      "skipped": {
+        "nonContiguous": 3,
+        "otherVerse": 46,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Num.2",
+      "locks": [
+        "4037d9dec2db162ba80e75cc17ec4891bdc3ea28",
+        "152fd8895bf5615f9388824f3dc798c6dd6dfcce",
+        "dc398a01ad5bf603a7d28e43ddb7ca551793ab4b"
+      ],
+      "skipped": {
+        "nonContiguous": 0,
+        "otherVerse": 16,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Num.3",
+      "locks": [
+        "649128fc19f7319308844397348bb1f529b41367",
+        "453d3248371f964bce33ba40840111c880078164",
+        "fee1018f92ed3757ad97c86d89784d7e05151b91"
+      ],
+      "skipped": {
+        "nonContiguous": 3,
+        "otherVerse": 6,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Num.4",
+      "locks": [
+        "ed969261bcdc52fc2c0965f9d5dddb9cb465321b",
+        "88c7e5b8f6b9989dc525a99778ca202996bbae45",
+        "4914595c1c7aa3b58442b143c650a490b0a066b2"
+      ],
+      "skipped": {
+        "nonContiguous": 0,
+        "otherVerse": 23,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Num.5",
+      "locks": [
+        "bc9e716cb512860c7288ff062dd21cda7bd8c397",
+        "54d0d365740bdfdb34d2403cb617fafff8a2602d",
+        "9c7a7d6e55d407c94666e06044b46c2590ee5387"
+      ],
+      "skipped": {
+        "nonContiguous": 4,
+        "otherVerse": 20,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Num.6",
+      "locks": [
+        "e44b6c75763d7e9bf098587ebd08c038897503e8",
+        "370576fb61077b5f08d281077099e83165fcb94c",
+        "973dbaac9b606f7104f8435ee6fb443e33a59394"
+      ],
+      "skipped": {
+        "nonContiguous": 1,
+        "otherVerse": 33,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Num.7",
+      "locks": [
+        "5e807a12b3cce5750e30b670cd8ce1149351c940",
+        "fa4663a9b2f4525b01c7f9b3e39919fd29f1c6cc",
+        "ceffb52adbcb3dd7aaabe42c5cf8d898c005975a"
+      ],
+      "skipped": {
+        "nonContiguous": 16,
+        "otherVerse": 11,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Num.8",
+      "locks": [
+        "350f94ddb35f432ef939dfcce81cb2a7390219f1",
+        "ef2359ed9e009c55c9dbd2a8efa52be7475c0f43",
+        "ef291abe67984ecafb8338acdac7a8ff5b586875"
+      ],
+      "skipped": {
+        "nonContiguous": 1,
+        "otherVerse": 11,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Num.9",
+      "locks": [
+        "436c884a5629f1f2c2744f1f417bcc65413362a9",
+        "f98ed59963f7d615aee966b19b94bb7bd6e40bb9",
+        "6e847ee3e58f00f436baa29850ba2cc31c854156"
+      ],
+      "skipped": {
+        "nonContiguous": 3,
+        "otherVerse": 15,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Num.10",
+      "locks": [
+        "9d2c1a6a3305fdfca4fa178d43090987e7f3c2d9",
+        "389e12e68b3ec66e1a66d3591319cf0947dc32c8",
+        "328ea6c3474f06f252ad94e4870e6b504abd67a5"
+      ],
+      "skipped": {
+        "nonContiguous": 0,
+        "otherVerse": 16,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Num.11",
+      "locks": [
+        "af5acd6b02a509889aebad9433cd41c5942a0f97",
+        "59829af7bf1f1cf97fae896f4cd71d7803a94309",
+        "9b9a1b3b623f70df8fd872d7c0050a4359ca028d"
+      ],
+      "skipped": {
+        "nonContiguous": 4,
+        "otherVerse": 20,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Num.12",
+      "locks": [
+        "78c3736f80b32ac0bbe54cca4301bd2efaed1c21",
+        "12a4813c7aa406e1e1f2416ecd39e5e1007d4148",
+        "080405ee2b7f3b76e75ffa8ba83b872c39c7d5e5"
+      ],
+      "skipped": {
+        "nonContiguous": 2,
+        "otherVerse": 13,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Num.13",
+      "locks": [
+        "2b3ddd4898ffd86a8613a176cbf46f0de27f549d",
+        "f5b1615ebad1a1296c9c8f908820493043703fbb",
+        "e72fb61ab1826b872a703372f0ca94b33783bced"
+      ],
+      "skipped": {
+        "nonContiguous": 2,
+        "otherVerse": 15,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Num.14",
+      "locks": [
+        "e3ea84723892c72f843d73273e412debb1a6bd1c",
+        "74318ad3563f41467658e50e5c6386ccbb456194",
+        "bbab47d3d6ba91351d8e8929d3a36b4d94769204"
+      ],
+      "skipped": {
+        "nonContiguous": 4,
+        "otherVerse": 32,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Num.15",
+      "locks": [
+        "409ac623566aee09995e37a286f8521869eca44d",
+        "2cc852ea26a0d9214f48b5d280190a8969ec255b",
+        "d366c74cdc18184c0b1827ac99ec50cd5ef9ed5f"
+      ],
+      "skipped": {
+        "nonContiguous": 5,
+        "otherVerse": 28,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Num.16",
+      "locks": [
+        "af53bd759cb37b32080f9269f5efaa4a1fc30fad",
+        "da8734d39020e712ef4068ded6c2665cd60c134d",
+        "2a35ab1cafa931ff240c4a4f7915e7fe18adb580"
+      ],
+      "skipped": {
+        "nonContiguous": 1,
+        "otherVerse": 18,
+        "unknownOriginal": 255
+      }
+    },
+    {
+      "scope": "Num.17",
+      "locks": [
+        "cd7f021df5d29496b1a28d34750f35ce5486408d",
+        "67a99639546b2e60ae4a08814ccd8e136af915b9",
+        "0dfa78aacbe8ff7464c40d66b067605a90383879"
+      ],
+      "skipped": {
+        "nonContiguous": 1,
+        "otherVerse": 210,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Num.18",
+      "locks": [
+        "d87fc08b3d09d74bf4d86260691b2df351d56e2f",
+        "52a064a723c5c8634773fe6463aabb28825b9e23",
+        "35efe85fcea841d3d976ad9c34065a3a09e8b8e2"
+      ],
+      "skipped": {
+        "nonContiguous": 3,
+        "otherVerse": 43,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Num.19",
+      "locks": [
+        "b64060a550f1417c380d4cd12f29cb227bce1b40",
+        "01890f6958f48270e963288612a48314c3364748",
+        "36cf703a237ebb3e15ebaea0122472856100e0fc"
+      ],
+      "skipped": {
+        "nonContiguous": 2,
+        "otherVerse": 10,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Num.20",
+      "locks": [
+        "8310c94fcb320e04dd4eb1e1825f7dc475afc872",
+        "87af6b836956bb99316f61cdb6c7f0e11b37813c",
+        "d481838a8613b2598e879990b8b22f1121774ab4"
+      ],
+      "skipped": {
+        "nonContiguous": 0,
+        "otherVerse": 26,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Num.21",
+      "locks": [
+        "dc180564c4fe7746969b906c38baf340283e5b09",
+        "fd6c8d269678f4f34a76f3fdb2169748ea06faad",
+        "4987b65f907267f0392e6ea167543d443493fde8"
+      ],
+      "skipped": {
+        "nonContiguous": 4,
+        "otherVerse": 17,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Num.22",
+      "locks": [
+        "0098542facd261fbcb749877789cfb1cc4bc5afa",
+        "bfa43257719d330e78452e6a095250a82c083795",
+        "74fa9d694b95ac2e62db6cccae13ac64d89aac60"
+      ],
+      "skipped": {
+        "nonContiguous": 0,
+        "otherVerse": 28,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Num.23",
+      "locks": [
+        "01596a696a6cb82299f6ef39c6343cf5ea9a4a50",
+        "d209fe1f14746f78aa745087e2415ade614e3beb",
+        "f18ddafd968bcf7752d9bec16da9691b0f2c7bbe"
+      ],
+      "skipped": {
+        "nonContiguous": 0,
+        "otherVerse": 36,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Num.24",
+      "locks": [
+        "cbc445e736847f50979bf70848cd02202a5c8499",
+        "98c307a7b2e0a5c767ce02ebf13b1205a31ead9c",
+        "2a3aa0dc3e65a614b099b10afb8c2413f16ac8e7"
+      ],
+      "skipped": {
+        "nonContiguous": 1,
+        "otherVerse": 16,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Num.25",
+      "locks": [
+        "7a5a68024a6452054328562ef9c22405b2870575",
+        "32f147768ac4dfeb15cab1973ff483cfae97909e",
+        "33fb2935b7424608c4f5365f661c7376a6a1cdb0"
+      ],
+      "skipped": {
+        "nonContiguous": 1,
+        "otherVerse": 7,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Num.26",
+      "locks": [
+        "135b33a2888405294d39173051004195cde537fb",
+        "7f88da098be48899221a60521e61d3eb885380f8",
+        "72a53cafd2482768dfb78970f35e690c5f840273"
+      ],
+      "skipped": {
+        "nonContiguous": 0,
+        "otherVerse": 19,
+        "unknownOriginal": 3
+      }
+    },
+    {
+      "scope": "Num.27",
+      "locks": [
+        "ae37648d32663e6fa4d597b236b01b23f8208532",
+        "028c0dd7aea1423e4efc41a53ea4aa2d569ae98d",
+        "23d907cdf8348e6ec4bc6312f19de2c1b0afd2cb"
+      ],
+      "skipped": {
+        "nonContiguous": 1,
+        "otherVerse": 11,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Num.28",
+      "locks": [
+        "a7db66fa8628b6b43d253d747eb7fb4a94328681",
+        "8dde1aac78d8b99959dfd8b57f5c69dfeed8b7d3",
+        "f1a494135b7a145be10c5bfaed1ed1b8bd23b58b"
+      ],
+      "skipped": {
+        "nonContiguous": 0,
+        "otherVerse": 18,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Num.29",
+      "locks": [
+        "83e1ad36e643b06d3e86cb1025e4f8d3c52c90d0",
+        "00c0115ab491ed766d575b03fde02fa4d92cf5ce",
+        "56191c8edee475754024009f7a6b0ce19a5d5e98"
+      ],
+      "skipped": {
+        "nonContiguous": 0,
+        "otherVerse": 15,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Num.30",
+      "locks": [
+        "95f85a6d607a853993b49a5f02a58b763d19dca6",
+        "fd3a2b57833e62f9c592956488b7bb30dd2cffd3",
+        "6ef18868150011f76a8229171bc41f0c611370f6"
+      ],
+      "skipped": {
+        "nonContiguous": 0,
+        "otherVerse": 13,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Num.31",
+      "locks": [
+        "ed49b476efec21b51ac16658c75181c23b6cd3ec",
+        "1a325f17c06a51805b8c7946aa91e3c2134cfcae",
+        "b1963eac918ff32e1798236785bcec93b1418d27"
+      ],
+      "skipped": {
+        "nonContiguous": 1,
+        "otherVerse": 11,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Num.32",
+      "locks": [
+        "9620ef4f3619fc2e5758fc326ea521d2863595b5",
+        "0f789ae32e7bd0fd0ec1802524714e8c3028ddd6",
+        "b541248d9f9606ebce847533cc99199dafe4cf75"
+      ],
+      "skipped": {
+        "nonContiguous": 1,
+        "otherVerse": 21,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Num.33",
+      "locks": [
+        "0c74c3529beb05e7eeccb3f65dfa60731381344d",
+        "b24ff41ad4d160e16094c788cdfe86ee643b0f08",
+        "1a9b89d5273533d9cc159452c30c99cd57ef30fe"
+      ],
+      "skipped": {
+        "nonContiguous": 0,
+        "otherVerse": 12,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Num.34",
+      "locks": [
+        "68f7f97487e72857dac9928fcdcfb02722b7dda0",
+        "e3d5f7f49ea4f2357bd2723289548d8b0b47392a",
+        "05f228f6bd73c8b5f1e1d0595a94fad35bd8fcf3"
+      ],
+      "skipped": {
+        "nonContiguous": 0,
+        "otherVerse": 4,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Num.35",
+      "locks": [
+        "710769d19528c0dfc5e655aa389b63bb76b653e6",
+        "616f8787dc398df901192732ff887dca28569fcf",
+        "e66411f5cc58d9844236a28723ff8b47eb87b6b5"
+      ],
+      "skipped": {
+        "nonContiguous": 0,
+        "otherVerse": 16,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Num.36",
+      "locks": [
+        "fca6a94c56948ebaa4ccb4cefc6f584f5f105199",
+        "184e968de2d96c6862969ff5d89b8a6e9346de3c",
+        "c3e87c8e27982c816c935c7079137fc3a80e0f0a"
+      ],
+      "skipped": {
+        "nonContiguous": 4,
+        "otherVerse": 6,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Deut.2",
+      "locks": [
+        "23e222f348d2de80f490a3d785b27a8fe9712f62",
+        "e11971cd4c41518340e839a62f910891d823f5d2",
+        "00008f1cb5ed04761b71851cf060ab1e21888b43"
+      ],
+      "skipped": {
+        "nonContiguous": 0,
+        "otherVerse": 36,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Deut.3",
+      "locks": [
+        "25406b824d988f9652841966fe62ea665a97ad25",
+        "7dc0154722bbb0e6078253823efcd9094985f625",
+        "f6adcfd0fa0f5286b99f241006e0baa4e4ecbe76"
+      ],
+      "skipped": {
+        "nonContiguous": 1,
+        "otherVerse": 22,
+        "unknownOriginal": 0
+      }
+    },
+    {
+      "scope": "Deut.4",
+      "locks": [
+        "d3a0d5b3303a26dea84e35e34121181a6dd558fe",
+        "7966eef9b5d99892920a1f320b1ada0aa2ac4320",
+        "8deca1462de9b0c1ea5bcfce8d5878da214d3002"
+      ],
+      "skipped": {
+        "nonContiguous": 0,
+        "otherVerse": 31,
+        "unknownOriginal": 0
+      }
+    }
+  ],
+  "excluded_development": [
+    "Deut.1",
+    "Gen.22"
+  ],
+  "held_out_locks": [
+    {
+      "scope": "Gen.15",
+      "locks": [
+        "b6fb5b00707809ae16906a9e943aca9590278fe7",
+        "f6d6e739ef60cff47d9c88a216c6dbdff197c22f",
+        "5e5131d78b0179e3f2d5e689f9ba179f223d5e7f"
+      ]
+    },
+    {
+      "scope": "Exod.12",
+      "locks": [
+        "fe1c4bd945125d53b74dff9628ba49ec3b6ea3b9",
+        "3f95eef11ea9f3de74f4b7c31cb532fcaaafd6b9",
+        "3030f5fa16ad2156f9cb4ee754538fe7636675a5"
+      ]
+    }
+  ],
+  "query_count": 5783,
+  "candidate_tier_count": 2307,
+  "skipped": {
+    "nonContiguous": 266,
+    "otherVerse": 3983,
+    "unknownOriginal": 298,
+    "unknownOriginalMeaning": "All 298 relations fall in explicitly declared foreign source segments, excluded rather than validated. No source ledger modified."
+  },
+  "initial_rejections_recovered": [
+    {
+      "scope": "Gen.31",
+      "error": "Error: Unknown original ID Gen.31 o010320010021"
+    }
+  ],
+  "selected": {
+    "minSupport": 2,
+    "minChapters": 1,
+    "minDominance": 0.4
+  },
+  "held_out": [
+    {
+      "scope": "Gen.15",
+      "verses": 21,
+      "goldRelations": 299,
+      "goldPairs": 351,
+      "proposals": 47,
+      "exact": 47,
+      "correctPairs": 47,
+      "totalPairs": 47,
+      "reviewAlternatives": 430,
+      "oracleGoldRelations": 157,
+      "coveredH": 47,
+      "coveredF": 47,
+      "goldH": 306,
+      "goldF": 338
+    },
+    {
+      "scope": "Exod.12",
+      "verses": 51,
+      "goldRelations": 836,
+      "goldPairs": 1838,
+      "proposals": 159,
+      "exact": 114,
+      "correctPairs": 159,
+      "totalPairs": 159,
+      "reviewAlternatives": 1191,
+      "oracleGoldRelations": 393,
+      "coveredH": 159,
+      "coveredF": 159,
+      "goldH": 1026,
+      "goldF": 1208
+    }
+  ],
+  "held_out_total": {
+    "verses": 72,
+    "goldRelations": 1135,
+    "goldPairs": 2189,
+    "proposals": 206,
+    "exact": 161,
+    "correctPairs": 206,
+    "totalPairs": 206,
+    "reviewAlternatives": 1621,
+    "oracleGoldRelations": 550,
+    "coveredH": 206,
+    "coveredF": 206,
+    "goldH": 1332,
+    "goldF": 1546
+  },
+  "pilot_total": {
+    "verses": 72,
+    "goldRelations": 1135,
+    "goldPairs": 2189,
+    "proposals": 114,
+    "exact": 100,
+    "correctPairs": 114,
+    "totalPairs": 114,
+    "reviewAlternatives": 799,
+    "oracleGoldRelations": 384,
+    "coveredH": 114,
+    "coveredF": 114,
+    "goldH": 1332,
+    "goldF": 1546
+  },
+  "limitations": [
+    "Source projections and two-pass ledgers are pinned; same-editor reference agreement, not independent linguistic accuracy.",
+    "Evidence limited to same-number native/French verse groups with contiguous source and target ordinals, not cross-verse or cross-chapter relations. Explicit foreign segment relations excluded, not validated.",
+    "The full-corpus run regenerates evidence from ledgers rather than the older capped seed. Only holdout query-matching counters were built, not a full production evidence index. No actual editorial timing measured."
+  ],
+  "full_bank_engine_blob": "368da791649fafe23dc7cda98f3870d4ce621167",
+  "counter_path": "work/macula-lsg-assist-full-holdout-counters.json",
+  "equivalence_checks": {
+    "ordinary": {
+      "training": [
+        "Gen.1",
+        "Gen.2",
+        "Gen.3"
+      ],
+      "held_out": [
+        "Gen.15",
+        "Exod.12"
+      ],
+      "all_prefill_and_alternative_records_identical": true
+    },
+    "declared_boundary": {
+      "training": [
+        "Gen.31",
+        "Num.26"
+      ],
+      "held_out": [
+        "Gen.15",
+        "Exod.12"
+      ],
+      "all_prefill_and_alternative_records_identical": true,
+      "foreign_segment_relations_excluded": 21,
+      "other_verse_or_noncontiguous_excluded": 66
+    }
+  },
+  "edit_operation_proxy": {
+    "assumption": "Retain exact relation groups only; delete other prefills and add missing reference groups. Each deletion/addition counts equally; contextual edits and rereading excluded.",
+    "pilot": {
+      "baseline": 1135,
+      "retained": 100,
+      "dropped": 14,
+      "added": 1035,
+      "operations": 1049,
+      "saved": 86
+    },
+    "full": {
+      "baseline": 1135,
+      "retained": 161,
+      "dropped": 45,
+      "added": 974,
+      "operations": 1019,
+      "saved": 116
+    }
+  }
+}

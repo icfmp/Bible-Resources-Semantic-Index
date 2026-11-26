@@ -64,8 +64,35 @@ function benchmark(pilot) {
     const devRows = select(dev), holdRows = select(holdout);
     output({status:"benchmark_not_editorial_audit",mode:pilot?"pilot":"full_corpus",
         auditedInventory:all.length, trainingScopes:[...bank.scopes].sort(), exactKeys:bank.exact.size,lemmaKeys:bank.lemma.size,
-        options,development:devRows,developmentTotal:aggregate(devRows),holdout:holdRows,holdoutTotal:aggregate(holdRows)});
+        options,skipped:bank.skipped,development:devRows,developmentTotal:aggregate(devRows),holdout:holdRows,holdoutTotal:aggregate(holdRows)});
 }
+function streamingBenchmark() {
+    const all = auditedChapters();
+    const dev = receipt.development[0].rows.map(x=>x.scope);
+    const holdout = receipt.held_out.map(x=>x.scope);
+    const excluded = new Set([...dev, ...holdout]);
+    const training = all.filter(x=>!excluded.has(x.scope));
+    const held = holdout.map(s=>{
+        const c = all.find(x=>x.scope===s);
+        if(!c) throw Error("Missing holdout chapter " + s);
+        return c;
+    });
+    const stream = vm.runInNewContext(fs.readFileSync(path.join(__dirname, "macula-lsg-assist-streaming.js"), "utf8"));
+    const q = stream.queries(held), a = {denom:{}, candidates:{}};
+    const skipped = {nonContiguous:0,otherVerse:0,unknownOriginal:0};
+    for(const c of training) {
+        const scan=stream.scan(c,q);
+        stream.merge(a,scan);
+        for(const k of Object.keys(skipped)) skipped[k]+=scan.skipped[k];
+    }
+    const predictions=stream.predictions(q,a,options);
+    const rows=held.map((c,i)=>engine.score(c,predictions[i]));
+    output({status:"benchmark_not_editorial_audit",mode:"streamed_full_corpus",
+        auditedInventory:all.length,trainingScopes:training.map(x=>x.scope).sort(),
+        excludedDevelopment:dev,holdout:rows,holdoutTotal:aggregate(rows),options,skipped,
+        queryCount:q.byId.length,candidateTierCount:Object.keys(a.candidates).length});
+}
+
 function verseMapping(c, declaration) {
     const p = engine.prepare(c,false);
     if (declaration === "identity") {
@@ -98,7 +125,7 @@ function packet(plan) {
         return {scope:c.scope,book:c.book,native:c.native,chapter:c.chapter,
             sourceLsgSha256:c.f.reading_text_sha256,sourceMaculaBlob:c.h.git_blob,rows};
     });
-    output({status:"unreviewed_private_editorial_packet",trainingScopes:[...bank.scopes].sort(),options,chapters});
+    output({status:"unreviewed_private_editorial_packet",trainingScopes:[...bank.scopes].sort(),skipped:bank.skipped,options,chapters});
 }
 function ordinals(s, max) {
     const values = [];
@@ -144,6 +171,7 @@ function apply(p, edits) {
 }
 const [command,arg1,arg2]=process.argv.slice(2);
 if(command==="benchmark") benchmark(arg1==="--pilot");
+else if(command==="benchmark-stream") streamingBenchmark();
 else if(command==="packet"&&arg1) packet(read(arg1));
 else if(command==="apply"&&arg1&&arg2) apply(read(arg1),read(arg2));
-else throw Error("Usage: node work/macula-lsg-assist-runner.cjs benchmark [--pilot] | packet PLAN.json | apply PACKET.json EDITS.json");
+else throw Error("Usage: node work/macula-lsg-assist-runner.cjs benchmark [--pilot] | benchmark-stream | packet PLAN.json | apply PACKET.json EDITS.json");
