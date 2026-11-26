@@ -6,32 +6,276 @@
     9,
     10
   ],
-  "status": "second_pass_review_in_progress",
+  "status": "two_editorial_passes_complete",
   "reports": [
     {
       "ch": "006",
-      "edits": 46,
-      "missing": []
+      "verses": 27,
+      "edits": 52,
+      "stats": {
+        "relations": 522,
+        "hebrew_units": 547,
+        "french_units": 668,
+        "lexical_content_units": 283,
+        "lexical_content_translation": 280,
+        "translation": {
+          "relations": 443,
+          "hebrew_units": 471,
+          "french_units": 649,
+          "single_original_relations": 420
+        },
+        "contextual": {
+          "relations": 79,
+          "hebrew_units": 95,
+          "french_units": 83,
+          "single_original_relations": 71
+        }
+      },
+      "omissions": 0,
+      "low": [
+        {
+          "v": "5",
+          "n": 16,
+          "total": 17,
+          "omitted": [
+            "נֶדֶר"
+          ]
+        },
+        {
+          "v": "17",
+          "n": 9,
+          "total": 11,
+          "omitted": [
+            "עָשָׂה",
+            "כֹּהֵן"
+          ]
+        }
+      ]
     },
     {
       "ch": "007",
-      "edits": 122,
-      "missing": []
+      "verses": 89,
+      "edits": 136,
+      "stats": {
+        "relations": 1349,
+        "hebrew_units": 1435,
+        "french_units": 1565,
+        "lexical_content_units": 1009,
+        "lexical_content_translation": 1007,
+        "translation": {
+          "relations": 1170,
+          "hebrew_units": 1289,
+          "french_units": 1520,
+          "single_original_relations": 1086
+        },
+        "contextual": {
+          "relations": 179,
+          "hebrew_units": 212,
+          "french_units": 176,
+          "single_original_relations": 159
+        }
+      },
+      "omissions": 0,
+      "low": [
+        {
+          "v": "11",
+          "n": 12,
+          "total": 13,
+          "omitted": [
+            "נָשִׂיא"
+          ]
+        }
+      ]
     },
     {
       "ch": "008",
-      "edits": 38,
-      "missing": []
+      "verses": 26,
+      "edits": 45,
+      "stats": {
+        "relations": 499,
+        "hebrew_units": 545,
+        "french_units": 613,
+        "lexical_content_units": 279,
+        "lexical_content_translation": 272,
+        "translation": {
+          "relations": 421,
+          "hebrew_units": 463,
+          "french_units": 597,
+          "single_original_relations": 391
+        },
+        "contextual": {
+          "relations": 78,
+          "hebrew_units": 86,
+          "french_units": 80,
+          "single_original_relations": 71
+        }
+      },
+      "omissions": 2,
+      "low": [
+        {
+          "v": "4",
+          "n": 12,
+          "total": 13,
+          "omitted": [
+            "מַעֲשֶׂה"
+          ]
+        },
+        {
+          "v": "7",
+          "n": 12,
+          "total": 13,
+          "omitted": [
+            "עָשָׂה"
+          ]
+        },
+        {
+          "v": "12",
+          "n": 12,
+          "total": 13,
+          "omitted": [
+            "יהוה"
+          ]
+        },
+        {
+          "v": "19",
+          "n": 23,
+          "total": 25,
+          "omitted": [
+            "בֵּן",
+            "יִשְׂרָאֵל"
+          ]
+        },
+        {
+          "v": "21",
+          "n": 11,
+          "total": 12,
+          "omitted": [
+            "אַהֲרֹן"
+          ]
+        },
+        {
+          "v": "22",
+          "n": 15,
+          "total": 16,
+          "omitted": [
+            "פָּנֶה"
+          ]
+        }
+      ]
     },
     {
       "ch": "009",
-      "edits": 33,
-      "missing": []
+      "verses": 23,
+      "edits": 35,
+      "stats": {
+        "relations": 503,
+        "hebrew_units": 543,
+        "french_units": 569,
+        "lexical_content_units": 269,
+        "lexical_content_translation": 262,
+        "translation": {
+          "relations": 424,
+          "hebrew_units": 461,
+          "french_units": 556,
+          "single_original_relations": 398
+        },
+        "contextual": {
+          "relations": 79,
+          "hebrew_units": 88,
+          "french_units": 78,
+          "single_original_relations": 72
+        }
+      },
+      "omissions": 0,
+      "low": [
+        {
+          "v": "6",
+          "n": 15,
+          "total": 16,
+          "omitted": [
+            "פָּנֶה"
+          ]
+        },
+        {
+          "v": "15",
+          "n": 13,
+          "total": 14,
+          "omitted": [
+            "עֵדוּת"
+          ]
+        },
+        {
+          "v": "17",
+          "n": 13,
+          "total": 16,
+          "omitted": [
+            "כֵּן",
+            "שָׁם",
+            "שָׁם"
+          ]
+        },
+        {
+          "v": "21",
+          "n": 12,
+          "total": 13,
+          "omitted": [
+            "עָנָן"
+          ]
+        },
+        {
+          "v": "22",
+          "n": 12,
+          "total": 13,
+          "omitted": [
+            "שָׁכַן"
+          ]
+        }
+      ]
     },
     {
       "ch": "010",
-      "edits": 40,
-      "missing": []
+      "verses": 36,
+      "edits": 44,
+      "stats": {
+        "relations": 553,
+        "hebrew_units": 589,
+        "french_units": 717,
+        "lexical_content_units": 314,
+        "lexical_content_translation": 311,
+        "translation": {
+          "relations": 468,
+          "hebrew_units": 504,
+          "french_units": 697,
+          "single_original_relations": 440
+        },
+        "contextual": {
+          "relations": 85,
+          "hebrew_units": 93,
+          "french_units": 87,
+          "single_original_relations": 78
+        }
+      },
+      "omissions": 0,
+      "low": [
+        {
+          "v": "11",
+          "n": 9,
+          "total": 11,
+          "omitted": [
+            "הָיָה",
+            "חֹדֶשׁ"
+          ]
+        },
+        {
+          "v": "32",
+          "n": 6,
+          "total": 7,
+          "omitted": [
+            "הָיָה"
+          ]
+        }
+      ]
     }
-  ]
+  ],
+  "limitations": "Same-editor review only; no independent audit or publication tests. Next cohort size ten."
 }
