@@ -1,0 +1,385 @@
+{
+  "status": "development_experiment_not_semantic_certification",
+  "source_commit": "843ea9d6e6b920902e6a1d4bd29ec805bded595a",
+  "engine_blob": "d7b6fcd862e0c6f7f37476ada09ea05631caceae",
+  "baseline_bank": "work/macula-lsg-numbers-021-deuteronomy-004-candidate-bank.json",
+  "training_scopes": [
+    "Exod.20",
+    "Gen.10",
+    "Lev.19",
+    "Num.10",
+    "Num.11",
+    "Num.12",
+    "Num.13",
+    "Num.14",
+    "Num.15",
+    "Num.16",
+    "Num.17",
+    "Num.18",
+    "Num.19",
+    "Num.20",
+    "Num.6",
+    "Num.7",
+    "Num.8",
+    "Num.9"
+  ],
+  "additional_training": [
+    "Gen.10",
+    "Exod.20",
+    "Lev.19"
+  ],
+  "exact_keys": 2392,
+  "lemma_keys": 1025,
+  "development": [
+    {
+      "opts": {
+        "minSupport": 2,
+        "minChapters": 1,
+        "minDominance": 0.4
+      },
+      "rows": [
+        {
+          "scope": "Deut.1",
+          "verses": 46,
+          "goldRelations": 873,
+          "goldPairs": 1253,
+          "proposals": 84,
+          "exact": 72,
+          "correctPairs": 84,
+          "totalPairs": 84,
+          "reviewAlternatives": 600,
+          "oracleGoldRelations": 294,
+          "coveredH": 84,
+          "coveredF": 84,
+          "goldH": 916,
+          "goldF": 1124
+        },
+        {
+          "scope": "Gen.22",
+          "verses": 24,
+          "goldRelations": 430,
+          "goldPairs": 518,
+          "proposals": 40,
+          "exact": 38,
+          "correctPairs": 40,
+          "totalPairs": 40,
+          "reviewAlternatives": 243,
+          "oracleGoldRelations": 138,
+          "coveredH": 40,
+          "coveredF": 40,
+          "goldH": 442,
+          "goldF": 447
+        }
+      ],
+      "total": {
+        "verses": 70,
+        "goldRelations": 1303,
+        "goldPairs": 1771,
+        "proposals": 124,
+        "exact": 110,
+        "correctPairs": 124,
+        "totalPairs": 124,
+        "reviewAlternatives": 843,
+        "oracleGoldRelations": 432,
+        "coveredH": 124,
+        "coveredF": 124,
+        "goldH": 1358,
+        "goldF": 1571
+      }
+    },
+    {
+      "opts": {
+        "minSupport": 3,
+        "minChapters": 2,
+        "minDominance": 0.6
+      },
+      "rows": [
+        {
+          "scope": "Deut.1",
+          "verses": 46,
+          "goldRelations": 873,
+          "goldPairs": 1253,
+          "proposals": 45,
+          "exact": 40,
+          "correctPairs": 45,
+          "totalPairs": 45,
+          "reviewAlternatives": 639,
+          "oracleGoldRelations": 294,
+          "coveredH": 45,
+          "coveredF": 45,
+          "goldH": 916,
+          "goldF": 1124
+        },
+        {
+          "scope": "Gen.22",
+          "verses": 24,
+          "goldRelations": 430,
+          "goldPairs": 518,
+          "proposals": 23,
+          "exact": 21,
+          "correctPairs": 23,
+          "totalPairs": 23,
+          "reviewAlternatives": 260,
+          "oracleGoldRelations": 138,
+          "coveredH": 23,
+          "coveredF": 23,
+          "goldH": 442,
+          "goldF": 447
+        }
+      ],
+      "total": {
+        "verses": 70,
+        "goldRelations": 1303,
+        "goldPairs": 1771,
+        "proposals": 68,
+        "exact": 61,
+        "correctPairs": 68,
+        "totalPairs": 68,
+        "reviewAlternatives": 899,
+        "oracleGoldRelations": 432,
+        "coveredH": 68,
+        "coveredF": 68,
+        "goldH": 1358,
+        "goldF": 1571
+      }
+    },
+    {
+      "opts": {
+        "minSupport": 5,
+        "minChapters": 3,
+        "minDominance": 0.8
+      },
+      "rows": [
+        {
+          "scope": "Deut.1",
+          "verses": 46,
+          "goldRelations": 873,
+          "goldPairs": 1253,
+          "proposals": 20,
+          "exact": 18,
+          "correctPairs": 20,
+          "totalPairs": 20,
+          "reviewAlternatives": 664,
+          "oracleGoldRelations": 294,
+          "coveredH": 20,
+          "coveredF": 20,
+          "goldH": 916,
+          "goldF": 1124
+        },
+        {
+          "scope": "Gen.22",
+          "verses": 24,
+          "goldRelations": 430,
+          "goldPairs": 518,
+          "proposals": 8,
+          "exact": 8,
+          "correctPairs": 8,
+          "totalPairs": 8,
+          "reviewAlternatives": 275,
+          "oracleGoldRelations": 138,
+          "coveredH": 8,
+          "coveredF": 8,
+          "goldH": 442,
+          "goldF": 447
+        }
+      ],
+      "total": {
+        "verses": 70,
+        "goldRelations": 1303,
+        "goldPairs": 1771,
+        "proposals": 28,
+        "exact": 26,
+        "correctPairs": 28,
+        "totalPairs": 28,
+        "reviewAlternatives": 939,
+        "oracleGoldRelations": 432,
+        "coveredH": 28,
+        "coveredF": 28,
+        "goldH": 1358,
+        "goldF": 1571
+      }
+    },
+    {
+      "opts": {
+        "minSupport": 3,
+        "minChapters": 2,
+        "minDominance": 0.6,
+        "allowLemmaStrong": true
+      },
+      "rows": [
+        {
+          "scope": "Deut.1",
+          "verses": 46,
+          "goldRelations": 873,
+          "goldPairs": 1253,
+          "proposals": 64,
+          "exact": 50,
+          "correctPairs": 64,
+          "totalPairs": 64,
+          "reviewAlternatives": 620,
+          "oracleGoldRelations": 294,
+          "coveredH": 64,
+          "coveredF": 64,
+          "goldH": 916,
+          "goldF": 1124
+        },
+        {
+          "scope": "Gen.22",
+          "verses": 24,
+          "goldRelations": 430,
+          "goldPairs": 518,
+          "proposals": 33,
+          "exact": 31,
+          "correctPairs": 33,
+          "totalPairs": 33,
+          "reviewAlternatives": 250,
+          "oracleGoldRelations": 138,
+          "coveredH": 33,
+          "coveredF": 33,
+          "goldH": 442,
+          "goldF": 447
+        }
+      ],
+      "total": {
+        "verses": 70,
+        "goldRelations": 1303,
+        "goldPairs": 1771,
+        "proposals": 97,
+        "exact": 81,
+        "correctPairs": 97,
+        "totalPairs": 97,
+        "reviewAlternatives": 870,
+        "oracleGoldRelations": 432,
+        "coveredH": 97,
+        "coveredF": 97,
+        "goldH": 1358,
+        "goldF": 1571
+      }
+    },
+    {
+      "opts": {
+        "minSupport": 5,
+        "minChapters": 3,
+        "minDominance": 0.8,
+        "allowLemmaStrong": true
+      },
+      "rows": [
+        {
+          "scope": "Deut.1",
+          "verses": 46,
+          "goldRelations": 873,
+          "goldPairs": 1253,
+          "proposals": 29,
+          "exact": 22,
+          "correctPairs": 29,
+          "totalPairs": 29,
+          "reviewAlternatives": 655,
+          "oracleGoldRelations": 294,
+          "coveredH": 29,
+          "coveredF": 29,
+          "goldH": 916,
+          "goldF": 1124
+        },
+        {
+          "scope": "Gen.22",
+          "verses": 24,
+          "goldRelations": 430,
+          "goldPairs": 518,
+          "proposals": 14,
+          "exact": 14,
+          "correctPairs": 14,
+          "totalPairs": 14,
+          "reviewAlternatives": 269,
+          "oracleGoldRelations": 138,
+          "coveredH": 14,
+          "coveredF": 14,
+          "goldH": 442,
+          "goldF": 447
+        }
+      ],
+      "total": {
+        "verses": 70,
+        "goldRelations": 1303,
+        "goldPairs": 1771,
+        "proposals": 43,
+        "exact": 36,
+        "correctPairs": 43,
+        "totalPairs": 43,
+        "reviewAlternatives": 924,
+        "oracleGoldRelations": 432,
+        "coveredH": 43,
+        "coveredF": 43,
+        "goldH": 1358,
+        "goldF": 1571
+      }
+    }
+  ],
+  "selection_rule": "Highest prefill count with >=90% pair precision and >=30 predictions on development split; otherwise highest pair precision with >=30. Frozen before holdout scoring.",
+  "selected": {
+    "minSupport": 2,
+    "minChapters": 1,
+    "minDominance": 0.4
+  },
+  "limitations": "Exact ledger match is not independent semantic truth. Existing bank is a derived evidence seed; three extra audited chapters source locks and offsets checked. Not trained on all 157 chapters. All proposals remain unreviewed; default verse mapping identity requires explicit override for divergences.",
+  "held_out": [
+    {
+      "scope": "Gen.15",
+      "verses": 21,
+      "goldRelations": 299,
+      "goldPairs": 351,
+      "proposals": 21,
+      "exact": 21,
+      "correctPairs": 21,
+      "totalPairs": 21,
+      "reviewAlternatives": 203,
+      "oracleGoldRelations": 102,
+      "coveredH": 21,
+      "coveredF": 21,
+      "goldH": 306,
+      "goldF": 338
+    },
+    {
+      "scope": "Exod.12",
+      "verses": 51,
+      "goldRelations": 836,
+      "goldPairs": 1838,
+      "proposals": 93,
+      "exact": 79,
+      "correctPairs": 93,
+      "totalPairs": 93,
+      "reviewAlternatives": 596,
+      "oracleGoldRelations": 282,
+      "coveredH": 93,
+      "coveredF": 93,
+      "goldH": 1026,
+      "goldF": 1208
+    }
+  ],
+  "held_out_total": {
+    "verses": 72,
+    "goldRelations": 1135,
+    "goldPairs": 2189,
+    "proposals": 114,
+    "exact": 100,
+    "correctPairs": 114,
+    "totalPairs": 114,
+    "reviewAlternatives": 799,
+    "oracleGoldRelations": 384,
+    "coveredH": 114,
+    "coveredF": 114,
+    "goldH": 1332,
+    "goldF": 1546
+  },
+  "holdout_note": "The two holdout chapters were excluded from the training and development splits. The selected thresholds were frozen before scoring.",
+  "unseen_packet_smoke": {
+    "scope": "Deut.25",
+    "verses": 19,
+    "prefill": 19,
+    "review_alternatives": 291,
+    "unfilledH": 405,
+    "unfilledF": 465,
+    "status": "unreviewed proposals only; no next-cohort editorial work started",
+    "source_lsg_sha256": "5e3194705d5a46b7a98585de072a62e8fd036867271fc81d8971daa702484432",
+    "source_macula_blob": "261719f0d6dd5c3931de00384a6d6019579e72d4"
+  }
+}

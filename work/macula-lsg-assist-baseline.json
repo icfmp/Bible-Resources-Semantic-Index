@@ -1,0 +1,2693 @@
+{
+  "status": "development_benchmark_not_editorial_audit",
+  "source_commit": "843ea9d6e6b920902e6a1d4bd29ec805bded595a",
+  "training_bank": "work/macula-lsg-numbers-021-deuteronomy-004-candidate-bank.json",
+  "training_chapters": "Numbers 6–20",
+  "held_out": [
+    "Deut.1",
+    "Deut.2",
+    "Deut.3",
+    "Deut.4",
+    "Gen.1",
+    "Gen.22"
+  ],
+  "method": "Unique source and target phrase occurrences; same-verse contiguous lexical relations; evidence tiers exact surface+lemma+POS+morphology versus single-unit lemma+POS+morphology class; nonoverlapping mutual-best proposals; no contextual fill.",
+  "results": [
+    {
+      "scope": "Deut.1",
+      "mode": "exact",
+      "minSupport": 1,
+      "verseCount": 46,
+      "goldRelations": 873,
+      "goldPairs": 1253,
+      "proposed": 295,
+      "exactMatches": 191,
+      "pairs": 338,
+      "correctPairs": 263,
+      "coveredH": 311,
+      "coveredF": 321,
+      "totalH": 916,
+      "totalF": 1124,
+      "candidateCount": 561,
+      "ambiguous": 102,
+      "examples": [
+        {
+          "verse": 2,
+          "h": [
+            "o050010020041"
+          ],
+          "f": [
+            "2.8"
+          ],
+          "tier": 2,
+          "support": 1
+        },
+        {
+          "verse": 2,
+          "h": [
+            "o050010020061"
+          ],
+          "f": [
+            "2.12",
+            "2.13"
+          ],
+          "tier": 2,
+          "support": 1
+        },
+        {
+          "verse": 3,
+          "h": [
+            "o050010030081ה"
+          ],
+          "f": [
+            "3.8"
+          ],
+          "tier": 2,
+          "support": 8
+        }
+      ]
+    },
+    {
+      "scope": "Deut.1",
+      "mode": "exact",
+      "minSupport": 2,
+      "verseCount": 46,
+      "goldRelations": 873,
+      "goldPairs": 1253,
+      "proposed": 215,
+      "exactMatches": 139,
+      "pairs": 236,
+      "correctPairs": 182,
+      "coveredH": 226,
+      "coveredF": 224,
+      "totalH": 916,
+      "totalF": 1124,
+      "candidateCount": 373,
+      "ambiguous": 67,
+      "examples": [
+        {
+          "verse": 3,
+          "h": [
+            "o050010030081ה"
+          ],
+          "f": [
+            "3.8"
+          ],
+          "tier": 2,
+          "support": 8
+        },
+        {
+          "verse": 3,
+          "h": [
+            "o050010030151"
+          ],
+          "f": [
+            "3.20"
+          ],
+          "tier": 2,
+          "support": 8
+        },
+        {
+          "verse": 4,
+          "h": [
+            "o050010040061"
+          ],
+          "f": [
+            "4.17"
+          ],
+          "tier": 2,
+          "support": 6
+        }
+      ]
+    },
+    {
+      "scope": "Deut.1",
+      "mode": "exact",
+      "minSupport": 3,
+      "verseCount": 46,
+      "goldRelations": 873,
+      "goldPairs": 1253,
+      "proposed": 185,
+      "exactMatches": 122,
+      "pairs": 197,
+      "correctPairs": 156,
+      "coveredH": 192,
+      "coveredF": 190,
+      "totalH": 916,
+      "totalF": 1124,
+      "candidateCount": 300,
+      "ambiguous": 53,
+      "examples": [
+        {
+          "verse": 3,
+          "h": [
+            "o050010030081ה"
+          ],
+          "f": [
+            "3.8"
+          ],
+          "tier": 2,
+          "support": 8
+        },
+        {
+          "verse": 3,
+          "h": [
+            "o050010030151"
+          ],
+          "f": [
+            "3.20"
+          ],
+          "tier": 2,
+          "support": 8
+        },
+        {
+          "verse": 4,
+          "h": [
+            "o050010040061"
+          ],
+          "f": [
+            "4.17"
+          ],
+          "tier": 2,
+          "support": 6
+        }
+      ]
+    },
+    {
+      "scope": "Deut.1",
+      "mode": "exact",
+      "minSupport": 5,
+      "verseCount": 46,
+      "goldRelations": 873,
+      "goldPairs": 1253,
+      "proposed": 146,
+      "exactMatches": 93,
+      "pairs": 152,
+      "correctPairs": 117,
+      "coveredH": 150,
+      "coveredF": 148,
+      "totalH": 916,
+      "totalF": 1124,
+      "candidateCount": 218,
+      "ambiguous": 47,
+      "examples": [
+        {
+          "verse": 3,
+          "h": [
+            "o050010030081ה"
+          ],
+          "f": [
+            "3.8"
+          ],
+          "tier": 2,
+          "support": 8
+        },
+        {
+          "verse": 3,
+          "h": [
+            "o050010030151"
+          ],
+          "f": [
+            "3.20"
+          ],
+          "tier": 2,
+          "support": 8
+        },
+        {
+          "verse": 4,
+          "h": [
+            "o050010040061"
+          ],
+          "f": [
+            "4.17"
+          ],
+          "tier": 2,
+          "support": 6
+        }
+      ]
+    },
+    {
+      "scope": "Deut.1",
+      "mode": "both",
+      "minSupport": 1,
+      "verseCount": 46,
+      "goldRelations": 873,
+      "goldPairs": 1253,
+      "proposed": 359,
+      "exactMatches": 225,
+      "pairs": 404,
+      "correctPairs": 320,
+      "coveredH": 375,
+      "coveredF": 387,
+      "totalH": 916,
+      "totalF": 1124,
+      "candidateCount": 799,
+      "ambiguous": 129,
+      "examples": [
+        {
+          "verse": 2,
+          "h": [
+            "o050010020041"
+          ],
+          "f": [
+            "2.8"
+          ],
+          "tier": 2,
+          "support": 1
+        },
+        {
+          "verse": 2,
+          "h": [
+            "o050010020061"
+          ],
+          "f": [
+            "2.12",
+            "2.13"
+          ],
+          "tier": 2,
+          "support": 1
+        },
+        {
+          "verse": 3,
+          "h": [
+            "o050010030081ה"
+          ],
+          "f": [
+            "3.8"
+          ],
+          "tier": 2,
+          "support": 8
+        }
+      ]
+    },
+    {
+      "scope": "Deut.1",
+      "mode": "both",
+      "minSupport": 2,
+      "verseCount": 46,
+      "goldRelations": 873,
+      "goldPairs": 1253,
+      "proposed": 286,
+      "exactMatches": 180,
+      "pairs": 307,
+      "correctPairs": 236,
+      "coveredH": 297,
+      "coveredF": 295,
+      "totalH": 916,
+      "totalF": 1124,
+      "candidateCount": 537,
+      "ambiguous": 76,
+      "examples": [
+        {
+          "verse": 2,
+          "h": [
+            "o050010020061"
+          ],
+          "f": [
+            "2.13"
+          ],
+          "tier": 1,
+          "support": 4
+        },
+        {
+          "verse": 3,
+          "h": [
+            "o050010030081ה"
+          ],
+          "f": [
+            "3.8"
+          ],
+          "tier": 2,
+          "support": 8
+        },
+        {
+          "verse": 3,
+          "h": [
+            "o050010030151"
+          ],
+          "f": [
+            "3.20"
+          ],
+          "tier": 2,
+          "support": 8
+        }
+      ]
+    },
+    {
+      "scope": "Deut.1",
+      "mode": "both",
+      "minSupport": 3,
+      "verseCount": 46,
+      "goldRelations": 873,
+      "goldPairs": 1253,
+      "proposed": 256,
+      "exactMatches": 158,
+      "pairs": 268,
+      "correctPairs": 205,
+      "coveredH": 263,
+      "coveredF": 261,
+      "totalH": 916,
+      "totalF": 1124,
+      "candidateCount": 431,
+      "ambiguous": 55,
+      "examples": [
+        {
+          "verse": 2,
+          "h": [
+            "o050010020061"
+          ],
+          "f": [
+            "2.13"
+          ],
+          "tier": 1,
+          "support": 4
+        },
+        {
+          "verse": 3,
+          "h": [
+            "o050010030081ה"
+          ],
+          "f": [
+            "3.8"
+          ],
+          "tier": 2,
+          "support": 8
+        },
+        {
+          "verse": 3,
+          "h": [
+            "o050010030151"
+          ],
+          "f": [
+            "3.20"
+          ],
+          "tier": 2,
+          "support": 8
+        }
+      ]
+    },
+    {
+      "scope": "Deut.1",
+      "mode": "both",
+      "minSupport": 5,
+      "verseCount": 46,
+      "goldRelations": 873,
+      "goldPairs": 1253,
+      "proposed": 213,
+      "exactMatches": 134,
+      "pairs": 219,
+      "correctPairs": 166,
+      "coveredH": 217,
+      "coveredF": 215,
+      "totalH": 916,
+      "totalF": 1124,
+      "candidateCount": 329,
+      "ambiguous": 51,
+      "examples": [
+        {
+          "verse": 3,
+          "h": [
+            "o050010030081ה"
+          ],
+          "f": [
+            "3.8"
+          ],
+          "tier": 2,
+          "support": 8
+        },
+        {
+          "verse": 3,
+          "h": [
+            "o050010030151"
+          ],
+          "f": [
+            "3.20"
+          ],
+          "tier": 2,
+          "support": 8
+        },
+        {
+          "verse": 4,
+          "h": [
+            "o050010040061"
+          ],
+          "f": [
+            "4.17"
+          ],
+          "tier": 2,
+          "support": 6
+        }
+      ]
+    },
+    {
+      "scope": "Deut.2",
+      "mode": "exact",
+      "minSupport": 1,
+      "verseCount": 37,
+      "goldRelations": 669,
+      "goldPairs": 976,
+      "proposed": 177,
+      "exactMatches": 114,
+      "pairs": 202,
+      "correctPairs": 162,
+      "coveredH": 188,
+      "coveredF": 191,
+      "totalH": 698,
+      "totalF": 897,
+      "candidateCount": 395,
+      "ambiguous": 119,
+      "examples": [
+        {
+          "verse": 1,
+          "h": [
+            "o050020010031"
+          ],
+          "f": [
+            "1.25"
+          ],
+          "tier": 2,
+          "support": 8
+        },
+        {
+          "verse": 1,
+          "h": [
+            "o050020010051"
+          ],
+          "f": [
+            "1.14",
+            "1.15"
+          ],
+          "tier": 2,
+          "support": 1
+        },
+        {
+          "verse": 1,
+          "h": [
+            "o050020010061"
+          ],
+          "f": [
+            "1.16"
+          ],
+          "tier": 2,
+          "support": 1
+        }
+      ]
+    },
+    {
+      "scope": "Deut.2",
+      "mode": "exact",
+      "minSupport": 2,
+      "verseCount": 37,
+      "goldRelations": 669,
+      "goldPairs": 976,
+      "proposed": 136,
+      "exactMatches": 94,
+      "pairs": 145,
+      "correctPairs": 115,
+      "coveredH": 142,
+      "coveredF": 139,
+      "totalH": 698,
+      "totalF": 897,
+      "candidateCount": 276,
+      "ambiguous": 94,
+      "examples": [
+        {
+          "verse": 1,
+          "h": [
+            "o050020010031"
+          ],
+          "f": [
+            "1.25"
+          ],
+          "tier": 2,
+          "support": 8
+        },
+        {
+          "verse": 4,
+          "h": [
+            "o050020040041"
+          ],
+          "f": [
+            "4.20"
+          ],
+          "tier": 2,
+          "support": 8
+        },
+        {
+          "verse": 4,
+          "h": [
+            "o050020040121"
+          ],
+          "f": [
+            "4.4"
+          ],
+          "tier": 2,
+          "support": 8
+        }
+      ]
+    },
+    {
+      "scope": "Deut.2",
+      "mode": "exact",
+      "minSupport": 3,
+      "verseCount": 37,
+      "goldRelations": 669,
+      "goldPairs": 976,
+      "proposed": 112,
+      "exactMatches": 83,
+      "pairs": 118,
+      "correctPairs": 97,
+      "coveredH": 115,
+      "coveredF": 115,
+      "totalH": 698,
+      "totalF": 897,
+      "candidateCount": 219,
+      "ambiguous": 74,
+      "examples": [
+        {
+          "verse": 1,
+          "h": [
+            "o050020010031"
+          ],
+          "f": [
+            "1.25"
+          ],
+          "tier": 2,
+          "support": 8
+        },
+        {
+          "verse": 4,
+          "h": [
+            "o050020040041"
+          ],
+          "f": [
+            "4.20"
+          ],
+          "tier": 2,
+          "support": 8
+        },
+        {
+          "verse": 4,
+          "h": [
+            "o050020040121"
+          ],
+          "f": [
+            "4.4"
+          ],
+          "tier": 2,
+          "support": 8
+        }
+      ]
+    },
+    {
+      "scope": "Deut.2",
+      "mode": "exact",
+      "minSupport": 5,
+      "verseCount": 37,
+      "goldRelations": 669,
+      "goldPairs": 976,
+      "proposed": 93,
+      "exactMatches": 69,
+      "pairs": 96,
+      "correctPairs": 77,
+      "coveredH": 93,
+      "coveredF": 96,
+      "totalH": 698,
+      "totalF": 897,
+      "candidateCount": 179,
+      "ambiguous": 69,
+      "examples": [
+        {
+          "verse": 1,
+          "h": [
+            "o050020010031"
+          ],
+          "f": [
+            "1.25"
+          ],
+          "tier": 2,
+          "support": 8
+        },
+        {
+          "verse": 4,
+          "h": [
+            "o050020040041"
+          ],
+          "f": [
+            "4.20"
+          ],
+          "tier": 2,
+          "support": 8
+        },
+        {
+          "verse": 4,
+          "h": [
+            "o050020040121"
+          ],
+          "f": [
+            "4.4"
+          ],
+          "tier": 2,
+          "support": 8
+        }
+      ]
+    },
+    {
+      "scope": "Deut.2",
+      "mode": "both",
+      "minSupport": 1,
+      "verseCount": 37,
+      "goldRelations": 669,
+      "goldPairs": 976,
+      "proposed": 222,
+      "exactMatches": 139,
+      "pairs": 249,
+      "correctPairs": 202,
+      "coveredH": 233,
+      "coveredF": 238,
+      "totalH": 698,
+      "totalF": 897,
+      "candidateCount": 575,
+      "ambiguous": 168,
+      "examples": [
+        {
+          "verse": 1,
+          "h": [
+            "o050020010031"
+          ],
+          "f": [
+            "1.25"
+          ],
+          "tier": 2,
+          "support": 8
+        },
+        {
+          "verse": 1,
+          "h": [
+            "o050020010051"
+          ],
+          "f": [
+            "1.14",
+            "1.15"
+          ],
+          "tier": 2,
+          "support": 1
+        },
+        {
+          "verse": 1,
+          "h": [
+            "o050020010061"
+          ],
+          "f": [
+            "1.16"
+          ],
+          "tier": 2,
+          "support": 1
+        }
+      ]
+    },
+    {
+      "scope": "Deut.2",
+      "mode": "both",
+      "minSupport": 2,
+      "verseCount": 37,
+      "goldRelations": 669,
+      "goldPairs": 976,
+      "proposed": 192,
+      "exactMatches": 125,
+      "pairs": 204,
+      "correctPairs": 167,
+      "coveredH": 198,
+      "coveredF": 198,
+      "totalH": 698,
+      "totalF": 897,
+      "candidateCount": 406,
+      "ambiguous": 130,
+      "examples": [
+        {
+          "verse": 1,
+          "h": [
+            "o050020010031"
+          ],
+          "f": [
+            "1.25"
+          ],
+          "tier": 2,
+          "support": 8
+        },
+        {
+          "verse": 1,
+          "h": [
+            "o050020010131"
+          ],
+          "f": [
+            "1.29"
+          ],
+          "tier": 1,
+          "support": 4
+        },
+        {
+          "verse": 1,
+          "h": [
+            "o050020010051"
+          ],
+          "f": [
+            "1.15"
+          ],
+          "tier": 1,
+          "support": 3
+        }
+      ]
+    },
+    {
+      "scope": "Deut.2",
+      "mode": "both",
+      "minSupport": 3,
+      "verseCount": 37,
+      "goldRelations": 669,
+      "goldPairs": 976,
+      "proposed": 159,
+      "exactMatches": 106,
+      "pairs": 166,
+      "correctPairs": 136,
+      "coveredH": 162,
+      "coveredF": 163,
+      "totalH": 698,
+      "totalF": 897,
+      "candidateCount": 324,
+      "ambiguous": 98,
+      "examples": [
+        {
+          "verse": 1,
+          "h": [
+            "o050020010031"
+          ],
+          "f": [
+            "1.25"
+          ],
+          "tier": 2,
+          "support": 8
+        },
+        {
+          "verse": 1,
+          "h": [
+            "o050020010131"
+          ],
+          "f": [
+            "1.29"
+          ],
+          "tier": 1,
+          "support": 4
+        },
+        {
+          "verse": 1,
+          "h": [
+            "o050020010051"
+          ],
+          "f": [
+            "1.15"
+          ],
+          "tier": 1,
+          "support": 3
+        }
+      ]
+    },
+    {
+      "scope": "Deut.2",
+      "mode": "both",
+      "minSupport": 5,
+      "verseCount": 37,
+      "goldRelations": 669,
+      "goldPairs": 976,
+      "proposed": 135,
+      "exactMatches": 92,
+      "pairs": 139,
+      "correctPairs": 111,
+      "coveredH": 135,
+      "coveredF": 139,
+      "totalH": 698,
+      "totalF": 897,
+      "candidateCount": 264,
+      "ambiguous": 85,
+      "examples": [
+        {
+          "verse": 1,
+          "h": [
+            "o050020010031"
+          ],
+          "f": [
+            "1.25"
+          ],
+          "tier": 2,
+          "support": 8
+        },
+        {
+          "verse": 1,
+          "h": [
+            "o050020010071"
+          ],
+          "f": [
+            "1.17"
+          ],
+          "tier": 1,
+          "support": 10
+        },
+        {
+          "verse": 4,
+          "h": [
+            "o050020040041"
+          ],
+          "f": [
+            "4.20"
+          ],
+          "tier": 2,
+          "support": 8
+        }
+      ]
+    },
+    {
+      "scope": "Deut.3",
+      "mode": "exact",
+      "minSupport": 1,
+      "verseCount": 29,
+      "goldRelations": 572,
+      "goldPairs": 805,
+      "proposed": 154,
+      "exactMatches": 99,
+      "pairs": 167,
+      "correctPairs": 123,
+      "coveredH": 159,
+      "coveredF": 162,
+      "totalH": 590,
+      "totalF": 740,
+      "candidateCount": 328,
+      "ambiguous": 82,
+      "examples": [
+        {
+          "verse": 1,
+          "h": [
+            "o050030010111"
+          ],
+          "f": [
+            "1.4"
+          ],
+          "tier": 2,
+          "support": 8
+        },
+        {
+          "verse": 1,
+          "h": [
+            "o050030010131ה"
+          ],
+          "f": [
+            "1.8"
+          ],
+          "tier": 2,
+          "support": 8
+        },
+        {
+          "verse": 1,
+          "h": [
+            "o050030010131"
+          ],
+          "f": [
+            "1.24"
+          ],
+          "tier": 2,
+          "support": 7
+        }
+      ]
+    },
+    {
+      "scope": "Deut.3",
+      "mode": "exact",
+      "minSupport": 2,
+      "verseCount": 29,
+      "goldRelations": 572,
+      "goldPairs": 805,
+      "proposed": 125,
+      "exactMatches": 81,
+      "pairs": 133,
+      "correctPairs": 96,
+      "coveredH": 129,
+      "coveredF": 129,
+      "totalH": 590,
+      "totalF": 740,
+      "candidateCount": 227,
+      "ambiguous": 57,
+      "examples": [
+        {
+          "verse": 1,
+          "h": [
+            "o050030010111"
+          ],
+          "f": [
+            "1.4"
+          ],
+          "tier": 2,
+          "support": 8
+        },
+        {
+          "verse": 1,
+          "h": [
+            "o050030010131ה"
+          ],
+          "f": [
+            "1.8"
+          ],
+          "tier": 2,
+          "support": 8
+        },
+        {
+          "verse": 1,
+          "h": [
+            "o050030010131"
+          ],
+          "f": [
+            "1.24"
+          ],
+          "tier": 2,
+          "support": 7
+        }
+      ]
+    },
+    {
+      "scope": "Deut.3",
+      "mode": "exact",
+      "minSupport": 3,
+      "verseCount": 29,
+      "goldRelations": 572,
+      "goldPairs": 805,
+      "proposed": 109,
+      "exactMatches": 73,
+      "pairs": 115,
+      "correctPairs": 86,
+      "coveredH": 112,
+      "coveredF": 112,
+      "totalH": 590,
+      "totalF": 740,
+      "candidateCount": 183,
+      "ambiguous": 45,
+      "examples": [
+        {
+          "verse": 1,
+          "h": [
+            "o050030010111"
+          ],
+          "f": [
+            "1.4"
+          ],
+          "tier": 2,
+          "support": 8
+        },
+        {
+          "verse": 1,
+          "h": [
+            "o050030010131ה"
+          ],
+          "f": [
+            "1.8"
+          ],
+          "tier": 2,
+          "support": 8
+        },
+        {
+          "verse": 1,
+          "h": [
+            "o050030010131"
+          ],
+          "f": [
+            "1.24"
+          ],
+          "tier": 2,
+          "support": 7
+        }
+      ]
+    },
+    {
+      "scope": "Deut.3",
+      "mode": "exact",
+      "minSupport": 5,
+      "verseCount": 29,
+      "goldRelations": 572,
+      "goldPairs": 805,
+      "proposed": 88,
+      "exactMatches": 63,
+      "pairs": 93,
+      "correctPairs": 71,
+      "coveredH": 90,
+      "coveredF": 91,
+      "totalH": 590,
+      "totalF": 740,
+      "candidateCount": 144,
+      "ambiguous": 39,
+      "examples": [
+        {
+          "verse": 1,
+          "h": [
+            "o050030010111"
+          ],
+          "f": [
+            "1.4"
+          ],
+          "tier": 2,
+          "support": 8
+        },
+        {
+          "verse": 1,
+          "h": [
+            "o050030010131ה"
+          ],
+          "f": [
+            "1.8"
+          ],
+          "tier": 2,
+          "support": 8
+        },
+        {
+          "verse": 1,
+          "h": [
+            "o050030010131"
+          ],
+          "f": [
+            "1.24"
+          ],
+          "tier": 2,
+          "support": 7
+        }
+      ]
+    },
+    {
+      "scope": "Deut.3",
+      "mode": "both",
+      "minSupport": 1,
+      "verseCount": 29,
+      "goldRelations": 572,
+      "goldPairs": 805,
+      "proposed": 191,
+      "exactMatches": 118,
+      "pairs": 207,
+      "correctPairs": 154,
+      "coveredH": 196,
+      "coveredF": 202,
+      "totalH": 590,
+      "totalF": 740,
+      "candidateCount": 418,
+      "ambiguous": 90,
+      "examples": [
+        {
+          "verse": 1,
+          "h": [
+            "o050030010111"
+          ],
+          "f": [
+            "1.4"
+          ],
+          "tier": 2,
+          "support": 8
+        },
+        {
+          "verse": 1,
+          "h": [
+            "o050030010131ה"
+          ],
+          "f": [
+            "1.8"
+          ],
+          "tier": 2,
+          "support": 8
+        },
+        {
+          "verse": 1,
+          "h": [
+            "o050030010131"
+          ],
+          "f": [
+            "1.24"
+          ],
+          "tier": 2,
+          "support": 7
+        }
+      ]
+    },
+    {
+      "scope": "Deut.3",
+      "mode": "both",
+      "minSupport": 2,
+      "verseCount": 29,
+      "goldRelations": 572,
+      "goldPairs": 805,
+      "proposed": 157,
+      "exactMatches": 100,
+      "pairs": 167,
+      "correctPairs": 124,
+      "coveredH": 161,
+      "coveredF": 163,
+      "totalH": 590,
+      "totalF": 740,
+      "candidateCount": 282,
+      "ambiguous": 61,
+      "examples": [
+        {
+          "verse": 1,
+          "h": [
+            "o050030010111"
+          ],
+          "f": [
+            "1.4"
+          ],
+          "tier": 2,
+          "support": 8
+        },
+        {
+          "verse": 1,
+          "h": [
+            "o050030010131ה"
+          ],
+          "f": [
+            "1.8"
+          ],
+          "tier": 2,
+          "support": 8
+        },
+        {
+          "verse": 1,
+          "h": [
+            "o050030010131"
+          ],
+          "f": [
+            "1.24"
+          ],
+          "tier": 2,
+          "support": 7
+        }
+      ]
+    },
+    {
+      "scope": "Deut.3",
+      "mode": "both",
+      "minSupport": 3,
+      "verseCount": 29,
+      "goldRelations": 572,
+      "goldPairs": 805,
+      "proposed": 135,
+      "exactMatches": 89,
+      "pairs": 141,
+      "correctPairs": 106,
+      "coveredH": 138,
+      "coveredF": 138,
+      "totalH": 590,
+      "totalF": 740,
+      "candidateCount": 224,
+      "ambiguous": 46,
+      "examples": [
+        {
+          "verse": 1,
+          "h": [
+            "o050030010111"
+          ],
+          "f": [
+            "1.4"
+          ],
+          "tier": 2,
+          "support": 8
+        },
+        {
+          "verse": 1,
+          "h": [
+            "o050030010131ה"
+          ],
+          "f": [
+            "1.8"
+          ],
+          "tier": 2,
+          "support": 8
+        },
+        {
+          "verse": 1,
+          "h": [
+            "o050030010131"
+          ],
+          "f": [
+            "1.24"
+          ],
+          "tier": 2,
+          "support": 7
+        }
+      ]
+    },
+    {
+      "scope": "Deut.3",
+      "mode": "both",
+      "minSupport": 5,
+      "verseCount": 29,
+      "goldRelations": 572,
+      "goldPairs": 805,
+      "proposed": 109,
+      "exactMatches": 80,
+      "pairs": 114,
+      "correctPairs": 88,
+      "coveredH": 111,
+      "coveredF": 112,
+      "totalH": 590,
+      "totalF": 740,
+      "candidateCount": 180,
+      "ambiguous": 41,
+      "examples": [
+        {
+          "verse": 1,
+          "h": [
+            "o050030010111"
+          ],
+          "f": [
+            "1.4"
+          ],
+          "tier": 2,
+          "support": 8
+        },
+        {
+          "verse": 1,
+          "h": [
+            "o050030010131ה"
+          ],
+          "f": [
+            "1.8"
+          ],
+          "tier": 2,
+          "support": 8
+        },
+        {
+          "verse": 1,
+          "h": [
+            "o050030010131"
+          ],
+          "f": [
+            "1.24"
+          ],
+          "tier": 2,
+          "support": 7
+        }
+      ]
+    },
+    {
+      "scope": "Deut.4",
+      "mode": "exact",
+      "minSupport": 1,
+      "verseCount": 49,
+      "goldRelations": 1063,
+      "goldPairs": 1520,
+      "proposed": 277,
+      "exactMatches": 173,
+      "pairs": 298,
+      "correctPairs": 223,
+      "coveredH": 286,
+      "coveredF": 289,
+      "totalH": 1096,
+      "totalF": 1395,
+      "candidateCount": 596,
+      "ambiguous": 145,
+      "examples": [
+        {
+          "verse": 1,
+          "h": [
+            "o050040010211"
+          ],
+          "f": [
+            "1.33"
+          ],
+          "tier": 2,
+          "support": 4
+        },
+        {
+          "verse": 1,
+          "h": [
+            "o050040010221"
+          ],
+          "f": [
+            "1.36"
+          ],
+          "tier": 2,
+          "support": 1
+        },
+        {
+          "verse": 2,
+          "h": [
+            "o050040020151"
+          ],
+          "f": [
+            "2.21"
+          ],
+          "tier": 2,
+          "support": 8
+        }
+      ]
+    },
+    {
+      "scope": "Deut.4",
+      "mode": "exact",
+      "minSupport": 2,
+      "verseCount": 49,
+      "goldRelations": 1063,
+      "goldPairs": 1520,
+      "proposed": 228,
+      "exactMatches": 145,
+      "pairs": 234,
+      "correctPairs": 176,
+      "coveredH": 233,
+      "coveredF": 229,
+      "totalH": 1096,
+      "totalF": 1395,
+      "candidateCount": 410,
+      "ambiguous": 102,
+      "examples": [
+        {
+          "verse": 1,
+          "h": [
+            "o050040010211"
+          ],
+          "f": [
+            "1.33"
+          ],
+          "tier": 2,
+          "support": 4
+        },
+        {
+          "verse": 2,
+          "h": [
+            "o050040020151"
+          ],
+          "f": [
+            "2.21"
+          ],
+          "tier": 2,
+          "support": 8
+        },
+        {
+          "verse": 2,
+          "h": [
+            "o050040020121"
+          ],
+          "f": [
+            "2.4"
+          ],
+          "tier": 2,
+          "support": 5
+        }
+      ]
+    },
+    {
+      "scope": "Deut.4",
+      "mode": "exact",
+      "minSupport": 3,
+      "verseCount": 49,
+      "goldRelations": 1063,
+      "goldPairs": 1520,
+      "proposed": 189,
+      "exactMatches": 122,
+      "pairs": 195,
+      "correctPairs": 148,
+      "coveredH": 194,
+      "coveredF": 190,
+      "totalH": 1096,
+      "totalF": 1395,
+      "candidateCount": 318,
+      "ambiguous": 87,
+      "examples": [
+        {
+          "verse": 1,
+          "h": [
+            "o050040010211"
+          ],
+          "f": [
+            "1.33"
+          ],
+          "tier": 2,
+          "support": 4
+        },
+        {
+          "verse": 2,
+          "h": [
+            "o050040020151"
+          ],
+          "f": [
+            "2.21"
+          ],
+          "tier": 2,
+          "support": 8
+        },
+        {
+          "verse": 2,
+          "h": [
+            "o050040020121"
+          ],
+          "f": [
+            "2.4"
+          ],
+          "tier": 2,
+          "support": 5
+        }
+      ]
+    },
+    {
+      "scope": "Deut.4",
+      "mode": "exact",
+      "minSupport": 5,
+      "verseCount": 49,
+      "goldRelations": 1063,
+      "goldPairs": 1520,
+      "proposed": 158,
+      "exactMatches": 106,
+      "pairs": 161,
+      "correctPairs": 120,
+      "coveredH": 161,
+      "coveredF": 158,
+      "totalH": 1096,
+      "totalF": 1395,
+      "candidateCount": 241,
+      "ambiguous": 70,
+      "examples": [
+        {
+          "verse": 2,
+          "h": [
+            "o050040020151"
+          ],
+          "f": [
+            "2.21"
+          ],
+          "tier": 2,
+          "support": 8
+        },
+        {
+          "verse": 2,
+          "h": [
+            "o050040020121"
+          ],
+          "f": [
+            "2.4"
+          ],
+          "tier": 2,
+          "support": 5
+        },
+        {
+          "verse": 3,
+          "h": [
+            "o050040030091"
+          ],
+          "f": [
+            "3.6"
+          ],
+          "tier": 2,
+          "support": 6
+        }
+      ]
+    },
+    {
+      "scope": "Deut.4",
+      "mode": "both",
+      "minSupport": 1,
+      "verseCount": 49,
+      "goldRelations": 1063,
+      "goldPairs": 1520,
+      "proposed": 341,
+      "exactMatches": 219,
+      "pairs": 374,
+      "correctPairs": 289,
+      "coveredH": 350,
+      "coveredF": 365,
+      "totalH": 1096,
+      "totalF": 1395,
+      "candidateCount": 759,
+      "ambiguous": 153,
+      "examples": [
+        {
+          "verse": 1,
+          "h": [
+            "o050040010211"
+          ],
+          "f": [
+            "1.33"
+          ],
+          "tier": 2,
+          "support": 4
+        },
+        {
+          "verse": 1,
+          "h": [
+            "o050040010221"
+          ],
+          "f": [
+            "1.36"
+          ],
+          "tier": 2,
+          "support": 1
+        },
+        {
+          "verse": 2,
+          "h": [
+            "o050040020151"
+          ],
+          "f": [
+            "2.21"
+          ],
+          "tier": 2,
+          "support": 8
+        }
+      ]
+    },
+    {
+      "scope": "Deut.4",
+      "mode": "both",
+      "minSupport": 2,
+      "verseCount": 49,
+      "goldRelations": 1063,
+      "goldPairs": 1520,
+      "proposed": 286,
+      "exactMatches": 184,
+      "pairs": 295,
+      "correctPairs": 230,
+      "coveredH": 291,
+      "coveredF": 290,
+      "totalH": 1096,
+      "totalF": 1395,
+      "candidateCount": 524,
+      "ambiguous": 110,
+      "examples": [
+        {
+          "verse": 1,
+          "h": [
+            "o050040010211"
+          ],
+          "f": [
+            "1.33"
+          ],
+          "tier": 2,
+          "support": 4
+        },
+        {
+          "verse": 1,
+          "h": [
+            "o050040010221"
+          ],
+          "f": [
+            "1.36"
+          ],
+          "tier": 1,
+          "support": 3
+        },
+        {
+          "verse": 2,
+          "h": [
+            "o050040020151"
+          ],
+          "f": [
+            "2.21"
+          ],
+          "tier": 2,
+          "support": 8
+        }
+      ]
+    },
+    {
+      "scope": "Deut.4",
+      "mode": "both",
+      "minSupport": 3,
+      "verseCount": 49,
+      "goldRelations": 1063,
+      "goldPairs": 1520,
+      "proposed": 251,
+      "exactMatches": 161,
+      "pairs": 259,
+      "correctPairs": 203,
+      "coveredH": 256,
+      "coveredF": 254,
+      "totalH": 1096,
+      "totalF": 1395,
+      "candidateCount": 419,
+      "ambiguous": 94,
+      "examples": [
+        {
+          "verse": 1,
+          "h": [
+            "o050040010211"
+          ],
+          "f": [
+            "1.33"
+          ],
+          "tier": 2,
+          "support": 4
+        },
+        {
+          "verse": 1,
+          "h": [
+            "o050040010221"
+          ],
+          "f": [
+            "1.36"
+          ],
+          "tier": 1,
+          "support": 3
+        },
+        {
+          "verse": 2,
+          "h": [
+            "o050040020151"
+          ],
+          "f": [
+            "2.21"
+          ],
+          "tier": 2,
+          "support": 8
+        }
+      ]
+    },
+    {
+      "scope": "Deut.4",
+      "mode": "both",
+      "minSupport": 5,
+      "verseCount": 49,
+      "goldRelations": 1063,
+      "goldPairs": 1520,
+      "proposed": 210,
+      "exactMatches": 140,
+      "pairs": 214,
+      "correctPairs": 167,
+      "coveredH": 213,
+      "coveredF": 211,
+      "totalH": 1096,
+      "totalF": 1395,
+      "candidateCount": 327,
+      "ambiguous": 80,
+      "examples": [
+        {
+          "verse": 1,
+          "h": [
+            "o050040010211"
+          ],
+          "f": [
+            "1.33"
+          ],
+          "tier": 1,
+          "support": 5
+        },
+        {
+          "verse": 2,
+          "h": [
+            "o050040020151"
+          ],
+          "f": [
+            "2.21"
+          ],
+          "tier": 2,
+          "support": 8
+        },
+        {
+          "verse": 2,
+          "h": [
+            "o050040020121"
+          ],
+          "f": [
+            "2.4"
+          ],
+          "tier": 2,
+          "support": 5
+        }
+      ]
+    },
+    {
+      "scope": "Gen.1",
+      "mode": "exact",
+      "minSupport": 1,
+      "verseCount": 31,
+      "goldRelations": 585,
+      "goldPairs": 643,
+      "proposed": 121,
+      "exactMatches": 86,
+      "pairs": 130,
+      "correctPairs": 94,
+      "coveredH": 122,
+      "coveredF": 129,
+      "totalH": 596,
+      "totalF": 620,
+      "candidateCount": 240,
+      "ambiguous": 70,
+      "examples": [
+        {
+          "verse": 4,
+          "h": [
+            "o010010040111"
+          ],
+          "f": [
+            "4.8"
+          ],
+          "tier": 2,
+          "support": 8
+        },
+        {
+          "verse": 5,
+          "h": [
+            "o010010050012"
+          ],
+          "f": [
+            "5.7",
+            "5.8"
+          ],
+          "tier": 2,
+          "support": 1
+        },
+        {
+          "verse": 5,
+          "h": [
+            "o010010050052"
+          ],
+          "f": [
+            "5.26"
+          ],
+          "tier": 2,
+          "support": 1
+        }
+      ]
+    },
+    {
+      "scope": "Gen.1",
+      "mode": "exact",
+      "minSupport": 2,
+      "verseCount": 31,
+      "goldRelations": 585,
+      "goldPairs": 643,
+      "proposed": 90,
+      "exactMatches": 68,
+      "pairs": 93,
+      "correctPairs": 73,
+      "coveredH": 90,
+      "coveredF": 93,
+      "totalH": 596,
+      "totalF": 620,
+      "candidateCount": 151,
+      "ambiguous": 42,
+      "examples": [
+        {
+          "verse": 4,
+          "h": [
+            "o010010040111"
+          ],
+          "f": [
+            "4.8"
+          ],
+          "tier": 2,
+          "support": 8
+        },
+        {
+          "verse": 6,
+          "h": [
+            "o010010060011"
+          ],
+          "f": [
+            "6.11"
+          ],
+          "tier": 2,
+          "support": 8
+        },
+        {
+          "verse": 7,
+          "h": [
+            "o010010070142"
+          ],
+          "f": [
+            "7.20",
+            "7.21"
+          ],
+          "tier": 2,
+          "support": 2
+        }
+      ]
+    },
+    {
+      "scope": "Gen.1",
+      "mode": "exact",
+      "minSupport": 3,
+      "verseCount": 31,
+      "goldRelations": 585,
+      "goldPairs": 643,
+      "proposed": 75,
+      "exactMatches": 57,
+      "pairs": 75,
+      "correctPairs": 58,
+      "coveredH": 75,
+      "coveredF": 75,
+      "totalH": 596,
+      "totalF": 620,
+      "candidateCount": 125,
+      "ambiguous": 39,
+      "examples": [
+        {
+          "verse": 4,
+          "h": [
+            "o010010040111"
+          ],
+          "f": [
+            "4.8"
+          ],
+          "tier": 2,
+          "support": 8
+        },
+        {
+          "verse": 6,
+          "h": [
+            "o010010060011"
+          ],
+          "f": [
+            "6.11"
+          ],
+          "tier": 2,
+          "support": 8
+        },
+        {
+          "verse": 8,
+          "h": [
+            "o010010080031ה"
+          ],
+          "f": [
+            "8.19"
+          ],
+          "tier": 2,
+          "support": 8
+        }
+      ]
+    },
+    {
+      "scope": "Gen.1",
+      "mode": "exact",
+      "minSupport": 5,
+      "verseCount": 31,
+      "goldRelations": 585,
+      "goldPairs": 643,
+      "proposed": 66,
+      "exactMatches": 49,
+      "pairs": 66,
+      "correctPairs": 50,
+      "coveredH": 66,
+      "coveredF": 66,
+      "totalH": 596,
+      "totalF": 620,
+      "candidateCount": 108,
+      "ambiguous": 37,
+      "examples": [
+        {
+          "verse": 4,
+          "h": [
+            "o010010040111"
+          ],
+          "f": [
+            "4.8"
+          ],
+          "tier": 2,
+          "support": 8
+        },
+        {
+          "verse": 6,
+          "h": [
+            "o010010060011"
+          ],
+          "f": [
+            "6.11"
+          ],
+          "tier": 2,
+          "support": 8
+        },
+        {
+          "verse": 8,
+          "h": [
+            "o010010080031ה"
+          ],
+          "f": [
+            "8.19"
+          ],
+          "tier": 2,
+          "support": 8
+        }
+      ]
+    },
+    {
+      "scope": "Gen.1",
+      "mode": "both",
+      "minSupport": 1,
+      "verseCount": 31,
+      "goldRelations": 585,
+      "goldPairs": 643,
+      "proposed": 176,
+      "exactMatches": 137,
+      "pairs": 185,
+      "correctPairs": 145,
+      "coveredH": 177,
+      "coveredF": 184,
+      "totalH": 596,
+      "totalF": 620,
+      "candidateCount": 343,
+      "ambiguous": 81,
+      "examples": [
+        {
+          "verse": 2,
+          "h": [
+            "o010010020021"
+          ],
+          "f": [
+            "2.9"
+          ],
+          "tier": 1,
+          "support": 1
+        },
+        {
+          "verse": 4,
+          "h": [
+            "o010010040111"
+          ],
+          "f": [
+            "4.8"
+          ],
+          "tier": 2,
+          "support": 8
+        },
+        {
+          "verse": 5,
+          "h": [
+            "o010010050012"
+          ],
+          "f": [
+            "5.7",
+            "5.8"
+          ],
+          "tier": 2,
+          "support": 1
+        }
+      ]
+    },
+    {
+      "scope": "Gen.1",
+      "mode": "both",
+      "minSupport": 2,
+      "verseCount": 31,
+      "goldRelations": 585,
+      "goldPairs": 643,
+      "proposed": 134,
+      "exactMatches": 109,
+      "pairs": 137,
+      "correctPairs": 115,
+      "coveredH": 134,
+      "coveredF": 137,
+      "totalH": 596,
+      "totalF": 620,
+      "candidateCount": 215,
+      "ambiguous": 47,
+      "examples": [
+        {
+          "verse": 4,
+          "h": [
+            "o010010040111"
+          ],
+          "f": [
+            "4.8"
+          ],
+          "tier": 2,
+          "support": 8
+        },
+        {
+          "verse": 6,
+          "h": [
+            "o010010060011"
+          ],
+          "f": [
+            "6.11"
+          ],
+          "tier": 2,
+          "support": 8
+        },
+        {
+          "verse": 7,
+          "h": [
+            "o010010070142"
+          ],
+          "f": [
+            "7.20",
+            "7.21"
+          ],
+          "tier": 2,
+          "support": 2
+        }
+      ]
+    },
+    {
+      "scope": "Gen.1",
+      "mode": "both",
+      "minSupport": 3,
+      "verseCount": 31,
+      "goldRelations": 585,
+      "goldPairs": 643,
+      "proposed": 116,
+      "exactMatches": 95,
+      "pairs": 116,
+      "correctPairs": 97,
+      "coveredH": 116,
+      "coveredF": 116,
+      "totalH": 596,
+      "totalF": 620,
+      "candidateCount": 178,
+      "ambiguous": 42,
+      "examples": [
+        {
+          "verse": 4,
+          "h": [
+            "o010010040111"
+          ],
+          "f": [
+            "4.8"
+          ],
+          "tier": 2,
+          "support": 8
+        },
+        {
+          "verse": 6,
+          "h": [
+            "o010010060011"
+          ],
+          "f": [
+            "6.11"
+          ],
+          "tier": 2,
+          "support": 8
+        },
+        {
+          "verse": 8,
+          "h": [
+            "o010010080031ה"
+          ],
+          "f": [
+            "8.19"
+          ],
+          "tier": 2,
+          "support": 8
+        }
+      ]
+    },
+    {
+      "scope": "Gen.1",
+      "mode": "both",
+      "minSupport": 5,
+      "verseCount": 31,
+      "goldRelations": 585,
+      "goldPairs": 643,
+      "proposed": 106,
+      "exactMatches": 88,
+      "pairs": 106,
+      "correctPairs": 89,
+      "coveredH": 106,
+      "coveredF": 106,
+      "totalH": 596,
+      "totalF": 620,
+      "candidateCount": 157,
+      "ambiguous": 40,
+      "examples": [
+        {
+          "verse": 4,
+          "h": [
+            "o010010040111"
+          ],
+          "f": [
+            "4.8"
+          ],
+          "tier": 2,
+          "support": 8
+        },
+        {
+          "verse": 6,
+          "h": [
+            "o010010060011"
+          ],
+          "f": [
+            "6.11"
+          ],
+          "tier": 2,
+          "support": 8
+        },
+        {
+          "verse": 8,
+          "h": [
+            "o010010080031ה"
+          ],
+          "f": [
+            "8.19"
+          ],
+          "tier": 2,
+          "support": 8
+        }
+      ]
+    },
+    {
+      "scope": "Gen.22",
+      "mode": "exact",
+      "minSupport": 1,
+      "verseCount": 24,
+      "goldRelations": 430,
+      "goldPairs": 518,
+      "proposed": 108,
+      "exactMatches": 83,
+      "pairs": 115,
+      "correctPairs": 92,
+      "coveredH": 111,
+      "coveredF": 112,
+      "totalH": 442,
+      "totalF": 447,
+      "candidateCount": 235,
+      "ambiguous": 61,
+      "examples": [
+        {
+          "verse": 2,
+          "h": [
+            "o010220020011"
+          ],
+          "f": [
+            "2.18"
+          ],
+          "tier": 2,
+          "support": 8
+        },
+        {
+          "verse": 2,
+          "h": [
+            "o010220020161"
+          ],
+          "f": [
+            "2.16"
+          ],
+          "tier": 2,
+          "support": 2
+        },
+        {
+          "verse": 2,
+          "h": [
+            "o010220020131",
+            "o010220020132"
+          ],
+          "f": [
+            "2.29"
+          ],
+          "tier": 2,
+          "support": 1
+        }
+      ]
+    },
+    {
+      "scope": "Gen.22",
+      "mode": "exact",
+      "minSupport": 2,
+      "verseCount": 24,
+      "goldRelations": 430,
+      "goldPairs": 518,
+      "proposed": 93,
+      "exactMatches": 73,
+      "pairs": 97,
+      "correctPairs": 80,
+      "coveredH": 94,
+      "coveredF": 96,
+      "totalH": 442,
+      "totalF": 447,
+      "candidateCount": 164,
+      "ambiguous": 42,
+      "examples": [
+        {
+          "verse": 2,
+          "h": [
+            "o010220020011"
+          ],
+          "f": [
+            "2.18"
+          ],
+          "tier": 2,
+          "support": 8
+        },
+        {
+          "verse": 2,
+          "h": [
+            "o010220020161"
+          ],
+          "f": [
+            "2.16"
+          ],
+          "tier": 2,
+          "support": 2
+        },
+        {
+          "verse": 3,
+          "h": [
+            "o010220030121"
+          ],
+          "f": [
+            "3.12"
+          ],
+          "tier": 2,
+          "support": 5
+        }
+      ]
+    },
+    {
+      "scope": "Gen.22",
+      "mode": "exact",
+      "minSupport": 3,
+      "verseCount": 24,
+      "goldRelations": 430,
+      "goldPairs": 518,
+      "proposed": 75,
+      "exactMatches": 65,
+      "pairs": 76,
+      "correctPairs": 67,
+      "coveredH": 75,
+      "coveredF": 76,
+      "totalH": 442,
+      "totalF": 447,
+      "candidateCount": 124,
+      "ambiguous": 32,
+      "examples": [
+        {
+          "verse": 2,
+          "h": [
+            "o010220020011"
+          ],
+          "f": [
+            "2.18"
+          ],
+          "tier": 2,
+          "support": 8
+        },
+        {
+          "verse": 3,
+          "h": [
+            "o010220030121"
+          ],
+          "f": [
+            "3.12"
+          ],
+          "tier": 2,
+          "support": 5
+        },
+        {
+          "verse": 5,
+          "h": [
+            "o010220050061"
+          ],
+          "f": [
+            "5.19"
+          ],
+          "tier": 2,
+          "support": 8
+        }
+      ]
+    },
+    {
+      "scope": "Gen.22",
+      "mode": "exact",
+      "minSupport": 5,
+      "verseCount": 24,
+      "goldRelations": 430,
+      "goldPairs": 518,
+      "proposed": 57,
+      "exactMatches": 49,
+      "pairs": 57,
+      "correctPairs": 50,
+      "coveredH": 57,
+      "coveredF": 57,
+      "totalH": 442,
+      "totalF": 447,
+      "candidateCount": 90,
+      "ambiguous": 28,
+      "examples": [
+        {
+          "verse": 2,
+          "h": [
+            "o010220020011"
+          ],
+          "f": [
+            "2.18"
+          ],
+          "tier": 2,
+          "support": 8
+        },
+        {
+          "verse": 3,
+          "h": [
+            "o010220030121"
+          ],
+          "f": [
+            "3.12"
+          ],
+          "tier": 2,
+          "support": 5
+        },
+        {
+          "verse": 5,
+          "h": [
+            "o010220050061"
+          ],
+          "f": [
+            "5.19"
+          ],
+          "tier": 2,
+          "support": 8
+        }
+      ]
+    },
+    {
+      "scope": "Gen.22",
+      "mode": "both",
+      "minSupport": 1,
+      "verseCount": 24,
+      "goldRelations": 430,
+      "goldPairs": 518,
+      "proposed": 138,
+      "exactMatches": 111,
+      "pairs": 145,
+      "correctPairs": 120,
+      "coveredH": 141,
+      "coveredF": 142,
+      "totalH": 442,
+      "totalF": 447,
+      "candidateCount": 302,
+      "ambiguous": 70,
+      "examples": [
+        {
+          "verse": 2,
+          "h": [
+            "o010220020011"
+          ],
+          "f": [
+            "2.18"
+          ],
+          "tier": 2,
+          "support": 8
+        },
+        {
+          "verse": 2,
+          "h": [
+            "o010220020161"
+          ],
+          "f": [
+            "2.16"
+          ],
+          "tier": 2,
+          "support": 2
+        },
+        {
+          "verse": 2,
+          "h": [
+            "o010220020131",
+            "o010220020132"
+          ],
+          "f": [
+            "2.29"
+          ],
+          "tier": 2,
+          "support": 1
+        }
+      ]
+    },
+    {
+      "scope": "Gen.22",
+      "mode": "both",
+      "minSupport": 2,
+      "verseCount": 24,
+      "goldRelations": 430,
+      "goldPairs": 518,
+      "proposed": 122,
+      "exactMatches": 102,
+      "pairs": 126,
+      "correctPairs": 109,
+      "coveredH": 123,
+      "coveredF": 125,
+      "totalH": 442,
+      "totalF": 447,
+      "candidateCount": 214,
+      "ambiguous": 48,
+      "examples": [
+        {
+          "verse": 2,
+          "h": [
+            "o010220020011"
+          ],
+          "f": [
+            "2.18"
+          ],
+          "tier": 2,
+          "support": 8
+        },
+        {
+          "verse": 2,
+          "h": [
+            "o010220020161"
+          ],
+          "f": [
+            "2.16"
+          ],
+          "tier": 2,
+          "support": 2
+        },
+        {
+          "verse": 3,
+          "h": [
+            "o010220030121"
+          ],
+          "f": [
+            "3.12"
+          ],
+          "tier": 2,
+          "support": 5
+        }
+      ]
+    },
+    {
+      "scope": "Gen.22",
+      "mode": "both",
+      "minSupport": 3,
+      "verseCount": 24,
+      "goldRelations": 430,
+      "goldPairs": 518,
+      "proposed": 110,
+      "exactMatches": 95,
+      "pairs": 111,
+      "correctPairs": 100,
+      "coveredH": 110,
+      "coveredF": 111,
+      "totalH": 442,
+      "totalF": 447,
+      "candidateCount": 175,
+      "ambiguous": 36,
+      "examples": [
+        {
+          "verse": 1,
+          "h": [
+            "o010220010101"
+          ],
+          "f": [
+            "1.7"
+          ],
+          "tier": 1,
+          "support": 10
+        },
+        {
+          "verse": 2,
+          "h": [
+            "o010220020011"
+          ],
+          "f": [
+            "2.18"
+          ],
+          "tier": 2,
+          "support": 8
+        },
+        {
+          "verse": 3,
+          "h": [
+            "o010220030121"
+          ],
+          "f": [
+            "3.12"
+          ],
+          "tier": 2,
+          "support": 5
+        }
+      ]
+    },
+    {
+      "scope": "Gen.22",
+      "mode": "both",
+      "minSupport": 5,
+      "verseCount": 24,
+      "goldRelations": 430,
+      "goldPairs": 518,
+      "proposed": 83,
+      "exactMatches": 73,
+      "pairs": 83,
+      "correctPairs": 74,
+      "coveredH": 83,
+      "coveredF": 83,
+      "totalH": 442,
+      "totalF": 447,
+      "candidateCount": 131,
+      "ambiguous": 31,
+      "examples": [
+        {
+          "verse": 1,
+          "h": [
+            "o010220010101"
+          ],
+          "f": [
+            "1.7"
+          ],
+          "tier": 1,
+          "support": 10
+        },
+        {
+          "verse": 2,
+          "h": [
+            "o010220020011"
+          ],
+          "f": [
+            "2.18"
+          ],
+          "tier": 2,
+          "support": 8
+        },
+        {
+          "verse": 3,
+          "h": [
+            "o010220030121"
+          ],
+          "f": [
+            "3.12"
+          ],
+          "tier": 2,
+          "support": 5
+        }
+      ]
+    }
+  ],
+  "aggregate": [
+    {
+      "mode": "exact",
+      "n": 1,
+      "proposed": 1132,
+      "exactMatches": 746,
+      "goldRelations": 4192,
+      "pairs": 1250,
+      "correctPairs": 957,
+      "goldPairs": 5715,
+      "h": 1177,
+      "totalH": 4338,
+      "f": 1204,
+      "totalF": 5223,
+      "verses": 216
+    },
+    {
+      "mode": "exact",
+      "n": 2,
+      "proposed": 887,
+      "exactMatches": 600,
+      "goldRelations": 4192,
+      "pairs": 938,
+      "correctPairs": 722,
+      "goldPairs": 5715,
+      "h": 914,
+      "totalH": 4338,
+      "f": 910,
+      "totalF": 5223,
+      "verses": 216
+    },
+    {
+      "mode": "exact",
+      "n": 3,
+      "proposed": 745,
+      "exactMatches": 522,
+      "goldRelations": 4192,
+      "pairs": 776,
+      "correctPairs": 612,
+      "goldPairs": 5715,
+      "h": 763,
+      "totalH": 4338,
+      "f": 758,
+      "totalF": 5223,
+      "verses": 216
+    },
+    {
+      "mode": "exact",
+      "n": 5,
+      "proposed": 608,
+      "exactMatches": 429,
+      "goldRelations": 4192,
+      "pairs": 625,
+      "correctPairs": 485,
+      "goldPairs": 5715,
+      "h": 617,
+      "totalH": 4338,
+      "f": 616,
+      "totalF": 5223,
+      "verses": 216
+    },
+    {
+      "mode": "both",
+      "n": 1,
+      "proposed": 1427,
+      "exactMatches": 949,
+      "goldRelations": 4192,
+      "pairs": 1564,
+      "correctPairs": 1230,
+      "goldPairs": 5715,
+      "h": 1472,
+      "totalH": 4338,
+      "f": 1518,
+      "totalF": 5223,
+      "verses": 216
+    },
+    {
+      "mode": "both",
+      "n": 2,
+      "proposed": 1177,
+      "exactMatches": 800,
+      "goldRelations": 4192,
+      "pairs": 1236,
+      "correctPairs": 981,
+      "goldPairs": 5715,
+      "h": 1204,
+      "totalH": 4338,
+      "f": 1208,
+      "totalF": 5223,
+      "verses": 216
+    },
+    {
+      "mode": "both",
+      "n": 3,
+      "proposed": 1027,
+      "exactMatches": 704,
+      "goldRelations": 4192,
+      "pairs": 1061,
+      "correctPairs": 847,
+      "goldPairs": 5715,
+      "h": 1045,
+      "totalH": 4338,
+      "f": 1043,
+      "totalF": 5223,
+      "verses": 216
+    },
+    {
+      "mode": "both",
+      "n": 5,
+      "proposed": 856,
+      "exactMatches": 607,
+      "goldRelations": 4192,
+      "pairs": 875,
+      "correctPairs": 695,
+      "goldPairs": 5715,
+      "h": 865,
+      "totalH": 4338,
+      "f": 866,
+      "totalF": 5223,
+      "verses": 216
+    }
+  ]
+}
