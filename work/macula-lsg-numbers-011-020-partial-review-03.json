@@ -5599,5 +5599,29 @@
       "reason": "The French vous realizes the second-person plural subject of the verb."
     }
   ],
-  "next": "Apply all three partial review files to candidates when building working review files; finish the remaining 176 verse entries before certifying the cohort."
+  "next": "Apply all three partial review files to candidates when building working review files; finish the remaining 176 verse entries before certifying the cohort.",
+  "integrity_observations": {
+    "scope": "All ten first-pass candidate files and all three partial-review records",
+    "french_tokenization": "Unicode letters, marks and digits; internal apostrophes and hyphens retained; 1-based token ordinals and 0-based exclusive code-point spans in each pinned reading-text verse.",
+    "exact_french_token_counts": {
+      "011": 965,
+      "012": 371,
+      "013": 657,
+      "014": 1056,
+      "015": 914,
+      "016": 1193,
+      "017": 292,
+      "018": 997,
+      "019": 609,
+      "020": 691
+    },
+    "total_exact_french_tokens": 7745,
+    "missing_french_tuples": 0,
+    "extra_french_tuples": 0,
+    "patch_operations_applied_in_memory": 163,
+    "unmatched_before_relations": 0,
+    "lost_original_ids": 0,
+    "lost_french_tuples": 0,
+    "limitation": "In-memory editorial integrity observation, not publication validation. All three patch records replay cleanly over drafts; canonical ledgers, reverse index, dictionary linkage, and remaining semantic review are open."
+  }
 }
