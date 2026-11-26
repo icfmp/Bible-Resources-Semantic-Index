@@ -5380,6 +5380,223 @@
         }
       ],
       "reason": "Consequence marker therefore is implicit at the main negative result, not a lexical match to vous."
+    },
+    {
+      "chapter": 17,
+      "verse": 8,
+      "before": [
+        {
+          "hebrew": [
+            "o040170230142"
+          ],
+          "french": [
+            [
+              8,
+              23,
+              131,
+              136
+            ],
+            [
+              8,
+              24,
+              137,
+              143
+            ]
+          ],
+          "kind": "translation",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040170230142"
+          ],
+          "french": [
+            [
+              8,
+              22,
+              126,
+              130
+            ],
+            [
+              8,
+              23,
+              131,
+              136
+            ],
+            [
+              8,
+              24,
+              137,
+              143
+            ]
+          ],
+          "kind": "translation",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "French elle realizes the subject encoded in the feminine verb."
+    },
+    {
+      "chapter": 18,
+      "verse": 11,
+      "before": [
+        {
+          "hebrew": [
+            "o040180110031",
+            "o040180110041",
+            "o040180110061"
+          ],
+          "french": [
+            [
+              11,
+              13,
+              75,
+              87
+            ]
+          ],
+          "kind": "contextual",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040180110031",
+            "o040180110041",
+            "o040180110061"
+          ],
+          "french": [
+            [
+              11,
+              9,
+              50,
+              53
+            ],
+            [
+              11,
+              13,
+              75,
+              87
+            ]
+          ],
+          "kind": "contextual",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "The relative que is supplied in the French paraphrase of the gifts that Israel presents."
+    },
+    {
+      "chapter": 20,
+      "verse": 11,
+      "before": [
+        {
+          "hebrew": [
+            "o040200110151"
+          ],
+          "french": [
+            [
+              11,
+              23,
+              119,
+              121
+            ]
+          ],
+          "kind": "translation",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040200110151"
+          ],
+          "french": [
+            [
+              11,
+              23,
+              119,
+              121
+            ]
+          ],
+          "kind": "translation",
+          "status": "manual_first_pass_pending_audit"
+        },
+        {
+          "hebrew": [
+            "o040200110151"
+          ],
+          "french": [
+            [
+              11,
+              26,
+              132,
+              137
+            ]
+          ],
+          "kind": "contextual",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "The coordination with the elided second drinking predicate is explicated by aussi."
+    },
+    {
+      "chapter": 20,
+      "verse": 12,
+      "before": [
+        {
+          "hebrew": [
+            "o040200120171"
+          ],
+          "french": [
+            [
+              12,
+              27,
+              136,
+              141
+            ],
+            [
+              12,
+              29,
+              148,
+              154
+            ]
+          ],
+          "kind": "translation",
+          "status": "manual_first_pass_pending_audit"
+        }
+      ],
+      "after": [
+        {
+          "hebrew": [
+            "o040200120171"
+          ],
+          "french": [
+            [
+              12,
+              25,
+              128,
+              132
+            ],
+            [
+              12,
+              27,
+              136,
+              141
+            ],
+            [
+              12,
+              29,
+              148,
+              154
+            ]
+          ],
+          "kind": "translation",
+          "status": "editorial_review_corrected"
+        }
+      ],
+      "reason": "The French vous realizes the second-person plural subject of the verb."
     }
   ],
   "next": "Apply all three partial review files to candidates when building working review files; finish the remaining 176 verse entries before certifying the cohort."
