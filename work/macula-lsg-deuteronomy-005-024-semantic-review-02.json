@@ -1,0 +1,263 @@
+{
+  "schema_version": 1,
+  "status": "partial_semantic_review_not_canonical_not_independent",
+  "scope": "Deuteronomy 5–24",
+  "base_commit": "f1131028c278931aa4d8614a34082900d382d5c6",
+  "first_pass_manifest": "work/macula-lsg-deuteronomy-005-024-cohort-01.json",
+  "previous_review": "work/macula-lsg-deuteronomy-005-024-semantic-review-01.json",
+  "chapters": [
+    {
+      "scope": "Deut.5",
+      "source_macula_projection_blob": "ac394015c9c5f338a0e183ef337ed830b6b5cf56",
+      "source_lsg_projection_blob": "a1ca54c88389488bcd125d1a5ca412ce75d78a82",
+      "reviewed_verse_rows": [
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33
+      ],
+      "changes": [
+        {
+          "verse": 23,
+          "before": [
+            "16:16-17",
+            "17:18",
+            "18~19",
+            "19:19"
+          ],
+          "after": [
+            "16-19:16-19"
+          ],
+          "note": "The burning predicate and fire complement are jointly expressed by the French phrase était toute en feu."
+        },
+        {
+          "verse": 26,
+          "before": [
+            "3~8",
+            "4:3"
+          ],
+          "after": [
+            "3-4:3"
+          ],
+          "note": "The generic expression all flesh is translated as l’homme; jamais belongs to the rhetorical verbal clause, not the quantifier separately."
+        },
+        {
+          "verse": 30,
+          "before": [
+            "2:2",
+            "3-4~2"
+          ],
+          "after": [
+            "2-4:2"
+          ],
+          "note": "The imperative and explicit recipient are jointly expressed by the indivisible French token dis-leur."
+        }
+      ],
+      "coverage_observation": {
+        "before": {
+          "rows": 33,
+          "relations": 751,
+          "cross_verse_target_occurrences": 0,
+          "uncovered": []
+        },
+        "after": {
+          "rows": 33,
+          "relations": 746,
+          "cross_verse_target_occurrences": 0,
+          "uncovered": []
+        }
+      }
+    },
+    {
+      "scope": "Deut.6",
+      "source_macula_projection_blob": "97936bf6511575ec1dcbe9c4e993fc5a58cf9bc7",
+      "source_lsg_projection_blob": "3ec80c271c5ad270e481b76f81fb140a97db303a",
+      "reviewed_verse_rows": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25
+      ],
+      "changes": [
+        {
+          "verse": 11,
+          "before": [],
+          "after": [
+            "6~11"
+          ],
+          "note": "French inserts et before the relative clause; account for this previously uncovered French token contextually."
+        },
+        {
+          "verse": 15,
+          "before": [],
+          "after": [
+            "2-3~5"
+          ],
+          "note": "The nominal predicate requires the supplied French copula est; account for the previously uncovered token."
+        },
+        {
+          "verse": 23,
+          "before": [
+            "17:12,14"
+          ],
+          "after": [
+            "17:14",
+            "17~12"
+          ],
+          "note": "French adds dans before the destination noun; it is contextual support rather than an independent lexical meaning of land."
+        }
+      ],
+      "coverage_observation": {
+        "before": {
+          "rows": 25,
+          "relations": 536,
+          "cross_verse_target_occurrences": 6,
+          "uncovered": [
+            {
+              "v": "11",
+              "missingF": [
+                11
+              ]
+            },
+            {
+              "v": "15",
+              "missingF": [
+                5
+              ]
+            }
+          ]
+        },
+        "after": {
+          "rows": 25,
+          "relations": 539,
+          "cross_verse_target_occurrences": 6,
+          "uncovered": []
+        }
+      }
+    },
+    {
+      "scope": "Deut.7",
+      "source_macula_projection_blob": "9d456bb9dec5bcc7623000b21f460b8a7d237bf6",
+      "source_lsg_projection_blob": "c31c086abb81bdfda8f2bc5f5b3e9947b6710636",
+      "reviewed_verse_rows": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "changes": [
+        {
+          "verse": 4,
+          "before": [
+            "6:4",
+            "7~4-5"
+          ],
+          "after": [
+            "6-7:4"
+          ],
+          "note": "The source phrase from following is rendered by de; preserve its combined meaning instead of an unrelated attachment to moi."
+        },
+        {
+          "verse": 7,
+          "before": [
+            "5~13"
+          ],
+          "after": [
+            "5:13"
+          ],
+          "note": "The comparative preposition is directly realized by que in surpassing the other peoples."
+        },
+        {
+          "verse": 23,
+          "before": [
+            "11:8,10,12-13",
+            "13:12-13"
+          ],
+          "after": [
+            "11,13:8,10,12-13"
+          ],
+          "note": "The cognate verb and noun form a single expression for putting in rout; retain both native IDs."
+        }
+      ],
+      "coverage_observation": {
+        "before": {
+          "rows": 26,
+          "relations": 691,
+          "cross_verse_target_occurrences": 0,
+          "uncovered": []
+        },
+        "after": {
+          "rows": 26,
+          "relations": 689,
+          "cross_verse_target_occurrences": 0,
+          "uncovered": []
+        }
+      }
+    }
+  ],
+  "totals": {
+    "newly_reviewed_native_rows": 63,
+    "cumulative_reviewed_native_rows": 84,
+    "cohort_native_rows": 494,
+    "new_delta_operations": 9,
+    "cumulative_delta_operations": 11
+  },
+  "method": "Same-editor semantic review of rendered actual word groups. Replayed all new deltas against the pinned first-pass maps, reconciled French coverage across all native rows in each of Deut 5–7, including the four qualified target relations from 6:11 to 6:12. Prior review deltas remain in their separate receipt and are not replayed here. No canonical reconstruction or independent audit.",
+  "limitations": [
+    "Two previously uncovered French tokens in Deut 6:11 and 6:15 discovered by chapter-wide coverage observation; first-pass aggregate receipt was not sufficient.",
+    "No measured wall-clock editing speed gain; cross-chapter targets not exercised, exact maintained OSIS omission checks remain pending.",
+    "No publication tests, checkbox updates or release."
+  ],
+  "next": "Review Deut 8 onward; verify cross-chapter boundary and OSIS omissions; replay all review receipts during canonical reconciliation."
+}
