@@ -1,0 +1,19 @@
+{
+  "status": "partial_cohort_first_pass",
+  "scope": "Numbers 21–36 and Deuteronomy 1–4",
+  "parent_commit": "0ad599e7f90f243548e1dc2ad879a985ad2fc2e7",
+  "previous_overlay": "work/macula-lsg-numbers-021-deuteronomy-004-manual-overlay-02.json",
+  "new_overlay": "work/macula-lsg-numbers-030-036-compact-overlay-03.json",
+  "new_chapter_scopes": [
+    "Num.30",
+    "Num.36"
+  ],
+  "new_verse_entries": 26,
+  "new_relations": 602,
+  "new_unresolved_hebrew": 0,
+  "new_unresolved_french": 16,
+  "cumulative_verse_entries_touched": 66,
+  "cumulative_manual_relations": 1408,
+  "cohort_verse_entries": 713,
+  "notes": "Remaining verses 3–17 of Num 30 and 3–13 of Num 36 now have compact first-pass drafts; previous verses 1–2 remain in earlier records. Sixteen French tokens require attachment decisions, overlays still need reconciliation, second pass not started. Python helper added for future grouped preparation and reconstruction; not executed or publication-tested in this session. This session materialized exact IDs and tuples using equivalent in-memory JavaScript; no canonical ledgers, checkboxes, source changes or release. Continue same cohort."
+}
