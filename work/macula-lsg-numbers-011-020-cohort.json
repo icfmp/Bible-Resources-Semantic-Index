@@ -1,121 +1,292 @@
 {
-  "chapters": [
-    11,
-    12,
-    13,
-    14,
-    15,
-    16,
-    17,
-    18,
-    19,
-    20
-  ],
-  "status": "first_pass_draft_complete_pending_semantic_audit",
-  "reports": [
-    {
-      "ch": "011",
-      "verses": 35,
-      "sourceUnits": 871,
-      "relations": 860,
-      "provisionalOmissions": 1,
-      "unresolvedH": 0,
-      "unresolvedF": 0
-    },
-    {
-      "ch": "012",
-      "verses": 16,
-      "sourceUnits": 295,
-      "relations": 300,
-      "provisionalOmissions": 0,
-      "unresolvedH": 0,
-      "unresolvedF": 0
-    },
-    {
-      "ch": "013",
-      "verses": 33,
-      "sourceUnits": 579,
-      "relations": 571,
-      "provisionalOmissions": 0,
-      "unresolvedH": 0,
-      "unresolvedF": 0
-    },
-    {
-      "ch": "014",
-      "verses": 45,
-      "sourceUnits": 994,
-      "relations": 962,
-      "provisionalOmissions": 1,
-      "unresolvedH": 0,
-      "unresolvedF": 0
-    },
-    {
-      "ch": "015",
-      "verses": 41,
-      "sourceUnits": 807,
-      "relations": 782,
-      "provisionalOmissions": 0,
-      "unresolvedH": 0,
-      "unresolvedF": 0
-    },
-    {
-      "ch": "016",
-      "verses": 50,
-      "sourceUnits": 1080,
-      "relations": 1060,
-      "provisionalOmissions": 0,
-      "unresolvedH": 0,
-      "unresolvedF": 0
-    },
-    {
-      "ch": "017",
-      "verses": 13,
-      "sourceUnits": 265,
-      "relations": 257,
-      "provisionalOmissions": 0,
-      "unresolvedH": 0,
-      "unresolvedF": 0
-    },
-    {
-      "ch": "018",
-      "verses": 32,
-      "sourceUnits": 809,
-      "relations": 800,
-      "provisionalOmissions": 0,
-      "unresolvedH": 0,
-      "unresolvedF": 0
-    },
-    {
-      "ch": "019",
-      "verses": 22,
-      "sourceUnits": 565,
-      "relations": 553,
-      "provisionalOmissions": 0,
-      "unresolvedH": 0,
-      "unresolvedF": 0
-    },
-    {
-      "ch": "020",
-      "verses": 29,
-      "sourceUnits": 644,
-      "relations": 630,
-      "provisionalOmissions": 0,
-      "unresolvedH": 0,
-      "unresolvedF": 0
-    }
+  "schema_version": 1,
+  "status": "two_editorial_passes_complete_same_editor",
+  "scope": "Numbers 11–20 simultaneous ten-chapter cohort",
+  "first_pass_commit": "e19036e731c0a38c5656a8f7df8217d24e6801e2",
+  "review_records": [
+    "work/macula-lsg-numbers-011-020-partial-review.json",
+    "work/macula-lsg-numbers-011-020-partial-review-02.json",
+    "work/macula-lsg-numbers-011-020-partial-review-03.json",
+    "work/macula-lsg-numbers-011-020-partial-review-04.json"
   ],
   "totals": {
+    "chapters": 10,
     "verses": 316,
-    "sourceUnits": 6909,
-    "relations": 6775,
-    "provisionalOmissions": 2,
-    "unresolvedH": 0,
-    "unresolvedF": 0
+    "relations": 6596,
+    "hebrew_units": 6909,
+    "french_units": 7745,
+    "lexical_content_units": 3300,
+    "lexical_content_translation": 3257,
+    "omissions": 2,
+    "native_verse_exceptions": 40,
+    "corrections": 364
+  },
+  "lexical_coverage": 0.9869696969696969,
+  "chapters": [
+    {
+      "chapter": 11,
+      "ledger_blob": "9b9a1b3b623f70df8fd872d7c0050a4359ca028d",
+      "verses": 35,
+      "relations": 835,
+      "hebrew_units": 871,
+      "french_units": 965,
+      "lexical_content_units": 403,
+      "lexical_content_translation": 397,
+      "translation": {
+        "relations": 698,
+        "hebrew_units": 744,
+        "french_units": 935,
+        "single_original_relations": 661
+      },
+      "contextual": {
+        "relations": 137,
+        "hebrew_units": 167,
+        "french_units": 151,
+        "single_original_relations": 119
+      },
+      "omissions": 1,
+      "exceptions": 5,
+      "corrections": 55
+    },
+    {
+      "chapter": 12,
+      "ledger_blob": "080405ee2b7f3b76e75ffa8ba83b872c39c7d5e5",
+      "verses": 16,
+      "relations": 294,
+      "hebrew_units": 295,
+      "french_units": 371,
+      "lexical_content_units": 148,
+      "lexical_content_translation": 148,
+      "translation": {
+        "relations": 258,
+        "hebrew_units": 268,
+        "french_units": 357,
+        "single_original_relations": 249
+      },
+      "contextual": {
+        "relations": 36,
+        "hebrew_units": 47,
+        "french_units": 40,
+        "single_original_relations": 28
+      },
+      "omissions": 0,
+      "exceptions": 0,
+      "corrections": 16
+    },
+    {
+      "chapter": 13,
+      "ledger_blob": "e72fb61ab1826b872a703372f0ca94b33783bced",
+      "verses": 33,
+      "relations": 554,
+      "hebrew_units": 579,
+      "french_units": 657,
+      "lexical_content_units": 301,
+      "lexical_content_translation": 298,
+      "translation": {
+        "relations": 463,
+        "hebrew_units": 483,
+        "french_units": 645,
+        "single_original_relations": 445
+      },
+      "contextual": {
+        "relations": 91,
+        "hebrew_units": 106,
+        "french_units": 109,
+        "single_original_relations": 78
+      },
+      "omissions": 0,
+      "exceptions": 3,
+      "corrections": 33
+    },
+    {
+      "chapter": 14,
+      "ledger_blob": "bbab47d3d6ba91351d8e8929d3a36b4d94769204",
+      "verses": 45,
+      "relations": 923,
+      "hebrew_units": 994,
+      "french_units": 1056,
+      "lexical_content_units": 442,
+      "lexical_content_translation": 436,
+      "translation": {
+        "relations": 767,
+        "hebrew_units": 829,
+        "french_units": 1036,
+        "single_original_relations": 730
+      },
+      "contextual": {
+        "relations": 156,
+        "hebrew_units": 191,
+        "french_units": 160,
+        "single_original_relations": 130
+      },
+      "omissions": 1,
+      "exceptions": 6,
+      "corrections": 40
+    },
+    {
+      "chapter": 15,
+      "ledger_blob": "d366c74cdc18184c0b1827ac99ec50cd5ef9ed5f",
+      "verses": 41,
+      "relations": 758,
+      "hebrew_units": 807,
+      "french_units": 914,
+      "lexical_content_units": 390,
+      "lexical_content_translation": 383,
+      "translation": {
+        "relations": 612,
+        "hebrew_units": 657,
+        "french_units": 888,
+        "single_original_relations": 578
+      },
+      "contextual": {
+        "relations": 146,
+        "hebrew_units": 165,
+        "french_units": 155,
+        "single_original_relations": 130
+      },
+      "omissions": 0,
+      "exceptions": 6,
+      "corrections": 36
+    },
+    {
+      "chapter": 16,
+      "ledger_blob": "2a35ab1cafa931ff240c4a4f7915e7fe18adb580",
+      "verses": 50,
+      "relations": 1034,
+      "hebrew_units": 1080,
+      "french_units": 1193,
+      "lexical_content_units": 523,
+      "lexical_content_translation": 519,
+      "translation": {
+        "relations": 860,
+        "hebrew_units": 914,
+        "french_units": 1156,
+        "single_original_relations": 819
+      },
+      "contextual": {
+        "relations": 174,
+        "hebrew_units": 204,
+        "french_units": 203,
+        "single_original_relations": 156
+      },
+      "omissions": 0,
+      "exceptions": 4,
+      "corrections": 56
+    },
+    {
+      "chapter": 17,
+      "ledger_blob": "0dfa78aacbe8ff7464c40d66b067605a90383879",
+      "verses": 13,
+      "relations": 251,
+      "hebrew_units": 265,
+      "french_units": 292,
+      "lexical_content_units": 146,
+      "lexical_content_translation": 140,
+      "translation": {
+        "relations": 211,
+        "hebrew_units": 226,
+        "french_units": 283,
+        "single_original_relations": 200
+      },
+      "contextual": {
+        "relations": 40,
+        "hebrew_units": 55,
+        "french_units": 45,
+        "single_original_relations": 29
+      },
+      "omissions": 0,
+      "exceptions": 5,
+      "corrections": 16
+    },
+    {
+      "chapter": 18,
+      "ledger_blob": "35efe85fcea841d3d976ad9c34065a3a09e8b8e2",
+      "verses": 32,
+      "relations": 785,
+      "hebrew_units": 809,
+      "french_units": 997,
+      "lexical_content_units": 373,
+      "lexical_content_translation": 367,
+      "translation": {
+        "relations": 658,
+        "hebrew_units": 685,
+        "french_units": 966,
+        "single_original_relations": 632
+      },
+      "contextual": {
+        "relations": 127,
+        "hebrew_units": 158,
+        "french_units": 152,
+        "single_original_relations": 106
+      },
+      "omissions": 0,
+      "exceptions": 6,
+      "corrections": 38
+    },
+    {
+      "chapter": 19,
+      "ledger_blob": "36cf703a237ebb3e15ebaea0122472856100e0fc",
+      "verses": 22,
+      "relations": 547,
+      "hebrew_units": 565,
+      "french_units": 609,
+      "lexical_content_units": 262,
+      "lexical_content_translation": 261,
+      "translation": {
+        "relations": 447,
+        "hebrew_units": 463,
+        "french_units": 601,
+        "single_original_relations": 434
+      },
+      "contextual": {
+        "relations": 100,
+        "hebrew_units": 111,
+        "french_units": 111,
+        "single_original_relations": 91
+      },
+      "omissions": 0,
+      "exceptions": 1,
+      "corrections": 29
+    },
+    {
+      "chapter": 20,
+      "ledger_blob": "d481838a8613b2598e879990b8b22f1121774ab4",
+      "verses": 29,
+      "relations": 615,
+      "hebrew_units": 644,
+      "french_units": 691,
+      "lexical_content_units": 312,
+      "lexical_content_translation": 308,
+      "translation": {
+        "relations": 511,
+        "hebrew_units": 542,
+        "french_units": 676,
+        "single_original_relations": 487
+      },
+      "contextual": {
+        "relations": 104,
+        "hebrew_units": 119,
+        "french_units": 121,
+        "single_original_relations": 92
+      },
+      "omissions": 0,
+      "exceptions": 4,
+      "corrections": 45
+    }
+  ],
+  "integrity": {
+    "all_original_ids_accounted_for": true,
+    "all_french_token_tuples_exact": true,
+    "bidirectional_lookup_in_memory": true,
+    "all_364_reversible_operations_replayed": true,
+    "source_changes": false,
+    "publication_validation_executed": false
   },
   "notes": [
-    "All 316 verses have manual draft mappings; no final semantic audit yet.",
-    "LSG Num 16:36–50 corresponds to MACULA Num 17:1–15; LSG Num 17:1–13 corresponds to MACULA Num 17:16–28.",
-    "Two provisional omissions at LSG Num 11:12 and 14:44 require pinned source verification.",
-    "Second pass must inspect each relation; coverage is not semantic accuracy. No source modifications or publication tests."
+    "All 316 entries received both editorial passes. Final ledgers saved together in one cohort commit. The first-pass and review work occurred in multiple sessions; this does not demonstrate a full ten-chapter throughput in a single session.",
+    "The 95% lexical target is reached in every chapter. The 40 native-verse exceptions remain documented in chapter ledgers; no invented lexical correspondences.",
+    "Num 11:12 kol and Num 14:44 YHWH are not explicit in the pinned French reading-text projection. Both original IDs remain recorded as omissions.",
+    "Native Num 16:36–50 / 17:1–13 LSG cross-chapter mapping preserved using explicit MACULA source segments. The canonical relations support both lookup directions without introducing a second persistent index format.",
+    "The UBS crosswalk uses the identical pinned MACULA commit and word IDs; no individual dictionary-sense approvals or new dictionary assignments. Independent semantic review, exact released OSIS comparison and publication validation remain separate gates."
   ]
 }
