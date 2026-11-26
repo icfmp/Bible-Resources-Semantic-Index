@@ -4,59 +4,32 @@
     4,
     5
   ],
-  "status": "first_pass_in_progress",
+  "status": "first_pass_draft_complete_pending_semantic_audit",
   "reports": [
     {
       "ch": "003",
-      "addedVerses": 24,
-      "manualVerses": 48,
-      "manualH": 904,
-      "invalid": [],
-      "unresolvedH": 0,
-      "unresolvedF": 2,
-      "remaining": [
-        {
-          "v": "40",
-          "H": 0,
-          "F": [
-            [
-              8,
-              "de"
-            ]
-          ]
-        },
-        {
-          "v": "46",
-          "H": 0,
-          "F": [
-            [
-              4,
-              "des"
-            ]
-          ]
-        }
-      ]
+      "verses": 51,
+      "H": 925,
+      "F": 1096,
+      "R": 906,
+      "formulas": 3
     },
     {
       "ch": "004",
-      "addedVerses": 18,
-      "manualVerses": 46,
-      "manualH": 1023,
-      "invalid": [],
-      "unresolvedH": 0,
-      "unresolvedF": 0,
-      "remaining": []
+      "verses": 49,
+      "H": 1050,
+      "F": 1259,
+      "R": 1036,
+      "formulas": 3
     },
     {
       "ch": "005",
-      "addedVerses": 0,
-      "manualVerses": 28,
-      "manualH": 714,
-      "invalid": [],
-      "unresolvedH": 0,
-      "unresolvedF": 0,
-      "remaining": []
+      "verses": 31,
+      "H": 735,
+      "F": 812,
+      "R": 705,
+      "formulas": 3
     }
   ],
-  "notes": "Manual ordinal drafts across three chapters. Remaining unresolved tokens and rejected rows explicitly retained. No independent editorial certification."
+  "notes": "One simultaneous three-chapter cohort. All first-pass drafts saved together; semantic audit of all three is the next action. No canonical ledger or release authorization. Coverage is not semantic accuracy."
 }
