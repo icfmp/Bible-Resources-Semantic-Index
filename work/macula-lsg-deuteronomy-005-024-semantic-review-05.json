@@ -1,0 +1,590 @@
+{
+  "schema_version": 1,
+  "status": "partial_semantic_review_not_canonical_not_independent",
+  "scope": "Deuteronomy 5–24",
+  "base_commit": "1203906f2d19c480090036d56cffec54c20bd0b4",
+  "first_pass_manifest": "work/macula-lsg-deuteronomy-005-024-cohort-01.json",
+  "previous_review": "work/macula-lsg-deuteronomy-005-024-semantic-review-04.json",
+  "chapters": [
+    {
+      "scope": "Deut.14",
+      "source_macula_projection_blob": "e899b286c9ae9ce1df35bf1b726fdaad047afff7",
+      "source_lsg_projection_blob": "d4a2689a2820442bd32328a76d62afd0e5730aee",
+      "reviewed_verse_rows": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+      ],
+      "changes": [
+        {
+          "verse": 22,
+          "before": [
+            "5:7-9,12-15"
+          ],
+          "after": [
+            "5:7-9",
+            "5~12-14"
+          ],
+          "note": "The noun denoting produce is expressed in the first relative clause; the second finite verb rapportera has its own native verb. The repeated relative construction is contextual."
+        },
+        {
+          "verse": 24,
+          "before": [
+            "12:18-19"
+          ],
+          "after": [
+            "12~18-19"
+          ],
+          "note": "The French expands the pronominal object into the named tithe; this is a contextual referent, not lexical tithe vocabulary."
+        }
+      ],
+      "coverage_observation": {
+        "before": {
+          "rows": 29,
+          "relations": 569,
+          "uncoveredH": [],
+          "uncoveredF": []
+        },
+        "after": {
+          "rows": 29,
+          "relations": 570,
+          "uncoveredH": [],
+          "uncoveredF": []
+        }
+      }
+    },
+    {
+      "scope": "Deut.15",
+      "source_macula_projection_blob": "33d3c0b05bdf7e9e4f58db3c24193a7b87c221b1",
+      "source_lsg_projection_blob": "27a3b205cee9b54b5b1c3497501905ffdc562dc8",
+      "reviewed_verse_rows": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "changes": [
+        {
+          "verse": 10,
+          "before": [
+            "1-2:1",
+            "3-4:1"
+          ],
+          "after": [
+            "1-4:1"
+          ],
+          "note": "Emphatic giving predicate and recipient together correspond to the single French word Donne-lui."
+        },
+        {
+          "verse": 14,
+          "before": [
+            "17:21-24",
+            "18~19-20",
+            "22:19-20"
+          ],
+          "after": [
+            "17-18:19-24",
+            "22~1,3-5"
+          ],
+          "note": "The blessing and recipient jointly support the French paraphrase of what is received through blessing. The repeated giving verb refers to the opening gift instruction, not the verb auras."
+        }
+      ],
+      "coverage_observation": {
+        "before": {
+          "rows": 23,
+          "relations": 550,
+          "uncoveredH": [],
+          "uncoveredF": []
+        },
+        "after": {
+          "rows": 23,
+          "relations": 548,
+          "uncoveredH": [],
+          "uncoveredF": []
+        }
+      }
+    },
+    {
+      "scope": "Deut.16",
+      "source_macula_projection_blob": "c00f20fb9b24262165b24cddc839bfc91e41d033",
+      "source_lsg_projection_blob": "16ebe818ef0d895d1dca10c990f0edfa3291a017",
+      "reviewed_verse_rows": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "changes": [
+        {
+          "verse": 10,
+          "before": [
+            "5-8~3"
+          ],
+          "after": [],
+          "note": "The explicit phrase to YHWH your God is absent at this point in the pinned French projection; the later divine name belongs to the blessing clause. Preserve the four unlinked native ordinals pending OSIS verification."
+        }
+      ],
+      "coverage_observation": {
+        "before": {
+          "rows": 22,
+          "relations": 539,
+          "uncoveredH": [],
+          "uncoveredF": []
+        },
+        "after": {
+          "rows": 22,
+          "relations": 538,
+          "uncoveredH": [
+            {
+              "v": 10,
+              "ordinals": [
+                5,
+                6,
+                7,
+                8
+              ]
+            }
+          ],
+          "uncoveredF": []
+        }
+      }
+    },
+    {
+      "scope": "Deut.17",
+      "source_macula_projection_blob": "4b7552b900fabb5574bdcc3aface8b0e8e51a127",
+      "source_lsg_projection_blob": "137f99d29bfa7165c642673575bec4a5acd56943",
+      "reviewed_verse_rows": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "changes": [
+        {
+          "verse": 5,
+          "before": [
+            "39:22"
+          ],
+          "after": [
+            "39~22"
+          ],
+          "note": "The Hebrew conjunction is additive while the French projection has ou; record the connective contextually rather than equating their lexical senses."
+        }
+      ],
+      "coverage_observation": {
+        "before": {
+          "rows": 20,
+          "relations": 555,
+          "uncoveredH": [],
+          "uncoveredF": []
+        },
+        "after": {
+          "rows": 20,
+          "relations": 555,
+          "uncoveredH": [],
+          "uncoveredF": []
+        }
+      }
+    },
+    {
+      "scope": "Deut.18",
+      "source_macula_projection_blob": "a6423fbb9862a26cb322a1035758ffb494007863",
+      "source_lsg_projection_blob": "2c55a0320768ca08f53183d45f8f5d250729d838",
+      "reviewed_verse_rows": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "changes": [
+        {
+          "verse": 16,
+          "before": [],
+          "after": [
+            "27~34"
+          ],
+          "note": "French adds que in the coordinated request; the token was previously unaccounted for."
+        },
+        {
+          "verse": 22,
+          "before": [
+            "8:10"
+          ],
+          "after": [
+            "8~7-9"
+          ],
+          "note": "The first conjunction precedes the first negative predicate; the explicit French et belongs to the second conjunction."
+        }
+      ],
+      "coverage_observation": {
+        "before": {
+          "rows": 22,
+          "relations": 469,
+          "uncoveredH": [
+            {
+              "v": 22,
+              "ordinals": [
+                5,
+                6,
+                7
+              ]
+            }
+          ],
+          "uncoveredF": [
+            {
+              "v": 16,
+              "ordinals": [
+                34
+              ]
+            }
+          ]
+        },
+        "after": {
+          "rows": 22,
+          "relations": 470,
+          "uncoveredH": [
+            {
+              "v": 22,
+              "ordinals": [
+                5,
+                6,
+                7
+              ]
+            }
+          ],
+          "uncoveredF": []
+        }
+      }
+    },
+    {
+      "scope": "Deut.19",
+      "source_macula_projection_blob": "8aab9d0383d9e97e089c50f337f31ca7fcdcc1ca",
+      "source_lsg_projection_blob": "e138cf3a5c9a6fcdeb00950dbec67732da6cf02f",
+      "reviewed_verse_rows": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "changes": [
+        {
+          "verse": 15,
+          "before": [
+            "28:22-24",
+            "28~25"
+          ],
+          "after": [
+            "28:23-24",
+            "28~22,25"
+          ],
+          "note": "The affirmative Hebrew predicate is expressed through the restrictive French ne ... que construction; the restriction is contextual."
+        }
+      ],
+      "coverage_observation": {
+        "before": {
+          "rows": 21,
+          "relations": 516,
+          "uncoveredH": [
+            {
+              "v": 21,
+              "ordinals": [
+                6,
+                7,
+                8
+              ]
+            }
+          ],
+          "uncoveredF": []
+        },
+        "after": {
+          "rows": 21,
+          "relations": 516,
+          "uncoveredH": [
+            {
+              "v": 21,
+              "ordinals": [
+                6,
+                7,
+                8
+              ]
+            }
+          ],
+          "uncoveredF": []
+        }
+      }
+    },
+    {
+      "scope": "Deut.20",
+      "source_macula_projection_blob": "cab24677072594fdf13378b808ba8a004ff272e1",
+      "source_lsg_projection_blob": "f1173ccb666fdb43f99db299739cad78e908f5e1",
+      "reviewed_verse_rows": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "changes": [
+        {
+          "verse": 19,
+          "before": [
+            "34:42"
+          ],
+          "after": [
+            "34~41"
+          ],
+          "note": "The interrogative particle marks the question realized by est-il; it is not the indefinite article un, already included in the man noun relation."
+        }
+      ],
+      "coverage_observation": {
+        "before": {
+          "rows": 20,
+          "relations": 478,
+          "uncoveredH": [],
+          "uncoveredF": []
+        },
+        "after": {
+          "rows": 20,
+          "relations": 478,
+          "uncoveredH": [],
+          "uncoveredF": []
+        }
+      }
+    },
+    {
+      "scope": "Deut.21",
+      "source_macula_projection_blob": "10d1bbc5a5070217b408be28d8a41ce642e64b30",
+      "source_lsg_projection_blob": "d08d2972b88ccd8ada16f4c632f78f656023b855",
+      "reviewed_verse_rows": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "changes": [
+        {
+          "verse": 8,
+          "before": [],
+          "after": [
+            "12~14"
+          ],
+          "note": "The French article le introduces sang; previously unaccounted for."
+        },
+        {
+          "verse": 10,
+          "before": [
+            "13~11",
+            "14~11"
+          ],
+          "after": [],
+          "note": "The explicit words your God are absent from this French clause. Remove unsupported contextual links to the divine name and retain the two native ordinals unresolved pending OSIS verification."
+        },
+        {
+          "verse": 21,
+          "before": [
+            "2:9",
+            "8-10~9"
+          ],
+          "after": [
+            "2,8-10:9"
+          ],
+          "note": "The stoning verb and its explicit stone complement jointly correspond to lapideront."
+        }
+      ],
+      "coverage_observation": {
+        "before": {
+          "rows": 23,
+          "relations": 538,
+          "uncoveredH": [],
+          "uncoveredF": [
+            {
+              "v": 8,
+              "ordinals": [
+                14
+              ]
+            }
+          ]
+        },
+        "after": {
+          "rows": 23,
+          "relations": 536,
+          "uncoveredH": [
+            {
+              "v": 10,
+              "ordinals": [
+                13,
+                14
+              ]
+            }
+          ],
+          "uncoveredF": []
+        }
+      }
+    }
+  ],
+  "totals": {
+    "newly_reviewed_native_rows": 180,
+    "cumulative_reviewed_native_rows": 417,
+    "cohort_native_rows": 494,
+    "new_delta_operations": 13,
+    "cumulative_delta_operations": 41,
+    "first_pass_relations_reviewed": 4214,
+    "relations_after_new_deltas": 4211,
+    "newly_unlinked_native_ordinals": 6,
+    "newly_linked_french_ordinals": 2
+  },
+  "method": "Same-editor semantic review of compact rendered word groups. The packet omits repeated ordinal labels and Hebrew combining marks during initial review; exact ordinal maps and source tokens are consulted for selected corrections. All new deltas replayed against pinned first-pass maps with complete chapter-wide target accounting. The displayed packets are not independent review evidence.",
+  "limitations": [
+    "Two newly identified projection omissions (Deu 16:10 and 21:10) had been attached contextually in the first pass; six native ordinals now remain explicitly unresolved. Together with the eleven previously identified ordinals, exact maintained OSIS verification is outstanding.",
+    "No measured hourly throughput gain, canonical integration, checkbox updates, independent audit, CI or release."
+  ],
+  "next": "Review the final 77 native rows (Deut 22–24); handle the second versification boundary, verify omissions against the maintained LSG OSIS, reconstruct canonical ledgers and run validation."
+}
