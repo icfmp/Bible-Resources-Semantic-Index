@@ -1,0 +1,45 @@
+{
+  "status": "partial_semantic_review_pending_dictionary_and_final_audit",
+  "scope": "Numbers 21–36 and Deuteronomy 1–4",
+  "base_commit": "8f5e47e2a5903b0b71a6681aa90b45d59fee5def",
+  "reconciliation": "work/macula-lsg-numbers-021-deuteronomy-004-reconciliation-08.json",
+  "previous_progress": "work/macula-lsg-numbers-021-deuteronomy-004-review-progress-10.json",
+  "new_review": "work/macula-lsg-numbers-021-023-024-030-semantic-review-11.json",
+  "new_review_statistics": {
+    "verses": 107,
+    "corrections": 128,
+    "relations_before": 2165,
+    "relations_after": 2060,
+    "french_remaining_before": 49,
+    "french_remaining_after": 0
+  },
+  "cumulative": {
+    "reviewed_verses": 293,
+    "expected_verses": 713,
+    "reviewed_chapters": [
+      "Num.21",
+      "Num.23",
+      "Num.24",
+      "Num.25",
+      "Num.28",
+      "Num.29",
+      "Num.30",
+      "Num.33",
+      "Num.34",
+      "Num.36"
+    ],
+    "review_operations": 319,
+    "provisional_relations": 14138,
+    "unresolved_french": 147,
+    "unresolved_hebrew_cohort": 8,
+    "final_audit_complete": 0,
+    "completed_bible_chapters": 137
+  },
+  "limitations": [
+    "Semantic review of existing links, with documented corrections; dictionary linkage and final editorial audit remain open.",
+    "Cross-verse Num 21:18/19 links and explicit French expansions preserved; do not promote contextual attachments to lexical equivalence.",
+    "Previously reported possible LSG source omissions in Num.28:26 and Deut.2:31 still require exact upstream OSIS verification.",
+    "No source changes, canonical ledger publication, tracker checkbox changes, automated publication tests or release."
+  ],
+  "next": "Review the remaining 420 verse rows against their pinned sources, resolve exceptions, verify dictionary linkage and finalize ledgers only when audit criteria are met."
+}
