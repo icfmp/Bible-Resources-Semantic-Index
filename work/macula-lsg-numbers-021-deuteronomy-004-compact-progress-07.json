@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "status": "all_verse_drafts_present_pending_reconciliation_and_audit",
+  "scope": "Numbers 21–36 and Deuteronomy 1–4",
+  "parent_commit": "70ceba26e4f28afe421e1b35eb2e9e91e5c9910e",
+  "previous_progress": "work/macula-lsg-numbers-021-deuteronomy-004-compact-progress-06.json",
+  "new_overlays": [
+    {
+      "path": "work/macula-lsg-numbers-028-029-compact-overlay-07.json",
+      "blob": "6515911e385d28179cc1b2815dfaaa6132b90452",
+      "verses": 66,
+      "relations": 1214
+    },
+    {
+      "path": "work/macula-lsg-numbers-026-compact-overlay-07.json",
+      "blob": "62a1da072bee8690c455053636b0b161701aac55",
+      "verses": 63,
+      "relations": 974
+    },
+    {
+      "path": "work/macula-lsg-numbers-031-compact-overlay-07.json",
+      "blob": "f8fc120b49d74b55adf66230c94fbdf64230278f",
+      "verses": 52,
+      "relations": 1023
+    },
+    {
+      "path": "work/macula-lsg-numbers-032-compact-overlay-07.json",
+      "blob": "894b66a3c341ebd1d3d0f45aa9ec017b65800230",
+      "verses": 40,
+      "relations": 811
+    },
+    {
+      "path": "work/macula-lsg-numbers-022-compact-overlay-07.json",
+      "blob": "4ee54aa2911d1c94e2928430cfd4bd3d9291533a",
+      "verses": 35,
+      "relations": 823
+    },
+    {
+      "path": "work/macula-lsg-deuteronomy-001-compact-overlay-07.json",
+      "blob": "81abbff409ee9ec3b0b21a9eea5389d68062ee33",
+      "verses": 44,
+      "relations": 1049
+    },
+    {
+      "path": "work/macula-lsg-deuteronomy-002-compact-overlay-07.json",
+      "blob": "a15fed5e16ede32bcbcaf4d45655c2025edd9db4",
+      "verses": 34,
+      "relations": 766
+    },
+    {
+      "path": "work/macula-lsg-deuteronomy-003-compact-overlay-07.json",
+      "blob": "4d06fc9e1f142cb8466d939574e21806ebdf46ae",
+      "verses": 27,
+      "relations": 677
+    },
+    {
+      "path": "work/macula-lsg-deuteronomy-004-compact-overlay-07.json",
+      "blob": "c46491384835347d0a1f9577918695c4bf2c1d90",
+      "verses": 46,
+      "relations": 1225
+    },
+    {
+      "path": "work/macula-lsg-numbers-022-deuteronomy-004-compact-corrections-07.json",
+      "blob": "01d5c6ae57293cde795b739a3086067d03c6c6d6",
+      "verses": 3,
+      "relations": 84
+    }
+  ],
+  "new_verses": 410,
+  "new_relations": 8646,
+  "new_unresolved_french": 160,
+  "new_unresolved_hebrew": 8,
+  "cumulative": {
+    "draft_verses": 713,
+    "expected_verses": 713,
+    "provisional_relations": 14395,
+    "chapters_with_all_verse_drafts": 20,
+    "chapters_audited": 0
+  },
+  "limitations": [
+    "Provisional manual alignments; semantic accuracy not independently audited.",
+    "Correction overlay supersedes three rejected vector entries. Cross-verse targets and local unresolved counts require reconciliation.",
+    "No publication validation, checkbox changes, or release."
+  ],
+  "next": "Reconcile first-pass overlays and verse-1 candidate records, verify coverage against pinned sources, then perform second-pass editorial audit."
+}
