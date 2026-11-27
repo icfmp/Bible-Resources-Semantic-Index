@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "status": "partial_first_pass_not_audited",
+  "scope": "Deuteronomy 25–34 and Joshua 1–10",
+  "source_commit": "eec79b6776b38cb960c99a2c8b6b1ab71a32829f",
+  "parent_checkpoint": "a491c2ab7195e5b57aa4bca8cbe6214e42ec00ce",
+  "cohort_chapters": 20,
+  "completed_chapters": 0,
+  "previous_manifest": "work/macula-lsg-deuteronomy-025-joshua-010-cohort-01.json",
+  "totals": {
+    "native_verses": 560,
+    "french_verses": 560,
+    "hebrew_units": 14143,
+    "french_units": 15480,
+    "manual_rows": 101,
+    "manual_relations": 2432,
+    "unique_evidence_proposals": 6041,
+    "remaining_native_verse_rows": 459
+  },
+  "new_manual_rows": 80,
+  "new_manual_relations": 1854,
+  "technical_subdivisions": [
+    {
+      "path": "work/macula-lsg-deuteronomy-025-029-compact-manual-02.json",
+      "blob": "6c8dfe4cb93806dfe415bb0c1e5a46bd663aa4c7"
+    },
+    {
+      "path": "work/macula-lsg-deuteronomy-030-034-compact-manual-02.json",
+      "blob": "cc65e73ed0f5786335b92d8b5e2e49c01be355f9"
+    },
+    {
+      "path": "work/macula-lsg-joshua-001-005-compact-manual-02.json",
+      "blob": "b34866beefa6dac4955ed1957270e58084fc7285"
+    },
+    {
+      "path": "work/macula-lsg-joshua-006-010-compact-manual-02.json",
+      "blob": "80bd6102e061500a6c403b97c344ed058a82646c"
+    }
+  ],
+  "notes": [
+    "Candidate matches from the earlier same-stream evidence bank are alternatives, not accepted alignment relations. No automatic semantic certification.",
+    "Manual opening rows have complete ordinal accounting, not an editorial second pass or lexical coverage certification.",
+    "Native Deut 28:69 → LSG Deut 29:1; native Deut 29:1–28 → LSG Deut 29:2–29.",
+    "Native Deut 34:1 includes LSG Deut 34:2 ordinals 1–3.",
+    "Josh 5:1 source plural suffix and French first-person plural require source-reading investigation.",
+    "No biblical source or final alignment ledger modified; no publication tests run.",
+    "All native verses 1–5 now have draft maps across the same twenty-chapter cohort, plus Deut 28:69. Deut 29 targets retain +1 LSG shift. Deut 34:2 LSG ordinals 1–3 are accounted for in the previous native verse.",
+    "Two initially uncovered French grammatical supports (Deut 31:2 ordinal 11; Josh 4:3 ordinal 13) are explicitly attached contextually. No second-pass semantic claims."
+  ],
+  "next": "Complete first-pass manual maps for native verses 6 onward in the same 20 chapters (459 rows), then second pass across all 560 native verses. Retain all chapter checkboxes until their pass is complete."
+}
