@@ -1,0 +1,266 @@
+{
+  "schema_version": 1,
+  "status": "complete_same_editor_semantic_review_not_canonical_not_independent",
+  "scope": "Deuteronomy 5–24",
+  "base_commit": "84847c94c74badf8031bbce701fb66dd712e4b1a",
+  "first_pass_manifest": "work/macula-lsg-deuteronomy-005-024-cohort-01.json",
+  "previous_review": "work/macula-lsg-deuteronomy-005-024-semantic-review-05.json",
+  "chapters": [
+    {
+      "scope": "Deut.22",
+      "source_macula_projection_blob": "1cb4f7bfee73da2e8941dea8232ea8b080bc4b67",
+      "source_lsg_projection_blob": "ab89af3b17c0d762fdb4b1bd5369e536e19cf08a",
+      "reviewed_verse_rows": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+      ],
+      "changes": [
+        {
+          "verse": 19,
+          "before": [
+            "14:4-6",
+            "15:8-9",
+            "16:6"
+          ],
+          "after": [
+            "14-16:4-6,8-9"
+          ],
+          "note": "The idiom bring out a bad name is expressed by porter atteinte à la réputation; group the predicate and its object."
+        },
+        {
+          "verse": 21,
+          "before": [
+            "12:16-17",
+            "17-19~17"
+          ],
+          "after": [
+            "12,17-19:16-17"
+          ],
+          "note": "The verb and stone complement jointly express sera lapidée."
+        },
+        {
+          "verse": 24,
+          "before": [
+            "13:12,14",
+            "16-18~14"
+          ],
+          "after": [
+            "13,16-18:12,14"
+          ],
+          "note": "The verb and stone complement jointly express vous lapiderez."
+        }
+      ]
+    },
+    {
+      "scope": "Deut.23",
+      "source_macula_projection_blob": "5cd91a92e828a61401c02e05c8e8af2c918c6d96",
+      "source_lsg_projection_blob": "6b16ab7cf32a078b74d0cd3e7b1e5558a6f8aab0",
+      "reviewed_verse_rows": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "changes": [
+        {
+          "verse": 24,
+          "before": [
+            "16:29-30",
+            "17~28",
+            "18:28",
+            "19:27"
+          ],
+          "after": [
+            "16:29-30",
+            "17-18:28",
+            "19:27"
+          ],
+          "note": "The preposition and mouth noun form the phrase rendered by the French subject bouche; do not attach the preposition independently."
+        }
+      ]
+    },
+    {
+      "scope": "Deut.24",
+      "source_macula_projection_blob": "54ba59e4ff4a452bf61a8acd89bb454d720d26be",
+      "source_lsg_projection_blob": "71d5af698dd1a8383eabccc3ef90d45879ec5dd8",
+      "reviewed_verse_rows": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "changes": [
+        {
+          "verse": 15,
+          "before": [],
+          "after": [
+            "9~10"
+          ],
+          "note": "The definite article le belongs to the nominal rendering coucher; previously uncovered."
+        },
+        {
+          "verse": 19,
+          "before": [
+            "2:2-3",
+            "3~3",
+            "4~4",
+            "5~5",
+            "6:5",
+            "7:4"
+          ],
+          "after": [
+            "2-3:2-3",
+            "4~4",
+            "5~5",
+            "6:5",
+            "7:4"
+          ],
+          "note": "The cognate harvest noun and verb are jointly rendered by moissonneras; the first possessive is implicit in context."
+        }
+      ]
+    }
+  ],
+  "coverage_observation": {
+    "before": {
+      "counts": {
+        "22": {
+          "rows": 29,
+          "relations": 672
+        },
+        "23": {
+          "rows": 26,
+          "relations": 483
+        },
+        "24": {
+          "rows": 22,
+          "relations": 494
+        }
+      },
+      "uncoveredH": [],
+      "uncoveredF": [
+        {
+          "c": 24,
+          "v": 15,
+          "ordinals": [
+            10
+          ]
+        }
+      ],
+      "cross": [
+        {
+          "c": 23,
+          "v": 1,
+          "target": "Deut.22.30",
+          "covered": 16,
+          "total": 16
+        }
+      ]
+    },
+    "after": {
+      "counts": {
+        "22": {
+          "rows": 29,
+          "relations": 668
+        },
+        "23": {
+          "rows": 26,
+          "relations": 482
+        },
+        "24": {
+          "rows": 22,
+          "relations": 494
+        }
+      },
+      "uncoveredH": [],
+      "uncoveredF": [],
+      "cross": [
+        {
+          "c": 23,
+          "v": 1,
+          "target": "Deut.22.30",
+          "covered": 16,
+          "total": 16
+        }
+      ]
+    }
+  },
+  "totals": {
+    "newly_reviewed_native_rows": 77,
+    "cumulative_reviewed_native_rows": 494,
+    "cohort_native_rows": 494,
+    "new_delta_operations": 6,
+    "cumulative_delta_operations": 47
+  },
+  "method": "Same-editor review of compact rendered relations, selected exact ordinal maps, replayed deltas and full target accounting across the three chapters. Native Deu 23:1 targets French Deut 22:30; native 23:2–26 target French 23:1–25.",
+  "limitations": [
+    "Exact maintained OSIS omission checks and canonical reconstruction remain pending. No independent audit, CI, checkbox updates or release."
+  ],
+  "next": "Replay all six semantic review receipts into the canonical representation, verify 17 previously reported native ordinals against maintained LSG OSIS and validate the reconstructed ledgers."
+}
