@@ -1,0 +1,102 @@
+{
+  "schema_version": 2,
+  "status": "semantic_reread_complete_pending_chapter_validation",
+  "scope": "Deuteronomy 25–34 and Joshua 1–10",
+  "source_commit": "eec79b6776b38cb960c99a2c8b6b1ab71a32829f",
+  "parent_checkpoint": "153dd726b822f1e01a32ccda3d16d5dd176b9c4e",
+  "previous_manifest": "work/macula-lsg-deuteronomy-025-joshua-010-cohort-04.json",
+  "first_pass_manifest": "work/macula-lsg-deuteronomy-025-joshua-010-cohort-03.json",
+  "cohort_chapters": 20,
+  "completed_chapters": 0,
+  "totals": {
+    "native_verses": 560,
+    "manual_first_pass_rows": 560,
+    "semantic_reread_rows": 560,
+    "corrected_draft_rows": 317,
+    "new_semantic_reread_rows": 459,
+    "new_corrected_draft_rows": 261,
+    "remaining_semantic_reread_rows": 0,
+    "completed_chapter_audits": 0
+  },
+  "audit_overlays": [
+    {
+      "path": "work/macula-lsg-deuteronomy-025-029-semantic-compact-03.json",
+      "blob": "0edcc70d7578d3b3d1a3d24ff8384cbd73d2a95d"
+    },
+    {
+      "path": "work/macula-lsg-deuteronomy-030-034-semantic-compact-03.json",
+      "blob": "939f6963721623a6df2cac75dd4a756e85437a21"
+    },
+    {
+      "path": "work/macula-lsg-joshua-001-005-semantic-compact-03.json",
+      "blob": "7d3bacdbd58e4609e3ad5e80ed50c5bdb591c2a8"
+    },
+    {
+      "path": "work/macula-lsg-joshua-006-010-semantic-compact-03.json",
+      "blob": "756a9efb2479fe2402d2660c47dae122a380c107"
+    },
+    {
+      "path": "work/macula-lsg-deuteronomy-025-029-semantic-compact-04.json",
+      "blob": "9e0dc0417b89c056bd5a462ae181498f90f42159"
+    },
+    {
+      "path": "work/macula-lsg-deuteronomy-030-033-semantic-compact-04.json",
+      "blob": "ece24fa2b332b1e1ea9fd998c270ded9baf750c6"
+    },
+    {
+      "path": "work/macula-lsg-joshua-001-005-semantic-compact-04.json",
+      "blob": "30c0419bbe46f4812ac3cb33c5937ddbfe7b5c9a"
+    },
+    {
+      "path": "work/macula-lsg-joshua-006-010-semantic-compact-04.json",
+      "blob": "f6ba4cf88bee86f4994947c7eea5fb23adb71485"
+    },
+    {
+      "path": "work/macula-lsg-deuteronomy-027-029-semantic-compact-05.json",
+      "blob": "f78a2a315cd64ec1b1c1bc4f5c67deb382d2d887"
+    },
+    {
+      "path": "work/macula-lsg-deuteronomy-028-033-semantic-compact-06.json",
+      "blob": "93658d8567584f66b1fbe4cfa164f00237a99ae2"
+    },
+    {
+      "path": "work/macula-lsg-deuteronomy-028-032-semantic-compact-07.json",
+      "blob": "b0e879959ba2aa36849b09d85742701f4ac6c854"
+    },
+    {
+      "path": "work/macula-lsg-deuteronomy-032-semantic-compact-08.json",
+      "blob": "6eb5d57e87dbdef82dc0f28c52c3681e6ecb9c8e"
+    },
+    {
+      "path": "work/macula-lsg-joshua-002-008-semantic-compact-05.json",
+      "blob": "55e8e96e8bc7565f0dc925529650de852a569935"
+    },
+    {
+      "path": "work/macula-lsg-joshua-008-010-semantic-compact-06.json",
+      "blob": "4cad666bc912c4ca5b6343a931d227d3eb3cce89"
+    },
+    {
+      "path": "work/macula-lsg-joshua-010-semantic-compact-07.json",
+      "blob": "073eef1fd12a18cade4d6634cf5b309904cb439a"
+    }
+  ],
+  "reviewed_scope": "Remaining 459 native verses after previous checkpoint; all 560 native verses now have a semantic reread record.",
+  "format": {
+    "schema_version": 2,
+    "description": "Compact source-pinned overlay: reviewed keys, corrected maps only, significant exceptions only. Unchanged rows inherit draft maps. Prior schema-1 overlays remain intact."
+  },
+  "checks": {
+    "unique_reviewed_rows": true,
+    "previous_ordinal_coverage_preserved": true,
+    "chapter_lexical_coverage_certified": false,
+    "dictionary_linkage_validated": false,
+    "final_ledgers_constructed": false,
+    "publication_validation": false
+  },
+  "notes": [
+    "The compact overlays retain original draft blobs and chapter source projection pins; original drafts are unchanged.",
+    "Sources were loaded once per editorial block, with separate mechanical reconstruction and coverage checks. No reusable standalone audit script was added in this checkpoint.",
+    "The semantic reread is complete, not final chapter certification. No automated publication tests were run. No chapter checkbox changed."
+  ],
+  "next": "Reconstruct effective maps by applying both overlay versions, verify exact native verse inventory and target bounds, assess per-chapter lexical coverage (excluding contextual links), dictionary IDs, offsets and bidirectional indexes, and build final ledgers only for chapters passing all checks."
+}
