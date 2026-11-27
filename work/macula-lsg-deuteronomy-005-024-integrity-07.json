@@ -1,0 +1,1683 @@
+{
+  "schema_version": 1,
+  "status": "projection_integrity_checks_complete_same_editor",
+  "scope": "Deuteronomy 5–24",
+  "totals": {
+    "chapters": 20,
+    "verses": 494,
+    "relations": 11812,
+    "hebrew_units": 12160,
+    "french_units": 13626,
+    "lexical_content_units": 5330,
+    "lexical_content_translation": 5216,
+    "review_operations": 47,
+    "projection_omissions": 17,
+    "unaccounted_french": 0
+  },
+  "lexical_coverage": 0.9786116322701689,
+  "minimum_chapter_coverage": 0.9545454545454546,
+  "chapters": [
+    {
+      "scope": "Deut.5",
+      "path": "links/alignments/macula-lsg/deuteronomy/005.json",
+      "verses": 33,
+      "statistics": {
+        "relations": 746,
+        "hebrew_units": 763,
+        "french_units": 817,
+        "lexical_content_units": 327,
+        "lexical_content_translation": 323,
+        "translation": {
+          "relations": 618,
+          "hebrew_units": 647,
+          "french_units": 795,
+          "single_original_relations": 598
+        },
+        "contextual": {
+          "relations": 128,
+          "hebrew_units": 131,
+          "french_units": 122,
+          "single_original_relations": 125
+        }
+      },
+      "coverage": 0.9877675840978594,
+      "omissions": 0,
+      "corrections": 5,
+      "unmatchedH": [],
+      "lexical_not_translated": [
+        [
+          "o050050230012",
+          "DEU 5:23!1",
+          "verb"
+        ],
+        [
+          "o050050250171",
+          "DEU 5:25!17",
+          "adverb"
+        ],
+        [
+          "o050050280041",
+          "DEU 5:28!4",
+          "noun"
+        ],
+        [
+          "o050050280131",
+          "DEU 5:28!13",
+          "noun"
+        ]
+      ],
+      "segments": [
+        {
+          "blob": "19cd4ca6c2a7bdf80db948bb4bd5302a61efbd89",
+          "native_chapter": 5,
+          "native_first": 1,
+          "native_last": 33,
+          "lsg_first": 1,
+          "lsg_last": 33
+        }
+      ],
+      "ledger_blob": "c4eb26a8d4417ed9c2ef2ccae0050eeb1ac2cb91",
+      "invalidH": [],
+      "invalidF": [],
+      "unmatchedF": []
+    },
+    {
+      "scope": "Deut.6",
+      "path": "links/alignments/macula-lsg/deuteronomy/006.json",
+      "verses": 25,
+      "statistics": {
+        "relations": 539,
+        "hebrew_units": 538,
+        "french_units": 604,
+        "lexical_content_units": 235,
+        "lexical_content_translation": 231,
+        "translation": {
+          "relations": 450,
+          "hebrew_units": 460,
+          "french_units": 575,
+          "single_original_relations": 441
+        },
+        "contextual": {
+          "relations": 89,
+          "hebrew_units": 96,
+          "french_units": 101,
+          "single_original_relations": 83
+        }
+      },
+      "coverage": 0.9829787234042553,
+      "omissions": 0,
+      "corrections": 3,
+      "unmatchedH": [],
+      "lexical_not_translated": [
+        [
+          "o050060010161",
+          "DEU 6:1!16",
+          "adverb"
+        ],
+        [
+          "o050060100012",
+          "DEU 6:10!1",
+          "verb"
+        ],
+        [
+          "o050060150151",
+          "DEU 6:15!15",
+          "noun"
+        ],
+        [
+          "o050060200052",
+          "DEU 6:20!5",
+          "verb"
+        ]
+      ],
+      "segments": [
+        {
+          "blob": "c9619f759108b138dcdeb734b6c4f53af99804ff",
+          "native_chapter": 6,
+          "native_first": 1,
+          "native_last": 25,
+          "lsg_first": 1,
+          "lsg_last": 25
+        }
+      ],
+      "ledger_blob": "efbbd509a4fa1e70c25784371f98b28a8a505d9c",
+      "invalidH": [],
+      "invalidF": [],
+      "unmatchedF": []
+    },
+    {
+      "scope": "Deut.7",
+      "path": "links/alignments/macula-lsg/deuteronomy/007.json",
+      "verses": 26,
+      "statistics": {
+        "relations": 689,
+        "hebrew_units": 701,
+        "french_units": 800,
+        "lexical_content_units": 296,
+        "lexical_content_translation": 291,
+        "translation": {
+          "relations": 578,
+          "hebrew_units": 595,
+          "french_units": 778,
+          "single_original_relations": 563
+        },
+        "contextual": {
+          "relations": 111,
+          "hebrew_units": 117,
+          "french_units": 110,
+          "single_original_relations": 106
+        }
+      },
+      "coverage": 0.9831081081081081,
+      "omissions": 0,
+      "corrections": 3,
+      "unmatchedH": [],
+      "lexical_not_translated": [
+        [
+          "o050070010101",
+          "DEU 7:1!10",
+          "adverb"
+        ],
+        [
+          "o050070020042",
+          "DEU 7:2!4",
+          "noun"
+        ],
+        [
+          "o050070120012",
+          "DEU 7:12!1",
+          "verb"
+        ],
+        [
+          "o050070190252",
+          "DEU 7:19!25",
+          "noun"
+        ],
+        [
+          "o050070230042",
+          "DEU 7:23!4",
+          "noun"
+        ]
+      ],
+      "segments": [
+        {
+          "blob": "37e57b82a9b3307dc7cdb0871089c37a70237f57",
+          "native_chapter": 7,
+          "native_first": 1,
+          "native_last": 26,
+          "lsg_first": 1,
+          "lsg_last": 26
+        }
+      ],
+      "ledger_blob": "f218dfb3bae291b212b47891c360bd89ee74d2e6",
+      "invalidH": [],
+      "invalidF": [],
+      "unmatchedF": []
+    },
+    {
+      "scope": "Deut.8",
+      "path": "links/alignments/macula-lsg/deuteronomy/008.json",
+      "verses": 20,
+      "statistics": {
+        "relations": 473,
+        "hebrew_units": 476,
+        "french_units": 536,
+        "lexical_content_units": 210,
+        "lexical_content_translation": 210,
+        "translation": {
+          "relations": 387,
+          "hebrew_units": 402,
+          "french_units": 496,
+          "single_original_relations": 376
+        },
+        "contextual": {
+          "relations": 86,
+          "hebrew_units": 93,
+          "french_units": 102,
+          "single_original_relations": 80
+        }
+      },
+      "coverage": 1,
+      "omissions": 0,
+      "corrections": 2,
+      "unmatchedH": [],
+      "lexical_not_translated": [],
+      "segments": [
+        {
+          "blob": "9c07aae89f22262d11ce12f1b42e454293e760fd",
+          "native_chapter": 8,
+          "native_first": 1,
+          "native_last": 20,
+          "lsg_first": 1,
+          "lsg_last": 20
+        }
+      ],
+      "ledger_blob": "6c272ef5651b5ad7a9911980c92ee563302e3cf5",
+      "invalidH": [],
+      "invalidF": [],
+      "unmatchedF": []
+    },
+    {
+      "scope": "Deut.9",
+      "path": "links/alignments/macula-lsg/deuteronomy/009.json",
+      "verses": 29,
+      "statistics": {
+        "relations": 798,
+        "hebrew_units": 813,
+        "french_units": 889,
+        "lexical_content_units": 360,
+        "lexical_content_translation": 355,
+        "translation": {
+          "relations": 660,
+          "hebrew_units": 687,
+          "french_units": 865,
+          "single_original_relations": 638
+        },
+        "contextual": {
+          "relations": 138,
+          "hebrew_units": 142,
+          "french_units": 136,
+          "single_original_relations": 133
+        }
+      },
+      "coverage": 0.9861111111111112,
+      "omissions": 0,
+      "corrections": 2,
+      "unmatchedH": [],
+      "lexical_not_translated": [
+        [
+          "o050090040092",
+          "DEU 9:4!9",
+          "verb"
+        ],
+        [
+          "o050090130042",
+          "DEU 9:13!4",
+          "verb"
+        ],
+        [
+          "o050090170061",
+          "DEU 9:17!6",
+          "adjective"
+        ],
+        [
+          "o050090200091",
+          "DEU 9:20!9",
+          "noun"
+        ],
+        [
+          "o050090210141",
+          "DEU 9:21!14",
+          "verb"
+        ]
+      ],
+      "segments": [
+        {
+          "blob": "14fa3b8e818a5ea7f0cb3232bab64d3a85050211",
+          "native_chapter": 9,
+          "native_first": 1,
+          "native_last": 29,
+          "lsg_first": 1,
+          "lsg_last": 29
+        }
+      ],
+      "ledger_blob": "097ebb77d3f96856c01b18d32c4dfbd181efb2c6",
+      "invalidH": [],
+      "invalidF": [],
+      "unmatchedF": []
+    },
+    {
+      "scope": "Deut.10",
+      "path": "links/alignments/macula-lsg/deuteronomy/010.json",
+      "verses": 22,
+      "statistics": {
+        "relations": 530,
+        "hebrew_units": 538,
+        "french_units": 565,
+        "lexical_content_units": 241,
+        "lexical_content_translation": 240,
+        "translation": {
+          "relations": 430,
+          "hebrew_units": 446,
+          "french_units": 529,
+          "single_original_relations": 416
+        },
+        "contextual": {
+          "relations": 100,
+          "hebrew_units": 108,
+          "french_units": 112,
+          "single_original_relations": 94
+        }
+      },
+      "coverage": 0.995850622406639,
+      "omissions": 0,
+      "corrections": 4,
+      "unmatchedH": [],
+      "lexical_not_translated": [
+        [
+          "o050100060121",
+          "DEU 10:6!12",
+          "adverb"
+        ]
+      ],
+      "segments": [
+        {
+          "blob": "c105845a418d31abcbd8369778a2eee8b60bbc9f",
+          "native_chapter": 10,
+          "native_first": 1,
+          "native_last": 22,
+          "lsg_first": 1,
+          "lsg_last": 22
+        }
+      ],
+      "ledger_blob": "1ae7a3189de6b32943e381ca70b87f0e6d55fc78",
+      "invalidH": [],
+      "invalidF": [],
+      "unmatchedF": []
+    },
+    {
+      "scope": "Deut.11",
+      "path": "links/alignments/macula-lsg/deuteronomy/011.json",
+      "verses": 32,
+      "statistics": {
+        "relations": 808,
+        "hebrew_units": 828,
+        "french_units": 853,
+        "lexical_content_units": 347,
+        "lexical_content_translation": 338,
+        "translation": {
+          "relations": 670,
+          "hebrew_units": 692,
+          "french_units": 828,
+          "single_original_relations": 654
+        },
+        "contextual": {
+          "relations": 138,
+          "hebrew_units": 151,
+          "french_units": 135,
+          "single_original_relations": 126
+        }
+      },
+      "coverage": 0.9740634005763689,
+      "omissions": 0,
+      "corrections": 2,
+      "unmatchedH": [],
+      "lexical_not_translated": [
+        [
+          "o050110040181",
+          "DEU 11:4!18",
+          "noun"
+        ],
+        [
+          "o050110080181",
+          "DEU 11:8!18",
+          "adverb"
+        ],
+        [
+          "o050110100061",
+          "DEU 11:10!6",
+          "adverb"
+        ],
+        [
+          "o050110110051",
+          "DEU 11:11!5",
+          "adverb"
+        ],
+        [
+          "o050110130012",
+          "DEU 11:13!1",
+          "verb"
+        ],
+        [
+          "o050110240151",
+          "DEU 11:24!15",
+          "noun"
+        ],
+        [
+          "o050110290012",
+          "DEU 11:29!1",
+          "verb"
+        ],
+        [
+          "o050110290111",
+          "DEU 11:29!11",
+          "adverb"
+        ],
+        [
+          "o050110320112",
+          "DEU 11:32!11",
+          "noun"
+        ]
+      ],
+      "segments": [
+        {
+          "blob": "c8b0ecd81088a53964a8c5f0a18e999fbe3f304a",
+          "native_chapter": 11,
+          "native_first": 1,
+          "native_last": 32,
+          "lsg_first": 1,
+          "lsg_last": 32
+        }
+      ],
+      "ledger_blob": "f3c955a3d60b814611290c0c0b95c94d361708ec",
+      "invalidH": [],
+      "invalidF": [],
+      "unmatchedF": []
+    },
+    {
+      "scope": "Deut.12",
+      "path": "links/alignments/macula-lsg/deuteronomy/012.json",
+      "verses": 32,
+      "statistics": {
+        "relations": 864,
+        "hebrew_units": 883,
+        "french_units": 977,
+        "lexical_content_units": 374,
+        "lexical_content_translation": 358,
+        "translation": {
+          "relations": 703,
+          "hebrew_units": 734,
+          "french_units": 922,
+          "single_original_relations": 673
+        },
+        "contextual": {
+          "relations": 161,
+          "hebrew_units": 180,
+          "french_units": 167,
+          "single_original_relations": 145
+        }
+      },
+      "coverage": 0.9572192513368984,
+      "omissions": 5,
+      "corrections": 2,
+      "unmatchedH": [
+        [
+          "o050120210151",
+          "DEU 12:21!15",
+          "particle"
+        ],
+        [
+          "o050120210161",
+          "DEU 12:21!16",
+          "verb"
+        ],
+        [
+          "o050120210171",
+          "DEU 12:21!17",
+          "noun"
+        ],
+        [
+          "o050120210181",
+          "DEU 12:21!18",
+          "preposition"
+        ],
+        [
+          "o050120210182",
+          "DEU 12:21!18",
+          "suffix"
+        ]
+      ],
+      "lexical_not_translated": [
+        [
+          "o050120010212",
+          "DEU 12:1!21",
+          "noun"
+        ],
+        [
+          "o050120020081",
+          "DEU 12:2!8",
+          "adverb"
+        ],
+        [
+          "o050120050181",
+          "DEU 12:5!18",
+          "adverb"
+        ],
+        [
+          "o050120060091",
+          "DEU 12:6!9",
+          "noun"
+        ],
+        [
+          "o050120080101",
+          "DEU 12:8!10",
+          "noun"
+        ],
+        [
+          "o050120110242",
+          "DEU 12:11!24",
+          "noun"
+        ],
+        [
+          "o050120140091",
+          "DEU 12:14!9",
+          "adverb"
+        ],
+        [
+          "o050120170181",
+          "DEU 12:17!18",
+          "noun"
+        ],
+        [
+          "o050120200151",
+          "DEU 12:20!15",
+          "noun"
+        ],
+        [
+          "o050120200182",
+          "DEU 12:20!18",
+          "noun"
+        ],
+        [
+          "o050120200201",
+          "DEU 12:20!20",
+          "noun"
+        ],
+        [
+          "o050120210161",
+          "DEU 12:21!16",
+          "verb"
+        ],
+        [
+          "o050120210171",
+          "DEU 12:21!17",
+          "noun"
+        ],
+        [
+          "o050120210232",
+          "DEU 12:21!23",
+          "noun"
+        ],
+        [
+          "o050120210251",
+          "DEU 12:21!25",
+          "noun"
+        ],
+        [
+          "o050120290101",
+          "DEU 12:29!10",
+          "adverb"
+        ]
+      ],
+      "segments": [
+        {
+          "blob": "31fb5461bf8ddd8addd83bb31eab35c741a2dce7",
+          "native_chapter": 12,
+          "native_first": 1,
+          "native_last": 31,
+          "lsg_first": 1,
+          "lsg_last": 31
+        },
+        {
+          "blob": "e99eee4de6c51735ad32016e61c8dde67046dc57",
+          "native_chapter": 13,
+          "native_first": 1,
+          "native_last": 1,
+          "lsg_first": 32,
+          "lsg_last": 32
+        }
+      ],
+      "ledger_blob": "502313ffbecba7a301134ec5b733e1a5f965b7ff",
+      "invalidH": [],
+      "invalidF": [],
+      "unmatchedF": []
+    },
+    {
+      "scope": "Deut.13",
+      "path": "links/alignments/macula-lsg/deuteronomy/013.json",
+      "verses": 18,
+      "statistics": {
+        "relations": 510,
+        "hebrew_units": 514,
+        "french_units": 576,
+        "lexical_content_units": 221,
+        "lexical_content_translation": 218,
+        "translation": {
+          "relations": 415,
+          "hebrew_units": 432,
+          "french_units": 544,
+          "single_original_relations": 403
+        },
+        "contextual": {
+          "relations": 95,
+          "hebrew_units": 97,
+          "french_units": 99,
+          "single_original_relations": 93
+        }
+      },
+      "coverage": 0.9864253393665159,
+      "omissions": 0,
+      "corrections": 5,
+      "unmatchedH": [],
+      "lexical_not_translated": [
+        [
+          "o050130040102",
+          "DEU 13:4!10",
+          "noun"
+        ],
+        [
+          "o050130080142",
+          "DEU 13:8!14",
+          "noun"
+        ],
+        [
+          "o050130130111",
+          "DEU 13:13!11",
+          "adverb"
+        ]
+      ],
+      "segments": [
+        {
+          "blob": "e99eee4de6c51735ad32016e61c8dde67046dc57",
+          "native_chapter": 13,
+          "native_first": 2,
+          "native_last": 19,
+          "lsg_first": 1,
+          "lsg_last": 18
+        }
+      ],
+      "ledger_blob": "079a9794c31e67b8f1fe1a565d7e6b9fd258fb09",
+      "invalidH": [],
+      "invalidF": [],
+      "unmatchedF": []
+    },
+    {
+      "scope": "Deut.14",
+      "path": "links/alignments/macula-lsg/deuteronomy/014.json",
+      "verses": 29,
+      "statistics": {
+        "relations": 570,
+        "hebrew_units": 578,
+        "french_units": 656,
+        "lexical_content_units": 250,
+        "lexical_content_translation": 247,
+        "translation": {
+          "relations": 439,
+          "hebrew_units": 462,
+          "french_units": 598,
+          "single_original_relations": 422
+        },
+        "contextual": {
+          "relations": 131,
+          "hebrew_units": 159,
+          "french_units": 139,
+          "single_original_relations": 115
+        }
+      },
+      "coverage": 0.988,
+      "omissions": 0,
+      "corrections": 2,
+      "unmatchedH": [],
+      "lexical_not_translated": [
+        [
+          "o050140060112",
+          "DEU 14:6!11",
+          "noun"
+        ],
+        [
+          "o050140260061",
+          "DEU 14:26!6",
+          "noun"
+        ],
+        [
+          "o050140260141",
+          "DEU 14:26!14",
+          "noun"
+        ]
+      ],
+      "segments": [
+        {
+          "blob": "63b14e735cf8812283ef02ff6b284aa0d0725dde",
+          "native_chapter": 14,
+          "native_first": 1,
+          "native_last": 29,
+          "lsg_first": 1,
+          "lsg_last": 29
+        }
+      ],
+      "ledger_blob": "bef6c3d88ac28d4bf7add95ecbc5bcbe5a2938e3",
+      "invalidH": [],
+      "invalidF": [],
+      "unmatchedF": []
+    },
+    {
+      "scope": "Deut.15",
+      "path": "links/alignments/macula-lsg/deuteronomy/015.json",
+      "verses": 23,
+      "statistics": {
+        "relations": 548,
+        "hebrew_units": 577,
+        "french_units": 631,
+        "lexical_content_units": 247,
+        "lexical_content_translation": 238,
+        "translation": {
+          "relations": 458,
+          "hebrew_units": 491,
+          "french_units": 600,
+          "single_original_relations": 431
+        },
+        "contextual": {
+          "relations": 90,
+          "hebrew_units": 101,
+          "french_units": 109,
+          "single_original_relations": 80
+        }
+      },
+      "coverage": 0.9635627530364372,
+      "omissions": 0,
+      "corrections": 2,
+      "unmatchedH": [],
+      "lexical_not_translated": [
+        [
+          "o050150070052",
+          "DEU 15:7!5",
+          "adjective"
+        ],
+        [
+          "o050150080121",
+          "DEU 15:8!12",
+          "verb"
+        ],
+        [
+          "o050150090051",
+          "DEU 15:9!5",
+          "noun"
+        ],
+        [
+          "o050150110112",
+          "DEU 15:11!11",
+          "verb"
+        ],
+        [
+          "o050150140111",
+          "DEU 15:14!11",
+          "verb"
+        ],
+        [
+          "o050150160012",
+          "DEU 15:16!1",
+          "verb"
+        ],
+        [
+          "o050150170112",
+          "DEU 15:17!11",
+          "adverb"
+        ],
+        [
+          "o050150180032",
+          "DEU 15:18!3",
+          "noun"
+        ],
+        [
+          "o050150200101",
+          "DEU 15:20!10",
+          "noun"
+        ]
+      ],
+      "segments": [
+        {
+          "blob": "cc82d3086fb003c61ee5a92f46d6639e96b8ec11",
+          "native_chapter": 15,
+          "native_first": 1,
+          "native_last": 23,
+          "lsg_first": 1,
+          "lsg_last": 23
+        }
+      ],
+      "ledger_blob": "941ddf6c09cc02fe04a3e8cd60c4141250eadc12",
+      "invalidH": [],
+      "invalidF": [],
+      "unmatchedF": []
+    },
+    {
+      "scope": "Deut.16",
+      "path": "links/alignments/macula-lsg/deuteronomy/016.json",
+      "verses": 22,
+      "statistics": {
+        "relations": 538,
+        "hebrew_units": 537,
+        "french_units": 651,
+        "lexical_content_units": 266,
+        "lexical_content_translation": 259,
+        "translation": {
+          "relations": 450,
+          "hebrew_units": 456,
+          "french_units": 610,
+          "single_original_relations": 444
+        },
+        "contextual": {
+          "relations": 88,
+          "hebrew_units": 106,
+          "french_units": 100,
+          "single_original_relations": 71
+        }
+      },
+      "coverage": 0.9736842105263158,
+      "omissions": 4,
+      "corrections": 1,
+      "unmatchedH": [
+        [
+          "o050160100041",
+          "DEU 16:10!4",
+          "preposition"
+        ],
+        [
+          "o050160100042",
+          "DEU 16:10!4",
+          "noun"
+        ],
+        [
+          "o050160100051",
+          "DEU 16:10!5",
+          "noun"
+        ],
+        [
+          "o050160100052",
+          "DEU 16:10!5",
+          "suffix"
+        ]
+      ],
+      "lexical_not_translated": [
+        [
+          "o050160100042",
+          "DEU 16:10!4",
+          "noun"
+        ],
+        [
+          "o050160100051",
+          "DEU 16:10!5",
+          "noun"
+        ],
+        [
+          "o050160100061",
+          "DEU 16:10!6",
+          "noun"
+        ],
+        [
+          "o050160100081",
+          "DEU 16:10!8",
+          "noun"
+        ],
+        [
+          "o050160170031",
+          "DEU 16:17!3",
+          "noun"
+        ],
+        [
+          "o050160180161",
+          "DEU 16:18!16",
+          "noun"
+        ],
+        [
+          "o050160210051",
+          "DEU 16:21!5",
+          "noun"
+        ]
+      ],
+      "segments": [
+        {
+          "blob": "f3811b3c5e2d2c10e2fbc74af3e8559bc1153ce8",
+          "native_chapter": 16,
+          "native_first": 1,
+          "native_last": 22,
+          "lsg_first": 1,
+          "lsg_last": 22
+        }
+      ],
+      "ledger_blob": "caa2c55f22b0654e12dbf8aa5e5caf30e3b52211",
+      "invalidH": [],
+      "invalidF": [],
+      "unmatchedF": []
+    },
+    {
+      "scope": "Deut.17",
+      "path": "links/alignments/macula-lsg/deuteronomy/017.json",
+      "verses": 20,
+      "statistics": {
+        "relations": 555,
+        "hebrew_units": 576,
+        "french_units": 633,
+        "lexical_content_units": 245,
+        "lexical_content_translation": 243,
+        "translation": {
+          "relations": 440,
+          "hebrew_units": 465,
+          "french_units": 598,
+          "single_original_relations": 424
+        },
+        "contextual": {
+          "relations": 115,
+          "hebrew_units": 132,
+          "french_units": 113,
+          "single_original_relations": 99
+        }
+      },
+      "coverage": 0.9918367346938776,
+      "omissions": 0,
+      "corrections": 1,
+      "unmatchedH": [],
+      "lexical_not_translated": [
+        [
+          "o050170120031",
+          "DEU 17:12!3",
+          "verb"
+        ],
+        [
+          "o050170180012",
+          "DEU 17:18!1",
+          "verb"
+        ]
+      ],
+      "segments": [
+        {
+          "blob": "7d59b1c1253ba005294dcec5c1da9455b3f74349",
+          "native_chapter": 17,
+          "native_first": 1,
+          "native_last": 20,
+          "lsg_first": 1,
+          "lsg_last": 20
+        }
+      ],
+      "ledger_blob": "749631e2fcdcc7dc778e2194f69c92d6a094c153",
+      "invalidH": [],
+      "invalidF": [],
+      "unmatchedF": []
+    },
+    {
+      "scope": "Deut.18",
+      "path": "links/alignments/macula-lsg/deuteronomy/018.json",
+      "verses": 22,
+      "statistics": {
+        "relations": 470,
+        "hebrew_units": 476,
+        "french_units": 541,
+        "lexical_content_units": 213,
+        "lexical_content_translation": 206,
+        "translation": {
+          "relations": 379,
+          "hebrew_units": 394,
+          "french_units": 509,
+          "single_original_relations": 367
+        },
+        "contextual": {
+          "relations": 91,
+          "hebrew_units": 100,
+          "french_units": 99,
+          "single_original_relations": 82
+        }
+      },
+      "coverage": 0.9671361502347418,
+      "omissions": 3,
+      "corrections": 2,
+      "unmatchedH": [
+        [
+          "o050180220041",
+          "DEU 18:22!4",
+          "preposition"
+        ],
+        [
+          "o050180220042",
+          "DEU 18:22!4",
+          "noun"
+        ],
+        [
+          "o050180220051",
+          "DEU 18:22!5",
+          "noun"
+        ]
+      ],
+      "lexical_not_translated": [
+        [
+          "o050180050082",
+          "DEU 18:5!8",
+          "verb"
+        ],
+        [
+          "o050180060111",
+          "DEU 18:6!11",
+          "adverb"
+        ],
+        [
+          "o050180060151",
+          "DEU 18:6!15",
+          "noun"
+        ],
+        [
+          "o050180160012",
+          "DEU 18:16!1",
+          "noun"
+        ],
+        [
+          "o050180220042",
+          "DEU 18:22!4",
+          "noun"
+        ],
+        [
+          "o050180220051",
+          "DEU 18:22!5",
+          "noun"
+        ],
+        [
+          "o050180220082",
+          "DEU 18:22!8",
+          "noun"
+        ]
+      ],
+      "segments": [
+        {
+          "blob": "e39e86a5ff3d34884aab5b9cfd14b88423c6b4e4",
+          "native_chapter": 18,
+          "native_first": 1,
+          "native_last": 22,
+          "lsg_first": 1,
+          "lsg_last": 22
+        }
+      ],
+      "ledger_blob": "aeb0832fdc27f237509fab3903dd2c667c254497",
+      "invalidH": [],
+      "invalidF": [],
+      "unmatchedF": []
+    },
+    {
+      "scope": "Deut.19",
+      "path": "links/alignments/macula-lsg/deuteronomy/019.json",
+      "verses": 21,
+      "statistics": {
+        "relations": 516,
+        "hebrew_units": 534,
+        "french_units": 561,
+        "lexical_content_units": 242,
+        "lexical_content_translation": 236,
+        "translation": {
+          "relations": 395,
+          "hebrew_units": 422,
+          "french_units": 520,
+          "single_original_relations": 375
+        },
+        "contextual": {
+          "relations": 121,
+          "hebrew_units": 130,
+          "french_units": 122,
+          "single_original_relations": 112
+        }
+      },
+      "coverage": 0.9752066115702479,
+      "omissions": 3,
+      "corrections": 1,
+      "unmatchedH": [
+        [
+          "o050190210041",
+          "DEU 19:21!4",
+          "noun"
+        ],
+        [
+          "o050190210051",
+          "DEU 19:21!5",
+          "preposition"
+        ],
+        [
+          "o050190210052",
+          "DEU 19:21!5",
+          "noun"
+        ]
+      ],
+      "lexical_not_translated": [
+        [
+          "o050190070052",
+          "DEU 19:7!5",
+          "verb"
+        ],
+        [
+          "o050190110021",
+          "DEU 19:11!2",
+          "verb"
+        ],
+        [
+          "o050190120062",
+          "DEU 19:12!6",
+          "adverb"
+        ],
+        [
+          "o050190150111",
+          "DEU 19:15!11",
+          "noun"
+        ],
+        [
+          "o050190210041",
+          "DEU 19:21!4",
+          "noun"
+        ],
+        [
+          "o050190210052",
+          "DEU 19:21!5",
+          "noun"
+        ]
+      ],
+      "segments": [
+        {
+          "blob": "7aefa65f2a9ec83b47333a158d2198b0aa945eb0",
+          "native_chapter": 19,
+          "native_first": 1,
+          "native_last": 21,
+          "lsg_first": 1,
+          "lsg_last": 21
+        }
+      ],
+      "ledger_blob": "674566691df5d86031488260cfa1aed9532f3e93",
+      "invalidH": [],
+      "invalidF": [],
+      "unmatchedF": []
+    },
+    {
+      "scope": "Deut.20",
+      "path": "links/alignments/macula-lsg/deuteronomy/020.json",
+      "verses": 20,
+      "statistics": {
+        "relations": 478,
+        "hebrew_units": 517,
+        "french_units": 569,
+        "lexical_content_units": 217,
+        "lexical_content_translation": 213,
+        "translation": {
+          "relations": 408,
+          "hebrew_units": 453,
+          "french_units": 551,
+          "single_original_relations": 371
+        },
+        "contextual": {
+          "relations": 70,
+          "hebrew_units": 82,
+          "french_units": 72,
+          "single_original_relations": 60
+        }
+      },
+      "coverage": 0.9815668202764977,
+      "omissions": 0,
+      "corrections": 1,
+      "unmatchedH": [],
+      "lexical_not_translated": [
+        [
+          "o050200020012",
+          "DEU 20:2!1",
+          "verb"
+        ],
+        [
+          "o050200090012",
+          "DEU 20:9!1",
+          "verb"
+        ],
+        [
+          "o050200110012",
+          "DEU 20:11!1",
+          "verb"
+        ],
+        [
+          "o050200110072",
+          "DEU 20:11!7",
+          "verb"
+        ]
+      ],
+      "segments": [
+        {
+          "blob": "fcbddfb60dd0c0436fc176bdf899ded6f38e7319",
+          "native_chapter": 20,
+          "native_first": 1,
+          "native_last": 20,
+          "lsg_first": 1,
+          "lsg_last": 20
+        }
+      ],
+      "ledger_blob": "1e0ee4a2b86708baf8eaf81988d0212543e782fe",
+      "invalidH": [],
+      "invalidF": [],
+      "unmatchedF": []
+    },
+    {
+      "scope": "Deut.21",
+      "path": "links/alignments/macula-lsg/deuteronomy/021.json",
+      "verses": 23,
+      "statistics": {
+        "relations": 536,
+        "hebrew_units": 577,
+        "french_units": 663,
+        "lexical_content_units": 252,
+        "lexical_content_translation": 241,
+        "translation": {
+          "relations": 424,
+          "hebrew_units": 465,
+          "french_units": 624,
+          "single_original_relations": 394
+        },
+        "contextual": {
+          "relations": 112,
+          "hebrew_units": 140,
+          "french_units": 119,
+          "single_original_relations": 99
+        }
+      },
+      "coverage": 0.9563492063492064,
+      "omissions": 2,
+      "corrections": 3,
+      "unmatchedH": [
+        [
+          "o050210100081",
+          "DEU 21:10!8",
+          "noun"
+        ],
+        [
+          "o050210100082",
+          "DEU 21:10!8",
+          "suffix"
+        ]
+      ],
+      "lexical_not_translated": [
+        [
+          "o050210030012",
+          "DEU 21:3!1",
+          "verb"
+        ],
+        [
+          "o050210040021",
+          "DEU 21:4!2",
+          "adjective"
+        ],
+        [
+          "o050210040032",
+          "DEU 21:4!3",
+          "noun"
+        ],
+        [
+          "o050210100081",
+          "DEU 21:10!8",
+          "noun"
+        ],
+        [
+          "o050210130141",
+          "DEU 21:13!14",
+          "noun"
+        ],
+        [
+          "o050210140012",
+          "DEU 21:14!1",
+          "verb"
+        ],
+        [
+          "o050210150132",
+          "DEU 21:15!13",
+          "verb"
+        ],
+        [
+          "o050210150143",
+          "DEU 21:15!14",
+          "verb"
+        ],
+        [
+          "o050210160012",
+          "DEU 21:16!1",
+          "verb"
+        ],
+        [
+          "o050210160022",
+          "DEU 21:16!2",
+          "noun"
+        ],
+        [
+          "o050210170112",
+          "DEU 21:17!11",
+          "noun"
+        ]
+      ],
+      "segments": [
+        {
+          "blob": "61add3635e1b58171582cc7ee1903747527cc137",
+          "native_chapter": 21,
+          "native_first": 1,
+          "native_last": 23,
+          "lsg_first": 1,
+          "lsg_last": 23
+        }
+      ],
+      "ledger_blob": "e6a3dca8776b6f1f126538e5ae833c1ff010f14f",
+      "invalidH": [],
+      "invalidF": [],
+      "unmatchedF": []
+    },
+    {
+      "scope": "Deut.22",
+      "path": "links/alignments/macula-lsg/deuteronomy/022.json",
+      "verses": 30,
+      "statistics": {
+        "relations": 681,
+        "hebrew_units": 701,
+        "french_units": 850,
+        "lexical_content_units": 312,
+        "lexical_content_translation": 309,
+        "translation": {
+          "relations": 550,
+          "hebrew_units": 584,
+          "french_units": 824,
+          "single_original_relations": 522
+        },
+        "contextual": {
+          "relations": 131,
+          "hebrew_units": 148,
+          "french_units": 124,
+          "single_original_relations": 121
+        }
+      },
+      "coverage": 0.9903846153846154,
+      "omissions": 0,
+      "corrections": 3,
+      "unmatchedH": [],
+      "lexical_not_translated": [
+        [
+          "o050220060052",
+          "DEU 22:6!5",
+          "noun"
+        ],
+        [
+          "o050220230072",
+          "DEU 22:23!7",
+          "noun"
+        ],
+        [
+          "o050220250112",
+          "DEU 22:25!11",
+          "noun"
+        ]
+      ],
+      "segments": [
+        {
+          "blob": "432aa07b47aa5a8eee676334437f3f7d707d3ca9",
+          "native_chapter": 22,
+          "native_first": 1,
+          "native_last": 29,
+          "lsg_first": 1,
+          "lsg_last": 29
+        },
+        {
+          "blob": "95bd56b66206812f3cebf25df379759e141d982c",
+          "native_chapter": 23,
+          "native_first": 1,
+          "native_last": 1,
+          "lsg_first": 30,
+          "lsg_last": 30
+        }
+      ],
+      "ledger_blob": "22e011708db8a819cab1b7edea4a601e7a35778f",
+      "invalidH": [],
+      "invalidF": [],
+      "unmatchedF": []
+    },
+    {
+      "scope": "Deut.23",
+      "path": "links/alignments/macula-lsg/deuteronomy/023.json",
+      "verses": 25,
+      "statistics": {
+        "relations": 469,
+        "hebrew_units": 501,
+        "french_units": 611,
+        "lexical_content_units": 242,
+        "lexical_content_translation": 231,
+        "translation": {
+          "relations": 417,
+          "hebrew_units": 445,
+          "french_units": 598,
+          "single_original_relations": 390
+        },
+        "contextual": {
+          "relations": 52,
+          "hebrew_units": 69,
+          "french_units": 64,
+          "single_original_relations": 41
+        }
+      },
+      "coverage": 0.9545454545454546,
+      "omissions": 0,
+      "corrections": 1,
+      "unmatchedH": [],
+      "lexical_not_translated": [
+        [
+          "o050230040111",
+          "DEU 23:4!11",
+          "verb"
+        ],
+        [
+          "o050230040132",
+          "DEU 23:4!13",
+          "noun"
+        ],
+        [
+          "o050230040141",
+          "DEU 23:4!14",
+          "noun"
+        ],
+        [
+          "o050230110181",
+          "DEU 23:11!18",
+          "noun"
+        ],
+        [
+          "o050230120012",
+          "DEU 23:12!1",
+          "verb"
+        ],
+        [
+          "o050230120101",
+          "DEU 23:12!10",
+          "noun"
+        ],
+        [
+          "o050230140062",
+          "DEU 23:14!6",
+          "verb"
+        ],
+        [
+          "o050230140112",
+          "DEU 23:14!11",
+          "verb"
+        ],
+        [
+          "o050230200061",
+          "DEU 23:20!6",
+          "noun"
+        ],
+        [
+          "o050230200081",
+          "DEU 23:20!8",
+          "noun"
+        ],
+        [
+          "o050230210181",
+          "DEU 23:21!18",
+          "adverb"
+        ]
+      ],
+      "segments": [
+        {
+          "blob": "95bd56b66206812f3cebf25df379759e141d982c",
+          "native_chapter": 23,
+          "native_first": 2,
+          "native_last": 26,
+          "lsg_first": 1,
+          "lsg_last": 25
+        }
+      ],
+      "ledger_blob": "d3dd7042a61acdbbd847c101be86a150f3668e50",
+      "invalidH": [],
+      "invalidF": [],
+      "unmatchedF": []
+    },
+    {
+      "scope": "Deut.24",
+      "path": "links/alignments/macula-lsg/deuteronomy/024.json",
+      "verses": 22,
+      "statistics": {
+        "relations": 494,
+        "hebrew_units": 532,
+        "french_units": 643,
+        "lexical_content_units": 233,
+        "lexical_content_translation": 229,
+        "translation": {
+          "relations": 420,
+          "hebrew_units": 458,
+          "french_units": 622,
+          "single_original_relations": 386
+        },
+        "contextual": {
+          "relations": 74,
+          "hebrew_units": 85,
+          "french_units": 76,
+          "single_original_relations": 64
+        }
+      },
+      "coverage": 0.9828326180257511,
+      "omissions": 0,
+      "corrections": 2,
+      "unmatchedH": [],
+      "lexical_not_translated": [
+        [
+          "o050240010062",
+          "DEU 24:1!6",
+          "verb"
+        ],
+        [
+          "o050240040092",
+          "DEU 24:4!9",
+          "verb"
+        ],
+        [
+          "o050240150151",
+          "DEU 24:15!15",
+          "noun"
+        ],
+        [
+          "o050240180092",
+          "DEU 24:18!9",
+          "adverb"
+        ]
+      ],
+      "segments": [
+        {
+          "blob": "ae4858fb410de60a71ead6a80d7a5e7b14cf5948",
+          "native_chapter": 24,
+          "native_first": 1,
+          "native_last": 22,
+          "lsg_first": 1,
+          "lsg_last": 22
+        }
+      ],
+      "ledger_blob": "6296b8452d6bb6d5c293f50fc27b78fa2ae1e141",
+      "invalidH": [],
+      "invalidF": [],
+      "unmatchedF": []
+    }
+  ],
+  "source_verification": {
+    "lsg_commit": "11a869427991297addc27ed42728fa213e55e720",
+    "lsg_path": "sources/cleaned/bibles/fr/lsg-1910/lsg-1910.osis.xml",
+    "lsg_expected_git_blob": "b1ac2146fb7517e5e08a25f5ca321670f5dcefb5",
+    "received_utf8_bytes": 30527333,
+    "expected_utf8_bytes": 30527333,
+    "compared_reading_verses": 494,
+    "differences": 0,
+    "method": "Fetched full maintained OSIS text from pinned GitHub commit; extracted milestone verse contents, removed notes and noncanonical editorial titles, stripped markup and decoded entities, trimmed outer whitespace, compared each reading string exactly against committed projections (266 + 228 verses). Whole-file digest not recalculated.",
+    "omission_verses": [
+      "Deut.12.21",
+      "Deut.16.10",
+      "Deut.18.22",
+      "Deut.19.21",
+      "Deut.21.10"
+    ],
+    "omission_ids": [
+      [
+        "o050120210151",
+        "DEU 12:21!15",
+        "particle"
+      ],
+      [
+        "o050120210161",
+        "DEU 12:21!16",
+        "verb"
+      ],
+      [
+        "o050120210171",
+        "DEU 12:21!17",
+        "noun"
+      ],
+      [
+        "o050120210181",
+        "DEU 12:21!18",
+        "preposition"
+      ],
+      [
+        "o050120210182",
+        "DEU 12:21!18",
+        "suffix"
+      ],
+      [
+        "o050160100041",
+        "DEU 16:10!4",
+        "preposition"
+      ],
+      [
+        "o050160100042",
+        "DEU 16:10!4",
+        "noun"
+      ],
+      [
+        "o050160100051",
+        "DEU 16:10!5",
+        "noun"
+      ],
+      [
+        "o050160100052",
+        "DEU 16:10!5",
+        "suffix"
+      ],
+      [
+        "o050180220041",
+        "DEU 18:22!4",
+        "preposition"
+      ],
+      [
+        "o050180220042",
+        "DEU 18:22!4",
+        "noun"
+      ],
+      [
+        "o050180220051",
+        "DEU 18:22!5",
+        "noun"
+      ],
+      [
+        "o050190210041",
+        "DEU 19:21!4",
+        "noun"
+      ],
+      [
+        "o050190210051",
+        "DEU 19:21!5",
+        "preposition"
+      ],
+      [
+        "o050190210052",
+        "DEU 19:21!5",
+        "noun"
+      ],
+      [
+        "o050210100081",
+        "DEU 21:10!8",
+        "noun"
+      ],
+      [
+        "o050210100082",
+        "DEU 21:10!8",
+        "suffix"
+      ]
+    ],
+    "notes": "Omissions are differences between pinned MACULA and the maintained LSG reading text, not corrections to either source."
+  },
+  "integrity": "All 47 replay operations matched original relation signatures exactly. All native reviewed rows unique and complete; 20 ledgers reconstructed in LSG scopes. No duplicate relation signatures, unknown IDs, invalid target tuples or unaccounted French tokens. Both versification boundaries retained. No CI or release checks run.",
+  "limitations": "Same-editor second pass, not independent review. Dictionary IDs preserved but individual UBS index entries not reread. Whole-file OSIS digest and publication validation pending."
+}
