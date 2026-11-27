@@ -1,0 +1,292 @@
+{
+  "schema_version": 1,
+  "status": "manual_first_pass_complete_pending_semantic_audit",
+  "scope": "Deuteronomy 25–34 and Joshua 1–10",
+  "source_commit": "eec79b6776b38cb960c99a2c8b6b1ab71a32829f",
+  "parent_checkpoint": "c0a219ae49b5c638d4362265fdb051260741344a",
+  "cohort_chapters": 20,
+  "completed_chapters": 0,
+  "previous_manifest": "work/macula-lsg-deuteronomy-025-joshua-010-cohort-02.json",
+  "totals": {
+    "native_verses": 560,
+    "french_verses": 560,
+    "hebrew_units": 14143,
+    "french_units": 15480,
+    "manual_rows": 560,
+    "manual_relations": 13856,
+    "lexical_draft_relations": 11380,
+    "contextual_draft_relations": 2476,
+    "unique_evidence_proposals": 6041,
+    "remaining_native_verse_rows": 0,
+    "uncovered_hebrew_ordinals": 0,
+    "uncovered_french_ordinals": 0,
+    "semantic_second_pass_rows": 0
+  },
+  "new_manual_rows": 459,
+  "new_manual_relations": 11424,
+  "technical_subdivisions": [
+    {
+      "path": "work/macula-lsg-deuteronomy-025-029-compact-manual-03.json",
+      "blob": "ce57f6de74af41ae856c52e9d61f2ee06093a3da"
+    },
+    {
+      "path": "work/macula-lsg-deuteronomy-030-034-compact-manual-03.json",
+      "blob": "f11f1e17db02c5211fd56658121585a3a38e77f9"
+    },
+    {
+      "path": "work/macula-lsg-joshua-001-005-compact-manual-03.json",
+      "blob": "f2c1bab0cc1a46f970b3d4c5ed388990a8e0707a"
+    },
+    {
+      "path": "work/macula-lsg-joshua-006-010-compact-manual-03.json",
+      "blob": "98f4fea050865eb5793bf3cf882942ed534e8aa8"
+    },
+    {
+      "path": "work/macula-lsg-deuteronomy-025-029-compact-manual-04.json",
+      "blob": "f1f2d2165ad1080ce6dae3ff3fbec4c63bb13284"
+    },
+    {
+      "path": "work/macula-lsg-deuteronomy-030-033-compact-manual-04.json",
+      "blob": "6997188804b3d0b0546f1f199150d22a3fb21cda"
+    },
+    {
+      "path": "work/macula-lsg-joshua-001-005-compact-manual-04.json",
+      "blob": "71aad60bcf2c1eb406775fb9b10a6dce6f4c055e"
+    },
+    {
+      "path": "work/macula-lsg-joshua-006-010-compact-manual-04.json",
+      "blob": "511c6106c2ec867757c936f6c6dbf977772a6e48"
+    },
+    {
+      "path": "work/macula-lsg-deuteronomy-027-029-compact-manual-05.json",
+      "blob": "c3e65cfb67fd11edad3f1ddc5c2d27df4985c6fc"
+    },
+    {
+      "path": "work/macula-lsg-deuteronomy-028-033-compact-manual-06.json",
+      "blob": "fc68b9dfdc167545647cb060ae5cc55ea974d8a1"
+    },
+    {
+      "path": "work/macula-lsg-deuteronomy-028-032-compact-manual-07.json",
+      "blob": "c47d63a5e5c404e99252fefe4291b25f1786f67e"
+    },
+    {
+      "path": "work/macula-lsg-deuteronomy-032-compact-manual-08.json",
+      "blob": "bccfaba2c85dc44f1ae42597cd7a75f89f2496af"
+    },
+    {
+      "path": "work/macula-lsg-joshua-002-008-compact-manual-05.json",
+      "blob": "2de08c0be3dab9ec990e2a4e821fab518c5a5c1f"
+    },
+    {
+      "path": "work/macula-lsg-joshua-008-010-compact-manual-06.json",
+      "blob": "f1bf5482e38d7feb9b6ff3f83150bc2ab05cbdb5"
+    },
+    {
+      "path": "work/macula-lsg-joshua-010-compact-manual-07.json",
+      "blob": "5dc977b91080c6eba45d840e8c1f3b7376f3cfc5"
+    }
+  ],
+  "chapter_draft_counts": [
+    {
+      "scope": "Deut.25",
+      "rows": 19,
+      "relations": 417,
+      "lexical_draft_relations": 351,
+      "contextual_draft_relations": 66,
+      "hebrew_units": 424,
+      "french_units": 484
+    },
+    {
+      "scope": "Deut.26",
+      "rows": 19,
+      "relations": 561,
+      "lexical_draft_relations": 463,
+      "contextual_draft_relations": 98,
+      "hebrew_units": 570,
+      "french_units": 610
+    },
+    {
+      "scope": "Deut.27",
+      "rows": 26,
+      "relations": 473,
+      "lexical_draft_relations": 406,
+      "contextual_draft_relations": 67,
+      "hebrew_units": 486,
+      "french_units": 555
+    },
+    {
+      "scope": "Deut.28",
+      "rows": 69,
+      "relations": 1662,
+      "lexical_draft_relations": 1390,
+      "contextual_draft_relations": 272,
+      "hebrew_units": 1666,
+      "french_units": 1904
+    },
+    {
+      "scope": "Deut.29",
+      "rows": 28,
+      "relations": 727,
+      "lexical_draft_relations": 577,
+      "contextual_draft_relations": 150,
+      "hebrew_units": 727,
+      "french_units": 806
+    },
+    {
+      "scope": "Deut.30",
+      "rows": 20,
+      "relations": 585,
+      "lexical_draft_relations": 499,
+      "contextual_draft_relations": 86,
+      "hebrew_units": 590,
+      "french_units": 631
+    },
+    {
+      "scope": "Deut.31",
+      "rows": 30,
+      "relations": 860,
+      "lexical_draft_relations": 682,
+      "contextual_draft_relations": 178,
+      "hebrew_units": 879,
+      "french_units": 893
+    },
+    {
+      "scope": "Deut.32",
+      "rows": 52,
+      "relations": 919,
+      "lexical_draft_relations": 815,
+      "contextual_draft_relations": 104,
+      "hebrew_units": 903,
+      "french_units": 1228
+    },
+    {
+      "scope": "Deut.33",
+      "rows": 29,
+      "relations": 537,
+      "lexical_draft_relations": 451,
+      "contextual_draft_relations": 86,
+      "hebrew_units": 524,
+      "french_units": 710
+    },
+    {
+      "scope": "Deut.34",
+      "rows": 12,
+      "relations": 266,
+      "lexical_draft_relations": 219,
+      "contextual_draft_relations": 47,
+      "hebrew_units": 265,
+      "french_units": 284
+    },
+    {
+      "scope": "Josh.1",
+      "rows": 18,
+      "relations": 464,
+      "lexical_draft_relations": 394,
+      "contextual_draft_relations": 70,
+      "hebrew_units": 483,
+      "french_units": 506
+    },
+    {
+      "scope": "Josh.2",
+      "rows": 24,
+      "relations": 650,
+      "lexical_draft_relations": 508,
+      "contextual_draft_relations": 142,
+      "hebrew_units": 662,
+      "french_units": 712
+    },
+    {
+      "scope": "Josh.3",
+      "rows": 17,
+      "relations": 449,
+      "lexical_draft_relations": 370,
+      "contextual_draft_relations": 79,
+      "hebrew_units": 471,
+      "french_units": 471
+    },
+    {
+      "scope": "Josh.4",
+      "rows": 24,
+      "relations": 548,
+      "lexical_draft_relations": 450,
+      "contextual_draft_relations": 98,
+      "hebrew_units": 586,
+      "french_units": 595
+    },
+    {
+      "scope": "Josh.5",
+      "rows": 15,
+      "relations": 425,
+      "lexical_draft_relations": 360,
+      "contextual_draft_relations": 65,
+      "hebrew_units": 452,
+      "french_units": 468
+    },
+    {
+      "scope": "Josh.6",
+      "rows": 27,
+      "relations": 745,
+      "lexical_draft_relations": 576,
+      "contextual_draft_relations": 169,
+      "hebrew_units": 760,
+      "french_units": 814
+    },
+    {
+      "scope": "Josh.7",
+      "rows": 26,
+      "relations": 764,
+      "lexical_draft_relations": 592,
+      "contextual_draft_relations": 172,
+      "hebrew_units": 790,
+      "french_units": 802
+    },
+    {
+      "scope": "Josh.8",
+      "rows": 35,
+      "relations": 998,
+      "lexical_draft_relations": 786,
+      "contextual_draft_relations": 212,
+      "hebrew_units": 1022,
+      "french_units": 1040
+    },
+    {
+      "scope": "Josh.9",
+      "rows": 27,
+      "relations": 656,
+      "lexical_draft_relations": 561,
+      "contextual_draft_relations": 95,
+      "hebrew_units": 681,
+      "french_units": 747
+    },
+    {
+      "scope": "Josh.10",
+      "rows": 43,
+      "relations": 1150,
+      "lexical_draft_relations": 930,
+      "contextual_draft_relations": 220,
+      "hebrew_units": 1202,
+      "french_units": 1220
+    }
+  ],
+  "checks": {
+    "source_projection_pins_match": true,
+    "exactly_one_manual_row_per_native_verse": true,
+    "ordinal_bounds_checked": true,
+    "all_native_and_french_ordinals_accounted_for": true,
+    "cross_verse_targets_checked": true,
+    "second_pass_semantics": false,
+    "lexical_coverage_threshold_certified": false,
+    "publication_validation": false
+  },
+  "notes": [
+    "All 459 remaining native rows were manually drafted against the pinned source projections in this session; no candidate bank suggestions were accepted automatically.",
+    "49 previously uncovered French ordinals were accounted for, including explicit contextual grammatical supports and cross-verse links; this is structural accounting, not proof of semantic correctness.",
+    "Native Deut 28:69 → LSG Deut 29:1; native Deut 29:1–28 → LSG Deut 29:2–29.",
+    "Native Deut 34:1 includes LSG Deut 34:2 ordinals 1–3.",
+    "Native Josh 2:12 final clause is rendered in LSG Josh 2:13 ordinals 1–2.",
+    "Native Deut 29:22 opens with two lexical units rendered in LSG Deut 29:22 ordinals 35–38.",
+    "Josh 5:1 source plural suffix and French first-person plural require source-reading investigation.",
+    "Draft relations, including contextual attachments and lexical equivalences, must be reviewed in a semantic second pass. No final ledger, biblical text, or chapter checkbox modified."
+  ],
+  "next": "Audit all 560 native verses against pinned Hebrew and French source projections, correct semantic errors and contextual/lexical classifications, verify per-chapter lexical coverage and source reading, then construct final ledgers and record issue checkboxes only when the requirements are satisfied."
+}
