@@ -1,0 +1,388 @@
+{
+  "schema_version": 1,
+  "status": "first_pass_complete_pending_semantic_second_pass",
+  "scope": "Joshua 11–24 and Judges 1–6",
+  "source_commit": "328de30fe081cc7b52cdfde86dbb23448bfdd8a1",
+  "cohort_chapters": 20,
+  "completed_chapters": 0,
+  "totals": {
+    "chapters_prepared": 20,
+    "native_verses": 587,
+    "hebrew_units": 13180,
+    "french_units": 13850,
+    "unique_evidence_proposals": 5188,
+    "manual_first_pass_rows": 587,
+    "manual_relations": 13032,
+    "uncovered_hebrew_ordinals_in_manual_rows": 1,
+    "uncovered_french_ordinals_in_manual_rows": 19,
+    "semantic_second_pass_rows": 0,
+    "remaining_manual_first_pass_rows": 0
+  },
+  "technical_subdivisions": [
+    {
+      "path": "work/macula-lsg-joshua-011-compact-manual-01.json",
+      "blob": "9040329e002607f8858c1417b2a91e19b4aa8dd6"
+    },
+    {
+      "path": "work/macula-lsg-joshua-012-compact-manual-01.json",
+      "blob": "8719ea5dc63832ccc04df8e27350cd1c1611d768"
+    },
+    {
+      "path": "work/macula-lsg-joshua-012-017-compact-preparation-01.json",
+      "blob": "b3e88ce96730708124ab9904f62bcf78e844be90"
+    },
+    {
+      "path": "work/macula-lsg-joshua-018-024-compact-preparation-01.json",
+      "blob": "09301c2ecf6a07d625a4c5e17ca5202c6cd638a6"
+    },
+    {
+      "path": "work/macula-lsg-judges-001-006-compact-preparation-01.json",
+      "blob": "89621178f7671384a9c2ad6b7e718a54e467335c"
+    },
+    {
+      "path": "work/macula-lsg-joshua-013-014-016-compact-manual-02.json",
+      "blob": "3027b0961d46bcb29fdbb1c6f8c4ad5d57e7c298"
+    },
+    {
+      "path": "work/macula-lsg-joshua-015-017-compact-manual-02.json",
+      "blob": "73da76caf19d98b7b4fdbd445639454af2bba863"
+    },
+    {
+      "path": "work/macula-lsg-joshua-018-019-compact-manual-02.json",
+      "blob": "9a2c16878184f704ad1070e252511426b9d25f56"
+    },
+    {
+      "path": "work/macula-lsg-joshua-020-021-compact-manual-02.json",
+      "blob": "77de21923e6fdfd3519d282d1084fb7b730db8ef"
+    },
+    {
+      "path": "work/macula-lsg-joshua-022-023-compact-manual-02.json",
+      "blob": "286c1fb783c7f15af11412e481f433c3731680a6"
+    },
+    {
+      "path": "work/macula-lsg-joshua-024-compact-manual-02.json",
+      "blob": "15ffbebe4a138b678362902ab1f87168363540b4"
+    },
+    {
+      "path": "work/macula-lsg-judges-001-002-compact-manual-02.json",
+      "blob": "5fa46e1064ca2c816901bf65f3372c72d1730f62"
+    },
+    {
+      "path": "work/macula-lsg-judges-003-004-compact-manual-02.json",
+      "blob": "7ae4eb38f5a88dac0c035815c4a6731ffc1b58cb"
+    },
+    {
+      "path": "work/macula-lsg-judges-005-006-compact-manual-02.json",
+      "blob": "54d49b4365a5b8cd4ae024f3e989330f6b0ddd15"
+    }
+  ],
+  "chapter_draft_counts": [
+    {
+      "scope": "Josh.11",
+      "native_verses": 23,
+      "hebrew_units": 628,
+      "french_units": 674,
+      "unique_evidence_proposals": 0,
+      "manual_rows": 23,
+      "manual_relations": 635,
+      "draft_blob": "9040329e002607f8858c1417b2a91e19b4aa8dd6"
+    },
+    {
+      "scope": "Josh.12",
+      "native_verses": 24,
+      "hebrew_units": 365,
+      "french_units": 439,
+      "unique_evidence_proposals": 92,
+      "manual_rows": 24,
+      "manual_relations": 363,
+      "draft_blob": "8719ea5dc63832ccc04df8e27350cd1c1611d768"
+    },
+    {
+      "scope": "Josh.13",
+      "native_verses": 33,
+      "hebrew_units": 680,
+      "french_units": 765,
+      "unique_evidence_proposals": 386,
+      "manual_rows": 33,
+      "manual_relations": 681,
+      "draft_blob": "3027b0961d46bcb29fdbb1c6f8c4ad5d57e7c298"
+    },
+    {
+      "scope": "Josh.14",
+      "native_verses": 15,
+      "hebrew_units": 426,
+      "french_units": 440,
+      "unique_evidence_proposals": 243,
+      "manual_rows": 15,
+      "manual_relations": 415,
+      "draft_blob": "3027b0961d46bcb29fdbb1c6f8c4ad5d57e7c298"
+    },
+    {
+      "scope": "Josh.15",
+      "native_verses": 63,
+      "hebrew_units": 887,
+      "french_units": 805,
+      "unique_evidence_proposals": 210,
+      "manual_rows": 63,
+      "manual_relations": 864,
+      "draft_blob": "73da76caf19d98b7b4fdbd445639454af2bba863"
+    },
+    {
+      "scope": "Josh.16",
+      "native_verses": 10,
+      "hebrew_units": 203,
+      "french_units": 228,
+      "unique_evidence_proposals": 74,
+      "manual_rows": 10,
+      "manual_relations": 199,
+      "draft_blob": "3027b0961d46bcb29fdbb1c6f8c4ad5d57e7c298"
+    },
+    {
+      "scope": "Josh.17",
+      "native_verses": 18,
+      "hebrew_units": 534,
+      "french_units": 609,
+      "unique_evidence_proposals": 167,
+      "manual_rows": 18,
+      "manual_relations": 536,
+      "draft_blob": "73da76caf19d98b7b4fdbd445639454af2bba863"
+    },
+    {
+      "scope": "Josh.18",
+      "native_verses": 28,
+      "hebrew_units": 633,
+      "french_units": 632,
+      "unique_evidence_proposals": 261,
+      "manual_rows": 28,
+      "manual_relations": 616,
+      "draft_blob": "9a2c16878184f704ad1070e252511426b9d25f56"
+    },
+    {
+      "scope": "Josh.19",
+      "native_verses": 51,
+      "hebrew_units": 809,
+      "french_units": 770,
+      "unique_evidence_proposals": 299,
+      "manual_rows": 51,
+      "manual_relations": 784,
+      "draft_blob": "9a2c16878184f704ad1070e252511426b9d25f56"
+    },
+    {
+      "scope": "Josh.20",
+      "native_verses": 9,
+      "hebrew_units": 283,
+      "french_units": 282,
+      "unique_evidence_proposals": 140,
+      "manual_rows": 9,
+      "manual_relations": 271,
+      "draft_blob": "77de21923e6fdfd3519d282d1084fb7b730db8ef"
+    },
+    {
+      "scope": "Josh.21",
+      "native_verses": 45,
+      "hebrew_units": 931,
+      "french_units": 870,
+      "unique_evidence_proposals": 347,
+      "manual_rows": 45,
+      "manual_relations": 922,
+      "draft_blob": "77de21923e6fdfd3519d282d1084fb7b730db8ef"
+    },
+    {
+      "scope": "Josh.22",
+      "native_verses": 34,
+      "hebrew_units": 1055,
+      "french_units": 1183,
+      "unique_evidence_proposals": 436,
+      "manual_rows": 34,
+      "manual_relations": 1067,
+      "draft_blob": "286c1fb783c7f15af11412e481f433c3731680a6"
+    },
+    {
+      "scope": "Josh.23",
+      "native_verses": 16,
+      "hebrew_units": 504,
+      "french_units": 496,
+      "unique_evidence_proposals": 262,
+      "manual_rows": 16,
+      "manual_relations": 484,
+      "draft_blob": "286c1fb783c7f15af11412e481f433c3731680a6"
+    },
+    {
+      "scope": "Josh.24",
+      "native_verses": 33,
+      "hebrew_units": 906,
+      "french_units": 931,
+      "unique_evidence_proposals": 430,
+      "manual_rows": 33,
+      "manual_relations": 911,
+      "draft_blob": "15ffbebe4a138b678362902ab1f87168363540b4"
+    },
+    {
+      "scope": "Judg.1",
+      "native_verses": 36,
+      "hebrew_units": 837,
+      "french_units": 853,
+      "unique_evidence_proposals": 339,
+      "manual_rows": 36,
+      "manual_relations": 816,
+      "draft_blob": "5fa46e1064ca2c816901bf65f3372c72d1730f62"
+    },
+    {
+      "scope": "Judg.2",
+      "native_verses": 23,
+      "hebrew_units": 566,
+      "french_units": 626,
+      "unique_evidence_proposals": 247,
+      "manual_rows": 23,
+      "manual_relations": 562,
+      "draft_blob": "5fa46e1064ca2c816901bf65f3372c72d1730f62"
+    },
+    {
+      "scope": "Judg.3",
+      "native_verses": 31,
+      "hebrew_units": 736,
+      "french_units": 746,
+      "unique_evidence_proposals": 317,
+      "manual_rows": 31,
+      "manual_relations": 698,
+      "draft_blob": "7ae4eb38f5a88dac0c035815c4a6731ffc1b58cb"
+    },
+    {
+      "scope": "Judg.4",
+      "native_verses": 24,
+      "hebrew_units": 625,
+      "french_units": 636,
+      "unique_evidence_proposals": 282,
+      "manual_rows": 24,
+      "manual_relations": 618,
+      "draft_blob": "7ae4eb38f5a88dac0c035815c4a6731ffc1b58cb"
+    },
+    {
+      "scope": "Judg.5",
+      "native_verses": 31,
+      "hebrew_units": 496,
+      "french_units": 706,
+      "unique_evidence_proposals": 169,
+      "manual_rows": 31,
+      "manual_relations": 500,
+      "draft_blob": "54d49b4365a5b8cd4ae024f3e989330f6b0ddd15"
+    },
+    {
+      "scope": "Judg.6",
+      "native_verses": 40,
+      "hebrew_units": 1076,
+      "french_units": 1159,
+      "unique_evidence_proposals": 487,
+      "manual_rows": 40,
+      "manual_relations": 1090,
+      "draft_blob": "54d49b4365a5b8cd4ae024f3e989330f6b0ddd15"
+    }
+  ],
+  "exceptions": [
+    {
+      "scope": "Josh.12.4",
+      "note": "Hebrew ordinal 2 (גבול) has no explicit counterpart in pinned LSG reading text; unresolved until semantic review."
+    },
+    {
+      "scope": "Josh.19.10–11",
+      "note": "Hebrew 19:10 material extends into LSG 19:11; retain explicit qualified target ordinals and verify in semantic audit."
+    }
+  ],
+  "next": "Reread all 587 rows against pinned Hebrew and French source projections; persist corrections only and explicit reviewed-reference inventory. Resolve or document gaps, verify coverage, reconstruct and validate ledgers before checking boxes. No publication.",
+  "parent_manifest": "work/macula-lsg-joshua-011-judges-006-cohort-01.json",
+  "method": "Source-based manual ordinal maps through GitHub connector, following compact cohort method. Python cohort CLI not executed; per-row ordinal bounds and residual occurrence inventory inspected. No semantic second-pass certification.",
+  "uncovered_ordinals": [
+    {
+      "scope": "Josh.12.4",
+      "hebrew": [
+        2
+      ],
+      "french": []
+    },
+    {
+      "scope": "Josh.13.14",
+      "hebrew": [],
+      "french": [
+        9,
+        10,
+        27
+      ]
+    },
+    {
+      "scope": "Josh.13.27",
+      "hebrew": [],
+      "french": [
+        12,
+        13,
+        14
+      ]
+    },
+    {
+      "scope": "Josh.14.3",
+      "hebrew": [],
+      "french": [
+        11
+      ]
+    },
+    {
+      "scope": "Josh.19.11",
+      "hebrew": [],
+      "french": [
+        5
+      ]
+    },
+    {
+      "scope": "Josh.21.34",
+      "hebrew": [],
+      "french": [
+        3
+      ]
+    },
+    {
+      "scope": "Josh.23.12",
+      "hebrew": [],
+      "french": [
+        6
+      ]
+    },
+    {
+      "scope": "Judg.2.15",
+      "hebrew": [],
+      "french": [
+        23
+      ]
+    },
+    {
+      "scope": "Judg.3.3",
+      "hebrew": [],
+      "french": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "scope": "Judg.3.22",
+      "hebrew": [],
+      "french": [
+        18
+      ]
+    },
+    {
+      "scope": "Judg.6.25",
+      "hebrew": [],
+      "french": [
+        27,
+        28
+      ]
+    },
+    {
+      "scope": "Judg.6.26",
+      "hebrew": [],
+      "french": [
+        32
+      ]
+    }
+  ]
+}
