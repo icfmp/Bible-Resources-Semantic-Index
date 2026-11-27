@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "status": "partial_semantic_second_pass_pending_chapter_validation",
+  "scope": "Deuteronomy 25–34 and Joshua 1–10",
+  "source_commit": "eec79b6776b38cb960c99a2c8b6b1ab71a32829f",
+  "parent_checkpoint": "f063c5b04cbe64369e597193997d8d7aed2652e7",
+  "previous_manifest": "work/macula-lsg-deuteronomy-025-joshua-010-cohort-03.json",
+  "cohort_chapters": 20,
+  "completed_chapters": 0,
+  "totals": {
+    "native_verses": 560,
+    "manual_first_pass_rows": 560,
+    "semantic_reread_rows": 101,
+    "corrected_draft_rows": 56,
+    "remaining_semantic_reread_rows": 459,
+    "completed_chapter_audits": 0
+  },
+  "audit_overlays": [
+    {
+      "path": "work/macula-lsg-deuteronomy-025-029-semantic-audit-01.json",
+      "blob": "9527e456d3fc5a042daff11e91734646784b38ba"
+    },
+    {
+      "path": "work/macula-lsg-deuteronomy-030-034-semantic-audit-01.json",
+      "blob": "2eda406ffd468aff7d6589dc2577bc6522fb6eb0"
+    },
+    {
+      "path": "work/macula-lsg-joshua-001-005-semantic-audit-01.json",
+      "blob": "27c42247900b90b1a562186568e15165b8f38dc6"
+    },
+    {
+      "path": "work/macula-lsg-joshua-006-010-semantic-audit-01.json",
+      "blob": "5d37e87b617050fae6aeaef337e38aa174ee9057"
+    },
+    {
+      "path": "work/macula-lsg-deuteronomy-025-029-semantic-audit-02.json",
+      "blob": "7abbeaeca04daac0dac4603b72909c6ea52a0cf7"
+    },
+    {
+      "path": "work/macula-lsg-deuteronomy-030-034-semantic-audit-02.json",
+      "blob": "43cc18d954c5356a512522e4570e989900f7389f"
+    },
+    {
+      "path": "work/macula-lsg-joshua-001-005-semantic-audit-02.json",
+      "blob": "d4165cd150e518cd96349648f3599c0e03d3032f"
+    },
+    {
+      "path": "work/macula-lsg-joshua-006-010-semantic-audit-02.json",
+      "blob": "c7fdad8bb53160688ae89e6c00e74629614f2364"
+    },
+    {
+      "path": "work/macula-lsg-deuteronomy-028-069-semantic-audit-01.json",
+      "blob": "1e80180836873dbbc963e3659257556ee67800af"
+    }
+  ],
+  "reviewed_scope": "Native verses 1–5 of all twenty chapters, plus native Deut 28:69 → LSG 29:1.",
+  "checks": {
+    "unique_reviewed_rows": true,
+    "source_projection_pins_checked": true,
+    "ordinal_bounds_checked": true,
+    "previous_ordinal_coverage_preserved": true,
+    "chapter_lexical_coverage_certified": false,
+    "dictionary_linkage_validated": false,
+    "final_ledgers_constructed": false,
+    "publication_validation": false
+  },
+  "notes": [
+    "Each overlay records the original and revised ordinal map, pinned draft and source blobs, and a verse-specific semantic review note. These are review records pending full chapter validation, not final alignment ledgers.",
+    "56 rows had their maps corrected. Other rows were reread with notes but no map change.",
+    "Josh 5:1 divergence is explained by Masoretic Ketiv עברנו (first person plural, followed by LSG) versus Qere עברם (third person plural, followed by the pinned MACULA projection). The differing pronoun is contextual, not a person-matched equivalence; no source is changed.",
+    "Source differences in Deut 29:5 LSG and Josh 10:2 are also recorded. No chapter checkbox changed; no publication tests run.",
+    "Final full-context review, dictionary linkage, precise offsets, bidirectionality and per-chapter effective coverage remain unverified."
+  ],
+  "next": "Continue the semantic reread from native verse 6 across the same twenty-chapter cohort, skipping already reviewed Deut 28:69, then complete chapter-level validation and final ledger construction before updating checkboxes."
+}
