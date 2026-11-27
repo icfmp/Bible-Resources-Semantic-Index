@@ -22,7 +22,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SOURCES = ROOT / "links/alignments/macula-lsg/sources"
 
 
-def read_sources(book, chapter):
+def source_paths(book, chapter):
     # Explicit native book-code differences; no versification inference.
     native = {
         "Exod": "Exo", "Deut": "Deu", "Josh": "Jos", "Judg": "Jdg",
@@ -34,8 +34,13 @@ def read_sources(book, chapter):
         "Zeph": "Zep", "Zech": "Zec", "Esth": "Est", "Jer": "Jer",
     }.get(book, book)
     filename = f"{chapter:03d}.json"
-    lsg = json.loads((SOURCES / "lsg" / book / filename).read_text(encoding="utf-8"))
-    heb = json.loads((SOURCES / "macula-hebrew" / native / filename).read_text(encoding="utf-8"))
+    return SOURCES / "lsg" / book / filename, SOURCES / "macula-hebrew" / native / filename
+
+
+def read_sources(book, chapter):
+    lsg_path, heb_path = source_paths(book, chapter)
+    lsg = json.loads(lsg_path.read_text(encoding="utf-8"))
+    heb = json.loads(heb_path.read_text(encoding="utf-8"))
     groups = {}
     for word in heb["words"]:
         reference = word[1].split("!")[0]

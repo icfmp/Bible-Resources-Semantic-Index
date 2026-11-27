@@ -28,6 +28,15 @@ maintained `verify_historical_asset.py` byte-lock verifier, inspects the
 three **different** public payload shapes, never downloads anything and
 never changes the application. See [V1 consumer guide](../docs/V1_CONSUMPTION.md).
 
+## MACULA–LSG cohort production
+
+See the [maintained cohort method](../docs/MACULA_LSG_COHORT_METHOD.md).
+`macula_lsg_compact.py` provides source paths, token offsets and ordinal
+resolution; `macula_lsg_cohort.py` adds the pinned multi-chapter plan,
+compact packets, first-pass decisions, review deltas and staged rebuilding.
+No automatic semantic acceptance or publication. Update the method document
+with each workflow improvement.
+
 ## Reusable tools and checks
 
 - `build_native_index.py`: canonical native entity build, independent of the historical ACAI compiler.

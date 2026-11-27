@@ -39,6 +39,15 @@ source-replay compiler is isolated in
 and exercised by `tests/test_build.py`; it is **not** a production
 source-import path.
 
+## MACULA–LSG editorial alignment
+
+The working-branch cohort tooling (`scripts/macula_lsg_compact.py`,
+`scripts/macula_lsg_cohort.py`) and source-owned raw validator are governed by
+[the current cohort method](MACULA_LSG_COHORT_METHOD.md). Keep this method
+synchronized with code improvements; the issue records actual progress and
+verification. Proposal generation, same-editor reread, projection integrity
+and publication are distinct. The new cohort CLI is not yet execution-validated.
+
 ## Source-specific lexical processes
 
 | Stream | Python tools and tests | Executable entrypoint | Retained editorial authority |
